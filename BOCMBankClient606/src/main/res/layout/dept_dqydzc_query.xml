@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_dialog_width"
+            android:background="@drawable/img_bg_query_j"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/acc_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fill_margin_top"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_marginLeft="@dimen/fill_margin_left"
+                    android:gravity="center_vertical"
+                    android:text="@string/dept_zqydzc_account"
+                    android:textSize="@dimen/textsize_default" />
+
+                <Spinner
+                    android:id="@+id/spinner_acc"
+                    style="@style/Spiiner_fill"
+                    android:layout_marginRight="@dimen/fill_margin_left" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/dept_query_deal_query"
+                style="@style/query_button_style"
+                android:layout_below="@+id/acc_view"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/fill_margin_top"
+                android:layout_marginRight="@dimen/fill_margin_top"
+                android:layout_marginTop="@dimen/fill_margin_top" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/dept_list_view"
+            style="@style/listviewcomm_fill_gray_divider"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_left"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:layout_marginBottom="@dimen/fill_margin_bottom"
+            android:visibility="gone" >
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hardware_frag_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/default_bg"
+    >
+    
+     <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="62dp"
+            android:background="@drawable/navbar"
+            android:visibility="gone"
+            android:paddingTop="5dp" >
+
+            <Button
+                android:id="@+id/ib_back"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                style="@style/titlebackbtn" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/titleText" />
+
+        </RelativeLayout>
+    
+<RelativeLayout 
+        android:id="@+id/hardware_prompt_info_layout"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/title_layout"
+        android:layout_height="@dimen/dp_for_zero"
+        android:background="@color/white"
+        >
+        
+        <TextView 
+            android:id="@+id/hardware_prompt_info_step01"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            style="@style/hardware_prompt_info_default"
+            android:layout_toLeftOf="@+id/hardware_arrow_img"
+            android:text="@string/hardware_prompt_info_step01"
+            android:background="@drawable/safety_step2"
+            />
+        
+        <ImageView 
+            android:id="@+id/hardware_arrow_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+        
+        <TextView 
+            android:id="@+id/hardware_prompt_info_step02"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            style="@style/hardware_prompt_info"
+            android:layout_toRightOf="@+id/hardware_arrow_img"
+            android:text="@string/hardware_prompt_info_step02"
+            android:background="@drawable/safety_step5"
+            />
+        
+    </RelativeLayout>
+    
+    <View 
+        android:id="@+id/hardware_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_two"
+        android:layout_below="@+id/hardware_prompt_info_layout"
+        android:background="@color/gray_line"
+        />
+    
+    <RelativeLayout 
+        android:id="@+id/hardware_prompt_info_details_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/hardware_line"
+        android:background="@drawable/bg_for_hardware_prompt_info_details"
+        android:layout_marginTop="@dimen/dp_one_for"
+        android:layout_marginLeft="@dimen/dp_one_for"
+        android:layout_marginRight="@dimen/dp_one_for"
+        android:layout_above="@+id/hardware_unbind_complete"
+        >
+        
+        <ImageView 
+            android:id="@+id/hardware_success_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+			android:layout_centerHorizontal="true"
+			android:layout_marginTop="@dimen/dp_five_zero"
+			android:src="@drawable/img_green_gou"
+            />
+        
+        <TextView 
+            android:id="@+id/hardware_success_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_three_zero"
+            android:text="@string/hardware_unbind_success_des"
+            android:layout_below="@+id/hardware_success_img"
+            />
+        
+        
+        <TextView 
+            android:id="@+id/hardware_prompt_info_details_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_for_zero"
+            android:layout_marginLeft="@dimen/dp_two_zero"
+            android:layout_marginRight="@dimen/dp_two_zero"
+            style="@style/hardware_prompt_info"
+            android:text="@string/hardware_unbind_success"
+            android:layout_below="@+id/hardware_success_text"
+            />
+        
+    </RelativeLayout>
+    
+    <Button
+        android:id="@+id/hardware_unbind_complete"
+        android:layout_centerHorizontal="true"
+        style="@style/bottombtn"
+        android:text="@string/finish"
+        android:textColor="@color/white" 
+        android:layout_above="@+id/hardware_bottom_block"
+        android:layout_marginTop="@dimen/dp_one_zero"
+        android:textSize="@dimen/textsize_one_seven"
+        />
+    
+    <View  android:id="@+id/hardware_bottom_block"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_two_zero"
+        android:layout_alignParentBottom="true"
+        />
+    
+    
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+    
+<RelativeLayout 
+   	 xmlns:android="http://schemas.android.com/apk/res/android"
+	 android:layout_width="match_parent"
+	 android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <LinearLayout 
+            style="@style/style_match_wrap"
+            android:layout_marginTop="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            >
+            <TextView 
+                 style="@style/textview_common_multi_second"
+                 android:text="开户银行名称："
+                 />
+            <EditText 
+                 android:id="@+id/edt_1"
+                 style="@style/edittext_inputNumber_fill"
+                 android:layout_width="0dp"
+                 android:hint="输入关键字查询"
+                 android:inputType="none"
+                 />
+            <Button 
+			    android:id="@+id/btn_query"
+			    style="@style/style_btn_query_red_bg"
+			    android:layout_marginLeft="5dp"
+			    android:layout_marginStart="5dp"
+			    />
+        </LinearLayout>
+        <View style="@style/style_line_1" android:layout_marginTop="5dp"/>
+        <ListView 
+            android:id="@+id/listview"
+            style="@style/listviewcomm_fill_noDivider"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="3dp"
+            />
+        
+    </LinearLayout>
+
+    <TextView
+        style="@style/titleText_stepacc"
+        android:layout_width="@dimen/common_details_title_width"
+        android:layout_height="@dimen/left_img_width"
+        android:background="@drawable/shape_round_dark"
+        android:gravity="center"
+        android:text="查询开户行"
+        android:textColor="@color/gray_title" />
+
+</RelativeLayout>

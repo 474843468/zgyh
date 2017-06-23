@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_240px"
+            android:layout_marginBottom="@dimen/boc_space_between_20px"
+            android:background="@color/boc_bg_color_dark_blue"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/current_value_hint"
+                    style="@style/tv_little_big"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/boc_fund_position_current_value"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/current_value"
+                    style="@style/tv_big"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/float_profile_hint"
+                    style="@style/tv_little_big"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/boc_fund_profile_loss_year"
+                    android:drawableRight="@drawable/boc_arrow_right"
+                    android:drawablePadding="@dimen/boc_space_between_20px"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/float_profile_value"
+                    style="@style/tv_big"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailContentView
+            android:id="@+id/cv_position"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+
+        </com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailContentView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_104px"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/bt_scheduledbuy"
+            style="@style/fund_detail_select_btn"
+            android:layout_height="match_parent"
+            android:text="@string/boc_fund_position_transtype_scheduledbuy"/>
+
+        <TextView
+            android:id="@+id/bt_scheduledsell"
+            style="@style/fund_detail_select_btn"
+            android:layout_height="match_parent"
+            android:text="@string/boc_fund_position_transtype_scheduledsell"/>
+
+        <TextView
+            android:id="@+id/bt_rebuy"
+            style="@style/fund_detail_select_btn"
+            android:layout_height="match_parent"
+            android:text="@string/boc_fund_position_rebuy"/>
+    </LinearLayout>
+</LinearLayout>

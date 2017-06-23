@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:layout_width="match_parent"
+            layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/sureButton"
+            style="@style/bottombtn"
+            android:text="@string/next"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/button_layout"
+        android:layout_below="@+id/ll_step"
+        android:orientation="vertical" >
+
+        <ScrollView
+            style="@style/scrollview_fill"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_left"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:gravity="center" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_for_listview_item_write"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/fill_margin_right"
+                android:paddingRight="@dimen/dp_five" >
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <TextView
+                            android:id="@+id/tv_acc_loss_actnum"
+                            style="@style/textview_common_left"
+                            android:layout_weight="0"
+                            android:text="@string/mycrcd_selected_creditcard" />
+
+                        <TextView
+                            android:id="@+id/finc_accNumber"
+                            style="@style/textview_common_right"
+                            android:layout_weight="0"
+                            android:singleLine="false" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <TextView
+                            android:id="@+id/tv_acc_loss_type"
+                            style="@style/textview_common_left"
+                            android:layout_weight="0"
+                            android:text="@string/mycrcd_supplymentcard_number" />
+
+                        <TextView
+                            android:id="@+id/finc_accId"
+                            style="@style/textview_common_right"
+                            android:layout_weight="0"
+                            android:singleLine="false" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="0"
+                            android:text="@string/mycrcd_bill_seed" />
+
+                        <TextView
+                            android:id="@+id/tv_cardNumber"
+                            style="@style/textview_common_right"
+                            android:visibility="gone" />
+
+                        <Spinner
+                            android:id="@+id/sp_cardNumber"
+                            style="@style/Spiiner_fill"
+                            android:layout_weight="1" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="0"
+                            android:text="@string/mycrcd_supplymentcard_jiaoyimoney" />
+
+                        <EditText
+                            android:id="@+id/finc_fincName"
+                            style="@style/edittext_input_numberDecimal_fill"
+                            android:layout_weight="1"
+                            android:maxLength="14" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

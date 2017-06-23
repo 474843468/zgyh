@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/boc_common_bg_color"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/boc_space_between_30px">
+
+        <TextView
+            android:id="@+id/tv_currency_and_proname"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:text="[美元]对私转低收益"
+            android:textColor="@color/boc_black"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:id="@+id/ll_sub_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:text="申购起点金额"
+                android:textColor="@color/boc_text_color_common_gray"
+                />
+
+            <TextView
+                android:id="@+id/tv_sub_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/boc_text_size_20dp"
+                android:layout_marginTop="15dp"
+                android:text="110"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_add_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:text="追加申购起点\n金额"
+                android:textColor="@color/boc_text_color_common_gray"
+                />
+
+            <TextView
+                android:id="@+id/tv_add_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/boc_text_size_20dp"
+                android:layout_marginTop="15dp"
+                android:text="110"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_low_limit_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="88dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:text="赎回起点份额"
+                android:textColor="@color/boc_text_color_common_gray"
+                />
+
+            <TextView
+                android:id="@+id/tv_low_limit_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:text="2,000.00"
+                android:textColor="@color/boc_text_color_common_gray"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/boc_button_bg_gray_no_stroke"
+            android:orientation="vertical"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_104px"
+                android:background="@color/boc_common_cell_color"
+                android:paddingLeft="@dimen/boc_space_between_32px"
+                android:paddingRight="@dimen/boc_space_between_30px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="定投类型"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_common"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:id="@+id/redeem_box"
+                    android:layout_width="@dimen/boc_space_between_172px"
+                    android:layout_height="@dimen/boc_space_between_60px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/boc_textview_bg_default"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/boc_space_between_10px">
+
+                    <ImageView
+                        android:id="@+id/redeem_image"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="@dimen/boc_space_between_10px"
+                        android:src="@drawable/boc_check_box_true"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/redeem_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/boc_space_between_10px"
+                        android:text="赎回"
+                        android:textColor="@color/boc_text_color_common_gray"
+                        android:textSize="@dimen/boc_text_size_small"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/purchase_box"
+                    android:layout_width="@dimen/boc_space_between_172px"
+                    android:layout_height="@dimen/boc_space_between_60px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/boc_space_between_10px"
+                    android:layout_toLeftOf="@+id/redeem_box"
+                    android:background="@drawable/boc_textview_bg_light"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/boc_space_between_10px">
+
+                    <ImageView
+                        android:id="@+id/purchase_image"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="@dimen/boc_space_between_10px"
+                        android:src="@drawable/boc_check_box_true"/>
+
+                    <TextView
+                        android:id="@+id/purchase_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/boc_space_between_10px"
+                        android:text="购买"
+                        android:textColor="@color/boc_text_color_red"
+                        android:textSize="@dimen/boc_text_size_small"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <include layout="@layout/boc_divide_line"/>
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                android:id="@+id/ecw_xpad_cashremit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:editChoiceContent="现汇"
+                app:editChoiceName="钞/汇"
+                app:editChoiceNameBold="true"/>
+
+            <include
+                android:id="@+id/line_1"
+                layout="@layout/boc_divide_line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_104px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                >
+
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputWidget
+                    android:id="@+id/emiw_redeem_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:editChoiceName="定投金额"
+                    app:editChoiceNameBold="true"/>
+
+            </LinearLayout>
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputWidget
+                android:id="@+id/money_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:editChoiceName="赎回触发金额"
+                app:editChoiceNameBold="true"/>
+
+            <!--<include layout="@layout/boc_divide_line" />-->
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputWidget
+                android:id="@+id/money_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:editChoiceName="购买触发金额"
+                app:editChoiceNameBold="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/boc_button_bg_gray_no_stroke"
+            android:orientation="vertical"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp">
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                android:id="@+id/ecw_total_period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:editChoiceContent="不限期"
+                app:editChoiceName="总期数"
+                app:editChoiceNameBold="true"/>
+
+            <include layout="@layout/boc_divide_line"/>
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                android:id="@+id/invest_often"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/boc_divider_1px"
+                app:editChoiceContent="每月一次"
+                app:editChoiceName="定投频率"
+                app:editChoiceNameBold="true"/>
+
+            <include layout="@layout/boc_divide_line"/>
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                android:id="@+id/ecw_invest_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:editChoiceName="定投开始日"
+                app:editChoiceNameBold="true"/>
+        </LinearLayout>
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.assignment.SelectAgreementView
+            android:id="@+id/sav_read"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/boc_space_between_70px"/>
+
+        <TextView
+            android:id="@+id/tv_next"
+            style="@style/BocButton.BocPrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_88px"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="@dimen/boc_space_between_36px"
+            android:text="@string/boc_account_next"/>
+
+        <TextView
+            android:id="@+id/txt_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/boc_space_between_140px"
+            android:layout_marginTop="@dimen/boc_space_between_50px"
+            android:gravity="center"
+            android:textColor="@color/boc_text_mobile_color"
+            android:textSize="@dimen/boc_text_size_common"
+            tools:text="理财交易账户"/>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <include android:id="@+id/step" 
+        layout="@layout/order_step"
+        android:layout_alignParentTop="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/common_bottom_padding_new"
+        android:paddingLeft="@dimen/fill_margin_left"
+        android:paddingRight="@dimen/fill_margin_left"
+        android:layout_below="@+id/step">
+	    <LinearLayout
+	        android:id="@+id/btn_sure"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_marginTop="@dimen/fill_margin_top" >
+			<Button
+	            android:id="@+id/finc_btn1"
+	            style="@style/btn_common_oneline"
+	            android:background="@drawable/btn_red_big"
+	            android:text="@string/last"/>
+	
+	        <Button
+	            android:id="@+id/finc_btn2"
+	            style="@style/btn_common_oneline"
+	            android:background="@drawable/btn_red_big"
+	            android:text="@string/next"/>
+	    </LinearLayout>
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_above="@+id/btn_sure"
+	        android:background="@drawable/bg_for_listview_item_write"
+	        android:orientation="vertical" >
+	
+	        <ScrollView style="@style/scrollview_little_margin" >
+	
+	            <LinearLayout
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:orientation="vertical" >
+	                
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView
+	                        style="@style/textview_common_left"
+	                        android:layout_height="@dimen/btn_bottom_height"
+	                        android:gravity="center_vertical|right"
+	                        android:layout_gravity="top"
+	                        android:text="@string/tran_remit_n_query_bussinessType"/>
+	
+	                    <LinearLayout style="@style/textview_common_right"
+	                        android:orientation="vertical">
+	                        <CheckBox
+	                        	android:id="@+id/cbbtn1"
+	                        	android:layout_width="wrap_content"
+	                        	android:layout_height="@dimen/btn_dialog_height"
+	                        	android:text="@string/order_common_service"
+	                        	android:textSize="@dimen/textsize_default"
+	                        	android:button="@drawable/checkbox_selector02"
+	                        	android:checked="true"
+	                        	android:clickable="false"
+	                        />
+	                    	<CheckBox 
+	                        	android:id="@+id/cbbtn2"
+	                        	android:layout_width="wrap_content"
+	                        	android:layout_height="@dimen/btn_dialog_height"                        
+	                        	android:text="@string/order_special_service"
+	                        	android:textSize="@dimen/textsize_default"
+	                        	android:button="@drawable/checkbox_selector02"
+	                        />
+	                    </LinearLayout> 
+	                </LinearLayout>
+	                
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView style="@style/textview_common_left"
+	                        android:text="@string/order_yewu_name"/>
+	
+	                    <Spinner
+	                        android:id="@+id/serviceName"
+	                        style="@style/Spiiner_fill"
+	                        android:layout_weight="1"
+	                        android:paddingLeft="@dimen/dp_one_zero"/>
+	                </LinearLayout>
+	                
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView style="@style/textview_common_left"
+	                        android:text="@string/order_time"/>
+	
+	                    <Spinner
+	                        android:id="@+id/orderTime"
+	                        style="@style/Spinner_comm_view_right"
+	                        android:layout_weight="1"
+	                        android:paddingLeft="@dimen/dp_one_zero"/>
+	                    
+	                </LinearLayout>
+	                
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView style="@style/textview_common_left"
+	                        android:text="@string/order_period"/>
+	
+	                    <Spinner
+	                        android:id="@+id/orderPeriod"
+	                        style="@style/Spinner_comm_view_right"
+	                        android:layout_weight="1"
+	                        android:paddingLeft="@dimen/dp_one_zero"/>
+	                    
+	                    <TextView android:id="@+id/orderPeriodTv"
+	                        style="@style/textview_common_right"
+	                        android:visibility="gone"/>
+	                </LinearLayout>
+	                
+	                <LinearLayout android:visibility="visible"
+	                    android:id="@+id/commonServiceLl"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="match_parent"
+	                    android:orientation="vertical">
+		                <LinearLayout style="@style/linnerlayout_common">
+		
+		                    <TextView android:id="@+id/orderHaveBookNumTv"
+		                        style="@style/textview_common_left"
+		                        android:text="@string/order_have_book_num"/>
+		
+		                    <TextView
+		                        android:id="@+id/orderHaveBookNum"
+		                        style="@style/textview_common_right"/>
+		                </LinearLayout>
+		                <LinearLayout style="@style/linnerlayout_common">
+		
+		                    <TextView android:id="@+id/orderCurDateHaveBookNumTv"
+		                        style="@style/textview_common_left"
+		                        android:text="@string/order_curDate_have_book_num"/>
+		
+		                    <TextView
+		                        android:id="@+id/orderCurDateHaveBookNum"
+		                        style="@style/textview_common_right"/>
+		                </LinearLayout>
+		                <LinearLayout style="@style/linnerlayout_common">
+		
+		                    <TextView android:id="@+id/orderCurPeroidMaxNumberTv"
+		                        style="@style/textview_common_left"
+		                        android:text="@string/order_curPeroid_max_number"/>
+		
+		                    <TextView
+		                        android:id="@+id/orderCurPeroidMaxNumber"
+		                        style="@style/textview_common_right"/>
+		                </LinearLayout>
+		                <LinearLayout android:id="@+id/orderAheadTipTimeLl"
+		                    style="@style/linnerlayout_common"
+		                    android:visibility="visible">
+		
+		                    <TextView
+		                        style="@style/textview_common_left"
+		                        android:text="@string/order_ahead_tip_time"/>
+		
+		                    <LinearLayout 
+		                        style="@style/textview_common_right">
+			                    <EditText style="@style/edittext_inputNumber_fill"
+			                        android:id="@+id/orderAheadTipTime"
+			                        android:maxLength="3"
+			                        android:hint="@string/xuanTian"/>
+			                    <TextView 
+			                        android:layout_width="wrap_content"
+			                        android:layout_height="wrap_content"
+			                        android:text="@string/set_min"/>
+		                    </LinearLayout>
+		                </LinearLayout>
+	                </LinearLayout>
+	                
+	                <LinearLayout android:visibility="gone"
+	                    android:id="@+id/largeAmountCashLl"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="match_parent"
+	                    android:orientation="vertical">
+		                <LinearLayout style="@style/linnerlayout_common">
+	
+		                    <TextView
+		                        style="@style/textview_common_left"
+		                        android:text="@string/currency1"/>
+		
+		                    <TextView
+		                        style="@style/textview_common_right"
+		                        android:text="@string/rmb_currency"/>
+		                </LinearLayout>
+		                 <LinearLayout style="@style/linnerlayout_common">
+	
+		                    <TextView
+		                        style="@style/textview_common_left"
+		                        android:text="@string/order_amount_of_cash"/>
+		
+		                    <LinearLayout 
+		                        style="@style/textview_common_right">
+			                    <EditText style="@style/edittext_inputNumber_fill"
+			                        android:id="@+id/orderAmountOfLargeCash"
+			                        android:maxLength="12"/>
+	                   		</LinearLayout>
+	                	</LinearLayout>
+	                    <LinearLayout style="@style/linnerlayout_common">
+	
+		                    <TextView
+		                        style="@style/textview_common_left"
+		                        android:text="@string/beizhu"/>
+		
+		                    <EditText
+		                        android:id="@+id/beizhuLargeCash"
+		                        style="@style/edittext_inputNumber_fill"
+		                        android:hint="@string/xuanTian"
+		                        android:inputType="text"
+		                        android:maxLength="50"/>
+		                </LinearLayout>
+	            	</LinearLayout>
+	            	
+	                <LinearLayout android:visibility="gone"
+	                    android:id="@+id/foreignAmountCashLl"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="match_parent"
+	                    android:orientation="vertical">
+		                <LinearLayout style="@style/linnerlayout_common">
+	
+		                    <TextView
+		                        style="@style/textview_common_left"
+		                        android:text="@string/currency1"/>
+		
+		                    <Spinner
+		                        android:id="@+id/currencyFreign"
+		                        style="@style/Spinner_comm_view_right"
+		                        android:layout_weight="1"
+		                        android:paddingLeft="@dimen/dp_one_zero"/>
+		                </LinearLayout>
+		                 <LinearLayout style="@style/linnerlayout_common">
+	
+		                    <TextView
+		                        style="@style/textview_common_left"
+		                        android:text="@string/order_amount_of_cash"/>
+		
+		                    <LinearLayout 
+		                        style="@style/textview_common_right">
+			                    <EditText style="@style/edittext_inputNumber_fill"
+			                        android:id="@+id/orderAmountOfForeignCash"
+			                        android:maxLength="12"/>
+	                   		</LinearLayout>
+	                	</LinearLayout>
+	                    <LinearLayout style="@style/linnerlayout_common">
+	
+		                    <TextView
+		                        style="@style/textview_common_left"
+		                        android:text="@string/beizhu"/>
+		
+		                    <EditText
+		                        android:id="@+id/beizhuForeignCash"
+		                        style="@style/edittext_inputNumber_fill"
+		                        android:hint="@string/xuanTian"
+		                        android:inputType="text"
+		                        android:maxLength="50"/>
+		                </LinearLayout>
+	            	</LinearLayout>
+	            	
+	                <LinearLayout android:visibility="gone"
+	                    android:id="@+id/cardServiceLl"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="match_parent"
+	                    android:orientation="vertical">
+	                    <LinearLayout style="@style/linnerlayout_common">
+	
+		                    <TextView
+		                        style="@style/textview_common_left"
+		                        android:text="@string/beizhu"/>
+		
+		                    <EditText
+		                        android:id="@+id/beizhuCardService"
+		                        style="@style/edittext_inputNumber_fill"
+		                        android:hint="@string/xuanTian"
+		                        android:inputType="text"
+		                        android:maxLength="50"/>
+		                </LinearLayout>
+	            	</LinearLayout>
+	            	<LinearLayout style="@style/linnerlayout_common"
+	            	    android:visibility="invisible">
+	
+	                    <TextView
+	                        style="@style/textview_common_left"
+	                        android:text="@string/beizhu"/>
+	
+	                    <EditText
+	                        style="@style/edittext_inputNumber_fill"
+	                        android:hint="@string/xuanTian"
+	                        android:inputType="text"
+	                        android:maxLength="50"/>
+	                </LinearLayout>
+	            </LinearLayout>
+	        </ScrollView>
+	    </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

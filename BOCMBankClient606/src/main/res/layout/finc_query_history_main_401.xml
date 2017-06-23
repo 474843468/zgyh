@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 基金  历史交易查询 确认页面 xyl -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/common_bottom_padding_new" >
+    <LinearLayout
+        android:id="@+id/tatale"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible" >
+        <LinearLayout
+            android:id="@+id/finc_query_deal_befor_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:id="@+id/finc_query_deal_befor_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_bg_query_j"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fill_margin_right"
+                    android:layout_marginRight="@dimen/fill_margin_right"
+                    android:paddingTop="@dimen/common_listview_item_paddingLR" >
+
+                    <Spinner
+                        android:id="@+id/finc_fundcode_spinner"
+                        style="@style/Spiiner_fill_big"
+                        android:background="@drawable/bg_spinner" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/finc_query_deal_btnlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fill_margin_left"
+                    android:layout_marginRight="@dimen/fill_margin_left"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/dp_five"
+                        android:paddingTop="@dimen/dp_five" >
+
+                        <!--<RadioButton-->
+                            <!--android:id="@+id/product_button"-->
+                            <!--style="@style/radioButtonLeftNew606"-->
+                            <!--android:layout_height="@dimen/dp_for_zero"-->
+                            <!--android:text="产品属性"-->
+                            <!--android:textSize="@dimen/textsize_one_two" />-->
+
+                        <!--<RadioButton-->
+                            <!--android:id="@+id/by_button"-->
+                            <!--style="@style/radioButtonMiddleNew606"-->
+                            <!--android:layout_height="@dimen/dp_for_zero"-->
+                            <!--android:text="购买属性"-->
+                            <!--android:textSize="@dimen/textsize_one_two" />-->
+
+                        <!--<RadioButton-->
+                            <!--android:id="@+id/redeem_button"-->
+                            <!--style="@style/radioButtonRightNew606"-->
+                            <!--android:layout_height="@dimen/dp_for_zero"-->
+                            <!--android:text="赎回属性"-->
+                            <!--android:textSize="@dimen/textsize_one_two" />-->
+                    <!--</RadioGroup>-->
+                    <RadioButton
+                        android:id="@+id/finc_queryquery_deal_queryoneweek"
+                        style="@style/new606_radioButtonLeft"
+                        android:layout_height="@dimen/btn_query_height"
+                        android:text="@string/prms_str_oneweek"
+                        android:textSize="@dimen/textsize_one_three" />
+
+                    <RadioButton
+                        android:id="@+id/finc_queryquery_deal_queryonemouth"
+                        style="@style/new606_radioButtonMid"
+                        android:layout_height="@dimen/btn_query_height"
+                        android:text="@string/prms_str_onemonth"
+                        android:textSize="@dimen/textsize_one_three" />
+
+                    <RadioButton
+                        android:id="@+id/finc_queryquery_deal_querythreemouths"
+                        style="@style/new606_radioButtonRight"
+                        android:layout_height="@dimen/btn_query_height"
+                        android:text="@string/prms_str_threemonth"
+                        android:textSize="@dimen/textsize_one_three" />
+                </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fill_margin_top"
+                    android:paddingRight="@dimen/fill_margin_top"
+                    android:paddingTop="@dimen/common_row_margin_half">
+                    <include layout="@layout/base_query_fengge" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/common_row_margin_half"
+                    android:paddingTop="@dimen/common_row_margin" >
+
+                    <TextView
+                        android:id="@+id/finc_query_deal_startdate"
+                        style="@style/Spiiner_fill"
+                        android:layout_marginLeft="@dimen/fill_margin_right"
+                        android:layout_marginRight="@dimen/fill_margin_right"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_spinner"
+                        android:gravity="center_vertical"
+                        android:hint="@string/prms_query_startdate" />
+
+                    <TextView
+                        android:id="@+id/finc_query_deal_enddate"
+                        style="@style/Spiiner_fill"
+                        android:layout_marginRight="@dimen/fill_margin_right"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_spinner"
+                        android:gravity="center_vertical"
+                        android:hint="@string/prms_query_enddate" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/common_row_margin_half"
+                    android:paddingTop="@dimen/common_row_margin" >
+
+                    <Button
+                        android:id="@+id/finc_query_deal_querymy"
+                        style="@style/query_button_style606"
+                        android:layout_marginLeft="@dimen/fill_margin_top"
+                        android:layout_marginRight="@dimen/fill_margin_top"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/finc_query_deal_main_uplayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/common_row_margin_half" >
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        style="@style/textview_common_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_xiala" />
+
+                    <ImageView
+                        android:id="@+id/finc_up_imageView"
+                        style="@style/query_image_up_style"
+                        android:src="@drawable/img_arrow_gray_up606" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/query_after"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_bg_query_j"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    style="@style/linnerlayout_common"
+                    android:gravity="left"
+                    android:padding="@dimen/common_row_margin_half" >
+
+                    <TextView
+                        style="@style/outlay_textview_label2606"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/finc_tradetype_colon" />
+
+                    <TextView
+                        android:id="@+id/finc_fund_query_tv"
+                        style="@style/outlay_textview_label1606"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/common_row_margin_half" >
+
+                    <TextView
+                        style="@style/outlay_textview_label2606"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prms_query_time_colon" />
+
+                    <TextView
+                        android:id="@+id/finc_query_result_time"
+                        style="@style/outlay_textview_label1606"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/finc_down_LinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/common_row_margin_half" >
+
+                    <TextView
+                        style="@style/textview_common_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_xiala" />
+
+                    <ImageView
+                        android:id="@+id/finc_down_imageView"
+                        style="@style/query_image_up_style"
+                        android:src="@drawable/img_arrow_gray_down606" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/query_reult_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="@dimen/fill_margin_left"
+                android:layout_marginRight="@dimen/fill_margin_left"
+                android:background="@drawable/shap_for_dept_tranlist"
+                android:orientation="vertical" >
+
+                <include
+                    android:id="@+id/finc_listheader_layout"
+                    layout="@layout/finc_listheader_attention" />
+
+                <ListView
+                    android:id="@+id/finc_querydeal_listview"
+                    style="@style/finc_listview_fill"
+                    android:layout_below="@id/finc_listheader_layout" >
+                </ListView>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

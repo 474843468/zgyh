@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/loan_apply_list_item_height"
+    android:background="@drawable/outlaybg_for_listview_item_write"
+    android:orientation="vertical" >
+
+    <!--<ImageView-->
+        <!--android:id="@+id/left_bg"-->
+        <!--android:layout_width="@dimen/dp_one_zero"-->
+        <!--android:layout_height="@dimen/loan_apply_list_item_height"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentTop="true" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal" >
+
+			<ImageView android:id="@+id/quick_sell_iv"
+			    style="@style/Finc_QuickSell_Flag"
+			    android:layout_gravity="center_vertical"
+			    android:visibility="gone" />
+			
+            <TextView
+                android:id="@+id/tv_fund_name_and_code"
+                style="@style/outlay_textview_label1606"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_five"
+                android:layout_marginLeft="@dimen/dp_five"
+                android:layout_marginTop="@dimen/dp_five"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@color/outlay_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_five"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/outlay_textview_label2606"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="单位净值" />
+
+                <TextView
+                    style="@style/outlay_textview_label2606"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="日增长率" />
+
+                <TextView
+                    style="@style/outlay_textview_label2606"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="基金状态" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_fund_net_value"
+                    style="@style/outlay_textview_label3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/fundp606_title"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tv_day_income_ratio"
+                    style="@style/outlay_textview_label1606"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:singleLine="true" />
+
+                <TextView
+                    android:id="@+id/tv_fund_status"
+                    style="@style/outlay_textview_label1606"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

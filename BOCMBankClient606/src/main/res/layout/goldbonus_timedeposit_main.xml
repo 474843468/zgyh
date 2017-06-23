@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 贵金属积利金 定存管理主界面   linyl -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <!--
+        android:paddingBottom="@dimen/dp_five"
+        android:paddingLeft="@dimen/common_row_margin"
+        android:paddingRight="@dimen/common_row_margin"
+        android:paddingTop="@dimen/dp_five" >
+    -->
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/btn1"
+            style="@style/new_radioButtonLeft"
+            android:layout_height="@dimen/dp_three_zero"
+            android:checked="true"
+            android:text="定期产品"
+            android:textSize="@dimen/textsize_one_two" />
+
+        <RadioButton
+            android:id="@+id/btn2"
+            style="@style/new_radioButtonRight"
+            android:layout_height="@dimen/dp_three_zero"
+            android:text="定期客户持仓信息"
+            android:textSize="@dimen/textsize_one_two" />
+    </RadioGroup>
+
+    <!-- 查询列表头 -->
+    <!--
+     android:layout_marginBottom="@dimen/common_bottom_padding_new"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+    -->
+
+    <RelativeLayout
+        android:id="@+id/rl_tranhistory"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/radioGroup"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <!-- 定期产品列表信息 -->
+
+        <LinearLayout
+            android:id="@+id/fixmanager_product"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <!-- 定投管理 标题 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/titlebackbtn_height"
+                android:layout_marginBottom="@dimen/fill_margin_left_fu"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="定期贵金属积利产品"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!--
+                 <ImageView
+                android:id="@+id/img_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/gray_line" />
+            -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/titlebackbtn_height"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/boci_product_name"
+                    style="@style/textview_common"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/common_row_margin_half"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="产品名称" />
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/boci_yearlyRR"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="年化利率" />
+
+                        <ImageView
+                            android:id="@+id/time_rate_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/bocinvt_sort_down" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/boci_gotoDetail"
+                    android:layout_width="@dimen/shap_of_commrequestopen_pdl"
+                    android:layout_height="@dimen/shap_of_commrequestopen_pdl"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:src="@drawable/right_arrow"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/gray_line" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+
+                <ListView
+                    android:id="@+id/goldbonus_tradequery_list_one"
+                    style="@style/listviewcomm_fill_gray_divider"
+                    android:layout_height="wrap_content"
+                    >
+                </ListView>
+
+                <ImageView
+                    android:id="@+id/img_line4"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:src="@color/gray_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="  *点击上述产品，可将贵金属积利活期转为对应的定期。"
+                    android:textColor="@color/boc_text_color_red" />
+
+                <com.chinamworld.bocmbci.biz.goldbonus.MyTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="  服务时间为每日9:00-16:00。"
+                    android:textColor="@color/boc_text_color_common_gray" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 定期客户持仓 列表信息 -->
+
+        <LinearLayout
+            android:id="@+id/fixmanager_chicang"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <!-- 标题 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/titlebackbtn_height"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="定期贵金属积利客户持仓信息"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_line2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/gray_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/titlebackbtn_height"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/boci_product_name2"
+                    style="@style/textview_common"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/common_row_margin_half"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="产品名称" />
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/boci_yearlyRR2"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="起息日" />
+
+                        <ImageView
+                            android:id="@+id/startDate_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/bocinvt_sort_down" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/boci_timeLimit2"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/common_row_margin_half"
+                            android:text="到期日" />
+
+                        <ImageView
+                            android:id="@+id/expDate_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/bocinvt_sort_un" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/boci_gotoDetail2"
+                    android:layout_width="@dimen/shap_of_commrequestopen_pdl"
+                    android:layout_height="@dimen/shap_of_commrequestopen_pdl"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:src="@drawable/right_arrow"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_line3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/gray_line" />
+
+            <ListView
+                android:id="@+id/goldbonus_tradequery_list_two"
+                style="@style/listviewcomm_fill_gray_divider"
+                android:layout_height="wrap_content" >
+            </ListView>
+
+            <ImageView
+                android:id="@+id/img_line5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/gray_line" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

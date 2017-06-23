@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 投资协议 失效协议 查询条件 的页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <!-- 查看按钮title -->
+
+    <RelativeLayout
+        android:id="@+id/queryagr_btntitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_for_zero"
+        android:background="@drawable/bocnvt_title_bg" >
+
+        <TextView
+            android:id="@+id/queryagr_btntitle_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:text="查看失效的投资协议"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_default" />
+
+        <Button
+            android:id="@+id/queryagr_btntitle_btn"
+            android:layout_width="60dp"
+            android:layout_height="@dimen/titlebackbtn_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/btn_chaxun_bg"
+            android:text="请查看"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_default" />
+    </RelativeLayout>
+
+    <!-- 协议类型 Spinner -->
+
+    <RelativeLayout
+        android:id="@+id/rl_agrtype"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height"
+        android:layout_below="@id/queryagr_btntitle"
+        android:layout_marginBottom="@dimen/common_row_margin_half"
+        android:layout_marginLeft="@dimen/common_bottom_padding_new"
+    	android:layout_marginRight="@dimen/common_bottom_padding_new"
+   		android:layout_marginTop="@dimen/common_row_margin_half" >
+
+        <!-- 正常协议 关联的协议类型 Spinner -->
+
+        <RelativeLayout
+            android:id="@+id/rl_agrtype_success"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/inverst_agree_agrtype_success"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/layout_height"
+                android:gravity="center_vertical"
+                android:text="@string/boc_invest_agrtype" />
+
+            <Spinner
+                android:id="@+id/invest_agree_sp_agrtype_success"
+                style="@style/Spiiner_fill"
+                android:layout_height="@dimen/layout_height"
+                android:layout_toRightOf="@id/inverst_agree_agrtype_success"
+                android:background="@drawable/bg_spinner"
+                android:ellipsize="middle"
+                android:entries="@array/boc_invest_agree_agrType"
+                android:gravity="center_vertical"
+                android:prompt="@string/boc_invest_agrtype_two" />
+        </RelativeLayout>
+
+        <!-- 失效协议 关联的协议类型 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_agrtype_fail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/inverst_agree_agrtype_fail"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/layout_height"
+                android:gravity="center_vertical"
+                android:text="@string/boc_invest_agrtype" />
+
+            <Spinner
+                android:id="@+id/invest_agree_sp_agrtype_fail"
+                style="@style/Spiiner_fill"
+                android:layout_height="@dimen/layout_height"
+                android:layout_toRightOf="@id/inverst_agree_agrtype_fail"
+                android:background="@drawable/bg_spinner"
+                android:ellipsize="middle"
+                android:entries="@array/boc_invest_agree_agrType"
+                android:gravity="center_vertical"
+                android:prompt="@string/boc_invest_agrtype_two" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <!-- 查询结果显示列表 -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_agrtype"
+        android:layout_marginBottom="@dimen/list_bottom"
+        android:layout_marginLeft="@dimen/common_bottom_padding_new"
+    	android:layout_marginRight="@dimen/common_bottom_padding_new"
+   		android:layout_marginTop="@dimen/common_row_margin_half"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/titlebackbtn_width"
+                android:layout_marginBottom="@dimen/fill_margin_left_fu"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/boc_invest_agrname_tv"
+                    style="@style/style_query_titletv"
+                    android:layout_marginLeft="@dimen/common_row_margin_half"
+                    android:layout_weight="1.3"
+                    android:text="@string/boc_invest_agrname" />
+
+                <TextView
+                    android:id="@+id/boc_invest_execpro_tv"
+                    style="@style/style_query_titletv"
+                    android:layout_weight="1.7"
+                    android:text="@string/boc_invest_execpro" />
+
+                <TextView
+                    android:id="@+id/boc_invest_agrtype_tv"
+                    style="@style/style_query_titletv"
+                    android:layout_weight="1.2"
+                    android:text="@string/boc_invest_agrtype_two" />
+
+                <ImageView
+                    android:id="@+id/boci_invest_gotoDetail"
+                    android:layout_width="@dimen/shap_of_commrequestopen_pdl"
+                    android:layout_height="@dimen/shap_of_commrequestopen_pdl"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:src="@drawable/right_arrow"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/boc_invest_img_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/gray_line" />
+
+            <ListView
+                android:id="@+id/boci_agrquery_list"
+                style="@style/listviewcomm_fill_gray_divider" >
+            </ListView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

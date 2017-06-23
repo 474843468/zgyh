@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fadingEdge="none"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 转出账户 -->
+
+        <LinearLayout
+            android:id="@+id/accout_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_acc_out_2dimen_scan_write"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" >
+
+                <ImageView
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:src="@drawable/tran_acc_out_person" />
+
+                <TextView
+                    android:layout_width="80dip"
+                    android:layout_height="20dip"
+                    android:layout_marginLeft="5dip"
+                    android:gravity="bottom"
+                    android:text="@string/tran_acc_out_person" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_acc_out_mytransfer"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/card_new_height"
+                android:background="@drawable/img_card_new" >
+
+                <LinearLayout
+                    android:id="@+id/dept_out_info_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dip"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:text="@string/tran_please_choose_out"
+                    android:textColor="@color/card_text"
+                    android:textSize="@dimen/textsize_two_zero" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_acc_out_list_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/shap_for_dept_tranlist"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/dept_add_new_tranout_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/tran_acc_bottom"
+                android:gravity="center"
+                android:text="@string/add_new_tranout"
+                android:visibility="gone" />
+        </LinearLayout>
+        <!-- 转入账户 -->
+
+        <LinearLayout
+            android:id="@+id/accin_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_acc_in_2dimen_scan_write"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" >
+
+                <ImageView
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:src="@drawable/tran_acc_in_person" />
+
+                <TextView
+                    android:layout_width="80dip"
+                    android:layout_height="20dip"
+                    android:layout_marginLeft="5dip"
+                    android:gravity="bottom"
+                    android:text="@string/tran_acc_in_show" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_acc_in_mytransfer"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/card_new_height"
+                android:background="@drawable/img_card_new" >
+
+                <LinearLayout
+                    android:id="@+id/dept_in_info_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dip"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:text="@string/tran_please_choose_in_acc"
+                    android:textColor="@color/card_text"
+                    android:textSize="@dimen/textsize_two_zero" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_acc_in_list_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/shap_for_dept_tranlist"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/dept_add_new_tranin_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/tran_acc_bottom"
+                android:gravity="center"
+                android:text="@string/add_new_tranin"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 下标题 -->
+
+        <RelativeLayout
+            android:id="@+id/rl_save_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:background="@drawable/shap_for_half_gray" >
+
+            <TextView
+                android:id="@+id/dept_save_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_three_zero"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:text="@string/save_regular_basis" />
+
+            <TextView
+                android:id="@+id/tv_neiku"
+                android:layout_width="@dimen/dp_two_zero"
+                android:layout_height="@dimen/dp_one_zero"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/dept_save_title_tv"
+                android:background="@drawable/down_triangle"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/dept_save_regular_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/list_bottom"
+            android:paddingTop="@dimen/fill_margin_top" >
+
+            <TextView
+                android:id="@+id/choice_acc_prompt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_five"
+                android:layout_marginRight="@dimen/dp_five"
+                android:text="@string/tran_please_prompt"
+                android:textColor="@color/card_text"
+                android:visibility="gone"
+                 />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fill_margin_left"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_one_zero"
+                android:paddingRight="@dimen/dp_one_zero" >
+
+                <Button
+                    android:id="@+id/dept_new_btn1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/savereg_btn_bottom_height"
+                    android:layout_marginRight="@dimen/dp_five"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_gray"
+                    android:gravity="center"
+                    android:text="@string/save_whole"
+                    android:textSize="@dimen/textsize_default"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/dept_new_btn2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/savereg_btn_bottom_height"
+                    android:layout_marginLeft="@dimen/dp_five"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_gray"
+                    android:gravity="center"
+                    android:text="@string/save_random"
+                    android:textSize="@dimen/textsize_default"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fill_margin_top"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_one_zero"
+                android:paddingRight="@dimen/dp_one_zero" >
+
+                <Button
+                    android:id="@+id/dept_new_btn3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/savereg_btn_bottom_height"
+                    android:layout_marginRight="@dimen/dp_five"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_gray"
+                    android:gravity="center"
+                    android:text="@string/save_one_day"
+                    android:textSize="@dimen/textsize_default"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/dept_new_btn4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/savereg_btn_bottom_height"
+                    android:layout_marginLeft="@dimen/dp_five"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_gray"
+                    android:gravity="center"
+                    android:text="@string/save_seven_day"
+                    android:textSize="@dimen/textsize_default"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

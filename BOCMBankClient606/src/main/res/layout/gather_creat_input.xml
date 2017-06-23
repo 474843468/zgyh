@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dept_save_regular_bottom"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin" >
+
+        <Button
+            android:id="@+id/creat_gather_input_next_btn"
+            style="@style/bottombtn"
+            android:text="@string/next" />
+    </LinearLayout>
+
+    <ScrollView
+        style="@style/scrollview_comm_havemarginbutton"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_for_listview_item_write" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/layout_top"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shap_for_dept_tranlist"
+                android:orientation="vertical" >
+                
+                <TextView
+                    android:id="@+id/dept_title_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="@dimen/dp_five"
+                    android:text="@string/input_new_gather_info"
+                    android:textColor="@color/gray"
+                    android:gravity="center_horizontal"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/deepgray_line"
+                    android:padding="@dimen/dp_five"
+                    android:text="@string/gather_info"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/fill_padding_right"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left_noweight"
+                        android:layout_weight="5"
+                        android:text="@string/gather_money_name_label" />
+
+                    <TextView
+                        android:id="@+id/tv_gather_money_name"
+                        style="@style/comm_view_right_noweight"
+                        android:layout_weight="3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/fill_padding_right"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left_noweight"
+                        android:layout_weight="5"
+                        android:text="@string/gather_money_type_label" />
+
+                    <TextView
+                        android:id="@+id/tv_gather_money_type"
+                        style="@style/comm_view_right_noweight"
+                        android:layout_weight="3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/fill_padding_right"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/edit_payee_mobile_table"
+                        style="@style/comm_view_left_noweight"
+                        android:layout_weight="5"
+                        android:ellipsize="middle"
+                        android:singleLine="true"
+                        android:text="@string/payeeMobile" />
+
+                    <EditText
+                        android:id="@+id/edit_payee_mobile"
+                        style="@style/edittext_common_fill_no_weight"
+                        android:layout_weight="3"
+                        android:inputType="numberDecimal"
+                        android:maxLength="15"
+                        android:paddingLeft="@dimen/edittext_paddinglr"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/fill_padding_right"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left_noweight"
+                        android:layout_weight="5"
+                        android:text="@string/gather_account_number_label" />
+
+                    <Spinner
+                        android:id="@+id/account_number_spinner"
+                        style="@style/Spiiner_fill"
+                        android:layout_weight="3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/fill_padding_right"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left_noweight"
+                        android:layout_weight="5"
+                        android:text="@string/gather_money_ammount_label" />
+
+                    <EditText
+                        android:id="@+id/edit_gather_money_ammount"
+                        style="@style/edittext_common_fill_no_weight"
+                        android:layout_weight="3"
+                        android:inputType="numberDecimal"
+                        android:maxLength="14"
+                        android:paddingLeft="@dimen/edittext_paddinglr"
+                        android:textColor="@color/black" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/fill_padding_right"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left_noweight"
+                        android:layout_weight="5"
+                        android:text="@string/fuYan" />
+
+                    <EditText
+                        android:id="@+id/edit_beizhu"
+                        style="@style/edittext_common_fill_no_weight"
+                        android:layout_weight="3"
+                        android:hint="@string/hint_memo"
+                        android:paddingLeft="@dimen/edittext_paddinglr"
+                        android:textColor="@color/black" >
+                    </EditText>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/gather_creat_title_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/deepgray_line"
+                    android:padding="@dimen/dp_five"
+                    android:text="@string/payer_info"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" />
+
+                <LinearLayout
+                    android:id="@+id/payer_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_no_weight"
+                            android:layout_weight="5"
+                            android:text="@string/payer_type_label" />
+
+                        <TextView
+                            android:id="@+id/tv_payer_type"
+                            style="@style/comm_view_right_noweight"
+                            android:layout_weight="3"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_default" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_no_weight"
+                            android:layout_weight="5"
+                            android:text="@string/payer_name_label_no_blank" />
+
+                        <TextView
+                            android:id="@+id/tv_payer_name"
+                            style="@style/comm_view_right_noweight"
+                            android:layout_weight="3"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_default" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_payer_phone_table"
+                            style="@style/textview_common_no_weight"
+                            android:layout_weight="5"
+                            android:ellipsize="middle"
+                            android:singleLine="true"
+                            android:text="@string/payer_phone_label" />
+
+                        <TextView
+                            android:id="@+id/tv_payer_phone"
+                            style="@style/comm_view_right_noweight"
+                            android:layout_weight="3"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_default" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_payer_line_table"
+                            style="@style/textview_common_no_weight"
+                            android:layout_weight="5"
+                            android:ellipsize="middle"
+                            android:singleLine="true"
+                            android:text="@string/payer_customer_number_label" />
+
+                        <TextView
+                            android:id="@+id/tv_payer_line"
+                            style="@style/comm_view_right_noweight"
+                            android:layout_weight="3"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_default" >
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/payer_edit_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="left"
+                        android:text="@string/to_choose_payer_type"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <RadioGroup
+                        android:id="@+id/payer_type_radiogroup"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <RadioButton
+                            android:id="@+id/rb_user_from_phone_bank"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/radiobtn_selector"
+                            android:checked="true"
+                            android:singleLine="true"
+                            android:text="@string/user_from_phone_bank"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <RadioButton
+                            android:id="@+id/rb_user_from_line_bank"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin_half"
+                            android:button="@drawable/radiobtn_selector"
+                            android:singleLine="true"
+                            android:text="@string/user_from_line_bank"
+                            android:textSize="@dimen/textsize_default" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/fill_padding_right"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/payer_name_label" />
+
+                        <EditText
+                            android:id="@+id/edit_payer_name"
+                            style="@style/edittext_common_fill_no_weight"
+                            android:maxLength="60"
+                            android:textColor="@color/black" >
+                        </EditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/fill_padding_right"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/payer_phone_label" />
+
+                        <EditText
+                            android:id="@+id/edit_payer_phone"
+                            style="@style/edittext_common_fill_no_weight"
+                            android:inputType="number"
+                            android:maxLength="15"
+                            android:textColor="@color/black" >
+                        </EditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_line_bank_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/fill_padding_right"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/payer_customer_number_label" />
+
+                        <EditText
+                            android:id="@+id/edit_payer_customer_number"
+                            style="@style/edittext_common_fill_no_weight"
+                            android:inputType="number"
+                            android:maxLength="12"
+                            android:textColor="@color/black" >
+                        </EditText>
+                        <!-- android:hint="@string/hint_line_bank_number" -->
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

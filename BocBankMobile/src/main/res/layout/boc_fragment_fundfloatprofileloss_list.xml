@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.boc.bocsoft.mobile.bocmobile.base.widget.SlipMenu.SlipDrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutSlipDrawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llyHeader"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_titlebar_height"
+            android:orientation="vertical">
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_transdetail_select"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_72px"
+            android:layout_marginTop="@dimen/boc_space_between_20px"
+            android:background="@color/boc_main_button_color">
+
+            <TextView
+                android:id="@+id/tv_transdetail_range"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/boc_space_between_38px"
+                android:gravity="center_vertical"
+                android:text="近一年"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:textSize="@dimen/boc_text_size_small" />
+
+
+            <ImageView
+                android:id="@+id/iv_transdetail_select"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/boc_space_between_38px"
+                android:src="@drawable/boc_select_gray"
+                />
+
+            <TextView
+                android:id="@+id/tv_transdetail_select"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/iv_transdetail_select"
+                android:gravity="center_vertical"
+                android:text="@string/boc_account_transdetail_select"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                android:paddingRight="@dimen/boc_space_between_20px"/>
+
+        </RelativeLayout>
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.expandableitemview.ExpandableItemView
+            android:id="@+id/item_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvNoData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="@color/boc_text_color_common_gray"
+            android:textSize="@dimen/boc_text_size_common" />
+        <include
+            layout="@layout/boc_divide_line"
+            android:id="@+id/divide_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_20px"/>
+        <ListView
+            android:id="@+id/query_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:dividerHeight="@dimen/boc_space_between_2px">
+        </ListView>
+    </LinearLayout>
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.selectview.selecttimerangenew.SelectTimeRangeNew
+        android:id="@+id/viewSelectTime"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:clickable="true" />
+</com.boc.bocsoft.mobile.bocmobile.base.widget.SlipMenu.SlipDrawerLayout>

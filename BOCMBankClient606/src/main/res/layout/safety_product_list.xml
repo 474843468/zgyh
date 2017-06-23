@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 保险产品列表页 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center" >
+
+    <include
+        android:id="@+id/layout_step"
+        layout="@layout/safety_carsafety_step" />
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_step"
+        android:background="@drawable/img_bg_query_j"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/ll_safetytype"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/bottom_margin_top"
+            android:visibility="visible" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="5.5"
+                android:singleLine="true"
+                android:text="@string/safety_hold_pro_detail_prod_type" />
+
+            <Spinner
+                android:id="@+id/sp_safetytype"
+                style="@style/spinner_forex_prompt_info"
+                android:layout_marginRight="5dp"
+                android:layout_weight="3.5"
+                android:paddingRight="35dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_safetytype"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/bottom_margin_top"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="5.5"
+                android:singleLine="true"
+                android:text="@string/safety_hold_pro_detail_risk_company" />
+
+            <TextView
+                android:id="@+id/tv_company"
+                style="@style/textview_forex_prompt_info"
+                android:layout_weight="3.5"
+                android:ellipsize="end"
+                android:paddingLeft="0dip"
+                android:singleLine="true" />
+
+            <Spinner
+                android:id="@+id/sp_company"
+
+                style="@style/spinner_forex_prompt_info"
+                android:layout_gravity="left"
+                android:layout_marginRight="5dp"
+                android:layout_weight="3.5"
+                android:paddingRight="35dip"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_sp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_text"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/bottom_margin_top"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="5.5"
+                    android:singleLine="true"
+                    android:text="@string/safety_lifeInsurance_subCompany"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/tv_subCompany"
+                    style="@style/textview_forex_prompt_info"
+                    android:layout_weight="3.5"
+                    android:ellipsize="end"
+                    android:paddingLeft="0dip"
+                    android:singleLine="true"
+                    android:visibility="gone" />
+
+                <Spinner
+                    android:id="@+id/sp_subCompany"
+
+                    style="@style/spinner_forex_prompt_info"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="3.5"
+                    android:paddingRight="35dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/bottom_margin_top" >
+
+                <TextView
+                    style="@style/comm_view_left"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="5.5"
+                    android:singleLine="true"
+                    android:text="@string/safety_lifeInsurance_subCompany"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default"
+                    android:visibility="invisible" />
+
+                <TextView
+                    style="@style/comm_view_right"
+                    android:layout_width="match_parent"
+                    android:layout_weight="3.5"
+                    android:ellipsize="end"
+                    android:paddingLeft="0dip"
+                    android:textColor="@color/red"
+                    android:text="@string/safety_lifeInsurance_subCompany_tip"
+                    android:textSize="@dimen/textsize_default" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_safety_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <!-- 家财险或意外险的产品列表 -->
+
+            <LinearLayout
+                android:id="@+id/ll_productList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

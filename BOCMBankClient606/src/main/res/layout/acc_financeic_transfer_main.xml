@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账户管理 我的电子现金账户  充值主界面  wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_step"
+        android:orientation="vertical" >
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/btn_dialog_height"
+            android:layout_marginTop="@dimen/fill_margin_top"
+             android:layout_marginLeft="@dimen/common_listview_item__half_grqy_Height"
+            android:layout_marginRight="@dimen/common_listview_item__half_grqy_Height"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/btn_transfer"
+                style="@style/twoRadioButtonLeft"
+                android:layout_height="@dimen/btn_dialog_height"
+                android:text="@string/acc_financeic_transfer_title" />
+
+            <RadioButton
+                android:id="@+id/btn_relevancetrans"
+                style="@style/twoRadioButtonRight"
+                android:layout_height="@dimen/btn_dialog_height"
+                android:text="@string/acc_financeic_relevancetrans_title" />
+        </RadioGroup>
+
+        <RelativeLayout
+            android:id="@+id/rl_change_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_left"
+            android:layout_marginTop="@dimen/dp_five" >
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

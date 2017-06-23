@@ -1,0 +1,77 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rltotal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_content" >
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="62dp"
+        android:background="@drawable/navbar"
+        android:paddingTop="5dp" >
+
+        <Button
+            android:id="@+id/ib_back"
+            style="@style/titlebackbtn" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/titleText" />
+
+        <Button
+            android:id="@+id/ib_top_right_btn"
+            style="@style/titlerightbtn"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_one_three"
+            android:text="@string/login"
+           />
+    </RelativeLayout>
+
+    <com.chinamworld.bocmbci.widget.draggridview.PagedDragDropGrid
+        android:id="@+id/main_grid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/point_layout"
+        android:layout_below="@+id/main_layout"
+        android:layout_marginTop="@dimen/dp_two_zero"
+        android:layout_marginBottom="@dimen/dp_two_zero"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+    </com.chinamworld.bocmbci.widget.draggridview.PagedDragDropGrid>
+
+    <LinearLayout
+        android:id="@+id/point_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/main_page_icon_height"
+       android:orientation="horizontal"
+        android:layout_above="@+id/llinclude" 
+        android:gravity="center">
+    </LinearLayout>
+
+   <TextView 
+       android:id="@+id/tvHint"
+       android:textColor="@color/gray"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="@string/fidgetOperathint"
+       android:layout_centerInParent="true"
+       android:textSize="@dimen/textsize_one_nine"
+       android:layout_margin="@dimen/fill_margin_left"
+       android:gravity="center"
+       android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/llinclude"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="20dp" >
+
+        <include
+            android:id="@+id/menu_popwindow"
+            layout="@layout/foot" />
+    </LinearLayout>
+
+</RelativeLayout>

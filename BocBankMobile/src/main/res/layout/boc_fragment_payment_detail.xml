@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_main_bg_color">
+
+    <include
+        android:id="@+id/head"
+        layout="@layout/boc_layout_head" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/head"
+        android:background="@color/boc_main_bg_color">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/boc_common_cell_color"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/boc_space_between_30px">
+
+                    <TextView
+                        android:id="@+id/pay_currency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/boc_space_between_32px"
+                        android:text="付款金额（人民币元）"
+                        android:textColor="@color/boc_text_color_dark_gray"
+                        android:textSize="@dimen/boc_text_size_common"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/pay_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/boc_popdialog_padding_30px"
+                        android:layout_marginTop="@dimen/boc_space_between_8px"
+                        android:background="@drawable/boc_transaction_status_bg_yellow"
+                        android:text="未付"
+                        android:textColor="@color/boc_common_cell_color"
+                        android:textSize="@dimen/boc_text_size_small" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/pay_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/boc_space_between_64px"
+                    android:layout_marginTop="@dimen/boc_space_between_44px"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_supper_big_max" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/boc_space_between_50px"
+                    android:background="@color/boc_common_view_line" />
+
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRow
+                    android:id="@+id/pay_already"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:editChoiceNameBold="true"
+                    app:textName="实付金额" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_20px"
+                android:background="@color/boc_main_bg_color" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/boc_common_view_line" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRow
+                android:id="@+id/payee_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:editChoiceNameBold="true"
+                app:textName="收款人名称"
+                app:textValue="" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRow
+                android:id="@+id/payee_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:editChoiceNameBold="true"
+                app:textName="收款账号"
+                app:textValue="" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRow
+                android:id="@+id/payee_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:editChoiceNameBold="true"
+                app:textName="收款人手机号"
+                app:textValue="" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRow
+                android:id="@+id/order_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:editChoiceNameBold="true"
+                app:textName="发起日期"
+                app:textValue="" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRow
+                android:id="@+id/start_channel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:editChoiceNameBold="true"
+                app:textName="发起渠道"
+                app:textValue="" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRow
+                android:id="@+id/order_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:editChoiceNameBold="true"
+                app:textName="指令序号"
+                app:textValue="" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_20px"
+                android:background="@color/boc_main_bg_color" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/boc_common_view_line" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRow
+                android:id="@+id/tips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:editChoiceNameBold="true"
+                app:textName="附言" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRow
+                android:id="@+id/pay_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:editChoiceNameBold="true"
+                app:textName="付款人名称"
+                app:textValue="" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRow
+                android:id="@+id/pay_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:editChoiceNameBold="true"
+                app:textName="付款账号"
+                app:textValue="" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRow
+                android:id="@+id/pay_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:editChoiceNameBold="true"
+                app:textName="付款人手机号"
+                app:textValue="" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRow
+                android:id="@+id/pay_customer_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:editChoiceNameBold="true"
+                app:textName="付款人客户号"
+                app:textValue="" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRow
+                android:id="@+id/pay_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:editChoiceNameBold="true"
+                app:textName="付款日期"
+                app:textValue="" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRow
+                android:id="@+id/pay_channel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:editChoiceNameBold="true"
+                app:textName="付款渠道"
+                app:textValue="" />
+
+            <TextView
+                android:id="@+id/pay_confirm"
+                style="@style/BocButton.BocPrimaryButton"
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/boc_space_between_50px"
+                android:layout_marginTop="@dimen/boc_space_between_50px"
+                android:gravity="center"
+                android:text="确认付款"
+                android:textColor="@color/boc_common_cell_color"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+

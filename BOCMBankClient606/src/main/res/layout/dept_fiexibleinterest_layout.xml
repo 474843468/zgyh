@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/top_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <include layout="@layout/bocnet_acc_detail_top" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textsize_one_zero"
+        android:singleLine="true"
+        android:ellipsize="middle"
+        android:text="请选择签约产品" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_five"
+            android:layout_marginLeft="@dimen/dp_five"
+            android:layout_marginRight="@dimen/dp_five"
+            android:layout_marginTop="@dimen/dp_five"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/bbk_btn"
+                style="@style/twoRadioButtonLeft"
+                android:text="@string/dept_fiexibleinterest_bbk"
+                android:textSize="@dimen/textsize_default" />
+
+            <RadioButton
+                android:id="@+id/enrichment_btn"
+                style="@style/twoRadioButtonRight"              
+                android:text="@string/dept_fiexibleinterest_enrichment"
+                android:textSize="@dimen/textsize_default" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_btnBotom"
+            android:layout_below="@+id/radioGroup"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical" >
+
+            <ScrollView style="@style/scrollview_comm" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_issign"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <com.chinamworld.bocmbci.userwidget.LabelTextView
+                            android:id="@+id/ltv_interestproducttype"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_five"
+                            custom:labelText="签约类型：" />
+
+                        <com.chinamworld.bocmbci.userwidget.LabelTextView
+                            android:id="@+id/ltv_beginAmount_begintime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_five"
+                            custom:labelText="起点金额：/起存期：" />
+                        <!-- custom:weightShowRate="2:3" -->
+
+                        <com.chinamworld.bocmbci.userwidget.LabelTextView
+                            android:id="@+id/ltv_Limit_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_five"
+                            custom:labelText="大于等于起点金额天数：/起存期存款总金额：" />
+
+                        <TextView
+                            android:id="@+id/Limit_date_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_one_zero"
+                            android:layout_marginRight="@dimen/dp_one_zero"
+                            android:layout_marginTop="@dimen/dp_five"
+                            android:textColor="@color/red" />
+
+                        <com.chinamworld.bocmbci.userwidget.LabelTextView
+                            android:id="@+id/ltv_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_five"
+                            custom:labelText="协议期限：" />
+
+                        <!--
+                             <com.chinamworld.bocmbci.userwidget.LabelTextView
+                            android:id="@+id/ltv_markettype"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            custom:labelText="结息类型："
+                            custom:weightShowRate="2:3" />
+                        -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:visibility="gone" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:layout_weight="3"
+                                android:text="计息详情：" />
+
+                            <TextView
+                                android:id="@+id/tv_detail"
+                                style="@style/textview_common_right"
+                                android:layout_weight="2"
+                                android:text="查看"
+                                android:textColor="@color/blue" />
+                        </LinearLayout>
+
+                        <!--
+                             <LinearLayout
+                            android:id="@+id/ll_interestdetai_sign"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone" >
+                        -->
+
+                        <com.chinamworld.bocmbci.userwidget.LabelTextView
+                            android:id="@+id/ltv_signedDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_five"
+                            custom:labelText="签约日期：" />
+
+                        <com.chinamworld.bocmbci.userwidget.LabelTextView
+                            android:id="@+id/ltv_signedChannel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_five"
+                            custom:labelText="签约渠道：" />
+
+                        <com.chinamworld.bocmbci.userwidget.LabelTextView
+                            android:id="@+id/ltv_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_five"
+                            custom:labelText="状态：" />
+                        <!-- </LinearLayout> -->
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rl_unsign"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:visibility="visible" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/dp_five"
+                                android:text="@string/dept_fiexibleinterest_product_info"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_default" />
+
+                            <TextView
+                                android:id="@+id/tv_infodetail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_five"
+                                android:paddingLeft="@dimen/dp_two_zero"
+                                android:paddingRight="@dimen/dp_two_zero" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_btnBotom"
+            style="@style/linnerlayout_common"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_infodetail"
+                style="@style/btn_common_oneline"
+                android:background="@drawable/btn_red_big"
+                android:text="@string/dept_product_infodetail" />
+
+            <Button
+                android:id="@+id/btn_sign"
+                style="@style/btn_common_oneline"
+                android:background="@drawable/btn_red_big" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

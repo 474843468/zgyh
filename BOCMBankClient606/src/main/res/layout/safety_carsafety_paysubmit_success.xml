@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 缴费成功界面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/layout_step"
+        layout="@layout/safety_carsafety_step" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_step"
+        android:layout_marginBottom="@dimen/fill_margin_top"
+        android:layout_marginLeft="@dimen/fill_margin_top"
+        android:layout_marginRight="@dimen/fill_margin_top" >
+
+        <LinearLayout
+            android:id="@+id/ll_Next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/common_bottom_padding"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnConfirm"
+                style="@style/textview_forex_button_cell"
+                android:text="@string/finish" />
+        </LinearLayout>
+
+        <ScrollView
+            style="@style/listviewcomm_fill_haveDivider"
+            android:layout_above="@+id/ll_Next"
+            android:layout_marginTop="@dimen/common_details_messages_margintop"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:paddingTop="@dimen/common_details_messages_paddingtop"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:id="@+id/btn_transet_mytransfer"
+                style="@style/tran_body_ll"
+                android:paddingBottom="@dimen/fill_margin_top"
+                android:paddingLeft="@dimen/dp_five"
+                android:paddingRight="@dimen/dp_five" >
+
+                <!-- 交易序号 -->
+
+                <LinearLayout
+                    android:id="@+id/tran_seqbat_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="6"
+                        android:text="@string/jiaoyi_num" />
+
+                    <TextView
+                        android:id="@+id/tv_jiaoyi_num"
+                       style="@style/textview_forex_prompt_info"
+                        android:layout_weight="4" />
+                </LinearLayout>
+
+                <!-- 车牌号 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_licenseNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="6"
+                        android:text="@string/safety_carinfo_licenseNo" />
+
+                    <TextView
+                        android:id="@+id/tv_licenseNo"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4" />
+                </LinearLayout>
+                <!-- 交强险保单号 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_jqxPolicyNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="6"
+                        android:text="@string/safety_carsafety_jqxPolicyNo" />
+
+                    <TextView
+                        android:id="@+id/tv_jqxPolicyNo"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4" />
+                </LinearLayout>
+
+                <!-- 商业险保单号 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_bizPolicyNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="6"
+                        android:text="@string/safety_carsafety_bizPolicyNo" />
+
+                    <TextView
+                        android:id="@+id/tv_bizPolicyNo"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4" />
+                </LinearLayout>
+                <!-- 电子邮箱 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="6"
+                        android:text="@string/safety_hold_pro_detail_applicant_email" />
+
+                    <TextView
+                        android:id="@+id/tv_email"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_tips"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dip"
+                    android:background="@color/white" />
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_details_title_height"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/dp_one_zero" >
+
+            <TextView
+                android:id="@+id/safety_hold_pro_detail_second_title"
+                android:layout_width="@dimen/common_details_title_width"
+                android:layout_height="@dimen/btn_operate_height"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_title"
+                android:gravity="center"
+                android:text="@string/safety_carsafety_paysuccess"
+                android:textSize="@dimen/textsize_default" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

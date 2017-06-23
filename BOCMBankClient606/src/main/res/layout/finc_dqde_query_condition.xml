@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 基金  定投管理有效定投查询条件 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_query_condition"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/img_bg_query_j"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_five"
+        android:paddingRight="@dimen/fill_margin_left" 
+        android:paddingLeft="@dimen/fill_margin_left"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/search_shouqi_up"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+			
+			<LinearLayout
+                android:id="@+id/acc_query_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/common_row_margin">
+
+                <TextView
+                    style="@style/order_textview_common_no_weight"
+                    android:text="@string/finc_scheduled_transCycle"/>
+
+                <Spinner
+                    android:id="@+id/tradeSycleSp"
+                    style="@style/Spiiner_fill"/>
+            </LinearLayout>
+            
+			<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/common_row_margin">
+				<TextView
+                    style="@style/order_textview_common_no_weight"
+                    android:text="@string/finc_fundcode_colon"/>
+				
+			    <EditText android:id="@+id/fundCodeEt"
+			        style="@style/editext_fill"
+			        android:hint="@string/hint_memo"/>
+            </LinearLayout>
+            
+			<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/common_row_margin">
+                <Button
+	                android:id="@+id/searchBtn"
+	                style="@style/query_button_style606"
+	                android:layout_marginLeft="@dimen/fill_margin_top"/>
+            </LinearLayout>
+            
+            <LinearLayout android:id="@+id/up"
+                android:layout_gravity="center_vertical"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:paddingTop="@dimen/dp_five">
+
+	            <TextView
+	                android:id="@+id/textView1"
+	                style="@style/textview_common_up"
+	                android:layout_width="0dp"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center"
+	                android:layout_weight="1"
+	                android:gravity="right" />
+	
+	            <ImageView
+	                android:id="@+id/sbremit_query_up"
+	                style="@style/query_image_up_style"
+	                android:layout_gravity="center"
+	                android:gravity="center"
+	                android:src="@drawable/img_arrow_gray_up" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

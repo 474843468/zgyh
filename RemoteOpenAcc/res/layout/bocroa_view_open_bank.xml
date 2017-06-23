@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/bocroa_d3dada"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp" >
+
+        <com.boc.bocsoft.remoteopenacc.common.view.BaseEditText
+            android:id="@+id/et_search_open_bank"
+            style="@style/bocroa_style_step_item_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/bocroa_bg_white_round"
+            android:hint="支持模糊查询" />
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/bocroa_open_bank_ben"
+            android:paddingBottom="4dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp"
+            android:paddingTop="4dp"
+            android:text="搜索"
+            android:textColor="@color/bocroa_black" />
+    </LinearLayout>
+
+    <com.boc.bocsoft.remoteopenacc.common.view.pulltofresh.XListView
+        android:id="@+id/xlist_openbank"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bocroa_background"
+        android:cacheColorHint="#00000000"
+        android:headerDividersEnabled="false"
+        android:divider="@drawable/bocroa_divider"
+        android:listSelector="#00000000" />
+
+</LinearLayout>

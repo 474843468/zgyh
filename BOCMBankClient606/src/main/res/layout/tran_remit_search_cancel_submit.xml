@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--汇款套餐笔数     解约自动续约套餐填写页面-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_sure"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/trade_nextButton"
+            style="@style/bottombtn"
+            android:text="@string/next" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_sure"
+        android:layout_below="@+id/ll_step"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:id="@+id/ScrollView"
+            style="@style/scrollview_comm_havemarginbutton"
+            android:fillViewport="false"
+            android:paddingBottom="@dimen/dp_five"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:visibility="visible" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/table_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible" >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TableRow>
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:layout_weight="0"
+                                android:text="@string/trans_remit_meal_account" />
+
+                            <TextView
+                                android:id="@+id/tran_remit_n_query_signType"
+                                style="@style/textview_common_right"
+                                android:layout_weight="0" />
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:layout_weight="0"
+                                android:text="@string/bizhong" />
+
+                            <TextView
+                                android:id="@+id/tran_remit_n_query_autoFlag"
+                                style="@style/textview_common_right"
+                                android:layout_weight="0"
+                                android:text="@string/prms_acc_rmb" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/reSignType_layout"
+                            android:layout_marginTop="@dimen/common_row_margin" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:layout_weight="0"
+                                android:text="@string/tran_remit_n_query_reSignType_auto" />
+
+                            <TextView
+                                android:id="@+id/tran_remit_n_query_reSignType"
+                                style="@style/textview_common_right"
+                                android:layout_weight="0" />
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:layout_weight="0"
+                                android:text="@string/tran_remit_n_query_mobile" />
+
+                            <TextView
+                                android:id="@+id/tran_remit_n_query_mobile"
+                                style="@style/textview_common_right"
+                                android:layout_weight="0" />
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:layout_weight="0"
+                                android:text="@string/tran_remit_n_query_startDate" />
+
+                            <TextView
+                                android:id="@+id/tran_remit_n_query_startDate"
+                                style="@style/textview_common_right"
+                                android:layout_weight="0" />
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:layout_weight="0"
+                                android:text="@string/tran_remit_n_query_endDate" />
+
+                            <TextView
+                                android:id="@+id/tran_remit_n_query_endDate"
+                                style="@style/textview_common_right"
+                                android:layout_weight="0" />
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/table_layout_share"
+                            android:layout_marginTop="@dimen/common_row_margin" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:layout_weight="0"
+                                android:text="@string/tran_remit_n_query_shareNo_yes" />
+
+                            <TextView
+                                style="@style/textview_common_right"
+                                android:layout_weight="0"
+                                android:text="@string/tran_remit_n_query_no" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/list_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/table_layout"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="vertical"
+                    android:paddingRight="@dimen/fill_padding_right"
+                    android:paddingLeft="@dimen/fill_padding_left"
+                    android:visibility="visible" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tran_remit_n_query_shareNo_yes" />
+
+                        <TextView
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <com.chinamworld.bocmbci.widget.LinearLayoutForListView
+                        android:id="@+id/product_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+                    </com.chinamworld.bocmbci.widget.LinearLayoutForListView>
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

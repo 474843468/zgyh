@@ -1,0 +1,218 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#D7D7D7"
+    android:orientation="vertical"
+    tools:context=".AssertsAccountManagerActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_seven"
+
+        android:layout_marginLeft="@dimen/dp_one_zero"
+        android:layout_marginRight="@dimen/dp_one_zero"
+
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/but_accountaccredit_history_oneself"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:background="@drawable/assetsmanager_account_mannager_leftbut"
+            android:text="@string/account_accredit_history_oneselfe"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/but_accountaccredit_history_other"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:background="@drawable/assetsmanager_account_mannager_white_rightbut"
+            android:text="@string/account_accredit_history_otherselfe"
+            android:textColor="#ff0000" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_accountaccredit_history_oneselfe"
+        android:layout_marginTop="@dimen/dp_seven"
+
+        android:layout_marginLeft="@dimen/dp_one_zero"
+        android:layout_marginRight="@dimen/dp_one_zero"
+
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/account_accredit_history_otherselfe_selectaccount"
+            android:textSize="@dimen/textsize_default"/>
+
+        <Spinner
+            android:id="@+id/sp_accountaccredit_history_oneselfe"
+            style="@style/Spiiner_fill"
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+            android:layout_marginLeft="@dimen/common_listview_item_paddingLR"/>
+
+    </LinearLayout>
+
+    <!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+        <Button
+            android:id="@+id/but_asaa_historyrecord_one_week"
+            style="@style/buttonLeft"
+            android:text="@string/prms_str_oneweek"
+            android:textSize="@dimen/textsize_one_three" />
+
+
+        <Button
+            android:id="@+id/but_asaa_historyrecord_one_month"
+            style="@style/buttonMiddle"
+            android:text="@string/prms_str_onemonth"
+            android:textSize="@dimen/textsize_one_three" />
+
+
+        <Button
+            android:id="@+id/but_asaa_historyrecord_three_month"
+            style="@style/buttonRight"
+            android:text="@string/prms_str_threemonth"
+            android:textSize="@dimen/textsize_one_three" />
+
+
+    </LinearLayout>
+
+    -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_seven"
+
+        android:layout_marginLeft="@dimen/dp_one_zero"
+        android:layout_marginRight="@dimen/dp_one_zero"
+
+        android:orientation="horizontal" >
+
+        <include layout="@layout/assetsmanager_base_query_fengge" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_asaa_query_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_seven"
+
+        android:layout_marginLeft="@dimen/dp_one_zero"
+        android:layout_marginRight="@dimen/dp_one_zero"
+
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rl_asaa_query_transfer_startdate"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/layout_height"
+            android:layout_weight="1"
+            android:layout_marginRight="7dp" >
+
+            <TextView
+                android:id="@+id/tv_asaa_historyrecordsearch_startdate"
+                style="@style/textview_common"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/u51"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/u53"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_asaa_query_transfer_enddate"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/layout_height"
+            android:layout_weight="1"
+            android:layout_marginLeft="7dp"
+            >
+
+            <TextView
+                android:id="@+id/tv_asaa_historyrecordsearch_enddate"
+                style="@style/textview_common"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/u51"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/u53"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_seven"
+
+        android:layout_marginLeft="@dimen/dp_one_zero"
+        android:layout_marginRight="@dimen/dp_one_zero"
+
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_asac_historyrecord_query"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:background="@drawable/assetsmanager_account_mannager_middlebut"
+            android:text="@string/query"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_asac_historyrecord_query_up"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="@dimen/common_row_margin"
+        >
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/textview_common_up"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|bottom"
+            android:textSize="@dimen/textsize_one_three" />
+
+        <ImageView
+            android:id="@+id/iv_asac_query_up"
+            style="@style/query_image_up_style"
+            android:layout_gravity="bottom"
+            android:src="@drawable/u61" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bocroa_background"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 照片 -->
+
+        <LinearLayout
+            android:id="@+id/ll_picture_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/bocroa_indicator_right_padding"
+            android:background="@color/bocroa_white"
+            android:orientation="horizontal" >
+
+            <!-- 身份证正面 -->
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <!-- 提示View -->
+
+                <LinearLayout
+                    android:id="@+id/rl_shot_front"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_front_tips"
+                        style="@style/bocroa_style_28px_dbdee3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="20dp"
+                        android:drawableTop="@drawable/bocroa_id_no_shut"
+                        android:gravity="center"
+                        android:text="拍摄身份证正面\n（姓名、身份证号一面）" />
+                </LinearLayout>
+                <!-- 显示身份证view -->
+
+                <ImageView
+                    android:id="@+id/iv_id_front"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="3dp" />
+                <!-- 身份证上层view -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_shot_front_float"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/iv_front_shot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="7dp"
+                        android:layout_marginTop="7dp"
+                        android:src="@drawable/bocroa_id_have_shut" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/bocroa_e5e8e9" />
+            <!-- 身份证背面 -->
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <!-- 背面提示view -->
+
+                <LinearLayout
+                    android:id="@+id/rl_shot_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_back_tips"
+                        style="@style/bocroa_style_28px_dbdee3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="20dp"
+                        android:drawableTop="@drawable/bocroa_id_no_shut"
+                        android:gravity="center"
+                        android:text="拍摄身份证背面\n（签证机关、有效期限一面）" />
+                </LinearLayout>
+                <!-- 背面图片 -->
+
+                <ImageView
+                    android:id="@+id/iv_id_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:padding="3dp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_shot_back_float"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" >
+
+                    <!-- 上层view -->
+
+                    <ImageView
+                        android:id="@+id/iv_back_shot"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="7dp"
+                        android:layout_marginTop="7dp"
+                        android:src="@drawable/bocroa_id_have_shut" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_identity"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bocroa_anthentication_table_hight"
+            android:layout_marginTop="@dimen/bocroa_indicator_right_padding"
+            android:background="@color/bocroa_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/bocroa_anthentication_text_padding_left"
+            android:paddingRight="@dimen/bocroa_header_footer_top_bottom_padding" >
+
+            <TextView
+                style="@style/bocroa_style_14px_333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bocroa_identity_num" />
+
+            <com.boc.bocsoft.remoteopenacc.common.view.BaseEditText
+                android:id="@+id/et_identity_num"
+                style="@style/bocroa_style_14px_333333"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/bocroa_indicator_right_padding"
+                android:layout_weight="1"
+                android:background="@null"
+                android:digits="0123456789Xx"
+                android:gravity="right"
+                android:hint="@string/bocroa_please_input"
+                android:maxLength="18" />
+
+            <View
+                android:layout_width="0.8dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/bocroa_e8ecec"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/bocroa_id_have_shut"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- android:layout_marginTop="@dimen/bocroa_indicator_right_padding" -->
+
+            <LinearLayout
+                android:id="@+id/ll_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.8dp"
+                android:background="@color/bocroa_white"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/bocroa_anthentication_table_hight"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/bocroa_anthentication_text_padding_left"
+                    android:paddingRight="@dimen/bocroa_header_footer_top_bottom_padding" >
+
+                    <TextView
+                        style="@style/bocroa_style_14px_333333"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bocroa_first_name" />
+
+                    <com.boc.bocsoft.remoteopenacc.common.view.BaseEditText
+                        android:id="@+id/et_name_left"
+                        style="@style/bocroa_style_14px_333333"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/bocroa_indicator_right_padding"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="@string/bocroa_please_input" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.8dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/bocroa_e8ecec" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0.8dp"
+                android:background="@color/bocroa_white"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/bocroa_anthentication_table_hight"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/bocroa_anthentication_text_padding_left"
+                    android:paddingRight="@dimen/bocroa_header_footer_top_bottom_padding" >
+
+                    <TextView
+                        style="@style/bocroa_style_14px_333333"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bocroa_second_name" />
+
+                    <com.boc.bocsoft.remoteopenacc.common.view.BaseEditText
+                        android:id="@+id/et_name_right"
+                        style="@style/bocroa_style_14px_333333"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/bocroa_indicator_right_padding"
+                        android:background="@null"
+                        android:gravity="right"
+                        android:hint="@string/bocroa_please_input" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 签发日期 -->
+
+
+            <!-- <LinearLayout -->
+            <!-- android:id="@+id/ll_validity_start" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="@dimen/bocroa_anthentication_table_hight" -->
+            <!-- android:layout_marginTop="0.8dp" -->
+            <!-- android:background="@color/bocroa_white" -->
+            <!-- android:gravity="center_vertical" -->
+            <!-- android:orientation="horizontal" -->
+            <!-- android:paddingLeft="@dimen/bocroa_anthentication_text_padding_left" -->
+            <!-- android:paddingRight="@dimen/bocroa_anthentication_text_padding_right" > -->
+
+
+            <!-- <TextView -->
+            <!-- style="@style/bocroa_style_14px_333333" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:text="@string/bocroa_start_validity" /> -->
+
+
+            <!-- <com.boc.bocsoft.remoteopenacc.common.view.BaseEditText -->
+            <!-- android:id="@+id/et_validity_start" -->
+            <!-- style="@style/bocroa_style_14px_333333" -->
+            <!-- android:layout_width="0dp" -->
+            <!-- android:layout_height="match_parent" -->
+            <!-- android:layout_marginLeft="@dimen/bocroa_indicator_right_padding" -->
+            <!-- android:layout_weight="1" -->
+            <!-- android:background="@null" -->
+            <!-- android:digits="0123456789X" -->
+            <!-- android:gravity="right" -->
+            <!-- android:hint="@string/bocroa_validity_hint" -->
+            <!-- android:maxLength="18" /> -->
+
+
+            <!-- <View -->
+            <!-- android:layout_width="0.8dp" -->
+            <!-- android:layout_height="match_parent" -->
+            <!-- android:layout_marginBottom="5dp" -->
+            <!-- android:layout_marginLeft="5dp" -->
+            <!-- android:layout_marginRight="5dp" -->
+            <!-- android:layout_marginTop="5dp" -->
+            <!-- android:background="@color/bocroa_e8ecec" -->
+            <!-- android:visibility="gone" /> -->
+
+
+            <!-- <ImageView -->
+            <!-- android:id="@+id/iv_validity_start" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_gravity="center_vertical" -->
+            <!-- android:src="@drawable/bocroa_id_have_shut" -->
+            <!-- android:visibility="gone" /> -->
+            <!-- </LinearLayout> -->
+
+
+            <!-- <LinearLayout -->
+            <!-- android:id="@+id/ll_validity" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="@dimen/bocroa_anthentication_table_hight" -->
+            <!-- android:layout_marginTop="0.8dp" -->
+            <!-- android:background="@color/bocroa_white" -->
+            <!-- android:gravity="center_vertical" -->
+            <!-- android:orientation="horizontal" -->
+            <!-- android:paddingLeft="@dimen/bocroa_anthentication_text_padding_left" -->
+            <!-- android:paddingRight="@dimen/bocroa_anthentication_text_padding_right" > -->
+
+
+            <!-- <TextView -->
+            <!-- style="@style/bocroa_style_14px_333333" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:text="@string/bocroa_end_validity" /> -->
+
+
+            <!-- <com.boc.bocsoft.remoteopenacc.common.view.BaseEditText -->
+            <!-- android:id="@+id/et_validity" -->
+            <!-- style="@style/bocroa_style_14px_333333" -->
+            <!-- android:layout_width="0dp" -->
+            <!-- android:layout_height="match_parent" -->
+            <!-- android:layout_marginLeft="@dimen/bocroa_indicator_right_padding" -->
+            <!-- android:layout_weight="1" -->
+            <!-- android:background="@null" -->
+            <!-- android:digits="0123456789X" -->
+            <!-- android:gravity="right" -->
+            <!-- android:hint="@string/bocroa_validity_hint" -->
+            <!-- android:maxLength="18" /> -->
+
+
+            <!-- <View -->
+            <!-- android:layout_width="0.8dp" -->
+            <!-- android:layout_height="match_parent" -->
+            <!-- android:layout_marginBottom="5dp" -->
+            <!-- android:layout_marginLeft="5dp" -->
+            <!-- android:layout_marginRight="5dp" -->
+            <!-- android:layout_marginTop="5dp" -->
+            <!-- android:background="@color/bocroa_e8ecec" -->
+            <!-- android:visibility="gone" /> -->
+
+
+            <!-- <ImageView -->
+            <!-- android:id="@+id/iv_validity" -->
+            <!-- android:layout_width="wrap_content" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_gravity="center_vertical" -->
+            <!-- android:src="@drawable/bocroa_id_have_shut" -->
+            <!-- android:visibility="gone" /> -->
+            <!-- </LinearLayout> -->
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:background="@color/bocroa_white"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:src="@color/bocroa_background" />
+
+            <!-- <LinearLayout -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:background="@color/bocroa_white" -->
+            <!-- android:orientation="horizontal" -->
+            <!-- android:paddingBottom="3dp" -->
+            <!-- android:paddingTop="6dp" > -->
+
+
+            <!-- <LinearLayout -->
+            <!-- android:layout_width="0dp" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_weight="1" -->
+            <!-- android:orientation="vertical" -->
+            <!-- android:paddingLeft="@dimen/bocroa_anthentication_text_padding_left" -->
+            <!-- android:paddingRight="@dimen/bocroa_anthentication_text_padding_right" > -->
+
+
+            <!-- <com.boc.bocsoft.remoteopenacc.common.view.BaseEditText -->
+            <!-- android:id="@+id/et_name_left_spell" -->
+            <!-- style="@style/bocroa_style_14px_333333" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="@dimen/bocroa_anthentication_table_hight" -->
+            <!-- android:background="@null" -->
+            <!-- android:gravity="right" -->
+            <!-- android:hint="@string/bocroa_first_name_spell" -->
+            <!-- android:inputType="textEmailAddress" /> -->
+            <!-- </LinearLayout> -->
+
+
+            <!-- <View -->
+            <!-- android:layout_width="0.8dp" -->
+            <!-- android:layout_height="match_parent" -->
+            <!-- android:background="@color/bocroa_e8ecec" /> -->
+
+
+            <!-- <LinearLayout -->
+            <!-- android:layout_width="0dp" -->
+            <!-- android:layout_height="wrap_content" -->
+            <!-- android:layout_weight="1" -->
+            <!-- android:orientation="vertical" -->
+            <!-- android:paddingLeft="@dimen/bocroa_anthentication_text_padding_left" -->
+            <!-- android:paddingRight="@dimen/bocroa_anthentication_text_padding_right" > -->
+
+
+            <!-- <com.boc.bocsoft.remoteopenacc.common.view.BaseEditText -->
+            <!-- android:id="@+id/et_name_right_spell" -->
+            <!-- style="@style/bocroa_style_14px_333333" -->
+            <!-- android:layout_width="match_parent" -->
+            <!-- android:layout_height="@dimen/bocroa_anthentication_table_hight" -->
+            <!-- android:background="@null" -->
+            <!-- android:gravity="right" -->
+            <!-- android:hint="@string/bocroa_second_name_spell" -->
+            <!-- android:inputType="textEmailAddress" /> -->
+            <!-- </LinearLayout> -->
+            <!-- </LinearLayout> -->
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_phone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bocroa_anthentication_table_hight"
+            android:layout_marginTop="@dimen/bocroa_indicator_right_padding"
+            android:background="@color/bocroa_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/bocroa_anthentication_text_padding_left"
+            android:paddingRight="@dimen/bocroa_header_footer_top_bottom_padding" >
+
+            <TextView
+                style="@style/bocroa_style_14px_333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bocroa_telephone" />
+
+            <com.boc.bocsoft.remoteopenacc.common.view.BaseEditText
+                android:id="@+id/et_phone_num"
+                style="@style/bocroa_style_14px_333333"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/bocroa_indicator_right_padding"
+                android:background="@null"
+                android:gravity="right"
+                android:hint="@string/bocroa_please_input"
+                android:inputType="number"
+                android:maxLength="11" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_msg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bocroa_anthentication_table_hight"
+            android:layout_marginTop="0.8dp"
+            android:background="@color/bocroa_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/bocroa_anthentication_text_padding_left"
+            android:paddingRight="@dimen/bocroa_header_footer_top_bottom_padding" >
+
+            <TextView
+                style="@style/bocroa_style_14px_333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bocroa_msg" />
+            <!-- 验证码输入框 -->
+
+            <cfca.mobile.sip.SipBox
+                android:id="@+id/et_msg_num"
+                style="@style/bocroa_style_14px_333333"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="3dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:hint="@string/bocroa_input_msg_code"
+                android:inputType="textPassword"
+                android:maxLength="6" >
+            </cfca.mobile.sip.SipBox>
+
+            <!-- <com.boc.bocsoft.remoteopenacc.common.view.BaseEditText -->
+            <!-- style="@style/bocroa_style_14px_333333" -->
+            <!-- android:layout_width="0dp" -->
+            <!-- android:layout_height="match_parent" -->
+            <!-- android:layout_marginLeft="3dp" -->
+            <!-- android:layout_weight="1" -->
+            <!-- android:gravity="left" -->
+            <!-- android:hint="@string/bocroa_input_msg_code" -->
+            <!-- android:inputType="textPassword" -->
+            <!-- android:maxLength="6" /> -->
+            <!-- android:inputType="numberPassword"/> delete by lgw 2015.10.28 由于要使用SDK 2.3.3(Android 10) 编译 -->
+
+            <com.boc.bocsoft.remoteopenacc.buss.view.RemobeTimeButtonView
+                android:id="@+id/btn_msg_code"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_agreement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="17dp"
+            android:layout_marginTop="17dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/bocroa_anthentication_text_padding_left" >
+
+            <ImageButton
+                android:id="@+id/imagebtn_agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bocroa_select_check"
+                android:state_selected="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="我已阅读并同意"
+                    android:textColor="@color/bocroa_79797c"
+                    android:textSize="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tv_agreement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:text="《中国银行股份有限公司个人电子账户服务协议》"
+                        android:textColor="@color/bocroa_blue"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_authentication_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bocroa_bottom_button_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bocroa_btn_next_step"
+        android:gravity="center"
+        android:text="@string/bocroa_confirm"
+        android:textColor="@color/bocroa_blue"
+        android:textSize="@dimen/bocroa_text_size_middle" />
+
+</RelativeLayout>

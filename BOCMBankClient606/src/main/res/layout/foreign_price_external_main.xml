@@ -1,0 +1,335 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="01dp"-->
+    <!--android:background="@color/boc_text_color_dark_gray"/>-->
+    <com.chinamworld.llbt.userwidget.scrollview.NewScrollView
+        android:id="@+id/fund_newScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <com.chinamworld.bocmbci.userwidget.investview.InvestPriceView
+                    android:id="@+id/investPriceView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <RelativeLayout
+                    android:id="@+id/advertisement_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/lianlong_space_between_404px"
+                    android:background="@drawable/forex_adv_img"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/foreign_landing_clicks"
+                        android:layout_width="@dimen/lianlong_space_between_220px"
+                        android:layout_height="@dimen/lianlong_space_between_70px"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/boc_space_between_30px"
+                        android:background="@drawable/inverst_login"
+                        android:text="@string/login"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/boc_space_between_30px"
+                        android:textStyle="bold"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/my_positioned"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/boc_title_color"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/foreign_landing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="我的持仓"
+                        android:textColor="@color/white"
+                        android:textSize="20dip"/>
+
+                    <Button
+                        android:id="@+id/my_positioned_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/share_right_arrows"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_foreign_comprehensive_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/boc_space_between_80px"
+                    android:background="@color/white"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/foreign_trade_query_clicks"
+                        style="quotation_list_button"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/btn_white"
+                        android:text="@string/foreign_trade_query"
+                        android:textColor="@color/boc_main_button_color"
+                        android:textSize="@dimen/boc_text_size_small"
+                        android:textStyle="bold"/>
+
+                    <Button
+                        android:id="@+id/foreign_account_manage_clicks"
+                        style="quotation_list_button"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/btn_white"
+                        android:text="@string/foreign_account_manage"
+                        android:textColor="@color/boc_main_button_color"
+                        android:textSize="@dimen/boc_text_size_small"
+                        android:textStyle="bold"/>
+
+                    <Button
+                        android:id="@+id/foreign_commission_deal_query"
+                        style="quotation_list_button"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/btn_white"
+                        android:text="@string/bocinvt_commission_deal_query"
+                        android:textColor="@color/boc_main_button_color"
+                        android:textSize="@dimen/boc_text_size_small"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/foreign_free_but"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:id="@+id/is_show_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/boc_space_between_20px"
+                    android:background="@color/boc_bottom_date_color"
+                    android:visibility="visible"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/boc_space_between_74px"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/foreign_free_clicks"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/boc_space_between_70px"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/foreign_free_tv_color"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/foreign_free"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/boc_text_size_small"
+                                android:textStyle="bold"/>
+
+                            <ImageView
+                                android:id="@+id/ima_foreign_free"
+                                android:layout_width="45dp"
+                                android:layout_height="3dp"
+                                android:layout_marginTop="5dp"
+                                android:background="#ff6666"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/foreign_query_clicks"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/boc_space_between_70px"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/foreign_query_tv_color"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/foreign_query"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/boc_text_size_small"
+                                android:textStyle="bold"/>
+
+                            <ImageView
+                                android:id="@+id/ima_foreign_query"
+                                android:layout_width="45dp"
+                                android:layout_height="3dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/boc_grey_color"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/lianlong_space_between_60px"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/lianlong_space_between_30px"
+                android:layout_marginRight="@dimen/boc_space_between_26px"
+                android:background="@color/boc_currency_pair_title_color">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.1"
+                    android:gravity="left">
+
+                    <TextView
+                        android:id="@+id/foreign_editor_clicks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="编辑 | "
+                        android:textColor="@color/lianlong_text_color_common_gray"
+                        android:textSize="@dimen/boc_text_size_small"
+                        android:textStyle="bold"
+                        android:visibility="visible"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="货币对"
+                        android:textColor="@color/lianlong_text_color_dark_gray"
+                        android:textSize="@dimen/boc_text_size_small"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/foreign_sell_price"
+                    android:layout_marginRight="@dimen/boc_text_size_super_small"
+                    android:textColor="@color/lianlong_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_small"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="right"
+                    android:layout_weight="1"
+                    android:text="@string/foreign_buy_price"
+                    android:layout_marginRight="@dimen/boc_text_size_super_small"
+                    android:textColor="@color/lianlong_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_small"/>
+
+                <LinearLayout
+                    android:id="@+id/ll_foreign_rise_drop_clicks"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="right">
+
+                    <TextView
+                        android:id="@+id/foreign_rise_drop_clicks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:drawablePadding="5dp"
+                        android:text="@string/foreign_rise_drop"
+                        android:textColor="@color/lianlong_text_color_dark_gray"
+                        android:textSize="@dimen/boc_text_size_small"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/boc_grey_color"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <com.chinamworld.llbt.userwidget.refreshliseview.DownRefreshLayout
+                    android:id="@+id/pull_down_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@color/boc_bottom_date_color"
+                    android:orientation="vertical">
+
+                    <com.chinamworld.llbt.userwidget.refreshliseview.PullableListView
+                        android:id="@+id/all_exchange_rate_listView"
+                        style="@style/listview_quotation_list"
+                        android:scrollbars="none"/>
+
+                </com.chinamworld.llbt.userwidget.refreshliseview.DownRefreshLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/boc_bottom_date_color"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/forex_rate_times"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/boc_space_between_10px"
+                        android:layout_marginLeft="@dimen/boc_space_between_12px"
+                        android:layout_marginRight="@dimen/boc_space_between_12px"
+                        android:layout_marginTop="@dimen/boc_space_between_10px"
+                        android:text=""
+                        android:textColor="@color/boc_text_color_cinerous"
+                        android:textSize="@dimen/lianlong_text_size_small"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.chinamworld.llbt.userwidget.scrollview.NewScrollView>
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/boc_common_bg_color">
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.headview.TableHead
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.boc.bocsoft.mobile.bocmobile.base.widget.headview.TableHead>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+       >
+        <TextView
+            android:layout_alignParentLeft="true"
+            android:text="近期收款人"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:textSize="@dimen/boc_text_size_common"
+            android:layout_width="wrap_content"
+            android:padding="@dimen/boc_card_account_amount_padding_left"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/allrencentpayee"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="全部"
+            android:textColor="@color/boc_text_color_cinerous"
+            android:textSize="@dimen/boc_text_size_common"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/boc_card_account_amount_padding_left"
+            android:gravity="center"/>
+    </RelativeLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="80dp"
+       android:orientation="horizontal">
+       <ImageView
+           android:src="@drawable/boc_image_login"
+           android:layout_width="80dp"
+           android:layout_height="match_parent"
+           />
+       <TextView
+           android:id="@+id/mynumber"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:textSize="@dimen/boc_text_size_big"
+           android:textColor="@color/boc_text_color_dark_gray"
+           android:text="我（3）"
+           android:gravity="center|left"/>
+   </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:src="@drawable/boc_image_login"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            />
+        <TextView
+            android:id="@+id/modulenum"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/boc_text_size_big"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:text="模板（6）"
+            android:gravity="center|left"/>
+    </LinearLayout>
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.XListView
+        android:id="@+id/recentpayeelist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.XListView>
+
+</LinearLayout>

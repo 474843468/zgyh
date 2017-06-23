@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 资金归集 明细结果信息项 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/body"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_for_listview_item_selector" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/arrow"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/fill_padding"
+            android:paddingLeft="@dimen/fill_padding"
+            android:paddingTop="@dimen/fill_padding" >
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/label_collectdate"
+                style="@style/style_match_wrap"
+                app:labelText="@string/collect_transDate"
+                app:weightShowRate="2:3" />
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/label_bycollectworkno"
+                style="@style/style_match_wrap"
+                app:labelText="@string/collect_trans_number"
+                app:weightShowRate="2:3" />
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/label_bycollectstatus"
+                style="@style/style_match_wrap"
+                app:labelText="@string/collect_status"
+                app:weightShowRate="2:3" />
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/label_bycollectamount"
+                style="@style/style_match_wrap"
+                app:labelText="@string/collect_success_amount"
+                app:weightShowRate="2:3" />
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/label_collectcount"
+                style="@style/style_match_wrap"
+                app:labelText="@string/collect_count"
+                app:weightShowRate="2:3" />
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/label_collectmode"
+                style="@style/style_match_wrap"
+                app:labelText="@string/collect_mode"
+                app:weightShowRate="2:3" />
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/label_colletmothed"
+                style="@style/style_match_wrap"
+                app:labelText="发起方式："
+                app:weightShowRate="2:3" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="@dimen/shap_of_commrequestopen_pdl"
+            android:layout_height="@dimen/shap_of_commrequestopen_pdl"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:src="@drawable/right_arrow" />
+    </RelativeLayout>
+
+</LinearLayout>

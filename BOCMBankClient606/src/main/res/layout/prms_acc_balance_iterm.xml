@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 贵金属持仓 列表项  401批次  add by xyl -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/prms_accbalance_mid_height"
+    android:background="@drawable/prms_img_card_mid"
+    android:paddingLeft="@dimen/common_listview_item_paddingLR" >
+
+    <LinearLayout
+        android:id="@+id/prms_price_grideview_sale"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:layout_marginRight="@dimen/common_listview_item__half_grqy_Height"
+        android:paddingBottom="@dimen/common_listview_item_paddingLR"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/textview_common"
+            android:layout_width="@dimen/prms_accbalance_sellicon_height"
+            android:layout_height="@dimen/prms_accbalance_sellicon_height"
+            android:background="@drawable/prms_img_maichu"
+            android:gravity="center" />
+
+        <TextView
+            android:textSize="9sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prms_sale"
+            android:textColor="@color/gray" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/prms_price_grideview_sale"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/prms_price_grideview_sourcecurrency"
+            android:layout_width="@dimen/prms_accbalance_currency_width"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="美元金（现钞）"
+            style="@style/bond_textview_15_black_1"
+            android:layout_alignParentLeft="true"
+             />
+
+        <LinearLayout
+            android:layout_toRightOf="@id/prms_price_grideview_sourcecurrency"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/prms_price_grideview_accbalance"
+                style="@style/bond_textview_15_black_1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="11111111111111"
+                android:textColor="@color/fonts_pink" />
+
+            <TextView
+                android:id="@+id/prms_price_grideview_accbalance_unit"
+                style="@style/bond_textview_15_black_1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="盎司"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

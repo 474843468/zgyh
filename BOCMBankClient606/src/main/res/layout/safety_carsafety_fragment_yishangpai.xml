@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 车牌号 -->
+
+    <LinearLayout
+        android:id="@+id/ll_licenseNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/common_row_margin"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_five" >
+
+        <TextView
+            style="@style/textview_forex_prompt_message"
+            android:layout_weight="6.5"
+            android:singleLine="true"
+            android:text="@string/safety_carinfo_licenseNo" />
+
+        <TextView
+            android:id="@+id/tv_licenseNo"
+            style="@style/comm_view_right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            android:singleLine="true"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/ll_licenseNo_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5" >
+
+            <Spinner
+                android:id="@+id/sp_licenseNo_zone"
+                style="@style/spinner_forex_prompt_info"
+                android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                android:layout_weight="5" />
+
+            <EditText
+                android:id="@+id/et_licenseNo"
+                style="@style/edittext_forex_prompt_info"
+                android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                android:layout_weight="3"
+                android:capitalize="characters"
+                android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:maxLength="6"
+                android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- 行驶城市 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/common_row_margin"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_five" >
+
+        <TextView
+            style="@style/textview_forex_prompt_message"
+            android:layout_weight="6.5"
+            android:singleLine="true"
+            android:text="@string/safety_carinfo_city" />
+
+        <Spinner
+            android:id="@+id/sp_zone"
+            style="@style/spinner_forex_prompt_info"
+            android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+            android:layout_weight="3.5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_spCity"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/common_row_margin"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_five" >
+
+        <TextView
+            style="@style/comm_view_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="6.5"
+            android:singleLine="true"
+            android:text="" />
+
+        <Spinner
+            android:id="@+id/sp_city"
+            style="@style/spinner_forex_prompt_info"
+            android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+            android:layout_weight="3.5" />
+    </LinearLayout>
+
+    <!-- 车主姓名 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/common_row_margin"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_five" >
+
+        <TextView
+            style="@style/textview_forex_prompt_message"
+            android:layout_weight="6.5"
+            android:singleLine="true"
+            android:text="@string/safety_carinfo_carOwnerName" />
+
+        <EditText
+            android:id="@+id/et_carOwnerName"
+            style="@style/edittext_forex_prompt_info"
+            android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+            android:layout_weight="3.5"
+            android:maxLength="5"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/tv_carOwnerName"
+            style="@style/comm_view_right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            android:singleLine="true"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!-- 车主证件类型 -->
+
+    <LinearLayout
+        android:id="@+id/ll_carOwnerIdType"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/common_row_margin"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_five" >
+
+        <TextView
+            android:id="@+id/tv_carOwnerIdType"
+            style="@style/textview_forex_prompt_message"
+            android:layout_weight="6.5"
+            android:singleLine="true"
+            android:text="@string/safety_carinfo_carOwnerIdType" />
+
+        <Spinner
+            android:id="@+id/sp_carOwnerIdType"
+            style="@style/spinner_forex_prompt_info"
+            android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+            android:layout_weight="3.5" />
+
+        <TextView
+            android:id="@+id/tv_carOwnerIdType_data"
+            style="@style/comm_view_right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            android:singleLine="true"
+            android:visibility="gone" />
+    </LinearLayout>
+    <!-- 车主证件号码 -->
+
+    <LinearLayout
+        android:id="@+id/ll_carOwnerId"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/common_row_margin"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_five" >
+
+        <TextView
+            android:id="@+id/tv_carOwnerId"
+            style="@style/textview_forex_prompt_message"
+            android:layout_weight="6.5"
+            android:singleLine="true"
+            android:text="@string/safety_carinfo_carOwnerId" />
+
+        <EditText
+            android:id="@+id/et_carOwnerId"
+            style="@style/edittext_forex_prompt_info"
+            android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+            android:layout_weight="3.5"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:inputType="text"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/tv_carOwnerId_data"
+            style="@style/comm_view_right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3.5"
+            android:singleLine="true"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

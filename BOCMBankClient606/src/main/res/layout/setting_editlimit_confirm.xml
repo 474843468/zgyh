@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 服务设定  交易限额设定 确认页面 xyl -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/common_bottom_padding" >
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/set_consern"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_blue_big"
+            android:text="@string/consern"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/set_confirm"
+            style="@style/bottombtn"
+            android:text="@string/confirm"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/stepbar"
+        layout="@layout/step_title_layout" />
+
+    <ScrollView
+        style="@style/scrollview_comm_havemarginbutton"
+        android:layout_above="@id/btn_layout"
+        android:layout_below="@id/stepbar" >
+
+        <LinearLayout
+            style="@style/confirm_main_style_setting"
+            android:orientation="vertical" >
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:text="@string/set_tradestyle" />
+
+                <TextView
+                    android:id="@+id/set_editlimitconfirm_servicename"
+                    style="@style/confirm_right_textview_style" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:text="@string/set_currency_colon" />
+
+                <TextView
+                    android:id="@+id/set_editlimitconfirm_currency"
+                    style="@style/confirm_right_textview_style" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:text="@string/set_daymaxlimit" />
+
+                <TextView
+                    android:id="@+id/set_editlimitconfirm_daymax"
+                    style="@style/confirm_right_textview_style"
+                    android:singleLine="false"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linnerlayout_common"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:text="@string/oldset_mydaymaxlimit" />
+
+                <TextView
+                    android:id="@+id/set_editlimitconfirm_predaymax"
+                    style="@style/confirm_right_textview_style"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    android:id="@+id/set_editlimitconfirm_resetpredaymax_pre"
+                    style="@style/confirm_left_textview_style"
+                    android:text="@string/set_mydaymaxlimit" />
+
+                <TextView
+                    android:id="@+id/set_editlimitconfirm_resetpredaymax"
+                    style="@style/confirm_right_textview_style"
+                    android:singleLine="false"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/set_smc_layout"
+                style="@style/linnerlayout_common"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:text="@string/smc" />
+
+                <LinearLayout
+                    style="@style/confirm_left_textview_style"
+                    android:orientation="horizontal" >
+
+                    <cfca.mobile.sip.SipBox
+                        android:id="@+id/set_editlimitconfirm_smc"
+                        style="@style/editext_fill"
+                        android:layout_weight="4"
+                        android:maxLength="6" >
+                    </cfca.mobile.sip.SipBox>
+
+                    <Button
+                        android:id="@+id/set_get"
+                        style="@style/button_smscode"
+                        android:layout_marginLeft="@dimen/common_listview_item_paddingLR" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/set_otp_layout"
+                style="@style/linnerlayout_common"
+                 android:visibility="gone">
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:text="@string/opt" />
+
+                <cfca.mobile.sip.SipBox
+                    android:id="@+id/set_editlimitconfirm_otp"
+                    style="@style/editext_fill"
+                    android:maxLength="6" >
+                </cfca.mobile.sip.SipBox>
+            </LinearLayout>
+
+            <com.chinamworld.bocmbci.widget.UsbKeyText
+                android:id="@+id/sip_usbkey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:layout_marginRight="@dimen/common_row_margin_half"
+                android:gravity="center"
+                android:orientation="horizontal" />
+
+            <!-- <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+                    
+                </LinearLayout> -->
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

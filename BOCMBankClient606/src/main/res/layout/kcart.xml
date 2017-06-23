@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+ <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_five_zero"
+        android:background="@drawable/navbar" >
+
+        <Button
+            android:id="@+id/ib_back"
+            style="@style/titlebackbtn"
+            android:text="@string/back"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_one_three" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/titleText" />
+
+         <Button
+            android:id="@+id/ib_top_right_btn"
+            style="@style/titlerightbtn"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_one_three"
+            android:visibility="gone" />
+    </RelativeLayout>
+    <com.chinamworld.bocmbci.widget.kchart.XYChartView
+        android:id="@+id/xyChart"
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent"
+		android:layout_weight="1"/>
+
+</LinearLayout>

@@ -1,0 +1,107 @@
+<div class="wrap wrap-headfooter">
+    <header class="page-head">
+        <div class="back-img"  def_event="{click: 'back'}"><img src="images/back-icon.png"></div>
+        <h1>明细</h1>
+    </header>
+    <section>
+        <!--确认页开始-->
+        <div class="detailed">
+            <div class="detailed-mid">
+                <p></p>
+                <p><%=productInfo.productName%>（<%=productInfo.parValue.formatMoney('001')%>元面值 ）</p>
+                <p class="rmb"><span>¥</span><%=productInfo.uniValue.formatMoney('001')%></p>
+                <p><%=productInfo.description%></p>
+            </div>
+            <div class="detailed-btn">
+                <span def_event="{click: 'reserveRecordQry'}"><img src="images/detail-pic02.png">预约记录查询</span>
+            </div>
+            <div class="detailed-list">
+                <ul>
+                    <li>
+                        <span>预约起止日期:</span>
+                        <div class="detailed-list-word">
+                            <%
+                                var startTime = productInfo.startTime.replace(/(\d{2})/g, '$1:').replace(/(.*).{1}/, '$1');
+                            %>
+                            <p><%=productInfo.startDate.replace(/-/g,'/')%> ~ <%=productInfo.endDate.replace(/-/g,'/')||'待定'%></p>
+                            <%if(new Date(now)-new Date(productInfo.startDate + ' ' + startTime) < 0){%>
+                            <p class="detailed-tips safe">未开始</p>
+                            <%}else if(!productInfo.endDate){%>
+                            <p class="detailed-tips safe">结束日待定</p>
+                            <%}else if(Math.ceil((new Date(productInfo.endDate)-new Date(now))/86400000)+1 > 10){%>
+                            <p class="detailed-tips safe">剩余<%=Math.ceil((new Date(productInfo.endDate.replace(/-/g, '/') + ' ' + productInfo.endTime.replace(/(\d{2})/g, '$1:').replace(/(.*).{1}/, '$1'))-new Date(now))/86400000)%>天</p>
+                            <%}else if(Math.ceil((new Date(productInfo.endDate)-new Date(now))/86400000)+1 <= 10 &&
+                                    Math.ceil((new Date(productInfo.endDate)-new Date(now))/86400000)+1 > 0){%>
+                            <p class="detailed-tips">剩余<%=Math.ceil((new Date(productInfo.endDate.replace(/-/g, '/') + ' ' + productInfo.endTime.replace(/(\d{2})/g, '$1:').replace(/(.*).{1}/, '$1'))-new Date(now))/86400000)%>天</p>
+                            <%}else{%>
+                            <p class="">预约已结束</p>
+                            <%}%>
+                        </div>
+                    </li>
+                    <li>
+                        <span>预约时间段:</span>
+                        <div class="detailed-list-word">
+                            <p><%=productInfo.startTime.replace(/(\d{2})/g, '$1:').replace(/(.*).{1}/, '$1')%> ~ <%=productInfo.endTime.replace(/(\d{2})/g, '$1:').replace(/(.*).{1}/, '$1')%></p>
+                        </div>
+                    </li>
+                    <li>
+                        <span>兑换起止日期:</span>
+                        <div class="detailed-list-word">
+                            <p><%=productInfo.sellStartDate.replace(/-/g,'/')%> ~ <%=productInfo.sellEndDate.replace(/-/g,'/')%></p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="detailed-list">
+                <ul>
+                    <li>
+                        <span>人行发行量:</span>
+                        <div class="detailed-list-word">
+                            <p><%=productInfo.circulation%></p>
+                        </div>
+                    </li>
+                    <li>
+                        <span>中行发行额度:</span>
+                        <div class="detailed-list-word">
+                            <p><%=productInfo.bocCount%></p>
+                        </div>
+                    </li>
+                    <!--<li>-->
+                        <!--<span>产品发售批次:</span>-->
+                        <!--<div class="detailed-list-word">-->
+                            <!--<p><%=productInfo.proVersion%></p>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+        </div>
+        <!--确认页结束-->
+    </section>
+    <%
+        var date = new Date(now),
+            today = date.getFullYear() + '/' + (date.getMonth()+ 1) + '/' + date.getDate(),
+            startTime = productInfo.startTime.replace(/(\d{2})/g, '$1:').replace(/(.*).{1}/, '$1'),
+            endTime = productInfo.endTime.replace(/(\d{2})/g, '$1:').replace(/(.*).{1}/, '$1'),
+            sdate = new Date(today + ' ' + startTime),
+            edate = new Date(today + ' ' + endTime),
+            reservStartDate = new Date(productInfo.startDate.replace(/-/g, '/') + ' ' + startTime),
+            reservEndDate = new Date(productInfo.endDate.replace(/-/g, '/') + ' ' + endTime);
+        var isInTime = (date>=reservStartDate && (!productInfo.endDate || date<=reservEndDate) &&  date<=edate && date>=sdate);
+        var notDate = date < reservStartDate && "未开始" || (date > reservEndDate && "已结束") || "";
+        if(isInTime){
+    %>
+            <footer def_event="{click: 'reserve'}">立即预约</footer>
+    <%
+        }else if(notDate == "未开始"){
+    %>
+    <footer disabled style="background-color: #B9B6B6;" def_event="{click: 'notStart'}">立即预约</footer>
+    <%
+        }else if(notDate == "已结束"){
+    %>
+    <footer disabled style="background-color: #B9B6B6;" def_event="{click: 'ended'}">立即预约</footer>
+    <%
+        }else{
+    %>
+    <footer disabled style="background-color: #B9B6B6;" def_event="{click: 'notInTime'}">立即预约</footer>
+    <%}%>
+</div>

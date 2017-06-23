@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:id="@+id/sv_content"
+        style="@style/scrollview_comm_havemarginbutton"
+        android:layout_above="@+id/ll_button"
+        android:layout_marginBottom="@dimen/common_row_margin"
+        android:layout_marginTop="@dimen/dp_two_zero"
+        android:background="@drawable/bg_for_listview_item_write" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/ll_treaty_num"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="3"
+                    android:text="@string/epay_treaty_detail_tv_treaty_num" />
+
+                <TextView
+                    android:id="@+id/tv_treaty_num"
+                    style="@style/textview_common_right"
+                    android:layout_weight="2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_cust_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_treaty_num"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="3"
+                    android:text="@string/epay_treaty_detail_tv_cust_name" />
+
+                <TextView
+                    android:id="@+id/tv_cust_name"
+                    style="@style/textview_common_right"
+                    android:layout_weight="2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_id_card"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_cust_name"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="3"
+                    android:text="@string/epay_treaty_detail_tv_identity_card" />
+
+                <TextView
+                    android:id="@+id/tv_identity_card"
+                    style="@style/textview_common_right"
+                    android:layout_weight="2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_id_num"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_id_card"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="3"
+                    android:text="@string/epay_treaty_detail_tv_identity_num" />
+
+                <TextView
+                    android:id="@+id/tv_identity_num"
+                    style="@style/textview_common_right"
+                    android:layout_weight="2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_mer_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_id_num"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="3"
+                    android:text="@string/epay_treaty_detail_tv_merchant_name" />
+
+                <TextView
+                    android:id="@+id/tv_merchant_name"
+                    style="@style/textview_common_right"
+                    android:layout_weight="2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_mer_acc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_mer_name"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="3"
+                    android:text="@string/epay_treaty_detail_tv_merchant_acc" />
+
+                <TextView
+                    android:id="@+id/tv_merchant_acc"
+                    style="@style/textview_common_right"
+                    android:layout_weight="2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_pay_acc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_mer_acc"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="3"
+                    android:text="@string/epay_treaty_detail_tv_pay_account" />
+
+                <TextView
+                    android:id="@+id/tv_pay_account"
+                    style="@style/textview_common_right"
+                    android:layout_weight="2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_pay_acctype"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_pay_acc"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="3"
+                    android:text="@string/epay_treaty_detail_tv_pay_account_type" />
+
+                <TextView
+                    android:id="@+id/tv_pay_account_type"
+                    style="@style/textview_common_right"
+                    android:layout_weight="2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_aq"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_pay_acctype"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="3"
+                    android:text="@string/epay_treaty_detail_tv_addup_quota" />
+
+                <TextView
+                    android:id="@+id/tv_addup_quota"
+                    style="@style/textview_common_right"
+                    android:layout_weight="2"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_currency"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_aq"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="3"
+                    android:text="@string/epay_wc_spa_tv_currency" />
+
+                <TextView
+                    style="@style/textview_common_right"
+                    android:layout_weight="2"
+                    android:text="@string/rmb_currency" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_t_status"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_currency"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="3"
+                    android:text="@string/epay_treaty_detail_tv_treaty_status" />
+
+                <TextView
+                    android:id="@+id/tv_treaty_status"
+                    style="@style/textview_common_right"
+                    android:layout_weight="2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_date"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_t_status"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="3"
+                    android:text="@string/epay_treaty_detail_tv_contract_date" />
+
+                <TextView
+                    android:id="@+id/tv_contract_date"
+                    style="@style/textview_common_right"
+                    android:layout_weight="2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_channel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_date"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="3"
+                    android:text="@string/epay_treaty_detail_tv_contract_channel" />
+
+                <TextView
+                    android:id="@+id/tv_contract_channel"
+                    style="@style/textview_common_right"
+                    android:layout_weight="2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_c_client"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_channel"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="3"
+                    android:text="@string/epay_treaty_detail_tv_contract_client" />
+
+                <TextView
+                    android:id="@+id/tv_contract_client"
+                    style="@style/textview_common_right"
+                    android:layout_weight="2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_mobile"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_c_client"
+                android:layout_marginBottom="@dimen/common_row_margin"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="3"
+                    android:text="@string/epay_treaty_detail_tv_contract_mobile_num" />
+
+                <TextView
+                    android:id="@+id/tv_contract_mobile_num"
+                    style="@style/textview_common_right"
+                    android:layout_weight="2" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/bt_modify_quota"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/epay_treaty_detail_bt_modify_quota" />
+
+        <Button
+            android:id="@+id/bt_cancel_contract"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/epay_treaty_detail_bt_cancel_contract" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/titleText_stepacc"
+        android:layout_width="@dimen/common_details_title_width"
+        android:layout_height="@dimen/left_img_width"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/bottom_margin_top"
+        android:background="@drawable/bg_title"
+        android:gravity="center"
+        android:text="@string/epay_tq_detail_tv_title"
+        android:textColor="@color/gray_title" />
+
+</RelativeLayout>

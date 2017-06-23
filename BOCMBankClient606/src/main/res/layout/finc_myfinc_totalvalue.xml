@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账户贵金属 重设贵金属账户 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/transparent_00" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_padding_right"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:background="@drawable/message_dialog_bg"
+        android:paddingBottom="@dimen/common_bottom_padding_new" 
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/img_exit_accdetail"
+            style="@style/Finc_Dialog_Close"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_exit_accdetail"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_left_double"
+            android:background="@drawable/shap_for_dept_tranlist"
+            android:layout_marginBottom="@dimen/common_row_margin" 
+            android:paddingBottom="@dimen/common_row_margin">
+
+            <include 
+                android:id="@+id/finc_listheader_layout"
+                layout="@layout/finc_listheader" />
+
+            <ListView
+                android:layout_below="@id/finc_listheader_layout"
+                android:id="@+id/finc_totalValeListView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:listSelector="#00000000"
+                
+                 >
+            </ListView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

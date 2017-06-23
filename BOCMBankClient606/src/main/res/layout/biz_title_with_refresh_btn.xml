@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    
+    <LinearLayout
+        android:id="@+id/left_title_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/manual_refresh"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/left_title"
+            style="@style/textview_common"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textColor="@color/gray"
+            android:text="@string/for_reference_only_new2"
+            android:textSize="@dimen/textsize_one_zero" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/left_title2_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/left_title_ll"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/textview_common"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:textColor="@color/gray"
+            android:text="@string/update_time_bejing"
+            android:layout_marginRight="@dimen/dp_two"
+            android:textSize="@dimen/textsize_one_zero" />
+
+        <TextView
+            android:id="@+id/update_time"
+            style="@style/textview_common"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:singleLine="true"
+            android:textColor="@color/gray"
+            android:text="-"
+            android:textSize="@dimen/textsize_one_zero" />
+
+    </LinearLayout>
+    
+    <Button
+        android:id="@+id/manual_refresh"
+        style="@style/titlerightbtn_b"
+        android:layout_width="@dimen/statuequery_btn_width"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:background="@drawable/btn_goumai"
+        android:text="@string/manual_refresh"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_one_three" />
+
+</RelativeLayout>

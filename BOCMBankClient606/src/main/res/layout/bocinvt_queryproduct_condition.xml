@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 中银理财  查询条件页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_combinate_queryproduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img_bg_query_j"
+        android:orientation="vertical" >
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_row_margin"
+            android:layout_marginRight="@dimen/common_row_margin"
+            android:layout_marginTop="@dimen/common_row_margin_half"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/btn_mobilebank"
+                style="@style/twoRadioButtonLeft"
+                android:checked="true"
+                android:onClick="btnCombinationOnclick"
+                android:text="@string/combinate_query" />
+
+            <RadioButton
+                android:id="@+id/btn_cardbank"
+                style="@style/twoRadioButtonRight"
+                android:onClick="btnFastOnclick"
+                android:text="@string/bocinvt_fast_query" />
+        </RadioGroup>
+
+        <!-- 账户选择 -组合查询 -->
+        <LinearLayout
+            android:id="@+id/layout_combinacct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_row_margin"
+            android:layout_marginRight="@dimen/common_row_margin"
+            android:layout_marginTop="@dimen/common_row_margin_half"
+            android:gravity="center_vertical"
+            >
+
+            <Button
+                android:id="@+id/btn_query"
+                android:layout_width="@dimen/btn_bottom_height"
+                android:layout_height="@dimen/btn_bottom_height"
+                android:layout_marginLeft="@dimen/dp_five"
+                android:background="@drawable/bocinvt_acctdetail_query"
+                android:onClick="combinAcctDetailOnclick"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_one_for"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/texttitle"
+                style="@style/textview_common"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:gravity="right"
+                android:text="@string/bocinvt_buy_number" />
+
+            <TextView
+                android:id="@+id/boci_combinacct"
+                style="@style/style_tv_spinner"
+                android:text="请选择账户" />
+        </LinearLayout>
+
+        <!-- 账户选择 -按代码查询 -->
+        <LinearLayout
+            android:id="@+id/layout_fastacct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_row_margin"
+            android:layout_marginRight="@dimen/common_row_margin"
+            android:layout_marginTop="@dimen/common_row_margin_half"
+            android:visibility="gone" 
+            android:gravity="center_vertical"
+            >
+
+            <Button
+                android:id="@+id/fast_btn"
+                android:layout_width="@dimen/btn_bottom_height"
+                android:layout_height="@dimen/btn_bottom_height"
+                android:layout_marginLeft="@dimen/dp_five"
+                android:background="@drawable/bocinvt_acctdetail_query"
+                android:onClick="fastAcctDetailOnclick"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_one_for"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/texttitle2"
+                style="@style/textview_common"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="right"
+                android:text="@string/bocinvt_buy_number" />
+
+            <TextView
+                android:id="@+id/boci_fastacct"
+                style="@style/textview_common"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/layout_height"
+                android:layout_weight="1.0"
+                android:background="@drawable/bg_spinner"
+                android:ellipsize="middle"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/edittext_paddinglr"
+                android:paddingRight="@dimen/fill_margin_right"
+                android:singleLine="true"
+                android:text="请选择账户" />
+        </LinearLayout>
+
+        <!-- 代码查询-布局 -->
+        <RelativeLayout
+            android:id="@+id/layout_fast"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin_half"
+            android:layout_marginLeft="@dimen/common_row_margin"
+            android:layout_marginRight="@dimen/common_row_margin_half"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+          <LinearLayout 
+              android:id="@+id/layout_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+            <TextView 
+                style="@style/textview_common"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/edittext_height"
+                android:gravity="right|center_vertical"
+                android:text="产品代码："
+                />
+            <EditText
+                android:id="@+id/editView"
+                style="@style/edittext_inputNumber_fill"
+                android:layout_width="0dp"
+                android:layout_weight="1.6"
+                android:layout_marginRight="@dimen/common_row_margin_half"
+                android:hint="请输入产品代码"
+                android:inputType="text" />
+           </LinearLayout>
+           
+              <Button
+                android:id="@+id/btn_fastquery"
+                style="@style/query_button_style"
+                android:layout_below="@+id/layout_card"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center|center_vertical"
+                android:onClick="btnFastQueryOnclick"
+                android:text="@string/query"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_default" />
+          
+        </RelativeLayout>
+
+        <!-- 组合查询-布局 -->
+        <LinearLayout
+            android:id="@+id/layout_combination"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin_half"
+            android:orientation="vertical" 
+            >
+
+            <!-- 产品类型 -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_row_margin"
+                android:layout_marginRight="@dimen/common_row_margin"
+                android:orientation="horizontal" 
+                android:gravity="center_vertical"
+                >
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6"
+                    android:gravity="right"
+                    android:text="@string/bocinvt_product_type" />
+                <Spinner
+                    android:id="@+id/spinner_product_type"
+                    style="@style/Spiiner_fill"
+                    android:layout_weight="1"
+                    android:prompt="@string/bocinvt_tv_52" />
+            </LinearLayout>
+            
+            <!-- 产品币种 -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_row_margin"
+                android:layout_marginRight="@dimen/common_row_margin"
+                android:layout_marginTop="@dimen/common_row_margin_half"
+                android:orientation="horizontal" 
+                android:gravity="center_vertical"
+                >
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6"
+                    android:gravity="right"
+                    android:text="@string/bocinvt_product_money_type" />
+
+                <Spinner
+                    android:id="@+id/boci_currencode"
+                    style="@style/Spiiner_fill"
+                    android:layout_weight="1.0"
+                    android:prompt="@string/productCurCode_null" />
+            </LinearLayout>
+            
+            <!-- 产品期限 -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_row_margin"
+                android:layout_marginRight="@dimen/common_row_margin"
+                android:layout_marginTop="@dimen/common_row_margin_half"
+                android:orientation="horizontal" 
+                android:gravity="center_vertical"
+                >
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6"
+                    android:gravity="right"
+                    android:text="@string/timeLimithave" />
+
+                <Spinner
+                    android:id="@+id/boci_prodTimeLimit_query"
+                    style="@style/Spiiner_fill"
+                    android:layout_weight="1.0"
+                    android:prompt="@string/timeLimit_null" />
+            </LinearLayout>
+
+            <!-- 产品收益类型 -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_row_margin"
+                android:layout_marginRight="@dimen/common_row_margin"
+                android:layout_marginTop="@dimen/common_row_margin_half"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                 >
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6"
+                    android:gravity="right"
+                    android:text="@string/bocinvt_product_danager_type" />
+
+                <Spinner
+                    android:id="@+id/boci_productRiskType_query"
+                    style="@style/Spiiner_fill"
+                    android:layout_weight="1.0"
+                    android:prompt="@string/bocinvt_tv_64" />
+            </LinearLayout>
+            
+            <!-- 产品风险等级 -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_row_margin"
+                android:layout_marginRight="@dimen/common_row_margin"
+                android:layout_marginTop="@dimen/common_row_margin_half"
+                android:orientation="horizontal" 
+                android:gravity="center_vertical"
+                >
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.6"
+                    android:gravity="right"
+                    android:text="@string/bocinvt_product_danager_grade" />
+
+                <Spinner
+                    android:id="@+id/spinner_danager_grade"
+                    style="@style/Spiiner_fill"
+                    android:layout_weight="1.0"
+                    android:prompt="@string/bocinvt_tv_65" />
+            </LinearLayout>
+
+            <!-- 产品销售状态，P603不用 -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_row_margin"
+                android:layout_marginRight="@dimen/common_row_margin"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                 >
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:gravity="right"
+                    android:text="@string/boci_status" />
+
+                <Spinner
+                    android:id="@+id/boci_xpadStatus_query"
+                    style="@style/Spiiner_fill"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:prompt="@string/boci_status_null" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_row_margin"
+                android:layout_marginRight="@dimen/common_row_margin"
+                android:layout_marginTop="@dimen/common_row_margin" >
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_weight="1" />
+
+                <RelativeLayout
+                    android:id="@+id/query_btn"
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_weight="2" >
+
+                    <Button
+                        android:id="@+id/btn_combinate_queryproduct"
+                        style="@style/query_button_style"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center|center_vertical"
+                        android:text="@string/query"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_default" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_weight="1" 
+                    />
+             
+            </LinearLayout>
+        </LinearLayout>
+
+       <!--  <LinearLayout
+            android:id="@+id/bocinvt_query_up"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/common_row_margin" >
+
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/textview_common_up"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/common_paixuWH"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:gravity="right|bottom"
+                android:textSize="@dimen/textsize_one_three" />
+
+            <ImageView
+                style="@style/query_image_up_style"
+                android:layout_gravity="bottom"
+                android:focusable="false"
+                android:src="@drawable/img_arrow_gray_up" />
+        </LinearLayout> -->
+        
+        <LinearLayout 
+			    android:id="@+id/bocinvt_query_up"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:gravity="center_vertical"
+			    android:layout_gravity="right"
+			    android:layout_marginRight="@dimen/common_row_margin"
+			    >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/common_paixuWH"
+                android:text="@string/up"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textsize_one_three" 
+                android:gravity="center"
+                />
+
+            <ImageView
+                style="@style/query_image_up_style"
+                android:focusable="false"
+                android:src="@drawable/img_arrow_gray_up" />
+            </LinearLayout>
+        
+        
+    </LinearLayout>
+    
+
+</RelativeLayout>

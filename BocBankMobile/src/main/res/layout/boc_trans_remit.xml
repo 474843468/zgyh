@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#D8D8E0" />
+
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/view_payerinfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/boc_common_bg_color"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/boc_common_cell_color"
+                    android:orientation="vertical">
+
+
+                    <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                        android:id="@+id/transfer_payeracc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:editChoiceNameBold="true"
+                        android:visibility="visible">
+
+                    </com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget>
+                    <LinearLayout
+                        android:id="@+id/trans_payer_account_balance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/boc_common_bg_color"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/boc_space_between_32px"
+
+                        android:paddingRight="@dimen/boc_space_between_30px"
+                        android:paddingTop="@dimen/boc_space_between_10px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="top|left"
+                            android:text="可用余额:"
+                            android:textColor="@color/boc_text_color_cinerous"
+                            android:textSize="@dimen/boc_text_size_small" />
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/trans_accout_balance_currency"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/boc_space_between_6px"
+                                android:gravity="top|left"
+                                android:textStyle="bold"
+                                android:textColor="@color/boc_text_color_money_count"
+                                android:textSize="@dimen/boc_text_size_small" />
+
+                            <TextView
+                                android:id="@+id/trans_remit_balance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/boc_space_between_8px"
+                                android:layout_toRightOf="@id/trans_accout_balance_currency"
+                                android:gravity="top"
+                                android:textStyle="bold"
+                                android:textColor="@color/boc_text_color_money_count"
+                                android:textSize="@dimen/boc_text_size_small" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                    android:id="@+id/transfer_currency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/boc_space_between_40px"
+                    app:editChoiceNameBold="true"
+                    android:visibility="visible">
+
+                </com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#D8D8E0" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputWidget
+                android:id="@+id/trans_remit_money"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|left"
+                android:hint="免手续费"
+                app:editChoiceNameBold="true"
+                android:textColor="@color/boc_text_color_red"
+                android:textColorHint="@color/boc_text_color_light_gray">
+
+            </com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputWidget>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/boc_space_between_40px"
+                android:background="@color/boc_common_bg_color"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/boc_space_between_104px"
+                    android:background="@color/boc_common_cell_color"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/boc_space_between_30px"
+                    android:paddingRight="@dimen/boc_space_between_30px">
+
+                    <TextView
+                        android:id="@+id/payee_name_title"
+                        android:layout_width="@dimen/boc_space_between_190px"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|left"
+                        android:text="收款人名称"
+                        android:textStyle="bold"
+                        android:textColor="@color/boc_text_color_dark_gray"
+                        android:textSize="@dimen/boc_text_size_common" />
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+                        <com.boc.bocsoft.mobile.bocmobile.buss.transfer.transremit.ui.AutoEditTextClearView
+                            android:id="@+id/trans_remit_payeename"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/boc_space_between_20px"
+                            android:layout_toLeftOf="@+id/payeeimage"
+                            android:background="@null"
+                            android:completionThreshold="1"
+                            android:gravity="center|left"
+                            android:hint="请输入"
+                            android:paddingLeft="@dimen/boc_space_between_50px"
+                            android:singleLine="true"
+                            android:textColor="@color/boc_text_color_common_gray"
+                            android:textColorHint="@color/boc_text_color_light_gray"
+                            android:textSize="@dimen/boc_text_size_common">
+
+                        </com.boc.bocsoft.mobile.bocmobile.buss.transfer.transremit.ui.AutoEditTextClearView>
+
+                        <ImageView
+                            android:id="@id/payeeimage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/boc_remit_payee" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#D8D8E0" />
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditClearWidget
+                    android:id="@+id/trans_remit_payee_acc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditClearWidget>
+                <View
+                    android:id="@+id/line_openbank"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#D8D8E0" />
+
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                    android:id="@+id/trans_remit_openbank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    ></com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget>
+                <View
+                    android:id="@+id/line_orgname"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#D8D8E0" />
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                    android:id="@+id/trans_remit_orgname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+                </com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget>
+
+            </LinearLayout>
+          <LinearLayout
+              android:layout_marginTop="@dimen/boc_space_between_40px"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+              <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                  android:id="@+id/transfer_way"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  app:editChoiceNameBold="true"
+                  android:visibility="visible"/>
+              <View
+                  android:id="@+id/line_transway"
+                  android:layout_width="match_parent"
+                  android:layout_height="0.5dp"
+                  android:background="#D8D8E0" />
+              <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditClearWidget
+                  android:id="@+id/trans_remit_payee_mobile"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:visibility="gone">
+              </com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditClearWidget>
+              <View
+                  android:id="@+id/line_mobile"
+                  android:layout_width="match_parent"
+                  android:layout_height="0.5dp"
+                  android:background="#D8D8E0" />
+              <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditClearWidget
+                  android:id="@+id/trans_remit_memo"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+              </com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditClearWidget>
+          </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_save_payee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/boc_space_between_32px">
+                <CheckBox
+
+                    android:id="@+id/cb_save_payee"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/checkbox_bg"
+                    android:button="@null"
+                    android:padding="@dimen/boc_space_between_10px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/boc_space_between_62px"
+                    android:layout_marginLeft="@dimen/boc_space_between_6px"
+                    android:gravity="center"
+                    android:text="保存为常用收款人"
+                    android:textSize="@dimen/boc_text_size_small"
+                    android:textColor="@color/boc_text_color_common_gray"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/trans_remit_next"
+                style="@style/BocButton.BocPrimaryButton"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_marginBottom="@dimen/boc_space_between_12px"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_88px"
+                android:layout_marginTop="@dimen/boc_space_between_30px"
+                android:text="下一步" />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

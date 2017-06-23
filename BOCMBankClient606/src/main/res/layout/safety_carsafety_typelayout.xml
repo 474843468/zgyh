@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/layout_step"
+    android:background="@drawable/img_bg_query_j"
+    android:visibility="visible" >
+
+    <LinearLayout
+        android:id="@+id/ll_safetytype"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/bottom_margin_top"
+        android:paddingTop="@dimen/bottom_margin_top"
+        android:visibility="visible" >
+
+        <TextView
+            style="@style/textview_forex_prompt_message"
+            android:layout_weight="5.5"
+            android:singleLine="true"
+            android:text="@string/safety_hold_pro_detail_prod_type" />
+
+        <TextView
+            android:id="@+id/tv_safetytype"
+            style="@style/textview_forex_prompt_info"
+            android:layout_weight="3.5"
+            android:ellipsize="end"
+            android:paddingLeft="0dip"
+            android:singleLine="true" />
+
+        <Spinner
+            android:id="@+id/sp_safetytype"
+            style="@style/spinner_forex_prompt_info"
+            android:layout_marginRight="5dp"
+            android:layout_weight="3.5"
+            android:paddingRight="35dip"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_safetytype"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="@dimen/bottom_margin_top"
+        android:paddingTop="@dimen/bottom_margin_top"
+        android:visibility="visible" >
+
+        <TextView
+            style="@style/textview_forex_prompt_message"
+            android:layout_weight="5.5"
+            android:singleLine="true"
+            android:text="@string/safety_hold_pro_detail_risk_company" />
+
+        <TextView
+            android:id="@+id/tv_company"
+            style="@style/textview_forex_prompt_info"
+            android:layout_weight="3.5"
+            android:ellipsize="end"
+            android:paddingLeft="0dip"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_sp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_safetytype"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/bottom_margin_top"
+        android:paddingTop="@dimen/bottom_margin_top"
+        android:visibility="gone" >
+
+        <TextView
+            style="@style/textview_forex_prompt_message"
+            android:layout_weight="5.5"
+            android:singleLine="true"
+            android:text="@string/safety_hold_pro_detail_risk_company" />
+
+        <Spinner
+            android:id="@+id/sp_company"
+            style="@style/spinner_forex_prompt_info"
+            android:layout_marginRight="5dp"
+            android:layout_weight="3.5"
+            android:paddingRight="35dip" />
+    </LinearLayout>
+
+</RelativeLayout>

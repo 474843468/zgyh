@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/boc_common_bg_color"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/boc_common_bg_color"
+        android:layout_marginLeft="@dimen/boc_space_between_50px"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <!-- 可用额度 title-->
+
+        <TextView
+            android:id="@+id/availableCredit_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="可用额度："
+            android:textSize="@dimen/boc_text_size_small"
+            android:textColor="@color/boc_text_color_dark_gray" />
+        <!-- 可用额度 value-->
+        <TextView
+            android:id="@+id/availableCredit_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="@dimen/boc_text_size_small"
+            android:textColor="@color/boc_text_color_dark_gray" />
+
+
+    </LinearLayout>
+        <!-- 利率 -->
+
+        <TextView
+            android:id="@+id/rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_space_between_50px"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/boc_text_color_dark_gray" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/boc_card_background"
+            android:orientation="vertical">
+
+            <!-- com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditClearWidget -->
+            <!-- 用款金额 -->
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputWidget
+                android:id="@+id/drawAmount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_divider_1px"
+                android:background="@color/boc_divider_line_color" />
+            <!-- 用款期限 -->
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                android:id="@+id/time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:editChoiceName="@string/boc_eloan_draw_time" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/includee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_space_between_50px"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <!-- 还款方式 -->
+
+            <TextView
+                android:id="@+id/hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small" />
+            <!-- 试算还款计划 -->
+
+            <TextView
+                android:id="@+id/tv_sshkjh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:textColor="@color/boc_main_button_color"
+                android:textSize="@dimen/boc_text_size_small" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/boc_card_background"
+            android:orientation="vertical">
+
+            <!-- 收款账户 -->
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                android:id="@+id/receiptAccount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:editChoiceName="@string/boc_eloan_draw_receiptAccount" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_divider_1px"
+                android:background="@color/boc_divider_line_color" />
+            <!-- 资金用途 -->
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                android:id="@+id/useOffund"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:editChoiceName="@string/boc_eloan_draw_useOffund" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/include"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <include layout="@layout/fragment_eloan_draw_include" />
+        </LinearLayout>
+        <!-- 下一步按钮 -->
+
+        <Button
+            android:id="@+id/next"
+            style="@style/BocButton.BocPrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:text="@string/boc_eloan_draw_next" />
+    </LinearLayout>
+
+</ScrollView>

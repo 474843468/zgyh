@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dept_save_regular_bottom"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin" >
+
+        <Button
+            android:id="@+id/next_btn"
+            style="@style/bottombtn"
+            android:text="@string/next" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/shap_for_dept_tranlist"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/common_row_margin"
+        android:paddingLeft="@dimen/layout_padding_left_right"
+        android:paddingRight="@dimen/layout_padding_left_right" >
+
+        <TextView
+            android:id="@+id/dept_title_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:text="@string/input_gather_info"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/textsize_default" />
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:layout_marginRight="@dimen/fill_padding_right"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/comm_view_left_noweight"
+                android:layout_weight="5"
+                android:text="@string/gather_money_name_label" />
+            
+            <TextView
+                android:id="@+id/tv_gather_money_name"
+                style="@style/comm_view_right_noweight"
+                android:layout_weight="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:layout_marginRight="@dimen/fill_padding_right"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/comm_view_left_noweight"
+                android:layout_weight="5"
+                android:text="@string/gather_money_type_label" />
+
+            <TextView
+                android:id="@+id/tv_gather_money_type"
+                style="@style/comm_view_right_noweight"
+                android:layout_weight="3" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:layout_marginRight="@dimen/fill_padding_right"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/comm_view_left_noweight"
+                android:layout_weight="5"
+                android:text="@string/gather_account_number_label" />
+            
+            <Spinner
+                android:id="@+id/account_number_spinner"
+                style="@style/Spiiner_fill"
+                android:layout_weight="3" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:layout_marginRight="@dimen/fill_padding_right"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/comm_view_left_noweight"
+                android:layout_weight="5"
+                android:text="@string/gather_money_ammount_label" />
+
+            <EditText
+                android:id="@+id/edit_gather_money_ammount"
+                style="@style/edittext_common_fill_no_weight"
+                android:paddingLeft="@dimen/edittext_paddinglr"
+                android:layout_weight="3"
+                android:maxLength="14"
+                android:inputType="numberDecimal"
+                android:textColor="@color/black" >
+            </EditText>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:layout_marginRight="@dimen/fill_padding_right"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/comm_view_left_noweight"
+                android:layout_weight="5"
+                android:text="@string/fuYan" />
+
+            <EditText
+                android:id="@+id/edit_beizhu"
+                style="@style/edittext_common_fill_no_weight"
+                android:paddingLeft="@dimen/edittext_paddinglr"
+                android:layout_weight="3"
+                android:hint="@string/hint_memo"
+                android:textColor="@color/black" >
+            </EditText>
+        </LinearLayout>
+        <TextView 
+                android:layout_height="10dp"
+                android:layout_width="fill_parent"/>
+    </LinearLayout>
+
+</RelativeLayout>

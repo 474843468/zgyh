@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color">
+
+    <LinearLayout
+        android:id="@+id/root_group"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/boc_common_bg_color"
+        android:orientation="vertical"
+        android:visibility="invisible">
+        <!--选择账户-->
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.selectaccoutview.SelectAccountButton
+            android:id="@+id/card_row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:layout_marginTop="@dimen/boc_space_between_20px" />
+
+        <LinearLayout
+            android:id="@+id/group_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/boc_space_between_20px"
+                android:layout_marginTop="@dimen/boc_space_between_40px"
+                android:text="已开通短信通知"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small" />
+            <!--已经开通通知的手机号-->
+            <ListView
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/boc_space_between_20px"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@color/boc_common_view_line"
+                android:dividerHeight="0.5dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/boc_divider_line_color" />
+
+            <TextView
+                android:id="@+id/btn_continue_open"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_80px"
+                android:background="@color/boc_common_cell_color"
+                android:gravity="center"
+                android:text="添加手机号"
+                android:textColor="@color/boc_main_button_color"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/boc_space_between_50px"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/fee_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/boc_fee_account_num"
+                    android:textColor="@color/boc_text_color_cinerous"
+                    android:textSize="@dimen/boc_text_size_small" />
+
+                <TextView
+                    android:id="@+id/change_fee_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/boc_space_between_30px"
+                    android:text="更改"
+                    android:textColor="@color/boc_main_button_color"
+                    android:textSize="@dimen/boc_text_size_small"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/btn_open"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_button_height_88px"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:layout_marginTop="@dimen/boc_space_between_80px"
+            android:background="@drawable/boc_button_bg_blue"
+            android:gravity="center"
+            android:text="开通短信通知"
+            android:textColor="@color/boc_common_cell_color"
+            android:textSize="@dimen/boc_text_size_common"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

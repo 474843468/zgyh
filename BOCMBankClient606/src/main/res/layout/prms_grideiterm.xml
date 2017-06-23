@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 我的外汇 活期账户首页item -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/setting_accmanager_itermheight"
+    android:background="@drawable/prms_gridview_iterm" 
+    >
+
+    <LinearLayout
+        android:id="@+id/layout_main"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/setting_accmanager_itermheight"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layout_code_cash"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/btn_close_height"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/prms_price_grideview_sourcecurrency"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/prms_currency"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_code_balance"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/btn_close_height"
+            android:layout_gravity="center"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/prms_price_grideview_accbalance"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="余额"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:id="@+id/prms_price_grideview_accbalance_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="单位"
+                android:textColor="@color/black"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_button"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/btn_close_height"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/prms_price_grideview_sale"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:gravity="center"
+            android:text="@string/forex_customer_sell"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

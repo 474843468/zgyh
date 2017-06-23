@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/stepbar"
+        layout="@layout/step_title_layout" />
+
+    <ScrollView
+        style="@style/scrollview_comm_havemarginbutton"
+        android:layout_above="@+id/bottom_btn_layout"
+        android:layout_below="@+id/stepbar"
+        android:layout_margin="@dimen/fill_margin_left"
+        android:layout_marginBottom="@dimen/common_row_margin"
+        android:background="@drawable/bg_for_listview_item_write" >
+
+        <LinearLayout style="@style/tran_body_ll" >
+
+            <TextView
+                android:id="@+id/dept_success_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_five"
+                android:layout_marginRight="@dimen/dp_five"
+                android:gravity="center"
+                android:text="@string/save_trans_success_info"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_default" />
+
+            <LinearLayout
+                android:id="@+id/dept_tran_batseq_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/batSeq" />
+
+                <TextView
+                    android:id="@+id/dept_tran_batseq_tv"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/jiaoyi_num_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/jiaoyi_num" />
+
+                <TextView
+                    android:id="@+id/dept_transaction_id_tv"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/zhuanchu_account" />
+
+                <TextView
+                    android:id="@+id/dept_accout_no_tv"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/zhuanru_account" />
+
+                <TextView
+                    android:id="@+id/dept_accin_no_tv"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dept_new_save_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/new_save_sheet" />
+
+                <TextView
+                    android:id="@+id/dept_new_save_tv"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dept_business_type_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/business_type" />
+
+                <TextView
+                    android:id="@+id/dept_business_type_tv"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dept_promise_way_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/promise_way" />
+
+                <TextView
+                    android:id="@+id/dept_promise_way_tv"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/currency_cashremit" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/dept_currency_tv"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <LinearLayout
+                        android:id="@+id/dept_cashremit_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/dept_cashremit_tv"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--
+                <LinearLayout
+                    android:id="@+id/dept_cashremit_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" 
+                    android:layout_marginTop="@dimen/common_row_margin">
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/chaohui" />
+
+                    <TextView
+                        android:id="@+id/dept_cashremit_tv"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+            -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/cunkuan_num" />
+
+                <TextView
+                    android:id="@+id/dept_save_amount_tv"
+                    style="@style/textview_common_right"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <!-- 基准费用 -->
+
+            <LinearLayout
+                android:id="@+id/ll_reference_cost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/reference_cost" />
+
+                <TextView
+                    android:id="@+id/reference_cost_tv"
+                    style="@style/textview_common_right"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <!-- 优惠后费用 -->
+
+            <LinearLayout
+                android:id="@+id/ll_discount_cost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/discount_cost" />
+
+                <TextView
+                    android:id="@+id/discount_cost_tv"
+                    style="@style/textview_common_right"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <!-- (单笔)基准费用 -->
+
+            <LinearLayout
+                android:id="@+id/ll_single_reference_cost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv_single_reference"
+                    style="@style/textview_common_left"
+                    android:text="@string/single_reference_cost" />
+
+                <TextView
+                    android:id="@+id/tv_reference_cost"
+                    style="@style/textview_common_right"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <!-- (单笔)优惠后费用 -->
+
+            <LinearLayout
+                android:id="@+id/ll_single_discount_cost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv_single_discount"
+                    style="@style/textview_common_left"
+                    android:text="@string/single_discount_cost" />
+
+                <TextView
+                    android:id="@+id/tv_discount_cost"
+                    style="@style/textview_common_right"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <!-- 提示信息  该手续费为试算手续费用，请以实际扣费为准 -->
+
+            <LinearLayout
+                android:id="@+id/ll_remit_flag"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/remit_flag"
+                    style="@style/textview_common_fill_wheight"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fill_padding_right"
+                    android:paddingRight="@dimen/fill_padding_right"
+                    android:text="@string/remit_setmeal_Flag"
+                    android:textColor="@color/gray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dept_save_time_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/save_time" />
+
+                <TextView
+                    android:id="@+id/dept_save_time_tv"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <!-- 转存方式 add by 2016年3月16日 luqp -->
+
+            <LinearLayout
+                android:id="@+id/ll_tran_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/tran_mode" />
+
+                <TextView
+                    android:id="@+id/dept_tran_mode"
+                    style="@style/textview_common_right"
+                    android:text="@string/dept_tran_mode"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_tran_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:paddingLeft="@dimen/fill_padding_right"
+                android:paddingRight="@dimen/fill_padding_right"
+                android:text="@string/mysave_bottom_new"
+                android:textColor="@color/red"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/fuYan" />
+
+                <TextView
+                    android:id="@+id/dept_attach_message_tv"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/zhixing" />
+
+                <TextView
+                    android:id="@+id/dept_excute_waty_tv"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dept_date_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/date" />
+
+                <TextView
+                    android:id="@+id/dept_date_tv"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dept_start_date_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/startDate" />
+
+                <TextView
+                    android:id="@+id/dept_start_date_tv"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dept_end_date_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/endDate" />
+
+                <TextView
+                    android:id="@+id/dept_end_date_tv"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dept_week_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/cycleDate" />
+
+                <TextView
+                    android:id="@+id/dept_week_tv"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dept_excute_time_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/execute_times" />
+
+                <TextView
+                    android:id="@+id/dept_excute_time_tv"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/common_row_margin"
+                android:layout_marginTop="@dimen/common_row_margin" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/btnConfirm"
+            style="@style/bottombtn"
+            android:text="@string/finish" />
+    </LinearLayout>
+
+</RelativeLayout>

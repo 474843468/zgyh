@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:gravity="center" >
+       <RelativeLayout
+           android:id="@+id/rl_layout"
+           android:layout_height="wrap_content"
+           android:layout_width="wrap_content" 
+           >
+           
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/shape_progressbar"
+            android:layout_gravity="center"
+            android:background="@null" />
+        <TextView
+            android:id="@+id/tvmessage0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp_two_zero"
+            android:text="\?"
+            android:textColor="@color/red"
+            android:textStyle="bold"
+            android:textSize="@dimen/textsize_two_nine" 
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/progressBar"/>
+            
+       </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvmessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="(转账结果未知)"
+            android:textSize="@dimen/textsize_default" 
+            android:textColor="@color/gray"/>
+        <LinearLayout 
+            android:id="@+id/ly_maage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center|center_vertical"
+            >
+            
+          <TextView
+            android:id="@+id/tvmessage1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="请使用"
+            android:textSize="@dimen/textsize_one_seven" 
+            android:textColor="@color/black"/>
+            
+          <TextView
+            android:id="@+id/tvmessage2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="转账记录"
+            android:textSize="@dimen/textsize_one_seven" 
+            android:textColor="@color/orange"/>
+            
+          <TextView
+            android:id="@+id/tvmessage3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="查询交易结果"
+            android:textSize="@dimen/textsize_one_seven" 
+            android:textColor="@color/black"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnClose"
+        android:layout_width="@dimen/progress_close_WH"
+        android:layout_height="@dimen/progress_close_WH"
+        android:layout_gravity="right|top"
+        android:background="@drawable/butten_guanbi" />
+
+</FrameLayout>

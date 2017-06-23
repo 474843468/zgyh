@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 贷款管理  提前还款测算输入页面 wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/btnLoanRepayCount"
+        style="@style/bottombtn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/common_bottom_padding"
+        android:layout_marginTop="@dimen/dp_five"
+        android:background="@drawable/btn_red_big"
+        android:gravity="center"
+        android:text="@string/next"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btnLoanRepayCount"
+        android:layout_marginTop="@dimen/rightbtnW"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical"
+        android:padding="@dimen/fill_padding_top" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_loan_advanceRepayCapital"
+                style="@style/textview_common_left"
+                android:text="@string/loan_advanceRepayCapital" />
+
+            <EditText
+                android:id="@+id/et_loan_advanceRepayCapital_value"
+                style="@style/edittext_input_numberDecimal_fill"
+                android:maxLength="14"
+                android:textSize="@dimen/textsize_default" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_loan_advanceRepayInterest"
+                style="@style/textview_common_left"
+                android:text="@string/loan_advanceRepayInterest" />
+
+            <!-- <EditText
+                android:id="@+id/et_loan_advanceRepayInterest_value"
+                style="@style/edittext_input_numberDecimal_fill"
+                android:maxLength="10"
+                android:textSize="@dimen/textsize_default" >
+            </EditText> -->
+            <TextView 
+                 android:id="@+id/et_loan_advanceRepayInterest_value"
+                 style="@style/edittext_input_numberDecimal_fill"
+                 android:textColor="@color/gray"
+                 android:layout_weight="1"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent" 
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_loan_countType"
+                style="@style/textview_common_left"
+                android:layout_height="@dimen/btn_bottom_height"
+                android:gravity="center_vertical|right"
+                android:text="@string/loan_countType" />
+
+            <RadioGroup
+                android:id="@+id/loan_advance_type"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <RadioButton
+                    android:id="@+id/loan_advance_type_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/btn_bottom_height"
+                    android:button="@drawable/radiobtn_selector"
+                    android:checked="true"
+                    android:text="@string/loan_advance_type_1"
+                    android:textSize="@dimen/textsize_default" />
+
+                <RadioButton
+                    android:id="@+id/loan_advance_type_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/btn_bottom_height"
+                    android:button="@drawable/radiobtn_selector"
+                    android:text="@string/loan_advance_type_2"
+                    android:textSize="@dimen/textsize_default" />
+            </RadioGroup>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/titleText_stepacc"
+        android:layout_width="@dimen/common_details_title_width"
+        android:layout_height="@dimen/left_img_width"
+        android:background="@drawable/bg_title"
+        android:gravity="center"
+        android:text="@string/loan_advance_step1"
+        android:textColor="@color/gray_title" />
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:orientation="vertical">
+    <!--标题-->
+    <com.boc.bocsoft.mobile.framework.widget.TitleBarView
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_titlebar_height" />
+
+    <include layout="@layout/boc_divide_line" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lsvCompanyList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.index.QuickIndexBar
+            android:id="@+id/quickIndexBar"
+            android:layout_width="@dimen/boc_space_between_72px"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="46dp"
+            app:bgColorNormal="@android:color/transparent"
+            app:bgColorPress="@android:color/transparent"
+            app:indexTextColor="#9DA0A7"
+            app:strArr="@string/boc_fund_trans_type_all"
+            app:indexTextColorPress="#9DA0A7"
+            app:indexTextSize="@dimen/boc_text_size_small"/>
+
+    </FrameLayout>
+</LinearLayout>

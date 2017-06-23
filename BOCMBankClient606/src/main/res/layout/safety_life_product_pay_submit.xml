@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 寿险缴费界面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:userProperty="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        style="@style/scrollview_comm"
+        android:layout_above="@+id/btn_layout"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:paddingBottom="@dimen/common_row_margin"
+        android:paddingTop="@dimen/common_details_messages_paddingtop"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fill_margin_top"
+                android:gravity="center"
+                android:text="@string/safety_lifeInsurance_confirmTitle"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_default" />
+            <!-- 保险公司名称 -->
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="5"
+                    android:text="@string/safety_hold_pro_detail_risk_company_name" />
+
+                <TextView
+                    android:id="@+id/tv_company"
+                    style="@style/textview_forex_prompt_info"
+                    android:layout_weight="4" />
+            </LinearLayout>
+            <!-- 子公司 -->
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="5"
+                    android:text="@string/safety_lifeInsurance_subCompany" />
+
+                <TextView
+                    android:id="@+id/tv_subCompany"
+                    style="@style/textview_forex_prompt_info"
+                    android:layout_weight="4" />
+            </LinearLayout>
+            <!-- 产品名称 -->
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="5"
+                    android:text="@string/safety_hold_pro_detail_prod_name" />
+
+                <TextView
+                    android:id="@+id/tv_prodName"
+                    style="@style/textview_forex_prompt_info"
+                    android:layout_weight="4" />
+            </LinearLayout>
+            <!-- 投保人姓名 -->
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="5"
+                    android:text="@string/safety_applicant_name" />
+
+                <TextView
+                    android:id="@+id/tv_applicant_name"
+                    style="@style/textview_forex_prompt_info"
+                    android:layout_weight="4" />
+            </LinearLayout>
+            <!-- 币种 -->
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="5"
+                    android:text="@string/bizhong" />
+
+                <TextView
+                    android:id="@+id/tv_bizhong"
+                    style="@style/textview_forex_prompt_info"
+                    android:layout_weight="4" />
+            </LinearLayout>
+            <!-- 保费金额 -->
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    android:id="@+id/tv_keyForAmount"
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="5"
+                    android:text="@string/safety_insurance_fee_amount" />
+
+                <TextView
+                    android:id="@+id/tv_amount"
+                    style="@style/textview_forex_prompt_info"
+                    android:layout_weight="4"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+            <!-- 缴费账户 -->
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="5"
+                    android:text="@string/acc_payout" />
+
+                <TextView
+                    android:id="@+id/tv_payacct"
+                    style="@style/textview_forex_prompt_info"
+                    android:layout_weight="4" />
+            </LinearLayout>
+
+            <!-- 账户金额 -->
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="5"
+                    android:text="@string/isForex_query_acc_accMoney" />
+
+                <TextView
+                    android:id="@+id/tv_accMoney"
+                    style="@style/textview_forex_prompt_info"
+                    android:layout_weight="4"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+            <!-- 手机交易码布局 -->
+
+            <LinearLayout
+                android:id="@+id/layout_sms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="5.0"
+                    android:gravity="right"
+                    android:text="@string/smc" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.5"
+                    android:orientation="horizontal" >
+
+                    <cfca.mobile.sip.SipBox
+                        android:id="@+id/sip_sms"
+                        style="@style/edittext_inputNumber_fill"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/titlebackbtn_marginleft"
+                        android:layout_weight="3.5"
+                        android:gravity="center_vertical"
+                        android:maxLength="20" >
+                    </cfca.mobile.sip.SipBox>
+
+                    <Button
+                        android:id="@+id/smsbtn"
+                        style="@style/button_smscode"
+                        android:layout_marginRight="@dimen/layout_margin_top" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 动态口令布局 -->
+
+            <LinearLayout
+                android:id="@+id/layout_sip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="5.0"
+                    android:singleLine="true"
+                    android:text="@string/opt" />
+
+                <cfca.mobile.sip.SipBox
+                    android:id="@+id/et_cecurity_ps"
+                    style="@style/edittext_inputNumber_fill"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/layout_margin_top"
+                    android:layout_weight="3.5"
+                    android:gravity="center_vertical"
+                    android:maxLength="20" >
+                </cfca.mobile.sip.SipBox>
+            </LinearLayout>
+
+            <com.chinamworld.bocmbci.widget.UsbKeyText
+                android:id="@+id/sip_usbkey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                userProperty:MargRight="@dimen/layout_margin_top"
+                userProperty:ShowRate="10:7" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_two_zero"
+                android:layout_marginTop="@dimen/dimen_two_zero" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:id="@+id/btnNext"
+            style="@style/textview_forex_button_cell"
+            android:text="@string/confirm" />
+    </LinearLayout>
+
+</RelativeLayout>

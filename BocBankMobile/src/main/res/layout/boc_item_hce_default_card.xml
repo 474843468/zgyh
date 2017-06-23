@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="@dimen/boc_space_between_20px"
+              android:paddingLeft="@dimen/boc_space_between_30px"
+              android:background="@drawable/boc_card_background"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_view_height_130px">
+
+        <ImageView
+            android:id="@+id/iv_pic"
+            android:layout_width="@dimen/boc_card_pic_width"
+            android:layout_height="@dimen/boc_card_pic_height"
+            android:layout_marginLeft="@dimen/boc_card_account_pic_margin_left"
+            android:layout_marginRight="@dimen/boc_card_account_pic_margin_right"
+            android:layout_marginTop="@dimen/boc_card_account_pic_margin_top"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            tools:src="@drawable/boc_cardpic_account_current"/>
+
+
+        <TextView
+            android:id="@+id/tv_hce_number"
+            style="@style/tv_common"
+            android:layout_toRightOf="@id/iv_pic"
+            android:paddingTop="@dimen/boc_card_account_info_padding_top"
+            android:textColor="@color/boc_text_color_dark_gray"
+            tools:text="6225123123"
+            android:text="62646161646"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_hce_master_number"
+            style="@style/tv_small"
+            android:layout_below="@id/tv_hce_number"
+            android:layout_marginTop="@dimen/boc_card_account_info_padding_middle"
+            android:layout_toRightOf="@id/iv_pic"
+            android:text="主卡尾号"
+            tools:text="长城信用卡"/>
+
+
+        <ImageView
+            android:id="@+id/iv_card_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/boc_card_account_status_margin"
+            android:layout_marginRight="@dimen/boc_card_account_status_margin"
+            android:layout_marginTop="@dimen/boc_card_account_status_margin"
+            android:scaleType="fitEnd"
+            android:src="@drawable/boc_account_status_frozen"
+            tools:src="@drawable/boc_account_status_frozen"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
+

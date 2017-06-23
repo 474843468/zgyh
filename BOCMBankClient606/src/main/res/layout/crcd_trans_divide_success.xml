@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/ll_step"
+        android:orientation="vertical" >
+
+        <ScrollView
+            style="@style/scrollview_fill"
+            android:gravity="center"
+            android:padding="@dimen/fill_margin_left" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_for_listview_item_write"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:text="@string/mycrcd_consume_divide_success"
+                    android:textColor="@color/gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="4"
+                        android:text="@string/mycrcd_selected_creditcard" />
+
+                    <TextView
+                        android:id="@+id/tv_card_number"
+                        style="@style/textview_common_right"
+                        android:layout_weight="6"
+                        android:singleLine="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/fill_padding_left"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tv_card_type"
+                        style="@style/crcd_tv_common" />
+
+                    <TextView
+                        android:id="@+id/tv_card_step"
+                        style="@style/crcd_tv_common" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="5dp" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="4"
+                            android:text="@string/mycrcd_accounted_type" />
+
+                        <TextView
+                            android:id="@+id/mycrcd_accounted_type"
+                            style="@style/textview_common_right"
+                            android:layout_weight="6" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="4"
+                            android:text="@string/mycrcd_accounted_description" />
+
+                        <TextView
+                            android:id="@+id/mycrcd_selected_creditcard"
+                            style="@style/textview_common_right"
+                            android:layout_weight="6" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="4"
+                            android:text="@string/mycrcd_accounted_money" />
+
+                        <TextView
+                            android:id="@+id/mycrcd_accounted_money"
+                            style="@style/textview_common_right"
+                            android:layout_weight="6"
+                            android:singleLine="false"
+                            android:textColor="@color/red" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/fix_sellcode"
+                            style="@style/textview_common_left"
+                            android:layout_weight="4"
+                            android:text="@string/mycrcd_accounted_number" />
+
+                        <TextView
+                            android:id="@+id/rate_fix_sellCode"
+                            style="@style/textview_common_right"
+                            android:layout_weight="6"
+                            android:singleLine="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/currency_buycode"
+                            style="@style/textview_common_left"
+                            android:layout_weight="4"
+                            android:text="@string/mycrcd_devide_fee" />
+
+                        <TextView
+                            android:id="@+id/rate_currency_buyCode"
+                            style="@style/textview_common_right"
+                            android:layout_weight="6"
+                            android:singleLine="false"
+                            android:textColor="@color/red" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/money_text"
+                            style="@style/textview_common_left"
+                            android:layout_weight="4"
+                            android:text="@string/mycrcd_accounted_money_type" />
+
+                        <TextView
+                            android:id="@+id/rate_currency_type"
+                            style="@style/textview_common_right"
+                            android:layout_weight="6" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/first"
+                            style="@style/textview_common_left"
+                            android:layout_weight="4"
+                            android:text="@string/mycrcd_first_money" />
+
+                        <TextView
+                            android:id="@+id/rate_fix_papRate"
+                            style="@style/textview_common_right"
+                            android:layout_weight="6"
+                            android:singleLine="false"
+                            android:textColor="@color/red" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/common_row_margin"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/every"
+                            style="@style/textview_common_left"
+                            android:layout_weight="4"
+                            android:text="@string/mycrcd_meiqi_money" />
+
+                        <TextView
+                            android:id="@+id/rate_fix_comRate"
+                            style="@style/textview_common_right"
+                            android:layout_weight="6"
+                            android:singleLine="false"
+                            android:textColor="@color/red" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/common_row_margin"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/trade_sureButton"
+                style="@style/bottombtn"
+                android:text="@string/finish"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

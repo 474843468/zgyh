@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color">
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullToRefreshLayout
+        android:id="@+id/prl_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullableListView
+            android:id="@+id/plv_pull"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <include layout="@layout/boc_load_more"/>
+    </com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullToRefreshLayout>
+    <LinearLayout
+        android:id="@+id/no_data_query"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="109dp"
+            android:layout_height="109dp"
+            android:background="@drawable/boc_icon_no_product"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/no_data_transfer_query"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/boc_space_between_50px"
+            android:gravity="center"
+            android:text="fasd"
+            android:textColor="@color/boc_text_color_rest_gray"
+            android:textSize="@dimen/boc_text_size_small"/>
+    </LinearLayout>
+
+</FrameLayout>

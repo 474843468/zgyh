@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 消息服务详情页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible" >
+
+        <ImageView
+            android:id="@+id/img_envelope_top_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/layout_envelope"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_envelope_top_bg" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_envelope_top_bg"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_envelope_buttom_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <WebView
+                android:id="@+id/detial_info"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="@dimen/fill_margin_top"
+                android:layout_marginLeft="@dimen/fill_margin_left"
+                android:layout_marginRight="@dimen/fill_margin_left"
+                android:layout_marginTop="@dimen/fill_margin_top"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout_envelope"
+            android:layout_width="fill_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentBottom="true" >
+
+            
+
+            <RelativeLayout
+                android:id="@+id/img_envelope"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true" >
+
+                <ImageView
+                    android:layout_width="@dimen/envelope_width"
+                    android:layout_height="@dimen/envelope_height"
+                    android:layout_alignParentLeft="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_envelope_left" />
+
+                <ImageView
+                    android:layout_width="@dimen/envelope_width"
+                    android:layout_height="@dimen/envelope_height"
+                    android:layout_alignParentRight="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_envelope_right" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/img_envelope_mid"
+                android:layout_width="@dimen/envelope_mid_width"
+                android:layout_height="@dimen/envelope_mid_height"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_envelope_mid" />
+
+            <ImageView
+                android:id="@+id/info_new"
+                android:layout_width="80dp"
+                android:layout_height="61dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@+id/img_envelope_mid"
+                android:src="@drawable/img_envelope_new"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

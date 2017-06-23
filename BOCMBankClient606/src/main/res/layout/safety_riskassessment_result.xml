@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnConfirm"
+            style="@style/textview_forex_button_cell"
+            android:onClick="onClick"
+            android:text="@string/safety_riskAssessment_continueBtn" />
+
+        <Button
+            android:id="@+id/btnQuit"
+            style="@style/textview_forex_button_cell"
+            android:onClick="onClick"
+            android:text="@string/confirm" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_layout"
+        android:background="@drawable/bg_for_listview_item_write" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/fill_margin_top"
+                android:text="@string/safety_riskAssessmentResult_tip"
+                android:textColor="@color/fonts_dark_gray"
+                android:textSize="@dimen/fonts_one_five"
+                />
+
+            <!-- 评估日期 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="6"
+                    android:singleLine="true"
+                    android:text="@string/bocinvt_eva_date"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_evaluationDate"
+                    style="@style/textview_forex_prompt_info"
+                    android:layout_marginRight="@dimen/fill_padding_top"
+                    android:layout_weight="4"
+                    android:singleLine="true"
+                     />
+            </LinearLayout>
+            <!-- 有效期 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="6"
+                    android:singleLine="true"
+                    android:text="@string/bocinvt_eva_validdate"
+                   />
+
+                <TextView
+                    android:id="@+id/tv_validDate"
+                    style="@style/textview_forex_prompt_info"
+                    android:layout_marginRight="@dimen/fill_padding_top"
+                    android:layout_weight="4"
+
+                    android:singleLine="true"
+                     />
+            </LinearLayout>
+            <!-- 风险等级 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="6"
+                    android:singleLine="true"
+                    android:text="@string/bocinvt_product_danager_grade"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_custType"
+                    style="@style/textview_forex_prompt_info"
+                    android:layout_marginRight="@dimen/fill_padding_top"
+                    android:layout_weight="4"
+                    android:singleLine="true"
+                     />
+            </LinearLayout>
+            <!-- 投资建议 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="6"
+                    android:singleLine="true"
+                    android:text="@string/safety_riskAssessmentResult_invest"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_invest"
+                    style="@style/textview_forex_prompt_info"
+                    android:layout_marginRight="@dimen/fill_padding_top"
+                    android:layout_weight="4"
+                   />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账户管理 我的电子现金账户充值  选择转出账户界面  wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/tv_financeic_choose_title"
+        style="@style/textview_step4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_five"
+        android:layout_marginTop="@dimen/dp_five"
+        android:text="@string/acc_financeic_choose_title_null_new"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/textsize_default" />
+
+    <Button
+        android:id="@+id/btnNext"
+        style="@style/bottombtn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/common_bottom_padding"
+        android:layout_marginTop="@dimen/dp_five"
+        android:text="@string/next" />
+
+    <TextView
+        android:id="@+id/alert_info"
+        style="@style/textview_common"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnNext"
+        android:layout_marginTop="@dimen/dp_five"
+        android:gravity="center"
+        android:text="@string/trade_time_alert"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/textsize_one_two"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/acc_accountlist"
+        style="@style/listviewcomm_fill_haveDivider"
+        android:layout_above="@+id/alert_info"
+        android:layout_below="@+id/tv_financeic_choose_title" >
+    </ListView>
+
+</RelativeLayout>

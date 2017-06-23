@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/dept_dqyzc_detail_cancel"
+            style="@style/bottombtn"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/dept_zntzck_query_cancel" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_btn"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView
+            style="@style/scrollview_comm_havemarginbutton"
+            android:layout_marginTop="@dimen/dp_two_zero"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:paddingTop="0dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_gravity="center"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="@string/dept_zntzck_query_signAcc" />
+
+                    <TextView
+                        android:id="@+id/dept_zntzck_query_signAcc"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_gravity="center"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="@string/dept_zntzck_query_signType" />
+
+                    <TextView
+                        android:id="@+id/dept_zntzck_query_signType"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_gravity="center"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="@string/dept_zntzck_query_signDate" />
+
+                    <TextView
+                        android:id="@+id/dept_zntzck_query_signDate"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cancelChnlFlag_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal"
+                    android:visibility="visible" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="6"
+                        android:text="@string/dept_zntzck_query_cancelChnlFlag" />
+
+                    <TextView
+                        android:id="@+id/dept_zntzck_query_cancelChnlFlag"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cancelDate_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal"
+                    android:visibility="visible" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="6"
+                        android:text="@string/dept_zntzck_query_cancelDate" />
+
+                    <TextView
+                        android:id="@+id/dept_zntzck_query_cancelDate"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_gravity="center"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="@string/dept_zntzck_query_signStatus" />
+
+                    <TextView
+                        android:id="@+id/dept_zntzck_query_signStatus"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal"
+                    android:visibility="invisible" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_gravity="center"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="@string/prms_entrust_enddate_colon" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/titleText_stepacc"
+        android:layout_width="@dimen/common_details_title_width"
+        android:layout_height="@dimen/left_img_width"
+        android:background="@drawable/bg_title"
+        android:gravity="center"
+        android:text="@string/dept_dqyzc_detail_title"
+        android:textColor="@color/gray_title" />
+
+</RelativeLayout>

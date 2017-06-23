@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".biz.safety.safetyproduct.riskAssessment.RiskAssessmentActivity" >
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnConfirm"
+            style="@style/isforex_two_left_btn"
+            android:onClick="onClick"
+            android:text="@string/confirm" />
+
+        <Button
+            android:id="@+id/btnCancle"
+            style="@style/isforex_two_right_btn"
+            android:onClick="onClick"
+            android:text="@string/quit" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_productList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_layout"
+        android:background="@drawable/bg_for_listview_item_write" >
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/fill_margin_top"
+            android:layout_centerInParent="true"
+            android:text="@string/safety_riskAssessment_tip1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_default" />
+        
+        <TextView
+            android:id="@+id/tv_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/fill_margin_top"
+            android:text="@string/safety_riskAssessment_link"
+            android:textColor="@color/blue"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:textSize="@dimen/textsize_default" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,61 @@
+
+ext{
+    //是否为我们独立app ， 根据连龙工程是否存在判断，存在我们作为子工程引入
+    isMineApp = !getRootProject().getChildProjects().keySet().contains("BOCMBankClient606");
+}
+
+apply plugin: isMineApp? 'com.android.application':'com.android.library'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+
+    sourceSets{
+        main{
+            manifest.srcFile isMineApp?'src/main/AndroidManifest.xml':'src/main/AndroidManifest_LianLong.xml'
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions{
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+repositories {
+    flatDir {
+        dirs 'libs', '../BocBankFramework/libs'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(path: ':BocBankFramework')
+    compile project(path: ':bocbiiclient')
+    compile project(path: ':bocwfssclient')
+    compile files('libs/pinyin4j-2.5.0.jar')
+    //    compile files('libs/ccr_android_sdk.jar')
+    compile 'com.google.android.gms:play-services-appindexing:8.1.0'
+    compile project(':BocLibrary')
+    compile 'com.android.support:multidex:1.0.1'
+    compile files('libs/libammsdk.jar')
+    compile project(path: ':RemoteOpenAcc')
+    compile project(':llbtwidget')
+}

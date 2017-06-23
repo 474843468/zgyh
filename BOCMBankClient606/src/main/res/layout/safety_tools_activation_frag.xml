@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     xmlns:userProperty="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/safety_tools_root_layout"
+    android:layout_width="match_parent"
+    android:background="@color/default_bg"
+    android:layout_height="match_parent" >
+    
+    
+    <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="62dp"
+            android:background="@drawable/navbar"
+            android:visibility="gone"
+            android:paddingTop="5dp" >
+
+            <Button
+                android:id="@+id/ib_back"
+                android:textColor="@color/white"
+                android:text="@string/back"
+                style="@style/titlebackbtn" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/titleText" />
+
+        </RelativeLayout>
+        
+    <RelativeLayout 
+        android:id="@+id/safety_tools_prompt_info_details_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_layout"
+        android:background="@drawable/bg_for_hardware_prompt_info_details"
+        android:layout_marginTop="@dimen/dp_one_for"
+        android:layout_marginLeft="@dimen/dp_one_for"
+        android:layout_marginRight="@dimen/dp_one_for"
+        android:layout_above="@+id/safety_tools_concel_btn">
+            
+       <RelativeLayout
+            android:id="@+id/safety_tools_layout01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:layout_centerVertical="true"
+            android:visibility="gone">
+            
+            <TextView 
+                android:id="@+id/safety_tools_item01_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textsize_default"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/safety_tools_setting_trancation_code_des"
+                android:layout_marginLeft="@dimen/dp_five"
+                android:layout_marginBottom="@dimen/dp_three_zero" />
+            
+            <Button
+                android:id="@+id/smsbtn"
+                android:layout_width="@dimen/dp_five_zero"
+                android:layout_height="@dimen/btn_smscode_height"
+                android:textSize="@dimen/textsize_default"
+                android:textColor="@color/black"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/timebutton"
+                android:text="@string/epay_pub_bt_get_note_code"
+                android:layout_marginRight="@dimen/dp_three_zero" />
+        
+            <cfca.mobile.sip.SipBox 
+                android:id="@+id/safety_tools_smc_sb"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_toRightOf="@id/safety_tools_item01_text"
+                android:layout_toLeftOf="@id/smsbtn"
+                android:background="@drawable/bg_for_edittext"
+                android:maxLength="6"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_one_zero"
+                android:layout_marginRight="@dimen/dp_one_zero"/>
+        
+    </RelativeLayout>
+       
+    <LinearLayout
+            android:id="@+id/safety_tools_layout02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/safety_tools_layout01"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textsize_default"
+                android:text="动"
+                android:textColor="@color/white"
+                />
+            
+            <TextView 
+                android:id="@+id/safety_tools_item02_text"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edittext_height"
+                android:textSize="@dimen/textsize_default"
+                android:text="@string/safety_tools_setting_dynamic_passwd_des"
+                android:layout_marginLeft="@dimen/dp_five"
+                android:layout_marginBottom="@dimen/dp_three_zero"
+                />
+        
+            <cfca.mobile.sip.SipBox 
+                android:id="@+id/safety_tools_item02_sb"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@drawable/bg_for_edittext"
+                android:maxLength="6"
+                android:layout_marginLeft="@dimen/dp_one_zero"
+                android:layout_marginRight="@dimen/dp_three_zero"/>
+        
+    </LinearLayout>
+       
+         <com.chinamworld.bocmbci.widget.UsbKeyText
+                android:id="@+id/safety_tools_sip_usbkey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_of_commrequestopen"
+                 android:layout_marginRight="@dimen/margin_of_commrequestopen"
+                android:layout_centerVertical="true"
+                android:layout_below="@id/safety_tools_layout02"
+                android:orientation="horizontal"
+                userProperty:ShowRate="3:2" />
+
+    </RelativeLayout>
+    
+<Button 
+        android:id="@+id/safety_tools_concel_btn"
+        android:layout_width="@dimen/dp_eight_zero"
+        android:layout_height="@dimen/dp_for_zero"
+		android:background="@drawable/btn_red_big_long"   
+		android:text="@string/cancle"
+		android:textColor="@color/white"
+		android:layout_alignParentLeft="@+id/safety_tools_prompt_info_details_layout"
+		android:layout_marginTop="@dimen/dp_one_zero"
+		android:layout_marginLeft="@dimen/dp_three_zero"
+		android:layout_above="@+id/safety_tools_bottom_block"
+        />
+<Button 
+        android:id="@+id/safety_tools_confirm_btn"
+        android:layout_width="@dimen/dp_eight_zero"
+        android:layout_height="@dimen/dp_for_zero"
+		android:background="@drawable/btn_red_big_long"   
+		android:text="@string/confirm"
+		android:textColor="@color/white"
+		android:layout_alignRight="@+id/safety_tools_prompt_info_details_layout"
+		android:layout_alignTop="@+id/safety_tools_concel_btn"
+		android:layout_above="@+id/safety_tools_bottom_block"
+		android:layout_marginRight="@dimen/dp_three_zero"
+        />    
+        
+    
+<View  android:id="@+id/safety_tools_bottom_block"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_two_zero"
+        android:layout_alignParentBottom="true"
+        />       
+        
+</RelativeLayout>

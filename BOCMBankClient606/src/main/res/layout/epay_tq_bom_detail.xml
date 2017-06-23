@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bt_ensure"
+        android:layout_marginBottom="@dimen/common_row_margin"
+        android:layout_marginTop="@dimen/dp_two_zero"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:id="@+id/sv_content"
+            style="@style/scrollview_fill"
+            android:layout_marginTop="@dimen/dp_three_zero" >
+
+            <LinearLayout
+                android:id="@+id/ll_content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/ll_td"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.5"
+                        android:text="@string/epay_tq_bom_detail_tv_trans_date" />
+
+                    <TextView
+                        android:id="@+id/tv_trans_date"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_on"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.5"
+                        android:text="@string/epay_tq_bom_detail_tv_order_number" />
+
+                    <TextView
+                        android:id="@+id/tv_order_number"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_tn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.5"
+                        android:text="@string/epay_tq_bom_detail_tv_trans_number" />
+
+                    <TextView
+                        android:id="@+id/tv_trans_number"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_bn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.5"
+                        android:text="@string/epay_tq_bom_detail_tv_business_name" />
+
+                    <TextView
+                        android:id="@+id/tv_business_name"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_nn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.5"
+                        android:text="@string/epay_tq_zy_detail_tv_pay_card_type" />
+
+                    <TextView
+                        android:id="@+id/tv_account_type"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_an"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.5"
+                        android:text="@string/epay_tq_bom_detail_tv_account_num" />
+
+                    <TextView
+                        android:id="@+id/tv_account_num"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_currency"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.5"
+                        android:text="@string/epay_tq_bom_detail_tv_currency" />
+
+                    <TextView
+                        android:id="@+id/tv_currency"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_ta"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.5"
+                        android:text="@string/epay_tq_bom_detail_tv_trans_amount" />
+
+                    <TextView
+                        android:id="@+id/tv_trans_amount"
+                        style="@style/textview_common_right"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_od"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.5"
+                        android:text="@string/epay_tq_bom_detail_tv_order_desc" />
+
+                    <TextView
+                        android:id="@+id/tv_order_desc"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_ts"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.5"
+                        android:text="@string/epay_tq_bom_detail_tv_trans_status" />
+
+                    <TextView
+                        android:id="@+id/tv_trans_status"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_client"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.5"
+                        android:text="@string/epay_tq_bom_detail_tv_client" />
+
+                    <TextView
+                        android:id="@+id/tv_client"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_pn"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.5"
+                        android:text="@string/epay_tq_bom_detail_tv_plan_number" />
+
+                    <TextView
+                        android:id="@+id/tv_plan_number"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_pf"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tv_plan_fee_lable"
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.5"
+                        android:text="@string/epay_tq_bom_detail_tv_plan_fee" />
+
+                    <TextView
+                        android:id="@+id/tv_plan_fee"
+                        style="@style/textview_common_right"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_fa"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.5"
+                        android:text="@string/epay_tq_bom_detail_tv_plan_first_amount" />
+
+                    <TextView
+                        android:id="@+id/tv_plan_first_amount"
+                        style="@style/textview_common_right"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_ea"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.5"
+                        android:text="@string/epay_tq_bom_detail_tv_plan_each_amount" />
+
+                    <TextView
+                        android:id="@+id/tv_plan_each_amount"
+                        style="@style/textview_common_right"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/common_row_margin" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.5"
+                        android:text="@string/remark_info" />
+
+                    <TextView
+                        android:id="@+id/tv_remark_info"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <TextView
+        style="@style/titleText_stepacc"
+        android:layout_width="@dimen/common_details_title_width"
+        android:layout_height="@dimen/left_img_width"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_five"
+        android:background="@drawable/bg_title"
+        android:gravity="center"
+        android:text="@string/epay_tq_detail_tv_title"
+        android:textColor="@color/gray_title" />
+
+    <Button
+        android:id="@+id/bt_ensure"
+        style="@style/bottombtn"
+        android:layout_alignParentBottom="true"
+        android:text="@string/confirm" />
+
+</RelativeLayout>

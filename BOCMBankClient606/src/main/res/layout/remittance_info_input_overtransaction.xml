@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:background="@color/pale_red"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="6dip"
+        android:paddingTop="6dip" >
+
+        <TextView
+            style="@style/comm_view_left"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/remittance_info_input_transation_tip1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_default" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_row_margin"
+        android:layout_marginRight="@dimen/common_row_margin"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <!-- 汇款币种 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/remittance_template_detail_remitCurrencyCode"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <Spinner
+                android:id="@+id/sp_biZhong"
+                style="@style/Spiiner_fill"
+                android:layout_width="match_parent"
+                android:layout_marginRight="@dimen/common_listview_item_paddingLR" />
+        </LinearLayout>
+
+        <!-- 汇款币种为韩元是提示信息 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:id="@+id/ll_won_hint">
+            
+            <TextView 
+                android:id="@+id/tv_won_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="个人韩元汇款，同一收款人每日累计不能超过等值两万美元"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textsize_default"
+                />
+        </LinearLayout>
+
+        <!-- 钞/汇 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/fill_margin_left"
+                android:singleLine="true"
+                android:text="@string/finc_money_colon_remit"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default"
+                />
+
+            <RadioGroup
+                android:id="@+id/rg_ismp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_two"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+
+                >
+
+                <RadioButton
+                    android:id="@+id/rb_remit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@drawable/radiobtn_selector"
+                    android:text="@string/remit"
+                    android:textSize="@dimen/textsize_default" />
+
+                <RadioButton
+                    android:id="@+id/rb_bill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginTop="@dimen/dp_five"
+
+                    android:textSize="@dimen/textsize_default"
+                    android:button="@drawable/radiobtn_selector"
+                    android:text="@string/bill" />
+
+
+            </RadioGroup>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/dp_five"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+
+                >
+
+                <TextView
+                    android:id="@+id/tv_remit_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="可用余额："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_bill_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="可用余额："
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/dp_five"
+                    android:textSize="@dimen/textsize_default"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/dp_two"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                >
+
+                <TextView
+                    android:id="@+id/tv_remit_balance_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_bill_balance_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/dp_five"
+                    android:textSize="@dimen/textsize_default"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <!-- 现钞的提示信息 -->
+
+       
+        <!-- 汇款金额 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/remit_money_amout"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <EditText
+                android:id="@+id/et_payNumber"
+                style="@style/edittext_common_fill"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dip"
+                android:gravity="center_vertical"
+                android:hint="请输入汇款金额"
+                android:inputType="numberDecimal"
+                android:maxLength="15"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_querySurplusLimit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/remittance_info_input_queryMoney"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/textsize_default" />
+        </LinearLayout>
+        
+        <TextView
+            android:id="@+id/tv_bill_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:text="@string/remittance_bill_content"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_default"
+            android:visibility="gone" />
+
+        <!-- 给汇款人留言 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/remittance_info_input_toPayeeMessage"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <EditText
+                android:id="@+id/et_toPayeeMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fill_margin_left"
+                android:layout_marginRight="@dimen/fill_margin_right"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:background="@drawable/bg_for_edittext"
+                android:gravity="left|top"
+                android:hint="请输入给收款人的留言"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:maxLength="65"
+                android:scrollbars="vertical"
+                android:textSize="@dimen/textsize_default" >
+            </EditText>
+        </LinearLayout>
+        
+        <!-- 给收款人留言提示信息 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+            <TextView 
+                android:id="@+id/tv_won_payman_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textsize_default"
+                android:text="根据韩国当地监管要求，请在本栏位准确填写收款人的证件号码"
+                android:textColor="@color/red"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tip0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="left"
+            android:text="请准确填写具体的汇款目的，否则可能导致收款人无法顺利收到汇款"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_default"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tip1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="left"
+            android:text="在办理澳洲留学汇款时，如属于交学费或其他有关费用，则本栏位填写内容应包括：学生姓名、学生号码、出生日期或其他付费用途。如费用为汇往中介服务公司或留学服务公司，应补充说明学校名称及学科。"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_default"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="left"
+            android:text="根据海外当地监管要求，本栏位填写内容中必须包含您真实的汇款用途，请准确填写，否则将影响您款项顺利汇达。"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_default"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tip3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="left"
+            android:text="根据俄罗斯监管要求，请在本栏位准确填写：（1）真实的汇款用途；（2）BIK代码（代码格式：BIK+以04开头的9位数字）；（3）收款银行在俄罗斯中央银行的20位账号（账号格式：A/C+以301开头的20位账号）。三项内容可以英文逗号分隔。如不能准确填写上述内容，将影响正常汇款。"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_default"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="left"
+            android:text="国内外费用承担方式：SHA 共同承担"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_default" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="left"
+            android:text="跨境汇款如果经过中转行，可能产生中转费用"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_default" />
+
+        <!-- 付费币种 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/remittance_info_input_payBiZhong"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <Spinner
+                android:id="@+id/sp_payBiZhong"
+                style="@style/Spiiner_fill"
+                android:layout_width="match_parent"
+                android:layout_marginRight="@dimen/common_listview_item_paddingLR" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_payeeUse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:background="@color/pale_red"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="6dip"
+            android:paddingTop="6dip" >
+
+            <TextView
+                style="@style/comm_view_left"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/remittance_info_input_transation_tip2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_row_margin"
+            android:layout_marginRight="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <!-- 汇款用途 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/remittance_info_input_payeeUse"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" />
+
+                <Spinner
+                    android:id="@+id/sp_payUse"
+                    style="@style/Spiiner_fill"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                    android:paddingRight="@dimen/dp_three_zero" />
+            </LinearLayout>
+
+            <!-- 汇款用途详细说明 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/remittance_info_input_payeeUseFull"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" />
+
+                <EditText
+                    android:id="@+id/et_payUse"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fill_margin_left"
+                    android:layout_marginRight="@dimen/fill_margin_right"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:background="@drawable/bg_for_edittext"
+                    android:gravity="left|top"
+                    android:hint="本栏位是对汇款用途的进一步详细说明，内容应与您选择的汇款用途在性质上一致，如不一致将导致汇款无法正常汇出。"
+                    android:inputType="textMultiLine"
+                    android:lines="3"
+                    android:maxLength="50"
+                    android:scrollbars="vertical"
+                    android:textSize="@dimen/textsize_default" >
+                </EditText>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

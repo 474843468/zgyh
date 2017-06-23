@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/boc_global_loading_height"
+        android:background="@drawable/boc_card_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/boc_space_between_20px"
+        android:paddingRight="@dimen/boc_space_between_30px">
+
+        <FrameLayout
+            android:layout_width="@dimen/boc_space_between_58px"
+            android:layout_height="@dimen/boc_space_between_52px"
+            android:background="@drawable/boc_global_loading_progressbar_logo">
+
+            <ImageView
+                android:id="@+id/iv_progressbar"
+                android:layout_width="@dimen/boc_space_between_58px"
+                android:layout_height="@dimen/boc_space_between_52px"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@null"
+                android:src="@drawable/boc_global_loading_progressbar_anim"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_text"
+            style="@style/tv_small"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:textColor="@color/boc_text_color_dark_gray"
+            tools:text="加载中..."/>
+
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_space_between_30px"
+            android:contentDescription="@null"
+            android:scaleType="center"
+            android:src="@drawable/boc_global_loading_close"/>
+    </LinearLayout>
+</LinearLayout>

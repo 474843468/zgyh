@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 贵金属积利金 定投管理 主界面    linyaolong -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/goldbonus_ll_query_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <com.chinamworld.bocmbci.userwidget.QueryView
+            android:id="@+id/queryControlView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <!-- 定投状态 -->
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/common_row_margin_half"
+                    android:layout_marginLeft="@dimen/comm_confirm_leftiterm_marginleft"
+                    android:layout_marginRight="@dimen/comm_confirm_leftiterm_marginleft"
+                    android:layout_marginTop="@dimen/common_row_margin" >
+
+                    <TextView
+                        android:id="@+id/goldbonus_texttitle_trfStatus"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/fonts_dark_gray"
+                        android:text="@string/goldbonus_fixinvest_status" />
+
+                    <Spinner
+                        android:id="@+id/sp_goldbonus_trfStatus"
+                        style="@style/Spiiner_fill"
+                        android:layout_height="@dimen/layout_height"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/goldbonus_texttitle_trfStatus"
+                        android:background="@drawable/bg_spinner"
+                        android:ellipsize="middle"
+                        android:entries="@array/goldbonus_fixinvest_status"
+                        android:gravity="center_vertical"
+                        android:prompt="@string/isForex_query_result4" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/header_for_combinate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <!-- 定投状态 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fill_margin_left"
+                        android:layout_marginRight="@dimen/fill_margin_left"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/fonts_dark_gray"
+                            android:singleLine="true"
+                            android:text="@string/goldbonus_fixinvest_status" />
+
+                        <TextView
+                            android:id="@+id/textview_fixstatus_value"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </com.chinamworld.bocmbci.userwidget.QueryView>
+
+        <!-- 查询列表头 -->
+
+
+        <!--
+                 android:layout_marginBottom="@dimen/common_bottom_padding_new"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_left"
+        -->
+
+        <RelativeLayout
+            android:id="@+id/rl_tranhistory"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="@dimen/common_bottom_padding_new"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <!-- 定投管理 标题 -->
+
+
+                <!--
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/titlebackbtn_width"
+                    android:layout_marginBottom="@dimen/fill_margin_left_fu"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="定投管理"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                -->
+
+                <ImageView
+                    android:id="@+id/img_line6"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:src="@color/gray_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/titlebackbtn_width"
+                    android:layout_marginBottom="@dimen/fill_margin_left_fu"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <!--
+                         <com.chinamworld.bocmbci.userwidget.ListTitleView 
+           					 android:layout_width="fill_parent"
+           					 android:layout_height="wrap_content"
+            				android:text="定投设置时间;产品名称;定投状态"
+            				user:weightShowRate="1:1:1"
+              			></com.chinamworld.bocmbci.userwidget.ListTitleView>
+                    -->
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                         >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/boci_product_name"
+                                style="@style/textview_common"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="2dp"
+                                android:text="定投设置时间" />
+
+                            <ImageView
+                                android:id="@+id/fixinvesttime_img"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/bocinvt_sort_down" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/boci_yearlyRR"
+                        style="@style/textview_common"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="产品名称" />
+
+                    <TextView
+                        android:id="@+id/boci_timeLimit"
+                        style="@style/textview_common"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="定投状态" />
+
+                    <ImageView
+                        android:id="@+id/boci_gotoDetail"
+                        android:layout_width="@dimen/shap_of_commrequestopen_pdl"
+                        android:layout_height="@dimen/shap_of_commrequestopen_pdl"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:src="@drawable/right_arrow"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:src="@color/gray_line" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <ListView
+                        android:id="@+id/goldbonus_tradequery_list"
+                        style="@style/listviewcomm_fill_gray_divider" >
+                    </ListView>
+
+                    <ImageView
+                        android:id="@+id/img_line4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:src="@color/gray_line" />
+                </LinearLayout>
+                <!-- 温馨提示 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical" >
+
+                    <com.chinamworld.bocmbci.biz.goldbonus.MyTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:text="    最长查询时间为两年，最大查询时间跨度为六个月。提前终止操作的服务时间为每日9:00-16:00。"
+                        android:textColor="@color/boc_text_color_common_gray"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <!-- 温馨提示 -->
+
+    <LinearLayout
+        android:id="@+id/wenxintv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/fill_margin_left"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical" >
+
+        <com.chinamworld.bocmbci.biz.goldbonus.MyTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:text="    最长查询时间为两年，最大查询时间跨度为六个月。提前终止操作的服务时间为每日9:00-16:00。"
+            android:textColor="@color/boc_text_color_common_gray"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</RelativeLayout>

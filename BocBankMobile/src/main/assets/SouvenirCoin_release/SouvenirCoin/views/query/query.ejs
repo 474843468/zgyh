@@ -1,0 +1,37 @@
+<div class="wrap wrap-justhead">
+    <header class="page-head">
+        <!--<img src="images/back-icon.png" def_event="{click:'onBack'}">-->
+        <div class="back-img"  def_event="{click: 'onBack'}"><img src="images/back-icon.png"></div>
+        <h1>预约记录查询</h1>
+    </header>
+    <section>
+        <!--纪念币首页列表开始-->
+        <div class="entry">
+            <div class="entry-type">
+                <ul>
+                    <li>
+                        <label>客户姓名</label>
+                        <span class="entry-type-box"><input type="text" placeholder="请输入" name="" id="username"
+                                                            validate="{required:true,reg601:true,maxLength:32}" tips="用户名为必输项,请正确输入客户姓名,姓名最多输入16个汉字或32个字母/数字"
+                                                            maxlength="32"></span>
+                    </li>
+                    <li>
+                        <label>证件类型</label>
+                        <span class="entry-type-box entry-type-choose" def_event="{click:'onQueryIdentity'}">
+                            <a id="identityType">身份证</a>
+                            <img src="images/right-icon.png">
+                        </span>
+                    </li>
+                    <li>
+                        <label>证件号码</label>
+                        <span class="entry-type-box"><input type="text" placeholder="请输入证件号码" name="" id="identity"
+                                                            def_event="{blur: 'upcase'}" class="eobj"
+                                                            validate="{required:true,reg01:true}" tips="证件号码为必输项,请正确输入证件号码"></span>
+                    </li>
+                </ul>
+            </div>
+            <button def_event="{click:'onQuery'}">查询</button>
+        </div>
+        <!--纪念币首页列表结束-->
+    </section>
+</div>

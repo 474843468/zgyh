@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 我的基金 投资基金详细信息 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_00" >
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/message_dialog_bg" >
+
+        <ImageView
+            android:id="@+id/img_exit_accdetail"
+            style="@style/Finc_Dialog_Close"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/img_exit_accdetail" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingRight="@dimen/fill_margin_right_fordialog" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/common_row_margin"
+                    android:layout_marginRight="@dimen/fill_margin_right"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/finc_myfinc_acc_new" />
+
+                    <TextView
+                        android:id="@+id/finc_accountId"
+                        style="@style/textview_act"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/fill_margin_bottom"
+                    android:paddingRight="@dimen/fill_margin_bottom"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/finc_fundcode"
+                        style="@style/textview_common"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/forex_myfinc_blance_code" />
+
+                    <!--
+                     <TextView
+                    android:id="@+id/finc_fundname"
+                    style="@style/textview_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/finc_myfinc_blance_cash" />
+                    -->
+
+                    <TextView
+                        android:id="@+id/finc_netvalue"
+                        style="@style/textview_common"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/finc_myfinc_blance_balance" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:background="@drawable/bg_for_listview_item_write"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                    android:gravity="right" >
+
+                    <ListView
+                        android:id="@+id/finc_accListView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                         >
+                    </ListView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:layout_marginBottom="@dimen/common_row_margin_half"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/finc_accSetButton"
+                        style="@style/btn_common_oneline_left"
+                        android:text="@string/finc_myfinc_balance_accset1"
+                         />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

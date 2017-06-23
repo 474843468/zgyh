@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 中银理财  周期性产品续约协议修改确认界面 wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp_five"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/common_bottom_padding" >
+
+        <Button
+            android:id="@+id/btn_next"
+            style="@style/bottombtn"
+            android:text="@string/finish" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_btn"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/titleText_stepacc"
+                    android:layout_width="fill_parent"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp_five"
+                    android:paddingRight="@dimen/dp_five"
+                    android:text="@string/boc_period_cancel_suctitle"
+                    android:textColor="@color/gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/bocinvt_agree_transSeq" />
+
+                    <TextView
+                        android:id="@+id/tv_transSeq"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/contractSeq" />
+
+                    <TextView
+                        android:id="@+id/tv_contractSeq"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/boc_period_operateDate_cancel" />
+
+                    <TextView
+                        android:id="@+id/tv_operateDate"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/serialName" />
+
+                    <TextView
+                        android:id="@+id/tv_serialName"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/boci_curcode_cashremit" />
+
+                    <TextView
+                        android:id="@+id/tv_curcode"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/totalPeriod" />
+
+                    <TextView
+                        android:id="@+id/tv_totalPeriod"
+                        style="@style/textview_common_right_two" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/boc_period_period" />
+
+                    <TextView
+                        android:id="@+id/tv_period"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/boc_period_edit_surplusPeriod" />
+
+                    <TextView
+                        android:id="@+id/tv_surplusPeriod"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/boc_period_edit_startPeriod" />
+
+                    <TextView
+                        android:id="@+id/tv_startPeriod"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/boc_period_edit_endPeriod" />
+
+                    <TextView
+                        android:id="@+id/tv_endPeriod"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/amountTypeCode" />
+
+                    <TextView
+                        android:id="@+id/tv_amountTypeCode"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/amountType_base"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/baseAmount" />
+
+                    <TextView
+                        android:id="@+id/tv_baseAmount"
+                        style="@style/textview_common_right_two"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/amountType_min"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/minAmount" />
+
+                    <TextView
+                        android:id="@+id/tv_minAmount"
+                        style="@style/textview_common_right_two"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/amountType_max"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/maxAmount" />
+
+                    <TextView
+                        android:id="@+id/tv_maxAmount"
+                        style="@style/textview_common_right_two"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+                </TextView>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

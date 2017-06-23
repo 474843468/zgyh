@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_main_bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/boc_divide_line"/>
+
+    <LinearLayout
+        android:id="@+id/llyBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/scrvBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="visible">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.details.BaseDetailView
+                    android:id="@+id/viewContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnPreRepay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_96px"
+            android:background="@color/boc_main_button_color"
+            android:textColor="@color/bocroa_text_color_white"
+            android:text="@string/boc_eloan_prepay_pagename"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvNoData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/boc_text_color_common_gray"
+        android:textSize="@dimen/boc_text_size_common"
+        android:visibility="gone" />
+
+</LinearLayout>

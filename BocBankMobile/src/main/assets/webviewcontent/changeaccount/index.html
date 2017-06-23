@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html,charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <script type="text/javascript" src="scripts/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="BOCWebViewJavascriptBridge.js"></script>
+    <script>
+
+        function setUpEvent(elem, eventType, handler) {
+            return (elem.attachEvent ? elem.attachEvent("on" + eventType, handler)
+                    : ((elem.addEventListener) ? elem.addEventListener(eventType, handler, false) : null));
+        }
+
+        function isMobileIOS(){
+            var ua = navigator.userAgent;
+            if(ua.indexOf('Mobile') > -1 && (ua.indexOf('iPhone') > -1 || ua.indexOf('iPod') > -1 || ua.indexOf('iPad') > -1)){
+                return true;
+            }
+            return false;
+        }
+
+     $(document).ready(function(){
+         var contractContent;
+             if(isMobileIOS()){
+                 setUpEvent(document,'BOCWebViewJavascriptBridgeReady',function(event){
+                     var bridge = event.bridge;
+                     bridge.init(function(data,responseCallback){
+                     });
+                     bridge.registerHandler('receiveReceiptData', function(data, responseCallback) {
+                         debugger;
+                         contractContent=JSON.parse(data.getJsonContract());
+                         //   App.init(receitptData);
+                     });
+                 });
+                 return;
+             }else{
+                 contractContent =  JSON.parse(window.contract.getJsonContract());//contract
+             }
+
+
+       var a ='';
+      // $.get("1.txt").success(function(content){
+
+//         var loanType=123;
+//         var accNo=345555;
+           var loanType=contractContent.loanType;
+           var accNo=contractContent.accNo;
+
+             if(loanType!=""){
+                 document.getElementById("loanType").innerHTML=loanType;
+             }else{
+                 document.getElementById("loanType").innerHTML="";
+             }
+
+
+             if(accNo!=""){
+                 document.getElementById("accNo").innerHTML=accNo;
+             }else{
+                 document.getElementById("accNo").innerHTML="";
+             }
+
+
+         //  document.getElementById("container").innerHTML=html;
+                   //  $("#tianchong").html(center.trim());
+      //  });
+     });
+
+
+
+
+    </script>
+</head>
+
+
+<body>
+
+<div style="text-align: center">
+
+
+    <h3>客户授权</h3>
+</div>
+
+<div>
+
+    <p style="font-weight:bold;line-height:30px;margin:0;">中国银行股份有限公司:</p>
+
+    <p style="text-indent:2em;line-height:30px;margin:0">本人申请变更本人与贵行之间<u><span id="loanType"></span></u>项下约定偿还贷款本息的账户，变更后的账户为<u><span  id="accNo"></span></u>，现授权贵行从本人上述变更后的账户中扣款，用于偿还贷款本息。
+    </p>
+
+    <p style="text-indent:2em;line-height:30px;margin:0">本人确保新的贷款账户是真实有效的，不存在冻结、挂失等异常情况，如出现新的贷款账户异常或扣款日金额不足导致的责任由本人承担。</p>
+
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/boc_current_bg_green"
+    android:paddingBottom="@dimen/boc_space_between_10px"
+    android:paddingTop="@dimen/boc_space_between_10px">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:id="@+id/tv_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="人民币"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/boc_text_size_common" />
+
+        <TextView
+            android:id="@+id/tv_money_icon"
+            style="@style/tv_very_small"
+            android:layout_width="@dimen/boc_card_account_amount_cash_remit"
+            android:layout_height="@dimen/boc_card_account_amount_cash_remit"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/tv_currency"
+            android:background="@drawable/boc_black_circle"
+            tools:text="钞"
+            android:visibility="visible"
+            android:textColor="@color/boc_text_color_dark_gray" />
+
+        <TextView
+            android:id="@+id/tv_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:textSize="@dimen/boc_text_size_common" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_usable_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rl_top"
+        android:textColor="@color/boc_text_color_dark_gray"
+        android:textSize="@dimen/boc_text_size_common" />
+</RelativeLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 跨行资金归集列表 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_btn_layout"
+        android:orientation="vertical" >
+
+        <RadioGroup
+            android:id="@+id/rg_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb_collect"
+                style="@style/twoRadioButtonLeft"
+                android:text="@string/collect_ok_setting" />
+
+            <RadioButton
+                android:id="@+id/rb_uncollect"
+                style="@style/twoRadioButtonRight"
+                android:text="@string/collect_no_setting" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/manage_boc_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/list_view_header"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/fill_padding_top"
+                android:paddingLeft="@dimen/layout_margin_top"
+                android:paddingTop="@dimen/fill_padding_top" >
+
+                <TextView
+                    android:id="@+id/tv_column_1"
+                    style="@style/textview_common"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="@string/collect_account"
+                    android:textSize="@dimen/textsize_one_two" />
+
+              
+
+                <TextView
+                    android:id="@+id/tv_column_3"
+                    style="@style/textview_common"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="@string/collect_account_bank"
+                    android:textSize="@dimen/textsize_one_two" />
+                  <TextView
+                    android:id="@+id/tv_column_2"
+                    style="@style/textview_common"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="@string/collect_account_name"
+                    android:textSize="@dimen/textsize_one_two" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray_line" />
+
+            <RelativeLayout
+                android:id="@+id/collect_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" >
+
+                <ListView
+                    android:id="@+id/lv_collect"
+                    style="@style/listviewcomm_wrap_gray_divider"
+                    android:layout_height="match_parent"
+                    android:listSelector="@android:drawable/list_selector_background"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_collect_prompt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/fill_margin_bottom"
+                    android:layout_marginLeft="@dimen/fill_margin_left"
+                    android:layout_marginRight="@dimen/fill_margin_right"
+                    android:padding="@dimen/fill_padding"
+                    android:text="@string/collect_no_satisfied_query_record"
+                    android:textSize="@dimen/textsize_default"
+                    android:textColor="@color/gray"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/uncollect_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" >
+
+                <ListView
+                    android:id="@+id/lv_uncollect"
+                    style="@style/listviewcomm_wrap_gray_divider"
+                    android:layout_height="match_parent"
+                    android:listSelector="@android:drawable/list_selector_background"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_uncollect_prompt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/fill_margin_bottom"
+                    android:layout_marginLeft="@dimen/fill_margin_left"
+                    android:layout_marginRight="@dimen/fill_margin_right"
+                    android:padding="@dimen/fill_padding"
+                    android:text="没有符合条件的查询记录，您可以通过网银渠道添加他行可归集账户。"
+                     android:textSize="@dimen/textsize_default"
+                    android:textColor="@color/gray"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp_five" >
+
+        <!--
+             <Button
+            android:id="@+id/btn_all"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/collect_all" />
+        -->
+
+        <Button
+            android:id="@+id/btn_collect_cancle"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/cancle"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_collect_finish"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/finish"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_collect"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/collect_select"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

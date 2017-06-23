@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin" >
+
+        <Button
+            style="@style/bottombtn"
+            android:onClick="btnNextOnclick"
+            android:text="@string/plps_interprov_nextbtn" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/remit_title_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:text="@string/plps_interprov_decisnum"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_default" />
+
+                <LinearLayout
+                    style="@style/linnerlayout_common"
+                    android:layout_marginTop="@dimen/pulldownbtn_height" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_marginLeft="@dimen/titlerightbtn_paddingtb"
+                        android:layout_weight="1.5"
+                        android:text="@string/plps_interprov_dicisionnumber" />
+
+                    <EditText
+                        android:id="@+id/dicisnum"
+                        style="@style/editext_fill"
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:maxLength="15"
+                        android:paddingRight="30dip"
+                        android:inputType="number"/>
+                </LinearLayout>
+				<LinearLayout 
+				    style="@style/linnerlayout_common"
+                    android:layout_marginTop="@dimen/loan_apply_list_item_height"
+                    android:orientation="vertical">
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fill_margin_left"
+                    android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                    android:text="@string/plps_interprov_dicisiontext"
+                    android:textColor="@color/red" />
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fill_margin_left"
+                    android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                    android:layout_marginBottom="@dimen/list_bottom"
+                    android:text="@string/plps_interprov_timeinfo"
+                    android:textColor="@color/red" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

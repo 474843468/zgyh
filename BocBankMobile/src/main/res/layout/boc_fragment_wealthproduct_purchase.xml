@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_main_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/boc_main_bg_color"
+        android:orientation="vertical">
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.PortfolioProductInfoView.PortfolioProductInfoView
+            android:id="@+id/tv_product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_space_between_40px"
+            android:layout_marginTop="@dimen/boc_space_between_20px" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/boc_space_between_160px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/boc_space_between_40px"
+                android:gravity="center_vertical"
+                android:text="@string/boc_purchase_product_credit_balance"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small" />
+
+            <TextView
+                android:id="@+id/tv_credit"
+                style="@style/tv_small"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/boc_space_between_50px"
+                android:layout_marginRight="@dimen/boc_space_between_30px"
+                android:gravity="center_vertical"
+                android:maxLines="2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/boc_space_between_10px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/boc_space_between_160px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/boc_space_between_40px"
+                android:gravity="center_vertical"
+                android:text="@string/boc_purchase_product_is_cancelable"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small" />
+
+            <TextView
+                android:id="@+id/tv_cancelable"
+                style="@style/tv_small"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/boc_space_between_50px"
+                android:layout_marginRight="@dimen/boc_space_between_30px"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:text="@string/boc_purchase_product_cancel1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_fee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/boc_space_between_10px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/boc_space_between_160px"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/boc_space_between_40px"
+                android:gravity="center_vertical"
+                android:text="@string/boc_purchase_product_fee"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small" />
+
+            <TextView
+                android:id="@+id/tv_fee"
+                style="@style/tv_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/boc_space_between_50px"
+                android:layout_marginRight="@dimen/boc_space_between_30px"
+                android:gravity="center_vertical" />
+        </LinearLayout>
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+            android:id="@+id/et_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/boc_space_between_20px"
+            app:editChoiceName="@string/boc_purchase_product_account"
+            app:editChoiceNameBold="true" />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.ClickableSpan.SpannableString
+            android:id="@+id/tv_balance"
+            style="@style/tv_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/boc_space_between_40px"
+            android:layout_marginLeft="@dimen/boc_space_between_30px"
+            android:layout_marginRight="@dimen/boc_space_between_30px"
+            android:layout_marginTop="@dimen/boc_space_between_20px"
+            android:visibility="invisible" />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+            android:id="@+id/et_cash_remit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:editChoiceName="@string/boc_purchase_product_cash_remit"
+            app:editChoiceNameBold="true" />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.moneyruler.MoneyRulerWidget
+            android:id="@+id/ruler_amount"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_320px"
+            android:layout_marginTop="0.5dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_period"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputWidget
+                android:id="@+id/et_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/boc_divider_1px"
+                app:editChoiceName="@string/boc_purchase_product_amount"
+                app:editChoiceNameBold="true" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditClearWidget
+                android:id="@+id/et_period"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/boc_divider_1px"
+                app:editChoiceNameBold="true"
+                app:editClearName="@string/boc_purchase_product_period" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_redeem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_104px"
+                android:layout_marginTop="@dimen/boc_divider_1px"
+                android:background="@color/boc_common_cell_color">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/boc_space_between_32px"
+                    android:layout_marginRight="@dimen/boc_space_between_10px"
+                    android:text="@string/boc_purchase_product_appoint_redeem"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_common"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/cb_redeem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/boc_space_between_30px"
+                    android:background="@drawable/boc_bg_checkbox"
+                    android:button="@null"
+                    android:checked="false" />
+
+            </RelativeLayout>
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                android:id="@+id/et_redeem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/boc_divider_1px"
+                android:visibility="gone"
+                app:editChoiceContent="@string/boc_common_select"
+                app:editChoiceName="@string/boc_purchase_product_redeem_date"
+                app:editChoiceNameBold="true" />
+
+            <TextView
+                android:id="@+id/tv_redeem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/boc_space_between_32px"
+                android:layout_marginTop="@dimen/boc_space_between_20px"
+                android:textColor="@color/boc_text_color_cinerous"
+                android:textSize="@dimen/boc_space_between_26px" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:layout_marginTop="@dimen/boc_space_between_80px"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_agree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox_style" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.ClickableSpan.SpannableString
+                android:id="@+id/tv_agreement"
+                style="@style/tv_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/cb_agree"
+                android:layout_marginLeft="@dimen/boc_space_between_26px"
+                android:layout_toRightOf="@id/cb_agree"
+                android:textColor="@color/boc_text_mobile_color" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_next"
+            style="@style/BocButton.BocPrimaryButton1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_button_height_88px"
+            android:text="@string/boc_account_next" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/boc_space_between_20px"
+            android:layout_marginLeft="@dimen/boc_space_between_40px"
+            android:layout_marginTop="@dimen/boc_space_between_40px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_market_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boc_purchase_product_market_code_title"
+                android:textColor="@color/boc_text_color_cinerous"
+                android:textSize="@dimen/boc_text_size_small" />
+
+            <ImageView
+                android:id="@+id/iv_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/boc_detail_add"
+                android:padding="@dimen/boc_space_between_10px" />
+
+            <TextView
+                android:id="@+id/tv_market"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boc_purchase_product_market"
+                android:textColor="@color/boc_text_color_cinerous"
+                android:textSize="@dimen/boc_text_size_small" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 车险的基本信息界面 -->
+
+    <RelativeLayout
+        android:id="@+id/layout_carsafety_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/fill_margin_top"
+        android:layout_marginLeft="@dimen/fill_margin_top"
+        android:layout_marginRight="@dimen/fill_margin_top"
+        android:gravity="center" >
+
+        <LinearLayout
+            android:id="@+id/btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnSave"
+                style="@style/isforex_two_left_btn"
+                android:text="@string/safety_save"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnQuery"
+                style="@style/isforex_two_right_btn"
+                android:text="@string/safety_carinfo_commitcartypequery"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnQuery_big"
+                style="@style/textview_forex_button_cell"
+                android:text="@string/query"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/scrollview_comm"
+            android:layout_above="@+id/btn_layout"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical" >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:id="@+id/safety_carsafety_carinfo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_five" >
+
+                    <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_bill_tip"
+                            style="@style/confirm_info_textview_style"
+                            android:layout_gravity="center"
+                            android:text="@string/safety_carinfo" />
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common_details_messages_paddingtop"
+                        android:layout_marginRight="@dimen/common_details_messages_paddingtop"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/textsize_one_three" />
+                    <!-- 已上牌、未上牌单选按钮 -->
+
+                    <RadioGroup
+                        android:id="@+id/loan_advance_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.3"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/rabtn1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/btn_bottom_height"
+                            android:button="@drawable/radiobtn_selector"
+                            android:checked="true"
+                            android:text="@string/safety_carsafety_yishangpai"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <RadioButton
+                            android:id="@+id/rabtn2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/btn_bottom_height"
+                            android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                            android:button="@drawable/radiobtn_selector"
+                            android:text="@string/safety_carsafety_weishangpai"
+                            android:textSize="@dimen/textsize_default" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:id="@+id/ll_carsafety"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

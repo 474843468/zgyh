@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 中银理财  我的理财产品详情界面 wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp_five"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/common_bottom_padding" >
+
+        <Button
+            android:id="@+id/btn_changeBonusMode"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/bocinvt_holding_detail_superaddition_purchase" />
+
+        <Button
+            android:id="@+id/btn_redeem"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/bocinvt_holding_detail_more" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_btn"
+        android:layout_marginTop="@dimen/rightbtnW"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/titleText_step2"
+            android:layout_width="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/detail"
+            android:textColor="@color/black"
+            android:visibility="invisible" />
+
+        <ScrollView
+            style="@style/scrollview_comm"
+            android:paddingLeft="@dimen/dp_five"
+            android:paddingRight="@dimen/dp_five" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_bocint_number"
+                        style="@style/textview_common_left_three"
+                        android:text="@string/bocinvt_buy_number" />
+
+                    <TextView
+                        android:id="@+id/bocint_number"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/prodCode" />
+
+                    <TextView
+                        android:id="@+id/tv_prodCode_detail"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/prodName" />
+
+                    <TextView
+                        android:id="@+id/tv_prodName_detail"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/currency1" />
+
+                    <TextView
+                        android:id="@+id/tv_curCode_detail"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+                 <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/bocinvt_tv_40" />
+
+                    <TextView
+                        android:id="@+id/tv_cashRemit"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/prodBegin_detail_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/timeLimit" />
+
+                    <TextView
+                        android:id="@+id/tv_prodBegin_detail"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/prodEnd_detail_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_prodEnd"
+                        style="@style/textview_common_left_three"
+                        android:text="@string/prodEnd" />
+
+                    <TextView
+                        android:id="@+id/tv_prodEnd_detail"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/product_type" />
+
+                    <TextView
+                        android:id="@+id/tv_product_type"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/yearly_yield_rate_parent"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_bocinvt_yearlyRR"
+                        style="@style/textview_common_left_three"
+                        android:text="@string/bocinvt_yearlyRR" />
+
+                    <TextView
+                        android:id="@+id/ltv_yearly_yield_rate"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+				<LinearLayout
+                    android:id="@+id/price_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="单位净值：" />
+
+                    <TextView
+                        android:id="@+id/ltv_price"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+                <!-- <com.chinamworld.bocmbci.userwidget.LabelTextView
+                    android:id="@+id/ltv_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    custom:labelText="历史净值："
+                    custom:weightShowRate="2:3" /> -->
+
+                <com.chinamworld.bocmbci.userwidget.LabelTextView
+                    android:id="@+id/ltv_price_refresh_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    custom:labelText="净值更新日期："
+                    custom:weightShowRate="2:3" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/bocinvt_holdQuantity" />
+
+                    <TextView
+                        android:id="@+id/tv_holdingQuantity_detail"
+                        style="@style/textview_common_right_two"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/bocinvt_availableQuantity" />
+
+                    <TextView
+                        android:id="@+id/tv_availableQuantity_detail"
+                        style="@style/textview_common_right_two"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/expProfit" />
+
+                    <TextView
+                        android:id="@+id/tv_progression"
+                        style="@style/textview_common_right_two"
+                        android:text="@string/progression" />
+                </LinearLayout>
+                
+                <!-- <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/bocinvt_sellPrice" />
+
+                    <TextView
+                        android:id="@+id/tv_sellPrice_detail"
+                        style="@style/textview_common_right_two"
+                        android:textColor="@color/red" />
+                </LinearLayout> -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/bocinvt_payProfit" />
+
+                    <TextView
+                        android:id="@+id/tv_payProfit_detail"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+                </TextView>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/titleText_stepacc"
+        android:layout_width="@dimen/common_details_title_width"
+        android:layout_height="@dimen/left_img_width"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_title"
+        android:gravity="center"
+        android:paddingRight="@dimen/btnpaddingtb"
+        android:text="@string/bocinvt_detail_title"
+        android:textColor="@color/gray_title" />
+
+</RelativeLayout>

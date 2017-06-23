@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 保险产品item -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_item"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/acc_list_item_height" >
+
+    <RelativeLayout
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acc_list_item_height"
+        android:tag="back" >
+
+        <FrameLayout
+            android:id="@+id/acc_frame_back"
+            android:layout_width="@dimen/icon_dele_HW"
+            android:layout_height="@dimen/icon_dele_HW"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/acc_btn_goitem_back"
+                android:layout_width="@dimen/rightbtnW"
+                android:layout_height="@dimen/rightbtnH"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/ll_acc_msg_back"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/acc_list_item_height"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/acc_frame_back"
+            android:background="@drawable/img_ka_press"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/acc_list_item_height"
+                android:text="@string/bocinvt_des_title"
+                android:textColor="@color/black" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/front"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acc_list_item_height" >
+
+        <FrameLayout
+            android:id="@+id/acc_frame"
+            android:layout_width="@dimen/rightbtnW"
+            android:layout_height="@dimen/rightbtnW"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/btn_goitem"
+                style="@style/rightbtn_jiantou"
+                android:layout_gravity="center"
+                android:background="@drawable/img_arrow_write"
+                android:contentDescription="img" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/ll_acc_msg"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/acc_list_item_height"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/acc_frame"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:gravity="center" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/acc_list_item_height"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:paddingLeft="@dimen/icon_dele_HW_margin"
+                android:paddingTop="5dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/icon_dele_HW_margin" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:singleLine="true"
+                        android:text="@string/prodName"
+                        />
+
+                    <TextView
+                        android:id="@+id/insurancename"
+                        style="@style/textview_forex_prompt_info"
+                        android:singleLine="true"
+                         />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/icon_dele_HW_margin">
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:singleLine="true"
+                        android:text="@string/safety_product_attr"
+                         />
+
+                    <TextView
+                        android:id="@+id/insurancetype"
+                        style="@style/textview_forex_prompt_info"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/icon_dele_HW_margin" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:singleLine="true"
+                        android:text="@string/safety_hold_pro_detail_prod_code"
+                       />
+
+                    <TextView
+                        android:id="@+id/tv_insuId"
+                        style="@style/textview_forex_prompt_info"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <!--
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="@string/safety_product_riskparm"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/insuranceprem"
+                        style="@style/comm_view_right"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp"
+                        android:singleLine="true"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+                -->
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageViewright"
+                style="@style/sucess_right_iv"
+                android:layout_gravity="center"
+                android:contentDescription="img2"
+                android:visibility="gone" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/btn_gocancelrelation"
+        android:layout_width="@dimen/icon_dele_HW"
+        android:layout_height="@dimen/icon_dele_HW"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/icon_del"
+        android:contentDescription="img3"
+        android:visibility="gone" />
+
+</RelativeLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 转账记录管理 详情：  TransRecordDetailActivity -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/stepbar"
+        layout="@layout/step_title_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_btn_layout"
+        android:layout_below="@+id/stepbar"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:id="@+id/btn_transet_mytransfer"
+                style="@style/tran_body_ll"
+                android:paddingBottom="@dimen/fill_margin_top"
+                android:paddingLeft="@dimen/dp_five"
+                android:paddingRight="@dimen/dp_five"
+                android:paddingTop="@dimen/fill_margin_top" >
+
+                <!-- 收款人姓名 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/payeeName" />
+
+                    <EditText
+                        android:id="@+id/tv_payeeName_payee_boc_detail"
+                        style="@style/edittext_common_fill" 
+                        android:layout_weight="2"/>
+                </LinearLayout>
+                <!-- 收款人别名 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/payeeOthName" />
+
+                    <TextView
+                        android:id="@+id/tv_payee_nikename_payee_boc_detail"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+                <!-- 账号 -->
+
+                <LinearLayout
+                    android:id="@+id/tran_seqbat_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/manage_payee_accnum" />
+
+                    <EditText
+                        android:id="@+id/tv_accnum_payee_boc_detail"
+                        style="@style/edittext_inputNumber_fill"
+                        android:layout_weight="2" />
+                </LinearLayout>
+                <!-- 账户类型 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tran_acc_type_or_bank_tv"
+                        style="@style/textview_common_left_three"
+                        android:text="@string/mangage_payee_acctype" />
+
+                    <TextView
+                        android:id="@+id/tv_acctype_payee_boc_detail"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+                <!-- 所属地区 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tran_address_or_bankname_tv"
+                        style="@style/textview_common_left_three"
+                        android:text="@string/mangage_payee_area" />
+
+                    <TextView
+                        android:id="@+id/tv_area_payee_boc_detail"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+                <!-- 手机号码 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/tran_payeeMobile_set" />
+
+                    <EditText
+                        android:id="@+id/tv_mobile_payee_boc_detail"
+                        style="@style/edittext_inputNumber_fill"
+                        android:layout_weight="2"
+                        android:hint="@string/hint_memo"
+                        android:maxLength="15" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp_five" >
+
+        <Button
+            android:id="@+id/btn_delete_payee_boc_detail"
+            style="@style/bottombtn"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/ok" />
+    </LinearLayout>
+
+</RelativeLayout>

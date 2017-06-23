@@ -1,0 +1,2 @@
+/*! BUILD: 2016-12-19 */
+define([],function(){return{l_loginname:"用户名：",l_password:"密&nbsp;&nbsp;&nbsp;码：",l_validcode:"验证码：",l_refresbtn:"看不清",l_loginbtn:"登录",l_nothaveaccount:"还不是中行网银或手机银行用户？",l_click1:"请点击",l_click2:"预约开户"}});

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 基金 行情单个基金详情页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/common_bottom_padding" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_layout"
+            android:fadingEdge="none"
+            android:fillViewport="true"
+            android:paddingBottom="@dimen/dp_five"
+            android:paddingTop="@dimen/dp_five"
+            android:scrollbars="none" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_details_title_margintop"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        style="@style/linnerlayout_common" >
+
+                        <TextView
+                            android:id="@+id/forex_myfinc_day_toplimit_tv"
+                            style="@style/confirm_left_textview_style606"
+                            android:text="首次认购下限：" />
+
+                        <TextView
+                            android:id="@+id/finc_fundfirst_buy_floor"
+                            style="@style/confirm_right_textview_style606" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/linnerlayout_common" >
+
+                        <TextView
+                            style="@style/confirm_left_textview_style606"
+                            android:text="追加认购下限：" />
+
+                        <TextView
+                            android:id="@+id/finc_fundadd_buy_floor"
+                            style="@style/confirm_right_textview_style606" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/linnerlayout_common" >
+
+                        <TextView
+                            style="@style/confirm_left_textview_style606"
+                            android:text="申购下限：" />
+
+                        <TextView
+                            android:id="@+id/finc_ransom_floor"
+                            style="@style/confirm_right_textview_style606" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/linnerlayout_common" >
+
+                        <TextView
+                            style="@style/confirm_left_textview_style606"
+                            android:text="定期定额申购下限：" />
+
+                        <TextView
+                            android:id="@+id/finc_schedubuyLimit_colon"
+                            style="@style/confirm_right_textview_style606" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/finc_daylimit_layout"
+                        style="@style/linnerlayout_common" >
+
+                        <TextView
+                            style="@style/confirm_left_textview_style606"
+                            android:text="单日购买上限：" />
+
+                        <TextView
+                            android:id="@+id/finc_daylimit"
+                            style="@style/confirm_right_textview_style606" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/linnerlayout_common" >
+
+                        <TextView
+                            style="@style/confirm_left_textview_style606"
+                            android:text="收费方式：" />
+
+                        <TextView
+                            android:id="@+id/finc_fund_toll_type"
+                            style="@style/confirm_right_textview_style606" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/linnerlayout_common" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/common_listview_item__half_grqy_Height" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:id="@+id/finc_attention"
+                        android:layout_width="@dimen/finc_details_zoushitu_width"
+                        android:layout_height="@dimen/finc_details_zoushitu_height"
+                        android:background="@drawable/img_guanzhu" >
+
+                        <ImageView
+                            android:id="@+id/finc_attention_imageFlag"
+                            android:layout_width="@dimen/finc_details_zoushitu_width"
+                            android:layout_height="@dimen/finc_details_zoushitu_height" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/chart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/common_details_title_height" >
+
+                        <TextView
+                            android:id="@+id/finc_funddetail_title"
+                            android:layout_width="@dimen/common_details_title_width"
+                            android:layout_height="@dimen/common_details_title_height"
+                            android:background="@drawable/bg_title"
+                            android:gravity="center"
+                            android:text="@string/finc_funddetails"
+                            android:textSize="@dimen/textsize_default"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/finc_valuechart"
+                            android:layout_width="@dimen/finc_details_zoushitu_width"
+                            android:layout_height="@dimen/finc_details_zoushitu_height"
+                            android:src="@drawable/zoushituanniu" 
+                            android:visibility="gone"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

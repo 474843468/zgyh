@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账户管理账户列表页   wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/tv_add_notice_title"
+        style="@style/titleText_stepacc"
+        android:layout_centerHorizontal="false"
+        android:gravity="left"
+        android:text="@string/acc_add_notice_title"
+        android:textColor="@color/gray"
+        android:visibility="gone" />
+
+    <com.chinamworld.bocmbci.widget.SwipeListView
+        xmlns:swipe="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/acc_accountlist"
+        style="@style/listviewcomm_fill_haveDivider"
+        android:layout_below="@+id/tv_add_notice_title"
+        swipe:swipeActionLeft="dismiss"
+        swipe:swipeCloseAllItemsWhenMoveList="true"
+        swipe:swipeFrontView="@+id/front"
+        swipe:swipeMode="both" />
+
+    <TextView
+        android:id="@+id/no_ta_acc"
+        style="@style/confirm_info_textview_style"
+        android:layout_height="@dimen/btn_dialog_width"
+        android:background="@drawable/finc_no_ta_list"
+        android:padding="@dimen/top_title_ka"
+        android:text="@string/finc_no_ta_acc"
+        android:visibility="gone" />
+
+</RelativeLayout>

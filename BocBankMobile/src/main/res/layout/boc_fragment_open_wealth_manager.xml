@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/boc_space_between_40px"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/boc_space_between_40px">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_800px"
+            android:background="@color/boc_common_cell_color"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boc_wealth_closed"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_common" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/boc_space_between_80px"
+                android:src="@drawable/boc_wealth_manager_close" />
+
+        </LinearLayout>
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRowButton
+            android:id="@+id/btn_security"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_button_height_88px"
+            android:layout_marginTop="0.5dp" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:layout_marginTop="@dimen/boc_space_between_80px"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/accept_rule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/boc_text_mobile_color"
+                android:button="@drawable/checkbox_style"
+                android:textSize="@dimen/boc_text_size_small" />
+
+            <TextView
+                android:id="@+id/user_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/accept_rule"
+                android:layout_marginLeft="@dimen/boc_space_between_26px"
+                android:layout_toRightOf="@id/accept_rule"
+                android:text="@string/boc_wealth_open_message"
+                android:textColor="@color/boc_text_mobile_color"
+                android:textSize="@dimen/boc_text_size_small" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_open"
+            style="@style/BocButton.BocPrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_button_height_88px"
+            android:layout_marginBottom="@dimen/boc_space_between_40px"
+            android:layout_marginTop="@dimen/boc_space_between_80px"
+            android:text="@string/boc_wealth_open_service" />
+
+    </LinearLayout>
+
+</ScrollView>

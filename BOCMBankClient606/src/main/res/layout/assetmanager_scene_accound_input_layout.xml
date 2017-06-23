@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 资产管理-资金划转-手动输入账户页 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_00"
+    android:orientation="vertical" 
+    >
+    <ScrollView 
+        style="@style/style_height_weight_1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:id="@+id/layout_content"
+        android:fillViewport="true"
+        >
+        <LinearLayout 
+            style="@style/style_match_match"
+            android:orientation="vertical"
+            >
+            <TextView 
+	            style="@style/textview_common_multi_second"
+	            android:layout_gravity="center_horizontal"
+	            android:textColor="@color/gray"
+	            android:layout_marginTop="10dp"
+	            android:text="请填写收款人信息"
+	            />
+            <LinearLayout 
+                style="@style/style_match_wrap"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:gravity="center_vertical"
+                >
+                <TextView 
+                    android:id="@+id/tv_1"
+                    style="@style/style_tv_bocinv_agreement_appley"
+                    android:layout_width="match_parent"
+                    android:layout_weight="3"
+                    android:text="收款账户类型："
+                    />
+                <RadioGroup 
+                    style="@style/style_with_weight_1"
+                    android:layout_width="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    >
+                    <RadioButton
+                        android:id="@+id/radio_btn_1" 
+                        style="@style/style_radiobutton_with_weigh_1"
+                        android:layout_height="wrap_content"
+                        android:text="中行账户"
+                        android:checked="true"
+                        />
+                    <RadioButton 
+                        android:id="@+id/radio_btn_2" 
+                        style="@style/style_radiobutton_with_weigh_1"
+                        android:layout_height="wrap_content"
+                        android:text="他行账户"
+                        />
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout 
+                android:id="@+id/layout_1"
+                style="@style/style_match_wrap"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:gravity="center_vertical"
+                >
+                <TextView 
+                    android:id="@+id/tv_4"
+                    style="@style/style_tv_bocinv_agreement_appley"
+                    android:layout_width="match_parent"
+                    android:layout_weight="3"
+                    android:text="账户所属银行："
+                    />
+                <!-- <EditText 
+                    android:id="@+id/edt_3"
+                    style="@style/edittext_inputNumber_fill"
+                    android:layout_weight="2"
+                    android:inputType="none"
+                    /> -->
+                <Spinner 
+                    android:id="@+id/sp_1"
+                    style="@style/Spiiner_fill"
+                    android:layout_weight="2"
+                    />
+            </LinearLayout>
+            <LinearLayout 
+                android:id="@+id/layout_2"
+                style="@style/style_match_wrap"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:gravity="center_vertical"
+                >
+                <TextView 
+                    android:id="@+id/tv_5"
+                    style="@style/style_tv_bocinv_agreement_appley"
+                    android:layout_width="match_parent"
+                    android:layout_weight="3"
+                    android:text="开户行名称："
+                    />
+                <LinearLayout style="@style/style_with_weight_1"
+                    android:layout_width="match_parent"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
+                    <TextView
+                        android:id="@+id/tv_6"
+	                    style="@style/style_with_weight_1"
+	                    android:singleLine="true"
+	                    android:text=""
+                        android:visibility="gone"
+                        />
+
+
+                    <Button 
+				        android:id="@+id/btn_query"
+				        style="@style/style_btn_query_red_bg"
+				        />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout 
+                style="@style/style_match_wrap"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:gravity="center_vertical"
+                >
+                <TextView 
+                    android:id="@+id/tv_2"
+                    style="@style/style_tv_bocinv_agreement_appley"
+                    android:layout_width="match_parent"
+                    android:layout_weight="3"
+                    android:text="收款人账户："
+                    />
+                <EditText 
+                    android:id="@+id/edt_1"
+                    style="@style/edittext_inputNumber_fill"
+                    android:layout_weight="2"
+                    />
+            </LinearLayout>
+            <LinearLayout 
+                style="@style/style_match_wrap"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:gravity="center_vertical"
+                >
+                <TextView 
+                    android:id="@+id/tv_3"
+                    style="@style/style_tv_bocinv_agreement_appley"
+                    android:layout_width="match_parent"
+                    android:layout_weight="3"
+                    android:text="收款人姓名："
+                    />
+                <EditText 
+                    android:id="@+id/edt_2"
+                    style="@style/edittext_inputNumber_fill"
+                    android:layout_weight="2"
+                    android:maxLength="60"
+                    android:inputType="none"
+                    />
+            </LinearLayout>
+
+            <TextView style="@style/style_height_weight_1"/>
+
+            <TextView
+                android:id="@+id/tv_tip"
+                style="@style/textview_common_multi_second"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/gray"
+                android:layout_margin="10dp"
+                android:text="如果您不清楚转入账户开户行的确切名称，可输入名称的一部分进行查询，请您填写准确的开户行名称，以保障汇款及时到达"
+                />
+            
+            <TextView style="@style/style_match_wrap"/>
+        </LinearLayout>
+    </ScrollView>
+    
+    <!-- 按钮 -->
+    <include layout="@layout/assetmanager_bottom_button_layout"/>
+
+</LinearLayout>

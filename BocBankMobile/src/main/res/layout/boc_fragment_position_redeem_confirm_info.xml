@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:scrollbars="none">
+    <!--赎回-确认界面-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/boc_common_bg_color"
+        android:layout_marginTop="@dimen/boc_space_between_16px"
+        android:orientation="vertical">
+        <!--赎回份额-头部-->
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableHead
+            android:id="@+id/redeem_confirm_head_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <!--净值 显示内容（-产品名称，赎回手续费，业绩报酬(浮动管理费)，赎回日期）-->
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailContentView
+            android:id="@+id/redeem_confirm_net_value_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <!--非净值 显示内容（-产品名称，份额面值，赎回日期）-->
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailContentView
+            android:id="@+id/redeem_confirm_no_net_value_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!--确认按钮-->
+        <Button
+            android:id="@+id/redeem_confirm_bt"
+            style="@style/BocButton.BocPrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:text="@string/boc_common_sure"
+            android:layout_marginTop="@dimen/boc_space_between_40px"
+            android:layout_marginRight="@dimen/boc_space_between_16px"
+            android:layout_marginLeft="@dimen/boc_space_between_16px"
+            android:textSize="@dimen/boc_text_size_common" />
+    </LinearLayout>
+
+</RelativeLayout>

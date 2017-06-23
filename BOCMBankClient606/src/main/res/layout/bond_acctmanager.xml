@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 债券托管账户注销完成页面  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_step"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical"
+            android:padding="@dimen/fill_padding_top" >
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/blpt_main_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_bill_tip"
+                            style="@style/confirm_info_textview_style"
+                            android:gravity="center"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <!-- 项目  start -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/bond_tv_15_left"
+                                android:layout_width="wrap_content"
+                                android:layout_weight="0"
+                                android:layout_gravity="center_vertical"
+                                android:text="@string/bond_mybond_title1"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_acc1"
+                                style="@style/bond_tv_15_right"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_bank"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:singleLine="true"
+                                android:text="账户"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_default"
+                                android:visibility="invisible" />
+
+                            <TextView
+                                style="@style/bond_tv_15_left"
+                                android:layout_width="wrap_content"
+                                android:layout_weight="0"
+                                android:layout_gravity="center_vertical"
+                                android:text="@string/bond_mybond_title2"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_acc2"
+                                style="@style/bond_tv_15_right"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_idtype"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:singleLine="true"
+                                android:text="账户"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_default"
+                                android:visibility="invisible" />
+
+                            <TextView
+                                style="@style/bond_tv_15_left"
+                                android:layout_width="wrap_content"
+                                android:layout_weight="0"
+                                android:layout_gravity="center_vertical"
+                                android:text="@string/bond_idtype"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_idtype"
+                                style="@style/bond_tv_15_right"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_idnum"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:singleLine="true"
+                                android:text="账户"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_default"
+                                android:visibility="invisible" />
+
+                            <TextView
+                                style="@style/bond_tv_15_left"
+                                android:layout_width="wrap_content"
+                                android:layout_weight="0"
+                                android:layout_gravity="center_vertical"
+                                android:text="@string/bond_idnumber"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_idnum"
+                                style="@style/bond_tv_15_right"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0"
+                                />
+                        </LinearLayout>
+
+                        <!-- 项目  end -->
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </ScrollView>
+
+            <TextView
+                android:id="@+id/tv_bottom_tip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="left"
+                android:text="@string/bond_acct_pasresetresult_buttomtip"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_default"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fill_margin_top"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnConfirm"
+                style="@style/bottombtn_new"
+                android:text="@string/confirm" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

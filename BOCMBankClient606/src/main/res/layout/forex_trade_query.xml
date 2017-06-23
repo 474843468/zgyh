@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 成交状况查询      查询页面 -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible" >
+
+
+    <include
+        android:id="@+id/ll_query_condition"
+        layout="@layout/forex_trade_qurey_content" />
+
+    <LinearLayout
+        android:id="@+id/forex_query_result_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:id="@+id/forex_query_result_condition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/img_bg_query_j"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/titlerightbtn_paddingtb" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        style="@style/bond_textview_15_dark"
+                        android:hint="@string/acc_query_date" />
+                    <TextView
+                        android:id="@+id/trade_time"
+                        style="@style/bond_textview_15_black"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="@dimen/fill_padding_right"
+                    android:gravity="right|center_vertical"
+                    android:layout_gravity="right"
+                    >
+
+                    <TextView
+                        style="@style/style_bond_tv_up_down"
+                        android:text="@string/down"
+                        />
+
+                    <ImageView
+                        android:id="@+id/img_acc_query_back"
+                        style="@style/query_image_up_style"
+                        android:layout_gravity="center"
+                        android:src="@drawable/img_arrow_gray_down" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_main"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/moreButton"
+            android:layout_below="@+id/forex_query_result_condition"
+            android:layout_marginBottom="@dimen/fill_margin_bottom"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_left"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/listView_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_row_margin"
+                android:layout_weight="0"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/fill_padding_top"
+                android:paddingTop="@dimen/fill_padding_top" >
+
+                <TextView
+                    style="@style/bond_tv_15_gray"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="@string/forex_trade_number" />
+
+                <TextView
+                    style="@style/bond_tv_15_gray"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="@string/forex_trade_sell" />
+
+                <TextView
+                    style="@style/bond_tv_15_gray"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="@string/forex_trade_buy" />
+
+                <ImageView
+                    android:id="@+id/rate_gotoDetail"
+                    style="@style/rightbtn_jiantou"
+                    android:layout_gravity="center"
+                    android:src="@drawable/right_arrow"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/listView_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <ListView
+                    android:id="@+id/rate_listView"
+                    style="@style/listviewcomm_fill_gray_divider"
+                    android:divider="@color/gray"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp" >
+                </ListView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

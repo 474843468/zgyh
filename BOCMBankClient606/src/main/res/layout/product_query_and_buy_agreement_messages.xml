@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 中银理财-投资协议申请，协议信息页 -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/style_match_match"
+    android:orientation="vertical" 
+    >
+    <!-- 内容区 -->
+    <FrameLayout 
+        style="@style/style_height_weight_1"
+        >
+        <!-- layout_marginTop值为"协议信息"组件高度的一半 -->
+            <!-- android:layout_marginTop="@dimen/bovinvt_layout_content_margin_top" -->
+        <ScrollView 
+            style="@style/style_match_match"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:paddingTop="@dimen/bovinvt_layout_margin_top"
+            android:paddingBottom="@dimen/bovinvt_layout_margin_top"
+            >
+        <LinearLayout 
+            style="@style/style_match_wrap"
+            android:paddingLeft="@dimen/layout_margin_left_right"
+            android:paddingRight="@dimen/layout_margin_left_right"
+            android:orientation="vertical"
+            >
+            <!-- 协议介绍： -->
+            <TextView 
+                android:id="@+id/tv_introduce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:gravity="left"
+                style="@style/textview_common"
+                android:textColor="@color/gray"
+                android:text=""
+                android:visibility="visible"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="协议代码："
+                app:weightShowRate="2:3"
+                android:id="@+id/tv_1"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="协议名称："
+                app:weightShowRate="2:3"
+                android:id="@+id/tv_2"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="协议类型："
+                app:weightShowRate="2:3"
+                android:id="@+id/tv_3"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="投资方式："
+                app:weightShowRate="2:3"
+                android:id="@+id/tv_4"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="协议总期数："
+                app:weightShowRate="2:3"
+                android:id="@+id/tv_5"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="当前期数："
+                app:weightShowRate="2:3"
+                android:id="@+id/tv_6"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="协议投资周期："
+                app:weightShowRate="2:3"
+                android:id="@+id/tv_7"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="最小投资期数："
+                app:weightShowRate="2:3"
+                android:id="@+id/tv_8"
+                />
+            <!-- 多次购买协议、多次赎回协议，不显示该字段 -->
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="单周期投资期限："
+                app:weightShowRate="2:3"
+                android:id="@+id/tv_9"
+                />
+            <!-- 周期连续协议，不显示该字段 -->
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:weightShowRate="2:3"
+                app:labelText="是否申购："
+                app:ValueTextColor="red"
+                android:id="@+id/tv_10"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:weightShowRate="2:3"
+                app:labelText="购买频率："
+                android:id="@+id/tv_14"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:weightShowRate="2:3"
+                app:labelText="下次购买日期："
+                android:id="@+id/tv_11"
+                />
+            <!-- 周期连续协议，不显示该字段 -->
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:weightShowRate="2:3"
+                app:labelText="是否赎回："
+                app:ValueTextColor="red"
+                android:id="@+id/tv_12"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:weightShowRate="2:3"
+                app:labelText="赎回频率："
+                android:id="@+id/tv_15"
+                />
+            <!-- 周期连续协议，不显示该字段 -->
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:weightShowRate="2:3"
+                app:labelText="下次赎回日期："
+                android:id="@+id/tv_13"
+                />
+            <TextView 
+                style="@style/style_match_wrap"
+                android:layout_marginBottom="@dimen/bovinvt_layout_margin_top"
+                android:textColor="@color/transparent_00"
+                android:text="@string/app_name"
+                android:background="@color/transparent_00"
+                />
+            
+        </LinearLayout>
+        </ScrollView>
+        
+        <!-- <LinearLayout 
+            style="@style/style_match_wrap"
+            android:gravity="center_horizontal"
+            android:visibility="gone"
+            >
+            协议信息
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/bovinvt_tv_title_height"
+            style="@style/textview_common"
+            android:paddingLeft="@dimen/layout_margin_left_right"
+            android:paddingRight="@dimen/layout_margin_left_right"
+            android:background="@drawable/shape_product_query_and_buy_tv_bg"
+            android:gravity="center"
+            android:text="@string/bocinvt_tv_12"
+            /> 
+        </LinearLayout>-->
+    </FrameLayout>
+    
+    <!-- 按钮区 -->
+    <LinearLayout style="@style/style_match_wrap">
+        <Button 
+            android:id="@+id/btn_next"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/bocinvt_tv_11"
+            android:textColor="@color/white"
+            />
+   	</LinearLayout>
+
+</LinearLayout>

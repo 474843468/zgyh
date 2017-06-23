@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 结售汇  历史交易查询页面 fsm -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/common_bottom_padding_new" >
+
+    <RelativeLayout
+        android:id="@+id/query_reult_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/totale_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_bg_query_j"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/search_shouqi_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_row_margin"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/fill_margin_left"
+                android:paddingRight="@dimen/fill_margin_left" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/common_row_margin"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="@dimen/common_row_margin" >
+
+                        <Button
+                            android:id="@+id/btn_acc_onweek"
+                            style="@style/buttonLeft"
+                            android:text="@string/prms_str_oneweek"
+                            android:textSize="@dimen/textsize_one_three" />
+
+                        <Button
+                            android:id="@+id/btn_acc_onmonth"
+                            style="@style/buttonMiddle"
+                            android:text="@string/prms_str_onemonth"
+                            android:textSize="@dimen/textsize_one_three" />
+
+                        <Button
+                            android:id="@+id/btn_acc_threemonth"
+                            style="@style/buttonRight"
+                            android:text="@string/prms_str_threemonth"
+                            android:textSize="@dimen/textsize_one_three" />
+                    </LinearLayout>
+
+                    <include layout="@layout/base_query_fengge" />
+
+                    <LinearLayout
+                        android:id="@+id/acc_query_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <TextView
+                            android:id="@+id/sbremit_query_deal_startdate"
+                            style="@style/Spinner_comm_view_right"
+                            android:layout_marginRight="@dimen/fill_margin_right"
+                            android:hint="@string/sbremit_start_date" />
+
+                        <TextView
+                            android:id="@+id/sbremit_query_deal_enddate"
+                            style="@style/Spinner_comm_view_right"
+                            android:layout_marginLeft="@dimen/fill_margin_left"
+                            android:hint="@string/sbremit_end_date" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center" >
+
+                        <Button
+                            android:id="@+id/sbremit_query_deal_query"
+                            style="@style/query_button_style"
+                            android:layout_marginLeft="@dimen/fill_margin_top"
+                            android:layout_marginRight="@dimen/fill_margin_top" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/up"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingTop="@dimen/common_row_margin" >
+
+                        <TextView
+                            android:id="@+id/textView1"
+                            style="@style/textview_common_up"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:gravity="right" />
+
+                        <ImageView
+                            android:id="@+id/sbremit_query_up"
+                            style="@style/query_image_up_style"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:src="@drawable/img_arrow_gray_up" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/query_result_condition_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/common_listview_item_paddingLR" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prms_query_time_colon"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/sbremit_query_result_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/prms_down_LinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/common_listview_item_paddingLR" >
+
+                    <TextView
+                        style="@style/textview_common_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <ImageView
+                        android:id="@+id/prms_down_imageView"
+                        style="@style/query_image_up_style"
+                        android:src="@drawable/img_arrow_gray_down" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/sbremit_querydeal_listview_layout"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/totale_layout"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_left"
+            android:background="@drawable/shap_for_dept_tranlist" >
+
+            <include
+                android:id="@+id/sbremit_listheader_layout"
+                layout="@layout/sbremit_query_history_listheader" />
+
+            <ListView
+                android:id="@+id/sbremit_querydeal_listview"
+                style="@style/listviewcomm_fill_gray_divider"
+                android:layout_below="@id/sbremit_listheader_layout"
+                android:cacheColorHint="@color/transparent_00"
+                android:listSelector="@drawable/selector_for_listiterm_click" >
+            </ListView>
+        </RelativeLayout>
+    </RelativeLayout>
+    <!-- <include layout="@layout/sbremit_query_condition" -->
+    <!-- android:visibility="visible"/> -->
+
+</FrameLayout>

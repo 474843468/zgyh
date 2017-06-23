@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_step"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical"
+            android:padding="@dimen/fill_padding_top" >
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/blpt_main_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:orientation="vertical" >
+
+                        <!-- 输入项   start -->
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_forex_prompt_message"
+                                android:layout_weight="6.5"
+                                android:singleLine="true"
+                                android:text="@string/third_openacc_acc" />
+
+                            <TextView
+                                android:id="@+id/tv_openacc_acc"
+                                style="@style/textview_forex_prompt_info"
+                                android:layout_weight="3.5"
+                                android:paddingLeft="0dp"
+                                android:singleLine="true" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_forex_prompt_message"
+                                android:layout_weight="6.5"
+                                android:singleLine="true"
+                                android:text="@string/third_openacc_name" />
+
+                            <TextView
+                                android:id="@+id/tv_openacc_name"
+                                style="@style/textview_forex_prompt_info"
+                                android:layout_weight="3.5"
+                                android:paddingLeft="0dp"
+                                android:singleLine="true" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_forex_prompt_message"
+                                android:layout_weight="6.5"
+                                android:singleLine="true"
+                                android:text="@string/third_openacc_idtype" />
+
+                            <TextView
+                                android:id="@+id/tv_openacc_idtype"
+                                style="@style/textview_forex_prompt_info"
+                                android:layout_weight="3.5"
+                                android:paddingLeft="0dp"
+                                android:singleLine="true" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_forex_prompt_message"
+                                android:layout_weight="6.5"
+                                android:singleLine="true"
+                                android:text="@string/third_openacc_idnumber" />
+
+                            <TextView
+                                android:id="@+id/tv_openacc_idnumber"
+                                style="@style/textview_forex_prompt_info"
+                                android:layout_weight="3.5"
+                                android:paddingLeft="0dp"
+                                android:singleLine="true" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_forex_prompt_message"
+                                android:layout_weight="6.5"
+                                android:singleLine="true"
+                                android:text="@string/third_openacc_mobile" />
+
+                            <EditText
+                                android:id="@+id/et_openacc_mobile"
+                                style="@style/edittext_forex_prompt_info"
+                                android:layout_weight="3.5"
+                                android:maxLength="15"
+                                android:singleLine="true" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_forex_prompt_message"
+                                android:layout_weight="6.5"
+                                android:singleLine="true"
+                                android:text="@string/third_openacc_adress" />
+
+                            <EditText
+                                android:id="@+id/et_openacc_adress"
+                                style="@style/edittext_forex_prompt_info"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="3.5"
+                                android:gravity="center_vertical"
+                                android:inputType="text"
+                                android:maxLength="60"
+                                android:singleLine="true" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_forex_prompt_message"
+                                android:layout_weight="6.5"
+                                android:singleLine="true"
+                                android:text="@string/third_openacc_postcode" />
+
+                            <EditText
+                                android:id="@+id/et_openacc_postcode"
+                                style="@style/edittext_forex_prompt_info"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="3.5"
+                                android:gravity="center_vertical"
+                                android:maxLength="6"
+                                android:singleLine="true" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_forex_prompt_message"
+                                android:layout_weight="6.5"
+                                android:singleLine="true"
+                                android:text="@string/third_openacc_provice" />
+
+                            <Spinner
+                                android:id="@+id/sp_openacc_province"
+                                style="@style/spinner_forex_prompt_info"
+                                android:layout_weight="3.5" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_forex_prompt_message"
+                                android:layout_weight="6.5"
+                                android:singleLine="true"
+                                android:text="@string/third_openacc_company" />
+
+                            <FrameLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3.5" >
+
+                                <Spinner
+                                    android:id="@+id/sp_openacc_company"
+                                    style="@style/spinner_forex_prompt_info" />
+
+                                <View
+                                    android:id="@+id/openacc_company"
+                                    style="@style/spinner_forex_prompt_info"
+                                    android:background="@android:color/transparent" />
+                            </FrameLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_forex_prompt_message"
+                                android:layout_weight="6.5"
+                                android:singleLine="true"
+                                android:text="@string/third_openacc_companypart" />
+
+                            <TextView
+                                android:id="@+id/sp_openacc_companypart"
+                                style="?android:attr/spinnerItemStyle"
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/layout_height"
+                                android:layout_weight="3.5"
+                                android:background="@drawable/bg_spinner"
+                                android:ellipsize="middle"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/spinner_padding"
+                                android:paddingRight="@dimen/spinner_padding"
+                                android:textSize="@dimen/textsize_default"
+                                android:singleLine="true" />
+                        </LinearLayout>
+                        <!-- 输入项   end -->
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/fill_margin_left"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <CheckBox
+                                android:id="@+id/checkbox"
+                                android:layout_width="@dimen/checkboxWH"
+                                android:layout_height="@dimen/checkboxWH"
+                                android:background="@drawable/save_phone_checkbox_selector"
+                                android:button="@null" />
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/common_row_margin_half"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:id="@+id/findpwd_tv_code"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:singleLine="true"
+                                    android:text="@string/already_read"
+                                    android:textSize="@dimen/textsize_one_two" />
+
+                                <TextView
+                                    android:id="@+id/openacc_server_info"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/blue"
+                                    android:textSize="@dimen/textsize_one_two" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_bottom_padding"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnnext"
+                style="@style/textview_forex_button_cell"
+                android:text="@string/next" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

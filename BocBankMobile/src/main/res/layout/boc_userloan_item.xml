@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:background="@color/boc_common_cell_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/eloanTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/loanStatusOff"
+                    android:layout_width="34dp"
+                    android:layout_height="14dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/boc_text_color_red"
+                    android:background="@drawable/boc_loanstutas_red"
+                    android:textSize="10dp"
+                    android:text="@string/boc_loan_todate"
+                    android:visibility="gone"/>
+                <TextView
+                   android:id="@+id/loanStatusOv"
+                    android:layout_width="34dp"
+                    android:layout_height="14dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/boc_common_cell_color"
+                    android:background="@drawable/boc_loan_status_bg_red"
+                    android:textSize="10dp"
+                    android:text="@string/boc_loan_overdues"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/loanStatusCancel"
+                    android:layout_width="34dp"
+                    android:layout_height="14dp"
+                    android:gravity="center"
+                    android:textColor="@color/boc_text_color_red"
+                    android:background="@drawable/boc_loanstutas_red"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="10dp"
+                    android:text="@string/boc_loan_Cancel"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/loanStatusfz"
+                    android:layout_width="34dp"
+                    android:layout_height="14dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/boc_loanquote_status"
+                    android:background="@drawable/boc_loanstutas_blank"
+                    android:textSize="10dp"
+                    android:text="@string/boc_loan_loss"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loanApplyAt"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/loanAmTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/boc_text_color_common_gray"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/loanNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/boc_text_color_common_gray"
+                    android:textSize="13dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0.3"
+            android:paddingTop="17dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.progressbar.RoundProgressBar
+            android:id="@+id/amountBar"
+            android:layout_width="38dp"
+            app:roundProgressColor="@color/boc_text_color_green"
+            app:progressTextColor="@color/boc_text_color_green"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:background="@color/boc_common_view_line" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:gravity="center"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/remindTv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:textSize="13dp"/>
+        
+        <TextView
+            android:id="@+id/remaindNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:gravity="right"
+            android:layout_gravity="center"
+            android:textSize="13dp" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/boc_divider_line_color" />
+
+</LinearLayout>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color">
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_bottom"
+        android:layout_alignParentTop="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/boc_fragment_wealth_product_details_head" />
+
+            <LinearLayout
+                android:id="@+id/ll_parent_progress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/boc_common_cell_color"
+                android:paddingBottom="@dimen/boc_space_between_30px"
+                android:paddingTop="@dimen/boc_space_between_30px">
+
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.buyprocedure.BuyProcedureWidget
+                    android:id="@+id/product_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <include layout="@layout/boc_divide_line" />
+
+            <RelativeLayout
+                android:id="@+id/ll_history_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/boc_common_cell_color"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/boc_space_between_14px"
+                android:visibility="gone">
+
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.trendview.BocTrendView
+                    android:id="@+id/history_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RadioGroup
+                    android:id="@+id/rg_time_zone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/history_price"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/boc_space_between_30px"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_three_month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boc_time_zone_left_selecter"
+                        android:button="@null"
+                        android:checked="true"
+                        android:paddingBottom="@dimen/boc_space_between_8px"
+                        android:paddingLeft="@dimen/boc_space_between_18px"
+                        android:paddingRight="@dimen/boc_space_between_18px"
+                        android:paddingTop="@dimen/boc_space_between_8px"
+                        android:text="@string/boc_financing_his_value_three_m"
+                        android:textSize="@dimen/boc_text_size_common"
+                        android:textColor="@color/boc_text_color_dark_gray" />
+
+                    <RadioButton
+                        android:id="@+id/rb_one_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boc_time_zone_right_selecter"
+                        android:button="@null"
+                        android:paddingBottom="@dimen/boc_space_between_8px"
+                        android:paddingLeft="@dimen/boc_space_between_18px"
+                        android:paddingRight="@dimen/boc_space_between_18px"
+                        android:paddingTop="@dimen/boc_space_between_8px"
+                        android:text="@string/boc_financing_his_value_one_y"
+                        android:textSize="@dimen/boc_text_size_common"
+                        android:textColor="@color/boc_text_color_dark_gray" />
+                </RadioGroup>
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_parent_buy_group"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_96px"
+                android:background="@color/boc_common_cell_color"
+                android:layout_marginBottom="@dimen/boc_space_between_30px"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_buy_group"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="组合购买"
+                    android:textColor="@color/boc_main_button_color" />
+
+                <TextView
+                    android:id="@+id/txt_request"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="投资协议申请"
+                    android:textColor="@color/boc_main_button_color" />
+            </LinearLayout>
+
+            <com.boc.bocsoft.mobile.bocmobile.buss.wealthmanagement.wealthproduct.widget.ClickDownShowView
+                android:id="@+id/click_view_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:txtName="产品属性" />
+
+            <com.boc.bocsoft.mobile.bocmobile.buss.wealthmanagement.wealthproduct.widget.ClickDownShowView
+                android:id="@+id/click_view_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:txtName="购买属性" />
+
+            <com.boc.bocsoft.mobile.bocmobile.buss.wealthmanagement.wealthproduct.widget.ClickDownShowView
+                android:id="@+id/click_view_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:txtName="赎回属性" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/boc_space_between_40px"
+                android:layout_marginTop="@dimen/boc_space_between_50px"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_suggest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="说明书"
+                    android:textColor="@color/boc_main_button_color"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/boc_text_size_small" />
+
+                <View
+                    android:layout_width="@dimen/boc_space_between_2px"
+                    android:layout_height="match_parent"
+                    android:background="@color/boc_text_color_rest_gray"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/txt_help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/boc_space_between_40px"
+                    android:text="帮助"
+                    android:textColor="@color/boc_main_button_color"
+                    android:textSize="@dimen/boc_text_size_small"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_104px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/boc_text_money_color_red">
+
+        <LinearLayout
+            android:id="@+id/ll_profit"
+            android:layout_width="@dimen/boc_space_between_104px"
+            android:layout_height="match_parent"
+            android:background="@color/boc_bg_color_red_gray"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_calc" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_parent_buy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="购买"
+                android:textColor="@color/boc_common_cell_color"
+                android:textSize="@dimen/boc_text_size_common"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_buy_message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/boc_common_cell_color"
+                android:textSize="@dimen/boc_text_size_small" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

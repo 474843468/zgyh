@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 转账汇款  信用卡购汇还款  成功  RelCreditCardRemitSuccessActivity -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/stepbar"
+        layout="@layout/step_title_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_btn_layout"
+        android:layout_below="@+id/stepbar"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:id="@+id/btn_transet_mytransfer"
+                style="@style/tran_body_ll" >
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp_five"
+                    android:paddingRight="@dimen/dp_five"
+                    android:text="@string/mobile_tran_have_acc_success_title"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_default" />
+                <!-- 交易序号 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="2"
+                        android:text="@string/transaction" />
+
+                    <TextView
+                        android:id="@+id/tv_transaction_creditCard_remit_success"
+                        style="@style/textview_common_right"
+                        android:layout_weight="3" />
+                </LinearLayout>
+                <!-- 信用卡单外币消费账户 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="2"
+                        android:text="@string/crcd_acc" />
+
+                    <TextView
+                        android:id="@+id/tv_accOut_creditCard_remit_confirm"
+                        style="@style/textview_common_right"
+                        android:layout_weight="3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="2"
+                        android:text="@string/crcd_acc"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tran_in_no_tv"
+                        style="@style/textview_common_right"
+                        android:layout_weight="3" />
+                </LinearLayout>
+                <!-- 人民币还款账户 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="2"
+                        android:text="@string/rmb_repay_acc" />
+
+                    <TextView
+                        android:id="@+id/tv_accIn_creditCard_remit_confirm"
+                        style="@style/textview_common_right"
+                        android:layout_weight="3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="2"
+                        android:text="@string/crcd_acc"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tran_out_no_tv"
+                        style="@style/textview_common_right"
+                        android:layout_weight="3" />
+                </LinearLayout>
+
+                <!-- 转出账户余额 -->
+
+                <LinearLayout
+                    android:id="@+id/tran_success_out_balance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="2"
+                        android:text="@string/tran_crcd_success_balance_out" />
+
+                    <TextView
+                        android:id="@+id/tv_tran_success_out_balance"
+                        style="@style/textview_common_right"
+                        android:layout_weight="3"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+                <!-- 购汇币种 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="2"
+                        android:text="@string/credit_currency" />
+
+                    <TextView
+                        android:id="@+id/tv_credmit_currency_success"
+                        style="@style/textview_common_right"
+                        android:layout_weight="3" />
+                </LinearLayout>
+                <!-- 汇率 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="2"
+                        android:text="@string/exchangeRate" />
+
+                    <TextView
+                        android:id="@+id/tv_exchangeRate_creditCard_remit_confirm"
+                        style="@style/textview_common_right"
+                        android:layout_weight="3" />
+                </LinearLayout>
+                <!-- 购汇还款金额设定 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="2"
+                        android:text="@string/remit_amount_set" />
+
+                    <TextView
+                        android:id="@+id/tv_amout_set_creditCard_remit_confirm"
+                        style="@style/textview_common_right"
+                        android:layout_weight="3" />
+                </LinearLayout>
+                <!-- 还款金额 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="2"
+                        android:text="@string/repayAmountValue_rmb" />
+
+                    <TextView
+                        android:id="@+id/tv_repay_amount_creditCard_remit_success"
+                        style="@style/textview_common_right"
+                        android:layout_weight="3"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+                 <!-- 应收费用 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_need"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tran_act_charge_display_tv"
+                        style="@style/textview_common_left"
+                          android:layout_weight="2"
+                        android:text="@string/trans_act_charge" />
+
+                    <TextView
+                        android:id="@+id/tran_act_charge_tv"
+                        style="@style/textview_common_right"
+                          android:layout_weight="3"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+                <!-- 拟收费用 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tran_fack_charge_display_tv"
+                        style="@style/textview_common_left"
+                          android:layout_weight="2"
+                        android:text="@string/trans_fack_charge" />
+
+                    <TextView
+                        android:id="@+id/tran_fack_charge_tv"
+                        style="@style/textview_common_right"
+                          android:layout_weight="3"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+                  <TextView
+                    android:id="@+id/tv_toast"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:text="@string/tran_remitSetMealFlag_normal"
+                    android:textColor="@color/gray" 
+                    android:visibility="gone"/>
+                <!-- 转账类型 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="2"
+                        android:text="@string/tran_acc_trans_type" />
+
+                    <TextView
+                        android:id="@+id/tran_acc_type_tv"
+                        style="@style/textview_common_right"
+                        android:layout_weight="3"
+                        android:text="@string/tran_remit_repay" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp_five"
+        android:paddingLeft="@dimen/fill_margin_right"
+        android:paddingRight="@dimen/fill_margin_right" >
+
+        <Button
+            android:id="@+id/btn_last_rel_creditCard_confirm"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_blue_big"
+            android:text="@string/last"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_confirm_creditCard_remit_success"
+            style="@style/bottombtn"
+            android:text="@string/finish" />
+    </LinearLayout>
+<TextView
+        android:id="@+id/tran_weixin_raffle_tv"
+        style="@style/tran_wx_raffle_tv_style"
+        android:visibility="gone"/>
+</RelativeLayout>

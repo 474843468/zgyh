@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        style="@style/scrollview_comm"
+        android:layout_centerInParent="true"
+        android:gravity="left"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/fill_margin_top"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/sureButton"
+                    style="@style/bottombtn"
+                    android:text="@string/finish"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/ll_btn"
+                android:layout_weight="1"
+                android:background="@drawable/bg_for_listview_item_write"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/fill_margin_bottom"
+                android:paddingLeft="@dimen/fill_margin_left"
+                android:paddingRight="@dimen/fill_margin_right"
+                android:paddingTop="@dimen/fill_padding_top" >
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    style="@style/textview_common"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="@string/mycrcd_creditcard_money_setup_success1"
+                    android:textColor="@color/gray" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_title"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/benbi_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:text="@string/mycrcd_renminbi_huan_type" />
+
+                        <TextView
+                            android:id="@+id/mycrcd_renmi_account"
+                            style="@style/textview_common_right" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/waibi_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:text="@string/mycrcd_foreign_huan_type" />
+
+                        <TextView
+                            android:id="@+id/mycrcd_foreign_huan_type"
+                            style="@style/textview_common_right" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        style="@style/crcd_tv_common_left"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="left"
+                        android:text="@string/mycrcd_auto_info1"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        style="@style/crcd_tv_common_left"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="left"
+                        android:text="@string/mycrcd_auto_info2"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        style="@style/crcd_tv_common_left"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="left"
+                        android:text="@string/mycrcd_auto_info3"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/titleText_stepacc"
+        android:layout_width="@dimen/common_details_title_width"
+        android:layout_height="@dimen/left_img_width"
+        android:background="@drawable/bg_title"
+        android:gravity="center"
+        android:text="@string/mycrcd_step_success"
+        android:textColor="@color/gray_title"
+        android:visibility="gone" />
+
+</RelativeLayout>

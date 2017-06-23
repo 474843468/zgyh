@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:userProperty="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/transparent_00"
+    android:gravity="center" >
+
+    <RelativeLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shap_for_progress"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/tv_confirm_msg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_row_margin"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_one_six" />
+
+        <LinearLayout
+            android:id="@+id/ll_smc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_confirm_msg"
+            android:layout_marginBottom="@dimen/common_row_margin"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+             android:visibility="gone">
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|right"
+                android:layout_weight="3"
+                android:text="@string/epay_pub_note_code" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="2" >
+
+                <cfca.mobile.sip.SipBox
+                    android:id="@+id/sb_note_code"
+                    style="@style/editext_fill"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toLeftOf="@+id/bt_smsbtn"
+                    android:maxLength="6" >
+                </cfca.mobile.sip.SipBox>
+
+                <Button
+                    android:id="@+id/bt_smsbtn"
+                    style="@style/button_smscode"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_otp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:layout_below="@id/ll_smc"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|right"
+                android:layout_weight="3"
+                android:text="@string/epay_pub_dynamic_code"
+                 />
+
+            <cfca.mobile.sip.SipBox
+                android:id="@+id/sb_dynamic_code"
+                style="@style/editext_fill"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_weight="2"
+                android:maxLength="6" >
+            </cfca.mobile.sip.SipBox>
+        </LinearLayout>
+        <com.chinamworld.bocmbci.widget.UsbKeyText
+                    android:id="@+id/sip_usbkey"
+                    android:layout_below="@id/ll_otp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    userProperty:ShowRate="3:2"  />
+
+        <LinearLayout
+            android:id="@+id/ll_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sip_usbkey"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dialogbtn_marginTop"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bt_cancel"
+                style="@style/dialogbtn"
+                android:background="@drawable/btn_blue_big"
+                android:text="@string/cancle" />
+
+            <Button
+                android:id="@+id/bt_ensure"
+                style="@style/dialogbtn"
+                android:background="@drawable/btn_red_big"
+                android:text="@string/confirm" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

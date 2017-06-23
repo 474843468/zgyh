@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/boc_main_bg_color"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:background="#F9F9F9"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#D8D8E0"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_gravity="bottom"
+            android:background="#D8D8E0"/>
+
+        <EditText
+            android:id="@+id/et_search_content"
+            android:layout_width="match_parent"
+            android:layout_height="27.8dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/boc_space_between_24px"
+            android:layout_marginRight="@dimen/boc_space_between_24px"
+            android:background="@drawable/boc_edittext_bg_grey"
+            android:drawableLeft="@drawable/boc_image_search"
+            android:drawablePadding="@dimen/boc_space_between_20px"
+            android:hint="付款人姓名"
+            android:paddingLeft="@dimen/boc_space_between_20px"
+            android:textColor="@android:color/black"
+            android:textColorHint="#cccccc"
+            android:textSize="@dimen/boc_space_between_28px"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/lv_payer_account_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/boc_divider_line_color"
+            android:dividerHeight="0.5dp"/>
+
+        <TextView
+            android:id="@+id/tv_no_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="暂无常用付款人"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_96px"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/gv_selected_payer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#99333333"
+            android:padding="0dp"/>
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="81dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:background="@color/boc_main_button_color"
+            android:text="确认"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账户管理  电子现金账户列表项  wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/acc_list_item_height" >
+
+    <RelativeLayout
+        android:id="@+id/back"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/acc_list_item_height"
+        android:tag="back" >
+
+        <FrameLayout
+            android:id="@+id/acc_frame_back"
+            style="@style/rightbtn_jiantou"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/acc_btn_goitem_back"
+                style="@style/rightbtn_jiantou"
+                android:background="@drawable/img_arrow_write" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/ll_acc_msg_back"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/acc_list_item_height"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/acc_frame_back"
+            android:background="@drawable/img_ka_press"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/acc_list_item_height"
+                android:text="@string/acc_myaccount_trans_title"
+                android:textColor="@color/black" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/front"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acc_list_item_height" >
+
+        <ImageView
+            android:id="@+id/financeic_btn_goitem"
+            style="@style/rightbtn_jiantou"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/img_arrow_write" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/acc_list_item_height"
+            android:layout_toLeftOf="@+id/financeic_btn_goitem"
+            android:background="@drawable/bg_for_listview_item_write" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/acc_list_item_height"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/ll_bankact_top"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/common_listview_item__half_grqy_Height"
+                    android:layout_alignParentTop="true"
+                    android:background="@drawable/shap_for_half_gray"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/common_listview_item__half_grqy_Height"
+                        android:layout_marginLeft="@dimen/fill_margin_top"
+                        android:src="@drawable/icon_huoqi"
+                        android:visibility="invisible" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/common_listview_item__half_grqy_Height"
+                        android:layout_marginLeft="@dimen/fill_margin_top"
+                        android:src="@drawable/icon_guijinshu"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_acc_go_detail"
+                    android:layout_width="@dimen/btn_connect_height"
+                    android:layout_height="@dimen/btn_connect_height"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:paddingBottom="@dimen/common_listview_item_paddingLR"
+                    android:paddingRight="@dimen/common_listview_item_paddingLR"
+                    android:src="@drawable/icon_chakan"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignBottom="@+id/img_acc_go_detail"
+                    android:layout_below="@+id/ll_bankact_top"
+                    android:layout_marginTop="@dimen/common_listview_item_paddingLR"
+                    android:layout_toLeftOf="@+id/img_acc_go_detail"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_bankaccount"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/common_listview_item_paddingLR"
+                        android:paddingRight="@dimen/common_listview_item_paddingLR" >
+
+                        <TextView
+                            android:id="@+id/tv_acc_financeic_actype"
+                            style="@style/textview_common"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textSize="@dimen/textsize_one_three"/>
+
+                        <TextView
+                            android:id="@+id/tv_acc_financeic_actnum"
+                            style="@style/textview_for_list_act"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/common_listview_item_paddingLR"
+                        android:paddingRight="@dimen/common_listview_item_paddingLR" >
+
+                        <TextView
+                            android:id="@+id/tv_acc_financeic_actnickname"
+                            style="@style/textview_for_list"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:singleLine="true"
+                            android:textColor="@color/gray"  />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

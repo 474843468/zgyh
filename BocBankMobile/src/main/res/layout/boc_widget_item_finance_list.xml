@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/boc_common_cell_color"
+    android:paddingLeft="@dimen/boc_space_between_30px"
+    android:paddingRight="@dimen/boc_space_between_30px"
+    android:paddingTop="@dimen/boc_space_between_30px">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/boc_space_between_30px">
+
+            <TextView
+                android:id="@+id/txt_head_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/ll_head_right"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="[人民币]中银理财"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/ll_head_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_head_right_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/boc_space_between_10px"
+                    android:background="@drawable/boc_frame_yellow"
+                    android:text="已关注"
+                    android:textColor="@color/boc_text_color_yellow"
+                    android:textSize="@dimen/boc_text_size_small"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txt_head_Right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_small" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/divider_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="@dimen/boc_space_between_30px"
+            android:background="@color/boc_divider_line_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/boc_space_between_30px">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_name_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/boc_space_between_28px"
+                    android:text="左边"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_small" />
+
+                <TextView
+                    android:id="@+id/txt_value_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="demo"
+                    android:textColor="@color/boc_text_color_red"
+                    android:textSize="@dimen/boc_text_size_little_big"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_name_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/boc_space_between_28px"
+                    android:text="中间"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_small" />
+
+                <TextView
+                    android:id="@+id/txt_value_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="demo"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_common"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_name_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/boc_space_between_28px"
+                    android:text="右边"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_small" />
+
+                <TextView
+                    android:id="@+id/txt_value_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="demo"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_common"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="下边文本"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_sell_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:src="@drawable/icon_sell_out"
+        android:visibility="gone"/>
+</FrameLayout>

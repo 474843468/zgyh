@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_300px"
+            android:layout_marginBottom="@dimen/boc_space_between_20px"
+            android:background="@color/boc_blue_end"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/boc_space_between_40px">
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/boc_space_between_40px"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_currency_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/boc_selector_left"
+                    android:button="@null"
+                    android:checked="true"
+                    android:padding="@dimen/boc_space_between_40px"
+                    android:textColor="@color/boc_common_cell_color"
+                    android:textSize="@dimen/boc_text_size_common"
+                    tools:text="人民币元" />
+
+                <RadioButton
+                    android:id="@+id/rb_currency_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/boc_selector_right"
+                    android:button="@null"
+                    android:padding="@dimen/boc_space_between_40px"
+                    android:textColor="@color/boc_common_cell_color"
+                    android:textSize="@dimen/boc_text_size_common"
+                    tools:text="美元" />
+            </RadioGroup>
+
+            <com.boc.bocsoft.mobile.bocmobile.buss.creditcard.billquery.widget.chartview.LineChartView
+                android:id="@+id/line_chart_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.shareinfoview.ListViewForScrollView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/txt_more"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_88px"
+            android:background="@color/boc_common_cell_color"
+            android:gravity="center"
+            android:text="@string/boc_common_more_title"
+            android:textColor="@color/boc_bg_blue"
+            android:textSize="@dimen/boc_text_size_common" />
+    </LinearLayout>
+</ScrollView>

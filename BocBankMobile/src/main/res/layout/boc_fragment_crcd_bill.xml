@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_container"
+    android:background="@color/boc_common_bg_color"
+    android:visibility="visible"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <include layout="@layout/boc_divide_line"/>
+
+
+    <!--交易详情-->
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullToRefreshLayout
+        android:id="@+id/fl_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.showlistview.PinnedSectionListView
+            android:id="@+id/tran_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never" />
+
+        <include layout="@layout/boc_load_more" />
+    </com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullToRefreshLayout>
+
+    <!--无交易明细-->
+    <TextView
+        android:id="@+id/tv_no_result"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/boc_space_between_20px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:drawablePadding="@dimen/boc_space_between_40px"
+        android:drawableTop="@drawable/boc_icon_no_product"
+        android:gravity="center_horizontal"
+        android:text="@string/boc_crcd_bill_y_bill_detail_no_result"
+        android:textColor="@color/boc_text_color_rest_gray"
+        android:textSize="@dimen/boc_text_size_common" />
+
+</LinearLayout>

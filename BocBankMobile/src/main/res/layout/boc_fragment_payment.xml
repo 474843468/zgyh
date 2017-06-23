@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.boc.bocsoft.mobile.bocmobile.base.widget.SlipMenu.SlipDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout_transfer_query"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/boc_main_bg_color"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/boc_common_cell_color">
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:padding="10dp"
+                android:src="@drawable/boc_btn_back" />
+
+            <RadioGroup
+                android:id="@+id/radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="@dimen/boc_space_between_20px"
+                android:background="@drawable/boc_bg_check_group"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="1dp">
+
+                <RadioButton
+                    android:id="@+id/btn_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/boc_payment_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:paddingBottom="@dimen/boc_space_between_8px"
+                    android:paddingLeft="@dimen/boc_space_between_50px"
+                    android:paddingRight="@dimen/boc_space_between_50px"
+                    android:paddingTop="@dimen/boc_space_between_8px"
+                    android:text="付款"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_small" />
+
+                <RadioButton
+                    android:id="@+id/btn_make"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/boc_payment_selector_right"
+                    android:button="@null"
+                    android:paddingBottom="@dimen/boc_space_between_8px"
+                    android:paddingLeft="@dimen/boc_space_between_50px"
+                    android:paddingRight="@dimen/boc_space_between_50px"
+                    android:paddingTop="@dimen/boc_space_between_8px"
+                    android:text="收款"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_small" />
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/boc_space_between_22px">
+
+            <TextView
+                android:id="@+id/date_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="近3个月查询结果"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_very_small"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/search_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="筛选"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_very_small"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/search_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/boc_select_gray" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullToRefreshLayout
+                android:id="@+id/refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.showlistview.PinnedSectionListView
+                    android:id="@+id/content_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <include layout="@layout/boc_load_more" />
+
+            </com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullToRefreshLayout>
+
+            <TextView
+                android:id="@+id/empty_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/boc_transfer_query_empty"
+                android:textColor="@color/boc_text_color_gray"
+                android:textSize="@dimen/boc_text_size_very_small"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.selectview.selecttimerangenew.SelectTimeRangeNew
+        android:id="@+id/right_drawer_transfer_query"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:clickable="true" />
+
+</com.boc.bocsoft.mobile.bocmobile.base.widget.SlipMenu.SlipDrawerLayout>

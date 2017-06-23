@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/ll_smc"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_weight="1.0"
+            style="@style/textview_common_left"
+            android:layout_gravity="center_vertical"
+            android:text="@string/epay_pub_note_code" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:orientation="horizontal" >
+
+            <cfca.mobile.sip.SipBox
+                android:id="@+id/sb_note_code"
+                style="@style/editext_fill"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/btn_margin_left"
+                android:layout_toLeftOf="@+id/bt_smsbtn"
+                android:maxLength="6" >
+            </cfca.mobile.sip.SipBox>
+
+            <Button
+                android:id="@+id/bt_smsbtn"
+                style="@style/button_smscode"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_otp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_smc"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+         android:visibility="gone">
+
+        <TextView
+            style="@style/textview_common_left"
+            android:layout_weight="1.0"
+            android:layout_gravity="center_vertical"
+            android:text="@string/epay_pub_dynamic_code" />
+
+        <cfca.mobile.sip.SipBox
+            android:id="@+id/sb_dynamic_code"
+            style="@style/editext_fill"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical"
+            android:maxLength="6" >
+        </cfca.mobile.sip.SipBox>
+    </LinearLayout>
+
+    <com.chinamworld.bocmbci.widget.UsbKeyText
+        android:id="@+id/sip_usbkey"
+        android:layout_below="@id/ll_otp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:gravity="center"
+        android:orientation="horizontal" />
+
+</RelativeLayout>

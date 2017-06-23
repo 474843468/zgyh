@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 周期滚续协议申请-输入页 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/style_match_match"
+    android:orientation="vertical" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- 内容区 -->
+    <ScrollView 
+            style="@style/style_height_weight_1"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:paddingTop="@dimen/bovinvt_layout_margin_top"
+            android:paddingBottom="@dimen/bovinvt_layout_margin_top"
+            >
+            <LinearLayout 
+                style="@style/style_match_wrap"
+                android:orientation="vertical"
+                >
+                <com.chinamworld.bocmbci.userwidget.LabelTextView
+                    style="@style/style_match_wrap"
+                    app:labelText="理财交易账户："
+                    android:id="@+id/tv_1"
+                    />
+                <com.chinamworld.bocmbci.userwidget.LabelTextView
+                    style="@style/style_match_wrap"
+                    app:labelText="当期产品名称："
+                    android:id="@+id/tv_2"
+                    />
+                <com.chinamworld.bocmbci.userwidget.LabelTextView
+                    style="@style/style_match_wrap"
+                    app:labelText="产品系列名称："
+                    android:id="@+id/tv_3"
+                    />
+                <com.chinamworld.bocmbci.userwidget.LabelTextView
+                    style="@style/style_match_wrap"
+                    app:labelText="产品币种："
+                    android:id="@+id/tv_4"
+                    />
+                <LinearLayout
+                    style="@style/style_match_wrap"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/bocinvt_tv_40" />
+                    <FrameLayout
+                        style="@style/style_match_wrap"
+                        android:layout_weight="3" >
+                        <TextView
+                            android:id="@+id/rmb_submit"
+                            style="@style/style_match_wrap"
+                            android:gravity="left"
+                            android:visibility="gone" />
+                        <RadioGroup
+                            android:id="@+id/rg_cashRemit"
+                            style="@style/style_match_wrap"
+                            android:orientation="horizontal" >
+                            <RadioButton
+                                android:id="@+id/bill"
+                                style="@style/style_match_wrap"
+                                android:layout_weight="1"
+                                android:checked="true"
+                                android:button="@drawable/radiobtn_selector"
+                                android:text="@string/bill" />
+                            <RadioButton
+                                android:id="@+id/remit"
+                                style="@style/style_match_wrap"
+                                android:layout_weight="1"
+                                android:button="@drawable/radiobtn_selector"
+                                android:text="@string/remit" />
+                        </RadioGroup>
+                    </FrameLayout>
+                </LinearLayout>
+                <com.chinamworld.bocmbci.userwidget.LabelTextView
+                    style="@style/style_match_wrap"
+                    app:labelText="最大可购买期数："
+                    android:id="@+id/tv_5"
+                    />
+                <LinearLayout
+                    style="@style/style_match_wrap"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/totalPeriod" />
+
+                    <EditText
+                        android:id="@+id/et_totalPeriod"
+                        style="@style/edittext_inputNumber_fill"
+                        android:maxLength="6"
+                        android:inputType="numberDecimal"
+                        android:layout_marginRight="@dimen/fill_margin_right"
+                        android:layout_weight="3" />
+                </LinearLayout>
+                <!-- 基础金额模式 -->
+                <LinearLayout
+                    style="@style/style_match_wrap"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/amountTypeCode" />
+                    <TextView
+                        android:id="@+id/tv_dinge"
+                        style="@style/textview_common_right_two"
+                        android:text="@string/dinge"
+                        android:layout_weight="3"
+                        android:visibility="gone"
+                         />
+                        <RadioGroup
+                            android:id="@+id/rg_d_e"
+                            style="@style/style_match_wrap"
+                            android:layout_weight="3"
+                            android:orientation="horizontal" 
+                            >
+                            <RadioButton
+                                android:id="@+id/rb_d_e"
+                                style="@style/style_match_wrap"
+                                android:layout_weight="1"
+                                android:checked="true"
+                                android:button="@drawable/radiobtn_selector"
+                                android:text="@string/dinge" />
+                            <RadioButton
+                                android:id="@+id/rb_b_d_e"
+                                style="@style/style_match_wrap"
+                                android:layout_weight="1"
+                                android:button="@drawable/radiobtn_selector"
+                                android:text="@string/budinge" />
+                        </RadioGroup>
+                    </LinearLayout>
+                <!-- 基础金额，定额时显示 -->
+                <LinearLayout
+                    android:id="@+id/layout_baseAmount"
+                    style="@style/style_match_wrap"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/baseAmount" />
+                    <EditText
+                        android:id="@+id/ed_baseAmount"
+                        style="@style/edittext_inputNumber_fill"
+                        android:maxLength="14"
+                        android:inputType="numberDecimal"
+                        android:layout_marginRight="@dimen/fill_margin_right"
+                        android:layout_weight="3" />
+                </LinearLayout>
+                <!-- 基础金额反显 -->
+                <TextView
+                        android:id="@+id/money_chinese"
+                        style="@style/style_match_wrap"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:textSize="@dimen/textsize_default"
+                        android:textColor="@color/red"
+                        android:layout_marginLeft="@dimen/common_row_margin"
+                        android:layout_marginRight="@dimen/fill_margin_right"
+                        android:gravity="right"
+                        android:text=""
+                        android:visibility="gone"
+                        />
+                <!-- 最低预留金额，不定额时显示 -->
+                <LinearLayout
+                    android:id="@+id/layout_minAmount"
+                    style="@style/style_match_wrap"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="horizontal" >
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/minAmount" />
+                    <EditText
+                        android:id="@+id/ed_minAmount"
+                        style="@style/edittext_inputNumber_fill"
+                        android:maxLength="14"
+                        android:inputType="numberDecimal"
+                        android:layout_marginRight="@dimen/fill_margin_right"
+                        android:layout_weight="3" />
+                </LinearLayout>
+                <!-- 最低预留金额反显 -->
+                <TextView
+                        android:id="@+id/money_chinese_min"
+                        style="@style/style_match_wrap"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:textSize="@dimen/textsize_default"
+                        android:textColor="@color/red"
+                        android:layout_marginLeft="@dimen/common_row_margin"
+                        android:layout_marginRight="@dimen/fill_margin_right"
+                        android:gravity="right"
+                        android:text=""
+                        android:visibility="gone"
+                        />
+                <!-- 最大扣款金额，不定额时显示 -->
+                <LinearLayout
+                    android:id="@+id/layout_maxAmount"
+                    style="@style/style_match_wrap"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="horizontal" >
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/maxAmount" />
+                    <EditText
+                        android:id="@+id/ed_maxAmount"
+                        style="@style/edittext_inputNumber_fill"
+                        android:maxLength="14"
+                        android:inputType="numberDecimal"
+                        android:layout_marginRight="@dimen/fill_margin_right"
+                        android:layout_weight="3" />
+                </LinearLayout>
+                <!-- 最大扣款金额反显 -->
+                <TextView
+                        android:id="@+id/money_chinese_max"
+                        style="@style/style_match_wrap"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:textSize="@dimen/textsize_default"
+                        android:textColor="@color/red"
+                        android:layout_marginLeft="@dimen/common_row_margin"
+                        android:layout_marginRight="@dimen/fill_margin_right"
+                        android:gravity="right"
+                        android:text=""
+                        android:visibility="gone"
+                        />
+                <TextView style="@style/style_match_wrap"/>
+            </LinearLayout>
+    </ScrollView>
+    
+    <!-- 按钮区 -->
+    <LinearLayout style="@style/style_match_wrap">
+        <Button 
+            android:id="@+id/btn_next"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/bocinvt_tv_11"
+            android:textColor="@color/white"
+            />
+   	</LinearLayout>
+    
+
+</LinearLayout>

@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 转账汇款  转账成功    TranSeccessActivity -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/list_bottom" >
+
+    <include
+        android:id="@+id/stepbar"
+        layout="@layout/step_title_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_btn_layout"
+        android:layout_below="@+id/stepbar"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:id="@+id/btn_transet_mytransfer"
+                style="@style/tran_body_ll"
+                android:paddingBottom="@dimen/fill_margin_top"
+                android:paddingLeft="@dimen/dp_five"
+                android:paddingRight="@dimen/dp_five"
+                android:paddingTop="@dimen/fill_margin_top" >
+
+                <TextView
+                    android:id="@+id/tv_content_"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/please_input_info"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_default" />
+
+                <LinearLayout
+                    android:id="@+id/ll_account_proceeds_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/btn_check_height"
+                        android:layout_weight="3.2"
+                        android:gravity="center|right"
+                        android:singleLine="true"
+                        android:text="@string/third_cecuritytrade_tradetype_account"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupForTranTypeAccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/radio_zh_account"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/btn_dialog_height"
+                            android:background="@null"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/radiobtn_selector"
+                            android:text="@string/tran_account_zh"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <RadioButton
+                            android:id="@+id/radio_other_account"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/btn_dialog_height"
+                            android:background="@null"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/radiobtn_selector"
+                            android:text="@string/tran_account_other"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_default" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_trantype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/btn_check_height"
+                        android:layout_weight="3.2"
+                        android:gravity="center|right"
+                        android:singleLine="true"
+                        android:text="@string/third_cecuritytrade_tradetype"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupForTranType"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/radio_shishi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/btn_dialog_height"
+                            android:background="@null"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/radiobtn_selector"
+                            android:text="@string/tran_shishi_type"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <RadioButton
+                            android:id="@+id/radio_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/btn_dialog_height"
+                            android:background="@null"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/radiobtn_selector"
+                            android:text="@string/tran_common_type"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_default" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/radio_shishi_prompt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/tran_prompt_five"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <!-- 所属银行账户 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_bankname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/acc_in_bank_name" />
+
+                    <Spinner
+                        android:id="@+id/sp_accbank_payee_other_bank_write"
+                        style="@style/Spiiner_fill"
+                        android:layout_weight="2"
+                        android:paddingLeft="@dimen/layout_margin_top" />
+                </LinearLayout>
+                <!-- 收款人姓名 -->
+
+                <LinearLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/acc_bank_name" />
+
+                    <LinearLayout style="@style/textview_common_right_two" >
+
+                        <TextView
+                            android:id="@+id/et_acc_bankname_payee_other_bank_write"
+                            style="@style/textview_common"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/layout_margin_top"
+                            android:paddingRight="@dimen/layout_margin_top"
+                            android:singleLine="true"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/btn_query_kbank_othbank_write"
+                            style="@style/query_button_style"
+                            android:gravity="center" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/container_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/acc_in_bank_name" />
+
+                    <LinearLayout style="@style/textview_common_right_two" >
+
+                        <TextView
+                            android:id="@+id/btn_query_bank"
+                            style="@style/textview_common"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/layout_height"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_spinner"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/layout_margin_top"
+                            android:paddingRight="@dimen/fill_spinner_right"
+                            android:singleLine="true"
+                            android:text="请选择" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 收款人姓名 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/payeeName" />
+
+                    <EditText
+                        android:id="@+id/et_name_payee_other_bank_write"
+                        style="@style/edittext_common_fill"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/layout_margin_top" />
+                </LinearLayout>
+                <!-- 收款人别名 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/payeeOthName" />
+
+                    <EditText
+                        android:id="@+id/et_nikename_payee_other_bank_write"
+                        style="@style/edittext_common_fill"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:hint="@string/hint_memo"
+                        android:paddingLeft="@dimen/layout_margin_top" />
+                </LinearLayout>
+                <!-- 收款人账户 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/accPayee" />
+
+                    <EditText
+                        android:id="@+id/et_accnum_payee_other_bank_write"
+                        style="@style/edittext_inputNumber_fill"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/layout_margin_top" />
+                </LinearLayout>
+                <!-- 重新输入收款人账户 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/again_input_tv"
+                        style="@style/textview_common_left_three"
+                        android:text="@string/again_accPayee" />
+
+                    <EditText
+                        android:id="@+id/et_again_accnum_payee_other_bank_write"
+                        style="@style/edittext_inputNumber_fill"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:longClickable="false"
+                        android:paddingLeft="@dimen/layout_margin_top" />
+                </LinearLayout>
+                <!-- 收款人手机号 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/payee_mobile" />
+
+                    <EditText
+                        android:id="@+id/et_mobile_payee_other_bank_write"
+                        style="@style/edittext_inputNumber_fill"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:hint="@string/hint_memo"
+                        android:maxLength="15"
+                        android:paddingLeft="@dimen/layout_margin_top" />
+                </LinearLayout>
+                <!-- 提示文本信息 -->
+
+                <TextView
+                    android:id="@+id/payee_tip_message_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:paddingLeft="@dimen/fill_padding_left"
+                    android:text="@string/other_bank_write_tip"
+                    android:textColor="@color/gray"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp_five"
+        android:paddingLeft="@dimen/fill_margin_right"
+        android:paddingRight="@dimen/fill_margin_right" >
+
+        <Button
+            android:id="@+id/btn_last_payee_other_bank_write"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_blue_big"
+            android:text="@string/last"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_next_payee_other_bank_write"
+            style="@style/bottombtn"
+            android:text="@string/confirm" />
+    </LinearLayout>
+
+</RelativeLayout>

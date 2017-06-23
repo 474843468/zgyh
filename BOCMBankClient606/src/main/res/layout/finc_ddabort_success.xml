@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 基金 定期定额 详情  进入定投撤销 页面 xyl -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/finc_confirm"
+            style="@style/bottombtn_606"
+            android:text="@string/finish"
+             />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/prms_scrollView1_layout"
+        style="@style/scrollview_comm"
+        android:layout_above="@id/btn_layout" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/fill_padding_top"
+            android:paddingLeft="@dimen/common_listview_item_paddingLR"
+            android:paddingRight="@dimen/common_listview_item_paddingLR" >
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    android:id="@+id/finc_ddabort_success_info"
+                    style="@style/confirm_info_textview_style" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/jiaoyi_num" />
+
+                <TextView
+                    android:id="@+id/finc_transationId_tv"
+                    style="@style/confirm_right_textview_style606" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/finc_fundsql_colon" />
+
+                <TextView
+                    android:id="@+id/finc_fundseq_tv"
+                    style="@style/confirm_right_textview_style606" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/finc_tradefund_colon" />
+
+                <TextView
+                    android:id="@+id/finc_fundcode_tv"
+                    style="@style/confirm_right_textview_style606" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/finc_applayDate_colon" />
+
+                <TextView
+                    android:id="@+id/finc_applayDate_tv"
+                    style="@style/confirm_right_textview_style606" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/finc_tradetype_colon" />
+
+                <TextView
+                    android:id="@+id/finc_tradetype_tv"
+                    style="@style/confirm_right_textview_style606" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/schedubuy_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/confirm_left_textview_style606"
+                        android:text="@string/finc_scheduledbuyAmount_colon" />
+
+                    <TextView
+                        android:id="@+id/finc_scheduledbuyAmount_tv"
+                        style="@style/confirm_right_textview_style606"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/finc_dayInMonth_ll"
+                    style="@style/linnerlayout_common" 
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/confirm_left_textview_style606"
+                        android:text="@string/finc_dayInMonth_colon" />
+
+                    <TextView
+                        android:id="@+id/finc_dayInMonth_tv"
+                        style="@style/confirm_right_textview_style606" />
+                </LinearLayout>
+                <LinearLayout android:id="@+id/fincBuyDayOfWeekLl"
+	                style="@style/linnerlayout_common" 
+	                android:visibility="gone">
+	
+	                <TextView
+	                    style="@style/confirm_left_textview_style606"
+	                    android:text="@string/finc_scheduledbuy_day_weekly" />
+	
+	                <TextView
+	                    android:id="@+id/fincBuyDayOfWeekTv"
+	                    style="@style/confirm_right_textview_style606" >
+	                </TextView>
+	            </LinearLayout>
+                <LinearLayout style="@style/linnerlayout_common" 
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/confirm_left_textview_style606"
+                        android:text="@string/prodRisklvl" />
+
+                    <TextView
+                        android:id="@+id/finc_risklevel_tv"
+                        style="@style/confirm_right_textview_style606" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/schedusell_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/confirm_left_textview_style606"
+                        android:text="@string/finc_scheduledsellAmount_colon" />
+
+                    <TextView
+                        android:id="@+id/finc_scheduledsellAmount_tv"
+                        style="@style/confirm_right_textview_style606"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/finc_scheduselldayInMonth_ll"
+                    style="@style/linnerlayout_common" 
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/confirm_left_textview_style606"
+                        android:text="@string/finc_scheduleddate_colon" />
+
+                    <TextView
+                        android:id="@+id/finc_scheduselldayInMonth_tv"
+                        style="@style/confirm_right_textview_style606" />
+                </LinearLayout>
+				
+                <LinearLayout android:id="@+id/fincSaleDayOfWeekLl"
+	                style="@style/linnerlayout_common" 
+	                android:visibility="gone">
+	
+	                <TextView
+	                    style="@style/confirm_left_textview_style606"
+	                    android:text="@string/finc_scheduledsell_day_weekly" />
+	
+	                <TextView
+	                    android:id="@+id/fincSaleDayOfWeekTv"
+	                    style="@style/confirm_right_textview_style606" >
+	                </TextView>
+	            </LinearLayout>
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        android:id="@+id/finc_myfinc_sell_sellType"
+                        style="@style/confirm_left_textview_style606"
+                        android:text="@string/finc_myfinc_sell_sellType" />
+
+                    <TextView
+                        android:id="@+id/finc_sellflag_tv"
+                        style="@style/confirm_right_textview_style606" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/finc_scheduledbuy_set_end_time" />
+
+                <TextView
+                    android:id="@+id/finc_scheduledbuy_setEndTime"
+                    style="@style/confirm_right_textview_style606"/>
+            </LinearLayout>
+            
+            <LinearLayout android:id="@+id/end_ll"
+                style="@style/linnerlayout_common" >
+
+                <TextView android:id="@+id/endName"
+                    style="@style/confirm_left_textview_style606"/>
+
+                <TextView
+                    android:id="@+id/endContext"
+                    style="@style/confirm_right_textview_style606"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

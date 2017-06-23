@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账户管理 我的电子现金账户充值  选择转出账户界面  wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/phoneNumberLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_layout_height"
+        android:layout_marginLeft="@dimen/dp_five"
+        android:layout_marginTop="@dimen/dp_five"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="手机号码："
+            android:gravity="center_vertical"
+            android:textSize="@dimen/textsize_default" />
+
+        <EditText
+            android:id="@+id/input_phonenum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_weight="2"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textSize="@dimen/textsize_default" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="请准确填写"
+            android:textColor="@color/fonts_pink"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/textsize_default" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_financeic_choose_title"
+        style="@style/textview_step4"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/phoneNumberLayout"
+        android:layout_marginBottom="@dimen/dp_five"
+        android:layout_marginLeft="@dimen/dp_five"
+        android:layout_marginTop="10dp"
+        android:text="@string/goldbonus_choose_account"
+        android:textColor="@color/fonts_dark_gray"
+        android:textSize="@dimen/textsize_default" />
+
+    <Button
+        android:id="@+id/btnNext"
+        style="@style/textview_forex_button_cell"
+        android:layout_height="@dimen/btn_bottom_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/common_bottom_padding"
+        android:layout_marginTop="@dimen/dp_five"
+        android:text="@string/next" />
+
+    <LinearLayout
+        android:id="@+id/alert_info"
+        style="@style/textview_common"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnNext"
+        android:layout_marginTop="@dimen/dp_five"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/acc_checkbox"
+            style="@style/acc_checkbox"
+            android:layout_marginLeft="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!--
+                 <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/goldbouns_already_read_agree"
+                android:textSize="@dimen/textsize_default" />
+            -->
+
+            <TextView
+                android:id="@+id/agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/regiser_server_info"
+                android:textSize="@dimen/textsize_default" />
+            <!--
+                 <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/goldbouns_already_read_agree_apart"
+                android:textSize="@dimen/textsize_default" />
+            -->
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/acc_accountlist"
+        style="@style/listviewcomm_fill_haveDivider"
+        android:layout_above="@+id/alert_info"
+        android:layout_below="@+id/tv_financeic_choose_title" >
+    </ListView>
+
+</RelativeLayout>

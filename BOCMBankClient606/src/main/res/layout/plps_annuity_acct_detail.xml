@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账单缴费缴费信息详情页 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnConfirm"
+            style="@style/bottombtn"
+            android:onClick="annuityAcctTranOnclick"
+            android:text="@string/plps_plpane_detail_query" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/prms_scrollView1_layout"
+        style="@style/scrollview_comm_havemarginbutton"
+        android:layout_above="@id/btn_layout"
+        android:paddingLeft="0dip"
+        android:paddingRight="0dip" >
+
+        <LinearLayout
+            style="@style/confirm_main_style"
+            android:orientation="vertical" >
+
+            <LinearLayout style="@style/linnerlayout_common" 
+                android:layout_marginTop="15dip">
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plps_annuity_seqno"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/seqno"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:text="-" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/safety_product_type"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/producttype"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:text="-" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plps_annuity_planname"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/planName"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:text="-" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plps_annuity_joindate"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/planjoindate"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:text="-" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plps_annuity_planno"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/planno"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:text="-" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plps_annuity_planstatus"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/planstatus"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:text="-" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plps_annuity_plantype"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/plantype"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:text="-" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plps_annuity_assettotal"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/assettotal"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:text="-"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_details_title_height" >
+
+        <TextView
+            android:layout_width="@dimen/common_details_title_width"
+            android:layout_height="@dimen/left_img_width"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_title"
+            android:gravity="center"
+            android:paddingRight="@dimen/btnpaddingtb"
+            android:text="信息详情"
+            android:textSize="@dimen/textsize_default" />
+    </RelativeLayout>
+
+</RelativeLayout>

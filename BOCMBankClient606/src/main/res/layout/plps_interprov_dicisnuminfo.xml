@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:userProperty="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:orientation="horizontal" >
+
+        <!-- <Button
+            style="@style/btn_common_oneline_for_dialog"
+            android:layout_weight="1"
+            android:background="@drawable/btn_red_big"
+            android:text="上一步"
+            android:onClick="lastBtnClick"
+            android:textColor="@color/white" /> -->
+
+        <Button
+            style="@style/bottombtn"
+            android:layout_weight="1"
+            android:background="@drawable/btn_red_big"
+            android:text="下一步"
+            android:onClick="nextBtnClick"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/remit_title_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:text="请您选择缴费账户及安全工具"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_default" />
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/plps_interprov_dicisionnumber" />
+
+                    <TextView
+                        android:id="@+id/decision"
+                        style="@style/textview_common_right"
+                        android:ellipsize="end"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        android:id="@+id/year_remain_limit_alert"
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/plps_interprov_diving_no" />
+
+                    <TextView
+                        android:id="@+id/driverno"
+                        style="@style/textview_common_right"
+                        android:ellipsize="end"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/plps_interprov_parties_concerned" />
+
+                    <TextView
+                        android:id="@+id/party"
+                        style="@style/textview_common_right"
+                        android:ellipsize="end"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/plps_interprov_process_time" />
+
+                    <TextView
+                        android:id="@+id/dealtime"
+                        style="@style/textview_common_right"
+                        android:ellipsize="end"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/plps_interprov_deal_authori" />
+
+                    <TextView
+                        android:id="@+id/dealauthority"
+                        style="@style/textview_common_right"
+                        android:ellipsize="end"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/plps_initerprov_deal_authoriname" />
+
+                    <TextView
+                        android:id="@+id/dealauthorityname"
+                        style="@style/textview_common_right"
+                        android:ellipsize="end"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/plps_initerprov_illegal_sites" />
+
+                    <TextView
+                        android:id="@+id/illegalplace"
+                        style="@style/textview_common_right"
+                        android:ellipsize="end"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/plps_initerprov_the_fines" />
+
+                    <TextView
+                        android:id="@+id/fineamount"
+                        style="@style/textview_common_right"
+                        android:ellipsize="end"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/plps_initerprov_additional_interest" />
+
+                    <TextView
+                        android:id="@+id/additional"
+                        style="@style/textview_common_right"
+                        android:ellipsize="end"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/plps_initerprov_total_amount" />
+
+                    <TextView
+                        android:id="@+id/total_amount"
+                        style="@style/textview_common_right"
+                        android:ellipsize="end"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/plps_initerprov_payment_amount" />
+
+                    <!-- <TextView
+                        android:id="@+id/payment_amount"
+                        style="@style/Spiiner_fill" /> -->
+                    <Spinner
+                        android:id="@+id/signacct"
+                        style="@style/Spiiner_fill"
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:paddingRight="30dip" />
+                </LinearLayout>
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/plps_available_balance" />
+
+                    <TextView
+                        android:id="@+id/available_amount"
+                        style="@style/textview_common_right"
+                        android:ellipsize="end"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout 
+				    style="@style/linnerlayout_common"
+                    android:orientation="vertical">
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fill_margin_left"
+                    android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                    android:text="@string/plps_initerprov_payment_info"
+                    android:textColor="@color/red" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

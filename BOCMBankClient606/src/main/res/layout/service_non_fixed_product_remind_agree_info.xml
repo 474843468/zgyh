@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 大额到账提醒服务协议画面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/list_bottom" >
+
+    <LinearLayout
+        android:id="@+id/layout_top_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/layout_margin_top"
+        android:paddingLeft="@dimen/layout_padding_left_right"
+        android:paddingRight="@dimen/layout_padding_left_right"
+        android:paddingTop="@dimen/fill_padding_top" >
+
+        <TextView
+            android:id="@+id/contract_title_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/infoserve_non_fixed_product_remind_agree_title_quancheng"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/textsize_one_six" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_of_commrequestopen"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/firstsize"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_for" />
+
+            <TextView
+                android:id="@+id/dept_first_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_for" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/secondsize"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_for" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ccbbank"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_for" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/dept_create_layout"
+        style="@style/scrollview_fill"
+        android:layout_above="@+id/bottom_btn_layout"
+        android:layout_below="@+id/layout_top_top" >
+
+        <LinearLayout
+            style="@style/tran_detail_activity_ll"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/layout_padding_left_right"
+            android:paddingRight="@dimen/layout_padding_left_right" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="@string/agreementcontent"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_for"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/dept_protocol_content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="@string/notify_protocol_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_for" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/layout_margin_top"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/btnYes"
+            style="@style/btn_common_oneline"
+            android:layout_weight="4.0"
+            android:background="@drawable/btn_blue_big"
+            android:text="@string/not_agree" />
+
+        <Button
+            android:id="@+id/btnNo"
+            style="@style/btn_common_oneline"
+            android:layout_weight="3.0"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/infoserve_agree_btn" />
+    </LinearLayout>
+
+</RelativeLayout>

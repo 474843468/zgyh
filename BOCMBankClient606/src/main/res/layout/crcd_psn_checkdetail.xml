@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center" >
+
+    <ScrollView
+        style="@style/scrollview_comm"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:paddingTop="@dimen/fill_padding_top" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_for_listview_item_write" >
+
+            <ImageView
+                android:id="@+id/top_right_close"
+                android:layout_width="@dimen/btn_bottom_height"
+                android:layout_height="@dimen/btn_bottom_height"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:src="@color/transparent_00"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/forex_money_text_hide"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp_one_zero"
+                    android:paddingRight="@dimen/dp_one_zero" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_seven_zero"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/leftMenuHW"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="invisible" >
+
+                            <TextView
+                                android:layout_width="@dimen/checkboxWH"
+                                android:layout_height="@dimen/checkboxWH"
+                                android:src="@drawable/icon_bianji" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dp_one_zero"
+                            android:orientation="vertical"
+                            android:visibility="visible" >
+
+                            <ImageView
+                                android:id="@+id/img_crcd_paper_edit"
+                                android:layout_width="@dimen/checkboxWH"
+                                android:layout_height="@dimen/checkboxWH"
+                                android:src="@drawable/icon_bianji" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_seven_zero"
+                        android:layout_margin="@dimen/fill_margin_top"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/leftMenuHW"
+                            android:layout_gravity="left"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                style="@style/crcd_tv_common"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="left|center"
+                                android:text="@string/mycrcd_paper_billdan" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tv_paper_commmon_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="@dimen/dp_one_zero"
+                            android:orientation="vertical"
+                            android:visibility="visible" >
+
+                            <TextView
+                                android:id="@+id/tv_paper_commmon"
+                                style="@style/crcd_tv_common"
+                                android:gravity="left|center"
+                                android:singleLine="true"
+                                android:text="465465768" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/btn_check_width"
+                        android:layout_height="@dimen/dp_seven_zero"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_paper"
+                            android:layout_width="@dimen/btn_check_width"
+                            android:layout_height="@dimen/leftMenuHW"
+                            android:background="@drawable/btn_check_kaitong"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/tv_paper_open"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/mycrcd_open"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/textsize_default" />
+
+                            <TextView
+                                android:id="@+id/tv_paper_close"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/mycrcd_close"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_default" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="@dimen/dp_one_zero"
+                            android:gravity="center"
+                            android:visibility="invisible" >
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left|center"
+                                android:textSize="@dimen/textsize_default" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:id="@+id/forex_acc_text_hide"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp_one_zero"
+                    android:paddingRight="@dimen/dp_one_zero" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_seven_zero"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/leftMenuHW"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="invisible" >
+
+                            <TextView
+                                android:layout_width="@dimen/checkboxWH"
+                                android:layout_height="@dimen/checkboxWH"
+                                android:src="@drawable/icon_bianji" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dp_one_zero"
+                            android:orientation="vertical" >
+
+                            <ImageView
+                                android:id="@+id/img_crcd_email_edit"
+                                android:layout_width="@dimen/checkboxWH"
+                                android:layout_height="@dimen/checkboxWH"
+                                android:src="@drawable/icon_bianji" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_seven_zero"
+                        android:layout_margin="@dimen/fill_margin_top"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/leftMenuHW"
+                            android:layout_gravity="left"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                style="@style/crcd_tv_common"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="left|center"
+                                android:text="@string/mycrcd_email_billdan" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tv_email_common_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="@dimen/dp_one_zero"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/tv_email_common"
+                                style="@style/crcd_tv_common"
+                                android:gravity="left|center"
+                                android:singleLine="true" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/btn_check_width"
+                        android:layout_height="@dimen/dp_seven_zero"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_email"
+                            android:layout_width="@dimen/btn_check_width"
+                            android:layout_height="@dimen/leftMenuHW"
+                            android:background="@drawable/btn_check_kaitong"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/tv_email_open"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/mycrcd_open"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/textsize_default" />
+
+                            <TextView
+                                android:id="@+id/tv_email_close"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/mycrcd_close"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_default" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/reset_view"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="@dimen/dp_one_zero"
+                            android:gravity="center"
+                            android:visibility="invisible" >
+
+                            <TextView
+                                android:id="@+id/reset_text"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left|center"
+                                android:text="@string/mycrcd_reset_button"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/textsize_default" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/gray" />
+
+                <LinearLayout
+                    android:id="@+id/finc_risk_text_hide"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp_one_zero"
+                    android:paddingRight="@dimen/dp_one_zero" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_seven_zero"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/leftMenuHW"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:visibility="invisible" >
+
+                            <TextView
+                                android:layout_width="@dimen/checkboxWH"
+                                android:layout_height="@dimen/checkboxWH"
+                                android:src="@drawable/icon_bianji" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="@dimen/dp_one_zero"
+                            android:orientation="vertical" >
+
+                            <ImageView
+                                android:id="@+id/img_crcd_phone_edit"
+                                android:layout_width="@dimen/checkboxWH"
+                                android:layout_height="@dimen/checkboxWH"
+                                android:src="@drawable/icon_bianji" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_seven_zero"
+                        android:layout_margin="@dimen/fill_margin_top"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/leftMenuHW"
+                            android:layout_gravity="left"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                style="@style/crcd_tv_common"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="left|center"
+                                android:text="@string/mycrcd_phone_billdan" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tv_phone_common_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="@dimen/dp_one_zero"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/tv_phone_common"
+                                style="@style/crcd_tv_common"
+                                android:gravity="left|center"
+                                android:singleLine="true" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="@dimen/btn_check_width"
+                        android:layout_height="@dimen/dp_seven_zero"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_phone"
+                            android:layout_width="@dimen/btn_check_width"
+                            android:layout_height="@dimen/leftMenuHW"
+                            android:background="@drawable/btn_check_kaitong"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:id="@+id/tv_phone_open"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/mycrcd_open"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/textsize_default" />
+
+                            <TextView
+                                android:id="@+id/tv_phone_close"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/mycrcd_close"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/textsize_default" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tell_view"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginTop="@dimen/dp_one_zero"
+                            android:gravity="center"
+                            android:visibility="invisible" >
+
+                            <TextView
+                                android:id="@+id/tell_reset"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="left|center"
+                                android:text="@string/mycrcd_reset_button"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/textsize_default" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/titleText_stepcrcd"
+        android:layout_width="@dimen/crcd_common_details_big_title_width"
+        android:layout_height="@dimen/left_img_width"
+        android:background="@drawable/bg_title"
+        android:gravity="center"
+        android:textColor="@color/gray_title" />
+
+</RelativeLayout>

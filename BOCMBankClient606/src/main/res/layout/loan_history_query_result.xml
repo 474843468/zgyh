@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 贷款管理  历史查询结果页面  wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/common_bottom_padding_new" >
+
+    <LinearLayout
+        android:id="@+id/ll_query_condition_below"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img_bg_query_j" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_row_margin" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/loan_info_endate" />
+
+            <EditText
+                android:id="@+id/et_loandate"
+                style="@style/Spiiner_fill"
+                android:layout_weight="2"
+                android:layout_gravity="center_vertical"
+                android:cursorVisible="false"
+                android:gravity="center_vertical"
+                android:hint="@string/loan_enddate_hint"
+                android:textSize="@dimen/textsize_default" />
+
+            <RelativeLayout
+                android:id="@+id/rl_LoanHistoryQuery"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginLeft="@dimen/common_row_margin"
+                android:layout_weight="3" >
+
+                <Button
+                    android:id="@+id/btnLoanHistoryQuery"
+                     style="@style/query_button_style"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center|center_vertical"
+                    android:focusable="false"
+                    android:textSize="@dimen/textsize_default" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_loan_history"
+        style="@style/listviewcomm_fill_haveDivider"
+        android:layout_below="@+id/ll_query_condition_below"
+        android:layout_marginLeft="@dimen/fill_margin_top"
+        android:layout_marginRight="@dimen/fill_margin_top" >
+    </ListView>
+
+</RelativeLayout>

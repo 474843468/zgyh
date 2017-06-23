@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/boc_divide_line"/>
+
+    <LinearLayout
+        android:id="@+id/llyBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <ScrollView
+            android:id="@+id/scrvBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="visible"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/boc_common_cell_color"
+                    android:paddingTop="45dp"
+                    android:paddingBottom="30dp">
+
+                    <com.boc.bocsoft.mobile.bocmobile.base.widget.waterwaveballview.WaterWaveBallView
+                        android:id="@+id/waveBllView"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="226dp"
+                        android:layout_height="226dp" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="50dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tvAvailQuotaDesc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/boc_eloan_explainTv"
+                            android:textColor="@color/boc_common_cell_color"
+                            android:textSize="13dp"/>
+
+
+                        <TextView
+                            android:id="@+id/tvAvailQuota"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="16dp"
+                            android:text=""
+                            android:textColor="@color/boc_common_cell_color"
+                            android:textStyle="bold"
+                            android:textSize="28dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:gravity="center_horizontal"
+                        android:layout_marginBottom="30dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvEndDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="26dp"
+                            android:text=""
+                            android:textColor="@color/boc_common_cell_color"
+                            android:textSize="13dp"/>
+
+
+                        <TextView
+                            android:id="@+id/tvAction"
+                            android:layout_width="110dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:textStyle="bold"
+                            android:text=""
+                            android:textColor="@color/boc_common_cell_color"
+                            android:textSize="17dp" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+                <include layout="@layout/boc_divide_line"/>
+
+                <LinearLayout
+                    android:id="@+id/lly_main_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/boc_space_between_40px"
+                    android:background="@color/boc_common_cell_color"
+                    android:orientation="vertical"/>
+
+                <include layout="@layout/boc_divide_line"/>
+
+                <LinearLayout
+                    android:id="@+id/lly_other_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/boc_space_between_20px"
+                    android:background="@color/boc_common_cell_color"
+                    android:orientation="vertical"/>
+
+                <include layout="@layout/boc_divide_line" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/boc_space_between_80px"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <Button
+            android:id="@+id/btnPreRepay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_96px"
+            android:background="@color/boc_main_button_color"
+            android:textColor="@color/bocroa_text_color_white"
+            android:text="@string/boc_eloan_prepay_pagename"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvNoData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/boc_text_color_common_gray"
+        android:textSize="@dimen/boc_text_size_common"
+        android:visibility="gone" />
+</LinearLayout>

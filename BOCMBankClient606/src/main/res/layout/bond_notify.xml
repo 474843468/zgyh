@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 中银理财  购买任务提示框  wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/message_dialog_bg" >
+
+        <ImageView
+            android:id="@+id/top_right_close1"
+            android:layout_width="@dimen/btn_bottom_height"
+            android:layout_height="@dimen/btn_bottom_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@color/transparent_00" />
+
+        <TextView
+            android:id="@+id/tv_acc_account_accountState"
+            style="@style/textview_common"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_right_close1"
+            android:layout_marginRight="@dimen/fill_margin_right_fordialog"
+            android:gravity="center"
+            android:paddingLeft="@dimen/fill_padding_top"
+            android:paddingRight="@dimen/fill_padding_top"
+            android:text="@string/bond_task_title"
+            android:textColor="@color/tasktitle" />
+
+        <ScrollView
+            style="@style/scrollview_comm"
+            android:layout_below="@+id/tv_acc_account_accountState"
+            android:layout_marginRight="@dimen/fill_margin_right_fordialog"
+            android:padding="@dimen/fill_padding_top" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/fill_margin_bottom"
+                android:paddingRight="@dimen/fill_margin_bottom" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bocinvt_money_button_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/common_row_margin"
+                    android:background="@drawable/bg_for_task"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/bocinvt_money_button"
+                        style="@style/btn_common_oneline"
+                        android:layout_height="@dimen/dp_five_zero"
+                        android:background="@color/transparent_00"
+                        android:focusable="false"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="@dimen/fill_margin_left"
+                        android:text="@string/forex_task_openMoney"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/isopenInvset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_five_zero"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/dp_five"
+                        android:gravity="center_vertical"
+                        android:text="@string/boc_noopen"
+                        android:textColor="@color/tasktitle"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <ImageView
+                        android:id="@+id/invset_image"
+                        style="@style/rightbtn_jiantou_imageView"
+                        android:layout_marginRight="@dimen/dp_five"
+                        android:focusable="false"
+                        android:src="@drawable/right_arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bocinvt_InvtEvaluationInit_button_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/common_row_margin"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:background="@drawable/bg_for_task"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/bocinvt_InvtEvaluationInit_button"
+                        style="@style/btn_common_oneline"
+                        android:layout_height="@dimen/dp_five_zero"
+                        android:layout_gravity="center"
+                        android:background="@color/transparent_00"
+                        android:focusable="false"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="@dimen/fill_margin_left"
+                        android:text="@string/bond_openorsetup"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/openAcct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_five_zero"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/dp_five"
+                        android:gravity="center_vertical"
+                        android:text="@string/finc_acc_notopened"
+                        android:textColor="@color/tasktitle"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <ImageView
+                        style="@style/rightbtn_jiantou_imageView"
+                        android:layout_marginRight="@dimen/dp_five"
+                        android:focusable="false"
+                        android:src="@drawable/right_arrow" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+	 <ImageView
+            android:id="@+id/top_right_close"
+            android:layout_width="@dimen/close_clickarea_height"
+            android:layout_height="@dimen/close_clickarea_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@color/transparent_00" />
+</RelativeLayout>

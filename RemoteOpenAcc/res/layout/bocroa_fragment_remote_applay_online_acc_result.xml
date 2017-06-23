@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bocroa_background" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/ll_result_top"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="69dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_result_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bocroa_progress_success" />
+
+            <TextView
+                android:id="@+id/tv_result_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="提交成功"
+                android:textColor="@color/bocroa_333333"
+                android:textSize="@dimen/bocroa_text_size_big_result" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_result_notice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_result_top"
+            android:layout_marginTop="45dp"
+            android:paddingLeft="@dimen/bocroa_anthentication_text_padding_left"
+            android:paddingRight="@dimen/bocroa_anthentication_text_padding_right"
+            android:text="您已成功提交在线开户申请，请稍后查询开户结果，我行将通过短信通知您的开户进度。"
+            android:textColor="@color/bocroa_79797c"
+            android:textSize="@dimen/bocroa_text_size_small" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bocroa_bottom_button_height"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bocroa_white"
+        android:gravity="center"
+        android:text="完成"
+        android:textColor="@color/bocroa_blue"
+        android:textSize="@dimen/bocroa_text_size_middle" />
+
+</RelativeLayout>

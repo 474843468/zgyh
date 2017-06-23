@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_main_bg_color"
+    android:orientation="vertical">
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.DistrictSelect.AnimTabsView
+        android:id="@+id/tab"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:layout_below="@id/title" >
+    </com.boc.bocsoft.mobile.bocmobile.base.widget.DistrictSelect.AnimTabsView>
+    <LinearLayout
+        android:id="@+id/llyNodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvNoData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/boc_text_color_common_gray"
+            android:textSize="@dimen/boc_text_size_common" />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/boc_main_bg_color"
+        android:dividerHeight="1dp"
+        android:layout_below="@id/tab"  />
+
+</LinearLayout>

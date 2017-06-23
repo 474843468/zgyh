@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/message_dialog_bg" >
+
+        <ImageView
+            android:id="@+id/img_exit_accdetail_1"
+            android:layout_width="@dimen/btn_dialog_height"
+            android:layout_height="@dimen/exit_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@color/transparent_00" />
+
+        <LinearLayout
+            android:id="@+id/ll_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dialogbtn_marginTop"
+            android:layout_marginRight="@dimen/fill_margin_right_fordialog"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_acc_many"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_one"
+                    style="@style/btn_common_oneline_for_dialog"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_gray"
+                    android:textSize="@dimen/textsize_default" />
+
+                <Button
+                    android:id="@+id/btn_many"
+                    style="@style/btn_common_oneline_for_dialog"
+                    android:background="@drawable/btn_gray"
+                    android:text="@string/more"
+                    android:textSize="@dimen/textsize_default" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_btn"
+            android:layout_below="@id/img_exit_accdetail_1"
+            android:layout_marginRight="@dimen/fill_margin_right_fordialog"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_five"
+            android:paddingRight="@dimen/dp_five" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/mycrcd_product_name" />
+
+                    <TextView
+                        android:id="@+id/mycrcd_product_name_value"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_acc_accountnickname"
+                     style="@style/textview_common_left_three"
+                        android:text="@string/acc_account_nickname" />
+
+                    <FrameLayout
+                        android:id="@+id/fl_nickname"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:visibility="gone" >
+
+                        <EditText
+                            android:id="@+id/et_acc_nickname"
+                            style="@style/edittext_common_fill"
+                            android:layout_gravity="center_vertical"
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:imeOptions="actionDone"
+                            android:maxLength="20"
+                            android:paddingRight="@dimen/btn_smscode_height"
+                            android:singleLine="true"
+                            android:textSize="@dimen/textsize_default" >
+                        </EditText>
+
+                        <Button
+                            android:id="@+id/btn_update_nickname"
+                            android:layout_width="@dimen/btn_close_height"
+                            android:layout_height="@dimen/btn_close_height"
+                            android:layout_gravity="center_vertical|right"
+                            android:background="@drawable/img_shuru_gou" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_nickname"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/acc_accountnickname_value"
+                                style="@style/textview_common"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:singleLine="true" >
+                            </TextView>
+
+                            <ImageView
+                                android:id="@+id/img_acc_update_nickname"
+                                android:layout_width="@dimen/btn_connect_height"
+                                android:layout_height="@dimen/btn_connect_height"
+                                android:layout_marginLeft="@dimen/dp_one_zero"
+                                android:src="@drawable/icon_bianji" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/mycrcd_bill_code" />
+
+                    <TextView
+                        android:id="@+id/mycrcd_accnumber"
+                        style="@style/textview_common_right_two"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/mycrcd_state" />
+
+                    <TextView
+                        android:id="@+id/mycrcd_state_value"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/card_currency1"
+                        style="@style/textview_common_left_three" />
+
+                    <TextView
+                        android:id="@+id/card_currency1_value"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/card_currency2"
+                        style="@style/textview_common_left_three" />
+
+                    <TextView
+                        android:id="@+id/card_currency2_value"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+                <LinearLayout
+				    android:id="@+id/acc_payroll_query"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="50dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/acc_payrollquery_name"
+                        android:textColor="@color/blue" 
+                        android:gravity="center"
+                        />
+					<View 
+                    android:layout_width="wrap_content"
+                    android:layout_height="3px"
+                    android:background="@color/blue"
+                    />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_exit_accdetail"
+        android:layout_width="@dimen/close_clickarea_width"
+        android:layout_height="@dimen/close_clickarea_height"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@color/transparent_00" />
+
+</RelativeLayout>

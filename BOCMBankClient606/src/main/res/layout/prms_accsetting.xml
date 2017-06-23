@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 服务设定 修改别名 成功页面  xyl -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <include
+        android:id="@+id/stepbar"
+        android:layout_alignParentTop="true"
+        layout="@layout/step_title_layout" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/stepbar"
+        android:textSize="@dimen/textsize_default"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/prms_accsetting_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView1"
+        android:padding="@dimen/common_listview_item_paddingLR"
+        android:gravity="left"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:textSize="@dimen/textsize_step4"
+        android:textColor="@color/gray"
+        />
+
+    <Button
+        android:id="@+id/next"
+        style="@style/textview_forex_button_cell"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:text="@string/confirm"
+        />
+
+    <ListView
+        android:id="@+id/listview"
+        style="@style/listviewcomm_fill_haveDivider"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/next"
+        android:layout_below="@id/prms_accsetting_info"
+        android:scrollbars="none"
+        android:textSize="@dimen/textsize_default" >
+    </ListView>
+
+</RelativeLayout>

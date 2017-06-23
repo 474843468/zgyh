@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/front"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <!-- android:layout_marginRight="@dimen/btn_operate_padding" -->
+
+    <RelativeLayout
+        android:id="@+id/ll_acc_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/image_delete"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:gravity="center"
+        android:paddingBottom="@dimen/fill_padding_bottom" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/fill_padding_left"
+            android:layout_toLeftOf="@+id/image_operate"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/fill_padding_left"
+            android:paddingTop="@dimen/fill_padding_left" >
+
+            <LinearLayout
+                android:id="@+id/ll_bankaccount"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/payer_name"
+                    style="@style/textview_for_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dp_two"
+                    android:paddingTop="@dimen/dp_two" />
+
+                <TextView
+                    android:id="@+id/payer_phone"
+                    style="@style/textview_for_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:paddingBottom="@dimen/dp_two"
+                    android:paddingTop="@dimen/dp_two"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/crcd_account_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/fill_padding_left" >
+
+                <TextView
+                    android:id="@+id/payer_type"
+                    style="@style/textview_for_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/dp_two"
+                    android:paddingTop="@dimen/dp_two" />
+
+                <TextView
+                    android:id="@+id/payer_customer_id"
+                    style="@style/textview_for_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:paddingBottom="@dimen/dp_two"
+                    android:paddingTop="@dimen/dp_two"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/image_operate"
+            android:layout_width="@dimen/btn_operate_width"
+            android:layout_height="@dimen/btn_operate_height"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/dp_two"
+            android:background="@drawable/btn_chaxun_bg"
+            android:text="@string/operate"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/image_delete"
+        android:layout_width="@dimen/icon_dele_HW"
+        android:layout_height="@dimen/icon_dele_HW"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/fill_margin_right_del"
+        android:src="@drawable/icon_del"
+        android:visibility="gone" />
+
+</RelativeLayout>

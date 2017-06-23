@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/boc_main_bg_color"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/boc_space_between_22px"
+        android:layout_marginRight="@dimen/boc_space_between_22px"
+        android:layout_marginTop="@dimen/boc_space_between_22px"
+        android:background="@drawable/boc_edittext_bg_grey"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:text="付款人姓名"
+                android:textColor="#000"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/et_payer_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入"
+                android:textColor="#000"
+                android:textColorHint="@color/boc_text_color_light_gray"
+                android:textSize="@dimen/boc_text_size_small"/>
+
+            <ImageView
+                android:id="@+id/iv_select_from_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:src="@drawable/boc_remit_payee"/>
+        </LinearLayout>
+
+        <include layout="@layout/boc_divide_line"></include>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:text="付款人手机号"
+                android:textColor="#000"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/et_payer_phone_num"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入"
+                android:textColor="#000"
+                android:textColorHint="@color/boc_text_color_light_gray"
+                android:textSize="@dimen/boc_text_size_small"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+
+        android:layout_height="39dp"
+        android:layout_marginLeft="@dimen/boc_space_between_22px"
+        android:layout_marginRight="@dimen/boc_space_between_22px"
+        android:layout_marginTop="@dimen/boc_space_between_88px"
+        android:background="@drawable/boc_button_bg_blue"
+        android:text="确认"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"/>
+</LinearLayout>

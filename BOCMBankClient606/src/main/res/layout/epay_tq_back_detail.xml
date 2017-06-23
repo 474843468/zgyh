@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_two_zero"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/epay_viewpager_h"
+            android:layout_marginTop="@dimen/dp_two_zero"
+            android:layout_weight="2" >
+
+            <TextView
+                android:id="@+id/key_back_transaction_id"
+                style="@style/textview_common_left"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:text="@string/epay_tq_pub_detail_tv_transaction_id" />
+
+            <TextView
+                android:id="@+id/key_back_return_time"
+                style="@style/textview_common_left"
+                android:layout_below="@id/key_back_transaction_id"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:text="@string/epay_tq_pub_detail_tv_back_return_time" />
+
+            <TextView
+                android:id="@+id/key_back_tran_amount"
+                style="@style/textview_common_left"
+                android:layout_below="@id/key_back_return_time"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:text="@string/epay_tq_pub_detail_tv_back_tran_amount" />
+
+            <TextView
+                android:id="@+id/key_back_currency"
+                style="@style/textview_common_left"
+                android:layout_below="@id/key_back_tran_amount"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:text="@string/epay_tq_pub_detail_tv_back_currency" />
+
+            <TextView
+                android:id="@+id/key_back_tran_status"
+                style="@style/textview_common_left"
+                android:layout_below="@id/key_back_currency"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:text="@string/epay_tq_pub_detail_tv_back_tran_status" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp_one_zero"
+                android:layout_below="@id/key_back_tran_status" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_back_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_two_zero"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vp_back_content"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/epay_viewpager_h" >
+            </android.support.v4.view.ViewPager>
+
+            <LinearLayout
+                android:id="@+id/back_page_dot"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dp_one_zero"
+                android:layout_below="@id/vp_back_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        style="@style/titleText_stepacc"
+        android:layout_width="@dimen/common_details_title_width"
+        android:layout_height="@dimen/left_img_width"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/bottom_margin_top"
+        android:background="@drawable/bg_title"
+        android:gravity="center"
+        android:text="@string/epay_tq_pub_tv_title_back"
+        android:textColor="@color/gray_title" />
+
+</RelativeLayout>

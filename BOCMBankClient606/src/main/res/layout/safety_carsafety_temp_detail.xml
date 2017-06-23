@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnDelete"
+            style="@style/isforex_two_left_btn"
+            android:text="@string/delete" />
+
+        <Button
+            android:id="@+id/btnContinue"
+            style="@style/isforex_two_right_btn"
+            android:text="@string/safety_btn_continue" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_layout"
+        android:layout_marginTop="@dimen/rightbtnW"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/titleText_step2"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/detail"
+            android:textColor="@color/black"
+            android:visibility="invisible" />
+
+        <ScrollView
+            style="@style/scrollview_comm"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                         style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="4.0"
+                        android:singleLine="true"
+                        android:text="@string/safety_hold_pro_detail_prod_code"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_productCode"
+                        style="@style/textview_forex_prompt_info" 
+                        android:layout_weight="3.0"
+                        
+                        android:singleLine="true"
+                        />
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                         style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="4.0"
+                        android:singleLine="true"
+                        android:text="@string/safety_hold_pro_detail_prod_name"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_productName"
+                        style="@style/textview_forex_prompt_info" 
+                        android:layout_weight="3.0"
+                        
+                        android:singleLine="true"
+                        />
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                         style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="4.0"
+                        android:singleLine="true"
+                        android:text="@string/safety_hold_pro_detail_risk_company"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_company"
+                        style="@style/textview_forex_prompt_info"
+                        android:layout_weight="3.0"
+                        
+                        android:singleLine="true"
+                        />
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="4.0"
+                        android:singleLine="true"
+                        android:text="@string/safety_hold_pro_detail_prod_type"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_productType"
+                        style="@style/textview_forex_prompt_info"
+                        android:layout_weight="3.0"
+                        
+                        android:singleLine="true"
+                        />
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                         style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="4.0"
+                        android:singleLine="true"
+                        android:text="@string/safety_product_tempdate"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_tempDate"
+                        style="@style/textview_forex_prompt_info"
+                        android:layout_weight="3.0"
+                        
+                        android:singleLine="true"
+                        />
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                         style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="4.0"
+                        android:singleLine="true"
+                        android:text="@string/safety_product_tempname"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_tempName"
+                        style="@style/textview_forex_prompt_info"
+                        android:layout_weight="3.0"
+                        
+                        android:singleLine="true"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/titleText_stepacc"
+        android:layout_width="@dimen/common_details_title_width"
+        android:layout_height="@dimen/left_img_width"
+        android:background="@drawable/bg_title"
+        android:gravity="center"
+        android:text="@string/bocinvt_des_title"
+        android:textColor="@color/gray_title" />
+
+</RelativeLayout>

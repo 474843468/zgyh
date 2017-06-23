@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 保费详情界面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/layout_step"
+        layout="@layout/safety_carsafety_step" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_step"
+        android:layout_marginBottom="@dimen/fill_margin_top"
+        android:layout_marginLeft="@dimen/fill_margin_top"
+        android:layout_marginRight="@dimen/fill_margin_top"
+        android:layout_marginTop="@dimen/fill_margin_top" >
+
+        <LinearLayout
+            android:id="@+id/ll_Next"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/common_bottom_padding"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnSave"
+                style="@style/isforex_two_left_btn"
+                android:text="@string/safety_save" />
+
+            <Button
+                android:id="@+id/btnNext"
+                style="@style/isforex_two_right_btn"
+                android:text="@string/next" />
+
+            <Button
+                android:id="@+id/btnNext_big"
+                style="@style/bottombtn"
+                android:background="@drawable/btn_red_big_long"
+                android:text="@string/next"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <ScrollView
+            style="@style/listviewcomm_fill_haveDivider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/ll_Next"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:background="@color/whitefornet"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="6dip"
+                    android:paddingTop="6dip" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:text="@string/safety_carsafety_PremiumAndTax"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fill_margin_top" >
+
+                    <TextView
+                        style="@style/confirm_info_textview_style"
+                        android:layout_gravity="center"
+                        android:text="@string/safety_carsafety_Premiumdetil" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_row_margin"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="6dip"
+                    android:paddingTop="6dip" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:text="原价："
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <!-- 交强险总保费 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:text="@string/safety_carsafety_jqxPremium" />
+
+                    <TextView
+                        android:id="@+id/tv_jqxPremium"
+                        style="@style/textview_forex_prompt_info"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <!-- 商业险总保费 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_totalBizStandPremium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:text="@string/safety_carsafety_totalBizRealPremium" />
+
+                    <TextView
+                        android:id="@+id/tv_totalBizStandPremium"
+                        style="@style/textview_forex_prompt_info"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <!-- 车船税总计 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:text="@string/safety_carsafety_totalTax" />
+
+                    <TextView
+                        android:id="@+id/tv_totalTax1"
+                        style="@style/textview_forex_prompt_info"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+                <!-- 应缴款项 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:text="@string/safety_carsafety_totalRealPremium" />
+
+                    <TextView
+                        android:id="@+id/tv_totalStandPremium"
+                        style="@style/textview_forex_prompt_info"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_row_margin"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="6dip"
+                    android:paddingTop="6dip" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:text="优惠价："
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <!-- 交强险总保费 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:text="@string/safety_carsafety_jqxPremium" />
+
+                    <TextView
+                        android:id="@+id/tv_jqxPremium2"
+                        style="@style/textview_forex_prompt_info"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+                <!-- 商业险总保费 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_totalBizRealPremium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:text="@string/safety_carsafety_totalBizRealPremium" />
+
+                    <TextView
+                        android:id="@+id/tv_totalBizRealPremium"
+                        style="@style/textview_forex_prompt_info"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <!-- 车船税总计 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:text="@string/safety_carsafety_totalTax" />
+
+                    <TextView
+                        android:id="@+id/tv_totalTax2"
+                        style="@style/textview_forex_prompt_info"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+                <!-- 应缴款项 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:text="@string/safety_carsafety_totalRealPremium" />
+
+                    <TextView
+                        android:id="@+id/tv_totalRealPremium2"
+                        style="@style/textview_forex_prompt_info"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_youhuijia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fill_margin_top"
+                    android:layout_marginRight="@dimen/fill_margin_top"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textsize_default" />
+                <!-- 费率浮动信息 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:background="@color/whitefornet"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="6dip"
+                    android:paddingTop="6dip" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:text="@string/safety_carsafety_feilvfudong"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <!-- 上一年度交强险保险止期 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_jqxLastYearEndDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_keyForjqxLastYearEndDate"
+                       style="@style/textview_forex_prompt_message" 
+                        android:text="@string/safety_carsafety_jqxLastYearEndDate" />
+
+                    <TextView
+                        android:id="@+id/tv_jqxLastYearEndDate"
+                        style="@style/textview_forex_prompt_info" />
+                </LinearLayout>
+
+                <!-- 本年交强险起期 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:text="@string/safety_carsafety_jqxInsBeginDate" />
+
+                    <TextView
+                        android:id="@+id/tv_jqxInsBeginDate"
+                        style="@style/textview_forex_prompt_info" />
+                </LinearLayout>
+
+                <!-- 本年交强险止期 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:text="@string/safety_carsafety_jqxInsEndDate" />
+
+                    <TextView
+                        android:id="@+id/tv_jqxInsEndDate"
+                        style="@style/textview_forex_prompt_info" />
+                </LinearLayout>
+
+                <!-- 上年交强险结案次数 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_jqxEndClaimNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_keyForjqxEndClaimNum"
+                       style="@style/textview_forex_prompt_message" 
+                        android:text="@string/safety_carsafety_jqxEndClaimNum" />
+
+                    <TextView
+                        android:id="@+id/tv_jqxEndClaimNum"
+                        style="@style/textview_forex_prompt_info" />
+                </LinearLayout>
+                <!-- 上年交强险结案金额 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_jqxEndClaimTotalMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_keyForjqxEndClaimTotalMoney"
+                       style="@style/textview_forex_prompt_message" 
+                        android:text="@string/safety_carsafety_jqxEndClaimTotalMoney" />
+
+                    <TextView
+                        android:id="@+id/tv_jqxEndClaimTotalMoney"
+                        style="@style/textview_forex_prompt_info" />
+                </LinearLayout>
+                <!-- 交强险费率浮动系数 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_keyForjqxRebate"
+                       style="@style/textview_forex_prompt_message" 
+                        android:text="@string/safety_carsafety_jqxRebate" />
+
+                    <TextView
+                        android:id="@+id/tv_jqxRebate"
+                        style="@style/textview_forex_prompt_info" /> 
+                </LinearLayout>
+                
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fill_margin_top" >
+
+                    <TextView
+                        style="@style/confirm_info_textview_style"
+                        android:textColor="@color/black"
+                        android:gravity="left"
+                        android:text="@string/tran_line" />
+                </FrameLayout>
+                <!-- 上一年度商业险保险止期 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_bizLastYearEndDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_keyForbizLastYearEndDate"
+                       style="@style/textview_forex_prompt_message" 
+                        android:text="@string/safety_carsafety_bizLastYearEndDate" />
+
+                    <TextView
+                        android:id="@+id/tv_bizLastYearEndDate"
+                        style="@style/textview_forex_prompt_info" />
+                </LinearLayout>
+
+                <!-- 本年商业险起期 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_bizInsBeginDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:text="@string/safety_carsafety_bizInsBeginDate" />
+
+                    <TextView
+                        android:id="@+id/tv_bizInsBeginDate"
+                        style="@style/textview_forex_prompt_info" />
+                </LinearLayout>
+
+                <!-- 本期商业险止期 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_bizInsEndDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:text="@string/safety_carsafety_bizInsEndDate" />
+
+                    <TextView
+                        android:id="@+id/tv_bizInsEndDate"
+                        style="@style/textview_forex_prompt_info" />
+                </LinearLayout>
+
+                <!-- 上年商业险结案次数 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_bizEndClaimNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_keyForbizEndClaimNum"
+                       style="@style/textview_forex_prompt_message" 
+                        android:text="@string/safety_carsafety_bizEndClaimNum" />
+
+                    <TextView
+                        android:id="@+id/tv_bizEndClaimNum"
+                        style="@style/textview_forex_prompt_info" />
+                </LinearLayout>
+                <!-- 上年商业险结案金额 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_bizEndClaimTotalMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_keyForbizEndClaimTotalMoney"
+                       style="@style/textview_forex_prompt_message" 
+                        android:text="@string/safety_carsafety_bizEndClaimTotalMoney" />
+
+                    <TextView
+                        android:id="@+id/tv_bizEndClaimTotalMoney"
+                        style="@style/textview_forex_prompt_info" />
+                </LinearLayout>
+                <!-- 商业险优惠系数 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_bizRebate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:text="@string/safety_carsafety_bizRebate" />
+
+                    <TextView
+                        android:id="@+id/tv_bizRebate"
+                        style="@style/textview_forex_prompt_info" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

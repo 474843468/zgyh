@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 贵金属 快速交易购买任务提示框 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/message_dialog_bg" >
+
+        <ImageView
+            android:id="@+id/top_right_close"
+            style="@style/Finc_Dialog_Close"/>
+
+        <ScrollView
+            style="@style/scrollview_comm"
+            android:layout_below="@+id/top_right_close"
+            android:gravity="center"
+            android:paddingLeft="@dimen/fill_padding_top"
+            android:paddingRight="@dimen/fill_padding_top" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/fill_margin_bottom"
+                android:paddingRight="@dimen/fill_margin_bottom" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_acc_account_accountState"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/prms_margin_top"
+                        android:text="@string/finc_task_title"
+                        android:textColor="@color/gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/fill_margin_bottom"
+                    android:paddingRight="@dimen/fill_margin_bottom" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/forex_money_button_show"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/common_row_margin"
+                        android:background="@drawable/bg_for_task"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/forex_money_button"
+                            style="@style/btn_common_oneline"
+                            android:layout_height="@dimen/dp_five_zero"
+                            android:background="@color/transparent_00"
+                            android:focusable="false"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/fill_margin_left"
+                            android:text="@string/forex_task_openMoney"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_five_zero"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/dp_five"
+                            android:gravity="center_vertical"
+                            android:text="@string/boc_noopen"
+                            android:textColor="@color/tasktitle" />
+
+                        <ImageView
+                            style="@style/rightbtn_jiantou_imageView"
+                            android:layout_marginRight="@dimen/dp_five"
+                            android:focusable="false"
+                            android:src="@drawable/right_arrow" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/forex_money_text_hide"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/common_row_margin"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:background="@drawable/bg_for_task_write"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/bond_tt_oped2"
+                            style="@style/btn_common_oneline"
+                            android:layout_height="@dimen/dp_five_zero"
+                            android:layout_gravity="center"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/fill_margin_left"
+                            android:text="@string/forex_task_openMoney"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_five_zero"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/dp_five"
+                            android:gravity="center_vertical"
+                            android:text="@string/boc_open"
+                            android:textColor="@color/tasktitle" />
+
+                        <ImageView
+                            style="@style/rightbtn_jiantou_imageView"
+                            android:layout_marginRight="@dimen/dp_five"
+                            android:src="@drawable/right_arrow"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/forex_acc_button_show"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/common_row_margin"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:background="@drawable/bg_for_task"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/forex_acc_button"
+                            style="@style/btn_common_oneline"
+                            android:layout_height="@dimen/dp_five_zero"
+                            android:layout_gravity="center"
+                            android:background="@color/transparent_00"
+                            android:focusable="false"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/fill_margin_left"
+                            android:text="@string/finc_setaccOrregistAcc"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_five_zero"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/dp_five"
+                            android:gravity="center_vertical"
+                            android:text="@string/finc_acc_notopened"
+                            android:textColor="@color/tasktitle" />
+
+                        <ImageView
+                            style="@style/rightbtn_jiantou_imageView"
+                            android:layout_marginRight="@dimen/dp_five"
+                            android:focusable="false"
+                            android:src="@drawable/right_arrow" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/forex_acc_text_hide"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/common_row_margin"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:background="@drawable/bg_for_task_write"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/bond_tt_oped1"
+                            style="@style/btn_common_oneline"
+                            android:layout_height="@dimen/dp_five_zero"
+                            android:layout_gravity="center"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/fill_margin_left"
+                            android:text="@string/finc_setaccOrregistAcc"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_five_zero"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/dp_five"
+                            android:gravity="center_vertical"
+                            android:text="@string/finc_acc_opened"
+                            android:textColor="@color/tasktitle" />
+
+                        <ImageView
+                            style="@style/rightbtn_jiantou_imageView"
+                            android:layout_marginRight="@dimen/dp_five"
+                            android:src="@drawable/right_arrow"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/finc_risk_button_show"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/common_row_margin"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:background="@drawable/bg_for_task"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/finc_risktest_button"
+                            style="@style/btn_common_oneline"
+                            android:layout_height="@dimen/dp_five_zero"
+                            android:layout_gravity="center"
+                            android:background="@color/transparent_00"
+                            android:focusable="false"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/fill_margin_left"
+                            android:text="@string/finc_risktest"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_five_zero"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/dp_five"
+                            android:gravity="center_vertical"
+                            android:text="@string/finc_risk_notopened"
+                            android:textColor="@color/tasktitle" />
+
+                        <ImageView
+                            style="@style/rightbtn_jiantou_imageView"
+                            android:layout_marginRight="@dimen/dp_five"
+                            android:focusable="false"
+                            android:src="@drawable/right_arrow" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/finc_risk_text_hide"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/common_row_margin"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:background="@drawable/bg_for_task_write"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/btn_common_oneline"
+                            android:layout_height="@dimen/dp_five_zero"
+                            android:layout_gravity="center"
+                            android:gravity="left|center_vertical"
+                            android:paddingLeft="@dimen/fill_margin_left"
+                            android:text="@string/finc_risktest"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_five_zero"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/dp_five"
+                            android:gravity="center_vertical"
+                            android:text="@string/finc_risk_opened"
+                            android:textColor="@color/tasktitle" />
+
+                        <ImageView
+                            style="@style/rightbtn_jiantou_imageView"
+                            android:layout_marginRight="@dimen/dp_five"
+                            android:src="@drawable/right_arrow"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/boc_common_bg_color">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom"
+            android:scrollbars="none"
+            android:overScrollMode="never">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <com.boc.bocsoft.mobile.bocmobile.buss.longshortforex.balanceenquiry.ui.balanceenquirylistview.BalanceEnquiryListView
+                android:id="@+id/lv_balance_query"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:listSelector="@android:color/transparent"
+                android:overScrollMode="never" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@color/boc_common_bg_color" />
+            </LinearLayout>
+        </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/no_data_query"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:visibility="gone">
+        <ImageView
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:background="@drawable/boc_icon_no_product"
+            android:layout_gravity="center"/>
+        <TextView
+            android:id="@+id/no_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/boc_space_between_50px"
+            android:layout_gravity="center"
+            android:text="@string/boc_long_short_forex_account_remian"
+            android:textColor="@color/boc_text_color_rest_gray"
+            android:textSize="@dimen/boc_text_size_small"/>
+        </LinearLayout>>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_back"
+        style="@style/fund_detail_red_btn"
+        android:text="@string/boc_long_short_forex_cash_deposit_trans"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"/>
+</RelativeLayout>

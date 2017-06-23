@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 跨行资金归集设置页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   style="@style/style_match_match"
+    android:background="@color/white"
+    android:layout_gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/common_bottom_padding"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnnext"
+            style="@style/bottombtn"
+            android:text="@string/next" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_tl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_btn"
+        android:layout_marginBottom="@dimen/leftMenuHW"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_marginTop="@dimen/rightbtnW"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/rightbtnW"
+            android:padding="@dimen/common_row_margin" >
+
+            <LinearLayout
+                style="@style/style_match_wrap"
+                android:orientation="vertical" >
+
+                <com.chinamworld.bocmbci.userwidget.LabelTextView
+                    android:id="@+id/label_collectaccount"
+                    style="@style/style_match_wrap"
+                    android:layout_marginTop="10dp"
+                    app:labelText="@string/collect_payee_account"
+                    app:weightShowRate="2:3" />
+
+                <com.chinamworld.bocmbci.userwidget.LabelTextView
+                    android:id="@+id/label_bycollectaccount"
+                    style="@style/style_match_wrap"
+                    android:layout_marginTop="10dp"
+                    app:labelText="@string/collect_payer_account"
+                    app:weightShowRate="2:3" />
+
+                <com.chinamworld.bocmbci.userwidget.LabelTextView
+                    android:id="@+id/label_bycollectaccountname"
+                    style="@style/style_match_wrap"
+                    android:layout_marginTop="10dp"
+                    app:labelText="@string/collect_payer_account_name"
+                    app:weightShowRate="2:3" />
+
+                <com.chinamworld.bocmbci.userwidget.LabelTextView
+                    android:id="@+id/label_bycollectaccountbank"
+                    style="@style/style_match_wrap"
+                    android:layout_marginTop="10dp"
+                    app:labelText="@string/collect_payer_account_bank"
+                    app:weightShowRate="2:3" />
+
+                <com.chinamworld.bocmbci.userwidget.LabelTextView
+                    android:id="@+id/label_canset_treatynum"
+                    style="@style/style_match_wrap"
+                    android:layout_marginTop="10dp"
+                    app:labelText="@string/assetmanager_cansetservice_interbankcollect_treatynum"
+                    app:weightShowRate="2:3" />
+
+                <LinearLayout
+                    android:id="@+id/lyt_canset_pqytreatynum"
+                    style="@style/style_match_wrap"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:singleLine="true"
+                        android:text="@string/assetmanager_cansetservice_interbankcollect_ptytreatynum" />
+
+                    <TextView
+                        android:id="@+id/tv_canset_pqytreatynum"
+                        style="@style/comm_view_right"
+                        android:layout_weight="2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/style_match_wrap"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:singleLine="true"
+                        android:text="@string/collect_mode" />
+
+                    <Spinner
+                        android:id="@+id/sp_collectmethod"
+                        style="@style/Spiiner_fill_big"
+                        android:layout_weight="2"
+                        android:background="@drawable/bg_spinner" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_leaveamout"
+                    style="@style/style_match_wrap"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tv_amount"
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:singleLine="true"
+                        android:text="@string/collect_retain_amount" />
+
+                    <EditText
+                        android:id="@+id/et_amount"
+                        style="@style/edittext_inputNumber_fill"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:inputType="numberDecimal"
+                        android:maxLength="14"
+                        android:gravity="center_vertical"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/style_match_wrap"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:singleLine="true"
+                        android:text="归集周期：" />
+
+                    <Spinner
+                        android:id="@+id/sp_collectperiod"
+                        style="@style/Spiiner_fill_big"
+                        android:layout_weight="2"
+                        android:background="@drawable/bg_spinner" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyt_collect_rule_code"
+                    style="@style/style_match_wrap"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:singleLine="true"
+                        android:text="@string/collect_rule_code" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2" >
+
+                        <Spinner
+                            android:id="@+id/sp_collect_rule_code"
+                            style="@style/Spiiner_fill_big"
+                            android:layout_toLeftOf="@+id/iv_rule_code" />
+
+                        <ImageView
+                            android:id="@+id/iv_rule_code"
+                            android:layout_width="@dimen/dp_three_zero"
+                            android:layout_height="@dimen/dp_three_zero"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:padding="@dimen/dp_five"
+                            android:src="@drawable/icon_prompt"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fill_margin_left"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <CheckBox
+                        android:id="@+id/rbtn_canset_issendtelenum"
+                        android:layout_width="@dimen/checkboxWH"
+                        android:layout_height="@dimen/checkboxWH"
+                        android:background="@drawable/save_phone_checkbox_selector"
+                        android:button="@null"
+                        android:checked="false" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common_row_margin_half"
+                        android:singleLine="true"
+                        android:text="@string/assetmanager_cansetservice_interbankcollect_sendcollecternum"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" >
+                    </TextView>
+                </LinearLayout>
+
+                <com.chinamworld.bocmbci.userwidget.LabelTextView
+                    android:id="@+id/label_collecttelenumber"
+                    style="@style/style_match_wrap"
+                    android:layout_marginTop="10dp"
+                    app:labelText="归集人手机号："
+                    app:weightShowRate="2:3" />
+
+                <TextView
+                    android:id="@+id/tv_alter"
+                    style="@style/style_match_wrap"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/gray" />
+
+                <LinearLayout
+                    android:id="@+id/lyt_canset_treaty"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fill_margin_left"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <CheckBox
+                        android:id="@+id/rbt_canset_chosetreaty"
+                        android:layout_width="@dimen/checkboxWH"
+                        android:layout_height="@dimen/checkboxWH"
+                        android:background="@drawable/save_phone_checkbox_selector"
+                        android:button="@null" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/common_row_margin_half"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/findpwd_tv_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/already_read"
+                            android:textSize="@dimen/textsize_one_two" />
+
+                        <TextView
+                            android:id="@+id/tv_canset_treatyTitle"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/textsize_one_two" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

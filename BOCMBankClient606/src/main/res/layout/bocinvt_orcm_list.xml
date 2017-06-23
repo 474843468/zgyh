@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 中银理财  我的理财产品列表信息页  wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/sort_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_row_margin"
+            android:layout_marginLeft="@dimen/common_row_margin"
+            android:layout_marginRight="@dimen/common_row_margin" 
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/sort_limit"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/common_row_margin"
+                android:layout_marginRight="@dimen/common_row_margin"
+                android:text="@string/currency_cashremit_jybz" />
+
+            <View
+                android:id="@+id/v1"
+                android:layout_width="1dip"
+                android:layout_height="@dimen/common_details_messages_margintop"
+                android:layout_toLeftOf="@+id/sort_limit"
+                android:background="@color/gray" />
+
+            <View
+                android:id="@+id/v2"
+                android:layout_width="1dip"
+                android:layout_height="@dimen/common_details_messages_margintop"
+                android:layout_toRightOf="@+id/sort_limit"
+                android:background="@color/gray" />
+
+            <TextView
+                android:id="@+id/sort_buystartingamount"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/common_row_margin"
+                android:layout_toLeftOf="@id/v1"
+                android:text="@string/prod_name" />
+
+            <TextView
+                android:id="@+id/sort_yearlyrr"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/common_row_margin"
+                android:layout_toRightOf="@+id/v2"
+                android:text="@string/forex_emg_licaijingli" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/listview"
+            style="@style/listviewcomm_wrap_haveDivider" >
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>

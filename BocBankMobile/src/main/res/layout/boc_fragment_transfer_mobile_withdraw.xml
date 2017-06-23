@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/boc_space_between_20px">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/boc_space_between_20px"
+        android:paddingRight="@dimen/boc_space_between_20px">
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditClearWidget
+            android:id="@+id/edit_clear_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_104px"
+            app:editClearHint="@string/boc_transfer_hint_input"
+            app:editClearName="@string/boc_transfer_mobile_withdraw_name" />
+
+        <include layout="@layout/boc_divide_line" />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditClearWidget
+            android:id="@+id/edit_clear_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_104px"
+            app:editClearHint="@string/boc_transfer_hint_input"
+            app:editClearName="@string/boc_transfer_mobile_withdraw_phone" />
+
+        <include layout="@layout/boc_divide_line" />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditClearWidget
+            android:id="@+id/edit_clear_num"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_104px"
+            app:editClearHint="@string/boc_transfer_hint_input"
+            app:editClearName="@string/boc_transfer_mobile_withdraw_num" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        style="@style/BocButton.BocPrimaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_88px"
+        android:layout_marginTop="@dimen/boc_space_between_80px"
+        android:text="@string/boc_common_next" />
+
+</LinearLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 中银理财 投资协议 修改页面 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 协议修改 修改信息填写页面 -->
+
+    <LinearLayout
+        android:id="@+id/agr_modify_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <com.chinamworld.bocmbci.userwidget.TitleAndContentLayout
+            android:id="@+id/agr_modify_main_info"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_right"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/agrmodifymain_confirm"
+                style="@style/bottombtn"
+                android:background="@drawable/btn_red_big"
+                android:text="@string/next" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 协议修改 信息确认页面 -->
+
+    <LinearLayout
+        android:id="@+id/modifyInfoconfirm_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <com.chinamworld.bocmbci.userwidget.TitleAndContentLayout
+            android:id="@+id/agr_modify_info_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+            
+            <!-- 确认页面提示信息 -->
+            <LinearLayout android:id="@+id/modify_confirm_info_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_margin="10dp">
+                <TextView 
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/please_confirm_modify_info"
+                    android:textColor="@color/gray"
+                    android:textSize="15sp"/>
+                
+            </LinearLayout>
+
+            <!-- 修改成功页面的图标布局 -->
+
+            <LinearLayout
+                android:id="@+id/modify_success_ima"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/riskimageHeight"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:src="@drawable/chenggong" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="操作成功"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimen_two_zero"
+                android:paddingBottom="@dimen/dp_five"
+                android:paddingTop="@dimen/dp_five" >
+
+                <LinearLayout
+                    android:id="@+id/mycontainerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </ScrollView>
+        </com.chinamworld.bocmbci.userwidget.TitleAndContentLayout>
+        <!-- 修改信息确认页面按钮 -->
+
+        <LinearLayout
+            android:id="@+id/agrmodify_infoconfirm_btn_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_right"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/agrmodify_infoconfirm_confirm"
+                style="@style/bottombtn"
+                android:background="@drawable/btn_red_big"
+                android:text="@string/confirm" />
+        </LinearLayout>
+        <!-- 修改成功页面 完成按钮 -->
+
+        <LinearLayout
+            android:id="@+id/agrmodify_success_btn_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/agrmodify_finish"
+                style="@style/bottombtn"
+                android:background="@drawable/btn_red_big"
+                android:text="@string/finish" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

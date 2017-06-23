@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:user="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_bottom_padding_new"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <!-- 底部刷新时间，业务修改不需要 -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sbremit_quotations_lv_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer_layout"
+        android:background="@color/white"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/lv_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:paddingBottom="@dimen/common_row_margin"
+            android:paddingTop="@dimen/common_row_margin" >
+
+            <RelativeLayout
+                android:id="@+id/shang"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/prms_price_top_height"
+                 >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/prms_price_top_height"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/listiterm_padding_left" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/prms_price_buyrate"
+                                android:textSize="@dimen/textsize_one_three" />
+
+                            <TextView
+                                android:id="@+id/prms_price_listiterm1_buyprice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/common_listview_item_paddingLR"
+                                android:gravity="center"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/textsize_one_three"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/prms_price_listiterm1_buyflag"
+                            android:layout_width="@dimen/prms_updownflag_widhth"
+                            android:layout_height="@dimen/prms_updownflag_widhth"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/prms_updownflag_margin_left"
+                            android:src="@drawable/shangsheng"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_margin="@dimen/common_listview_item_paddingLR"
+                        android:background="@drawable/fengexian"
+                        android:visibility="invisible" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/prms_price_salerate"
+                                android:textSize="@dimen/textsize_one_three" />
+
+                            <TextView
+                                android:id="@+id/prms_price_listiterm1_saleprice"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/prms_updownflag_margin_left"
+                                android:layout_marginTop="@dimen/common_listview_item_paddingLR"
+                                android:gravity="center"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/textsize_one_three"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/prms_price_listiterm1_saleflag"
+                            android:layout_width="@dimen/prms_updownflag_widhth"
+                            android:layout_height="@dimen/prms_updownflag_widhth"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                            android:src="@drawable/shangsheng"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv"
+                    android:layout_width="40dp"
+                    android:layout_height="@dimen/prms_zoushitu_height"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/prms_zoushitu_height"
+                    android:background="@drawable/zoushituanniu"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/prms_price_listiterm1_sourceCurrency_bg"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/prms_price_bottom_height"
+                android:layout_below="@id/shang"
+                android:layout_marginTop="@dimen/common_listview_item_paddingLR_fu"
+                android:background="#e6e6e6"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/goldbounsblack" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/prms_price_bottom_height"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="人民币金/人民币元"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/prms_price_listiterm1_sourceCurrency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/prms_price_bottom_height"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:text="（积利金）"
+                    android:textSize="@dimen/textsize_default" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/common_row_margin"
+            android:paddingLeft="@dimen/fill_margin_left"
+            android:paddingRight="@dimen/fill_margin_right"
+            android:paddingTop="@dimen/common_row_margin"
+            android:visibility="visible" >
+
+            <include layout="@layout/goldbouns_title_with_refresh_btn" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titlebackbtn_width"
+            android:layout_marginBottom="@dimen/fill_margin_left_fu"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/textview_common"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/common_row_margin"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="产品名称" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_issueRate"
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_row_margin"
+                    android:singleLine="true"
+                    android:text="年化利率" />
+
+                <ImageView
+                    android:id="@+id/start_date_refreash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/bocinvt_sort_down" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="@color/gray_line" />
+
+        <ListView
+            android:id="@+id/gold_bouns_lv"
+            style="@style/listviewcomm_fill_gray_divider"
+            android:background="@color/white"
+            android:choiceMode="none"
+            android:scrollbars="none" />
+    </LinearLayout>
+
+</RelativeLayout>

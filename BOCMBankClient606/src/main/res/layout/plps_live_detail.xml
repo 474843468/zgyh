@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_blue_big"
+            android:onClick="deleteOnclick"
+            android:text="@string/plps_btn_delete"
+            android:textColor="@color/white" />
+
+        <Button
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:onClick="continuePayOnclick"
+            android:text="@string/plps_btn_continuepay"
+            android:textColor="@color/white" />
+    </LinearLayout> -->
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:orientation="horizontal" >
+		<Button 
+		    android:id="@+id/continuep"
+		    style="@style/dialogbtn"
+		    android:text="@string/plps_btn_continuepay"
+		    android:background="@drawable/btn_red_big"
+		    />
+		<Button 
+		    android:id="@+id/addof"
+		    style="@style/dialogbtn"
+		    android:text="@string/plps_btn_commonused"
+		    android:background="@drawable/btn_red_big"
+		    />
+        <Button
+            android:id="@+id/confirm"
+            style="@style/dialogbtn"
+            android:text="@string/plps_btn_dele" 
+            android:onClick="deleteOnclick"
+            android:background="@drawable/btn_red_big"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/prms_scrollView1_layout"
+        style="@style/scrollview_comm_havemarginbutton"
+        android:layout_above="@id/btn_layout"
+        android:paddingLeft="0dip"
+        android:paddingRight="0dip" >
+
+        <LinearLayout
+            style="@style/confirm_main_style"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                style="@style/linnerlayout_common"
+                android:layout_marginTop="15dip" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plps_pay_time"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/paydate"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:ellipsize="end" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plps_province"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/province"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plps_city"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/city"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plps_service_name"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/servicename"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plps_shanghu_name"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/flowName"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR" />
+            </LinearLayout>
+            
+            
+            <LinearLayout style="@style/linnerlayout_common"
+                android:gravity="left" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plps_summary"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/summary"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_details_title_height" >
+
+        <TextView
+            android:layout_width="@dimen/common_details_title_width"
+            android:layout_height="@dimen/left_img_width"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_title"
+            android:gravity="center"
+            android:paddingRight="@dimen/btnpaddingtb"
+            android:text="信息详情"
+            android:textSize="@dimen/textsize_default" />
+    </RelativeLayout>
+
+</RelativeLayout>

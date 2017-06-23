@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 中银理财  收益累进 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="15dip"
+        android:background="#e6e6e6">
+
+        <LinearLayout
+            android:id="@+id/layout_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1.0"
+            android:orientation="horizontal" 
+            android:layout_marginTop="5dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/prodName"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <TextView
+                android:id="@+id/product_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_code"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1.0"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dip"
+            android:layout_marginBottom="5dip" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/prodCode"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <TextView
+                android:id="@+id/product_code"
+                style="@style/comm_view_right"
+                android:layout_width="wrap_content"
+                android:paddingLeft="0dip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout"
+          android:layout_above="@+id/button_layout"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:layout_margin="@dimen/fill_margin_top"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titlebackbtn_width"
+            android:gravity="center_vertical"
+            android:background="#ebebeb"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/boci_holdtime"
+                style="@style/textview_common"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/common_row_margin_half"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/bocinvt_holdtime" />
+
+            <TextView
+                android:id="@+id/boci_yearlyRR"
+                style="@style/textview_common"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.4"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/progression_yearlyRR" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="@color/gray_line" />
+
+        <ListView
+            android:id="@+id/progression_list"
+            style="@style/listviewcomm_fill_gray_divider" />
+    </LinearLayout>
+    
+    <LinearLayout
+            android:id="@+id/button_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:paddingBottom="@dimen/common_bottom_padding_new"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+               android:id="@+id/btnconfirm"
+                style="@style/bottombtn"
+                android:text="@string/confirm"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+</RelativeLayout>

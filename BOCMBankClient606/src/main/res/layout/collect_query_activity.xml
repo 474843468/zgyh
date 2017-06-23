@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 跨行资金归集页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/collect_query_layout"
+    android:layout_width="match_parent"
+    android:visibility="visible"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/layout_the_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/collect_query"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_bg_query_j"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/fill_margin_top"
+            android:paddingLeft="@dimen/fill_padding_left"
+            android:paddingTop="@dimen/fill_margin_top" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/label_third_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/remit_query_time"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/collect_query_cdnumber_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/fill_padding_left"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/img_arrow_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="@dimen/fill_padding_left"
+                    android:padding="@dimen/dp_five" >
+
+                    <TextView
+                        style="@style/textview_common_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_one_zero" />
+
+                    <ImageView
+                        android:layout_width="@dimen/img_up_width"
+                        android:layout_height="@dimen/img_up_width"
+                        android:src="@drawable/img_arrow_gray_down" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/collect_account_list_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/layout_the_top"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_right"
+        android:layout_marginBottom="@dimen/fill_margin_bottom"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/dept_notmg_querylist"
+            style="@style/listviewcomm_fill_haveDivider" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_collect_query_notify_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/layout_the_top"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/fill_padding_left"
+        android:layout_marginRight="@dimen/fill_padding_left"
+        android:gravity="center"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/textsize_default"
+        android:visibility="gone" />
+
+</RelativeLayout>

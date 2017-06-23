@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 转账ATM取款选账户 wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/tv_acc_lose_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_step"
+        android:paddingTop="@dimen/dp_five"
+        android:text="@string/trans_atm_choose_title"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/textsize_default" />
+
+    <Button
+        android:id="@+id/btn_confirm"
+        style="@style/bottombtn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/common_bottom_padding"
+        android:layout_marginTop="@dimen/dp_five"
+        android:text="@string/next" />
+
+    <ListView
+        android:id="@+id/acc_accountlist"
+        style="@style/listviewcomm_fill_haveDivider"
+        android:layout_above="@+id/dept_save_regular_bottom"
+        android:layout_below="@+id/tv_acc_lose_title"
+        android:layout_marginTop="@dimen/dp_five" >
+    </ListView>
+
+    <!-- 下标题 -->
+
+    <LinearLayout
+        android:id="@+id/dept_save_regular_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_confirm"
+        android:layout_marginTop="@dimen/dp_five"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/dept_save_title_tv"
+            style="@style/tran_little_title_tv" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" 
+            android:background="#ffffff">
+
+            <ImageView
+                android:id="@+id/remit_input_prompt"
+                android:layout_width="@dimen/shap_of_commrequestopen_pdl"
+                android:layout_height="@dimen/shap_of_commrequestopen_pdl"
+                android:layout_marginTop="@dimen/dp_two"
+                android:background="@drawable/remit_input_prompt"
+                android:gravity="center" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_two"
+                android:background="#ffffff"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fill_input_prompt"
+                    android:paddingRight="@dimen/fill_padding_top"
+                    android:paddingBottom="@dimen/fill_padding_top"
+                    android:text="@string/remit_input_prompt1"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_one_three" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/fill_padding_top"
+                    android:paddingLeft="@dimen/fill_input_prompt"
+                    android:paddingRight="@dimen/fill_padding_top"
+                    android:text="@string/remit_input_prompt2"
+                    android:visibility="gone"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_one_three" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

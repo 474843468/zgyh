@@ -1,0 +1,49 @@
+<div class="wrap wrap-justhead">
+    <header class="page-head">
+        <!--<img src="images/back-icon.png" def_event="{click:'onBack'}">-->
+        <div class="back-img"  def_event="{click: 'backStackView'}"><img src="images/back-icon.png"></div>
+        <h1>确认信息</h1>
+    </header>
+    <section>
+        <!--确认页开始-->
+        <div class="confirm">
+            <div class="confirm-top">
+                <ul>
+                    <li>
+                        <span>纪念币名称</span>
+                        <span><%=data.productName%></span>
+                    </li>
+                    <li>
+                        <span>预约数量</span>
+                        <span><%=data.count%></span>
+                    </li>
+                    <li>
+                        <span>客户姓名</span>
+                        <span><%=data.name%></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="confirm-input">
+                <ul>
+                    <li>
+                        <span>验证码</span>
+                        <input class="trad-text trad-text-ui code" type="text" placeholder="请输入" name="" id="cancle-code" maxlength="4" validate="{'required':true}" tips="图形验证码不能为空,图形验证码格式有误">
+                        <div class="confirm-code"><img id="codePic" class="trad-pic trad-pic-ui" src="" def_event="{click:'onGetCode'}"></div>
+                    </li>
+                    <li class="trad-code-wrap">
+                        <span>手机交易码</span>
+                        <input class="trad-text trad-text-ui" type="password"  maxlength="6" validate="{required:true,regSms:'regSms'}" tips="短信验证码不能为空, 短信验证码格式错误" placeholder="请输入" name="" id="mobileCode">
+                        <!--获取验证码-->
+                        <div class="trad-code"><a id="codeCancelButton" def_event="{click:'onGetMobileCode'}">获取验证码</a></div>
+                        <!--重新发送-->
+                        <!--<div class="trad-code trad-code-after"><a>60s后重发</a></div>-->
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="body-btn">
+            <button def_event="{click:'onCancelConfirm'}">确认</button>
+        </div>
+        <!--确认页结束-->
+    </section>
+</div>

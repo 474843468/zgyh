@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:orientation="vertical"
+>
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/boc_divider_1px"
+      android:background="#dadada"/>
+  <android.support.v4.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="#fefefe"
+  >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clipChildren="false"
+    >
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/boc_space_between_20px"
+          android:background="#efefef"/>
+
+      <TextView
+          android:id="@+id/tv_total"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:layout_gravity="center_horizontal"
+          android:paddingBottom="4dp"
+          android:paddingLeft="6dp"
+          android:paddingRight="8dp"
+          android:paddingTop="4dp"
+          android:textStyle="bold"
+          android:textColor="@color/boc_text_color_dark_gray"
+          android:textSize="@dimen/boc_text_size_common"
+          android:background="@drawable/boc_bg_round_light_grey"
+          android:layout_marginTop="@dimen/boc_space_between_50px"
+      />
+
+      <com.boc.bocsoft.mobile.bocmobile.buss.system.invest.ui.view.PieChartView
+          android:id="@+id/view_pie"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+      />
+
+      <com.boc.bocsoft.mobile.bocmobile.buss.system.invest.ui.view.PieInfoView
+          android:id="@+id/view_pieinfo"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/view_pie"
+          android:layout_marginBottom="@dimen/boc_space_between_40px"
+          android:layout_marginTop="@dimen/boc_space_between_30px"/>
+
+    </LinearLayout>
+
+
+  </android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/boc_common_bg_color"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include layout="@layout/boc_divide_line"/>
+    <ScrollView
+        android:scrollbars="none"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_marginTop="@dimen/boc_space_between_20px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--头部-->
+            <com.boc.bocsoft.mobile.bocmobile.buss.creditcard.myinstallment.widget.DetailHeaderView
+                android:id="@+id/installment_detail_header"
+                android:layout_marginBottom="@dimen/boc_space_between_20px"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailContentView
+                android:id="@+id/installment_detail_content1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailContentView
+                android:layout_marginTop="@dimen/boc_space_between_20px"
+                android:id="@+id/installment_detail_content2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/boc_divide_line"/>
+
+        <TextView
+            android:id="@+id/installment_pay_advance"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_96px"
+            android:background="@color/boc_common_cell_color"
+            android:gravity="center"
+            android:text="提前结清入账"
+            android:textColor="@color/boc_main_button_color"
+            android:textSize="@dimen/boc_text_size_little_big"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/boc_common_cell_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_120px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/boc_qrpay_pay_input_pwd_tip"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:textSize="@dimen/boc_text_size_little_big" />
+
+        <ImageView
+            android:id="@+id/btn_qrpay_dialog_cancel"
+            android:layout_width="@dimen/boc_space_between_50px"
+            android:layout_height="@dimen/boc_space_between_50px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/boc_space_between_30px"
+            android:scaleType="center"
+            android:src="@drawable/boc_btn_close" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/boc_divide_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/boc_space_between_30px"
+        android:paddingRight="@dimen/boc_space_between_30px">
+
+        <TextView
+            android:id="@+id/btn_qrpay_dialog_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/boc_space_between_30px"
+            android:gravity="center_horizontal"
+            android:text="向 商户名称 转账"
+            android:textColor="@color/boc_text_color_common_gray"
+            android:textSize="@dimen/boc_text_size_common" />
+
+        <TextView
+            android:id="@+id/btn_qrpay_dialog_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/boc_space_between_30px"
+            android:gravity="center_horizontal"
+            android:text="300.00"
+            android:textColor="@color/boc_text_color_common_gray"
+            android:textSize="@dimen/boc_text_size_supper_big"
+            android:textStyle="bold" />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.dialogview.securityverify.CFCAEditTextView
+            android:id="@+id/btn_qrpay_dialog_cfc"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_80px"
+            android:layout_marginBottom="@dimen/boc_space_between_60px"
+            android:layout_marginTop="@dimen/boc_space_between_40px"
+            android:gravity="center_vertical"
+            app:isPasswordAppear="true"
+            app:passwordLength="6" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

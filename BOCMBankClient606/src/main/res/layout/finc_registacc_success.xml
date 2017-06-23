@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账户贵金属  交易限额设定 确认页面 xyl -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/common_bottom_padding" >
+
+    <include
+        android:id="@+id/stepbar"
+        layout="@layout/step_title_layout" />
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/finc_confirm_btn"
+            style="@style/bottombtn_606"
+            android:text="@string/finish"
+             />
+    </LinearLayout>
+
+    <ScrollView
+        style="@style/scrollview_comm_havemarginbutton"
+        android:layout_above="@id/btn_layout"
+        android:layout_below="@id/stepbar" >
+
+        <LinearLayout
+            style="@style/confirm_main_style"
+            android:orientation="vertical" >
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_info_textview_style"
+                    android:text="@string/finc_acc_regisitAcc_success_info" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/finc_monyacc_colon" />
+
+                <TextView
+                    android:id="@+id/fund_accNum_tv"
+                    style="@style/confirm_right_textview_style606" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/prms_acctype" />
+
+                <TextView
+                    android:id="@+id/fund_accType_tv"
+                    style="@style/confirm_right_textview_style606" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" 
+                android:visibility="gone"
+                >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/finc_addresstype_colon" />
+
+                <TextView
+                    android:id="@+id/fund_addresstype_tv"
+                    style="@style/confirm_right_textview_style606" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

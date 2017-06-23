@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 贷款管理  贷款提前还款测算结果 wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp_five"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/common_bottom_padding" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnLoanRepayReelect"
+                style="@style/btn_common_oneline"
+                android:background="@drawable/btn_red_big"
+                android:text="@string/btnLoanRepayReelect"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_default" />
+
+            <Button
+                android:id="@+id/btnLoanRepayMatch"
+                style="@style/btn_common_oneline"
+                android:background="@drawable/btn_red_big"
+                android:text="@string/btnLoanRepayMatch"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_default" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_btn"
+        android:layout_marginTop="@dimen/top_title_ka"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_five" >
+
+        <TextView
+            style="@style/titleText_step2"
+            android:layout_width="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/detail"
+            android:textColor="@color/black"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/ll_repayAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_loan_repayAmount"
+                style="@style/textview_common_left"
+                android:text="@string/loan_repayAmount" />
+
+            <TextView
+                android:id="@+id/loan_repayAmount_value"
+                style="@style/textview_common_right"
+                android:textColor="@color/red" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_repayAmountInAdvance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_loan_repayAmountInAdvance"
+                style="@style/textview_common_left"
+                android:text="@string/loan_repayAmountInAdvance" />
+
+            <TextView
+                android:id="@+id/loan_repayAmountInAdvance_value"
+                style="@style/textview_common_right"
+                android:textColor="@color/red" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_capitalInAdvance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_loan_capitalInAdvance"
+                style="@style/textview_common_left"
+                android:text="@string/loan_capitalInAdvance" />
+
+            <TextView
+                android:id="@+id/loan_capitalInAdvance_value"
+                style="@style/textview_common_right"
+                android:textColor="@color/red" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_interestInAdvance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_loan_interestInAdvance"
+                style="@style/textview_common_left"
+                android:text="@string/loan_interestInAdvance" />
+
+            <TextView
+                android:id="@+id/loan_interestInAdvance_value"
+                style="@style/textview_common_right"
+                android:textColor="@color/red" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_everyTermAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_loan_everyTermAmount"
+                style="@style/textview_common_left"
+                android:text="@string/loan_everyTermAmount" />
+
+            <TextView
+                android:id="@+id/loan_everyTermAmount_value"
+                style="@style/textview_common_right"
+                android:textColor="@color/red" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_totalIssue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_common_left"
+                android:text="@string/loan_adv_totalIssue" />
+
+            <TextView
+                android:id="@+id/loan_totalIssue_value"
+                style="@style/textview_common_right" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_remainIssueforAdvance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_loan_remainIssueforAdvance"
+                style="@style/textview_common_left"
+                android:text="@string/loan_adv_remainIssueforAdvance" />
+
+            <TextView
+                android:id="@+id/loan_remainIssueforAdvance_value"
+                style="@style/textview_common_right" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_remainAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_common_left"
+                android:text="@string/loan_adv_remainAmount" />
+
+            <TextView
+                android:id="@+id/loan_remainAmount_value"
+                style="@style/textview_common_right"
+                android:textColor="@color/red" >
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/titleText_stepacc"
+        android:layout_width="@dimen/common_details_title_width"
+        android:layout_height="@dimen/left_img_width"
+        android:background="@drawable/bg_title"
+        android:gravity="center"
+        android:text="@string/loan_advance_step2"
+        android:textColor="@color/gray_title" />
+
+</RelativeLayout>

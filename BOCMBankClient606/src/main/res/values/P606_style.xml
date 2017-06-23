@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 换肤样式 -->
+    <!-- 公共样式  页面上面的标头左侧的返回按钮 -->
+    <style name="titlebacktext">
+        <item name="android:layout_width">@dimen/titlebackbtn_width</item>
+        <item name="android:layout_height">@dimen/titlebackbtn_height</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/fill_margin_left</item>
+        <item name="android:background">@drawable/but_bond_title</item>
+    </style>
+    <!-- 标题右侧按钮 -->
+    <style name="titlerighttext">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/titlebackbtn_height</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">@dimen/fill_margin_left</item>
+        <item name="android:background">@drawable/but_bond_title</item>
+    </style>
+
+    <!-- 按钮的通用样式 适用于底部单个按钮独占一行的样式   (如  下一步  完成 按钮) 默认样式背景为蓝色长按钮 -->
+    <style name="bottombtn_new">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/boc_space_between_88px</item>
+        <item name="android:textSize">@dimen/boc_space_between_30px</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/selector_btn_blue</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!-- 短信验证码的样式 -->
+    <style name="button_smscode_new">
+        <item name="android:layout_width">@dimen/dp_five_zero</item>
+        <item name="android:layout_height">@dimen/btn_smscode_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/textsize_default</item>
+        <item name="android:textColor">@color/fonts_blue</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/but_bond_get_smscode</item>
+        <item name="android:text">@string/epay_pub_bt_get_note_code</item>
+    </style>
+    <!--606换肤 双向宝-->
+    <!--标题17号-->
+    <style name="textview_forex_title">
+        <item name="android:textSize">@dimen/fonts_one_seven</item>
+        <item name="android:textColor">@color/fonts_black</item>
+    </style>
+    <!--突出放大字体 20号 加粗-->
+    <style name="textview_forex_info__number">
+        <item name="android:textSize">@dimen/fonts_two_zero</item>
+        <item name="android:textColor">@color/btn_white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!--特别突出放大字体 28号 加粗-->
+    <style name="textview_forex_info_number">
+        <item name="android:textSize">@dimen/font_two_eight</item>
+        <item name="android:textColor">@color/btn_white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!--一个按钮字体 17号 白色-->
+    <style name="textview_forex_button_cell">
+        <item name="android:textSize">@dimen/fonts_one_seven</item>
+        <item name="android:textColor">@color/btn_white</item>
+        <item name="android:background">@drawable/selector_btn_blue</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/btn_height</item>
+        <item name="android:layout_marginLeft">@dimen/btn_left</item>
+        <item name="android:layout_marginRight">@dimen/btn_right</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <!--两个按钮样式 左边白-->
+    <style name="isforex_two_left_btn">
+        <item name="android:layout_height">@dimen/btn_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:textSize">@dimen/fonts_one_seven</item>
+        <item name="android:textColor">@color/fonts_pink</item>
+        <item name="android:layout_marginLeft">@dimen/btn_left</item>
+        <item name="android:background">@drawable/selector_btn_white</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="isforex_two_right_btn">
+        <item name="android:layout_height">@dimen/btn_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:textSize">@dimen/fonts_one_seven</item>
+        <item name="android:textColor">@color/btn_white</item>
+        <item name="android:layout_marginRight">@dimen/btn_left</item>
+        <item name="android:background">@drawable/selector_btn_pink</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <!--手机交易码 获取按钮样式-->
+    <style name="sms_code_btn">
+        <item name="android:layout_width">@dimen/dp_five_zero</item>
+        <item name="android:layout_height">@dimen/btn_smscode_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/fonts_one_seven</item>
+        <item name="android:textColor">@color/btn_white</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@color/btn_blue</item>
+        <item name="android:text">@string/epay_pub_bt_get_note_code</item>
+    </style>
+    <!--安全工具输入框样式-->
+    <style name="sip_edit_fill">
+        <item name="android:layout_height">@dimen/edit_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/bg_for_edittext</item>
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:inputType">number</item>
+    </style>
+    <!--详情内容提示字体-->
+    <!--提示字体 15号 灰色字体-->
+    <style name="textview_forex_prompt_message">
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:textColor">@color/fonts_dark_gray</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">right|center</item>
+        <item name="android:layout_weight">6</item>
+    </style>
+    <!--spinner内容字体 15号-->
+    <style name="spinner_forex_prompt_info">
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:textColor">@color/fonts_black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/spinner_height</item>
+        <item name="android:paddingLeft">@dimen/spinner_padding</item>
+        <item name="android:paddingRight">30dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/bg_spinner_1</item>
+        <item name="android:layout_weight">4</item>
+    </style>
+    <!--editText内容字体 15号-->
+    <style name="edittext_forex_prompt_info">
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:textColor">@color/fonts_black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/edit_height</item>
+
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@drawable/bg_for_edittext</item>
+        <item name="android:layout_weight">4</item>
+    </style>
+    <!--内容字体 15号 黑色字体-->
+    <style name="textview_forex_prompt_info">
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:textColor">@color/fonts_black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">left</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:layout_weight">4</item>
+    </style>
+    <style name="isforex_little_title">
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:color">@color/fonts_dark_gray</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:background">@drawable/bg_title</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">@dimen/title_width</item>
+        <item name="android:layout_height">@dimen/title_height</item>
+    </style>
+    <!--标题内容-->
+    <style name="isforex_little_cell_title">
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:textColor">@color/fonts_dark_gray</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <!-- 公共样式  页面上面的标头左侧的返回按钮 -->
+    <style name="newtitlebackbtn">
+        <item name="android:layout_width">@dimen/titlebackbtn_width</item>
+        <item name="android:layout_height">@dimen/titlebackbtn_height</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/fill_margin_left</item>
+    </style>
+    <!--第三方存管-->
+    <style name="third_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:layout_marginLeft">@dimen/round_radius</item>
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:textColor">@color/fonts_black</item>
+    </style>
+    <!--资金账户-->
+    <style name="third_bank_sele">
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/fonts_two_zero</item>
+        <item name="android:textColor">@color/fonts_ginger_yellow</item>
+    </style>
+    <style name="third_info">
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/round_radius</item>
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:textColor">@color/fonts_dark_gray</item>
+    </style>
+    <!--债券start-->
+    <style name="bond_textview_15_black">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:layout_marginTop">@dimen/dp_five</item>
+        <item name="android:textColor">@color/fonts_black</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="bond_textview_15_dark">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:layout_marginTop">@dimen/dp_five</item>
+        <item name="android:textColor">@color/fonts_dark_gray</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <style name="bond_textview_13_dark">
+        <item name="android:textSize">@dimen/fonts_one_three</item>
+        <item name="android:textColor">@color/fonts_dark_gray</item>
+    </style>
+    <style name="bond_textview_16_red">
+        <item name="android:textSize">@dimen/fonts_one_six</item>
+        <item name="android:textColor">@color/fonts_pink</item>
+    </style>
+    <style name="bond_textview_15_black_1">
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:textColor">@color/fonts_black</item>
+    </style>
+    <style name="bond_tv_15_gray">
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:textColor">@color/fonts_dark_gray</item>
+    </style>
+    <style name="bond_textview_15_black_bold">
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:textColor">@color/fonts_black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!-- 分割线，宽为match_parent、高为1dp -->
+    <style name="bond_style_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/line_light_gray</item>
+    </style>
+    <!--左侧文字：15号灰色-->
+    <style name="bond_tv_15_left">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">6.5</item>
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:textColor">@color/fonts_dark_gray</item>
+        <item name="android:ellipsize">middle</item>
+        <item name="android:gravity">right|center</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <!--右侧文字：15号黑色-->
+    <style name="bond_tv_15_right">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">3.5</item>
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:textColor">@color/fonts_black</item>
+        <item name="android:ellipsize">middle</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <!--spinner内容字体 15号-->
+    <style name="bond_sp_15">
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:textColor">@color/fonts_black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/spinner_height</item>
+        <item name="android:paddingLeft">@dimen/spinner_padding</item>
+        <item name="android:paddingRight">30dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_weight">3.5</item>
+        <item name="android:background">@drawable/bg_spinner</item>
+    </style>
+    <!--spinner内容字体 15号,.9背景-->
+    <style name="bond_sp_15_1">
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:textColor">@color/fonts_black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/spinner_height</item>
+        <!--<item name="android:paddingLeft">@dimen/spinner_padding</item>
+        <item name="android:paddingRight">30dp</item>-->
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_weight">3.5</item>
+        <item name="android:background">@drawable/bg_spinner_1</item>
+    </style>
+    <!--editText内容字体 15号-->
+    <style name="bond_edt_15">
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:textColor">@color/fonts_black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/edit_height</item>
+        <item name="android:inputType">numberDecimal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_weight">3.5</item>
+        <item name="android:background">@drawable/bg_for_edittext</item>
+    </style>
+    <!-- 查询按钮的样式 不带放大镜 纯红色背景 -->
+    <style name="bond_query_btn">
+        <item name="android:layout_width">@dimen/query_btn_width</item>
+        <item name="android:layout_height">@dimen/step_title_height</item>
+        <item name="android:background">@drawable/selector_btn_red</item>
+        <item name="android:text">@string/query</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/textsize_one_three</item>
+    </style>
+    <!--下拉、收起文字按钮-->
+    <style name="style_bond_tv_up_down">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:textColor">@color/share_button_press_res</item>
+    </style>
+    <!--债券end-->
+
+    <!--贵金属start-->
+    <!--内容字体 15号 红色字体-->
+    <style name="textview_prms_prompt_letetitle_info">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">left|center</item>
+        <item name="android:layout_weight">4</item>
+        <item name="android:layout_gravity">left</item>
+    </style>
+    <style name="textview_prms_prompt_middle_info">
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:textColor">@color/fonts_pink</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+    </style>
+    <!--提示字体 15号 灰色字体-->
+    <style name="textview_prms_prompt_dialog_message">
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:textColor">@color/fonts_dark_gray</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">right|center_vertical</item>
+    </style>
+    <style name="textview_prms_prompt_dialog_info">
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:textColor">@color/fonts_black</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+
+    <!--内容字体 15号 黑色字体-->
+    <style name="textview_prms_prompt_end_info">
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:textColor">@color/fonts_black</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+
+    </style>
+
+    <!-- 按钮的通用样式 适用于两个或多个按钮放在一排 -->
+    <style name="share_multi_button">
+        <item name="android:layout_width">@dimen/crcd_common_details_title_width</item>
+        <item name="android:layout_height">@dimen/btn_bottom_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/textsize_one_five</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <!-- 刷新按钮的样式 -->
+    <style name="new_refresh_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/titlebackbtn_height</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/selector_btn_red</item>
+    </style>
+    <!--积利金radiobutton -->
+    <style name="new_radioButtonLeft">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/btn_bottom_height</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/textsize_one_seven</item>
+        <item name="android:textColor">@color/color_radiobtn_new</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/new_radiobtn_left_selector</item>
+        <item name="android:button">@null</item>
+    </style>
+    <style name="new_radioButtonMid">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/btn_bottom_height</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/textsize_one_seven</item>
+        <item name="android:textColor">@color/color_radiobtn_new</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/new_radiobtn_mid_selector</item>
+        <item name="android:button">@null</item>
+    </style>
+    <style name="new_radioButtonRight">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/btn_bottom_height</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/textsize_one_seven</item>
+        <item name="android:textColor">@color/color_radiobtn_new</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/new_radiobtn_right_selector</item>
+        <item name="android:button">@null</item>
+    </style>
+    <!--基金 P606-->
+    <!--详情内容字体 15号 黑色字体-->
+    <style name="textview_finc_detail">
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:textColor">@color/fonts_black</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!--白色 按钮-->
+    <style name="inverst_detail_white_btn">
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:textColor">@color/fonts_pink</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/inverst_btn_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/share_white_button</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <!--红色 按钮-->
+    <style name="inverst_detail_red_btn">
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:textColor">@color/btn_white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/inverst_btn_height</item>
+        <item name="android:background">@drawable/share_red_button</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="finc_detail_zhexian_btn">
+        <item name="android:textSize">@dimen/fonts_one_three</item>
+        <item name="android:textColor">@color/fonts_dark_gray</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/finc_radiobtn_selector</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">@dimen/boc_space_between_10px</item>
+        <item name="android:paddingBottom">@dimen/boc_space_between_10px</item>
+        <item name="android:button">@null</item>
+    </style>
+    <!--字体 13号 灰色字体 加粗-->
+    <style name="finc_text_blod_gray_style13">
+        <item name="android:textSize">@dimen/fonts_one_three</item>
+        <item name="android:textColor">@color/fonts_dark_gray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!--字体 13号 中黑体-->
+    <style name="finc_text_blod_black_style13">
+        <item name="android:textSize">@dimen/fonts_one_three</item>
+        <item name="android:textColor">@color/fonts_black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!--字体 13号 黑色字体 -->
+    <style name="finc_text_style13">
+        <item name="android:textSize">@dimen/fonts_one_three</item>
+        <item name="android:textColor">@color/fonts_black</item>
+    </style>
+
+    <!--左右文本样式 -->
+    <style name="finc_two_textview_style">
+        <item name="android:textSize">@dimen/fonts_one_three</item>
+        <item name="android:textColor">@color/fonts_black</item>
+    </style>
+
+
+    <!--首页行情样式-->
+
+    <!--蓝底白字26px加粗,宽权重为1-->
+    <style name="btn_blue_white_26px_bold">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/lianlong_text_size_small</item>
+        <item name="android:textColor">@color/lianlong_main_button_color</item>
+        <item name="android:background">@color/transparent_00</item>
+    </style>
+    <!--灰色分割线-->
+    <style name="view_split_gray">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/lianlong_text_color_light_gray</item>
+    </style>
+
+
+
+
+    <!-- 606 提示框 按钮的通用样式 适用于通信提示框的按钮 -->
+    <style name="dialogbtnfor_connect_606">
+        <item name="android:layout_width">@dimen/btn_connect_width</item>
+        <item name="android:layout_height">@dimen/btn_dialog_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/textsize_one_seven</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/fund_btn_common_oneline_right_press_state</item>
+    </style>
+
+    <!-- 外汇首页行情列表-->
+    <style name="listview_quotation_list">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:choiceMode">singleChoice</item>
+        <item name="android:dividerHeight">@dimen/default_circle_indicator_stroke_width</item>
+        <item name="android:background">@color/lianlong_text_color_light_gray</item>
+    </style>
+
+    <!-- 外汇首页行情列表 点击按钮-->
+    <style name="quotation_list_button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/btn_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/boc_main_button_color</item>
+        <item name="android:textSize">@dimen/boc_text_size_small</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!--标题 理财改造标文本题统一样式样式 -->
+    <style name="titlestyle_new">
+        <item name="android:textSize">@dimen/fonts_one_seven</item>
+        <item name="android:textColor">@color/fonts_black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/boc_space_between_90px</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!--首页按钮之间分割线样式 -->
+    <style name="inverst_fengexian_vertical">
+        <item name="android:layout_width">@dimen/boc_space_between_2px</item>
+        <item name="android:layout_height">@dimen/boc_space_between_58px</item>
+        <item name="android:background">@color/inverst_fengexian_vertical_color</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!--字体 15号 中黑体-->
+    <style name="inverst_text_blod_black_style15">
+        <item name="android:textSize">@dimen/fonts_one_five</item>
+        <item name="android:textColor">@color/fonts_black</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

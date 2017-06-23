@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:background="@color/boc_common_bg_color"
+              android:orientation="vertical"
+              android:paddingTop="@dimen/boc_space_between_20px"
+             >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_104px"
+        android:layout_marginLeft="@dimen/boc_space_between_30px"
+        android:layout_marginRight="@dimen/boc_space_between_30px"
+        android:background="@color/boc_common_cell_color"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/boc_space_between_30px"
+        android:paddingRight="@dimen/boc_space_between_30px">
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="@dimen/boc_space_between_190px"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="@dimen/boc_space_between_6px"
+            android:text="云闪付卡号"
+            android:textStyle="bold"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:textSize="@dimen/boc_text_size_common"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/text_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:gravity="center_vertical|right"
+            android:text="161261616161"
+            android:paddingLeft="@dimen/boc_space_between_50px"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:textSize="@dimen/boc_text_size_common" />
+
+
+    <include layout="@layout/boc_divide_line"/>
+    </LinearLayout>
+
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputWidget
+        android:id="@+id/quota_single"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/boc_space_between_30px"
+        android:layout_marginRight="@dimen/boc_space_between_30px"
+        app:editChoiceName="单笔交易限额"
+        app:editChoiceNameBold="true" />
+
+
+    <Button
+        android:id="@+id/btn_next"
+        style="@style/BocButton.BocPrimaryButton1"
+        android:layout_width="match_parent"
+        android:text="@string/boc_common_next" />
+
+
+</LinearLayout>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/common_row_margin"
+    android:background="@drawable/bg_for_listview_item_write"
+    android:orientation="vertical" >
+
+    <!-- SWIFT代码 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:layout_marginLeft="@dimen/common_row_margin"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@string/remittance_info_input_swiftCode"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_default" />
+
+        <TextView
+            android:id="@+id/tv_swiftCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_default" />
+    </LinearLayout>
+
+    <!-- 银行名称 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_row_margin"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/tv_keyForBankName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:singleLine="true"
+            android:text="@string/tran_shishi_bankname"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_default" />
+
+        <Button
+            android:id="@+id/tv_choose"
+            android:layout_width="@dimen/dp_six_zero"
+	        android:layout_height="@dimen/step_title_height"
+	        android:layout_alignParentRight="true"
+	        android:layout_marginRight="@dimen/common_row_margin"
+	        android:layout_centerVertical="true"
+	        android:background="@drawable/btn_chaxun_bg"
+	        android:drawablePadding="-10dp"
+	        android:text="选择"
+	        android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_bankname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/tv_choose"
+            android:layout_toRightOf="@id/tv_keyForBankName"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_default" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_push"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/common_listview_item_paddingLR" >
+
+        <TextView
+            style="@style/textview_common_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize_default" />
+
+        <ImageView
+            android:id="@+id/prms_down_imageView"
+            style="@style/query_image_up_style"
+            android:src="@drawable/img_arrow_gray_down" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 银行地址 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/remittance_info_input_bankAddress"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <TextView
+                android:id="@+id/tv_bankAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+        </LinearLayout>
+
+        <!-- 城市 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fill_margin_left"
+                android:singleLine="true"
+                android:text="@string/plps_city"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <TextView
+                android:id="@+id/tv_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+        </LinearLayout>
+
+        <!-- 国家 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_marginLeft="@dimen/fill_margin_left"
+                android:text="@string/remittance_info_input_country1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <TextView
+                android:id="@+id/tv_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+        </LinearLayout>
+
+        <!-- 地址 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_marginLeft="@dimen/fill_margin_left"
+                android:text="@string/remittance_info_input_adress"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <TextView
+                android:id="@+id/tv_adress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_up"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/textview_common_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/textsize_default" />
+
+            <ImageView
+                android:id="@+id/sbremit_query_up"
+                style="@style/query_image_up_style"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:src="@drawable/img_arrow_gray_up" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

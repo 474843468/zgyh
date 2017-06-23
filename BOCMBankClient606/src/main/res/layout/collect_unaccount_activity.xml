@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 未归集账户详情 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content" android:layout_height="wrap_content"
+	android:layout_gravity="center">
+
+	<LinearLayout android:layout_width="match_parent"
+		android:layout_height="match_parent" android:layout_centerInParent="true"
+		android:orientation="vertical">
+
+		<RelativeLayout android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:layout_gravity="center"
+			android:layout_weight="1">
+
+			<LinearLayout android:layout_width="fill_parent"
+				android:layout_height="fill_parent" android:layout_marginTop="@dimen/progress_margin_close"
+				android:background="@drawable/bg_for_listview_item_write"
+				android:orientation="vertical">
+
+				<ScrollView android:layout_width="fill_parent"
+					android:layout_height="fill_parent" android:layout_marginTop="@dimen/dp_three_zero"
+					android:scrollbars="none">
+
+					<LinearLayout android:id="@+id/blpt_main_layout"
+						android:layout_width="fill_parent" android:layout_height="wrap_content"
+						android:orientation="vertical">
+
+						<!-- 项目 start -->
+
+						
+						<TableLayout android:layout_width="match_parent"
+							android:layout_height="match_parent" android:paddingLeft="@dimen/fill_padding_left"
+							android:shrinkColumns="1">
+
+							<TableRow>
+
+								<TextView style="@style/comm_view_left"
+									android:layout_weight="0" android:singleLine="true"
+									android:text="@string/collect_payee_account" />
+
+								<TextView android:id="@+id/tv_payee_account" style="@style/comm_view_right"
+									android:layout_weight="0" android:paddingLeft="0dp"
+									android:singleLine="true" />
+							</TableRow>
+
+							<TableRow android:layout_marginTop="@dimen/common_row_margin">
+
+								<TextView style="@style/comm_view_left"
+									android:layout_weight="0" android:singleLine="true"
+									android:text="@string/collect_payer_account" />
+
+								<TextView android:id="@+id/tv_payer_account" style="@style/comm_view_right"
+									android:layout_weight="0" android:paddingLeft="0dp"
+									android:singleLine="true" />
+							</TableRow>
+
+							<TableRow android:layout_marginTop="@dimen/common_row_margin">
+
+								<TextView style="@style/comm_view_left"
+									android:layout_weight="0" android:singleLine="true"
+									android:text="@string/collect_payer_account_name" />
+
+								<TextView android:id="@+id/tv_payer_name" style="@style/comm_view_right"
+									android:layout_weight="0" android:paddingLeft="0dp"
+									android:singleLine="true" />
+							</TableRow>
+
+							<TableRow android:layout_marginTop="@dimen/common_row_margin">
+
+								<TextView style="@style/comm_view_left"
+									android:layout_weight="0" android:singleLine="true"
+									android:text="@string/collect_payer_account_bank" />
+
+								<TextView android:id="@+id/tv_payer_bank" style="@style/comm_view_right"
+									android:layout_weight="0" android:paddingLeft="0dp"
+									android:singleLine="true" />
+							</TableRow>
+
+							<TableRow android:layout_marginTop="@dimen/common_row_margin">
+
+								<TextView style="@style/comm_view_left"
+									android:layout_weight="0" android:ellipsize="middle"
+									android:singleLine="true" android:text="@string/collect_currency" />
+
+								<TextView   style="@style/comm_view_right"
+									android:layout_weight="0" android:paddingLeft="0dp"
+									android:text="@string/renmingbi"
+									android:singleLine="true" />
+							</TableRow>
+
+							
+
+							<TableRow android:layout_marginTop="@dimen/common_row_margin">
+
+								<TextView android:id="@+id/tv_mobile_label" style="@style/comm_view_left"
+									android:layout_weight="0" android:singleLine="true"
+									android:text="@string/collect_protocol_status" />
+
+								<TextView android:id="@+id/tv_status" style="@style/comm_view_right"
+									android:layout_weight="0" android:paddingLeft="0dp"
+									android:singleLine="true" />
+							</TableRow>
+						</TableLayout>
+
+						<!-- 项目 end -->
+
+					</LinearLayout>
+				</ScrollView>
+			</LinearLayout>
+
+			<TextView android:id="@+id/titleText" android:layout_centerHorizontal="true"
+				android:layout_width="@dimen/collect_unaccount_title"
+				android:layout_height="@dimen/left_img_width"
+				android:layout_gravity="center_horizontal" android:background="@drawable/bg_title"
+				android:gravity="center" android:text="@string/collect_unaccount_detail"
+				android:textColor="@color/gray_title" />
+		</RelativeLayout>
+
+		<LinearLayout android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:layout_marginBottom="@dimen/common_bottom_padding"
+			android:layout_marginTop="@dimen/fill_margin_top"
+			android:layout_weight="0" android:gravity="center"
+			android:orientation="horizontal">
+
+			<Button android:id="@+id/bt_setting" style="@style/btn_common_oneline"
+				android:background="@drawable/btn_red_big" android:text="@string/collect_setting"
+				android:textColor="@color/white" />
+		</LinearLayout>
+	</LinearLayout>
+
+</RelativeLayout>

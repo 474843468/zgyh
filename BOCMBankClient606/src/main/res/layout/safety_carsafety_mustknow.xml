@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 车险—投保须知页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnAgree"
+            style="@style/isforex_two_left_btn"
+            android:text="@string/accept"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btnDisAgree"
+            style="@style/isforex_two_right_btn"
+            android:text="@string/noaccept" />
+    </LinearLayout>
+
+    <RelativeLayout
+        style="@style/scrollview_comm"
+        android:layout_above="@id/btn_layout"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:gravity="center"
+        android:paddingBottom="@dimen/common_row_margin"
+        android:paddingTop="@dimen/common_details_messages_paddingtop" >
+
+        <LinearLayout
+            android:id="@+id/ll_tiaokuan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/common_row_margin"
+            android:layout_marginRight="@dimen/common_row_margin"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_row_margin"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:text="请点击如下链接详细阅读保险条款："
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <TextView
+                android:id="@+id/tv_jqxMustKnow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_row_margin"
+                android:text="1.《机动车交通事故责任强制保险条款》"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/textsize_default" />
+
+            <TextView
+                android:id="@+id/tv_bizMustKnow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.《机动车商业保险条款》"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/textsize_default" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/ll_tiaokuan"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_mustKnow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fill_margin_top"
+                    android:paddingRight="@dimen/fill_margin_top"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

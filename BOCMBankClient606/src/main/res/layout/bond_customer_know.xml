@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 债券用户须知页面   -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_step"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/layout_buttom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/fill_padding_top"
+                android:layout_marginLeft="@dimen/fill_padding_top"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/confirm_info_textview_style"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="8dip"
+                    android:gravity="left"
+                    android:text="服务功能：记账式债券"
+                    android:textColor="@color/black" />
+
+                <LinearLayout
+                    style="@style/just_margin_left_and_right"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/common_row_margin_half"
+                    android:paddingTop="@dimen/common_row_margin_half"
+                    android:visibility="gone" >
+
+                    <CheckBox
+                        android:id="@+id/checkbox"
+                        android:layout_width="@dimen/checkboxWH"
+                        android:layout_height="@dimen/checkboxWH"
+                        android:background="@drawable/save_phone_checkbox_selector"
+                        android:button="@null"
+                        android:visibility="gone" />
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fill_margin_left"
+                        android:text="记账式债券" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_above="@id/layout_buttom"
+                android:layout_marginTop="8dip"
+                android:background="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@id/view"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/blpt_main_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_bill_tip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dip"
+                        android:layout_marginRight="8dip"
+                        android:layout_marginTop="@dimen/fill_padding_top"
+                        android:gravity="center_horizontal"
+                        android:text="@string/bond_customer_xztitle"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <ScrollView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/fill_padding_top"
+                        android:layout_marginLeft="@dimen/fill_padding_top"
+                        android:layout_marginRight="@dimen/fill_padding_top"
+                        android:layout_marginTop="@dimen/btnpaddinglr"
+                        android:scrollbars="none" >
+
+                        <TextView
+                            android:id="@+id/content"
+                            style="@style/confirm_info_textview_style"
+                            android:gravity="left"
+                            android:text="@string/bond_customer_xz"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_default" />
+                    </ScrollView>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fill_margin_top"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnNext"
+                style="@style/bottombtn_new"
+                android:text="@string/next" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

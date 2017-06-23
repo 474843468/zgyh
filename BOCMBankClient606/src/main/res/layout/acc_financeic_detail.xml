@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账户管理  电子现金账户详情弹出框  wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/message_dialog_bg" >
+
+        <ImageView
+            android:id="@+id/img_exit_accdetail_1"
+            android:layout_width="@dimen/btn_dialog_height"
+            android:layout_height="@dimen/btn_dialog_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@color/transparent_00" />
+
+        <LinearLayout
+            android:id="@+id/ll_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dialogbtn_marginTop"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:id="@+id/ll_acc_debibtIc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/fill_margin_right_fordialog"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <Button
+                        android:id="@+id/btn_for_payment"
+                        style="@style/btn_common_oneline_for_dialog"
+                        android:background="@drawable/btn_gray"
+                        android:text="@string/acc_for_payment"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <Button
+                        android:id="@+id/btn_for_the_payment"
+                        style="@style/btn_common_oneline_for_dialog"
+                        android:background="@drawable/btn_gray"
+                        android:text="@string/acc_for_the_payment"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_acc_Ic2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/fill_margin_right_fordialog"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <Button
+                        android:id="@+id/btn_credit_card_payment"
+                        style="@style/bottombtn_fordialog"
+                        android:background="@drawable/btn_gray"
+                        android:text="@string/acc_credit_card_payment"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_acc_Ic3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/fill_margin_right_fordialog"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <Button
+                        android:id="@+id/btn_creditcard_payment"
+                        style="@style/bottombtn_fordialog"
+                        android:background="@drawable/btn_gray"
+                        android:text="@string/acc_credit_card_payment"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <Button
+                        android:id="@+id/btn_creditcard_reimbursement"
+                        style="@style/btn_common_oneline_for_dialog"
+                        android:background="@drawable/btn_gray"
+                        android:text="@string/acc_credit_card_reimbursement"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_acc_Ic4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/fill_margin_right_fordialog"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <Button
+                        android:id="@+id/btn_creat_icsign"
+                        style="@style/bottombtn_fordialog"
+                        android:background="@drawable/btn_gray"
+                        android:text="@string/acc_creat_icsign"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <Button
+                        android:id="@+id/btn_delete_icsign"
+                        style="@style/btn_common_oneline_for_dialog"
+                        android:background="@drawable/btn_gray"
+                        android:text="@string/acc_delete_icsign"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/img_exit_accdetail_1"
+            android:layout_toLeftOf="@+id/img_exit_accdetail_1"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_close_height"
+                android:layout_marginLeft="@dimen/fill_margin_top"
+                android:src="@drawable/icon_huoqi"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_close_height"
+                android:layout_marginLeft="@dimen/fill_margin_top"
+                android:src="@drawable/icon_guijinshu"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <ScrollView
+            style="@style/scrollview_comm"
+            android:layout_above="@+id/ll_btn"
+            android:layout_below="@+id/img_exit_accdetail_1"
+            android:layout_marginRight="@dimen/fill_margin_right_fordialog"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_five"
+            android:paddingRight="@dimen/dp_five" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_acc_accounttype"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/acc_accounttype" />
+
+                    <TextView
+                        android:id="@+id/acc_accounttype_value"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_acc_accountnickname"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/acc_account_nickname" />
+
+                    <FrameLayout
+                        android:id="@+id/fl_nickname"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone" >
+
+                        <EditText
+                            android:id="@+id/et_acc_nickname"
+                            style="@style/edittext_common_fill"
+                            android:layout_gravity="center_vertical"
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:imeOptions="actionDone"
+                            android:maxLength="20"
+                            android:paddingRight="@dimen/btn_smscode_height"
+                            android:singleLine="true"
+                            android:textSize="@dimen/textsize_default" >
+
+                        </EditText>
+
+                        <Button
+                            android:id="@+id/btn_update_nickname"
+                            android:layout_width="@dimen/btn_close_height"
+                            android:layout_height="@dimen/btn_close_height"
+                            android:layout_gravity="center_vertical|right"
+                            android:background="@drawable/img_shuru_gou" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/acc_accountnickname_value"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:singleLine="true"
+                            android:layout_weight="1" >
+                        </TextView>
+
+                        <ImageView
+                            android:id="@+id/img_acc_update_nickname"
+                            android:layout_width="@dimen/btn_connect_height"
+                            android:layout_height="@dimen/btn_connect_height"
+                            android:layout_marginLeft="@dimen/fill_margin_left"
+                            android:src="@drawable/icon_bianji" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_acc_account_accountState"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/acc_financeic_accountState" />
+
+                    <TextView
+                        android:id="@+id/acc_account_accountState_value"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_acc_account_actnum"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/acc_accountnumber" />
+
+                    <TextView
+                        android:id="@+id/acc_account_actnum_value"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_acc_account_currencycode"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/currency" />
+
+                    <TextView
+                        android:id="@+id/acc_account_currencycode_value"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_acc_financeic_eCashUpperLimit"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/acc_financeic_eCashUpperLimit" />
+
+                    <TextView
+                        android:id="@+id/acc_financeic_eCashUpperLimit_value"
+                        style="@style/textview_act"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_acc_financeic_singleLimit"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/acc_financeic_singleLimit" />
+
+                    <TextView
+                        android:id="@+id/acc_financeic_singleLimit_value"
+                        style="@style/textview_act"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_acc_financeic_totalBalance"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/acc_financeic_totalBalance" />
+
+                    <TextView
+                        android:id="@+id/acc_financeic_totalBalance_value"
+                        style="@style/textview_act"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+                    </TextView>
+                </LinearLayout>
+                <LinearLayout
+				    android:id="@+id/acc_payroll_query"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="50dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/acc_payrollquery_name"
+                        android:textColor="@color/blue" 
+                        android:gravity="center"
+                        />
+					<View 
+                    android:layout_width="wrap_content"
+                    android:layout_height="3px"
+                    android:background="@color/blue"
+                    />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+<ImageView
+            android:id="@+id/img_exit_accdetail"
+            android:layout_width="@dimen/close_clickarea_width"
+            android:layout_height="@dimen/close_clickarea_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@color/transparent_00" />
+</RelativeLayout>

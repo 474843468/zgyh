@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/acc_query_transfer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/acc_query_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_bottom_width"
+            android:background="@drawable/img_bg_card_chaxun"
+            android:gravity="center_vertical"
+            android:paddingBottom="@dimen/dp_five"
+            android:paddingTop="@dimen/dp_five" >
+
+            <ImageView
+                android:id="@+id/acc_frame_left"
+                style="@style/rightbtn_jiantou"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:background="@drawable/img_arrow_gray_left" />
+
+            <ImageView
+                android:id="@+id/acc_btn_goitem"
+                style="@style/rightbtn_jiantou"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:background="@drawable/img_arrow_gray_right" />
+
+            <com.chinamworld.bocmbci.widget.CustomGallery
+                android:id="@+id/viewPager"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/btn_bottom_width"
+                android:layout_toLeftOf="@+id/acc_btn_goitem"
+                android:layout_toRightOf="@+id/acc_frame_left"
+                android:fadingEdge="none"
+                android:spacing="@dimen/dp_one_zero" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_query_condition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/acc_query_horizontal"
+            android:background="@drawable/img_bg_query_j"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/crcd_choserl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/fill_padding_left"
+                android:paddingRight="@dimen/fill_padding_right"
+                android:paddingTop="@dimen/fill_margin_top" >
+
+                        <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dp_five_zero"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal" >
+
+                    <Spinner
+                        android:id="@+id/yichuorweichu"
+                        style="@style/Spiiner_fill"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/fill_margin_right"
+                        android:gravity="center" />
+
+                    <Button
+                        android:id="@+id/btn_search"
+                        style="@style/no_pic_query_button_style"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/query"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_default"
+                        android:visibility="visible" />
+                </LinearLayout>
+                        
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:visibility="gone"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/loan_his_btn1"
+                        style="@style/twoRadioButtonLeft"
+                        android:text="@string/mycrcd_no_bill" />
+
+                    <RadioButton
+                        android:id="@+id/loan_his_btn2"
+                        style="@style/twoRadioButtonRight"
+                        android:text="@string/mycrcd_has_bill" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnLoanHistoryQuery"
+                android:visibility="gone"
+                style="@style/query_button_style"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:text="@string/query"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_default"
+               />
+
+            <LinearLayout
+                android:id="@+id/spinner_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fill_padding_left"
+                android:layout_marginRight="@dimen/fill_padding_right"
+                android:layout_marginTop="@dimen/fill_margin_top"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/crcd_two_select" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dp_five_zero"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal" >
+
+                    <Spinner
+                        android:id="@+id/times_spinner"
+                        style="@style/Spiiner_fill"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/fill_margin_right"
+                        android:gravity="center" />
+
+                    <Button
+                        android:id="@+id/yichi_search"
+                        android:visibility="gone"
+                        style="@style/query_button_style"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/query"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_default"
+                       />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_upLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingBottom="@dimen/fill_padding_right"
+                android:paddingLeft="@dimen/fill_padding_right"
+                android:paddingRight="@dimen/fill_padding_right" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    style="@style/textview_common_up"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textSize="@dimen/textsize_xiala" />
+
+                <ImageView
+                    android:id="@+id/acc_query_up"
+                    style="@style/query_image_up_style"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/img_arrow_gray_up" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

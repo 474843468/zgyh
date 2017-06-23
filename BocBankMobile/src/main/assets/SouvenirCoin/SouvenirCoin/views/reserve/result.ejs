@@ -1,0 +1,45 @@
+<div class="wrap wrap-headfooter">
+    <header class="page-head">
+        <!--<img src="images/back-icon.png" def_event="{click: 'back'}">-->
+        <h1>操作结果</h1>
+    </header>
+    <section>
+        <!--操作结果页面开始-->
+        <div class="success">
+            <p><img src="images/success.png"></p>
+            <p>预约成功</p>
+            <p>请在兑换期营业时间持预约时登记的身份证件到预约网点进行兑换。</p>
+        </div>
+        <div class="detailed-list detailed-success">
+            <ul>
+                <li>
+                    <span>兑换期限：</span>
+                    <div class="detailed-list-word">
+                        <p><%=productInfo.sellStartDate.replace(/-/g,'/')%> ~ <%=productInfo.sellEndDate.replace(/-/g,'/')%></p>
+                    </div>
+                </li>
+                <li>
+                    <span>兑换网点：</span>
+                    <div class="detailed-list-word">
+                        <p><%=inputInfo.bankName%></p>
+                        <p><%=inputInfo.address%></p>
+                        <p><%=inputInfo.bankmobile%></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <button class="details-view" def_event="{click: 'showDetail'}">查看明细</button>
+        <div class="details" style="display: none">
+
+        </div>
+        <div class="success-list">
+            <p class="spacing">您可能需要</p>
+            <div class="success-list-next spacing-sides" def_event="{click: 'reserveRecordQry'}">
+                <span>预约记录查询</span>
+                <img class="right-icon" src="images/right-icon.png">
+            </div>
+        </div>
+        <!--操作结果页面开始-->
+    </section>
+    <footer class="bg-bule" onclick="window.location.reload()">返回首页</footer>
+</div>

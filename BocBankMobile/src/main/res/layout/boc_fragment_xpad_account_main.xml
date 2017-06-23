@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/boc_text_color_gray" />
+
+    <RelativeLayout
+        android:id="@+id/userLV"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_80px"
+        android:background="@color/boc_common_cell_color"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvAccountLevel"
+                android:layout_centerHorizontal="true"
+                android:text="您是优秀的"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small" />
+
+            <TextView
+                android:id="@+id/tvAccountLevel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:padding="4dp"
+                android:textColor="@color/boc_main_button_color"
+                android:textSize="@dimen/boc_text_size_small" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/havaBindAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/boc_space_between_14px"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginTop="@dimen/boc_space_between_30px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="已绑定账户共"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvBindNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/boc_space_between_10px"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lvBindAccount"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:listSelector="@android:color/transparent"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/noBindAccount"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivIcon"
+            android:layout_centerInParent="true"
+            android:paddingRight="@dimen/boc_space_between_6px"
+            android:text="暂未绑定账户，请"
+            android:textColor="@color/boc_black"
+            android:textSize="@dimen/boc_text_size_small" />
+
+        <TextView
+            android:id="@+id/tvRegist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivIcon"
+            android:layout_centerInParent="true"
+            android:text="添加"
+            android:textColor="@color/boc_main_button_color"
+            android:textSize="@dimen/boc_text_size_small" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+2015.10.28 by 罗广伟
+==================================================
+由于配合联龙版本对私，远程开户使用SDK 2.3.3(Android 10)编译
+修改内容注释为：lgw 2015.10.28 由于要使用SDK 2.3.3(Android 10) 编译 
+
+涉及到的主要类：
+com.boc.bocma.tools.MAVersionUtils
+com.boc.bocma.datapool.MABitmapCache
+com.boc.bocma.datapool.MAAsyncTask
+
+com.boc.bocsoft.remoteopenacc.buss.view.RemobeCommonEditTextView
+com.boc.bocsoft.remoteopenacc.buss.view.RemobeOpenProgressInqueryResultView
+com.boc.bocsoft.remoteopenacc.buss.view.RemobeOpenAccSettingPasswordView
+com.boc.bocsoft.remoteopenacc.common.view.BaseEditText
+com.boc.bocsoft.remoteopenacc.common.components.camera.camera.CameraInterface
+
+涉及到的布局：
+bocroa_fragment_remote_open_authentication.xml
+bocroa_fragment_remote_open_progress_inquery.xml
+
+=============================================
+测试版和正式版修改的地方
+正式版
+	1.OPURL中APP_MODE = PRODUCT_MODE，修改相应地址
+	2.RemoteOpenAccConstant中APP_KEY用正式版
+	3.asset/bocroa_www/index.html中publicKey_product.js
+	4.拷贝asset文件（通过build文件右键运行打包（ant打包）不用）
+	5.配置activity到联龙配置文件
+	6.更换cfca包（分正式和生产）
+测试版（Jenkins）
+	1.OPURL中APP_MODE = SIT_MODE，修改相应地址
+	2.RemoteOpenAccConstant中APP_KEY用测试版 
+	3.asset/bocroa_www/index.html中publicKey_test.js
+	4.拷贝asset文件（通过build文件右键运行打包（ant打包）不用）
+	5.配置activity到联龙配置文件
+	6.更换cfca包（分正式和生产）
+本地测试版（本地打版本 ）
+	1.OPURL中APP_MODE = SIT_MODE，修改相应地址
+	2.RemoteOpenAccConstant中APP_KEY用本地测试。不同的机器打的包要用GetSignature.apk重新计算key
+	3.asset/bocroa_www/index.html中publicKey_test.js
+	4.拷贝asset文件（通过build文件右键运行打包（ant打包）不用）
+	5.配置activity到联龙配置文件
+	6.更换cfca包（分正式和生产）
+
+联龙在线开户开关
+1.ActivitySwitcher 
+	搜索在线开户，打开关于在线开户代码
+2.ActivitySwitcher
+	搜索在线开户，打开关于在线开户代码
+

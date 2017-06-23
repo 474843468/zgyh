@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin" >
+
+        <Button
+            android:id="@+id/btn_one"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:onClick="btnCancleOnclicl"
+            android:text="绑定状态查询"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_two"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:onClick="btnConfirmOnclick"
+            android:text="资金转出"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_three"
+            style="@style/bottombtn"
+            android:onClick="buttomOnclick"
+            android:text="@string/finish"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/remit_title_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:text="@string/plps_annuity_plan_changetip"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_default"
+                    android:visibility="gone" />
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/epay_treaty_add_confirm_tv_cust_name" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        android:id="@+id/year_remain_limit_alert"
+                        style="@style/textview_common_left"
+                        android:text="@string/main_ofacc_number" />
+
+                    <TextView
+                        android:id="@+id/facctNum"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        android:id="@+id/bocinvtacct"
+                        style="@style/textview_common_left"
+                        android:text="@string/third_openacc_acc" />
+
+                    <TextView
+                        android:id="@+id/bankNum"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/infoserve_daedaozhang_sign_state" />
+
+                    <TextView
+                        android:id="@+id/status"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

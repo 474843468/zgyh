@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账户管理  借记卡选择关联账户 wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_relevance_debit_title"
+        style="@style/textview_step4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ll_step"
+        android:paddingBottom="@dimen/dp_five"
+        android:paddingLeft="@dimen/fill_margin_left"
+        android:paddingTop="@dimen/dp_five"
+        android:text="@string/acc_relevance_choose"
+        android:textColor="@color/gray" />
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp_five"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/common_bottom_padding" >
+
+        <Button
+            android:id="@+id/btnLast"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_blue_big"
+            android:text="@string/last"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnConfirm"
+            style="@style/bottombtn"
+            android:text="@string/confirm"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_relevance_debit"
+        style="@style/listviewcomm_wrap_haveDivider"
+        android:layout_above="@+id/ll_btn"
+        android:layout_alignLeft="@+id/tv_relevance_debit_title"
+        android:layout_below="@+id/tv_relevance_debit_title"
+        android:paddingLeft="@dimen/fill_padding_top"
+        android:paddingRight="@dimen/fill_padding_top">
+    </ListView>
+
+</RelativeLayout>

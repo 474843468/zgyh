@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账户贵金属  交易限额设定 确认页面 xyl -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/shang"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/prms_price_top_height"
+        android:background="@drawable/img_bg_card" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/prms_price_top_height"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/listiterm_padding_left" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/prms_price_buyrate"
+                        android:textSize="@dimen/textsize_one_three" />
+
+                    <TextView
+                        android:id="@+id/prms_price_listiterm1_buyprice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/textsize_one_three"
+                        android:gravity="center"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/common_listview_item_paddingLR"
+                         />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/prms_price_listiterm1_buyflag"
+                    android:layout_width="@dimen/prms_updownflag_widhth"
+                    android:layout_height="@dimen/prms_updownflag_widhth"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/prms_updownflag_margin_left"
+                    android:src="@drawable/shangsheng"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_margin="@dimen/common_listview_item_paddingLR"
+                android:background="@drawable/fengexian"
+                android:visibility="invisible"
+                 />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prms_price_salerate"
+                        android:textSize="@dimen/textsize_one_three"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/prms_price_listiterm1_saleprice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red" 
+                        android:textSize="@dimen/textsize_one_three"
+                        android:gravity="center"
+                        android:layout_marginRight="@dimen/prms_updownflag_margin_left"
+                        android:layout_marginTop="@dimen/common_listview_item_paddingLR"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/prms_price_listiterm1_saleflag"
+                    android:layout_width="@dimen/prms_updownflag_widhth"
+                    android:layout_height="@dimen/prms_updownflag_widhth"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                    android:src="@drawable/shangsheng"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="40dp"
+            android:layout_height="@dimen/prms_zoushitu_height"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/prms_zoushitu_height"
+            android:background="@drawable/zoushituanniu" 
+            android:visibility="invisible"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/prms_price_listiterm1_sourceCurrency_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/prms_price_bottom_height"
+        android:layout_below="@id/shang"
+        android:background="@drawable/img_bg_card_di_jin"
+        android:layout_marginTop="@dimen/common_listview_item_paddingLR_fu"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/prms_price_bottom_height"
+            android:layout_weight="4"
+            android:textSize="@dimen/textsize_default" />
+
+        <TextView
+            android:id="@+id/prms_price_listiterm1_sourceCurrency"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/prms_price_bottom_height"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/textsize_default" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<div class="wrap wrap-justhead">
+    <header class="page-head">
+    <!--<img src="images/back-icon.png" def_event="{click:'onBack'}">-->
+        <div class="back-img"  def_event="{click: 'onBack'}"><img src="images/back-icon.png"></div>
+        <h1>修改预约数量</h1>
+    </header>
+    <section>
+        <!--纪念币首页列表开始-->
+        <div class="entry">
+            <div class="entry-type">
+                <ul>
+                    <li>
+                        <label>预约数量</label>
+                            <span class="entry-type-box entry-type-choose" def_event="{click:'onCount'}">
+                                <a  id="count"><%=data.count%></a>
+                                <img src="images/right-icon.png">
+                            </span>
+                    </li>
+                    <li>
+                        <label>验证码</label>
+                        <input class="trad-text trad-text-ui code" type="text" placeholder="请输入" name=""  id="code" maxlength="4" validate="{'required':true}" tips="图形验证码不能为空,图形验证码格式有误">
+                        <div class="confirm-code"><img id="codePic" class="trad-pic trad-pic-ui codePic" src="" def_event="{click:'onGetCode'}"></div>
+                    </li>
+                    <li  class="trad-code-wrap">
+                        <label>手机交易码</label>
+                        <input class="trad-text trad-text-ui" type="password"  maxlength="6" validate="{required:true,regSms:'regSms'}" tips="短信验证码不能为空, 短信验证码格式错误" placeholder="请输入" name="" id="mobileCode">
+                        <!--获取验证码-->
+                        <div class="trad-code"> <a id="codeButton" def_event="{click:'onGetMobileCode'}">获取验证码</a></div>
+                        <!--重新发送-->
+                        <!--<div class="trad-code trad-code-after"><a>60s后重发</a></div>-->
+                    </li>
+                </ul>
+            </div>
+            <button def_event="{click:'onModifyConfirm'}">确认</button>
+        </div>
+        <!--纪念币首页列表结束-->
+    </section>
+</div>

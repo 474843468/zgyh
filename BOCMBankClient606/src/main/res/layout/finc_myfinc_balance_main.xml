@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/common_bottom_padding_new" >
+
+    <include
+        android:id="@+id/recommendation_link"
+        layout="@layout/bocnvt_title2_layout"
+        android:visibility="gone" />
+
+    <LinearLayout
+        style="@style/finc_linnerlayout_qury"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/recommendation_link"
+        android:layout_marginTop="@dimen/fill_margin_left" >
+
+        <include layout="@layout/finc_listheader_attention" />
+
+        <ListView
+            android:id="@+id/finc_listView"
+            style="@style/finc_listview_fill" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout><!-- 我的基金   基金持仓首页 -->

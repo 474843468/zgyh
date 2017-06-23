@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bg_consumefinance"
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"/>
+     <com.boc.bocsoft.mobile.bocmobile.buss.specializedservice.consumefinance.module.MyScrollView
+        android:id="@+id/first_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/bg_consumefinance_cloud"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/boc_consumefinance_cloud"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/boc_common_cell_color"
+                android:paddingLeft="@dimen/boc_space_between_86px"
+                android:paddingTop="@dimen/boc_space_between_40px"
+                android:paddingRight="@dimen/boc_space_between_86px"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/boc_space_between_12px"
+                    android:textColor="#d7b065"
+                    android:textSize="@dimen/boc_space_between_26px"
+                    android:gravity="center"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/boc_consumefinance_divider"
+                android:background="@color/boc_common_cell_color"
+                android:paddingTop="@dimen/boc_space_between_36px"
+                android:paddingBottom="@dimen/boc_space_between_66px"/>
+            <com.boc.bocsoft.mobile.bocmobile.buss.specializedservice.consumefinance.module.consumeListview
+                android:id="@+id/loanType_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/boc_common_cell_color"
+                android:divider="@color/boc_common_cell_color"
+                >
+            </com.boc.bocsoft.mobile.bocmobile.buss.specializedservice.consumefinance.module.consumeListview>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_20px"
+                android:background="@color/boc_main_bg_color"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_80px"
+                android:background="@color/boc_common_cell_color"
+                android:gravity="center"
+                android:text="@string/consumefinance_loandescrip2"
+                android:textColor="#d7b065"
+                android:textSize="@dimen/boc_space_between_26px"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/boc_consumefinance_divider"
+                android:background="@color/boc_common_cell_color"
+                android:paddingBottom="@dimen/boc_space_between_40px"/>
+
+            <include layout="@layout/boc_consumefinance_otherloan"
+                />
+         </LinearLayout>
+
+    </com.boc.bocsoft.mobile.bocmobile.buss.specializedservice.consumefinance.module.MyScrollView>
+
+    <include layout="@layout/boc_consumefinance_whitetitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_titlebar_height"></include>
+</FrameLayout>

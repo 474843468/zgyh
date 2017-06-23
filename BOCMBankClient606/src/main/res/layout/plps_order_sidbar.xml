@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    <!-- <com.chinamworld.bocmbci.biz.plps.adapter.ClearEditText
+        android:id="@+id/filter_edit"
+        android:layout_marginTop="5dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_bar_edit_selector"
+        android:drawableLeft="@drawable/search_bar_icon_normal"
+        android:hint="城市名称或者拼音首字母"
+        android:singleLine="true"
+        android:textSize="@dimen/textsize_default"
+        android:visibility="gone" /> -->
+
+    <TextView
+        android:id="@+id/showTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#d7d7d7"
+        android:gravity="left"
+        android:paddingLeft="@dimen/bottom_dialog_item_padding"
+        android:text="当前所在城市:"
+        android:textColor="@color/red"
+        android:textSize="@dimen/textsize_default" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+         android:background="@color/white" >
+
+        <LinearLayout
+            android:id="@+id/ll_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/textsize_xiala"
+            
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right" >
+
+                <TextView
+                    android:id="@+id/prvadress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/textsize_list_item"
+                    android:text="请选择" />
+
+                <ImageView
+                    android:id="@+id/query_up"
+                    style="@style/query_image_up_style"
+                    android:layout_gravity="center"
+                    android:src="@drawable/plps_adress_gray_1"
+                    android:visibility="gone" />
+                <ImageView
+                    android:id="@+id/query_down"
+                    style="@style/query_image_up_style"
+                    android:layout_gravity="center"
+                    android:src="@drawable/plps_adress_color_1"
+                     />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/cursor"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/red" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_up2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/textsize_xiala"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right" >
+
+                <TextView
+                    android:id="@+id/cityadress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:textSize="@dimen/textsize_list_item"
+                    android:text="请选择" />
+
+                <ImageView
+                    android:id="@+id/query_up2"
+                    style="@style/query_image_up_style"
+                    android:layout_gravity="center"
+                    android:src="@drawable/plps_adress_gray_1" />
+                 <ImageView
+                    android:id="@+id/query_down2"
+                    style="@style/query_image_up_style"
+                    android:layout_gravity="center"
+                    android:src="@drawable/plps_adress_color_1"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/cursor2"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="@color/red"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ListView
+            android:id="@+id/country_lvcountry"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:listSelector="@color/transparent_00"
+            android:scrollbars="none" />
+        <ListView
+            android:id="@+id/city_lvcountry"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:listSelector="@color/transparent_00"
+            android:scrollbars="none"
+            android:visibility="gone" />
+         <!-- <TextView
+            android:id="@+id/dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_default"
+            android:visibility="invisible" /> -->
+
+        <com.chinamworld.bocmbci.biz.plps.order.CityAdressSideBar
+            android:id="@+id/sidbar"
+            android:layout_width="30.0dip"
+            android:layout_height="fill_parent"
+            android:layout_gravity="right|center"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="@dimen/dialogbtn_marginTop" />
+    </FrameLayout>
+
+</LinearLayout>

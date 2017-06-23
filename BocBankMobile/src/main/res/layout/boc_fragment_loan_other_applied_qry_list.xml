@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:orientation="vertical">
+    <include layout="@layout/boc_divide_line"></include>
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullToRefreshLayout
+        android:id="@+id/other_loan_online_query_view"
+        android:background="@color/boc_common_bg_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullableListView
+            android:id="@+id/lv_other_loan_online_query"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:listSelector="@android:color/transparent"
+            android:overScrollMode="never" />
+
+        <include layout="@layout/boc_load_more" />
+    </com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullToRefreshLayout>
+
+    <TextView
+        android:id="@+id/tvNoData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/boc_text_color_common_gray"
+        android:textSize="@dimen/boc_text_size_common"
+        android:visibility="gone" />
+</LinearLayout>
+

@@ -1,0 +1,34 @@
+<%
+if(sellStatu=="TRUE"){
+%>
+<ul>
+    <%for(var i =0; i<productList.length; i++){%>
+    <li class="spacing-sides coin-item" idx="<%=i%>" def_event="{click: 'showDetail'}">
+        <div>
+            <strong><%=productList[i].productName%></strong>
+            <%
+                var date = new Date(dateTme), endDate = new Date(productList[i].endDate.replace(/-/g, '/') + ' ' + productList[i].endTime.replace(/(\d{2})/g, '$1:').replace(/(.*).{1}/, '$1')), startDate = new Date(productList[i].startDate.replace(/-/g, '/') + ' ' + productList[i].startTime.replace(/(\d{2})/g, '$1:').replace(/(.*).{1}/, '$1'));
+                if((endDate - date)<=0){
+            %>
+            <span class="coin-item-tip gray">预约已结束</span>
+            <%}else if((startDate - date) > 0){%>
+            <span class="coin-item-tip safe">未开始</span>
+            <%}else if(!productList[i].endDate){%>
+            <span class="coin-item-tip safe">结束日待定</span>
+            <%}else if((endDate - date) < 1000*60*60*24*10){%>
+            <span class="coin-item-tip red">剩余<%=Math.ceil((endDate-date)/86400000)%>天</span>
+            <%
+                }else{
+            %>
+            <span class="coin-item-tip safe">剩余<%=Math.ceil((endDate-date)/86400000)%>天</span>
+            <%
+                }
+            %>
+        </div>
+        <p><%=productList[i].description%></p>
+    </li>
+    <%}%>
+</ul>
+<%}else{%>
+<div style="padding: 20px;line-height: 25px;color:#6740C7">尊敬的用户您好，当前无纪念币在售，请关注中国银行官网获取有关纪念币销售的信息。</div>
+<%}%>

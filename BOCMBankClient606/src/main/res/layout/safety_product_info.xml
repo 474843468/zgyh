@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 保险详情页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnbuy"
+            style="@style/textview_forex_button_cell"
+            android:onClick="insurBuyBtnOnclick"
+            android:text="@string/safety_btn_buy"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btndelete"
+            style="@style/isforex_two_left_btn"
+            android:onClick="insurDeleteOnclick"
+            android:text="@string/delete"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnedit"
+            style="@style/isforex_two_right_btn"
+            android:onClick="insurEditBtnOnclick"
+            android:text="@string/safety_btn_continue"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_layout"
+        android:layout_marginTop="@dimen/rightbtnW"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/titleText_step2"
+            android:layout_width="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/detail"
+            android:textColor="@color/black"
+            android:visibility="invisible" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dp_five" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fill_margin_left"
+                    android:layout_marginRight="@dimen/fill_margin_left"
+                    android:gravity="center_horizontal"
+                    android:text="@string/safety_product_info_tip"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_default" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/bottom_margin_top"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:singleLine="true"
+                        android:text="@string/safety_company" />
+
+                    <TextView
+                        android:id="@+id/company"
+                        style="@style/textview_forex_prompt_info"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_subCompany"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/bottom_margin_top"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:singleLine="true"
+                        android:text="@string/safety_lifeInsurance_subCompany"
+                         />
+
+                    <TextView
+                        android:id="@+id/tv_subCompany"
+                        style="@style/textview_forex_prompt_info"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:singleLine="true"
+                        android:text="@string/prodName"
+                         />
+
+                    <TextView
+                        android:id="@+id/product_name"
+                        style="@style/textview_forex_prompt_info"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_temp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:singleLine="true"
+                        android:text="@string/safety_product_tempname"
+                       />
+
+                    <TextView
+                        android:id="@+id/alias"
+                        style="@style/textview_forex_prompt_info"
+                        android:singleLine="true"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:singleLine="true"
+                        android:text="@string/safety_prod_intr_colon"/>
+
+                    <TextView
+                        style="@style/textview_forex_prompt_info"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fill_margin_left"
+                        android:singleLine="true"
+                        android:text="产品"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/product_introduce"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dip"
+                        android:textColor="@color/fonts_dark_gray"
+                        android:textSize="@dimen/fonts_one_five" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/item_detail"
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/common_row_margin"
+                    android:onClick="detailPDFOnclick"
+                    android:text="@string/safety_itemUrl"
+                    android:textColor="@color/fonts_pink" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/titleText_stepacc"
+        android:layout_width="@dimen/common_details_title_width"
+        android:layout_height="@dimen/left_img_width"
+        android:background="@drawable/bg_title"
+        android:gravity="center"
+        android:text="@string/bocinvt_des_title"
+        android:textColor="@color/gray_title" />
+
+</RelativeLayout>

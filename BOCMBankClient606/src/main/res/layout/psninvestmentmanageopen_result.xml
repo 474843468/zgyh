@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 开通投资理财的信息提交页面（动态口令） -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_00" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/stepbar"
+            layout="@layout/step_title_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="@dimen/margin_of_commrequestopen"
+            android:layout_weight="1"
+            android:background="@drawable/shap_for_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/isResultOpen"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_one_five" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_of_commrequestopen"
+                android:text="@string/isResultOpenMsg"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_five" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_of_commrequestopen"
+            android:layout_marginRight="@dimen/margin_of_commrequestopen"
+            android:layout_marginBottom="@dimen/common_bottom_padding_new"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/btnPro"
+                style="@style/bottombtn_new"
+                android:text="@string/pro"
+                android:visibility="gone" />
+            <!-- 按钮背景采用shap   多个控件相同的属性较多时生成style引用，提高开发效率 -->
+
+            <Button
+                android:id="@+id/btnFinish"
+                style="@style/bottombtn_new"
+                android:onClick="finishOnclick"
+                android:text="@string/finish"
+                android:visibility="visible"
+                />
+            <!-- 按钮背景采用shap -->
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

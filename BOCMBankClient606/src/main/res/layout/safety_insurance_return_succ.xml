@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 结售汇 购汇 输入信息页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/sbremit_sremit_success_ok"
+            style="@style/textview_forex_button_cell"
+            android:text="@string/finish"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_btn"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+				        android:id="@+id/titleText"
+				        style="@style/confirm_info_textview_style"
+				        android:paddingLeft="10dip"
+				        android:paddingRight="10dip"
+				        android:layout_marginTop="@dimen/fill_margin_top"
+				        android:text="@string/safety_return_succss"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin_half"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:text="@string/safety_receive_acc" />
+
+					<TextView
+                        android:id="@+id/receive_acc"
+                        style="@style/textview_forex_prompt_info" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin_half"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:text="@string/safety_return_amount" />
+
+                    <TextView
+                        android:id="@+id/return_amount"
+                        style="@style/textview_forex_prompt_info"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+				<LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin_half"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:text="退保申请日期：" />
+
+                    <TextView
+                        android:id="@+id/effective_date"
+                        style="@style/textview_forex_prompt_info" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin_half"
+                    android:orientation="horizontal" >
+                    </TextView>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

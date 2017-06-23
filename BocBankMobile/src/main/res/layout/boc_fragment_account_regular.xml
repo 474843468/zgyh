@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_main_bg_color"
+    android:weightSum="1">
+
+
+    <com.boc.bocsoft.mobile.framework.ui.BaseFragment
+        android:id="@+id/fl_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+        android:id="@+id/ed_choice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/boc_card_account_pic_margin_top"
+        android:layout_marginLeft="@dimen/boc_card_account_pic_margin_left"
+        android:layout_marginRight="@dimen/boc_card_account_pic_margin_left"
+        />
+
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.selectview.selecttype.SelectGridView
+        android:id="@+id/grid_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/boc_card_account_pic_margin_top"
+        android:layout_marginLeft="@dimen/boc_card_account_pic_margin_left"
+        android:layout_marginRight="@dimen/boc_card_account_pic_margin_left"
+        app:radioTrue="false"
+        android:numColumns="2"
+        android:horizontalSpacing="5dp"
+        android:layout_weight="0.70"
+        >
+
+    </com.boc.bocsoft.mobile.bocmobile.base.widget.selectview.selecttype.SelectGridView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/boc_card_account_pic_margin_top"
+        android:layout_marginLeft="@dimen/boc_card_account_pic_margin_left"
+        android:layout_marginRight="@dimen/boc_card_account_pic_margin_left"
+        android:layout_gravity="center"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/boc_apply_agree"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:textSize="@dimen/boc_text_size_little_big"
+            android:layout_marginLeft="3dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/boc_service_bureau"
+            android:textColor="@color/boc_text_color_red"
+            android:layout_marginLeft="4dp"/>
+
+
+    </LinearLayout>
+
+    <Button
+
+        style="@style/BocButton.BocPrimaryButton"
+        android:text="@string/boc_sure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/boc_card_account_pic_margin_top"/>
+</LinearLayout>

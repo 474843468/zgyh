@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 大额存单 详情：LargeCDDetailActivity -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_btn_layout"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/titleText_step2"
+            android:layout_width="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/detail"
+            android:textColor="@color/black"
+            android:visibility="invisible" />
+
+        <ScrollView style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:id="@+id/btn_transet_mytransfer"
+                style="@style/tran_body_ll"
+                android:paddingBottom="@dimen/fill_margin_top"
+                android:paddingLeft="@dimen/dp_five"
+                android:paddingRight="@dimen/dp_five" >
+
+                <!-- 产品编码 -->
+                <LinearLayout
+                    android:id="@+id/tran_transaction_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/large_cd_product_code_tv" />
+
+                    <TextView
+                        android:id="@+id/tv_large_cd_product_code"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+               <!-- 发售开始日期 -->
+                <LinearLayout
+                    android:id="@+id/tran_seqbat_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/large_cd_begin_sell_date" />
+
+                    <TextView
+                        android:id="@+id/tv_large_cd_begin_sell_date"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <!-- 发售结束日期 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/large_cd_end_sell_date" />
+
+                    <TextView
+                        android:id="@+id/tv_large_cd_end_sell_date"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+                
+                <!-- 产品剩余金额 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/large_cd_surplus_amount" />
+
+                    <TextView
+                        android:id="@+id/tv_large_cd_surplus_amount"
+                        style="@style/textview_common_right"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tran_pre_date_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <!-- 起购金额 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:text="@string/large_cd_begin_money_new" />
+
+                        <TextView
+                            android:id="@+id/tv_large_cd_begin_money_two"
+                            style="@style/textview_common_right"
+                            android:textColor="@color/red" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tran_execute_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <!-- 存期 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:text="@string/large_cd_save_date" />
+
+                        <TextView
+                            android:id="@+id/tv_large_cd_save_date"
+                            style="@style/textview_common_right" />
+                    </LinearLayout>
+
+                    
+                    <!-- 利率 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:text="@string/large_cd_rate_tv" />
+
+                        <TextView
+                            android:id="@+id/tv_large_cd_rate_two"
+                            style="@style/textview_common_right" />
+                    </LinearLayout>
+                    
+                    <!-- 可用额度 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:text="@string/large_cd_available_limit" />
+
+                        <TextView
+                            android:id="@+id/tv_large_cd_available_limit"
+                            style="@style/textview_common_right"
+                            android:textColor="@color/red" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="@dimen/fill_margin_right"
+        android:paddingRight="@dimen/fill_margin_right" >
+
+        <Button
+            android:id="@+id/btn_buy_large_cd"
+            style="@style/bottombtn"
+            android:layout_marginBottom="@dimen/fill_margin_top"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:text="@string/large_cd_new"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/left_img_width"
+        android:layout_marginTop="@dimen/layout_margin_top" >
+
+        <TextView
+            style="@style/tran_card_title"
+            android:text="@string/bocinvt_history_detail" />
+    </RelativeLayout>
+
+</RelativeLayout>

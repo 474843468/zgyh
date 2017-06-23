@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/transparent_00"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shap_for_progress"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:id="@+id/sipbox"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_confirm_msg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/comm_view_left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="6.5"
+                android:singleLine="true"
+                android:text="@string/remittance_template_otherOperation_Name"
+                android:textSize="@dimen/textsize_default" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/comm_view_right"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3.5"
+                android:singleLine="true"
+                android:textSize="@dimen/textsize_default" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <LinearLayout
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_confirm_msg"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/comm_view_left"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="6.5"
+                android:singleLine="true"
+                android:text="@string/remittance_template_otherOperation_newName"
+                android:textSize="@dimen/textsize_default" />
+
+            <EditText
+                android:id="@+id/et_newName"
+                style="@style/edittext_inputNumber_fill"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dip"
+                android:layout_weight="3.5"
+                android:gravity="center_vertical"
+                android:hint="@string/remittance_template_otherOperation_pleaseInputNewName"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textSize="@dimen/textsize_default" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sipbox"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dialogbtn_marginTop"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_cancle"
+                style="@style/dialogbtn"
+                android:background="@drawable/btn_blue_big"
+                android:onClick="dialogClick"
+                android:text="@string/cancle" />
+
+            <Button
+                android:id="@+id/btn_confirm"
+                style="@style/dialogbtn"
+                android:background="@drawable/btn_red_big"
+                android:onClick="dialogClick"
+                android:text="@string/confirm" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 开通投资理财的协议确认页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/list_bottom" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_btn_layout"
+        android:background="@drawable/bg_for_listview_item_write" 
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/contract_title_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:gravity="center"
+            android:text="@string/register_protocol_title"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/textsize_one_six" />
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:orientation="vertical">
+            <TextView 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_six"
+                android:layout_marginTop="3dp"
+                android:text="@string/register_protocol_title_one"/>
+            <TextView 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_six"
+                android:layout_marginTop="3dp"
+                android:text="@string/register_protocol_title_two"
+                />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/dept_create_layout"
+            style="@style/scrollview_comm_havemarginbutton" >
+
+            <TextView
+                android:id="@+id/dept_protocol_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register_protocol_content_new"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_for" />
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/layout_margin_top"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/btnYes"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_blue_big"
+            android:text="@string/not_agree" />
+
+        <Button
+            android:id="@+id/btnNo"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/agree" />
+    </LinearLayout>
+
+</RelativeLayout>

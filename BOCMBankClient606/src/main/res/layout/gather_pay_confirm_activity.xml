@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:userProperty="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin" >
+
+        <Button
+            android:id="@+id/btnConfirm"
+            style="@style/bottombtn"
+            android:text="@string/confirm" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/layout_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/shap_for_dept_tranlist"
+        android:paddingBottom="@dimen/layout_margin_top"
+        android:paddingLeft="@dimen/layout_padding_left_right"
+        android:paddingRight="@dimen/layout_padding_left_right" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/gather_confirm_title_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:text="@string/pay_confirm_second_title"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_default" />
+            
+            <TextView
+                android:id="@+id/gather_confirm_title_tv_2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:text="@string/pay_success_second_title_bottom"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_default"
+                android:visibility="gone" />
+            
+            <LinearLayout
+		        android:layout_width="0px"
+		        android:layout_height="0px"
+		        android:focusable="true"
+		        android:focusableInTouchMode="true" />
+
+            <LinearLayout
+                android:id="@+id/layout_transaction_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/transaction" />
+
+                <TextView
+                    android:id="@+id/text_transaction_id"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/gather_order_number_label" />
+
+                <TextView
+                    android:id="@+id/gather_order_number"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/gather_creat_date_label" />
+
+                <TextView
+                    android:id="@+id/gather_creat_date"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/gather_pay_date_label" />
+
+                <TextView
+                    android:id="@+id/gather_pay_date"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/gather_tran_status_label" />
+
+                <TextView
+                    android:id="@+id/gather_tran_status"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/gather_money_name_label" />
+
+                <TextView
+                    android:id="@+id/gather_money_name"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/gather_account_number_label" />
+
+                <TextView
+                    android:id="@+id/gather_account_number"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_payeeMobile_label"
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/payeeMobile" />
+
+                <TextView
+                    android:id="@+id/tv_payeeMobile"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/gather_start_way_label" />
+
+                <TextView
+                    android:id="@+id/gather_start_way"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/beizhu" />
+
+                <TextView
+                    android:id="@+id/tv_beizhu"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/payer_name_label_no_blank" />
+
+                <TextView
+                    android:id="@+id/tv_payer_name"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/gather_payer_acount_label" />
+
+                <TextView
+                    android:id="@+id/tv_gather_payer_acount"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_payer_phone_label"
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/payer_phone_label" />
+
+                <TextView
+                    android:id="@+id/tv_payer_phone"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/gather_pay_way_label" />
+
+                <TextView
+                    android:id="@+id/gather_pay_way"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/gather_pay_currency_label" />
+
+                <TextView
+                    android:id="@+id/gather_pay_currency"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/gather_pay_amount_label" />
+
+                <TextView
+                    android:id="@+id/gather_pay_amount"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/gather_pay_fact_label" />
+
+                <TextView
+                    android:id="@+id/gather_pay_fact"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                    android:id="@+id/ll_need"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tran_act_charge_display_tv"
+                        style="@style/textview_common_no_weight"
+                        android:layout_weight="5"
+                        android:text="@string/trans_act_charge" />
+
+                    <TextView
+                        android:id="@+id/tran_act_charge_tv"
+                        style="@style/comm_view_right_noweight"
+                        android:layout_weight="3"
+                        android:textColor="@color/red" 
+                        android:textSize="@dimen/textsize_default"/>
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/charge_after_sale_label" />
+
+                <TextView
+                    android:id="@+id/charge_after_sale"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+            
+            
+             <TextView
+                android:id="@+id/notify_customer_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:layout_marginLeft="@dimen/common_row_margin"
+                android:text="@string/tran_remitSetMealFlag_normal"
+                android:textColor="@color/gray"
+                android:gravity="center_horizontal"
+                android:textSize="@dimen/textsize_default" />
+            
+            <LinearLayout
+                android:id="@+id/view_phone_code"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/epay_pub_note_code" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3"
+                    android:layout_marginRight="@dimen/shap_of_save_confirm_pdl"
+                    android:orientation="horizontal" >
+
+                    
+                    <LinearLayout
+	                    android:id="@+id/layout_phone_code"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="fill_parent"
+	                    android:paddingLeft="@dimen/edittext_paddinglr"
+	                    android:layout_weight="3"
+	                    android:orientation="horizontal" >
+                	</LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="4"
+                        android:layout_marginLeft="@dimen/btn_margin_left"
+                        android:orientation="horizontal" >
+
+                        <Button
+                            android:id="@+id/btn_phone_check"
+                            style="@style/button_smscode"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_pass3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/epay_pub_dynamic_code" />
+
+                <LinearLayout
+                    android:id="@+id/layout_pass_3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:paddingLeft="@dimen/edittext_paddinglr"
+                    android:layout_marginRight="@dimen/shap_of_save_confirm_pdl"
+                    android:layout_weight="3"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.chinamworld.bocmbci.widget.UsbKeyText
+                android:id="@+id/sip_usbkey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                userProperty:MargRight="@dimen/shap_of_save_confirm_pdl"
+                userProperty:PaddLeft="@dimen/edittext_paddinglr"
+                android:gravity="center"
+                android:orientation="horizontal"
+                userProperty:ShowRate="5:3" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="10dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 支取大额存单确认页面 LargeCDRedeemActivity -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_btn_layout"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/titleText"
+            style="@style/titleText_step2"
+            android:layout_width="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/detail"
+            android:textColor="@color/gray"
+            android:visibility="invisible" />
+
+        <ScrollView style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:id="@+id/btn_transet_mytransfer"
+                style="@style/tran_body_ll"
+                android:paddingBottom="@dimen/fill_margin_top"
+                android:paddingLeft="@dimen/dp_five"
+                android:paddingRight="@dimen/dp_five" >
+
+                <!-- 资金账户 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.35"
+                        android:text="@string/large_cd_capital_acc" />
+
+                    <TextView
+                        android:id="@+id/tv_large_cd_acc_number"
+                        android:layout_weight="2"
+                        android:ellipsize="middle"
+                        style="@style/textview_common_right" />
+                    
+                    <TextView
+                        android:id="@+id/tv_acc_type"
+                        android:layout_weight="2"
+                        style="@style/textview_common_right"/>
+                </LinearLayout>
+
+                <!-- 产品编码 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/large_cd_product_code_tv" />
+
+                    <TextView
+                        android:id="@+id/large_cd_product_code_tv"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <!-- 产品编号 -->
+                <LinearLayout
+                    android:id="@+id/tran_transaction_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/large_cd_number_tv" />
+
+                    <TextView
+                        android:id="@+id/tv_large_cd_number"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <!-- 新增日期 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/large_cd_new_date" />
+
+                    <TextView
+                        android:id="@+id/large_cd_start_date"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <!-- 到期日期 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/large_cd_end_date" />
+
+                    <TextView
+                        android:id="@+id/large_cd_end_date_tv"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <!-- 起购金额 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/large_cd_acc_time_number" />
+
+                    <TextView
+                        android:id="@+id/tv_large_cd_acc_time_number"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <!-- 币种/钞汇 -->
+                <LinearLayout
+                    android:id="@+id/tran_seqbat_layouts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/large_cd_tran_currency" />
+
+                    <TextView
+                        style="@style/textview_common_right"
+                        android:text="@string/rmb_currency" />
+                </LinearLayout>
+
+                <!-- 本金 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/large_cd_principal" />
+
+                    <TextView
+                        android:id="@+id/tv_large_cd_save_money"
+                        style="@style/textview_common_right"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <!-- 利率 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/large_cd_rate_tv" />
+
+                    <TextView
+                        android:id="@+id/large_cd_rate_tv"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <!-- 签约账户 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/large_cd_redeem_type" />
+
+                    <TextView
+                        style="@style/textview_common_right"
+                        android:text="@string/large_cd_redeem_all" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tran_execute_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <!-- 利息 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:text="@string/large_cd_interest" />
+
+                        <TextView
+                            android:id="@+id/tv_large_cd_interest"
+                            style="@style/textview_common_right"
+                            android:textColor="@color/red" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="@dimen/fill_margin_right"
+        android:paddingRight="@dimen/fill_margin_right" >
+
+        <Button
+            android:id="@+id/btn_confirm"
+            style="@style/bottombtn"
+            android:layout_marginBottom="@dimen/fill_margin_top"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:text="@string/confirm"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

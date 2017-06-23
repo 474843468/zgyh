@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/dp_five" >
+
+    <LinearLayout
+        android:id="@+id/head_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/btn_bottom_height"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="中国银行股份有限公司"
+                    android:textColor="@color/fonts_dark_gray"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="个人积利金业务交易协议"
+                    android:textColor="@color/fonts_dark_gray"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="match_parent" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/head"
+                     >
+
+                    <WebView
+                        android:id="@+id/webView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:cacheColorHint="#00000000"
+                        android:paddingBottom="@dimen/dp_two_zero"
+                        android:scrollbars="none" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <Button
+        android:id="@+id/confirm_button"
+        style="@style/bottombtn"
+        android:layout_height="@dimen/btn_bottom_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/selector_btn_red"
+        android:layout_marginBottom="@dimen/common_bottom_padding"
+        android:layout_marginTop="@dimen/dp_five"
+        android:text="@string/confirm" />
+    <!--<LinearLayout-->
+        <!--android:id="@+id/confirm_button_layout"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_marginBottom="@dimen/common_bottom_padding"-->
+        <!--android:layout_marginTop="@dimen/dp_five" >-->
+
+        <!--<Button-->
+            <!--android:id="@+id/confirm_button"-->
+            <!--style="@style/bottombtn"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="@dimen/btn_bottom_height"-->
+            <!--android:background="@drawable/selector_btn_red"-->
+            <!--android:text="@string/confirm" />-->
+    <!--</LinearLayout>-->
+
+</RelativeLayout>

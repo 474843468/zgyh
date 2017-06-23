@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/front"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:layout_marginBottom="@dimen/fill_margin_bottom">
+    
+
+    <FrameLayout
+        android:id="@+id/ll_acc_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:gravity="center" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/ll_bankact_top"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shap_for_half_gray"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/btn_close_height"
+                    android:layout_marginLeft="@dimen/fill_margin_top"
+                    android:src="@drawable/icon_pig" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_bankaccount"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_bankact_top"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/fill_padding_left"
+                android:paddingTop="@dimen/fill_padding_left" 
+                android:paddingBottom="@dimen/fill_padding_bottom">
+
+                <TextView
+                    android:id="@+id/dept_type_tv"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_one_two"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@+id/dept_card_description_tv"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_one_two"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:singleLine="true"/>
+
+                <TextView
+                    android:id="@+id/dept_account_num_tv"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textsize_one_two"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:singleLine="true"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>

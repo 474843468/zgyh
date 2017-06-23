@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_content"
+    android:orientation="vertical"
+    tools:context=".AssertsAccountManagerActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/assetsmanager_accredit_manager_back_bg" >
+
+        <LinearLayout style="@style/accreditmanagerback_linearLayout" >
+
+            <TextView
+                style="@style/accountmanageroneselfaccount_textview"
+                android:text="姓名：" />
+
+            <TextView
+                android:id="@+id/tv_asam_otheraccount_accName"
+                style="@style/accreditmanagerback_textview2"
+                android:text="张三" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/accreditmanagerback_linearLayout" >
+
+            <TextView
+                style="@style/accountmanageroneselfaccount_textview"
+                android:text="账号：" />
+
+            <TextView
+                android:id="@+id/tv_asam_otheraccount_accNum"
+                style="@style/accreditmanagerback_textview2"
+                android:text="25364748494523534333" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/accreditmanagerback_linearLayout" >
+
+            <TextView
+                style="@style/accountmanageroneselfaccount_textview"
+                android:text="账户类型：" />
+
+            <TextView
+                android:id="@+id/tv_asam_otheraccount_accType"
+                style="@style/accreditmanagerback_textview2"
+                android:text="长城电子信用卡" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/accreditmanagerback_linearLayout" >
+
+            <TextView
+                style="@style/accountmanageroneselfaccount_textview"
+                android:text="可用余额：" />
+
+            <TextView
+                android:id="@+id/tv_asam_otheraccount_balance"
+                style="@style/accreditmanagerback_textview2"
+                android:text="" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/accreditmanagerback_linearLayout"
+            android:weightSum="2" >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="服务设置：" 
+                android:paddingRight="30dp"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_accountmanager_otheraccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:dividerHeight="0dp"
+            
+            android:divider="#D7D7D7"
+            android:cacheColorHint="#00000000" 
+            android:visibility="gone">
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

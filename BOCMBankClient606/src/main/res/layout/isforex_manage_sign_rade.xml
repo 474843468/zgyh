@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:layout_width="match_parent"
+            layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_step"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_xuzhi_title"
+                style="@style/crcd_tv_common_left"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:text="@string/isForex_pro_title"
+                android:textColor="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_xuzhi_title"
+                android:layout_marginTop="@dimen/fill_padding_top"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_jianfang"
+                    style="@style/crcd_common_tv"
+                    android:paddingLeft="@dimen/fill_padding_top"
+                    android:text="@string/mycrcd_jiafang" />
+
+                <TextView
+                    style="@style/crcd_common_tv"
+                    android:paddingLeft="@dimen/fill_padding_top"
+                    android:text="@string/virtual_yifang" />
+
+                <ScrollView
+                    style="@style/scrollview_fill"
+                    android:layout_centerInParent="true"
+                    android:gravity="left"
+                    android:padding="@dimen/fill_margin_top" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            style="@style/crcd_common_tv"
+                            android:text="@string/isforex_sign_content" />
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/lastButton"
+                style="@style/isforex_two_left_btn"
+                android:text="@string/noaccept"
+                 />
+
+            <Button
+                android:id="@+id/sureButton"
+                style="@style/isforex_two_right_btn"
+                android:text="@string/accept"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

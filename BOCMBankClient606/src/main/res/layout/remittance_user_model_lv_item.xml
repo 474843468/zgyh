@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_usemodel"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/common_row_margin"
+    android:background="@drawable/bg_for_listview_item_write"
+    android:orientation="vertical" >
+
+    <!-- 模板名称 -->
+
+    <LinearLayout
+        android:id="@+id/ll_modelName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/textview_common_multi_second"
+            android:singleLine="true"
+            android:text="@string/remittance_template_otherOperation_Name" />
+
+        <TextView
+            android:id="@+id/tv_remittance_modelName"
+            style="@style/textview_common_multi_second"
+            android:singleLine="true" />
+    </LinearLayout>
+    <!-- 收款人姓名 -->
+
+    <LinearLayout
+        android:id="@+id/ll_userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_modelName"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_toLeftOf="@+id/tv_choose"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/textview_common_multi_second"
+            android:singleLine="true"
+            android:text="@string/remittance_userName" />
+
+        <TextView
+            android:id="@+id/tv_userName"
+            style="@style/textview_common_multi_second"
+            android:singleLine="true" />
+    </LinearLayout>
+    <!-- 收款账户 -->
+
+    <LinearLayout
+        android:id="@+id/ll_accountNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_userName"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_toLeftOf="@+id/tv_choose"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/textview_common_multi_second"
+            android:singleLine="true"
+            android:text="@string/remittance_accountNum" />
+
+        <TextView
+            android:id="@+id/tv_accountNum"
+            style="@style/textview_common_multi_second"
+            android:singleLine="true" />
+    </LinearLayout>
+    <!-- 收款银行 -->
+
+    <LinearLayout
+        android:id="@+id/ll_bankName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_accountNum"
+        android:layout_marginBottom="@dimen/common_row_margin"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/textview_common_multi_second"
+            android:layout_marginBottom="@dimen/common_row_margin"
+            android:singleLine="true"
+            android:text="@string/remittance_bankName" />
+
+        <TextView
+            android:id="@+id/tv_bankName"
+            android:layout_marginBottom="@dimen/common_row_margin"
+            style="@style/textview_common_multi_second"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/tv_choose"
+        android:layout_width="@dimen/dp_six_zero"
+        android:layout_height="@dimen/step_title_height"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/common_row_margin"
+        android:layout_centerVertical="true"
+        android:background="@drawable/btn_chaxun_bg"
+        android:drawablePadding="-10dp"
+        android:text="选择"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

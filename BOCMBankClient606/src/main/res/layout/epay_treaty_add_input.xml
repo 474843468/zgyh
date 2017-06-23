@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:id="@+id/sv_content"
+        style="@style/scrollview_with_no_padding"
+        android:layout_above="@+id/bt_next"
+        android:layout_marginBottom="@dimen/common_row_margin"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:paddingTop="@dimen/fill_padding_top" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/ll_mn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/epay_treaty_detail_tv_merchant_name" />
+
+                <TextView
+                    android:id="@+id/tv_merchant_name"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_ma"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_mn"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/epay_treaty_detail_tv_merchant_acc" />
+
+                <EditText
+                    android:id="@+id/et_merchant_id"
+                    style="@style/editext_fill"
+                    android:layout_marginRight="@dimen/fill_margin_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_ia"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_ma"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/epay_treaty_input_accounts" />
+
+                <Spinner
+                    android:id="@+id/s_accounts"
+                    style="@style/textview_common_right"
+                    android:layout_height="@dimen/dp_three_zero"
+                    android:layout_marginRight="@dimen/fill_margin_right"
+                    android:background="@drawable/bg_spinner"
+                    android:paddingLeft="@dimen/listiterm_padding_left" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_currency"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_ia"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/epay_wc_spa_tv_currency" />
+
+                <TextView
+                    android:id="@+id/tv_currency"
+                    style="@style/textview_common_right"
+                    android:text="@string/rmb_currency" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_pq"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_currency"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/epay_treaty_modify_quota_tv_per_quota" />
+
+                <TextView
+                    android:id="@+id/tv_per_quota"
+                    style="@style/textview_money_adapter"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_aq"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_pq"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/epay_treaty_modify_quota_tv_addup_quota" />
+
+                <TextView
+                    android:id="@+id/tv_addup_quota"
+                    style="@style/textview_money_adapter"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_dq"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_aq"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/epay_treaty_modify_quota_tv_day_quota" />
+
+                <EditText
+                    android:id="@+id/et_day_quota"
+                    style="@style/edittext_input_numberDecimal_fill"
+                    android:layout_marginRight="@dimen/fill_margin_right"
+                    android:maxLength="14" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_agreement"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_dq"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/fill_padding_left"
+                android:paddingRight="@dimen/fill_padding_right" >
+
+                <TextView
+                    android:id="@+id/tv_agreement_checked"
+                    android:layout_width="@dimen/checkboxWH"
+                    android:layout_height="@dimen/checkboxWH"
+                    android:background="@drawable/bg_check_box" />
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="@string/epay_treaty_input_accpet" />
+
+                <TextView
+                    android:id="@+id/tv_agreement_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/epay_treaty_input_agreement_name"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/textsize_default" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/bt_next"
+        style="@style/bottombtn"
+        android:layout_alignParentBottom="true"
+        android:text="@string/next" />
+
+</RelativeLayout>

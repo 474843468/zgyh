@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_divider_1px"
+        android:background="@color/boc_divide_color" />
+
+    <LinearLayout
+        android:background="@color/boc_titlebar_bg_white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_60px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/boc_space_between_30px"
+            android:paddingRight="@dimen/boc_space_between_30px">
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="[账户贵金属]"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"></View>
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.AccountListItemView.PartialLoadView
+                android:id="@+id/iv_reload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/boc_space_between_8px"
+                android:src="@drawable/boc_partial_refresh"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <TableLayout
+            android:id="@+id/tlContainer"
+            android:stretchColumns="0,1,2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow>
+                <TextView
+                    style="@style/home_module_text1"
+                    android:text="涨跌" />
+                <TextView
+                    style="@style/home_module_text1"
+                    android:text="买入价" />
+                <TextView
+                    style="@style/home_module_text1"
+                    android:text="卖出价" />
+            </TableRow>
+
+            <TableRow>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tvFlag"
+                        style="@style/home_module_text1"
+                        android:layout_width="wrap_content"
+                        android:text="--"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+                    <ImageView
+                        android:id="@+id/ivTrade"
+                        android:layout_gravity="center"
+                        android:layout_width="@dimen/boc_space_between_32px"
+                        android:layout_height="@dimen/boc_space_between_32px"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tvSellRate"
+                    style="@style/home_module_text1"
+                    android:text="--"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvBuyRate"
+                    style="@style/home_module_text1"
+                    android:text="--"
+                    android:textStyle="bold" />
+
+            </TableRow>
+            <TableRow android:paddingBottom="@dimen/boc_space_between_12px">
+                <TextView
+                    android:id="@+id/tvUpdateDate"
+                    style="@style/home_module_text1"
+                    android:textSize="@dimen/boc_text_size_super_small"
+                    android:layout_width="30dp"
+                    android:text="--"
+                     />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_divider_1px"
+        android:background="@color/boc_divide_color" />
+</LinearLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/transparent_00"
+    android:gravity="center" >
+
+    <RelativeLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shap_for_progress"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/tv_confirm_msg"
+            style="@style/isforex_little_cell_title"
+            android:layout_marginBottom="@dimen/common_row_margin"
+            android:text="@string/third_sipbox_tip"
+            android:textColor="@color/fonts_black"
+            />
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <LinearLayout
+            android:id="@+id/sipbox"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_confirm_msg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:text="@string/third_sipbox"
+                />
+
+            <cfca.mobile.sip.SipBox
+                android:id="@+id/modify_pwd_sip"
+                style="@style/sip_edit_fill"
+                android:layout_weight="3"
+                android:maxLength="6" >
+            </cfca.mobile.sip.SipBox>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sipbox"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dialogbtn_marginTop"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_cance"
+                style="@style/isforex_two_left_btn"
+                android:onClick="dialogClick"
+                android:text="@string/cancle" />
+
+            <Button
+                android:id="@+id/btn_confirm"
+                style="@style/isforex_two_right_btn"
+                android:onClick="dialogClick"
+                android:text="@string/confirm" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

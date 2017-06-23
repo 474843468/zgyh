@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 转账汇款 开户银行名称查询 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/list_bottom" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/fill_margin_bottom" >
+
+        <!-- 开户银行名称 -->
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layout_margin_top"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/fill_padding_right"
+            android:paddingRight="@dimen/fill_padding_right" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/acc_bank_name_new"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" >
+
+                <EditText
+                    android:id="@+id/et_acc_bankname_payee_other_bank_write"
+                    style="@style/edittext_common_fill"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_query_bank"
+                    android:paddingLeft="@dimen/layout_margin_top"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btn_query_kbank_othbank_write"
+                    style="@style/query_button_style"
+                    android:layout_marginLeft="@dimen/layout_margin_top"
+                    android:gravity="center" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:background="@color/gray_line"
+            android:gravity="center" />
+
+        <ListView
+            android:id="@+id/lv_query_result_kbank"
+            style="@style/listviewcomm_fill_gray_divider" >
+        </ListView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/title_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/left_img_width" >
+
+        <TextView
+            style="@style/tran_card_title"
+            android:text="@string/query_bank" />
+    </RelativeLayout>
+
+</RelativeLayout>

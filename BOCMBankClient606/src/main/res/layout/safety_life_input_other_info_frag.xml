@@ -1,0 +1,1202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/common_row_margin"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <!-- 受益人是否法定 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_shouyiren2" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                android:layout_weight="4"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb_legal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/btn_bottom_height"
+                    android:button="@drawable/radiobtn_selector"
+                    android:checked="true"
+                    android:text="@string/safety_lifeInsurance_bnft_legal"
+                    
+                     />
+
+                <RadioButton
+                    android:id="@+id/rb_appoint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/btn_bottom_height"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:button="@drawable/radiobtn_selector"
+                    android:text="@string/safety_lifeInsurance_bnft_appoint"
+                    android:textColor="@color/black"
+                    
+                    android:checked="false" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bnftInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <!-- 受益人是被保人的 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="6"
+                    android:singleLine="true"
+                    android:text="@string/safety_lifeInsurance_bnft_to_ben"
+                    android:textColor="@color/black"
+                     />
+
+                <Spinner
+                    android:id="@+id/sp_bnftToBen"
+                    style="@style/spinner_forex_prompt_info"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="4"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="20dip"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!-- 姓名 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="6"
+                    android:singleLine="true"
+                    android:text="@string/safety_hold_pro_detail_applicant_name"
+                    android:textColor="@color/black"
+                     />
+
+                <EditText
+                    android:id="@+id/et_bnftName"
+                    style="@style/edittext_common_fill_no_weight"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="4"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <!-- 性别 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="6"
+                    android:singleLine="true"
+                    android:text="@string/safety_hold_pro_detail_applicant_gender"
+                    android:textColor="@color/black"
+                     />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:layout_weight="4"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/rb_man"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/btn_bottom_height"
+                        android:button="@drawable/radiobtn_selector"
+                        android:checked="true"
+                        android:text="@string/boy"
+                        android:textColor="@color/black"
+                         />
+
+                    <RadioButton
+                        android:id="@+id/rb_woman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/btn_bottom_height"
+                        android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                        android:button="@drawable/radiobtn_selector"
+                        android:text="@string/girl"
+                        android:textColor="@color/black"
+                         />
+                </RadioGroup>
+            </LinearLayout>
+            <!-- 出生日期 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="6"
+                    android:singleLine="true"
+                    android:text="@string/safety_lifeInsurance_bnft_birth"
+                    android:textColor="@color/black"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_bnftBirth"
+                    style="@style/textview_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="4"
+                    android:background="@drawable/bg_spinner"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!-- 国籍 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="6"
+                    android:singleLine="true"
+                    android:text="@string/safety_hold_pro_detail_applicant_national"
+                    android:textColor="@color/black"
+                     />
+
+                <Spinner
+                    android:id="@+id/sp_nationality"
+                    style="@style/spinner_forex_prompt_info"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="4"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="20dip"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <!-- 证件类型 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="6"
+                    android:singleLine="true"
+                    android:text="@string/safety_lifeInsurance_bnft_diType"
+                    android:textColor="@color/black"
+                     />
+
+                <Spinner
+                    android:id="@+id/sp_bnftIdType"
+                    style="@style/spinner_forex_prompt_info"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="4"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="20dip"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!-- 证件号码 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="6"
+                    android:singleLine="true"
+                    android:text="@string/safety_lifeInsurance_bnft_idNumber"
+                    android:textColor="@color/black"
+                     />
+
+                <EditText
+                    android:id="@+id/et_bnftIdNumber"
+                    style="@style/edittext_common_fill_no_weight"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="4"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!-- 证件生效日 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="6"
+                    android:singleLine="true"
+                    android:text="@string/safety_lifeInsurance_bnft_idBeginDate"
+                    android:textColor="@color/black"
+                     />
+
+                <TextView
+                    android:id="@+id/tv_bnftIdBeginDate"
+                    style="@style/textview_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="4"
+                    android:background="@drawable/bg_spinner"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <!-- 证件到期日 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="6"
+                    android:singleLine="true"
+                    android:text="@string/safety_lifeInsurance_bnft_idEndDate"
+                    android:textColor="@color/black"
+                     />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_bnftIdEndDate"
+                        style="@style/textview_common"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/layout_height"
+                        android:layout_weight="2"
+                        android:background="@drawable/bg_spinner"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
+                        android:layout_weight="3"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <CheckBox
+                            android:id="@+id/cb_isForever"
+                            android:layout_width="@dimen/checkboxWH"
+                            android:layout_height="@dimen/checkboxWH"
+                            android:background="@drawable/save_phone_checkbox_selector"
+                            android:button="@null" />
+
+                        <TextView
+                            android:id="@+id/tv_isCheckTip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/safety_lifeInsurance_idForeverCheck"
+                            android:textColor="@color/black"
+                             />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 通讯地址 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="6"
+                    android:singleLine="true"
+                    android:text="@string/bond_customer_adress"
+                    android:textColor="@color/black"
+                     />
+
+                <Spinner
+                    android:id="@+id/sp_adress_province"
+                    style="@style/spinner_forex_prompt_info"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="4"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="20dip"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <!-- 城市下拉框 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="6"
+                    android:singleLine="true"
+                    android:text="@string/safety_lifeInsurance_coverage"
+                    android:textColor="@color/black"
+                    
+                    android:visibility="invisible" />
+
+                <Spinner
+                    android:id="@+id/sp_adress_city"
+                    style="@style/spinner_forex_prompt_info"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="4"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="20dip"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <!-- 县区下拉框 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="6"
+                    android:singleLine="true"
+                    android:text="@string/safety_lifeInsurance_coverage"
+                    android:textColor="@color/black"
+                    
+                    android:visibility="invisible" />
+
+                <Spinner
+                    android:id="@+id/sp_adress_county"
+                    style="@style/spinner_forex_prompt_info"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="4"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="20dip"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <!-- 详细地址 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="6"
+                    android:singleLine="true"
+                    android:text="@string/safety_lifeInsurance_coverage"
+                    android:textColor="@color/black"
+                    
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/et_adress_detail"
+                    style="@style/edittext_common_fill_no_weight"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="4"
+                    android:hint="@string/safety_adress_hint"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <!-- 移动电话 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="6"
+                    android:singleLine="true"
+                    android:text="@string/plps_annuity_phone"
+                    android:textColor="@color/black"
+                     />
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    style="@style/edittext_common_fill_no_weight"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="4"
+                    android:inputType="phone"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <!-- 职业 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="6"
+                    android:singleLine="true"
+                    android:text="@string/safety_lifeInsurance_job"
+                    android:textColor="@color/black"
+                     />
+
+                <Spinner
+                    android:id="@+id/sp_job"
+                    style="@style/spinner_forex_prompt_info"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="4"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="20dip"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <!-- 健康告知 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_bnft_healthInform"
+                />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                android:layout_weight="4"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb_healthInformY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/btn_bottom_height"
+                    android:button="@drawable/radiobtn_selector"
+                    android:checked="true"
+                    android:text="@string/safety_lifeInsurance_have"
+                    android:textColor="@color/black"
+                     />
+
+                <RadioButton
+                    android:id="@+id/rb_healthInformN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/btn_bottom_height"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:button="@drawable/radiobtn_selector"
+                    android:text="@string/safety_lifeInsurance_have_not"
+                    android:textColor="@color/black"
+                     />
+            </RadioGroup>
+        </LinearLayout>
+        <!-- 职业告知 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_bnft_professionalInform" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                android:layout_weight="4"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb_professionalInformY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/btn_bottom_height"
+                    android:button="@drawable/radiobtn_selector"
+                    android:checked="true"
+                    android:text="@string/safety_lifeInsurance_have"
+                    android:textColor="@color/black"
+                     />
+
+                <RadioButton
+                    android:id="@+id/rb_professionalInformN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/btn_bottom_height"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:button="@drawable/radiobtn_selector"
+                    android:text="@string/safety_lifeInsurance_have_not"
+                    android:textColor="@color/black"
+                     />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- 业务推荐号 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_bnft_serviceRecommNo"
+               />
+
+            <EditText
+                android:id="@+id/et_serviceRecommNo"
+                style="@style/edittext_common_fill_no_weight"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                android:hint="@string/hint_memo"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <!-- 缴费方式 -->
+
+
+        <!--
+             <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_bnft_paymentMethod"
+                android:textColor="@color/black"
+                 />
+
+            <TextView
+                android:id="@+id/tv_bnftPaymentMethod"
+                style="@style/comm_view_right"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+        -->
+        <!-- 红利领取方式 -->
+
+        <LinearLayout
+            android:id="@+id/ll_bonusGetMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_bnft_bonusGetMode"
+                android:textColor="@color/black"
+                 />
+
+            <Spinner
+                android:id="@+id/sp_bonusGetMode"
+                style="@style/spinner_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                android:paddingLeft="10dip"
+                android:paddingRight="20dip"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <!-- 投资时间选择 -->
+
+        <LinearLayout
+            android:id="@+id/ll_investTimeType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_bnft_investTimeType"
+                android:textColor="@color/black"
+                 />
+
+            <Spinner
+                android:id="@+id/sp_investTimeType"
+                style="@style/spinner_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                android:paddingLeft="10dip"
+                android:paddingRight="20dip"
+                android:textColor="@color/black" />
+        </LinearLayout>
+        <!-- 续期缴费方式 -->
+
+        <LinearLayout
+            android:id="@+id/ll_mantainMethod"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_bnft_mantainMethod"
+                android:textColor="@color/black"
+                 />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dip"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/cb_mantainMethod"
+                    android:layout_width="@dimen/checkboxWH"
+                    android:layout_height="@dimen/checkboxWH"
+                    android:background="@drawable/save_phone_checkbox_selector"
+                    android:button="@null" />
+
+                <TextView
+                    android:id="@+id/tv_mantainMethod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:text="@string/safety_lifeInsurance_bankTran"
+                    android:textColor="@color/black"
+                     />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_mantainMethod_tip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/bottom_margin_top"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_subCompany"
+                android:textColor="@color/black"
+                
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_tip1"
+                style="@style/comm_view_right"
+                android:layout_width="match_parent"
+                android:layout_weight="4"
+                android:paddingLeft="0dip"
+                android:text="@string/safety_lifeInsurance_mantainMethod_tip"
+                android:textColor="@color/red"
+                 />
+        </LinearLayout>
+        <!-- 保费自动垫交 -->
+
+        <LinearLayout
+            android:id="@+id/ll_autoPayFlag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_bnft_autoPayFlag"
+                android:textColor="@color/black"
+                 />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb_autoPayFlagN"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/btn_bottom_height"
+                    android:button="@drawable/radiobtn_selector"
+                    android:checked="true"
+                    android:text="@string/safety_lifeInsurance_noAutoPay"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_one_two" />
+
+                <RadioButton
+                    android:id="@+id/rb_autoPayFlagY"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/btn_bottom_height"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:button="@drawable/radiobtn_selector"
+                    android:text="@string/safety_lifeInsurance_autoPay"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_one_two" />
+            </RadioGroup>
+        </LinearLayout>
+        <!-- 银行账号 -->
+
+        <LinearLayout
+            android:id="@+id/ll_bankAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_bnft_bankAccount"
+                android:textColor="@color/black"
+                 />
+
+            <Spinner
+                android:id="@+id/sp_bankAccount"
+                style="@style/spinner_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                android:paddingLeft="10dip"
+                android:paddingRight="20dip"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <!-- 投保人账户姓名 -->
+
+        <LinearLayout
+            android:id="@+id/ll_applAccName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_bnft_applAccName"
+                android:textColor="@color/black"
+                 />
+
+            <EditText
+                android:id="@+id/et_applAccName"
+                style="@style/edittext_common_fill_no_weight"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                android:enabled="false"
+                android:textColor="@color/black" />
+        </LinearLayout>
+        <!-- 年金/生存金领取方式 -->
+
+        <LinearLayout
+            android:id="@+id/ll_getYearFlag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_bnft_getYearFlag"
+                android:textColor="@color/black"
+                 />
+
+            <Spinner
+                android:id="@+id/sp_getYearFlag"
+                style="@style/spinner_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                android:paddingLeft="10dip"
+                android:paddingRight="20dip"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <!-- 开户行 -->
+
+        <LinearLayout
+            android:id="@+id/ll_openingBank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_bnft_openingBank"
+                />
+
+            <TextView
+                android:id="@+id/tv_openingBank"
+                style="@style/edittext_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                android:gravity="center_vertical"
+                 />
+        </LinearLayout>
+
+        <!-- 领取期限 -->
+
+        <LinearLayout
+            android:id="@+id/ll_getYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_bnft_getYear"
+                android:textColor="@color/black"
+                 />
+
+            <EditText
+                android:id="@+id/et_getYear"
+                style="@style/edittext_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                android:inputType="number"
+                />
+        </LinearLayout>
+        <!-- 领取年龄 -->
+
+        <LinearLayout
+            android:id="@+id/ll_getStartAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_bnft_getStartAge"
+                />
+
+            <EditText
+                android:id="@+id/et_getStartAge"
+                style="@style/edittext_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                android:inputType="number"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <!-- 保单索取方式 -->
+
+        <LinearLayout
+            android:id="@+id/ll_policyHandFlag"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_bnft_policyHandFlag"
+                 />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb_policyHandFlag1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/btn_bottom_height"
+                    android:button="@drawable/radiobtn_selector"
+                    android:text="@string/safety_lifeInsurance_bnft_policyHandFlag1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_one_two" />
+
+                <RadioButton
+                    android:id="@+id/rb_policyHandFlag2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/btn_bottom_height"
+                    android:button="@drawable/radiobtn_selector"
+                    android:text="@string/safety_lifeInsurance_bnft_policyHandFlag2"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_one_two" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <!-- 保单邮寄地址 -->
+
+        <LinearLayout
+            android:id="@+id/ll_postAddr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="6"
+                    android:singleLine="true"
+                    android:text="@string/safety_lifeInsurance_bnft_postAddr"
+                     />
+
+                <Spinner
+                    android:id="@+id/sp_postAddr_province"
+                    style="@style/spinner_forex_prompt_info"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="4"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="20dip"
+                     />
+            </LinearLayout>
+
+            <!-- 城市下拉框 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="6"
+                    android:singleLine="true"
+                    android:text="@string/safety_lifeInsurance_coverage"
+                    android:textColor="@color/black"
+                    
+                    android:visibility="invisible" />
+
+                <Spinner
+                    android:id="@+id/sp_postAddr_city"
+                    style="@style/spinner_forex_prompt_info"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="4"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="20dip"
+                     />
+            </LinearLayout>
+            <!-- 县区下拉框 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="6"
+                    android:singleLine="true"
+                    android:text="@string/safety_lifeInsurance_coverage"
+
+                    android:visibility="invisible" />
+
+                <Spinner
+                    android:id="@+id/sp_postAddr_county"
+                    style="@style/spinner_forex_prompt_info"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="4"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="20dip"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <!-- 详细地址 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="6"
+                    android:singleLine="true"
+                    android:text="@string/safety_lifeInsurance_coverage"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/et_postAddr_detail"
+                    style="@style/edittext_forex_prompt_info"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="4"
+                    android:hint="@string/safety_adress_hint"
+                   />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_tip2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_right"
+            android:text="@string/safety_lifeInsurance_other_bottom_tip"
+            android:textColor="@color/red"
+             />
+        <!-- 底部显示不全，占位 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_bnft_getStartAge"
+                 />
+
+            <EditText
+                style="@style/edittext_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                 />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

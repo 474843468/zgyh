@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:background="@color/pale_red"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="6dip"
+        android:paddingTop="6dip" >
+
+        <TextView
+            style="@style/comm_view_left"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/remittance_info_input_payee_tip"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_default" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_row_margin"
+        android:layout_marginRight="@dimen/common_row_margin"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <!-- 地区 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/third_openacc_provice"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <Spinner
+                android:id="@+id/sp_area"
+                style="@style/Spiiner_fill"
+                android:layout_width="match_parent"
+                android:layout_marginRight="@dimen/common_listview_item_paddingLR" />
+        </LinearLayout>
+
+        <!-- 国家（地区） -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/remittance_info_input_country"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <TextView
+                android:id="@+id/tv_country"
+                style="@style/Spiiner_fill"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dip"
+                android:gravity="center_vertical"
+                android:hint="选择收款人常驻国家(地区)"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+        </LinearLayout>
+
+        <!-- 名称 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/remittance_info_input_name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <EditText
+                android:id="@+id/et_name"
+                style="@style/edittext_common_fill"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dip"
+                android:gravity="center_vertical"
+                android:hint="请输入收款人名称（英文或拼音）"
+                android:maxLength="70"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_name_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="left"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_default"
+            android:visibility="gone" />
+
+        <!-- 地址 -->
+
+        <LinearLayout
+            android:id="@+id/ll_otherAdress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/remittance_info_input_adress"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <EditText
+                android:id="@+id/et_adress"
+                style="@style/edittext_common_fill"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dip"
+                android:gravity="center_vertical"
+                android:hint="请输入收款人地址（英文或拼音）"
+                android:maxLength="105"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_adress_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="left"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_default"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tip0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="left"
+            android:text="如汇往加拿大、埃及、巴西地区，则本栏位必输；如汇往除此以外的其它地区，则本栏位选输"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_default" />
+
+        <!-- 联系电话，国家为日本时显示 -->
+
+        <LinearLayout
+            android:id="@+id/ll_rbPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/bond_customer_phone"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <EditText
+                android:id="@+id/et_rbPhone"
+                style="@style/edittext_common_fill"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dip"
+                android:gravity="center_vertical"
+                android:hint="请输入收款人联系电话"
+                android:maxLength="105"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_rbPhone_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="left"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_default"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_rbPhoneTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="left"
+            android:text="汇往日本地区，还请准确填写收款人联系电话，否则可能导致收款人无法顺利收到汇款"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_default" />
+
+        <!-- 账号 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/acc_accountnumber"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <EditText
+                android:id="@+id/et_accNumber"
+                style="@style/edittext_common_fill"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dip"
+                android:gravity="center_vertical"
+                android:hint="请输入收款人账号"
+                android:maxLength="34"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tip1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="left"
+            android:text="请填写IBAN号，请勿填写连接符或空格"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_default" />
+
+        <TextView
+            android:id="@+id/tip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="left"
+            android:text="如汇往加拿大皇家银行，请填写“5位TRANSIT号+7位账号”共12位数字"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_default" />
+
+        <TextView
+            android:id="@+id/tip9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:text="如汇往科威特、卡塔尔、约旦，请填写IBAN号，请勿填写连接符或空格"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_default" />
+
+        <LinearLayout
+            android:id="@+id/ll_cbSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:gravity="center"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/cb_save"
+                    android:layout_width="@dimen/checkboxWH"
+                    android:layout_height="@dimen/checkboxWH"
+                    android:background="@drawable/save_phone_checkbox_selector"
+                    android:button="@null"
+                    android:checked="true" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fill_margin_top"
+                android:gravity="center_vertical"
+                android:text="保存为外币跨境汇款申请模板"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+        </LinearLayout>
+
+        <!-- SWIFT代码 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/remittance_info_input_swiftCode"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <EditText
+                android:id="@+id/et_SWIFT"
+                style="@style/edittext_common_fill"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dip"
+                android:gravity="center_vertical"
+                android:hint="收款银行SWIFT代码"
+                android:maxLength="11"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_querySWIFT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dip"
+                android:text="@string/remittance_query"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/textsize_default" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tip3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="left"
+            android:text="8位或11位英文字母及数字的组合，请勿填写连接符或空格"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_default" />
+
+        <!-- 银行全称 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/remittance_info_input_bankFullName"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <EditText
+                android:id="@+id/et_bankFullName"
+                style="@style/edittext_common_fill"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dip"
+                android:gravity="center_vertical"
+                android:hint="请输入收款银行全称"
+                android:inputType="text"
+                android:maxLength="105"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tip4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="left"
+            android:text="收款银行全称应包括分支机构 ，最大长度为105个字符"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_default" />
+
+        <TextView
+            android:id="@+id/tip7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="left"
+            android:text="收款银行全称应包括分支机构 "
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_default" />
+
+        <!-- 银行行号 -->
+
+        <LinearLayout
+            android:id="@+id/ll_bankNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/remittance_info_input_bankCode"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <EditText
+                android:id="@+id/et_bankNumber"
+                style="@style/edittext_common_fill"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dip"
+                android:gravity="center_vertical"
+                android:hint="请输入收款行行号"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tip5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="left"
+            android:text="请填写收款行BSB号（格式：AU加6位数字，如AU064001）"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_default" />
+
+        <TextView
+            android:id="@+id/tip6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="left"
+            android:text="如汇往加拿大皇家银行，请填写“CC0003+5位TRANSIT号”。如您汇往加拿大其他银行，请提前向收款银行咨询收款行行号（号码组成为“CC+4位INSTITUTION号码+5位TRANSIT号码”）"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_default" />
+
+        <!-- 地址，此地址日本时显示 -->
+
+        <LinearLayout
+            android:id="@+id/ll_rbAdress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/remittance_info_input_adress"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <EditText
+                android:id="@+id/et_rbAdress"
+                style="@style/edittext_common_fill"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dip"
+                android:gravity="center_vertical"
+                android:hint="请输入收款银行地址"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tip8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="left"
+            android:text="请填写详细的收款银行地址\n收款银行全称和收款银行地址合计最大长度为104个字符"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_default" />
+    </LinearLayout>
+
+</LinearLayout>

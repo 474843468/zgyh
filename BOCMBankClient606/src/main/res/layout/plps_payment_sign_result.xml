@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin" >
+
+        <Button
+            android:id="@+id/finish"
+            style="@style/bottombtn"
+            android:onClick="btnNextOnclick"
+            android:text="@string/finish" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/remit_title_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:text="@string/plps_sign_confirmtip"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_default"
+                    android:visibility="gone" />
+                <LinearLayout
+                    style="@style/linnerlayout_common"
+                    android:orientation="vertical" 
+                    android:layout_marginTop="30dp">
+
+                    <ImageView
+                        android:layout_width="@dimen/inversitemhight"
+                        android:layout_height="@dimen/inversitemhight"
+                        android:layout_gravity="center"
+                        android:src="@drawable/chenggong" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="恭喜您，操作成功！"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/plps_serviceName" />
+
+                    <TextView
+                        android:id="@+id/servicename"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        android:id="@+id/year_remain_limit_alert"
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/plps_shanghu_name" />
+
+                    <TextView
+                        android:id="@+id/agent"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/crcd_setUp_confirm_nick" />
+
+                    <TextView
+                        android:id="@+id/nickname"
+                        style="@style/textview_common_right"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/plps_customername" />
+
+                    <TextView
+                        android:id="@+id/customerName"
+                        android:ellipsize="end"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/trans_remit_phone" />
+
+                    <TextView
+                        android:id="@+id/phone"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/plps_payuserno" />
+
+                    <TextView
+                        android:id="@+id/payuserno"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/plps_signacct" />
+
+                    <TextView
+                        android:id="@+id/signacct"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        android:id="@+id/signacctext"
+                        style="@style/textview_common_right"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/beizhu" />
+
+                    <TextView
+                        android:id="@+id/remarks"
+                        android:ellipsize="end"
+                        style="@style/textview_common_right"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_sms"
+                    style="@style/linnerlayout_common"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/smc" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <cfca.mobile.sip.SipBox
+                            android:id="@+id/sip_sms"
+                            style="@style/edittext_inputNumber_fill"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="@dimen/titlebackbtn_marginleft"
+                            android:gravity="center_vertical"
+                            android:maxLength="20" >
+                        </cfca.mobile.sip.SipBox>
+
+                        <Button
+                            android:id="@+id/smsbtn"
+                            style="@style/button_smscode"
+                            android:layout_marginRight="@dimen/common_listview_item_paddingLR" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_sip"
+                    style="@style/linnerlayout_common"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="1.3"
+                        android:singleLine="true"
+                        android:text="@string/opt"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <cfca.mobile.sip.SipBox
+                        android:id="@+id/et_cecurity_ps"
+                        style="@style/edittext_inputNumber_fill"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                        android:layout_weight="1.0"
+                        android:gravity="center_vertical"
+                        android:maxLength="20" >
+                    </cfca.mobile.sip.SipBox>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

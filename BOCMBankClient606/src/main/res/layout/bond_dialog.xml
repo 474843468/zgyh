@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 债券账户信息弹出框 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/transparent_00" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_padding_right"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:background="@drawable/message_dialog_bg"
+        android:paddingBottom="@dimen/contenttab_marginbottom" >
+
+        <ImageView
+            android:id="@+id/img_exit_accdetail"
+            android:layout_width="@dimen/close_clickarea_height"
+            android:layout_height="@dimen/close_clickarea_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="-14dp"
+            android:layout_marginTop="-14dp"
+            android:src="@color/transparent_00" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_exit_accdetail"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                style="@style/linnerlayout_common"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:paddingLeft="0dip" >
+
+                <TextView
+                    style="@style/bond_tv_15_left"
+                    android:layout_weight="2.0"
+                    android:text="@string/bond_mybond_title1"
+                    />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    style="@style/bond_tv_15_right"
+                    android:layout_weight="1.5"
+                    android:singleLine="false"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linnerlayout_common"
+                android:paddingLeft="0dip" >
+
+                <TextView
+                    style="@style/bond_tv_15_left"
+                    android:layout_weight="2.0"
+                    android:text="@string/bond_mybond_title2"
+                    />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    style="@style/bond_tv_15_right"
+                    android:layout_weight="1.5"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linnerlayout_common"
+                android:paddingLeft="0dip" >
+
+                <TextView
+                    style="@style/bond_tv_15_left"
+                    android:layout_weight="2.0"
+                    android:text="@string/currency"
+                    />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    style="@style/bond_tv_15_right"
+                    android:layout_weight="1.5"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linnerlayout_common"
+                android:layout_marginBottom="@dimen/fill_margin_top"
+                android:paddingLeft="0dip" >
+
+                <TextView
+                    style="@style/bond_tv_15_left"
+                    android:layout_weight="2.0"
+                    android:text="@string/boond_dialog_money"
+                    />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    style="@style/bond_tv_15_right"
+                    android:layout_weight="1.5"
+                    android:singleLine="false"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_btn"
+                style="@style/linnerlayout_common"
+                android:layout_marginBottom="@dimen/fill_margin_top"
+                android:layout_marginTop="@dimen/main_img_width"
+                android:visibility="gone" >
+
+                <Button
+                    android:id="@+id/btnReset"
+                    style="@style/bottombtn_fordialog"
+                    android:layout_width="fill_parent"
+                    android:layout_marginLeft="0dip"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/btn_gray"
+                    android:text="@string/bond_acct_reset" />
+
+                <Button
+                    android:id="@+id/btnMore"
+                    style="@style/btn_common_oneline_for_dialog"
+                    android:layout_width="fill_parent"
+                    android:layout_marginRight="10dip"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/btn_gray"
+                    android:text="@string/more" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 基金它账户设定主界面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/common_bottom_padding" >
+
+    <include
+        android:id="@+id/stepbar"
+        layout="@layout/step_title_layout" />
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/finc_next"
+            style="@style/bottombtn_606"
+            android:text="@string/next"
+             />
+    </LinearLayout>
+
+    <ScrollView
+        style="@style/scrollview_comm_havemarginbutton"
+        android:layout_above="@id/btn_layout"
+        android:layout_below="@id/stepbar" >
+
+        <LinearLayout
+            style="@style/confirm_main_style"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                style="@style/linnerlayout_common"
+                android:layout_marginTop="@dimen/common_bottom_padding" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/finc_fundtradeacc_colon" />
+
+                <TextView
+                    android:id="@+id/finc_fundacc"
+                    style="@style/confirm_right_textview_style606" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/finc_setfundcompany_colon" />
+
+                <Spinner
+                    android:id="@+id/finc_fundcompany_spinner"
+                    style="@style/Spiiner_fill_middle"
+                    android:background="@drawable/bg_spinner" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/finc_fundtaacc_colon" />
+
+                <EditText
+                    android:id="@+id/finc_fundtaacc_edit"
+                    style="@style/edittext_common_fill"
+                    android:maxLength="12"
+                     />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

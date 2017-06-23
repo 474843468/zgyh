@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 套餐签约修改输入信息页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin" >
+
+        <Button
+            android:id="@+id/remit_input_next_btn"
+            style="@style/bottombtn"
+            android:text="@string/next" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:id="@+id/scrollview"
+            style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/trans_remit_meal_account" />
+
+                    <TextView
+                        android:id="@+id/tran_remit_account"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/trans_remit_settype" />
+
+                    <TextView
+                        android:id="@+id/sp_remit_type"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/bizhong" />
+
+                    <TextView
+                        style="@style/textview_common_right_two"
+                        android:text="@string/tran_currency_rmb" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_extension_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/trans_remit_extension_type" />
+
+                    <TextView
+                        android:id="@+id/remit_extension_type"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_extension_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tran_remit_amount_lable"
+                        style="@style/textview_common_left_three"
+                        android:ellipsize="middle"
+                        android:text="@string/trans_remit_orign_amount" />
+
+                    <EditText
+                        android:id="@+id/tran_remit_amount"
+                        style="@style/edittext_input_numberDecimal_fill"
+                        android:layout_marginRight="@dimen/dp_five"
+                        android:layout_weight="2"
+                        android:maxLength="15"
+                        android:textColor="@color/black" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_extension_flag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/trans_remit_extension_flag" />
+
+                    <TextView
+                        android:id="@+id/tv_yes_or_no"
+                        style="@style/textview_common_right_two"
+                        android:visibility="gone" />
+
+                    <RadioGroup
+                        android:id="@+id/yes_or_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="horizontal"
+                        android:paddingRight="@dimen/dp_five" >
+
+                        <RadioButton
+                            android:id="@+id/yes"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@drawable/radiobtn_selector"
+                            android:text="@string/yes" />
+
+                        <RadioButton
+                            android:id="@+id/no"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:button="@drawable/radiobtn_selector"
+                            android:text="@string/no" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/trans_remit_phone" />
+
+                    <EditText
+                        android:id="@+id/tran_remit_phone"
+                        style="@style/edittext_inputNumber_fill"
+                        android:layout_marginRight="@dimen/dp_five"
+                        android:layout_weight="2"
+                        android:maxLength="11"
+                        android:textColor="@color/black" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/mycrcd_virtual_startdate" />
+
+                    <TextView
+                        android:id="@+id/tv_remit_valuedate"
+                        style="@style/textview_common_right_two" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/tran_remit_n_query_endDate" />
+
+                    <TextView
+                        android:id="@+id/tv_remit_enddate"
+                        style="@style/textview_common_right_two" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/remit_setmeal_attribute"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_one_zero"
+                        android:layout_marginRight="@dimen/dp_one_zero"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:background="@color/whitefornet"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_one_zero" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="@string/trans_remit_sharedAccount_no" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical" >
+
+                            <TextView
+                                android:id="@+id/tv_account_add"
+                                style="@style/textview_amount"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:text="@string/add_button" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_modify_deleteAcc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_one_zero"
+                        android:layout_marginRight="@dimen/dp_one_zero"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <com.chinamworld.bocmbci.widget.LinearListView
+                            android:id="@+id/lv_modify_sharedAcc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+                        </com.chinamworld.bocmbci.widget.LinearListView>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_list_title"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_one_zero"
+                        android:layout_marginRight="@dimen/dp_one_zero"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:background="@color/whitefornet"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_one_zero"
+                        android:text="@string/trans_remit_setmeal_modify_input_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_sharedAcc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_one_zero"
+                        android:layout_marginRight="@dimen/dp_one_zero"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <com.chinamworld.bocmbci.widget.LinearListView
+                            android:id="@+id/lv_sharedAcc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+                        </com.chinamworld.bocmbci.widget.LinearListView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/common_row_margin" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

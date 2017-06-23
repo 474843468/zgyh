@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 转账汇款 二维码转账  生成二维码确认 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <include
+        android:id="@+id/stepbar"
+        layout="@layout/step_title_layout" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        style="@style/scrollview_comm"
+        android:layout_above="@+id/bottom_btn_layout"
+        android:layout_below="@+id/stepbar"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:paddingLeft="@dimen/fill_margin_left" >
+
+        <LinearLayout
+            android:id="@+id/btn_transet_mytransfer"
+            style="@style/tran_body_ll" >
+
+            <!-- 账户  显示卡类型，别名 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two_dimen_acc" />
+
+                <TextView
+                    android:id="@+id/tv_acc_2dimen_generate_confirm"
+                    style="@style/textview_common_right_two"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            <!-- 显示账户卡号 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two_dimen_acc"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/tran_acc_no_tv"
+                    style="@style/textview_common_right_two"
+                    android:layout_weight="1" />
+            </LinearLayout>
+            <!-- 账户户名 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/two_dimen_accname" />
+
+                <TextView
+                    android:id="@+id/tv_accName_2dimen_generate_confirm"
+                    style="@style/textview_common_right_two"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_pic_2dime_generate_confirm"
+                android:layout_width="200dip"
+                android:layout_height="200dip"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:paddingRight="@dimen/fill_padding_left"
+                android:text="@string/two_dimen_scan_pic_info"
+                android:textColor="@color/gray" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="horizontal" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp_five"
+        android:paddingLeft="@dimen/fill_margin_right"
+        android:paddingRight="@dimen/fill_margin_right" >
+
+        <Button
+            android:id="@+id/btn_last_2dimen_generate_confirm"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_blue_big"
+            android:text="@string/cancle"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_next_2dimen_generate_confirm"
+            style="@style/bottombtn"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/confirm" />
+    </LinearLayout>
+
+</RelativeLayout>

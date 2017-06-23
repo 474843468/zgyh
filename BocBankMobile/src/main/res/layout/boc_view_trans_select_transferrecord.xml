@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_select_trans"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/select_currency_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/select_txt_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/boc_space_between_22px"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:layout_marginTop="@dimen/boc_space_between_46px"
+            android:text="金额范围"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:textSize="@dimen/boc_text_size_common" />
+
+
+        <include layout="@layout/boc_divide_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_104px"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.moneyinputview.MoneyInputTextView
+                android:id="@+id/trans_select_start_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:hint="0.00"
+                android:singleLine="true"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textColorHint="@color/boc_text_color_light_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                app:maxLeftNum="11" />
+
+            <View
+                android:layout_width="@dimen/boc_view_height_14px"
+                android:layout_height="@dimen/boc_view_height_2px"
+                android:layout_marginLeft="@dimen/boc_space_between_20px"
+                android:layout_marginRight="@dimen/boc_space_between_20px"
+                android:background="@color/boc_text_color_dark_gray" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.moneyinputview.MoneyInputTextView
+                android:id="@+id/trans_select_end_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center_horizontal"
+                android:hint="99,999,999,999.99"
+                android:singleLine="true"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textColorHint="@color/boc_text_color_light_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                app:maxLeftNum="11" />
+
+        </LinearLayout>
+
+        <include layout="@layout/boc_divide_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/select_cashremit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/boc_space_between_22px"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:layout_marginTop="@dimen/boc_space_between_46px"
+            android:text="收款人"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:textSize="@dimen/boc_text_size_common" />
+
+        <include layout="@layout/boc_divide_line" />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.ClearEditText
+            android:id="@+id/trans_select_payee_account_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_104px"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:background="@null"
+            android:gravity="center_vertical|center_horizontal"
+            android:hint="请输入"
+            android:paddingBottom="@dimen/boc_space_between_30px"
+            android:paddingTop="@dimen/boc_space_between_30px"
+            android:singleLine="true"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:textColorHint="@color/boc_text_color_light_gray"
+            android:textSize="@dimen/boc_text_size_small" />
+
+        <include layout="@layout/boc_divide_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/boc_space_between_20px"
+        android:layout_marginRight="@dimen/boc_space_between_20px"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/boc_space_between_22px"
+            android:layout_marginTop="@dimen/boc_space_between_46px"
+            android:text="交易状态"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:textSize="@dimen/boc_text_size_common" />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.singlemoreselect.SelectGridView
+            android:id="@+id/trans_select_single_trans_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/boc_space_between_20px"
+            android:horizontalSpacing="@dimen/boc_space_between_20px"
+            android:numColumns="2"
+            android:verticalSpacing="@dimen/boc_space_between_20px"
+            app:radioTrue="true" />
+    </LinearLayout>
+</LinearLayout>

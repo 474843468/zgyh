@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/finc_succeed"
+            style="@style/bottombtn_606"
+            android:layout_weight="1"
+            android:text="@string/ok"
+             />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/stepbar"
+        layout="@layout/step_title_layout" />
+
+      
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:scrollbars="none"        
+        android:paddingBottom="@dimen/common_row_margin"
+        android:layout_above="@id/btn_layout"
+        android:layout_below="@id/stepbar" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_info_textview_style"
+                    android:text="@string/finc_contractmessage_colon" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/finc_fundtradeacc_colon" />
+
+                <TextView
+                    android:id="@+id/finc_fundacc"
+                    style="@style/confirm_right_textview_style606" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    android:id="@+id/finc_fundcompany_textview_alert"
+                    style="@style/confirm_left_textview_style606"
+                    android:gravity="right|top"
+                    android:text="@string/finc_monyacc_colon" />
+
+                <LinearLayout
+                    style="@style/linnerlayout_vertical_common"
+                    android:layout_marginTop="3dp"
+                    android:layout_weight="1" >
+
+                    <TextView
+                        android:id="@+id/finc_card_type"
+                        style="@style/confirm_right_textview_style606"
+                        android:gravity="top"
+                        android:text="资金账户名" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/finc_card_number"
+                        style="@style/confirm_right_textview_style606"
+                        android:text="资金账户" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/finc_card_alias"
+                        style="@style/confirm_right_textview_style606"
+                        android:text="资金账户别名" >
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/finc_fundcode_colon" />
+
+                <TextView
+                    android:id="@+id/finc_productcode_textview"
+                    style="@style/confirm_right_textview_style606" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/safety_hold_pro_detail_prod_name" />
+
+                <TextView
+                    android:id="@+id/finc_productname_textview"
+                    style="@style/confirm_right_textview_style606" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/prms_currency_colon_outlay" />
+
+                <TextView
+                    android:id="@+id/finc_currency_textview"
+                    style="@style/confirm_right_textview_style606" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linnerlayout_common"
+                android:layout_marginTop="20dp" >
+
+                <CheckBox
+                    android:id="@+id/cb_signelectroncontract"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/finc_signelectroncontract_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我已仔细阅读该产品"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/finc_electroncontract_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="《电子合同书》"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

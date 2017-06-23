@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 外汇行情   外汇账户设置 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/text_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/fill_margin_top">
+
+        <TextView
+            android:id="@+id/tv_relevance_debit_title"
+            style="@style/textview_common"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/loan_choise_acc_list"
+            android:textColor="@color/gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/loan_nextButton"
+            style="@style/bottombtn"
+            android:text="@string/confirm" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/ll_btn"
+        android:layout_below="@+id/text_layout" >
+
+        <ListView
+            android:id="@+id/loan_listView"
+            style="@style/listviewcomm_wrap_haveDivider"
+            android:listSelector="#00000000" >
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>

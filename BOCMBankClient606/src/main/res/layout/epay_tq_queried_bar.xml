@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_qury1"
+    android:paddingLeft="@dimen/dp_one_zero"
+    android:paddingRight="@dimen/dp_one_zero"
+    android:paddingTop="@dimen/dp_five" >
+
+    <LinearLayout
+        android:id="@+id/ll_zy_account"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@string/epay_tq_tv_payment_way"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_default" />
+
+        <TextView
+            android:id="@+id/tv_payment_way"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_default" />
+
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_payment_type"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" 
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@string/epay_tq_tv_payment_type"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_default" 
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_payment_type"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_default"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_payment_way"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_zy_account"
+        android:layout_marginTop="@dimen/dp_five"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="支付账户："
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_default" />
+
+        <TextView
+            android:id="@+id/tv_payment_acc_number"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_default" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_date"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_payment_way"
+        android:layout_marginTop="@dimen/dp_five"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@string/epay_tq_tv_data"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_default" />
+
+        <TextView
+            android:id="@+id/tv_trans_date"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_default" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/slip_down"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_date"
+        android:layout_marginTop="@dimen/dp_five"
+        android:gravity="right"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/fill_padding" >
+
+        <TextView
+            style="@style/textview_common_down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/edittext_paddinglr"
+            android:layout_toLeftOf="@+id/img_slip_down" />
+
+        <ImageView
+            android:id="@+id/img_slip_down"
+            android:layout_width="@dimen/rightbtnW"
+            android:layout_height="@dimen/rightbtnH"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/img_arrow_gray_down" />
+    </RelativeLayout>
+
+</RelativeLayout>

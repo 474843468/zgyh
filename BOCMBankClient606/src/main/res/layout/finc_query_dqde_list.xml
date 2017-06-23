@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<RelativeLayout android:id="@+id/result"
+	    android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:visibility="visible">
+	    <LinearLayout
+	        android:id="@+id/searchResult"
+	         android:layout_width="match_parent"
+	         android:layout_height="wrap_content"
+	         android:background="@drawable/img_bg_query_j"
+	         android:orientation="vertical"
+	         android:layout_alignParentTop="true"
+	         android:visibility="gone">
+	
+	         <LinearLayout
+	             style="@style/linnerlayout_common"
+	             android:paddingLeft="@dimen/common_row_margin_half"
+	             android:gravity="left">
+	
+	             <TextView
+	                 style="@style/textview_common"
+	                 android:layout_width="wrap_content"
+	                 android:layout_height="wrap_content"
+	                 android:text="@string/finc_scheduled_transCycle" />
+	
+	             <TextView
+	                 android:id="@+id/transCycle"
+	                 style="@style/textview_common"
+	                 android:layout_width="wrap_content"
+	                 android:layout_height="wrap_content" />
+	         </LinearLayout>
+	
+	         <LinearLayout
+	             android:id="@+id/linearLayout1"
+	             style="@style/linnerlayout_common"
+	             android:paddingLeft="@dimen/common_row_margin_half"
+	             android:layout_marginBottom="0dp"
+	             android:gravity="left">
+	
+	             <TextView
+	                 style="@style/textview_common"
+	                 android:layout_width="wrap_content"
+	                 android:layout_height="wrap_content"
+	                 android:text="@string/finc_fundcode_colon" />
+	
+	             <TextView
+	                 android:id="@+id/fundCode"
+	                 style="@style/textview_common"
+	                 android:layout_width="wrap_content"
+	                 android:layout_height="wrap_content" />
+	         </LinearLayout>
+	
+	         <LinearLayout
+	             android:id="@+id/finc_down_LinearLayout"
+	             style="@style/linnerlayout_common"
+	             android:layout_marginTop="0dp"
+	             android:gravity="right|center_vertical"
+	             android:onClick="onClick">
+	
+	             <TextView
+	                 style="@style/textview_common_down"
+	                 android:layout_width="wrap_content"
+	                 android:layout_height="wrap_content"
+	                 android:textSize="@dimen/textsize_xiala" />
+	
+	             <ImageView
+	                 android:id="@+id/finc_down_imageView"
+	                 style="@style/query_image_up_style"
+	                 android:src="@drawable/img_arrow_gray_down606" />
+	         </LinearLayout>
+	     </LinearLayout>
+	     <RelativeLayout 
+	         android:background="@drawable/shap_for_dept_tranlist"
+	         android:layout_width="match_parent"
+	         android:layout_height="match_parent"
+	         android:layout_below="@+id/searchResult"
+	         android:layout_marginLeft="@dimen/fill_margin_left"
+	         android:layout_marginRight="@dimen/fill_margin_left"
+	         android:layout_marginBottom="@dimen/fill_margin_left">
+		    <include 
+		        android:id="@+id/finc_listheader_layout"
+		        layout="@layout/finc_listheader_attention"/>
+		
+		    <ListView
+		        android:layout_below="@id/finc_listheader_layout"
+		        android:id="@+id/query_list"
+		        style="@style/finc_listview_fill"
+		       />
+	     </RelativeLayout>
+	</RelativeLayout>
+	<LinearLayout android:id="@+id/condition_layout"
+        android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:visibility="gone">
+		<include layout="@layout/finc_dqde_query_condition"/>
+	</LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_dialog_simple_title"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:gravity="center"
+        android:textColor="@color/boc_common_cell_color"
+        android:textSize="@dimen/boc_text_size_big"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/rootLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_bg_white"
+        android:orientation="vertical"
+        android:padding="5dp" >
+
+        <FrameLayout
+            android:id="@+id/containLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@drawable/dialog_divider_h" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btLayout"
+            >
+
+            <Button
+                android:id="@+id/btn_dialog_error_cancel"
+                style="@style/WhiteButtonStyle"
+                android:layout_weight="1"
+                />
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/dialog_divider_h" />
+            <Button
+                android:id="@+id/btn_dialog_error_enter"
+                style="@style/RedButtonStyle"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

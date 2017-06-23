@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rltotal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_content" >
+<RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="62dp"
+        android:background="@drawable/navbar"
+        android:paddingTop="5dp" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+         >
+
+        <Button
+            android:id="@+id/ib_back"
+            style="@style/titlebackbtn" />
+ <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+         android:layout_weight="1"
+         >
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/titleText" 
+            android:gravity="center"
+           />
+        <TextView
+            android:id="@+id/tv_title_org"
+            style="@style/titleText" 
+            android:textSize="@dimen/textsize_default"
+            android:textStyle="normal"
+            android:gravity="center"
+           />
+</LinearLayout>
+        <Button
+            android:id="@+id/ib_top_right_btn"
+            style="@style/titlerightbtn"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_one_three"
+            android:layout_gravity="right|center_vertical"
+            android:text="@string/login"
+           />
+    </LinearLayout></RelativeLayout>
+
+    <com.chinamworld.bocmbci.widget.draggridview.PagedDragDropGrid
+        android:id="@+id/main_grid"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/point_layout"
+        android:layout_below="@+id/main_layout"
+        android:layout_marginTop="@dimen/dp_two_zero"
+        android:layout_marginBottom="@dimen/dp_two_zero"
+        android:fadingEdge="none"
+        android:scrollbars="none" >
+    </com.chinamworld.bocmbci.widget.draggridview.PagedDragDropGrid>
+
+    <LinearLayout
+        android:id="@+id/point_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/main_page_icon_height"
+        android:layout_above="@+id/llinclude" 
+        android:orientation="horizontal"
+        android:gravity="center">
+    </LinearLayout>
+
+   <TextView 
+       android:id="@+id/tvHint"
+       android:textColor="@color/gray"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="@string/fidgetOperathint"
+       android:layout_centerInParent="true"
+       android:textSize="@dimen/textsize_one_nine"
+       android:layout_margin="@dimen/fill_margin_left"
+       android:gravity="center"
+       android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/llinclude"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="20dp" >
+
+        <include
+            android:id="@+id/menu_popwindow"
+            layout="@layout/foot" />
+    </LinearLayout>
+
+</RelativeLayout>

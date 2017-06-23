@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 寿险 选择缴费类型弹出框 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/message_dialog_bg" >
+
+        <ImageView
+            android:id="@+id/img_exit_accdetail_1"
+            android:layout_width="@dimen/btn_dialog_height"
+            android:layout_height="@dimen/btn_dialog_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@color/transparent_00" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/img_exit_accdetail_1"
+            android:layout_toLeftOf="@+id/img_exit_accdetail_1"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_close_height"
+                android:layout_marginLeft="@dimen/fill_margin_top"
+                android:src="@drawable/icon_huoqi" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_close_height"
+                android:layout_marginLeft="@dimen/fill_margin_top"
+                android:src="@drawable/icon_guijinshu" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_payType"
+            style="@style/listviewcomm_fill_haveDivider"
+            android:layout_below="@+id/img_exit_accdetail_1"
+            android:layout_marginRight="@dimen/fill_margin_right_fordialog"
+            android:gravity="center"
+            android:paddingLeft="@dimen/dp_five"
+            android:paddingRight="@dimen/dp_five"
+            android:scrollbars="none" >
+        </ListView>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_exit_accdetail"
+        android:layout_width="@dimen/close_clickarea_width"
+        android:layout_height="@dimen/close_clickarea_height"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@color/transparent_00" />
+
+</RelativeLayout>

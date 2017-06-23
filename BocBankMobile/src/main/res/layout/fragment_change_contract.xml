@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#F0EFF5">
+
+    <LinearLayout
+        android:id="@+id/ll_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0EFF5"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp">
+
+            <TextView
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:text="原资金账户"
+                android:textColor="#222222"
+                android:textSize="@dimen/boc_text_size_small"/>
+
+            <TextView
+                android:id="@+id/tv_old_account_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6000 ****** 0001"
+                android:textColor="#666666"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="11dp">
+
+            <TextView
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:text="保证金账号"
+                android:textColor="#222222"
+                android:textSize="@dimen/boc_text_size_small"/>
+
+            <TextView
+                android:id="@+id/tv_margin_account_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8302382373"
+                android:textColor="#666666"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="11dp">
+
+            <TextView
+                android:layout_width="102dp"
+                android:layout_height="wrap_content"
+                android:text="结算币种"
+                android:textColor="#222222"
+                android:textSize="@dimen/boc_text_size_small"/>
+
+            <TextView
+                android:id="@+id/tv_settle_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="人民币元"
+                android:textColor="#666666"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/boc_button_bg_gray_no_stroke"
+            android:orientation="vertical">
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                android:id="@+id/ecw_choose_new_account_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="1.5dp"
+                app:editChoiceContent="请选择"
+                app:editChoiceName="新资金账户"
+                app:editChoiceNameBold="true"/>
+
+            <include layout="@layout/boc_divide_line"/>
+
+            <LinearLayout
+                android:id="@+id/ll_set_trade_account"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_104px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/boc_space_between_32px"
+                    android:layout_weight="1"
+                    android:text="设置交易账户"
+                    android:textColor="#000"
+                    android:textSize="@dimen/boc_text_size_common"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/iv_is_set_trade_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/unchecked"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_next_step"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_88px"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="11dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/boc_button_bg_blue"
+            android:gravity="center"
+            android:text="下一步"
+            android:textColor="#fff"/>
+    </LinearLayout>
+</FrameLayout>

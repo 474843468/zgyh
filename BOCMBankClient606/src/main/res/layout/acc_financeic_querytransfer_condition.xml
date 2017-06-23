@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/acc_query_transfer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/acc_query_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_bottom_width"
+        android:background="@drawable/img_bg_card_chaxun"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/acc_frame_left"
+            style="@style/rightbtn_jiantou"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/img_arrow_gray_left" />
+
+        <ImageView
+            android:id="@+id/acc_btn_goitem"
+            style="@style/rightbtn_jiantou"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/img_arrow_gray_right" />
+
+        <com.chinamworld.bocmbci.widget.CustomGallery
+            android:id="@+id/viewPager"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/acc_list_item_height"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/acc_btn_goitem"
+            android:layout_toRightOf="@+id/acc_frame_left"
+            android:layout_weight="1"
+            android:fadingEdgeLength="0dp"
+            android:spacing="10dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_query_condition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/acc_query_horizontal"
+        android:background="@drawable/img_bg_query_j"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/acc_query_choosedate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fill_margin_bottom"
+            android:layout_marginRight="@dimen/fill_margin_bottom"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_acc_onweek"
+                style="@style/buttonLeft"
+                android:text="@string/prms_str_oneweek"
+                android:textSize="@dimen/textsize_one_three" />
+
+            <Button
+                android:id="@+id/btn_acc_onmonth"
+                style="@style/buttonMiddle"
+                android:text="@string/prms_str_onemonth"
+                android:textSize="@dimen/textsize_one_three" />
+
+            <Button
+                android:id="@+id/btn_acc_threemonth"
+                style="@style/buttonRight"
+                android:text="@string/prms_str_threemonth"
+                android:textSize="@dimen/textsize_one_three" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fill_margin_bottom"
+            android:layout_marginRight="@dimen/fill_margin_bottom"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:orientation="horizontal" >
+
+            <include layout="@layout/base_query_fengge" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/acc_query_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/comm_confirm_leftiterm_marginleft"
+            android:layout_marginRight="@dimen/comm_confirm_leftiterm_marginleft"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/acc_query_transfer_startdate"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginRight="@dimen/fill_margin_right"
+                android:layout_weight="1"
+                android:background="@drawable/bg_spinner"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/edittext_paddinglr" />
+
+            <TextView
+                android:id="@+id/acc_query_transfer_enddate"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginLeft="@dimen/fill_margin_left"
+                android:layout_weight="1"
+                android:background="@drawable/bg_spinner"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/edittext_paddinglr" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/comm_confirm_leftiterm_marginleft"
+            android:layout_marginRight="@dimen/comm_confirm_leftiterm_marginleft"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_acc_query_transfer"
+                style="@style/query_button_style" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_up"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_row_margin"
+            android:layout_marginRight="@dimen/common_row_margin" >
+
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/textview_common_up"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:gravity="right|bottom"
+                android:textSize="@dimen/textsize_one_three" />
+
+            <ImageView
+                android:id="@+id/acc_query_up"
+                style="@style/query_image_up_style"
+                android:layout_gravity="bottom"
+                android:src="@drawable/img_arrow_gray_up" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

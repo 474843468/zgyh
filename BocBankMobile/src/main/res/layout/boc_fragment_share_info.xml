@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:paddingTop="@dimen/boc_space_between_20px">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_share"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/layout_share_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/boc_common_bg_color"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/boc_watermark"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_share_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/boc_space_between_190px"
+                    android:gravity="center"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_little_big" />
+
+                <include layout="@layout/boc_divide_line" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/boc_space_between_28px"
+                    android:paddingLeft="@dimen/boc_space_between_28px"
+                    android:paddingRight="@dimen/boc_space_between_28px">
+
+                    <com.boc.bocsoft.mobile.bocmobile.base.widget.shareinfoview.ListViewForScrollView
+                        android:id="@+id/listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:dividerHeight="0dp"
+                        android:overScrollMode="never"
+                        android:paddingTop="@dimen/boc_space_between_28px" />
+
+                    <ImageView
+                        android:id="@+id/img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/boc_elec_receipt" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_share_warn_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/boc_space_between_28px"
+                android:paddingTop="@dimen/boc_space_between_20px"
+                android:text="@string/boc_common_share_warn_info"
+                android:textColor="@color/boc_text_color_cinerous"
+                android:textSize="@dimen/boc_text_size_small" />
+
+            <TextView
+                android:id="@+id/txt_share_subscribe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingBottom="@dimen/boc_space_between_28px"
+                android:paddingTop="@dimen/boc_space_between_28px"
+                android:text="@string/boc_common_share_subscribe"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/boc_space_between_20px"
+                android:src="@drawable/boc_micro_bank" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_share"
+        style="@style/BocButton.BocPromptButton"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_104px"
+        android:layout_alignParentBottom="true"
+        android:text="@string/boc_common_share_wechat"
+        android:textSize="@dimen/boc_space_between_30px" />
+</RelativeLayout>

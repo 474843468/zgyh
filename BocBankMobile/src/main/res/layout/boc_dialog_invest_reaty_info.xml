@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/boc_common_cell_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/boc_space_between_50px">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/boc_invest_treaty_valid_change"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:textSize="@dimen/boc_text_size_little_big"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View style="@style/divider_horizontal" />
+
+
+    <TextView
+        android:id="@+id/tv_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/boc_space_between_30px"
+        android:textColor="@color/boc_text_color_dark_gray"
+        android:textSize="@dimen/boc_text_size_small" />
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/boc_space_between_30px"
+        android:paddingLeft="@dimen/boc_space_between_30px"
+        android:paddingRight="@dimen/boc_space_between_30px"
+        android:textColor="@color/boc_text_color_red"
+        android:textSize="@dimen/boc_text_size_small"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_et_period"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_80px"
+        android:layout_marginBottom="@dimen/boc_space_between_20px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/boc_space_between_30px"
+        android:paddingRight="@dimen/boc_space_between_30px"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="@dimen/boc_space_between_200px"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:text="@string/boc_invest_treaty_buy_period"
+            android:textColor="@color/boc_text_color_common_gray"
+            android:textSize="@dimen/boc_text_size_common"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/cb_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/checkbox_style"
+            android:checked="true"
+            android:paddingRight="@dimen/boc_space_between_44px"
+            android:text="@string/boc_invest_treaty_no_period"
+            android:textColor="@color/boc_text_color_common_gray"
+            android:textSize="@dimen/boc_text_size_small"
+            android:visibility="gone" />
+
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputDialogView
+            android:id="@+id/et_period"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_80px" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_et_min_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/boc_space_between_20px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/boc_space_between_30px"
+        android:paddingRight="@dimen/boc_space_between_30px"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_min_money"
+            android:layout_width="@dimen/boc_space_between_200px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:textColor="@color/boc_text_color_common_gray"
+            android:textSize="@dimen/boc_text_size_common"
+            android:textStyle="bold" />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputDialogView
+            android:id="@+id/et_min_amount"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_80px" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_et_max_amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/boc_space_between_20px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/boc_space_between_30px"
+        android:paddingRight="@dimen/boc_space_between_30px"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_max_money"
+            android:layout_width="@dimen/boc_space_between_200px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:textColor="@color/boc_text_color_common_gray"
+            android:textSize="@dimen/boc_text_size_common"
+            android:textStyle="bold" />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputDialogView
+            android:id="@+id/et_max_amount"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_80px" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_30px"/>
+
+    <View style="@style/divider_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_96px"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_left"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/boc_space_between_96px"
+            android:layout_weight="1"
+            android:background="@drawable/bg_invest_pressed_selector"
+            android:gravity="center"
+            android:text="@string/boc_common_cancel"
+            android:textColor="@color/invest_color_selector_pressed"
+            android:textSize="@dimen/boc_text_size_common"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/btn_right"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/boc_space_between_96px"
+            android:layout_weight="1"
+            android:background="@drawable/bg_invest_nomal_selector"
+            android:gravity="center"
+            android:text="@string/boc_common_next"
+            android:textColor="@color/invest_color_selector_normal"
+            android:textSize="@dimen/boc_text_size_common"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

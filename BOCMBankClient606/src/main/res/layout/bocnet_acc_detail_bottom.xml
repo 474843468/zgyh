@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 我的信用卡    信用卡详情页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/ll_btnBotom"
+            style="@style/linnerlayout_common"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/btn_bill_query"
+                style="@style/btn_common_oneline"
+                android:background="@drawable/btn_red_big"
+                android:text="@string/bocnet_bill_query" />
+            <Button
+                android:id="@+id/btn_regi"
+                style="@style/btn_common_oneline"
+                android:background="@drawable/btn_red_big"
+                android:text="@string/bocnet_regi_mobile_bank" />
+        </LinearLayout>
+		
+        <LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:layout_below="@+id/ll_beedtype"
+            android:layout_above="@+id/ll_btnBotom"
+            android:layout_marginTop="-3dp">
+	        <ScrollView
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:gravity="center">
+	
+	            <LinearLayout
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:orientation="vertical" >
+	
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView
+	                        style="@style/textview_common_left"
+	                        android:text="@string/mycrcd_bill_type" />
+	
+	                    <TextView
+	                        android:id="@+id/tv_prodCode_detail"
+	                        style="@style/textview_common_right" />
+	                </LinearLayout>
+	
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView
+	                        style="@style/textview_common_left"
+	                        android:text="@string/bocinvt_eva_name" />
+	
+	                    <TextView
+	                        android:id="@+id/acc_accountnickname_value"
+	                        style="@style/textview_common_right"/>
+	
+	                </LinearLayout>
+	
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView
+	                        android:id="@+id/tv_bill"
+	                        style="@style/textview_common_left"
+	                        android:text="@string/mycrcd_bill_code" />
+	
+	                    <TextView
+	                        android:id="@+id/tv_curCode_detail"
+	                        style="@style/textview_common_right"/>
+	
+	                </LinearLayout>
+	
+	                <LinearLayout style="@style/linnerlayout_common"
+	                    android:visibility="gone" >
+	
+	                    <TextView
+	                        style="@style/textview_common_left"
+	                        android:text="@string/mycrcd_bill_seed" />
+	
+	                    <TextView
+	                        android:id="@+id/tv_bill_type"
+	                        style="@style/textview_common_right"
+	                        android:textColor="@color/red" />
+	                </LinearLayout>
+	
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView
+	                        style="@style/textview_common_left"
+	                        android:text="@string/mycrcd_bill_score" />
+	
+	                    <TextView
+	                        android:id="@+id/tv_score"
+	                        style="@style/textview_common_right" />
+	                </LinearLayout>
+	
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView
+	                        style="@style/textview_common_left"
+	                        android:text="@string/mycrcd_bill_all_balance" />
+	
+	                    <TextView
+	                        android:id="@+id/tv_prodTimeLimit_detail"
+	                        style="@style/textview_common_right"
+	                        android:textColor="@color/red" />
+	                </LinearLayout>
+	
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView
+	                        style="@style/textview_common_left"
+	                        android:text="@string/mycrcd_bill_balance" />
+	
+	                    <LinearLayout
+	                        style="@style/textview_common_right"
+	                        android:layout_width="fill_parent"
+	                        android:layout_height="wrap_content"
+	                        android:orientation="vertical" >
+	
+	                        <TextView
+	                            android:id="@+id/tv_buyPrice_detail"
+	                            style="@style/textview_common"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:textColor="@color/red" />
+	
+	                        <TextView
+	                            android:id="@+id/tv_buyPrice_name"
+	                            style="@style/textview_common"
+	                            android:layout_width="wrap_content"
+	                            android:layout_height="wrap_content"
+	                            android:textColor="@color/gray" />
+	                    </LinearLayout>
+	                </LinearLayout>
+	
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView
+	                        style="@style/textview_common_left"
+	                        android:text="@string/mycrcd_bill_total_facility" />
+	
+	                    <TextView
+	                        android:id="@+id/tv_applyObj_detail"
+	                        style="@style/textview_common_right"
+	                        android:textColor="@color/red" />
+	                </LinearLayout>
+	
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView
+	                        style="@style/textview_common_left"
+	                        android:text="@string/mycrcd_bill_installamount" />
+	
+	                    <TextView
+	                        android:id="@+id/tv_periodical_detail"
+	                        style="@style/textview_common_right"
+	                        android:textColor="@color/red" />
+	                </LinearLayout>
+	
+	                <LinearLayout style="@style/linnerlayout_common" >
+	
+	                    <TextView
+	                        style="@style/textview_common_left"
+	                        android:text="@string/mycrcd_bill_divided_keyong" />
+	
+	                    <TextView
+	                        android:id="@+id/tv_billdivide_keyong"
+	                        style="@style/textview_common_right"
+	                        android:textColor="@color/red" />
+	                </LinearLayout>
+	
+	                <LinearLayout
+	                    android:id="@+id/ll_cun_lixi"
+	                    style="@style/linnerlayout_common">
+	
+	                    <TextView
+	                        style="@style/textview_common_left"
+	                        android:text="@string/mycrcd_bill_cun_lixi" />
+	
+	                    <TextView
+	                        android:id="@+id/tv_cun_lixi"
+	                        style="@style/textview_common_right"
+	                        android:textColor="@color/red" />
+	                </LinearLayout>
+	
+	                <LinearLayout
+	                    android:id="@+id/ll_lixi_tax"
+						style="@style/linnerlayout_common">
+	
+	                    <TextView
+	                        style="@style/textview_common_left"
+	                        android:text="@string/mycrcd_bill_cun_lixitax" />
+	
+	                    <TextView
+	                        android:id="@+id/tv_lixitax"
+	                        style="@style/textview_common_right"
+	                        android:textColor="@color/red" />
+	                </LinearLayout>
+	            </LinearLayout>
+	        </ScrollView>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/ll_beedtype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_left"
+            android:layout_alignParentTop="true" >
+
+            <Button
+                android:id="@+id/btn_renminbi"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/step_title_height"
+                android:layout_weight="1"
+                android:background="@drawable/acc_top_left"
+                android:text="@string/mycrcd_renmibi"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <Button android:visibility="invisible"
+                android:id="@+id/btn_waibi"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/step_title_height"
+                android:layout_weight="1"
+                android:background="@drawable/acc_top_right"
+                android:text="@string/mycrcd_meiyuan"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+<!--             <LinearLayout -->
+<!--                 android:layout_width="fill_parent" -->
+<!--                 android:layout_height="@dimen/step_title_height" -->
+<!--                 android:layout_weight="1" > -->
+<!--             </LinearLayout> -->
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_content" >
+
+    <!-- 重置密码step -->
+
+    <include
+        android:id="@+id/stepbar"
+        layout="@layout/step_title_layout" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        style="@style/scrollview_comm_havemarginbutton"
+        android:layout_above="@+id/btn_layout"
+        android:layout_below="@+id/stepbar" >
+
+        <LinearLayout style="@style/tran_detail_activity_ll" >
+
+            <ImageView
+                android:layout_width="@dimen/dp_seven_zero"
+                android:layout_height="@dimen/dp_seven_zero"
+                android:layout_gravity="center"
+                android:src="@drawable/chenggong" />
+
+            <TextView
+                android:id="@+id/tv_register_info"
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_for_zero"
+                android:gravity="center"
+                android:paddingLeft="@dimen/layout_padding_left_right"
+                android:paddingRight="@dimen/layout_padding_left_right" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_acc_loss_actnum"
+                    style="@style/textview_common_left"
+                    android:text="@string/regist_mobile" />
+
+                <TextView
+                    android:id="@+id/tv_register_number"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <!--
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:gravity="center"
+                android:orientation="horizontal" 
+                android:layout_marginTop="@dimen/layout_margin_top">
+
+                <TextView
+                    android:id="@+id/tv_acc_loss_actnum"
+                    style="@style/textview_common_left"
+                    android:text="@string/customer_number" />
+
+                <TextView
+                    android:id="@+id/tv_register_number"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:gravity="center"
+                android:orientation="horizontal" 
+                android:layout_marginTop="@dimen/layout_margin_top">
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/customer_name" />
+
+                <TextView
+                    android:id="@+id/tv_register_name"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:gravity="center"
+                android:orientation="horizontal" 
+                android:layout_marginTop="@dimen/layout_margin_top">
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/register_date" />
+
+                <TextView
+                    android:id="@+id/tv_register_date"
+                    style="@style/textview_common_right" />
+            </LinearLayout>-->
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/register_btn_conf"
+            style="@style/bottombtn"
+            android:text="@string/finish"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

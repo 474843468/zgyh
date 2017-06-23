@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/just_margin_left_and_right"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/login_layout_height"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/textview_common"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/card_number" />
+		<LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+        <EditText
+            android:id="@+id/bocnet_accnum"
+            style="@style/login_edittext"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:inputType="number"
+            android:maxLength="19"
+            android:textSize="@dimen/textsize_default" >
+
+            <requestFocus />
+        </EditText>
+        <ImageView
+             android:id="@+id/imagebtn"
+             android:layout_height="@dimen/auth_image_height"
+             android:layout_width="@dimen/auth_image_height"
+             android:layout_gravity="center_vertical"
+             android:background="@drawable/card_what"
+              />
+        </LinearLayout>
+        
+    </LinearLayout>
+
+    <!-- 信用卡 -->
+
+    <LinearLayout
+        android:id="@+id/layout_creditcard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView style="@style/dividerlinegray" />
+        <!--
+        <LinearLayout
+            style="@style/just_margin_left_and_right"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_layout_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bocnet_accnum_lasttime" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/title_margin_top"
+                android:layout_weight="1.0"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" >
+
+                    <TextView
+                        android:id="@+id/mth"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="月" />
+
+                    <EditText
+                        android:id="@+id/bocnet_month"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/title_margin_top"
+                        android:layout_marginRight="3dip"
+                        android:layout_toLeftOf="@id/mth"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textSize="@dimen/textsize_default" >
+
+                        <requestFocus />
+                    </EditText>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" >
+
+                    <TextView
+                        android:id="@+id/tvyear"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:text="年" />
+
+                    <EditText
+                        android:id="@+id/bocnet_year"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/title_margin_top"
+                        android:layout_marginRight="3dip"
+                        android:layout_toLeftOf="@id/tvyear"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textSize="@dimen/textsize_default" >
+
+                        <requestFocus />
+                    </EditText>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView style="@style/dividerlinegray" />
+
+        <LinearLayout
+            style="@style/just_margin_left_and_right"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_layout_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bocnet_accnum_cvv2" />
+
+            <cfca.mobile.sip.SipBox
+                android:id="@+id/bocnet_cvv2"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:maxLength="3"
+                android:textSize="@dimen/textsize_default"
+                android:hint="@string/bocnet_accnum_cvv2_hint" >
+            </cfca.mobile.sip.SipBox>
+        </LinearLayout> -->
+
+        <LinearLayout
+            style="@style/just_margin_left_and_right"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_layout_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bocnet_accnum_query_pas" />
+
+            <cfca.mobile.sip.SipBox
+                android:id="@+id/bocnet_cvv2"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:maxLength="3"
+                android:textSize="@dimen/textsize_default" >
+            </cfca.mobile.sip.SipBox>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 借记卡 -->
+
+    <LinearLayout
+        android:id="@+id/layout_debitcard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"  >
+
+        <TextView style="@style/dividerlinegray" />
+
+        <LinearLayout
+            style="@style/just_margin_left_and_right"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_layout_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/bocnet_accnum_pas" />
+
+            <cfca.mobile.sip.SipBox
+                android:id="@+id/bocnet_pas"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:maxLength="20"
+                android:textSize="@dimen/textsize_default" >
+            </cfca.mobile.sip.SipBox>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bocImageCodeLl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <TextView style="@style/dividerlinegray" />
+
+        <LinearLayout
+            style="@style/just_margin_left_and_right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/login_image_code" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <EditText
+                    android:id="@+id/bocImageCode"
+                    style="@style/login_edittext"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/hint_image"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:textSize="@dimen/textsize_default" />
+
+                <Button
+                    android:id="@+id/bocImageCodeBtn"
+                    style="@style/auth_image"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/selector_for_image_code"
+                    android:text="加载中..." />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

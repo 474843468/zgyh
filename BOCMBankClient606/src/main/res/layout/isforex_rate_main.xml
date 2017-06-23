@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 外汇  外汇账户设置 item -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!--
+    <LinearLayout
+        android:id="@+id/left_title_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/manual_refresh"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/left_title"
+            style="@style/textview_common"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/for_reference_only"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/textsize_one_zero" />
+    </LinearLayout>
+    -->
+
+
+    <!--
+    <LinearLayout
+        android:id="@+id/left_title2_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/textview_common"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="@string/update_time"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/textsize_one_zero" />
+
+        <TextView
+            android:id="@+id/update_time"
+            style="@style/textview_common"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="-"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/textsize_one_zero" />
+    </LinearLayout>
+    -->
+
+    <LinearLayout
+        android:id="@+id/user_refresh_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/common_row_margin"
+        android:orientation="vertical" >
+
+        <include layout="@layout/biz_title_with_refresh_btn" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/layout_button"
+            android:layout_marginTop="-2dp" >
+
+            <RelativeLayout
+                android:id="@+id/layout_all"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:id="@+id/layout_main"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_above="@+id/refresh_layout"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@drawable/bg_for_listview_item_write"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/linear_title"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/dp_five_zero"
+                            android:background="@color/gray_6c"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_common"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                                android:layout_weight="6"
+                                android:gravity="left"
+                                android:text="@string/forex_rate_code" />
+
+                            <TextView
+                                style="@style/textview_common"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/common_row_margin_half"
+                                android:layout_marginRight="@dimen/rightbtnH"
+                                android:layout_weight="4"
+                                android:gravity="left"
+                                android:text="@string/forex_rate_currentBuy" />
+
+                            <TextView
+                                style="@style/textview_common"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                                android:layout_weight="4"
+                                android:gravity="left"
+                                android:text="@string/forex_rate_currentSell" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gray"
+                            android:orientation="horizontal" >
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="2"
+                            android:orientation="vertical" >
+
+                            <ListView
+                                android:id="@+id/rate_listView"
+                                style="@style/listviewcomm_fill_gray_divider"
+                                android:layout_above="@+id/rate_make"
+                                android:listSelector="#00000000"
+                                android:paddingBottom="@dimen/dp_five"
+                                android:visibility="visible" >
+                            </ListView>
+
+                            <LinearLayout
+                                android:id="@+id/rate_make"
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/dp_for_zero"
+                                android:layout_alignParentBottom="true"
+                                android:background="@drawable/img_buttom_gray_bar"
+                                android:orientation="horizontal" >
+
+                                <ImageView
+                                    android:layout_width="@dimen/fill_margin_left_double"
+                                    android:layout_height="@dimen/fill_margin_left_double"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/fill_margin_left"
+                                    android:src="@drawable/img_add" />
+
+                                <TextView
+                                    style="@style/textview_common"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="@dimen/fill_margin_right"
+                                    android:gravity="left"
+                                    android:text="@string/isForex_rate_info2"
+                                    android:textColor="@color/red" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_make_rate"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/fill_padding_bottom"
+                    android:layout_marginLeft="@dimen/fill_margin_left"
+                    android:layout_marginRight="@dimen/fill_margin_left"
+                    android:layout_marginTop="@dimen/btn_bottom_height"
+                    android:gravity="center"
+                    android:lineSpacingExtra="@dimen/margin_of_bottom_btn"
+                    android:text="@string/isForex_rate_customer_no_make"
+                    android:textSize="@dimen/textsize_one_seven" />
+
+                <Button
+                    android:id="@+id/no_rate_make"
+                    style="@style/bottombtn"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/fill_margin_left"
+                    android:layout_marginRight="@dimen/fill_margin_left"
+                    android:layout_marginTop="@dimen/btn_connect_height"
+                    android:background="@drawable/btn_red_big"
+                    android:text="@string/forex_rate_make"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_one_nine" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/shap_of_save_confirm_pdl"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/rate_goldButton"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/btn_dialog_height"
+                android:layout_weight="1"
+                android:background="@drawable/isforex_selector_bag"
+                android:singleLine="true"
+                android:text="@string/isForex_rate_goldinfo"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_one_seven" />
+
+            <Button
+                android:id="@+id/rate_waihui_Button"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/btn_dialog_height"
+                android:layout_weight="1"
+                android:background="@drawable/isforex_selector_bag"
+                android:singleLine="true"
+                android:text="@string/isForex_rate_waihuiinfo"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_one_seven" />
+
+            <Button
+                android:id="@+id/rate_customerButton"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/btn_dialog_height"
+                android:layout_weight="1"
+                android:background="@drawable/isforex_selector_bag"
+                android:singleLine="true"
+                android:text="@string/isForex_rate_info3"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_one_seven" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

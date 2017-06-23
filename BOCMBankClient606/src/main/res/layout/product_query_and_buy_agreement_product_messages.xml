@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 中银理财-投资协议申请，投资产品信息页面 -->
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/style_match_match"
+    android:orientation="vertical"
+     xmlns:app="http://schemas.android.com/apk/res-auto">
+     
+    <FrameLayout 
+        style="@style/style_height_weight_1"
+        >
+            <!-- android:layout_marginTop="@dimen/bovinvt_layout_content_margin_top" -->
+        <ScrollView 
+            style="@style/style_match_match"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:paddingTop="@dimen/bovinvt_layout_margin_top"
+            android:paddingBottom="@dimen/bovinvt_layout_margin_top"
+            >
+        <LinearLayout 
+            style="@style/style_match_wrap"
+            android:paddingLeft="@dimen/layout_margin_left_right"
+            android:paddingRight="@dimen/layout_margin_left_right"
+            android:orientation="vertical"
+            >
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="@string/bocinvt_tv_26"
+                app:weightShowRate="2:3"
+                android:id="@+id/tv_1"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="@string/yearlyRR"
+                app:weightShowRate="2:3"
+                android:id="@+id/tv_2"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="@string/bocinvt_tv_7"
+                app:weightShowRate="2:3"
+                android:id="@+id/tv_3"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="@string/bocinvt_tv_27"
+                app:weightShowRate="2:3"
+                android:id="@+id/tv_4"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="@string/bocinvt_buy_number"
+                app:weightShowRate="2:3"
+                android:id="@+id/tv_5"
+                />
+			<!-- 钞/汇 -->
+            <LinearLayout 
+                style="@style/style_match_wrap"
+                android:layout_marginTop="@dimen/bovinvt_layout_margin_top1"
+                android:gravity="center_vertical"
+                >
+            	<!-- 币种是人民币，显示"-"，否则显示下拉框 -->
+                <TextView 
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    style="@style/textview_common"
+                    android:gravity="right"
+                    android:text="@string/bocinvt_tv_28"
+                    />
+                <TextView 
+                    android:id="@+id/textview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    style="@style/textview_common"
+                    android:text="@string/bocinvt_tv_41"
+                    android:visibility="gone"
+                    />
+                <!-- 现钞/现汇 -->
+                <RadioGroup
+                            android:id="@+id/rg_ch"
+                            style="@style/style_with_weight_1"
+                            android:layout_weight="3"
+                            android:orientation="horizontal" >
+                            <RadioButton
+                                android:id="@+id/rb_c"
+                                style="@style/style_radiobutton_with_weigh_1"
+                                android:checked="true"
+                                android:text="@string/bocinvt_tv_68" />
+
+                            <RadioButton
+                                android:id="@+id/rb_h"
+                                style="@style/style_radiobutton_with_weigh_1"
+                                android:text="@string/bocinvt_tv_69" />
+                        </RadioGroup>
+            </LinearLayout>
+            <!-- 投资金额模式 -->
+            <LinearLayout 
+                style="@style/style_match_wrap"
+                android:layout_marginTop="@dimen/bovinvt_layout_margin_top1"
+                android:gravity="center_vertical"
+                >
+                <TextView 
+                    android:id="@+id/tv_left_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    style="@style/textview_common"
+                    android:ellipsize="middle"
+                    android:gravity="right"
+                    android:text="@string/bocinvt_tv_29"
+                    />
+                <TextView 
+                    android:id="@+id/tv_6"
+                    style="@style/style_tv_bocinv_agreement_appley"
+                    android:layout_weight="3"
+                    android:gravity="left"
+                    android:text="@string/dinge"
+                    android:visibility="gone"
+                    />
+                <RadioGroup
+                            android:id="@+id/rg_de"
+                            style="@style/style_with_weight_1"
+                            android:layout_weight="3"
+                            android:orientation="horizontal" 
+                            android:visibility="visible"
+                            >
+                            <RadioButton
+                                android:id="@+id/rb_de"
+                                style="@style/style_radiobutton_with_weigh_1"
+                                android:checked="true"
+                                android:text="@string/dinge" />
+
+                            <RadioButton
+                                android:id="@+id/rb_bde"
+                                style="@style/style_radiobutton_with_weigh_1"
+                                android:text="@string/budinge" />
+                        </RadioGroup>
+            </LinearLayout>
+            <!-- 不定额 时隐藏 -->
+            <LinearLayout 
+                android:id="@+id/layout_1"
+                style="@style/style_match_wrap"
+                android:layout_marginTop="@dimen/bovinvt_layout_margin_top1"
+                >
+                <TextView 
+                    android:id="@+id/tv_7"
+                   style="@style/style_tv_bocinv_agreement_appley"
+                   android:layout_weight="2"
+                   android:ellipsize="middle"
+                   android:text="@string/bocinvt_tv_30"
+                   /> 
+               <EditText 
+                   android:id="@+id/edt_1"
+                   style="@style/edittext_input_numberDecimal_fill"
+                   android:layout_weight="3"
+                   android:maxLength="14"
+                   android:layout_width="0dp"
+                   />
+            </LinearLayout>
+            <LinearLayout 
+                android:id="@+id/layout_fene"
+                style="@style/style_match_wrap"
+                android:layout_marginTop="@dimen/bovinvt_layout_margin_top1"
+                android:visibility="visible"
+                >
+                <TextView 
+                    android:id="@+id/tv_left_3"
+                   style="@style/style_tv_bocinv_agreement_appley"
+                   android:layout_weight="2"
+                   android:ellipsize="middle"
+                   android:text="@string/bocinvt_tv_83"
+                   /> 
+               <EditText 
+                   android:id="@+id/edt_5"
+                   style="@style/edittext_input_numberDecimal_fill"
+                   android:layout_weight="3"
+                   android:maxLength="14"
+                   android:layout_width="0dp"
+                   />
+            </LinearLayout>
+            <!-- 中文反显框 -->
+                <TextView 
+                    android:id="@+id/tv_chinese"
+                    android:layout_marginTop="@dimen/bovinvt_layout_margin_top1"
+                   style="@style/style_match_wrap"
+                   android:textSize="@dimen/textsize_default"
+                   android:textColor="@color/red"
+                   android:visibility="gone"
+                   android:text=""
+                   /> 
+                <TextView 
+                    android:id="@+id/tv_tip"
+                    android:layout_marginTop="@dimen/bovinvt_layout_margin_top1"
+                   style="@style/style_match_wrap"
+                   android:textSize="@dimen/textsize_default"
+                   android:textColor="@color/red"
+                   android:text="@string/bocinvt_tv_84"
+                   /> 
+                   
+            <!-- 账户保留余额、最大购买金额 ，不定额时显示-->
+            <LinearLayout 
+                android:id="@+id/layout_bu_ding_e"
+                style="@style/style_match_wrap"
+                android:layout_marginTop="@dimen/bovinvt_layout_margin_top1"
+                android:orientation="vertical"
+                >
+               <!-- 账户保留余额 -->
+               <LinearLayout 
+                android:id="@+id/layout_yu_e"
+                style="@style/style_match_wrap"
+                android:layout_marginTop="@dimen/bovinvt_layout_margin_top1"
+                >
+                <TextView 
+                    android:id="@+id/tv_yu_e"
+                   style="@style/style_tv_bocinv_agreement_appley"
+                   android:layout_weight="2"
+                   android:ellipsize="middle"
+                   android:text="@string/bocinvt_tv_55"
+                   /> 
+               <EditText 
+                   android:id="@+id/edt_yu_e"
+                   style="@style/edittext_input_numberDecimal_fill"
+                   android:layout_weight="3"
+                   android:maxLength="14"
+                   android:layout_width="0dp"
+                   />
+               </LinearLayout>
+               <!-- 中文反显框 -->
+                <TextView 
+                    android:id="@+id/tv_chinese_yu_e"
+                    android:layout_marginTop="@dimen/bovinvt_layout_margin_top1"
+                   style="@style/style_match_wrap"
+                   android:textSize="@dimen/textsize_default"
+                   android:textColor="@color/red"
+                   android:visibility="gone"
+                   android:text=""
+                   /> 
+               
+               <!-- 最大购买金额 -->
+               <LinearLayout 
+                android:id="@+id/layout_max_buy"
+                style="@style/style_match_wrap"
+                android:layout_marginTop="@dimen/bovinvt_layout_margin_top1"
+                >
+                <TextView 
+                    android:id="@+id/tv_max_buy"
+                   style="@style/style_tv_bocinv_agreement_appley"
+                   android:layout_weight="2"
+                   android:ellipsize="middle"
+                   android:text="@string/bocinvt_tv_56"
+                   /> 
+               <EditText 
+                   android:id="@+id/edt_max_buy"
+                   style="@style/edittext_input_numberDecimal_fill"
+                   android:layout_weight="3"
+                   android:maxLength="14"
+                   android:layout_width="0dp"
+                   />
+            </LinearLayout>
+            <!-- 中文反显框 -->
+                <TextView 
+                    android:id="@+id/tv_chinese_max_buy"
+                    android:layout_marginTop="@dimen/bovinvt_layout_margin_top1"
+                   style="@style/style_match_wrap"
+                   android:textSize="@dimen/textsize_default"
+                   android:textColor="@color/red"
+                   android:visibility="gone"
+                   android:text=""
+                   />
+                
+            </LinearLayout>
+                
+            <LinearLayout 
+                style="@style/style_match_wrap"
+                android:layout_marginTop="@dimen/bovinvt_layout_margin_top1"
+                >
+                <TextView 
+                    android:id="@+id/tv_left_2"
+                   style="@style/style_tv_bocinv_agreement_appley"
+                   android:layout_weight="2"
+                   android:ellipsize="middle"
+                   android:text="@string/bocinvt_product_stage"
+                   /> 
+               <EditText 
+                   android:id="@+id/edt_2"
+                   style="@style/edittext_input_numberDecimal_fill"
+                   android:layout_weight="3"
+                   android:maxLength="6"
+                   android:layout_width="0dp"
+                   />
+            </LinearLayout>
+            
+            
+            <TextView 
+                style="@style/style_match_wrap"
+                android:layout_marginBottom="@dimen/bovinvt_layout_margin_top"
+                android:textColor="@color/transparent_00"
+                android:text="@string/app_name"
+                android:background="@color/transparent_00"
+                />
+        </LinearLayout>
+        </ScrollView>
+        <!-- <LinearLayout 
+            style="@style/style_match_wrap"
+            android:gravity="center_horizontal"
+            android:visibility="gone"
+            > -->
+            <!-- 标题区，投资产品信息 -->
+        <!-- <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/bovinvt_tv_title_height"
+            style="@style/textview_common"
+            android:paddingLeft="@dimen/layout_margin_left_right"
+            android:paddingRight="@dimen/layout_margin_left_right"
+            android:background="@drawable/shape_product_query_and_buy_tv_bg"
+            android:gravity="center"
+            android:text="@string/bocinvt_tv_39"
+            />
+        
+        </LinearLayout> -->
+        </FrameLayout>
+    
+    <!-- 按钮区 -->
+    <LinearLayout style="@style/style_match_wrap">
+        <!-- <Button 
+            android:id="@+id/btn_last"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/last"
+            android:textColor="@color/white"
+            /> -->
+        <Button 
+            android:id="@+id/btn_next"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/bocinvt_tv_11"
+            android:textColor="@color/white"
+            />
+   	</LinearLayout>
+    
+
+</LinearLayout>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 开通投资理财的信息提交页面（动态口令） -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:userProperty="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_00" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/stepbar"
+            layout="@layout/step_title_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="@dimen/margin_of_commrequestopen"
+            android:layout_weight="1"
+            android:background="@drawable/shap_for_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/isConfirmOpen"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_one_five" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_of_commrequestopen"
+                android:text="@string/isConfirmOpen"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_five"
+                android:visibility="gone" />
+
+            <!-- <LinearLayout
+                android:id="@+id/llSms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_of_commrequestopen"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/smskey"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1" >
+
+                    <cfca.mobile.sip.SipBox
+                        android:id="@+id/etsms"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_for_edittext"
+                        android:gravity="center_vertical"
+                        android:maxLength="6" >
+                    </cfca.mobile.sip.SipBox>
+
+                    <Button
+                        android:id="@+id/smsbtn"
+                        style="@style/button_smscode" />
+                </LinearLayout>
+
+            </LinearLayout> -->
+            <LinearLayout
+                android:id="@+id/llSms"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_bottom_height"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_common_left_three"
+                    android:layout_height="match_parent"
+                    android:gravity="center|right"
+                    android:text="@string/smc"
+                    android:layout_weight="3" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="2" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_smc_sip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center" >
+
+                        <cfca.mobile.sip.SipBox
+                            android:id="@+id/etsms"
+                            style="@style/editext_fill"
+                            android:maxLength="6"
+                            android:textSize="@dimen/textsize_default" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/smsbtn"
+                        style="@style/button_smscode"
+                        android:layout_marginLeft="@dimen/fill_margin_top"
+                        android:gravity="center" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llOtp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_of_commrequestopen"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|right"
+                    android:text="@string/movekey"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default"
+                    android:layout_weight="3" />
+
+                <cfca.mobile.sip.SipBox
+                    android:id="@+id/etsip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:background="@drawable/bg_for_edittext"
+                    android:gravity="center_vertical"
+                    android:maxLength="6" >
+
+                </cfca.mobile.sip.SipBox>
+
+                <EditText
+                    android:id="@+id/etdongtai"
+                    style="@style/edittext_common_fill"
+                    android:inputType="number"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <com.chinamworld.bocmbci.widget.UsbKeyText
+                android:id="@+id/sip_usbkey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_of_commrequestopen"
+                android:gravity="center"
+                android:orientation="horizontal"
+                userProperty:ShowRate="3:2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/common_bottom_padding_new"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/btnPro"
+                style="@style/btn_common_oneline"
+                android:background="@drawable/btn_blue_big"
+                android:text="@string/pro"
+                android:visibility="gone" />
+            <!-- 按钮背景采用shap   多个控件相同的属性较多时生成style引用，提高开发效率 -->
+
+            <Button
+                android:id="@+id/btnConfim"
+                style="@style/bottombtn_new"
+                android:layout_marginLeft="@dimen/margin_of_commrequestopen"
+                android:layout_marginRight="@dimen/margin_of_commrequestopen"
+                android:text="@string/confirm" />
+            <!-- 按钮背景采用shap -->
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

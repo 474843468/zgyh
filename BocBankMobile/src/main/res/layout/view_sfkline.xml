@@ -1,0 +1,283 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:id="@+id/rootView"
+    android:paddingBottom="@dimen/activity_vertical_margin">
+
+    <FrameLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/titleContentLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_74px">
+
+            <ImageView
+                android:id="@+id/changedCharsView"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/llbt_ima_zoushi"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                />
+
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#ffa0a0a0"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+
+            <com.chinamworld.llbt.userwidget.tabview.TabView
+                android:id="@+id/tabView"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_kline_info"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_60px"
+            android:background="@color/boc_text_color_common_gray"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/time"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/boc_common_cell_color"
+                    android:textSize="@dimen/boc_space_between_22px"/>
+
+               <!-- <TextView
+                    android:id="@+id/hour"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/boc_common_cell_color"
+                    android:textSize="@dimen/boc_space_between_22px"/>-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="开"
+                        android:textColor="@color/boc_common_cell_color"
+                        android:textSize="@dimen/boc_space_between_22px"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:id="@+id/openPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/boc_common_cell_color"
+                        android:textSize="@dimen/boc_space_between_22px"
+                        android:textStyle="bold"
+                        android:text=""
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="高"
+                        android:textColor="@color/boc_common_cell_color"
+                        android:textSize="@dimen/boc_space_between_22px"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:id="@+id/maxPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/boc_common_cell_color"
+                        android:textSize="@dimen/boc_space_between_22px"
+                        android:textStyle="bold"
+                        android:text=""
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="低"
+                        android:textColor="@color/boc_common_cell_color"
+                        android:textSize="@dimen/boc_space_between_22px"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:id="@+id/minPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/boc_common_cell_color"
+                        android:textSize="@dimen/boc_space_between_22px"
+                        android:textStyle="bold"
+                        android:text=""
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="收"
+                        android:textColor="@color/boc_common_cell_color"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/boc_space_between_22px"
+                        />
+                    <TextView
+                        android:id="@+id/closePrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/boc_common_cell_color"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/boc_space_between_22px"
+                        android:text=""
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_mavalue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_60px"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/tv_ma5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/boc_space_between_22px"
+            android:textColor="#595757"
+            android:gravity="center"
+            tools:text="MA5"
+            />
+        <TextView
+            android:id="@+id/tv_ma10"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/boc_space_between_22px"
+            android:textColor="#f000ffff"
+            android:gravity="center"
+            tools:text="MA10"
+            />
+        <TextView
+            android:id="@+id/tv_ma20"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/boc_space_between_22px"
+            android:textColor="#f1c232"
+            android:gravity="center"
+            tools:text="MA20"
+            />
+        <TextView
+            android:id="@+id/tv_ma30"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textSize="@dimen/boc_space_between_22px"
+            android:textColor="#379a7b"
+            android:gravity="center"
+            tools:text="MA30"
+            />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="@dimen/boc_space_between_40px"
+        android:layout_marginRight="@dimen/boc_space_between_40px">
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.userwidget.echarsview.ECharsView
+            android:id="@+id/echartsView"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:visibility="gone">
+
+        </com.boc.bocsoft.mobile.bocmobile.base.widget.userwidget.echarsview.ECharsView>
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.trendview.BocTrendView
+            android:id="@+id/echartsView1"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+
+            />
+
+        <com.forms.view.ChartsView
+            android:id="@+id/kLineView"
+            android:layout_width="match_parent"
+            app:menu_child_alpha="0.5"
+            android:layout_height="match_parent" />
+
+
+
+    </FrameLayout>
+
+
+
+</LinearLayout>

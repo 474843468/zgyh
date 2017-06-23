@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 结售汇 购汇 输入信息页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:userProperty="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/bremit_confirm_info_ok"
+            style="@style/textview_forex_button_cell"
+            android:text="@string/confirm" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_btn"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/titleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fill_margin_top"
+                    android:gravity="center"
+                    android:text="@string/goldbonus_account_message_confirm"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_default" />
+
+                <LinearLayout
+                    android:id="@+id/phonenumber_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="5.0"
+                        android:gravity="right"
+                        android:textColor="@color/fonts_dark_gray"
+                        android:text="@string/safety_carsafety_applicantPhone" />
+
+                    <TextView
+                        android:id="@+id/phone_number"
+                        style="@style/textview_common_right"
+                        android:layout_weight="3.5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin_half"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="5.0"
+                        android:gravity="right"
+                        android:textColor="@color/fonts_dark_gray"
+                        android:text="@string/trade_acc" />
+
+                    <TextView
+                        android:id="@+id/bremit_acc"
+                        style="@style/textview_common_right"
+                        android:layout_weight="3.5" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin_half"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_gravity="center"
+                        android:layout_weight="5.0"
+                        android:gravity="right"
+                        android:textColor="@color/fonts_dark_gray"
+                        android:text="@string/large_sign_acc_type" />
+
+                    <TextView
+                        android:id="@+id/money_type"
+                        style="@style/textview_common_right"
+                        android:layout_weight="3.5" />
+                </LinearLayout>
+
+                <!-- 手机交易码布局 -->
+
+                <LinearLayout
+                    android:id="@+id/layout_sms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/show_dialog_right_closeWH"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:layout_width="fill_parent"
+                        android:layout_weight="5.0"
+                        android:gravity="right"
+                        android:text="@string/smc"
+                        android:textColor="@color/fonts_dark_gray"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.5"
+                        android:orientation="horizontal" >
+
+                        <cfca.mobile.sip.SipBox
+                            android:id="@+id/sip_sms"
+                            style="@style/edittext_inputNumber_fill"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="@dimen/titlebackbtn_marginleft"
+                            android:layout_weight="3.5"
+                            android:gravity="center_vertical"
+                            android:maxLength="20" >
+                        </cfca.mobile.sip.SipBox>
+
+                        <Button
+                            android:id="@+id/smsbtn"
+                            style="@style/button_smscode"
+                            android:layout_marginRight="@dimen/layout_margin_top" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_sip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/common_row_margin"
+                    android:layout_marginTop="@dimen/show_dialog_right_closeWH"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="5.0"
+                        android:singleLine="true"
+                        android:text="@string/opt"
+                        android:textColor="@color/fonts_dark_gray"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <cfca.mobile.sip.SipBox
+                        android:id="@+id/et_cecurity_ps"
+                        style="@style/edittext_inputNumber_fill"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/layout_margin_top"
+                        android:layout_weight="3.5"
+                        android:gravity="center_vertical"
+                        android:maxLength="20" >
+                    </cfca.mobile.sip.SipBox>
+                </LinearLayout>
+
+
+                    <com.chinamworld.bocmbci.widget.UsbKeyText
+                        android:id="@+id/sip_usbkey"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/show_dialog_right_closeWH"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        userProperty:MargRight="@dimen/dp_five"
+                        userProperty:ShowRate="3:2" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

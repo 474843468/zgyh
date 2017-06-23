@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 保险-持有保单 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <!-- 购买渠道 -->
+
+        <LinearLayout
+            android:id="@+id/ll_insurCompany"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/bottom_margin_top"
+            android:paddingTop="@dimen/bottom_margin_top" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"  android:layout_gravity="center_vertical"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_hold_pro_detail_buy_channel" />
+
+            <Spinner
+                android:id="@+id/sp_insurCompany"
+                style="@style/spinner_forex_prompt_info"
+                android:layout_marginRight="5dp"
+                android:layout_weight="3"
+                android:paddingRight="35dip" />
+        </LinearLayout>
+        <!-- 保险公司 -->
+
+        <LinearLayout
+            android:id="@+id/ll_company"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_insurCompany"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/bottom_margin_top"
+            android:paddingTop="@dimen/bottom_margin_top"
+            android:visibility="visible" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_hold_pro_detail_risk_company" />
+
+            <Spinner
+                android:id="@+id/sp_company"
+                style="@style/spinner_forex_prompt_info"
+                android:layout_marginRight="5dp"
+                android:layout_weight="3"
+                android:paddingRight="35dip" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/sort_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/common_row_margin"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_safetyName"
+            style="@style/textview_forex_prompt_message"
+            android:layout_marginRight="@dimen/common_row_margin"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="产品名称" />
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="1dip"
+            android:layout_height="@dimen/common_details_messages_margintop"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/tv_buyDate"
+            style="@style/textview_forex_prompt_message"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/common_row_margin"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:textSize="@dimen/textsize_one_two"
+            android:text="生效日期" />
+
+        <View
+            android:id="@+id/v2"
+            android:layout_width="1dip"
+            android:layout_height="@dimen/common_details_messages_margintop"
+            android:background="@color/gray" />
+
+        <TextView
+            android:id="@+id/tv_amount"
+            style="@style/textview_forex_prompt_message"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/common_row_margin"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="保费" />
+    </LinearLayout>
+
+    <com.chinamworld.bocmbci.widget.SwipeListView
+        xmlns:swipe="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/lv_holdPro"
+        style="@style/listviewcomm_fill_haveDivider"
+        swipe:swipeActionLeft="dismiss"
+        swipe:swipeCloseAllItemsWhenMoveList="true"
+        swipe:swipeFrontView="@+id/front"
+        swipe:swipeMode="both" />
+
+</LinearLayout>

@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:orientation="horizontal" >
+
+        <!-- <Button
+            android:id="@+id/continuep"
+            style="@style/dialogbtn"
+            android:background="@drawable/btn_red_big"
+            android:onClick="btnLastOnclick"
+            android:text="@string/last" /> -->
+
+        <Button
+            style="@style/bottombtn"
+            android:onClick="btnNextOnclick"
+            android:text="@string/next"
+            android:background="@drawable/btn_red_big" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dip"
+            android:layout_marginBottom="8dip"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/remit_title_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:text="@string/plps_annuity_plan_changetip"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_default"
+                    android:visibility="gone" />
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/plps_customername" />
+
+                    <EditText
+                        android:id="@+id/custname"
+                        style="@style/edittext_common_fill"
+                        android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                        android:inputType="text"
+                        android:maxLength="40"
+                        android:hint="请输入" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/trans_remit_phone" />
+
+                    <EditText
+                        android:id="@+id/phone"
+                        style="@style/edittext_common_fill"
+                        android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                        android:inputType="number"
+                        android:hint="请输入"
+                        android:maxLength="11" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/plps_payuserno" />
+
+                    <EditText
+                        android:id="@+id/payuserno"
+                        style="@style/edittext_common_fill"
+                        android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                        android:inputType="text"
+                        android:hint="请输入"
+                        android:maxLength="20" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/plps_signacct" />
+
+                    <Spinner
+                        android:id="@+id/signacct"
+                        style="@style/Spiiner_fill"
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:paddingRight="30dip" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/crcd_setUp_confirm_nick" />
+
+                    <EditText
+                        android:id="@+id/nickname"
+                        style="@style/edittext_common_fill"
+                        android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                        android:hint="(选填)"
+                        android:inputType="text"
+                        android:maxLength="20" />
+                </LinearLayout>
+
+                <LinearLayout 
+                    style="@style/linnerlayout_common"
+                    android:gravity="top" 
+                    >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/finc_txnReason_colon" 
+                        android:paddingTop="@dimen/dp_five"
+                        />
+
+                    <EditText
+                        android:id="@+id/remark"
+                        style="@style/edittext_common_fill"
+                        android:layout_height="@dimen/dp_six_zero"
+                        android:hint="(选填)"
+                        android:maxLength="100" 
+                        android:inputType="textMultiLine"
+						android:gravity="top"
+                        android:maxLines="3"
+                        android:scrollbars="vertical"
+						android:background="@drawable/bg_for_edittext"
+                        android:paddingTop="@dimen/dp_five"
+                        />    
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/plps_payment_infoth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                        
+                        android:textColor="#ba001d"
+                        android:textSize="@dimen/textsize_default"
+                        android:paddingLeft="@dimen/list_bottom"
+                         />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:visibility="visible" />
+<!-- 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                        android:text="    19日22：00后签约，签约在下个账期生效 ；请在备注中输入所号。"
+                        android:textColor="#ba001d"
+                        android:textSize="@dimen/textsize_default"
+                        android:paddingLeft="@dimen/list_bottom" />
+                         -->
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/fill_margin_top" >
+
+                   <CheckBox
+                        android:id="@+id/cbprotocol"
+                        android:layout_width="@dimen/checkboxWH"
+                        android:layout_height="@dimen/checkboxWH"
+                        android:background="@drawable/save_phone_checkbox_selector"
+                        android:layout_marginLeft="20dip"
+                        android:button="@null" />
+
+                    <TextView
+                        android:id="@+id/tvprotocol"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                        android:layout_marginLeft="@dimen/fill_margin_left"
+                        android:text="@string/plps_sign_protocol" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

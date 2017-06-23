@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/common_row_margin"
+        android:paddingLeft="@dimen/fill_margin_left"
+        android:paddingRight="@dimen/fill_margin_right"
+        android:paddingTop="@dimen/common_row_margin"
+        android:visibility="visible" >
+
+        <include layout="@layout/biz_title_with_refresh_btn" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_bottom_padding_new"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <!-- 底部刷新时间，业务修改不需要 -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sbremit_quotations_lv_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer_layout"
+        android:layout_below="@+id/header_layout"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="货币名称：" />
+
+                <TextView
+                    android:id="@+id/currency_name"
+                    style="@style/textview_common_right"
+                    android:layout_weight="1" />
+            </LinearLayout>
+                 <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="银行现汇卖出价：" />
+
+                <TextView
+                    android:id="@+id/sell_rate"
+                    style="@style/textview_common_right"
+                    android:layout_weight="1" />
+            </LinearLayout>
+                 <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="银行现汇买入价：" />
+
+                <TextView
+                    android:id="@+id/buy_rate"
+                    style="@style/textview_common_right"
+                    android:layout_weight="1" />
+            </LinearLayout>
+                 <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="银行现钞买入价：" />
+
+                <TextView
+                    android:id="@+id/buy_note_rate"
+                    style="@style/textview_common_right"
+                    android:layout_weight="1" />
+            </LinearLayout>
+                 <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="银行现钞卖出价：" />
+
+                <TextView
+                    android:id="@+id/sell_note_rate"
+                    style="@style/textview_common_right"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

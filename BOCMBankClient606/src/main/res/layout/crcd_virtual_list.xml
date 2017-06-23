@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 信用卡列表页   huangyuchao -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/tv_service_title"
+        style="@style/textview_common"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:text="@string/mycrcd_select_shenqing_virtualcard"
+        android:textColor="@color/gray" />
+
+    <com.chinamworld.bocmbci.widget.SwipeListView
+        xmlns:swipe="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/crcd_mycrcdlist"
+        style="@style/listviewcomm_fill_haveDivider"
+        android:layout_below="@id/tv_service_title"
+        swipe:swipeActionLeft="dismiss"
+        swipe:swipeCloseAllItemsWhenMoveList="true"
+        swipe:swipeFrontView="@+id/front"
+        swipe:swipeMode="both" />
+
+</RelativeLayout>

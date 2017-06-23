@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 申请定期活期账户	结果页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_step"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/fill_padding_top" >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            style="@style/confirm_info_textview_style"
+                            android:text="@string/acc_apply_success"
+                            android:textSize="@dimen/textsize_one_six" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:layout_height="match_parent"
+                                android:layout_weight="5.5"
+                                android:text="@string/acc_choose_content" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3.5"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:id="@+id/tv_accnum"
+                                    style="@style/textview_common_right"
+                                    android:paddingLeft="0dip" />
+
+                                <TextView
+                                    android:id="@+id/tv_acctype"
+                                    style="@style/textview_common_right"
+                                    android:layout_marginTop="@dimen/common_row_margin"
+                                    android:paddingLeft="0dip" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:layout_weight="5.5"
+                                android:text="@string/acc_confirm_opentype" />
+
+                            <TextView
+                                android:id="@+id/tv_accInfo"
+                                style="@style/textview_common_right"
+                                android:layout_weight="3.5"
+                                android:paddingLeft="0dip" />
+                        </LinearLayout>
+						<LinearLayout 
+						    android:layout_width="match_parent"
+						    android:layout_height="wrap_content"
+						    android:layout_marginTop="@dimen/common_row_margin"
+						    android:orientation="horizontal">
+						    <TextView 
+						        style="@style/textview_common_left"
+						        android:layout_weight="5.5"
+						        android:text="@string/acc_account_purpose"/>
+						    <TextView 
+						        android:id="@+id/tv_account_purpose"
+						        style="@style/textview_common_right"
+						        android:layout_weight="3.5"
+						        android:singleLine="false"/>
+						</LinearLayout>
+						<LinearLayout 
+						    android:id="@+id/ll_account_open_reason"
+						    android:layout_width="match_parent"
+						    android:layout_height="wrap_content"
+						    android:layout_marginTop="@dimen/common_row_margin"
+						    android:orientation="horizontal"
+						    android:visibility="gone">
+						    <TextView 
+						        android:id="@+id/tv_open_reason"
+						        style="@style/textview_common_left"
+						        android:layout_weight="5.5"
+						        android:text="@string/acc_account_open_reason"/>
+						    <TextView 
+						        android:id="@+id/tv_account_open_reason"
+						        style="@style/textview_common_right"
+						        android:layout_weight="3.5"
+						        android:singleLine="false"/>
+						</LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:layout_weight="5.5"
+                                android:text="@string/acc_result_account" />
+
+                            <TextView
+                                android:id="@+id/tv_account"
+                                style="@style/textview_common_right"
+                                android:layout_weight="3.5"
+                                android:paddingLeft="0dip" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                android:id="@+id/ll_relevance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tv_tellContent"
+                android:layout_marginBottom="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+				
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/acc_apply_please"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textsize_default"/>
+                
+                <TextView
+                    android:id="@+id/tv_relevance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/acc_relevance"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/textsize_default" />
+                
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/acc_apply_into_relevance"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textsize_default"/>
+                
+            </LinearLayout>
+     <LinearLayout
+                android:id="@+id/ll_relevance_new"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+                <TextView 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/acc_apply_new"
+                    android:paddingLeft="@dimen/dp_one_zero"
+                    android:layout_gravity="center"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textsize_default"/>
+                
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tv_tellContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/common_row_margin"
+                android:gravity="left"
+                android:text="@string/acc_result_tellContent"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+            </ScrollView>
+
+            
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fill_margin_top"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnFinish"
+                style="@style/bottombtn"
+                android:text="@string/finish" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

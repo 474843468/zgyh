@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<regex>
+    <!-- 字段说明
+    收款人姓名
+        <empty_tips>pesap_payee_name_empty_tips</tips> 为空时提示 默认为"" 这里字符串资源id
+        <regex_tips>pesap_payee_name_error_tips</regex_tips>                格式不对提示
+        。。。 提示细化？
+        <max_length></max_length>                最大长度int -1 时不限制   默认不限制
+        <min_length></min_length>                最小长度 int -1 时不限制  默认不限制
+        <is_full_word>true</is_full_word>        是否可以全角 boolean 默认允许
+        <chinese_length></chinese_length>        中文所占字符 默认为2
+         <regex_str></regex_str>                 正则
+    </item>
+
+
+    <item style="payee_name" des="收款人姓名">
+        <empty_tips>payee_name_empty_tips</empty_tips>
+        <regex_tips>pesap_payee_name_error_tips</regex_tips>
+        <max_length>1</max_length>
+        <min_length>76</min_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>true</is_full_word>
+    </item>
+     -->
+
+    <item style="ovs_dcs_ss_daymountcode" des="每日限额">
+        <empty_tips>ovs_dcs_bs_quota_empty_tips_android</empty_tips>
+        <regex_tips>ovs_dcs_bs_quota_error_tips_android</regex_tips>
+        <regex_str>^[0-9]*$</regex_str>
+        <min_length>0</min_length>
+        <max_length>13</max_length>
+        <chinese_length></chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+    <item style="ovs_dcs_ss_customeralias" des="客户别名">
+        <empty_tips>ovs_dcs_ss_customeralias_empty_tips</empty_tips>
+        <regex_tips>ovs_dcs_ss_customeralias_error_tips</regex_tips>
+        <regex_str>^[a-zA-Z0-9\/+\-?()\s.,']*$</regex_str>
+        <min_length>1</min_length>
+        <max_length>80</max_length>
+        <chinese_length></chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+
+    <!--     ======================2016-8-18 14:31:38- 转账汇款start===== -->
+    <!--     ======================2016-8-30 14:26:42- 公共部分start===== -->
+    <item style="mbdi_common_amount" des="取款金额">
+        <empty_tips>mbdi_common_amount_empty</empty_tips>
+        <regex_tips>mbdi_common_amount_error</regex_tips>
+        <regex_str>^[1-9]+[0-9]*[0]+[0]+(\.0{1,2})?$</regex_str>
+        <min_length>1</min_length>
+        <max_length>14</max_length>
+        <chinese_length></chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+
+    <item style="mbdi_common_remark" des="附言">
+        <regex_tips>mbdi_common_remark_error</regex_tips>
+        <regex_str>^[\s\S]{0,50}$</regex_str>
+        <min_length>0</min_length>
+        <max_length>50</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>true</is_full_word>
+    </item>
+    <!--     ======================2016-8-30 14:26:42- 公共部分end===== -->
+
+    <!--     ======================2016-8-30 14:26:42- 转账汇款-手机取款/密码汇款start===== -->
+    <item style="mbdi_tr_mobilewith_amount" des="汇款金额">
+        <empty_tips>mbdi_tr_mobilewith_amount_empty</empty_tips>
+        <regex_tips>mbdi_tr_mobilewith_amount_error</regex_tips>
+        <regex_str>^[1-9]+[0-9]*[0]+[0]+(\.0{1,2})?$</regex_str>
+        <min_length>1</min_length>
+        <max_length>14</max_length>
+        <chinese_length></chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+
+    <item style="phone_trans_no_mobile" des="收款人手机号">
+        <empty_tips>phone_trans_no_mobile_empty</empty_tips>
+        <regex_tips>phone_trans_no_mobile_error</regex_tips>
+        <regex_str>^\d{11}$</regex_str>
+        <min_length>11</min_length>
+        <max_length>11</max_length>
+        <chinese_length>1</chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+
+    <item style="mbdi_tr_mobilewith_payeeacctname" des="收款人名称">
+        <empty_tips>mbdi_tr_mobilewith_payeeacctname_empty</empty_tips>
+        <regex_tips>mbdi_tr_mobilewith_payeeacctname_error</regex_tips>
+        <regex_str>^[\s\S]{0,56}$</regex_str>
+        <min_length>0</min_length>
+        <max_length>56</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>true</is_full_word>
+    </item>
+
+    <item style="mbdi_tr_mobilewith_password" des="预留密码">
+        <empty_tips>mbdi_tr_mobilewith_password_empty</empty_tips>
+        <regex_tips>mbdi_tr_mobilewith_password_error</regex_tips>
+        <regex_str>^\d{6}$</regex_str>
+        <min_length>6</min_length>
+        <max_length>6</max_length>
+        <chinese_length>1</chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+
+    <item style="mbdi_tr_mobilewith_password_confirm" des="确认密码">
+        <empty_tips>mbdi_tr_mobilewith_password_confirm_empty</empty_tips>
+        <regex_tips>mbdi_tr_mobilewith_password_confirm_error</regex_tips>
+        <regex_str>^\d{6}$</regex_str>
+        <min_length>6</min_length>
+        <max_length>6</max_length>
+        <chinese_length>1</chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+    <!--     ======================2016-8-30 14:26:42- 转账汇款-手机取款/密码汇款end===== -->
+
+    <item style="mbdi_tr_trans_payeeacctname" des="收款人名称">
+        <empty_tips>trans_error_payee_name_empty</empty_tips>
+        <regex_tips>trans_error_payee_name_regular</regex_tips>
+        <regex_str>^[\s\S]{0,60}$</regex_str>
+        <min_length>1</min_length>
+        <max_length>60</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>true</is_full_word>
+    </item>
+
+    <item style="mbdi_tr_ebs_trans_payeeacctno" des="收款账号（跨行）">
+        <empty_tips>trans_error_no_payee_accno</empty_tips>
+        <regex_tips>trans_error_payee_accno_regular_national</regex_tips>
+        <regex_str>^\d{1,31}$</regex_str>
+        <min_length>0</min_length>
+        <max_length>31</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>true</is_full_word>
+    </item>
+
+    <item style="mbdi_tr_trans_payeeacctno" des="收款账号">
+        <empty_tips>trans_error_no_payee_accno</empty_tips>
+        <regex_tips>trans_error_payee_accno_regular</regex_tips>
+        <regex_str>^\d{12,17}$|\d{19}$</regex_str>
+        <min_length>12</min_length>
+        <max_length>19</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>true</is_full_word>
+    </item>
+
+    <item style="mbdi_tr_trans_mobile" des="收款人手机号">
+        <empty_tips></empty_tips>
+        <regex_tips>trans_error_payee_mobile</regex_tips>
+        <regex_str>^\d{11}$</regex_str>
+        <min_length>11</min_length>
+        <max_length>11</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+
+    <item style="mbdi_tr_trans_remark" des="附言">
+        <empty_tips></empty_tips>
+        <regex_tips>trans_error_remark</regex_tips>
+        <regex_str>^[^\[\]^$\\~@#%{}:'""\u003C\u003E\u0026\x0d]*$</regex_str>
+        <min_length>0</min_length>
+        <max_length>20</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>true</is_full_word>
+    </item>
+
+    <item style="mbdi_common_amountregex" des="金额">
+        <empty_tips>trans_error_money_empty</empty_tips>
+        <regex_tips>trans_error_money</regex_tips>
+        <regex_str>(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,11}(\.\d{1,2})?$</regex_str>
+        <min_length>1</min_length>
+        <max_length>14</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+
+    <item style="mbdi_common_amountspecialregex" des="金额(日元或韩元)">
+        <empty_tips>trans_error_money_empty</empty_tips>
+        <regex_tips>trans_error_money_JPandKR</regex_tips>
+        <regex_str>^[1-9]{1}[0-9]{0,11}$</regex_str>
+        <min_length>1</min_length>
+        <max_length>14</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+
+
+
+    <!--     ======================2016-8-18 14:31:38- 转账汇款end===== -->
+
+
+    <item style="login_phone_name" des="手机号">
+        <empty_tips>login_phone_name_empty</empty_tips>
+        <regex_tips>login_phone_name_error</regex_tips>
+        <regex_str>^\d{1,15}$</regex_str>
+        <min_length>1</min_length>
+        <max_length>15</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+
+    <item style="login_phone_password" des="密码">
+        <empty_tips>login_phone_password_empty</empty_tips>
+        <regex_tips>login_phone_password_error</regex_tips>
+        <regex_str>^[\s\S]{6,20}$</regex_str>
+        <min_length>6</min_length>
+        <max_length>20</max_length>
+        <chinese_length>1</chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+
+    <item style="login_card_number" des="卡号">
+        <empty_tips>login_card_number_empty</empty_tips>
+        <regex_tips>login_card_number_error</regex_tips>
+        <regex_str>^(\d{15,16})$|^(\d{19})$</regex_str>
+        <min_length></min_length>
+        <max_length></max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+
+    <item style="login_debit_card_password" des="取款密码">
+        <empty_tips>login_debit_card_password_empty</empty_tips>
+        <regex_tips>login_debit_card_password_error</regex_tips>
+        <regex_str>^.{6}$</regex_str>
+        <min_length></min_length>
+        <max_length></max_length>
+        <chinese_length></chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+
+    <item style="login_credit_card_password" des="查询密码">
+        <empty_tips>login_credit_card_password_empty</empty_tips>
+        <regex_tips>login_credit_card_password_error</regex_tips>
+        <regex_str>^.{6}$</regex_str>
+        <min_length></min_length>
+        <max_length></max_length>
+        <chinese_length></chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+
+    <item style="login_modify_password_old" des="原密码">
+        <empty_tips>login_modify_password_old_empty</empty_tips>
+        <regex_tips>login_modify_password_old_error</regex_tips>
+        <regex_str>^[\s\S]{6,20}$</regex_str>
+        <min_length>6</min_length>
+        <max_length>20</max_length>
+        <chinese_length></chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+    <item style="login_modify_password_new" des="新密码">
+        <empty_tips>login_modify_password_new_empty</empty_tips>
+        <regex_tips>login_modify_password_new_error</regex_tips>
+        <regex_str>^[\s\S]{8,20}$</regex_str>
+        <min_length>8</min_length>
+        <max_length>20</max_length>
+        <chinese_length></chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+    <item style="login_modify_password_confirm" des="确认密码">
+        <empty_tips>login_modify_password_confirm_empty</empty_tips>
+        <regex_tips>login_modify_password_confirm_error</regex_tips>
+        <regex_str>^[\s\S]{8,20}$</regex_str>
+        <min_length>8</min_length>
+        <max_length>20</max_length>
+        <chinese_length></chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+
+    <!--     ======================2016-8-31 20:00:14- 短信通知手机号码end===== -->
+    <item style="account_sms_notice_mobile" des="短信通知手机号">
+        <empty_tips>trans_empty_notice_mobile</empty_tips>
+        <regex_tips>trans_error_notice_mobile</regex_tips>
+        <regex_str>^\d{11}$</regex_str>
+        <min_length>11</min_length>
+        <max_length>11</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+
+    <item style="account_sms_notice_password" des="动户通知验证码">
+        <empty_tips>account_sms_notice_password_empty</empty_tips>
+        <regex_tips>account_sms_notice_password_error</regex_tips>
+        <regex_str>.{6}$</regex_str>
+        <min_length>6</min_length>
+        <max_length>6</max_length>
+        <chinese_length></chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+
+    <item style="mbdi_am_chargeamount" des="充值金额">
+        <empty_tips>mbdi_am_chargeamount_empty</empty_tips>
+        <regex_tips>mbdi_am_chargeamount_error</regex_tips>
+        <regex_str>(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,11}(\.\d{1,2})?$</regex_str>
+        <min_length>1</min_length>
+        <max_length>11</max_length>
+        <chinese_length></chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+
+    <item style="phone_trans_payee_name" des="收款人名称">
+        <empty_tips>phone_trans_payee_name_empty</empty_tips>
+        <regex_tips>phone_trans_payee_name_error</regex_tips>
+        <regex_str>^[\s\S]{0,60}$</regex_str>
+        <min_length>1</min_length>
+        <max_length>60</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>true</is_full_word>
+    </item>
+
+    <item style="mbdi_loan_otherqry_name" des="申请人姓名/企业名称">
+        <empty_tips>loan_otherqry_name_empty</empty_tips>
+        <regex_tips>loan_otherqry_name_error</regex_tips>
+        <regex_str>^[\s\S]{0,60}$</regex_str>
+        <min_length>1</min_length>
+        <max_length>60</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>true</is_full_word>
+    </item>
+
+    <item style="mbdi_loan_otherqry_phone" des="联系电话">
+        <empty_tips>login_phone_name_empty</empty_tips>
+        <regex_tips>loan_otherqry_phone_error</regex_tips>
+        <regex_str>^\d{11,15}$</regex_str>
+        <min_length>11</min_length>
+        <max_length>15</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+
+    <item style="mbdi_loan_otherqry_email" des="Email地址">
+        <empty_tips>loan_otherqry_email_empty</empty_tips>
+        <regex_tips>loan_otherqry_email_error</regex_tips>
+        <regex_str>^(?![\s\S]*[^\x00-\xff]+[\s\S]*$)(?=\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$).{5,100}$</regex_str>
+        <min_length>1</min_length>
+        <max_length>50</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>true</is_full_word>
+    </item>
+
+    <item style="me_make_collection_remark" des="附言（转账汇款）">
+        <empty_tips>me_make_collection_remark_empty</empty_tips>
+        <regex_tips>me_make_collection_remark_error</regex_tips>
+        <regex_str>^[^\[\]^$\\~@#%{}:'"\u003C\u003E\u0026\x0d]*$</regex_str>
+        <min_length>0</min_length>
+        <max_length>20</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+
+    <!--   ======2016-8-23 10:17:33- 闫勋add===(贷款-中银E贷-激活)====start= -->
+    <item style="mbdi_lm_eloan_street" des="街道">
+        <empty_tips>mbdi_lm_eloan_street_empty_tips</empty_tips>
+        <regex_tips>mbdi_lm_eloan_street_error_tips</regex_tips>
+        <regex_str>^[\s\S]{0,80}$</regex_str>
+        <min_length>0</min_length>
+        <max_length>80</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>true</is_full_word>
+    </item>
+    <item style="mbdi_lm_eloan_contact_name" des="姓名">
+        <empty_tips>mbdi_lm_eloan_contact_name_empty_tips</empty_tips>
+        <regex_tips>mbdi_lm_eloan_contact_name_error_tips</regex_tips>
+        <regex_str>^[\s\S]{0,56}$</regex_str>
+        <min_length>0</min_length>
+        <max_length>56</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>true</is_full_word>
+    </item>
+    <!--   ======2016-8-23 10:17:33- 闫勋add===(贷款-中银E贷-激活)====end= -->
+
+    <!--   ======2016-8-26 14:08:39  lwd(贷款管理-中银E贷激活)-->
+    <item style="mbdi_lm_eloan_address" des="地区与街道">
+        <regex_tips>mbdi_lm_eloan_address_error_tips</regex_tips>
+        <regex_str>^[\s\S]{0,120}$</regex_str>
+        <min_length>0</min_length>
+        <max_length>120</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>true</is_full_word>
+    </item>
+
+    <item style="mbdi_lm_eloan_mobile" des="手机号">
+        <empty_tips>mbdi_lm_eloan_mobile_empty_tips</empty_tips>
+        <regex_tips>mbdi_lm_eloan_mobile_error_tips</regex_tips>
+        <regex_str>^\d{11}$</regex_str>
+        <min_length>11</min_length>
+        <max_length>11</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+
+    <item style="mbdi_lm_eloan_name" des="联系人姓名">
+        <empty_tips>loan_other_apply_name_empty</empty_tips>
+        <regex_tips>loan_other_apply_name_max</regex_tips>
+        <regex_str>^[\s\S]{0,56}$</regex_str>
+        <min_length>1</min_length>
+        <max_length>56</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>true</is_full_word>
+    </item>
+
+    <item style="mbdi_tr_qrcode_payeeacctno" des="收款账号">
+        <empty_tips>trans_error_no_payee_accno</empty_tips>
+        <regex_tips>trans_error_payee_accno_regular</regex_tips>
+        <regex_str>^(\d{12,17})$|^(\d{19})$</regex_str>
+        <min_length>12</min_length>
+        <max_length>19</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>true</is_full_word>
+    </item>
+    <item style="fundInput" des="基金查询条件">
+        <empty_tips>trans_fund_qry_empty</empty_tips>
+        <regex_tips>trans_fund_qry_err</regex_tips>
+        <regex_str>^[a-zA-Z0-9\u4e00-\u9fa5_]{0,50}$</regex_str>
+        <max_length>50</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>true</is_full_word>
+    </item>
+    <regex_str>^(\d{12,17})$|^(\d{19})$</regex_str>
+</regex>

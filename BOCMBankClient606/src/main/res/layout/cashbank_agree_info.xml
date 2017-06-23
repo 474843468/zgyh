@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 消息服务画面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/list_bottom" >
+
+    <ScrollView
+        android:id="@+id/dept_create_layout"
+        style="@style/scrollview_fill"
+        android:layout_above="@+id/bottom_btn_layout"
+        android:layout_below="@+id/layout_top_top"
+        android:background="@drawable/bg_for_listview_item_write" >
+
+        <LinearLayout
+            style="@style/tran_detail_activity_ll"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/layout_padding_left_right"
+            android:paddingRight="@dimen/layout_padding_left_right" >
+
+            <TextView
+                android:id="@+id/contract_title_tv_1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_two_zero"
+                android:paddingLeft="@dimen/dp_one_zero"
+                android:paddingRight="@dimen/dp_one_zero"
+                android:text="《中国银行“现金宝”服务协议》"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/textsize_one_six" />
+
+            <TextView
+                android:id="@+id/contract_title_tv_2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_two_zero"
+                android:paddingLeft="@dimen/dp_one_zero"
+                android:paddingRight="@dimen/dp_one_zero"
+                android:text="《中银基金管理有限公司销售自助平台服务协议》"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/textsize_one_six" />
+
+            <!-- <TextView
+                android:id="@+id/dept_protocol_content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_for" /> -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_two_zero" 
+                android:layout_marginTop="@dimen/dp_two_zero">
+
+                <CheckBox
+                    android:id="@+id/checkbox_agree"
+                    android:layout_width="@dimen/checkboxWH"
+                    android:layout_height="@dimen/checkboxWH"
+                    android:layout_margin="@dimen/dp_one_zero"
+                    android:background="@drawable/save_phone_checkbox_selector"
+                    android:button="@null" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:paddingRight="@dimen/dp_five"
+                    android:text="本人（甲方）已仔细阅读并理解以上协议，完全同意和接受协议书全部条款和内容，愿意履行和承担该协议书中约定的权利和义务。"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_one_for" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin_top" >
+
+            <Button
+                android:id="@+id/btnYes"
+                style="@style/btn_common_oneline"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_blue_big"
+                android:text="@string/not_agree" />
+
+            <Button
+                android:id="@+id/btnNo"
+                style="@style/btn_common_oneline"
+                android:layout_weight="1.0"
+                android:background="@drawable/btn_red_big"
+                android:text="@string/agree" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

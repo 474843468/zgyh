@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+<title>ECharts图形公共界面</title>
+<link rel="stylesheet" type="text/css" href="./common/css/global.css" />
+<script type="text/javascript" src="./common/js/jQuery.min.js"></script>
+<script type="text/javascript" src="./common/js/common.js"></script>
+</head>
+
+<body>
+	<div id="main"></div>
+	<script type="text/javascript">
+		var parameters = $.urlGet();
+		var showWidth = parameters["showWidth"];
+		if(showWidth) {
+			$("#main").css("width", showWidth);
+		} else {
+			$("#main").css("width", $(window).width());
+		}
+		
+		var showHeight = parameters["showHeight"];
+		if(showHeight) {
+			$("#main").css("height", showHeight);
+		} else {
+			$("#main").css("height", $(window).height());
+		}
+	</script>
+	<script type="text/javascript" src="./common/plugins/echarts/echarts.js"></script>
+	<script type="text/javascript">
+		var myChart;
+		
+		/**
+		 * option：构建ECharts图形化组件的option对象。由于考虑客户端调用，option为JSON字符串，并非JSON对象。
+		 * theme：使用的主题样式。内置14套主题样式，分别是：default（未指定主题样式，则会使用该默认主题）、blue、dark、gray、green、helianthus、infographic、macarons、macarons2、mint、red、roma、sakura、shine。
+		 * 指定主题样式之后，图形界面上每块内容可以根据实际需要，通过option对象对应参数调整即可。具体可查看ECharts说明文档。
+		 */
+		function draw(option, theme) {
+			if(myChart) {
+				setEChartsOption();
+			} else {
+				require.config({
+					paths:{
+						echarts: "./common/plugins/echarts"
+					}
+				});
+				require(
+					[
+						"echarts",
+						"echarts/chart/bar",
+						"echarts/chart/chord",
+						"echarts/chart/eventRiver",
+						"echarts/chart/force",
+						"echarts/chart/funnel",
+						"echarts/chart/gauge",
+						"echarts/chart/heatmap",
+						"echarts/chart/k",
+						"echarts/chart/line",
+						"echarts/chart/map",
+						"echarts/chart/pie",
+						"echarts/chart/radar",
+						"echarts/chart/scatter",
+						"echarts/chart/tree",
+						"echarts/chart/treemap",
+						"echarts/chart/venn",
+						"echarts/chart/wordCloud"
+					],
+					function (ec) {
+						myChart = ec.init(document.getElementById("main"));
+						setEChartsOption();
+					}
+				);
+			}
+			
+			function setEChartsOption() {
+				if(theme) {
+					if("default" == theme || "macarons" == theme || "infographic" == theme) {
+						myChart.setTheme(theme);
+					} else {
+						require(["echarts/theme/" + theme], function(tarTheme){
+							myChart.setTheme(tarTheme);
+						});
+					}
+				}
+				myChart.setOption($.parseJSON(option));
+			}
+		}
+	</script>
+</body>
+</html>

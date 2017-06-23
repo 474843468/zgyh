@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/boc_common_cell_color"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/boc_space_between_50px"
+        android:paddingLeft="@dimen/boc_popdialog_padding_40px"
+        android:paddingRight="@dimen/boc_popdialog_padding_40px"
+        android:paddingTop="@dimen/boc_space_between_50px">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/tv_small"
+            android:layout_marginBottom="@dimen/boc_space_between_30px"
+            android:textColor="@color/boc_text_color_dark_gray"
+            tools:text="@string/boc_loan_pledge_title_deposit"/>
+
+        <TextView
+            android:id="@+id/tv_description"
+            style="@style/tv_small"
+            android:layout_width="match_parent"
+            tools:text="@string/boc_pledge_description_deposit"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyt_apply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/boc_space_between_20px"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_count"
+            style="@style/tv_small"
+            android:paddingLeft="@dimen/boc_space_between_20px"
+            tools:text="@string/boc_pledge_count_deposit"/>
+
+        <Button
+            android:id="@+id/btn_apply"
+            style="@style/BocButton.BocPrimaryButton"
+            android:layout_marginTop="@dimen/boc_space_between_80px"
+            android:text="@string/boc_pledge_loan_apply"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_empty"
+        style="@style/tv_common"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/boc_space_between_80px"
+        android:visibility="gone"/>
+
+</LinearLayout>

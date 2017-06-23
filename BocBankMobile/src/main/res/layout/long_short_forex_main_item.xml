@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 账户贵金属 首页 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/detail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_120px"
+        android:layout_gravity="center"
+        android:paddingLeft="@dimen/boc_space_between_20px"
+        android:paddingRight="@dimen/boc_space_between_20px">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="铂金(克)/人民币"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <!--卖出价-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="bottom|center_horizontal">
+            <!--此处引用联龙代码，后续需要修改-->
+            <com.chinamworld.llbt.userwidget.NumberStyleTextView
+                android:id="@+id/tv_sale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1000.00"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold" />
+            <!--<TextView
+                android:id="@+id/tv_saledecimal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22"
+                android:textStyle="bold"
+                android:textColor="@color/lianlong_text_color_dark_gray"
+                android:textSize="@dimen/lianlong_text_size_little_big" />-->
+        </LinearLayout>
+        <!--买入价-->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="bottom|center_horizontal">
+            <!--此处引用联龙代码，后续需要修改-->
+            <com.chinamworld.llbt.userwidget.NumberStyleTextView
+                android:id="@+id/tv_buy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100.23"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <!--涨跌幅-->
+        <TextView
+            android:id="@+id/tv_riseorfall"
+            android:layout_width="@dimen/boc_space_between_136px"
+            android:layout_height="@dimen/boc_space_between_52px"
+            android:layout_gravity="center"
+            android:background="@drawable/boc_bg_round_text"
+            android:gravity="center"
+            android:text="1000%"
+            android:textColor="@color/white"
+            android:textSize="@dimen/boc_text_size_small"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <!--<View style="@style/view_split_gray"/>-->
+
+</LinearLayout>

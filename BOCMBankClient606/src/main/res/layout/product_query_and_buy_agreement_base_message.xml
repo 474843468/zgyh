@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 投资协议-各类型协议基本信息页 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/style_match_match"
+    android:orientation="vertical" >
+    <!-- 内容区 -->
+    <FrameLayout 
+        style="@style/style_height_weight_1"
+        >
+        <!-- layout_marginTop值为"协议信息"组件高度的一半 -->
+            <!-- android:layout_marginTop="@dimen/bovinvt_layout_content_margin_top" -->
+        <ScrollView 
+            style="@style/style_match_match"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:paddingTop="@dimen/bovinvt_layout_margin_top"
+            android:paddingBottom="@dimen/bovinvt_layout_margin_top"
+            >
+        <LinearLayout 
+            style="@style/style_match_wrap"
+            android:paddingLeft="@dimen/layout_margin_left_right"
+            android:paddingRight="@dimen/layout_margin_left_right"
+            android:orientation="vertical"
+            >
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="协议类型："
+                app:weightShowRate="2:3"
+                android:id="@+id/tv_1"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="协议名称："
+                app:weightShowRate="2:3"
+                android:id="@+id/tv_2"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="投资产品："
+                app:weightShowRate="2:3"
+                android:id="@+id/tv_3"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="产品币种："
+                app:weightShowRate="2:3"
+                android:id="@+id/tv_4"
+                />
+            <LinearLayout style="@style/style_match_wrap"
+                android:layout_marginTop="@dimen/common_row_margin"
+                >
+                <TextView 
+                    style="@style/style_tv_bocinv_agreement_appley"
+                    android:text="@string/bocinvt_tv_8"
+                    android:layout_weight="2"
+                    />
+                <TextView 
+                    android:id="@+id/tv_5"
+                    style="@style/style_tv_bocinv_agreement_appley"
+                    android:layout_marginBottom="@dimen/bovinvt_layout_margin_top"
+                    android:layout_weight="3"
+                    android:singleLine="false"
+                    android:gravity="left"
+                    android:text=""
+                    />
+            </LinearLayout>
+            <TextView 
+                style="@style/style_match_wrap"
+                android:layout_marginBottom="@dimen/bovinvt_layout_margin_top"
+                android:textColor="@color/transparent_00"
+                android:text="@string/app_name"
+                android:background="@color/transparent_00"
+                />
+        </LinearLayout>
+        </ScrollView>
+        
+        <!-- 标题 -->
+        <!-- <LinearLayout 
+            style="@style/style_match_wrap"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="0dp"
+            android:visibility="gone"
+            >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/bovinvt_tv_title_height"
+            style="@style/textview_common"
+            android:paddingLeft="@dimen/layout_margin_left_right"
+            android:paddingRight="@dimen/layout_margin_left_right"
+            android:background="@drawable/shape_product_query_and_buy_tv_bg"
+            android:gravity="center"
+            android:text="@string/bocinvt_tv_50"
+            />
+        </LinearLayout> -->
+    </FrameLayout>
+    
+    <!-- 按钮区 -->
+    <LinearLayout style="@style/style_match_wrap">
+        <Button 
+            android:id="@+id/btn_apply"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/bocinvt_tv_9"
+            android:textColor="@color/white"
+            />
+   	</LinearLayout>
+
+</LinearLayout>

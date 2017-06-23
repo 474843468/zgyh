@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <include android:id="@+id/step" 
+        layout="@layout/order_step"
+        android:layout_alignParentTop="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/common_bottom_padding_new"
+        android:paddingLeft="@dimen/fill_margin_left"
+        android:paddingRight="@dimen/fill_margin_left"
+        android:layout_below="@+id/step">
+	    <LinearLayout
+	        android:id="@+id/btn_sure"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_marginTop="@dimen/fill_margin_top"
+	        android:orientation="vertical" >
+	
+	        <Button
+	            android:id="@+id/btnnext"
+	            style="@style/bottombtn"
+	            android:text="@string/finish" />
+	    </LinearLayout>
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_above="@+id/btn_sure"
+	        android:background="@drawable/bg_for_listview_item_write"
+	        android:orientation="vertical" >
+	
+	        <ScrollView style="@style/scrollview_little_margin" >
+	
+	            <LinearLayout
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:orientation="vertical" >
+	                
+	                   <LinearLayout android:id="@+id/take_on_success_tip_isBirthday"
+	                     android:visibility="gone"
+	                    style="@style/linnerlayout_common"
+	                    android:orientation="vertical">
+	                    
+	                    <TextView android:id="@+id/title_isBirthday"
+	                        style="@style/textview_common_right"
+	                        android:text="@string/order_success_common_yypd2" 
+	                        android:textColor="@color/gray"
+	                        android:singleLine="false"/>
+	                </LinearLayout>
+	                
+	                <LinearLayout android:id="@+id/take_on_success_tip_ll"
+	                        android:visibility="gone"
+	                    style="@style/linnerlayout_common">
+	
+	                    <TextView android:id="@+id/title_tv"
+	                        style="@style/textview_common_right"
+	                        android:text="@string/order_success_common_yypd4" 
+	                        android:textColor="@color/gray"
+	                        android:singleLine="false"/>
+	                </LinearLayout>
+	                    
+	               
+	                
+	                <LinearLayout style="@style/linnerlayout_common" >
+	                    <TextView
+	                        style="@style/textview_common_left"
+	                        android:text="@string/order_customer_name" />
+	
+	                    <TextView
+	                        android:id="@+id/customerName"
+	                        style="@style/textview_common_right"
+	                        android:layout_weight="1"/>
+	                </LinearLayout>
+	                
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView
+	                        style="@style/textview_common_left"
+	                        android:text="@string/trans_remit_phone"/>
+	
+	                    <TextView
+	                        android:id="@+id/phoneNum"
+	                        style="@style/textview_common_right"
+	                        android:layout_weight="1"/>
+	                </LinearLayout>
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView
+	                        style="@style/textview_common_left"
+	                        android:text="@string/order_name"/>
+	
+	                    <TextView
+	                        android:id="@+id/orderName"
+	                        style="@style/textview_common_right"
+	                        android:layout_weight="1"/>
+	                </LinearLayout>
+	
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView style="@style/textview_common_left"
+	                        android:text="@string/order_adress"/>
+	
+	                    <TextView
+	                        android:id="@+id/orderAdress"
+	                        style="@style/textview_common_right"
+	                        android:layout_weight="1"/>
+	                </LinearLayout>
+	                
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView style="@style/textview_common_left"
+	                        android:text="@string/order_mobile"/>
+	
+	                    <TextView
+	                        android:id="@+id/orderMobile"
+	                        style="@style/textview_common_right"
+	                        android:layout_weight="1"/>
+	                </LinearLayout>
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView style="@style/textview_common_left"
+	                        android:text="@string/order_buniness_time"/>
+	
+	                    <TextView
+	                        android:id="@+id/orderBusinessTime"
+	                        style="@style/textview_common_right"
+	                        android:layout_weight="1"/>
+	                </LinearLayout>
+	                
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView style="@style/textview_common_left"
+	                        android:text="@string/order_service_type"/>
+	
+	                    <TextView android:text="@string/order_common_service"
+	                        style="@style/textview_common_right"
+	                        android:textColor="@color/red"/>
+	                </LinearLayout>
+	                
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView style="@style/textview_common_left"
+	                        android:text="@string/order_yewu_name"/>
+	
+	                    <TextView
+	                        android:id="@+id/orderServiceName"
+	                        style="@style/textview_common_right"
+	                        android:textColor="@color/red"/>
+	                </LinearLayout>
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView style="@style/textview_common_left"
+	                        android:text="@string/order_time"/>
+	
+	                    <TextView
+	                        android:id="@+id/orderTime"
+	                        style="@style/textview_common_right"
+	                        android:textColor="@color/red"/>
+	                </LinearLayout>
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView style="@style/textview_common_left"
+	                        android:text="@string/order_period"/>
+	
+	                    <TextView
+	                        android:id="@+id/orderPeriod"
+	                        style="@style/textview_common_right"
+	                        android:textColor="@color/red"/>
+	                </LinearLayout>
+	                <LinearLayout android:id="@+id/orderAheadTipNumLl"
+	                    style="@style/linnerlayout_common"
+	                    android:visibility="visible">
+	
+	                    <TextView style="@style/textview_common_left"
+	                        android:text="@string/order_ahead_tip_time"/>
+	
+	                    <TextView
+	                        android:id="@+id/orderAheadTipTime"
+	                        style="@style/textview_common_right"
+	                        android:textColor="@color/red"/>
+	                </LinearLayout>
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView android:id="@+id/takeOnNumberTip"
+	                        style="@style/textview_common_left"
+	                        android:text="@string/take_on_number"/>
+	
+	                    <TextView
+	                        android:id="@+id/takeOnNumber"
+	                        style="@style/textview_common_right"
+	                        android:textColor="@color/red"/>
+	                </LinearLayout>
+	                
+	                <LinearLayout
+	                    style="@style/linnerlayout_common"
+	                    android:visibility="invisible">
+	
+	                    <TextView style="@style/textview_common_left"
+	                        android:text="@string/order_period"/>
+	
+	                    <Spinner
+	                        style="@style/Spinner_comm_view_right"
+	                        android:layout_weight="1"/>
+	                </LinearLayout>
+	            </LinearLayout>
+	        </ScrollView>
+	    </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

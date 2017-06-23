@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 服务设定  修改密码 xyl -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/set_editpass_confirm"
+            style="@style/bottombtn"
+            android:text="@string/confirm"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <ScrollView
+        style="@style/scrollview_comm"
+        android:layout_above="@id/btn_layout"
+        android:layout_marginBottom="@dimen/common_row_margin" >
+
+        <LinearLayout
+            style="@style/confirm_main_style"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/prms_margin_top"
+                android:gravity="center"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linnerlayout_common"
+                android:layout_marginLeft="@dimen/common_row_margin_half" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/set_oldloginpass" />
+
+                <cfca.mobile.sip.SipBox
+                    android:id="@+id/set_oldloginpass"
+                    style="@style/editext_fill"
+                    android:layout_weight="0"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linnerlayout_common"
+                android:layout_marginLeft="@dimen/common_row_margin_half" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/set_newloginpass" />
+
+                <cfca.mobile.sip.SipBox
+                    android:id="@+id/set_newloginpass"
+                    style="@style/editext_fill"
+                    android:layout_weight="0"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linnerlayout_common"
+                android:layout_marginLeft="@dimen/common_row_margin_half" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:text="@string/set_newloginpassconfrim"
+                    android:textSize="@dimen/textsize_default" />
+
+                <cfca.mobile.sip.SipBox
+                    android:id="@+id/set_newloginpassconfirm"
+                    style="@style/editext_fill"
+                    android:layout_weight="0"
+                    android:inputType="textPassword" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linnerlayout_common"
+                android:layout_marginLeft="@dimen/common_row_margin_half" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/set_editpass_info"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_default" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

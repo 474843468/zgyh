@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 服务设定 修改别名 成功页面  xyl -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+<LinearLayout
+            android:id="@+id/btn_layout"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/set_confirm"
+                style="@style/bottombtn"
+                android:text="@string/finish"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_above="@id/btn_layout"
+             style="@style/scrollview_comm" 
+             android:layout_marginBottom="@dimen/common_row_margin">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_for_listview_item_write"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/common_details_messages_paddingtop" >
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/confirm_info_textview_style"
+                        android:gravity="center"
+                        android:text="@string/set_editaccaliassuccess" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/confirm_left_textview_style"
+                        android:layout_weight="3"
+                        android:text="@string/set_acctype" />
+
+                    <TextView
+                        android:id="@+id/set_editalias_acctype"
+                        style="@style/confirm_right_textview_style"
+                        android:layout_weight="2" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/confirm_left_textview_style"
+                        android:layout_weight="3"
+                        android:text="@string/set_acc" />
+
+                    <TextView
+                        android:id="@+id/set_editalias_acc"
+                        style="@style/confirm_right_textview_style"
+                        android:layout_weight="2" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/confirm_left_textview_style"
+                        android:layout_weight="3"
+                        android:text="@string/set_accalias" />
+
+                    <TextView
+                        android:id="@+id/set_editalias_accalias"
+                        style="@style/confirm_right_textview_style"
+                        android:layout_weight="2" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        
+
+</RelativeLayout>

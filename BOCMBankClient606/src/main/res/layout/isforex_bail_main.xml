@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fadingEdge="none"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 转出账户 -->
+
+        <LinearLayout
+            android:id="@+id/accout_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/ll_acc_out_mytransfer"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/btn_connect_width" >
+
+                <LinearLayout
+                    android:id="@+id/ll_acc_out_2dimen_scan_write"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/dp_five"
+                    android:gravity="center_horizontal" >
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_two_zero"
+                        android:layout_height="@dimen/dp_two_zero"
+                        android:src="@drawable/tran_acc_out_person" />
+
+                    <TextView
+                        android:layout_width="@dimen/dp_eight_zero"
+                        android:layout_height="@dimen/dp_two_zero"
+                        android:layout_marginLeft="@dimen/dp_five"
+                        android:gravity="bottom"
+                        android:text="@string/isForex_zjAcc"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dept_out_info_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/card_new_height"
+                    android:layout_below="@+id/ll_acc_out_2dimen_scan_write"
+                    android:background="@drawable/img_card_new"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/fill_padding_left"
+                        android:paddingRight="@dimen/fill_padding_left"
+                        android:paddingTop="@dimen/dp_one_zero" >
+
+                        <TextView
+                            android:id="@+id/isforex_zjAccNick"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/layout_margin_top"
+                            android:layout_weight="4"
+                            android:gravity="center_horizontal"
+                            android:singleLine="true"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/textsize_one_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_bankaccount"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/fill_padding_left"
+                        android:paddingRight="@dimen/fill_padding_left"
+                        android:paddingTop="@dimen/dp_five" >
+
+                        <TextView
+                            android:id="@+id/isforex_zjAccType"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_one_two" />
+
+                        <TextView
+                            android:id="@+id/isforex_zjAccNum"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="right"
+                            android:singleLine="true"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/textsize_one_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/fill_padding_left"
+                        android:paddingRight="@dimen/fill_padding_left"
+                        android:paddingTop="@dimen/dp_five" >
+
+                        <TextView
+                            android:id="@+id/isforex_zjCode"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="6"
+                            android:gravity="left"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_one_two" />
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/layout_margin_top"
+                            android:layout_weight="4"
+                            android:singleLine="true"
+                            android:text="@string/acc_query_balance"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_one_two"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/isforex_zjAccMoney"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:gravity="right"
+                            android:singleLine="true"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/textsize_one_two" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <!-- 转入账户 -->
+
+        <LinearLayout
+            android:id="@+id/accin_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/btn_connect_width"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/ll_acc_in_mytransfer"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <LinearLayout
+                    android:id="@+id/ll_acc_in_2dimen_scan_write"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/dp_five"
+                    android:gravity="center_horizontal" >
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_two_zero"
+                        android:layout_height="@dimen/dp_two_zero"
+                        android:src="@drawable/tran_acc_in_person" />
+
+                    <TextView
+                        android:layout_width="@dimen/dp_eight_zero"
+                        android:layout_height="@dimen/dp_two_zero"
+                        android:layout_marginLeft="@dimen/dp_five"
+                        android:gravity="bottom"
+                        android:text="@string/isForex_bzjAcc"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <FrameLayout
+                    android:id="@+id/dept_in_info_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/card_new_height"
+                    android:layout_below="@+id/ll_acc_in_2dimen_scan_write"
+                    android:background="@drawable/img_card_new" >
+
+                    <LinearLayout
+                        android:id="@+id/showBaillInfoView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical"
+                        android:visibility="invisible" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_two_zero"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/fill_padding_left"
+                            android:paddingRight="@dimen/fill_padding_left" >
+
+                            <TextView
+                                android:id="@+id/isForex_numberName"
+                                style="@style/textview_common"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:singleLine="true"
+                                android:textSize="@dimen/textsize_one_two" />
+
+                            <TextView
+                                android:id="@+id/isForex_number"
+                                style="@style/textview_common"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right"
+                                android:singleLine="true"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/textsize_one_two" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/fill_margin_top"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/fill_padding_left"
+                            android:paddingRight="@dimen/fill_padding_left" >
+
+                            <TextView
+                                android:id="@+id/isforex_bzjAccCode"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:gravity="left"
+                                android:singleLine="true"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_one_two" />
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/layout_margin_top"
+                                android:layout_weight="4"
+                                android:singleLine="true"
+                                android:text="@string/acc_query_balance"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textsize_one_two"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/isforex_bzjAccMoney"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:gravity="right"
+                                android:singleLine="true"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/textsize_one_two" />
+                        </LinearLayout>
+
+                        <!--  -->
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/choise_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/third_please_choose_in"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/textsize_two_zero" />
+                    </RelativeLayout>
+                </FrameLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dept_save_regular_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_five"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/tran_bottom_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <!-- 下标题 -->
+
+                <RelativeLayout
+                    android:id="@+id/rl_save_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shap_for_half_gray"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/three_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_three_zero"
+                        android:layout_centerInParent="true"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/tv_neiku"
+                        android:layout_width="@dimen/dp_two_zero"
+                        android:layout_height="@dimen/dp_one_zero"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/three_title"
+                        android:background="@drawable/down_triangle"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="#ffffff"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/dp_five"
+                    android:visibility="visible" >
+
+                    <LinearLayout
+                        android:id="@+id/layout_button"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="@dimen/fill_margin_left"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="visible" >
+
+                        <Button
+                            android:id="@+id/zjAccToBzj"
+                            style="@style/textview_forex_button_cell"
+                            android:text="@string/isForex_zjToBzj"
+                            />
+
+                        <Button
+                            android:id="@+id/bjzToZjAcc"
+                            style="@style/textview_forex_button_cell"
+                            android:layout_marginBottom="@dimen/common_row_margin"
+                            android:layout_marginTop="@dimen/dp_one_zero"
+                            android:text="@string/isForex_bzjToZj"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/inputMoney"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:background="#ffffff"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingRight="@dimen/fill_padding_right" >
+
+                            <TextView
+                                style="@style/textview_forex_prompt_message"
+                                android:layout_weight="7"
+                                android:text="@string/forex_custoner_fix_code1"
+                                 />
+
+                            <Spinner
+                                android:id="@+id/forex_custoner_fix_code"
+                                style="@style/spinner_forex_prompt_info"
+                                android:layout_weight="3"
+                                 />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/cash_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingRight="@dimen/fill_padding_right" >
+
+                            <TextView
+                                style="@style/textview_forex_prompt_message"
+                                android:layout_weight="7"
+                                android:text="@string/forex_customer_fix_cash"
+                                />
+
+                            <Spinner
+                                android:id="@+id/forex_customer_fix_cash"
+                                style="@style/spinner_forex_prompt_info"
+                                android:layout_weight="3"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingRight="@dimen/fill_padding_right"
+                            android:visibility="visible" >
+
+                            <TextView
+                                android:id="@+id/acc_financeic_trans_icact"
+                                style="@style/textview_forex_prompt_message"
+                                android:layout_weight="7"
+                                android:text="@string/isForex_throw_money1"
+                                />
+
+                            <EditText
+                                android:id="@+id/forex_trade_sellmoney_Edit"
+                                style="@style/edittext_forex_prompt_info"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="3"
+                                android:gravity="center_vertical"
+                                android:hint="@string/isForex_input_money"
+                                android:maxLength="14" >
+
+                                <requestFocus />
+                            </EditText>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingRight="@dimen/fill_padding_right"
+                            android:visibility="visible" >
+
+                            <TextView
+                                  android:id="@+id/forex_trade_maxmoney_left"
+                                style="@style/comm_view_left"
+                                android:layout_weight="7"
+                                android:text="@string/isForex_throw_maxmoney_m"
+                                android:textSize="@dimen/textsize_default"
+                                android:singleLine="true"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/forex_trade_maxmoney"
+                                style="@style/comm_view_right"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="3"
+                                android:gravity="center_vertical"
+                                android:textSize="@dimen/textsize_default"
+                                android:textColor="@color/red" >
+                            </TextView>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/nextButton_layout"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginTop="@dimen/dp_two_zero"
+                            android:visibility="visible" >
+
+                            <Button
+                                android:id="@+id/trade_nextButton"
+                                style="@style/textview_forex_button_cell"
+                                android:text="@string/next" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+                <!--  -->
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

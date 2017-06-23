@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_for_listview_item_write"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_five"
+    android:paddingRight="@dimen/dp_five"
+    android:paddingTop="@dimen/dp_one_zero" >
+
+    <LinearLayout
+        android:id="@+id/acc_info_llyt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_listview_item_paddingLR"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_bankaccount"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/common_listview_item_paddingLR"
+            android:paddingRight="@dimen/common_listview_item_paddingLR" >
+
+            <TextView
+                android:id="@+id/acc_type_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_six" />
+
+            <TextView
+                android:id="@+id/account_num_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:singleLine="true"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textsize_one_three" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_one_zero"
+            android:layout_marginTop="@dimen/dp_seven"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/common_listview_item_paddingLR"
+            android:paddingRight="@dimen/common_listview_item_paddingLR" >
+
+            <TextView
+                android:id="@+id/card_description_tv"
+                style="@style/textview_for_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4.0"
+                android:gravity="left"
+                android:singleLine="true"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_one_three" />
+
+            <ImageButton
+                android:id="@+id/down_or_up_btn"
+                android:layout_width="@dimen/dp_two_zero"
+                android:layout_height="@dimen/dp_two_zero"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:src="@drawable/img_arrow_click_down" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/hor_line"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/gray_line" 
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/detail_llyt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/common_listview_item_paddingLR"
+        android:paddingRight="@dimen/common_listview_item_paddingLR">
+
+        <TextView
+            android:id="@+id/sign_state_tv"
+            style="@style/textview_for_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_one_zero"
+            android:layout_marginTop="@dimen/dp_one_zero"
+            android:layout_weight="3.0"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="@string/infoserve_daedaozhang_sign_state"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/textsize_one_three" />
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="fill_parent"
+            android:layout_margin="2dp"
+            android:background="@color/gray_line" />
+
+        <LinearLayout
+            android:id="@+id/sign_llyt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_one_zero"
+            android:layout_marginTop="@dimen/dp_one_zero"
+            android:layout_weight="4.0"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="@dimen/dp_two_zero"
+                android:layout_height="@dimen/dp_two_zero"
+                android:layout_marginRight="@dimen/dp_three"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_to_sign" />
+
+            <TextView
+                style="@style/textview_for_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:singleLine="true"
+                android:textColor="@color/gray"
+                android:text="@string/infoserve_daedaozhang_to_sign"
+                android:textSize="@dimen/textsize_one_three" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/unsign_llyt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_one_zero"
+            android:layout_marginTop="@dimen/dp_one_zero"
+            android:layout_weight="4.0"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="@dimen/dp_two_zero"
+                android:layout_height="@dimen/dp_two_zero"
+                android:layout_marginRight="@dimen/dp_three"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_to_unsign" />
+
+            <TextView
+                style="@style/textview_for_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:singleLine="true"
+                android:textColor="@color/gray"
+                android:text="@string/infoserve_daedaozhang_to_delete"
+                android:textSize="@dimen/textsize_one_three" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

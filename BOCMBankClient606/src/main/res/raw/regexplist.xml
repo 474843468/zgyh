@@ -1,0 +1,1168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules>
+
+    <shoujiH_11
+        pattern="^\d{11}$"
+        tip="请输入正确的手机号码"
+        type="shoujiH_11" />
+
+    <shoujiH_1
+        pattern="^\d{11}$"
+        tip="手机号码由11位数字组成"
+        type="shoujiH_1" />
+
+    <shoujiH_11_15
+        pattern="^\d{11,15}$"
+        tip="由11-15位数字组成"
+        type="shoujiH_11_15" />
+
+    <shoujiH_01_15
+        pattern="^\d{1,15}$"
+        tip="由1-15位数字组成"
+        type="shoujiH_01_15" />
+
+    <mobilePhone_06_20
+        pattern="^\d{11,18}$"
+        tip="请输入11-18位数字"
+        type="mobilePhone_06_20" />
+
+    <mobile
+        pattern="^\d{11}$"
+        tip="由11位数字组成"
+        type="mobile" />
+
+    <carSafetyMobile
+        pattern="^\d{11}$"
+        tip="请输入0-9的数字；长度为11个字符"
+        type="carSafetyMobile" />
+
+
+    <remitNO
+        pattern="^\d{9}$"
+        tip="由9位数字组成"
+        type="remitNO" />
+
+    <nickname
+        pattern="^\w{0,20}$"
+        tip="最长20个字符或10个汉字"
+        type="nickname" >
+    </nickname>
+
+    <editnickname
+        pattern="^\w{0,20}$"
+        tip="您输入别名的长度不正确请重新输入"
+        type="nickname" >
+    </editnickname>
+
+    <custname
+        pattern="^[\S]{0,40}$"
+        tip="最长为40个字符"
+        type="custname" >
+    </custname>
+
+    <payuserno
+        pattern="^[\S]{0,20}$"
+        tip="最长为20个字符"
+        type="payuserno" >
+    </payuserno>
+
+    <remarksname
+        pattern="^[\S]{0,100}$"
+        tip="最长为100个字符"
+        type="remarksname" >
+    </remarksname>
+
+    <longMobile
+        pattern="^\d{1,15}$"
+        tip="由1-15位数字组成"
+        type="longMobile" />
+
+    <password
+        pattern="^[\s\S]{6,20}$"
+        tip="格式错误"
+        type="password" />
+
+    <oldPasswordSecond
+        pattern="[\\s\\S]*"
+        tip="不能为空"
+        type="oldPasswordSecond" />
+    <!-- 服务设定  旧密码正则 -->
+    <oldPassword
+        pattern=".{8,20}$"
+        tip="格式不正确，请参照页面温馨提示中的密码格式要求重新输入"
+        type="oldPassword" />
+    <!-- 服务设定  新密码正则 -->
+    <newPassword
+        pattern=".{8,20}"
+        tip="格式不正确，请参照页面温馨提示中的密码格式要求重新输入"
+        type="newPassword" />
+
+    <oldForceModifyPassword
+        pattern="^[\s\S]{6,20}$"
+        tip="格式不正确"
+        type="oldForceModifyPassword" />
+
+    <newForceModifyPassword
+        pattern="^[\s\S]{8,20}$"
+        tip="格式不正确，请参照页面温馨提示中的密码格式要求重新输入"
+        type="newForceModifyPassword" />
+    <!--新的规则的校验密码，用于606新密码的正则-->
+    <newForceModifyPasswordNew
+        pattern="(?=(\S*[0-9]\S*[a-zA-Z]|\S*[a-zA-Z]\S*[0-9]))^\S{8,20}$"
+        tip="新密码必须包含数字和字母，请修改"
+        type="newForceModifyPasswordNew" />
+
+    <newPasswordReset
+        pattern="^(?![a-zA-Z]+$)(?![0-9]+$)[a-zA-Z0-9]{8,20}$"
+        tip="为8-20位，必须含有数字和字母"
+        type="newPasswordReset" />
+
+    <password1
+        pattern="^[\s\S]{8,20}$"
+        tip="为8-20位由数字、字母、下划线、标点组成，必须含有数字和字母，不能含有中文或全角字符"
+        type="password" />
+    <!-- pattern="^(\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*).{6,40}$" -->
+    <email
+        pattern="^(?![\s\S]*[^\x00-\xff]+[\s\S]*$)(?=\w+([-+.&apos;]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$).{6,40}$"
+        tip="长度为6-40位（格式如：XX@X.X）"
+        type="email" />
+    <emailt
+        pattern="^(?![\s\S]*[^\x00-\xff]+[\s\S]*$)(?=\w+([-+.&apos;]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$).{6,40}$"
+        tip="由字母、数字、下划线组成，长度为6-40位（格式如：XX@X.X）"
+        type="emailt" />
+   <loanapplyemail
+        pattern="^(?![\s\S]*[^\x00-\xff]+[\s\S]*$)(?=\w+([-+.&apos;]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$).{5,100}$"
+        tip="请输入正确格式的EMAIL地址，如：XXX@163.com。"
+        type="loanapplyemail" />
+
+    <address
+        pattern="^[\S]{0,60}$"
+        tip="最长60个字符"
+        type="address" />
+
+    <tpdmAddress
+        pattern="^[\S]{0,60}$"
+        tip="不能包含空格，最长60个字符"
+        type="tpdmAddress" />
+
+    <riskAddress
+        pattern="^[\S]{0,150}$"
+        tip="最长150个字符"
+        type="riskAddress" />
+
+    <phone
+        pattern="^(\(\d{3,4}\)|\d{3,4}-|\d{3,4}|\s)?\d{7,8}(\-\d{2,4})?$"
+        tip="最长20位由数字、横线、空格、左右括号组成，不能含有中英文或特殊字符"
+        type="phone" />
+
+    <loanapplyphone
+        pattern="^(\(\d{3,4}\)|\d{3,4}-|\d{3,4}|\s)?\d{7,8}(\-\d{2,4})?$"
+        tip="输入正确的联系电话。"
+        type="loanapplyphone" />
+    <!-- 判断字符串中是否包含数字 -->
+    <loanapplyphonenew
+        pattern="/\d+_-\(\)/{30}"
+        tip="输入正确的联系电话。"
+        type="loanapplyphonenew" />
+
+    <validateCode
+        pattern="^[0-9a-zA-Z]{4}$"
+        tip="无效"
+        type="validateCode" />
+
+    <otp
+        pattern="^.{6}$"
+        tip="由6位数字组成"
+        type="otp" />
+
+    <sipBoxPsw
+        pattern="^.{6}$"
+        tip="长度必须为6位"
+        type="sipBoxPsw" />
+
+    <phonepass
+        pattern="^.{6}$"
+        tip="密码由6位数字组成"
+        type="phonepass" />
+
+    <atmpass
+        pattern="^.{6}$"
+        tip="由6位数字组成"
+        type="atmpass" />
+
+    <plpspass
+        pattern="^.{6}$"
+        tip="输入不正确，请重新输入"
+        type="plpspass" />
+
+    <smc
+        pattern="^.{6}$"
+        tip="由6位数字组成"
+        type="smc" />
+
+    <CA
+        pattern="^(?![a-zA-Z]+$)(?![0-9]+$)[a-zA-Z0-9]{8}$"
+        tip="由8位数字和字母组成"
+        type="CA" />
+
+    <carsafetySms
+        pattern="^[0-9a-zA-Z]{6}$"
+        tip="请输入字母、数字；长度为6个字符"
+        type="carsafetySms" />
+
+    <postcode
+        pattern="^\d{6}$"
+        tip="由6位数字组成"
+        type="postcode" />
+
+    <carsafetypostcode
+        pattern="^\d{6}$"
+        tip="请输入0-9的数字；长度为6个字符"
+        type="carsafetypostcode" />
+
+    <relatedAccount
+        pattern="^\d{12,17}$|\d{19}$"
+        tip="由12-17位或19位数字组成"
+        type="relatedAccount" />
+
+    <!-- 原始  ^\d+$ -->
+    <IDCard
+        pattern="^[a-zA-Z0-9\u4e00-\u9fa5]+$"
+        tip="不能包含特殊符号"
+        type="IDCard" />
+
+  
+<!--     <eCashAccout
+        pattern="^\d{19}$"
+        tip="由19位数字组成"
+        type="eCashAccout" /> -->
+    
+      <eCashAccout
+        pattern="^(\d{15,16})$|^(\d{19})$"
+        tip="请输入正确的电子现金账号"
+        type="eCashAccout" />
+      <repeateCashAccout  
+        pattern="^(\d{15,16})$|^(\d{19})$"
+        tip="请输入正确的电子现金账号"
+        type="repeateCashAccout" />
+
+<!--     <repeateCashAccout  
+        pattern="^\d{19}$"
+        tip="由19位数字组成"
+        type="repeateCashAccout" /> -->
+    <!-- 原始  ^((0(\.\d{1,2}))|([1-9]\d{0,10}(\.\d{1,2})?))$ -->
+    <tranAmount
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,11}(\.\d{1,2})?$"
+        tip="最多14位且不能为0（小数点后最多2位数字）"
+        type="tranAmount" />
+    
+    <profitCompute
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,11}(\.\d{1,2})?$"
+        tip="最多14位且不能为0（小数点后最多2位数字）"
+        type="profitCompute" />
+    <sixNumber
+        pattern="^[1-9]\d{0,5}$"
+        tip="为以1到9开头的整数，最大长度6个字符"
+        type="sixNumber" />
+    <sixNumberAndOne
+        pattern="(?!^0$)^[1-9]\d{0,5}$"
+        tip="为以1到9开头的整数，最大长度6个字符"
+        type="sixNumberAndOne" />
+    <sixNumberAndOne1
+        pattern="(?!^0$)^[1-9]\d{0,5}$"
+        tip="为以1到9开头的整数，最大长度6个字符"
+        type="sixNumberAndOne1" />
+    <buyTerm
+        pattern="^[1-9]\d*$"
+        tip="为非0整数"
+        type="buyTerm" />
+    <allCardNumberNum
+        pattern="^\d{12,19}$"
+        tip="由12-19位数字组成"
+        type="allCardNumberNum" />
+    <allCardNumberNum_1
+        pattern="^\d{1,31}$"
+        tip="由1-31位数字组成"
+        type="allCardNumberNum_1" />
+
+    <tranSpAmount
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,14}$"
+        tip="最多14位且不能为0（小数点后最多2位数字，日元交易时输入整数）"
+        type="tranSpAmount" />
+    <!-- 信用卡  消费服务设置 -->
+    <xiaoFeiAmount
+        pattern="(?!^[0]{2,})(?!^0[1-9]+)^\d{1,11}(\.\d{1,2})?$"
+        tip="最多14位（小数点后最多2位数字）"
+        type="xiaoFeiAmount" />
+    <!-- 信用卡  消费服务设置  最多14位（小数点后最多2位数字） -->
+    <orignAmountParam
+        pattern="(?!^[0]{2,})(?!^0[1-9]+)^\d{1,14}(\.\d{1,2})?$"
+        tip="收款付费起点金额最多14位（小数点后最多2位数字)"
+        type="xiaoFeiAmount" />
+    <!-- 信用卡  消费服务设置 -->
+    <xiaoFeiSetialAmount
+        pattern="(?!^[0]{2,})(?!^0[1-9]+)^\d{1,14}$"
+        tip="最多14位（小数点后最多2位数字，日元交易时输入整数）"
+        type="xiaoFeiSetialAmount" />
+
+    <!-- 原始  ^((0(\.\d{1,2}))|([1-9]\d{0,10}(\.\d{1,2})?))$ -->
+    <repaymentAmount
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,11}(\.\d{1,2})?$"
+        tip="最多14位且不能为0（小数点后最多2位数字）"
+        type="repaymentAmount" />
+
+    <!-- 原始  ^((0(\.\d{1,2}))|([1-9]\d{0,10}(\.\d{1,2})?))$ -->
+    <financeIcAmount
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,11}(\.\d{1,2})?$"
+        tip="最多14位且不能为0（小数点后最多2位数字)"
+        type="financeIcAmount" />
+
+    <payeeName_notEmpty
+        pattern="^[\s\S]{0,60}$"
+        tip="最长60个字符或30个汉字"
+        type="payeeName_notEmpty" />
+    <payeeName_1
+        pattern="^[\s\S]{0,60}$"
+        tip="最长为60个字符或30个中文字符"
+        type="payeeName_1" />
+  
+    <payeeName120
+        pattern="^[\s\S]{0,120}$"
+        tip="最长120个字符或60个汉字"
+        type="payeeName120" />
+   
+    <!-- 最长120个字符或60个汉字 -->
+    <payeeNameLength
+        pattern="^[\s\S]{0,120}$"
+        tip="请输入正确的共享账户账号或卡号,最长60个汉字或120个字符"
+        type="payeeNameLength" />
+
+    <payeeNameDrawM
+        pattern="^[\s\S]{0,56}$"
+        tip="最长56个字符或28个汉字"
+        type="payeeNameDrawM" />
+
+    <!-- 原始  ^((0(\.\d{1,2}))|([1-9]\d{0,10}(\.\d{1,2})?))$ -->
+    <advanceCapitalAmount
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,11}(\.\d{1,2})?$"
+        tip="最多14位且不能为0（小数点后最多2位数字)"
+        type="advanceCapitalAmount" />
+
+    <!-- 原始  ^((0(\.\d{1,2}))|([1-9]\d{0,10}(\.\d{1,2})?))$ -->
+    <dividedAmount
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,11}(\.\d{1,2})?$"
+        tip="最多14位且不能为0（小数点后最多2位数字）"
+        type="dividedAmount" />
+
+    <!-- 原始  ^((0(\.\d{1,2}))|([1-9]\d{0,10}(\.\d{1,2})?))$ -->
+    <ncPaymentQuota
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,11}(\.\d{1,2})?$"
+        tip="最多14位且不能为0（小数点后最多2位数字)"
+        type="ncPaymentQuota" />
+
+    <!-- 原始 (?!^0*(\.0{1,4})?$)^\d{1,5}(\.\d{1,4})?$ -->
+    <repaymentRate
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,7}(\.\d{1,2})?$"
+        tip="最大10位且不能为0（最多到小数点后2位）"
+        type="repaymentRate" />
+
+    <marginAccout
+        pattern="^\d{0,30}$"
+        tip="最长30位数字"
+        type="marginAccout" />
+
+    <marginPassword
+        pattern="^\d{6}$"
+        tip="由6位数字组成"
+        type="marginPassword" />
+
+    <!-- 原始  ^((0(\.\d{1,2}))|([1-9]\d{0,10}(\.\d{1,2})?))$ -->
+    <transactionAmount
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,11}(\.\d{1,2})?$"
+        tip="最多14位且不能为0（小数点后最多2位数字）"
+        type="transactionAmount" />
+
+    <!-- 原始  ^((0(\.\d{1,2}))|([1-9]\d{0,10}(\.\d{1,2})?))$ -->
+    <setLimitMaxAmount
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,11}(\.\d{1,2})?$"
+        tip="最多14位且不能为0（小数点后最多2位数字)"
+        type="setLimitMaxAmount" />
+
+    <boundAmount
+        pattern="^[1-9]+[0-9]*[0]+[0]+$"
+        tip="由100的整数倍且大于0的数字组成"
+        type="boundAmount" />
+
+    <atmremitAmount
+        pattern="^[1-9]+[0-9]*[0]+[0]+$"
+        tip="为100元的整倍数。"
+        type="atmremitAmount" />
+
+    <atmremitAmounts
+        pattern="^[1-9]+[0-9]*[0]+[0]+$"
+        tip="汇款金额应为100元的整倍数。"
+        type="atmremitAmounts" />
+
+    <remitAmount
+        pattern="^[1-9]+[0-9]*[0]+[0]+$"
+        tip="由100的整数倍且大于0的数字组成"
+        type="remitAmount" />
+
+    <!-- 原始 (?!^0*(\.0{1,4})?$)^\d{1,5}(\.\d{1,4})?$ -->
+    <rate
+        pattern="?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,5}(\.\d{1,4})?$"
+        tip="由最大为10位（最多到小数点后四位，日元最多到小数点后两位）的大于0数据组成"
+        type="rate" />
+
+    <oblimessage
+        pattern="^[^\[\]^$~@#%&amp;&lt;>{}&apos;&quot;\r\n＜＞＄～＃％＆]{1,60}$"
+        tip="最长60个字符或30个中文字符，不能包含特殊字符（如:[]^$~@#%&amp;&lt;>{}&apos;&quot;）"
+        type="oblimessage" />
+    <!-- 美元金/铂金/钯金 -->
+    <bondAmount1
+        pattern="^([1-9]+[0-9]*)(\.\d)?$"
+        tip="格式有误，请输入大于等于1的数量（小数点后最多一位小数）"
+        type="bondAmount1" />
+
+    <bondAmount5
+        pattern="^([5-9]|[1-9]+[0-9]+)(\.\d)?$"
+        tip="格式有误，请输入大于等于5的数量（小数点后最多一位小数）"
+        type="bondAmount5" />
+    <!-- 人民币金/铂金/钯金 -->
+    <bondAmount10
+        pattern="^[1-9]+[0-9]+$"
+        tip="格式有误，请输入大于等于10的整数"
+        type="bondAmount10" />
+
+    <bondAmount100
+        pattern="^[1-9]+[0-9]+[0-9]+$"
+        tip="格式有误，请输入大于等于100的整数"
+        type="bondAmount100" />
+
+    <bondAmount51
+        pattern="^[5-9]|[1-9]+[0-9]+$"
+        tip="格式有误，请输入大于等于5的整数"
+        type="bondAmount51" />
+
+    <bondAmountFloat1
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^(([1-9]+[0-9]*)|0)(\.\d{1,2})?$"
+        tip="不能小于0.01（小数点后最多两位小数）"
+        type="bondAmountFloat1" />
+
+    <bondAmountInt1
+        pattern="^([1-9]+[0-9]*)$"
+        tip="为不小于1的整数"
+        type="bondAmountInt1" />
+
+    <!--
+         <nickname
+        pattern="^\S{0,20}$"
+        tip="账户别名最长20个字符或10个中文字符"
+        type="nickname" />
+    -->
+
+
+    <!-- 原始  ^((0(\.\d{1,2}))|([1-9]\d{0,10}(\.\d{1,2})?))$ -->
+    <redeemShare
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,11}(\.\d{1,2})?$"
+        tip="最多14位且不能为0（小数点后最多2位数字)"
+        type="redeemShare" />
+
+    <!-- 原始  ^((0(\.\d{1,2}))|([1-9]\d{0,10}(\.\d{1,2})?))$ -->
+    <minAmountShare
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,11}(\.\d{1,2})?$"
+        tip="最多14位且不能为0（小数点后最多2位数字)"
+        type="minAmountShare" />
+
+    <!-- 原始  ^((0(\.\d{1,2}))|([1-9]\d{0,10}(\.\d{1,2})?))$ -->
+    <baseAmountShare
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,11}(\.\d{1,2})?$"
+        tip="最多14位且不能为0（小数点后最多2位数字)"
+        type="baseAmountShare" />
+
+    <!-- 原始  ^((0(\.\d{1,2}))|([1-9]\d{0,10}(\.\d{1,2})?))$ -->
+    <maxAmountShare
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,11}(\.\d{1,2})?$"
+        tip="最多14位且不能为0（小数点后最多2位数字)"
+        type="maxAmountShare" />
+
+    <!-- 原始  ^((0(\.\d{1,2}))|([1-9]\d{0,10}(\.\d{1,2})?))$ -->
+    <xpadBaseAmount3
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,11}(\.\d{1,2})?$"
+        tip="最多14位且不能为0（小数点后最多2位数字)"
+        type="xpadBaseAmount3" />
+
+    <xpadMartCode
+        pattern="^[A-Za-z0-9]{0,20}$"
+        tip="最长20位由字母或数字组成"
+        type="xpadMartCode" />
+
+    <yanBoundAmount
+        pattern="(?!^0*$)^\d{1,14}$|^[0-9{1,2}(,[0-9{3}){0,4}$|^[0-9{1,3}(,[0-9{3}){0,3}$"
+        tip="不能包含小数"
+        type="yanBoundAmount" />
+
+    <!-- 原始 (?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)(?!^[0-9\.]{15,})^\d{1,11}(\.\d{1,2})?$ -->
+    <price
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,11}(\.\d{1,2})?$"
+        tip="最多14位且不能为0（小数点后最多2位数字)"
+        type="price" />
+
+    <prmssilverprice
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,10}(\.\d{1,3})?$"
+        tip="最多14位且不能为0（小数点后最多3位数字)"
+        type="price" />
+
+    <fincprice
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,11}(\.\d{1,2})?$"
+        tip="最多14位且不能为0（小数点后最多2位数字）"
+        type="fincprice" />
+
+    <!-- 原始 (?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)(?!^[0-9\.]{15,})^\d{1,11}(\.\d{1,2})?$ -->
+    <amount
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,11}(\.\d{1,2})?$"
+        tip="最多14位且不能为0（小数点后最多2位数字）"
+        type="amount" />
+    <!-- 非日元的校验  可以输入0 -->
+    <amount1
+        pattern="(?!^[0]{2,})(?!^0[1-9]+)^\d{1,11}(\.\d{1,2})?$"
+        tip="最多14位（小数点后最多2位数字）"
+        type="amount1" />
+	<!-- 非日元的校验 -->
+	<amount2
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)^\d{1,17}(\.\d{1,2})?$"
+        tip="最多20位且不能为0（小数点后最多2位数字）"
+        type="amount1" />
+
+    <newamount
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,11}(\.\d{1,2})?$"
+        tip="最大14位（小数点前最多11位数字，小数点后最多两位数字）且不能为0"
+        type="newamount" />
+
+    <amounts
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,11}(\.\d{1,2})?$"
+        tip="最多14位(小数点前最多11位数字、小数点后最多2位数字)且不能为0"
+        type="amounts" />
+
+    <newamounts
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,11}(\.\d{1,2})?$"
+        tip="最多14位（小数点前最多11位数字、小数点后最多2位数字）且不能为0"
+        type="newamounts" />
+    <!-- 日元正则   最大14位 不能为0  整数 -->
+    <jpnAmount
+        pattern="^[1-9][0-9]{0,13}$"
+        tip="最多14位且不能为0（小数点后最多2位数字，日元交易时输入整数）"
+        type="jpnAmount" />
+
+    <!-- 原始 (?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)(?!^[0-9\.]{15,})^\d{1,14}$ -->
+    <spetialAmount
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,14}$"
+        tip="最多14位且不能为0（日元交易时输入整数）"
+        type="spetialAmount" />
+
+    <!-- 仅限转账使用使用（用于校验韩元、日元，提示语） start -->
+    <spetialAmountJPCK
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,14}$"
+        tip="最多14位且不能为0（小数点后最多2位数字，日元、韩元交易时输入整数）"
+        type="spetialAmountJPCK" />
+		
+	<!-- 资产管理-手工记账使用（用于校验韩元、日元，提示语） -->
+    <Amount_JAPL
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)(?!^0\.[0-9]{0,})^\d{1,20}$"
+        tip="最多20位且不能为0（日元、韩元交易时输入整数）"
+        type="spetialAmountJPCK" />
+
+    <!-- 仅限于结汇购汇使用（用于校验韩元、日元，使用不同提示语） start -->
+    <spetialAmountJPY
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,14}$"
+        tip="最多14位且不能为0（小数点后最多2位数字，日元交易时输入整数）"
+        type="spetialAmountJPY" />
+
+    <spetialAmountKRW
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,14}$"
+        tip="最多14位且不能为0（小数点后最多2位数字，韩元交易时输入整数）"
+        type="spetialAmountKRW" />
+    <!-- 仅限于结汇购汇使用（用于校验韩元、日元，使用不同提示语） start -->
+    <!-- 仅用于中银理财(没有小数币种校验) -->
+    <spetialAmount2
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,14}$"
+        tip="最多14位且不能为0（小数点后最多2位数字，日元、韩元、越南盾交易时输入整数）"
+        type="spetialAmount2" />
+    
+    <!-- 仅用于中银理财(没有小数币种校验)  0可以通过校验 -->
+    <spetialAmount3
+        pattern="(?!^[0]{2,})(?!^0[1-9]+)^\d{1,14}$"
+        tip="最多14位（小数点后最多2位数字，日元、韩元、越南盾交易时输入整数）"
+        type="spetialAmount3" />
+    
+     <!-- 日元正则   最大8位 不能为0  整数 -->
+    <jpnAmountNew
+        pattern="^[1-9][0-9]{0,7}$"
+        tip="请输入正确金额，最大8位整数且不能为0。"
+        type="jpnAmountNew" />
+
+    <loanapplyAmount
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,8}(\.\d{1,2})?$"
+        tip="请输入正确金额，最大8位整数2位小数且不能为0。"
+        type="loanapplyAmount" />
+
+    <spetialAmounts
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,14}$"
+        tip="最多14位(小数点前最多11位数字、小数点后最多2位数字)且不能为0"
+        type="spetialAmounts" />
+
+    <plpsAmounts
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,11}(\.\d{1,2})?$"
+        tip="格式错误"
+        type="plpsAmounts" />
+
+    <spetialLimitRate
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)(?!^[0-9\.]{11,})^\d{1,7}(\.\d{1,2})?$"
+        tip="最多9位数字且不能为0（日元小数点前最多7位数字，小数点后最多2位数字）"
+        type="spetialLimitRate" />
+
+    <limitRate
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)(?!^[0-9\.]{11,})^\d{1,5}(\.\d{1,4})?$"
+        tip="最多9位数字且不能为0（小数点前最多5位数字，小数点后最多4位数字）"
+        type="limitRate" />
+
+    <spetialRate
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)(?!^[0-9\.]{11,})^\d{1,5}(\.\d{1,4})?$"
+        tip="最多9位数字且不能为0（港元/日元、日元/港元，小数点前最多5位数字，小数点后最多4位数字）"
+        type="spetialRate" />
+
+    <chipCard
+        pattern="^(\d{15,16})$|^(\d{19})$"
+        tip="为15位、16位或者19位数字"
+        type="chipCard" />
+    <bontCard
+        pattern="^(\d{15,16})$|^(\d{19})$"
+        tip="银行卡输入有误，应由15/16/19位数字组成，请确认后重新输入。"
+        type="bontCard"/>
+
+    <creditCard
+        pattern="^[0-9]{15,16}$"
+        tip="为15位或16位数字"
+        type="creditCard" />
+
+    <plpscardCheck
+        pattern="^((\d{16})|(\d{19}))$"
+        tip="为16位或19位数字"
+        type="plpscardCheck" />
+    <branchdebitCard
+        pattern="^((\d{16})|(\d{19}))$"
+        tip="由16位或19位数字"
+        type="plpscardCheck" />
+
+    <debitCard
+        pattern="^\d{19}$"
+        tip="由19位数字组成"
+        type="debitCard" />
+
+    <identityNumber
+        pattern="^((\d{15})|(\d{18})|(\d{17}[a-zA-Z]))$"
+        tip="格式错误，请重新输入"
+        type="identityNumber" />
+
+    <taAccount
+        pattern="^[0-9a-zA-Z]{12}$"
+        tip="由12位字母或数字组成"
+        type="taAccount" />
+
+    <memo
+        pattern="^[A-Za-z0-9&apos;\&quot;,;!:\?\-()\./\u4E00-\u9FBB\u3400-\u4DBF\uF900-\uFAD9\u3000-\u303F\u2000-\u206F\uFF00-\uFFEF]{0,50}$"
+        tip="最长50个字符或25个中文字符"
+        type="memo" />
+
+    <splLimitRate
+        pattern="(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)(?!^[0-9\.]{11,})^\d{1,7}(\.\d{1,2})?$"
+        tip="最多9位数字且不能为0（日元、美元金、人民币金小数点前最多7位数字、小数点后最多2位数字）"
+        type="splLimitRate" />
+
+    <splLimitRates
+        pattern="(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)(?!^[0-9\.]{11,})^\d{1,7}(\.\d{1,2})?$"
+        tip="最多9位数字且不能为0（日元、美元金、人民币金、美元钯金、人民币钯金、美元铂金、人民币铂金小数点前最多7位数字，小数点后最多2位数字）"
+        type="splLimitRates" />
+
+    <splLimitRatest
+        pattern="(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)(?!^[0-9\.]{11,})^\d{1,6}(\.\d{1,3})?$"
+        tip="最多9位数字且不能为0（美元银、人民币银小数点前最多6位数字、小数点后最多3位数字）"
+        type="splLimitRatest" />
+    <!-- 原始  (?!^[0-9\.]{15,})^[1-9]+[0-9]*[0]+[0]+$ -->
+    <spMoney
+        pattern="(?!^[0-9\.]{15,})^[1-9]+[0-9]*[0]+[0]+$"
+        tip="最多14位且是100的整数倍"
+        type="spMoney" />
+
+    <totalPeriod
+        pattern="^[1-9]{1}|[1-9]{1}[0-9]{1}$"
+        tip="为以1到9开头的数字，最大长度2个字符"
+        type="totalPeriod" />
+
+    <totalPeriod2
+        pattern="^([1-9]{1}[0-9]{0,1})|(([1-2][0-9]{2})|([3][0-5][0-9])|([3][6][0-6]))$"
+        tip="为1-366的整数，最大长度3个字符"
+        type="totalPeriod2" />
+    <!-- 最低限额  可以为0 -->
+    <minAmount2
+        pattern="(?!^[0]{2,})(?!^0[1-9]+)(?!^\.[0]*$)^\d{1,11}(\.\d{1,2})?$"
+        tip="最多14位（小数点后最多2位数字）"
+        type="minAmount2" />
+
+    <jpnminAmount2
+        pattern="(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,14}$"
+        tip="最多14位（小数点后最多2位数字，日元交易时输入整数）"
+        type="jpnminAmount2" />
+
+    <buyPeriod
+        pattern="^[1-9]|[1-9][0-9]{1,}$"
+        tip="必须在1至最大可购买期数之间"
+        type="buyPeriod" />
+
+    <!-- 100的整数倍 -->
+    <hundredMultiple
+        pattern="^[1-9][0-9]*0{2}$"
+        tip="为100的整数倍"
+        type="hundredMultiple" />
+
+    <chipCardRemit
+        pattern="^(\d{12,14})$|^(\d{17,19})$"
+        tip="为12-14位或者17-19位数字"
+        type="chipCardRemit" />
+
+    <!-- 为12-14位或者17-19位数字  by卢其鹏 2016年7月11日  修改为支持16为卡号-->
+    <chipCardRemitLength
+        pattern="^(\d{12,14})$|^(\d{16,19})$"
+        tip="请输入正确的账号或卡号,为12-14位或者16-19位数字"
+        type="chipCardRemit" />
+
+    <carOwnerName
+        pattern="^[\u4e00-\u9fa5]{0,5}$"
+        tip="请输入中文；最大长度5个汉字"
+        type="carownername" />
+
+    <entNameType
+        pattern="^[\u4e00-\u9fa5]{0,30}$"
+        tip="请输入中文；最大长度30个汉字"
+        type="entNameType" />
+
+    <otherIdType
+        pattern="^[0-9a-zA-Z]{0,32}$"
+        tip="由字母、数字组成，最大长度32个字符"
+        type="otherIdType" />
+
+    <carSafetyOtherIdType
+        pattern="^[0-9a-zA-Z]{0,20}$"
+        tip="请输入字母、数字；最大长度20个字符"
+        type="carSafetyOtherIdType" />
+
+    <frameNo
+        pattern="^[0-9a-zA-Z]{17}$"
+        tip="请输入字母、数字；长度为17个字符"
+        type="frameNo" />
+
+    <licenseNo
+        pattern="^[0-9A-Z]{6}$"
+        tip="请输大写字母、数字；长度为6个字符"
+        type="licenseNo" />
+
+    <brandName
+        pattern="^[ a-zA-Z0-9\u4e00-\u9fa5_]{0,60}$"
+        tip="请输入字母、数字、中文、空格；最大长度60个字符"
+        type="brandName" />
+
+    <faPiaoNo
+        pattern="^[0-9a-zA-Z]{0,50}$"
+        tip="请输入字母、数字；最大长度50个字符"
+        type="faPiaoNo" />
+
+    <engineNo
+        pattern="^[0-9a-zA-Z]{0,30}$"
+        tip="请输入字母、数字，长度不超过30个字符。"
+        type="engineNo" />
+
+    <safetyname
+        pattern="^[a-zA-Z0-9\u4e00-\u9fa5_]{0,80}$"
+        tip="由字母、数字、中文组成,最大长度80个字符或者40个中文"
+        type="safetyname" />
+
+    <prepaidname
+        pattern="^[a-zA-Z0-9\u4e00-\u9fa5_]{0,30}$"
+        tip="为1至30位字符"
+        type="prepaidname" />
+
+    <carSafetyname
+        pattern="^[a-zA-Z0-9\u4e00-\u9fa5_]{0,20}$"
+        tip="请输入字母、数字、中文；最大长度20个字符"
+        type="carSafetyname" />
+
+    <safetyadress
+        pattern="^[a-zA-Z0-9\u4e00-\u9fa5&apos;,\-\/\?\!\&quot;:; ]{0,80}$"
+        tip="由字母、数字、中文组成,最大长度80个字符或者40个中文"
+        type="safetyadress" />
+    <safetyadress_k
+    pattern="^[ A-Za-z0-9',.\-/()\u4E00-\u9FBB\u3400-\u4DBF\uF900-\uFAD9\u3000-\u303F\u2000-\u206F\uFF00-\uFFEF]{0,1000}$"
+        tip="由字母、数字、中文组成"
+        type="safetyadress_k" />
+
+    <fapiaotitle
+        pattern="^[a-zA-Z0-9\u4e00-\u9fa5（&apos;,./( )）-]{0,10}$"
+        tip="由中文、字母、数字组成，可包含部分特殊字符（&apos;,.-/( )）；最大长度10个字符"
+        type="fapiaotitle" />
+
+    <tempName
+        pattern="^[a-zA-Z0-9\u4e00-\u9fa5-\/\: _]{0,50}$"
+        tip="由中文、字母、数字组成，可包含部分特殊字符/_ :"
+        type="tempName" />
+
+    <carSafetyAdress
+        pattern="^[a-zA-Z0-9\u4e00-\u9fa5（&apos;,./( )）-]{3,80}$"
+        tip="由中文、字母、数字组成，可包含部分特殊字符（&apos;,.-/( )）；长度为6-80个字符"
+        type="carSafetyAdress" />
+
+    <safetyfapiaotitle
+        pattern="^[a-zA-Z0-9\u4e00-\u9fa5&apos;,\.\-\/]{0,80}$"
+        tip="由字母、数字、中文组成，最大长度80个字符或者40个中文"
+        type="safetyfapiaotitle" />
+
+    <carOwnerId
+        pattern="(^[1-9]\d{7}((0\d)|(1[0-2]))([0|1|2]\d))|(^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{4}$)"
+        tip="为15位数字或18位数字（最后一位可以为英文字母X）"
+        type="carOwnerId" />
+
+    <safetyIdentityNumber
+        pattern="^((\d{15})|(\d{18})|(\d{17}[xX]))$"
+        tip="为15位数字或18位数字（最后一位可以为英文字母X）"
+        type="safetyIdentityNumber" />
+
+    <carSafetyIdentityNumber
+        pattern="^((\d{18})|(\d{17}[xX]))$"
+        tip="请输入0-9的数字（最后一位可为X）；长度为18个字符"
+        type="carSafetyIdentityNumber" />
+
+    <safetyemail
+        pattern="^(?![\s\S]*[^\x00-\xff]+[\s\S]*$)(?=\w+([-+.&apos;]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$).{6,30}$"
+        tip="最大长度30个字符（格式如：XX@X.X）"
+        type="safetyemail" />
+
+    <safetyemail2
+        pattern="^(?![\s\S]*[^\x00-\xff]+[\s\S]*$)(?=\w+([-+.&apos;]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$).{6,30}$"
+        tip="长度为6-30位（格式如：XX@X.X）"
+        type="safetyemail2" />
+
+    <carSafetyemail
+        pattern="^(?![\s\S]*[^\x00-\xff]+[\s\S]*$)(?=\w+([-+.&apos;]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$).{5,40}$"
+        tip="由字母、数字、下划线及中划线组成；长度为5-40位（格式如：X@X.X）"
+        type="carSafetyemail" />
+
+    <orderAmount
+        pattern="^[1-9]{1}[0-9]{0,11}$"
+        tip="最多12位且不能为0"
+        type="orderAmount" />
+
+    <orderAmount2
+        pattern="^[5-9]{1}[0-9]{4}|[1-9]{1}[0-9]{5,11}$"
+        tip="不能低于50000"
+        type="orderAmount2" />
+
+    <orderAmount11
+        pattern="^[1-9]{1}[0-9]{0,11}$"
+        tip="最多11位且不能为0"
+        type="orderAmount" />
+
+    <cvv2
+        pattern="^.{3}$"
+        tip="由3位数字组成"
+        type="cvv2" />
+
+    <totleCount
+        pattern="^[1-9]{1}[0-9]{0,7}$"
+        tip="最多8位且不能为0"
+        type="totleCount" />
+
+    <times100
+        pattern="(?!^[0-9\.]{15,})^[1-9]+[0-9]*[0]+[0]+$"
+        tip="最小计量单位为100，交易金额应为100的整数倍"
+        type="times100" />
+
+    <shoujiH_01_11
+        pattern="^\d{1,11}$"
+        tip="由1-11位数字组成"
+        type="shoujiH_01_11" />
+
+    <minAmount2
+        pattern="(?!^[0]{2,})(?!^0[1-9]+)(?!^\.[0]*$)^\d{1,16}(\.\d{1,3})?$"
+        tip="最多14位（小数点后最多2位数字）"
+        type="minAmount2" />
+
+    <!-- 音频key密码校验 -->
+    <password2
+        pattern="^[\s\S]{8}$"
+        tip="输入错误，请重新输入。"
+        type="password2" />
+
+    <password3
+        pattern="^(?![a-zA-Z]+$)(?![0-9]+$)[a-zA-Z0-9]{8}$"
+        tip="必须为8位数字和字母的组合，请重新输入。"
+        type="password3" />
+
+    <password4
+        pattern="^(?![a-zA-Z]+$)(?![0-9]+$)[a-zA-Z0-9]{8}$"
+        tip="两次输入的密码不一致，请重新输入。"
+        type="password4" />
+
+    <safetyadress
+        pattern="^[a-zA-Z0-9\u4e00-\u9fa5&apos;,\-\/\?\!\&quot;:; ]{0,80}$"
+        tip="由字母、数字、中文组成,最大长度80个字符或者40个中文"
+        type="safetypeopleservice" />
+
+    <fincinputcheckout
+        pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{0,50}$"
+        tip="基金代码或基金名称由数字、字母、汉字组成，且不能超过50个字符"
+        type="fincinputcheckout" />
+
+    <decisino
+        pattern="^.{15}$"
+        tip="您所输入的决定书编号信息有误"
+        type="decisino" />
+
+    <!-- 外币跨境汇款 -->
+    
+    <!-- 汇款人名称 -->
+    <remitterName
+        pattern="^[a-zA-Z0-9&apos;( )?+,./:-]{0,35}$"
+        tip="请输入字母、数字，可包含/+?().,':-和空格，最大长度35个字符"
+        type="remitterName" />
+    
+    <!-- 收款人名称 -->
+    <payeeName
+        pattern="^[a-zA-Z0-9&apos;( )?+,./:-]{0,70}$"
+        tip="请输入字母、数字，可包含/+?().,':-和空格"
+        type="payeeName" />
+    
+    <!-- 收款人地址 -->
+    <remitterAdress
+        pattern="^[a-zA-Z0-9&apos;( )?+,./:-]{0,105}$"
+        tip="请输入字母、数字，可包含/+?().,':-和空格"
+        type="remitterAdress" />
+    
+    <!-- 汇款人地址 -->
+    <remitterPayeeAdress
+        pattern="^[a-zA-Z0-9&apos;( )?+,./]{0,84}$"
+        tip="请输入字母、数字，可包含/+?().,&apos;和空格，最大长度84个字符"
+        type="remitterPayeeAdress" />
+	<!-- 汇款人电话 -->
+    <remitterPhone
+        pattern="^[a-zA-Z0-9&apos;( )?+,:./]{0,15}$"
+        tip="请输入字母、数字，可包含空格及()+:&apos;,./?标点符号，最大长度15个字符"
+        type="remitterPhone" />
+    
+    <!-- 新模板名称 -->
+	<remittanceModelName
+        pattern="^[a-zA-Z0-9\u4e00-\u9fa5&apos;&quot;,;!:?./ -]{1,50}$"
+        tip="请输入中文、字母或数字，允许的字符包括'”,;!:?-./和空格，最小长度1个字符，最大长度50个字符"
+		type="remittanceModelName" />
+	
+	<!-- 跨境汇款(汇款申请)的校验规则 -->
+    
+    <!-- 汇款人邮编 -->
+    <remittanceCode
+        pattern="^\d{6}$"
+        tip="请输入0-9的数字，最大长度6个字符"
+        type="remittanceCode"/>
+    
+    <!-- ^[a-zA-Z0-9^`~!@#$%^*_=\[\]{};,&apos;&quot;\:\-\]{0,34}$ -->
+    <!-- 收款人账号 -->
+    <remittancePayeeAccount
+        pattern="^[^&quot;&apos;`~!@#$%\^\*_=\[\]{};,\|\:\-\u003C\u003E\u0026\u4E00-\u9FBB\u3400-\u4DBF\uF900-\uFAD9\u3000-\u303F\u2000-\u206F\uFF00-\uFFEF]{0,34}$"
+        tip="请输入字母、数字，可包含除`~!@#$%^*_=[]{};,'”|:-以外的字符，最大长度34个字符"
+        type="remittancePayeeAccount"/>
+    
+    <!-- 查询里面的：银行SWIFT代码 -->
+    <remittanceQuerySWIFTCode
+        pattern="^[A-Z0-9]{2,11}$"
+        tip="请输入大写字母或数字，最小长度2个字符，最大长度11个字符"
+        type="remittanceQuerySWIFTCode"/>
+    
+    <!-- 查询里面的：银行名称 -->
+    <remittanceQueryBankName
+        pattern="^[A-Z0-9&apos; ()+,.?/，]{3,}$"
+        tip="请输入大写字母、数字，可包含空格和()+',.?/，最小长度3个字符"
+        type="remittanceQueryBankName"/>
+    
+    <!-- 收款银行全称 -->
+    <remittancePayeeBankName
+        pattern="^[a-zA-Z0-9&apos;/\-\+?()., ]{0,105}$"
+        tip="请输入字母、数字，可包含/-+?().,'和空格最大长度105个字符"
+        type="remittancePayeeBankName"/>
+   
+    <!-- 收款行行号-加拿大 -->
+    <remittancePayeeBankNoCA
+        pattern="^[a-zA-Z0-9&apos;/+?()., ]{0,34}"
+        tip="请输入字母、数字，可包含/+?().,'和空格，最大长度34个字符"
+        type="remittancePayeeBankNoCA"/>
+    
+    <!-- 收款银行地址-日本 -->
+    <payeeAddress
+        pattern="^[a-zA-Z0-9&apos;( )?+,\.\-\/]{0,104}$"
+        tip="请输入字母、数字，可包含/-+?().,'和空格,收款银行全称和收款银行地址合计最大长度为104个字符"
+        type="payeeAddress" />
+    
+	<!-- 跨境汇款 -->
+    <payeeAccNumber
+        pattern="^[^&quot;&apos;`~!@#$%\^\*_=\[\]{};,\|\:\-\u003C\u003E\u0026\u4E00-\u9FBB\u3400-\u4DBF\uF900-\uFAD9\u3000-\u303F\u2000-\u206F\uFF00-\uFFEF]{0,34}$"
+        tip="请输入字母、数字，可包含除`~!@#$%^*_=[]{};,'”|:-以外的字符，最大长度34个字符"
+        type="payeeAccNumber" />
+    
+	<!-- 收款银行SWIFT代码 -->
+	<!-- ^([a-zA-Z0-9]{4}[a-zA-Z0-9(?!CN)]{2}[a-zA-Z0-9]{2})|([a-zA-Z0-9]{4}[a-zA-Z0-9(?!CN)]{2}[a-zA-Z0-9]{5})$ -->
+    <SWIFTCode
+        pattern="^[a-zA-Z0-9]{11}"
+        tip="请输入8位或11位字母、数字，其中第五、六位不为CN，最大长度11个字符"
+        type="SWIFTCode" />
+    
+	<!-- 收款银行全称-日本 -->
+    <payeeBankFullName
+        pattern="^[a-zA-Z0-9/\-+?( ).,']{0,104}$"
+        tip="请输入字母、数字，可包含/-+?().,'和空格,收款银行全称和收款银行地址合计最大长度为104个字符"
+        type="payeeBankFullName" />
+    
+    <!-- 收款行行号-澳洲  -->
+    <payeeBankNumber
+        pattern="^AU\d{6}$"
+        tip="请输入AU加6位数字，最大长度8个字符"
+        type="payeeBankNumber" />
+    
+	<!-- 收款人联系电话-日本 -->
+    <payeePhone
+        pattern="^[A-Z0-9&apos;+( ),\-\/\?\!\:; ]{0,88}$"
+        tip="请输入大写字母、数字，可包含空格及()+:&apos;,./?标点符号，最大长度88个字符"
+        type="payeePhone" />
+    
+    <!-- 汇款金额 -->
+    <remittancePayeeNumber
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,12}(\.\d{1,2})?$"
+        tip="请输入不超过12位整数，2位小数的金额，最大长度15个字符"
+        type="remittancePayeeNumber"/>
+    
+    <payNumber
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,12}(\.\d{1,2})?$"
+        tip="请输入不超过12位整数，2位小数的金额，最大长度15个字符"
+        type="payNumber" />
+    
+    <!-- 汇款金额(日本、韩国） -->
+    <payAccNumber
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,15}$"
+        tip="请输入不超过15位整数的金额，最大长度15个字符"
+        type="payAccNumber"/>
+    
+	<!-- 给收款人的留言 -->
+    <toPayeeMessage
+        pattern="^[a-zA-Z0-9&apos;( )?+,\.\/^\\r\\n]{1,65}$"
+        tip="请输入字母、数字，可包含/+?().,&apos;和空格，最小长度1个字符，最大长度65个字符"
+        type="toPayeeMessage" />
+    
+	<!-- 汇款用途详细说明 -->
+	<!--^[a-zA-Z0-9\u4e00-\u9fa5\u0000-\u00FF^\r\n]{50}$  -->
+    <payUse
+        pattern="^[\u4e00-\u9fa5a-zA-Z0-9/+?( ).,']{1,50}$"
+        tip="请至少输入一个中文字符，不支持全角字符和回车的录入，最大长度50个字符"
+        type="payUse" />
+
+    <!-- 601定期定额赎回份额 提示语修改 -->
+    <jpnAmount601
+        pattern="^[1-9][0-9]{0,14}$"
+        tip="您最多可输入14位数字，且不能输入0"
+        type="jpnAmount601" />
+     
+    <!-- 601定期定额赎回份额 提示语修改 -->
+    <fincprice601
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,11}(\.\d{1,2})?$"
+        tip="您最多可输入11位整数，且不能输入0"
+        type="fincprice601" />
+    
+    <lifeInsurAmount
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,10}(\.\d{1,2})?$"
+        tip="请输入不超过10位整数，2位小数的金额"
+        type="lifeInsurAmount" />
+
+
+    <lifeInsurAmount_k
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)^\d{1,9999}(\.\d{1,2})?$"
+        tip="请输入0-9的数字（小数点后最多2位数字)"
+        type="lifeInsurAmount_k" />
+    
+    <!-- 寿险校验 -->
+    <serviceRecommNo
+        pattern="^.{5}$"
+        tip="请输入5位数字"
+        type="serviceRecommNo" />
+
+    <fourNumber
+        pattern="^[1-9][0-9]*$"
+        tip="请输入首位不为零的数字"
+        type="fourNumber" />
+    
+    <eightNumber
+        pattern="^[1-9][0-9]{0,7}$"
+        tip="最多8位整数且不能为0"
+        type="eightNumber" />
+    
+    <notEmpty
+        pattern="^\S+$"
+        tip=""
+        type="notEmpty" />
+    
+    <lifePhone
+        pattern="^\d{11,18}$"
+        tip="请输入0-9的数字，最小长度11个字符，最大长度18个字符"
+        type="lifePhone" />
+    
+    <lifeWuJingIdType
+        pattern="^[\u4e00-\u9fa5]{1,2}[0-9]{8}$"
+        tip="请输入一位汉字开头+8位数字"
+        type="lifeWuJingIdType" />
+    
+    <lifeAdress
+        pattern="[ A-Za-z0-9',.\-/()\u4E00-\u9FBB\u3400-\u4DBF\uF900-\uFAD9\u3000-\u303F\u2000-\u206F\uFF00-\uFFEF]{1,80}$"
+        tip="请输入中文、字母或数字，可包含',.-/()和空格，最大长度80个字符"
+        type="lifeAdress" />
+    <lifehomeofficephone
+        pattern="^[0-9\-\+?( )]{1,9999}"
+        tip="请输入0-9的数字，可包含-+（）和空格"
+        type="lifehomeofficephone" />
+    <!-- 贵金属积存 数量校验-->
+    <srmsRedeem
+        pattern="(?!^0$)(?!^[0]{2,})(?!^0[1-9]+)(?!^0\.[0]*$)(?!^[0-9\.]{12,})^\d{1,6}(\.\d{1,4})?$"
+        tip="赎回克重最多10位数字且不能为0（小数点前最多6位数字，小数点后最多4位数字）"
+        type="srmsRedeem"
+        />
+    <custPhoneNum
+        pattern="^\d{0,15}$"
+        tip="请输入正确的电话号码，由最大15个数字组成"
+        type="custPhoneNum"
+    />
+    <custAddress
+        pattern="^[A-Z0-9a-z\u4E00-\u9FFF\'\,\.\-\/\(\)]*$"
+        tip="请输入正确的地址信息，可输入半角英文，半角数字，中文，特殊字符',.-/()"
+        type="custAddress"
+    />
+    <postCode
+        pattern="^[\s\S]{6}$"
+        tip="请输入正确的6位邮政编码"
+        type="postCode"
+    />
+
+    <!-- 收款银行地区（国家）-->
+    <payBankCountry
+        pattern="^[\u4e00-\u9fa5]{0,20}$"
+        tip="请输入中文；最大长度20个汉字"
+        type="payBankCountry" />
+
+    <!-- 收款人常驻国家-->
+    <payManCountry
+        pattern="^[a-zA-Z0-9&apos;( )?+,./]{0,84}$"
+        tip="请输入字母、数字，可包含/+?().,&apos;和空格，最大长度84个字符"
+        type="payManCountry" />
+
+</rules>

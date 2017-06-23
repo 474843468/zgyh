@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 一天通知存款 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/style_match_wrap"
+    android:orientation="vertical" >
+    
+    <!-- 币种 -->
+    <include android:id="@+id/tv_tv_1" layout="@layout/assetmanager_scene_tv_tv_underline_layout"/>
+    <View style="@style/style_line_1"/>
+    <!-- 钞汇 -->
+    <include android:id="@+id/tv_tv_2" layout="@layout/assetmanager_scene_tv_tv_underline_layout"/>
+    <View style="@style/style_line_1"/>
+    <!-- 转存方式 -->
+    <include android:id="@+id/tv_tv_3" layout="@layout/assetmanager_scene_tv_tv_underline_layout"/>
+    <View style="@style/style_line_1"/>
+    <!-- 执行模式 -->
+    <include android:id="@+id/tv_tv_4" layout="@layout/assetmanager_scene_tv_tv_underline_layout"/>
+    <View style="@style/style_line_1"/>
+    <!-- 执行周期 -->
+    <include android:id="@+id/tv_tv_5" layout="@layout/assetmanager_scene_tv_tv_underline_layout"/>
+    <View style="@style/style_line_1"/>
+    
+    <!-- 具体执行日 -->
+	        <LinearLayout 
+	            android:id="@+id/layout_exeDate"
+		        style="@style/style_match_wrap"
+		        android:layout_margin="10dp"
+		        android:gravity="center_vertical"
+		        >
+		    		<TextView 
+		        		style="@style/style_textview_with_weight_1"
+		                android:text="@string/assetmanager_capital_9"
+		                />
+		    		<TextView
+		    		    android:id="@+id/tv_exeDate" 
+		        		style="@style/style_tv_spinner"
+		        		android:layout_width="0dp"
+		                />
+		    		<Spinner 
+		                android:id="@+id/sp_exeDate"
+		                style="@style/Spiiner_fill_small"
+		                android:layout_width="0dp"
+		                android:visibility="gone"
+		                />
+   			 </LinearLayout>
+   			 
+   			 <View style="@style/style_line_1" android:layout_marginLeft="10dp"/>
+   			 
+   			 <!-- 终止日期 -->
+   			 <LinearLayout 
+   			     android:id="@+id/layout_endDate"
+   			     style="@style/style_match_wrap" 
+   			     android:layout_margin="10dp" 
+   			     android:gravity="center_vertical"
+   			     android:visibility="visible"
+   			     >
+	            <TextView 
+	                style="@style/textview_common_multi_second"
+	                android:layout_marginRight="3dp"
+	                android:text="@string/assetmanager_capital_10"
+	                android:visibility="visible"
+	                />
+	            <TextView 
+		    		    android:id="@+id/tv_sp_2"
+		        		style="@style/style_tv_spinner"
+		        		android:layout_width="0dp"
+		        		android:layout_weight="1"
+		                />
+	            <LinearLayout 
+	                android:id="@+id/layout_forever"
+	                style="@style/style_wrap_wrap" 
+	                android:padding="3dp" 
+	                android:gravity="center_vertical"
+	                android:visibility="visible"
+	                >
+	            <CheckBox 
+	                android:id="@+id/check_box_forever"
+	                style="@style/check_box_style" />
+	            <TextView style="@style/textview_common_multi_second"
+	                android:text="@string/assetmanager_capital_7"
+	                />
+	        	</LinearLayout>
+        	</LinearLayout>
+        <View style="@style/style_line_1" android:layout_marginLeft="10dp"/>
+        
+        <!-- 划转规则 -->
+        <LinearLayout
+            android:id="@+id/layout_rule" 
+            style="@style/style_match_wrap" 
+            android:layout_margin="10dp" 
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            >
+            <LinearLayout 
+                style="@style/style_match_wrap"
+                android:orientation="vertical"
+                >
+                <TextView 
+	                android:id="@+id/tv_rule_1"
+	                style="@style/textview_common_multi_second"
+	                android:text="@string/assetmanager_capital_11"
+	                />
+                <LinearLayout style="@style/style_match_wrap">
+	            <EditText 
+	                android:id="@+id/ed_rule_1"
+	                style="@style/edittext_input_numberDecimal_wrap"
+	                android:maxLength="14"
+	                android:layout_width="0dp"
+	                android:layout_weight="1"
+	                />
+	            <TextView 
+	                android:id="@+id/tv_rule_2"
+	                style="@style/textview_common_multi_second"
+	                android:text="@string/assetmanager_capital_12"
+	                />
+	            </LinearLayout>
+            </LinearLayout>
+            <LinearLayout 
+                android:id="@+id/layout_rule_1" 
+                style="@style/style_match_wrap"
+                android:layout_marginTop="3dp"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+                <TextView 
+	                android:id="@+id/tv_rule_3"
+	                style="@style/textview_common_multi_second"
+	                android:text="@string/assetmanager_capital_53"
+	                />
+                <LinearLayout style="@style/style_match_wrap">
+	            <EditText 
+	                android:id="@+id/ed_rule_2"
+	                style="@style/edittext_input_numberDecimal_wrap"
+	                android:maxLength="14"
+	                android:layout_width="0dp"
+	                android:layout_weight="1"
+	                />
+	            <TextView 
+	                android:id="@+id/tv_rule_4"
+	                style="@style/textview_common_multi_second"
+	                android:text="@string/assetmanager_capital_12"
+	                />
+	            </LinearLayout>
+            </LinearLayout>
+            
+        </LinearLayout>
+        
+	    <View style="@style/style_line_1"/>
+	    
+	    <TextView 
+	        android:id="@+id/tv_tip"
+	        style="@style/textview_common_multi_second"
+	        android:layout_margin="10dp"
+	        android:textColor="@color/gray"
+	        android:text="@string/assetmanager_capital_8"
+	        />
+	    
+	    <!-- 已阅读并同意，****协议 -->
+	    <LinearLayout 
+	        android:id="@+id/layout_agreement"
+    	    style="@style/style_match_wrap" 
+    	    android:layout_margin="10dp"
+    	    android:gravity="center_vertical">
+            <CheckBox android:id="@+id/check_agreement" 
+                style="@style/check_box_style" 
+                />
+            <TextView style="@style/textview_common_multi_second"
+                android:text="@string/assetmanager_capital_51"
+                />
+            <TextView 
+                android:id="@+id/tv_agreement_link"
+                style="@style/textview_common_multi_second"
+                android:textColor="@color/blue"
+                android:text="@string/assetmanager_capital_52"
+                />
+        </LinearLayout>
+        
+	    <!-- 发送短息 -->
+	    <RelativeLayout style="@style/style_match_wrap" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+	    <include android:id="@+id/layout_send_msg" layout="@layout/assetmanager_send_messger"/>
+	    </RelativeLayout>
+	    <!-- 保存场景 -->
+	    <LinearLayout 
+	        android:id="@+id/layout_save_scene"
+    	    style="@style/style_match_wrap" 
+    	    android:layout_marginLeft="10dp"
+    	    android:layout_marginRight="10dp"
+    	    android:gravity="center_vertical">
+    	    
+            <CheckBox android:id="@+id/checkbox_save_scene" 
+                style="@style/check_box_style" 
+                />
+            <TextView style="@style/textview_common_multi_second"
+                android:text="@string/assetmanager_capital_50"
+                />
+        </LinearLayout>
+        
+	    <!-- 按钮 -->
+	    <!-- <include android:id="@+id/layout_bottom_button" layout="@layout/assetmanager_bottom_button_layout"/> -->
+
+</LinearLayout>

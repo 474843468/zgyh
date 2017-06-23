@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <ScrollView
+        style="@style/scrollview_comm"
+        android:layout_below="@+id/ll_step"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_for_listview_item_write"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/fill_padding_top" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_acc_loss_actnum"
+                            style="@style/textview_common_left"
+                            android:text="@string/mycrcd_credit_card_account" />
+
+                        <TextView
+                            android:id="@+id/finc_accNumber"
+                            style="@style/textview_common_right"
+                            android:singleLine="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/tv_acc_loss_type"
+                            style="@style/textview_common_left"
+                            android:text="@string/mycrcd_virtual_card_account" />
+
+                        <TextView
+                            android:id="@+id/finc_fenqidate"
+                            style="@style/textview_common_right" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:text="@string/mycrcd_virtual_card_account_type" />
+
+                        <TextView
+                            android:id="@+id/finc_miaoshus"
+                            style="@style/textview_common_right" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="@dimen/fill_padding_top" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:text="@string/mycrcd_virtual_account_name" />
+
+                        <TextView
+                            android:id="@+id/crcd_accountname"
+                            style="@style/textview_common_right" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:text="@string/mycrcd_virtual_startdate" />
+
+                        <TextView
+                            android:id="@+id/finc_startdate"
+                            style="@style/Spiiner_fill"
+                            android:layout_marginRight="@dimen/fill_margin_top"
+                            android:gravity="left|center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:text="@string/mycrcd_virtual_enddate" />
+
+                        <TextView
+                            android:id="@+id/finc_enddate"
+                            style="@style/Spiiner_fill"
+                            android:layout_marginRight="@dimen/fill_margin_top"
+                            android:gravity="left|center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:text="@string/mycrcd_virtualcard_settime" />
+
+                        <TextView
+                            android:id="@+id/acc_query_transfer_startdate"
+                            style="@style/Spiiner_fill"
+                            android:layout_marginRight="@dimen/fill_margin_top"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:text="@string/mycrcd_virtual_card_total_money" />
+
+                        <EditText
+                            android:id="@+id/finc_remiannomoney"
+                            style="@style/edittext_input_numberDecimal_fill"
+                            android:layout_marginRight="@dimen/fill_margin_top"
+                            android:maxLength="14" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:text="@string/mycrcd_virtual_card_single_money" />
+
+                        <EditText
+                            android:id="@+id/finc_nextdate"
+                            style="@style/edittext_input_numberDecimal_fill"
+                            android:layout_marginRight="@dimen/fill_margin_top"
+                            android:maxLength="14" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fill_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/lastButton"
+                    style="@style/btn_common_oneline"
+                    android:background="@drawable/btn_blue_big"
+                    android:text="@string/last"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/sureButton"
+                    style="@style/bottombtn"
+                    android:text="@string/next"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

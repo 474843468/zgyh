@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/front"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <FrameLayout
+        android:id="@+id/crcd_frame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" >
+
+        <ImageView
+            android:id="@+id/crcd_btn_goitem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/right_arrow"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/crcd_btn_gocancelrelation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/forex_close_img"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/ll_acc_msg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/crcd_frame"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:gravity="center"
+        android:paddingBottom="@dimen/fill_padding_bottom" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/ll_bankact_top"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fill_margin_bottom"
+                android:background="@drawable/shap_for_half_gray"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/btn_close_height"
+                    android:layout_marginLeft="@dimen/fill_margin_top"
+                    android:src="@drawable/icon_huoqi" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/btn_close_height"
+                    android:layout_marginLeft="@dimen/fill_margin_top"
+                    android:src="@drawable/icon_guijinshu" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_bankaccount"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_bankact_top"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/fill_padding_left"
+                android:paddingRight="@dimen/fill_padding_right"
+                android:paddingTop="@dimen/fill_padding_left" >
+
+                <TextView
+                    android:id="@+id/crcd_type_value"
+                    style="@style/textview_for_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_weight="6"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/crcd_account_num"
+                    style="@style/textview_act"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_weight="5"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:text="" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_crcd_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/ll_bankaccount"
+                android:paddingRight="@dimen/fill_padding_right"
+                android:src="@drawable/icon_chakan"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/crcd_account_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/img_crcd_detail"
+                android:layout_below="@+id/ll_bankaccount"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/fill_padding_left"
+                android:paddingRight="@dimen/fill_padding_right" >
+
+                <TextView
+                    android:id="@+id/crcd_currencycode_value"
+                    style="@style/textview_for_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/img_crcd_currencycode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dip"
+                    android:src="@drawable/loan_history_queryback"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/crcd_bookbalance_value"
+                    style="@style/textview_act"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <TextView
+                    style="@style/textview_act"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/crcd_account_nickname"
+                    style="@style/textview_for_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_weight="6"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/gray" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imageViewright"
+            style="@style/sucess_right_iv"
+            android:layout_gravity="center"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+</RelativeLayout>

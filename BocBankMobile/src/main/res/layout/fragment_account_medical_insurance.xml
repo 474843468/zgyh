@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_main_bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/boc_divide_line" />
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailContentView
+        android:id="@+id/dcv_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/boc_space_between_20px"
+        android:layout_marginLeft="@dimen/boc_space_between_20px"
+        android:layout_marginRight="@dimen/boc_space_between_20px"
+        android:layout_marginTop="@dimen/boc_space_between_40px"
+        style="@style/tv_small" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.transactionlist.TransactionView
+            android:id="@+id/tran_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_above="@+id/btn_more"
+            android:layout_alignParentTop="true" />
+
+        <Button
+            android:id="@+id/btn_more"
+            style="@style/BocButton.BocWhiteBgButton"
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/boc_space_between_20px"
+            android:text="@string/boc_finance_account_transfer_detail_more"
+            android:textColor="@color/boc_main_button_color"
+            android:textSize="@dimen/boc_text_size_big" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_button"
+        android:layout_marginBottom="@dimen/common_row_margin"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical"
+        android:padding="@dimen/fill_padding" >
+
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/epay_treaty_service_open_agreement_tv_title"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/textsize_one_five" />
+
+        <LinearLayout
+            android:id="@+id/ll_fp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_msg"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/epay_treaty_first_part" />
+
+            <TextView
+                android:id="@+id/tv_first_part"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_sp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_fp"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/epay_treaty_second_part" />
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/epay_treaty_company_name" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/sv_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/ll_sp"
+            android:fadingEdge="none"
+            android:fillViewport="true" >
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:text="@string/epay_treaty_service_open_agreement_tv_agMsg" />
+        </ScrollView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/fill_margin_bottom"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/bt_cancel"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_blue_big"
+            android:text="@string/not_agree"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/bt_agree"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/agree"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

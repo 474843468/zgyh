@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/common_row_margin"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <!-- 姓名 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_hold_pro_detail_applicant_name"
+                
+                 />
+
+            <EditText
+                android:id="@+id/et_benName"
+                style="@style/edittext_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                android:enabled="false"
+                 />
+        </LinearLayout>
+        <!-- 性别 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_hold_pro_detail_applicant_gender"
+                
+                 />
+
+            <RadioGroup
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                android:layout_weight="4"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb_man"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/btn_bottom_height"
+                    android:button="@drawable/radiobtn_selector"
+                    android:checked="true"
+                    android:enabled="false"
+                    android:text="@string/boy"
+                    
+                     />
+
+                <RadioButton
+                    android:id="@+id/rb_woman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/btn_bottom_height"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:button="@drawable/radiobtn_selector"
+                    android:enabled="false"
+                    android:text="@string/girl"
+                    
+                     />
+            </RadioGroup>
+        </LinearLayout>
+        <!-- 出生日期 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_hold_pro_detail_applicant_birth_date"
+                
+                 />
+
+            <TextView
+                android:id="@+id/tv_benBirth"
+                style="@style/spinner_forex_prompt_info"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                android:enabled="false"
+                android:gravity="center_vertical"
+                 />
+        </LinearLayout>
+        <!-- 国籍 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_hold_pro_detail_applicant_national"
+                
+                 />
+
+            <Spinner
+                android:id="@+id/sp_nationality"
+                style="@style/spinner_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                 />
+        </LinearLayout>
+
+        <!-- 证件类型 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_hold_pro_detail_applicant_cred_type"
+                
+                 />
+
+            <Spinner
+                android:id="@+id/sp_documentType"
+                style="@style/spinner_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                 />
+        </LinearLayout>
+
+        <!-- 证件号码 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_hold_pro_detail_applicant_cred_num"
+                
+                 />
+
+            <EditText
+                android:id="@+id/et_documentNumber"
+                style="@style/edittext_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                android:enabled="false"
+                 />
+        </LinearLayout>
+
+        <!-- 证件生效日 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_cardBeginDate"
+                
+                 />
+
+            <TextView
+                android:id="@+id/tv_documentBeginDate"
+                style="@style/textview_common"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                android:background="@drawable/bg_spinner"
+                android:enabled="false"
+                android:gravity="center_vertical"
+                 />
+        </LinearLayout>
+        <!-- 证件到期日 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_buyeridlastdate"
+                
+                 />
+
+            <TextView
+                android:id="@+id/tv_documentEndDate"
+                style="@style/textview_common"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                android:background="@drawable/bg_spinner"
+                android:enabled="false"
+                android:gravity="center_vertical"
+                 />
+        </LinearLayout>
+
+        <!-- 婚姻状态 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_buyermrigstatu"
+                
+                 />
+
+            <Spinner
+                android:id="@+id/sp_maritalStatus"
+                style="@style/spinner_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                 />
+        </LinearLayout>
+        <!-- 居民类型 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_residentsType"
+                
+                 />
+
+            <Spinner
+                android:id="@+id/sp_residentsType"
+                style="@style/spinner_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                 />
+        </LinearLayout>
+        <!-- 通讯地址 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/bond_customer_adress"
+                
+                 />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Spinner
+                    android:id="@+id/sp_adress_province"
+                    style="@style/spinner_forex_prompt_info"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="1"
+                     />
+
+                <Spinner
+                    android:id="@+id/sp_adress_city"
+                    style="@style/spinner_forex_prompt_info"
+                    android:layout_marginRight="5dip"
+                    android:layout_weight="1"
+                     />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 占位 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_coverage"
+                
+                
+                android:visibility="invisible" />
+
+            <Spinner
+                android:id="@+id/sp_adress_county"
+                style="@style/spinner_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                 />
+        </LinearLayout>
+        <!-- 占位 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_coverage"
+                
+                
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/tv_adress_detail"
+                style="@style/edittext_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                android:enabled="false"
+                android:hint="@string/safety_adress_hint"
+                 />
+        </LinearLayout>
+        <!-- 邮编 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/bond_customer_postcode"
+                
+                 />
+
+            <EditText
+                android:id="@+id/et_applpost"
+                style="@style/edittext_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                android:enabled="false"
+                 />
+        </LinearLayout>
+        <!-- 家庭电话 -->
+
+        <LinearLayout
+            android:id="@+id/ll_homeTel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_homeTel"
+                
+                 />
+
+            <EditText
+                android:id="@+id/et_homeTel"
+                style="@style/edittext_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                android:enabled="false"
+                android:hint="@string/hint_memo"
+                 />
+        </LinearLayout>
+        <!-- 移动电话 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/plps_annuity_phone"
+                
+                 />
+
+            <EditText
+                android:id="@+id/et_phone"
+                style="@style/edittext_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                android:enabled="false"
+                 />
+        </LinearLayout>
+        <!-- 办公电话 -->
+
+        <LinearLayout
+            android:id="@+id/ll_officeTel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_officeTel"
+                
+                 />
+
+            <EditText
+                android:id="@+id/et_officeTel"
+                style="@style/edittext_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                android:enabled="false"
+                android:hint="@string/hint_memo"
+                 />
+        </LinearLayout>
+        <!-- 单位名称 -->
+
+        <LinearLayout
+            android:id="@+id/ll_officeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_officeName"
+                
+                 />
+
+            <EditText
+                android:id="@+id/et_officeName"
+                style="@style/edittext_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                android:enabled="false"
+                android:hint="@string/hint_memo"
+                 />
+        </LinearLayout>
+        <!-- 投保人年收入 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_benIncome"
+                
+                 />
+
+            <EditText
+                android:id="@+id/et_benIncome"
+                style="@style/edittext_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                android:enabled="false"
+                 />
+        </LinearLayout>
+        <!-- 电子邮箱 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_hold_pro_detail_applicant_email"
+                
+                 />
+
+            <EditText
+                android:id="@+id/et_email"
+                style="@style/edittext_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                android:enabled="false"
+                 />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_row_margin"
+            android:layout_marginRight="@dimen/common_row_margin"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:text="@string/safety_carsafety_email_alert_info"
+            android:textColor="@color/red"
+            
+            android:visibility="gone" />
+        <!-- 职业 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_job"
+                
+                 />
+
+            <Spinner
+                android:id="@+id/sp_job"
+                style="@style/spinner_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                 />
+        </LinearLayout>
+        <!-- 底部显示不全，占位 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_lifeInsurance_job"
+                
+                 />
+
+            <Spinner
+                style="@style/spinner_forex_prompt_info"
+                android:layout_marginRight="5dip"
+                android:layout_weight="4"
+                 />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/boc_common_bg_color"
+        android:orientation="vertical">
+        <include layout="@layout/boc_divide_line" />
+        <!--提示-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/boc_space_between_16px"
+            android:paddingBottom="@dimen/boc_space_between_16px"
+            android:background="@color/bocroa_white"
+            android:gravity="center"
+            android:paddingLeft="@dimen/boc_space_between_26px"
+            android:paddingRight="@dimen/boc_space_between_26px">
+            <TextView
+                android:id="@+id/sharevsion_point_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:text="@string/boc_trans_shareconversion_account"/>
+        </LinearLayout>
+        <!--分割线-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_divider_1px"
+            android:background="@color/boc_divider_line_color"/>
+
+        <!--产品名称+产品代码-->
+        <TextView
+            android:id="@+id/sharevsion_prod_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_space_between_50px"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:layout_marginTop="@dimen/boc_space_between_40px"
+            android:text="中银智慧理财产品第322期（600987）"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:textSize="@dimen/boc_text_size_common"
+            android:textStyle="bold" />
+        <!--净值 显示内容（-可转换份额，持有份额，转换手续费，业绩报酬(浮动管理费)）-->
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailContentView
+            android:id="@+id/sharevsion_net_value_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginTop="@dimen/boc_space_between_10px" />
+        <!--非净值 显示内容（-可转换份额，持有份额，份额面值）-->
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailContentView
+            android:id="@+id/sharevsion_no_net_value_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginTop="@dimen/boc_space_between_10px" />
+        <!--份额转换-全部转换-部分转换-->
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputWidget
+            android:id="@+id/sharevsion_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:layout_marginTop="@dimen/boc_space_between_30px"
+            android:orientation="vertical" />
+
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.assignment.SelectAgreementView
+            android:id="@+id/view_agreement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:layout_marginTop="@dimen/boc_space_between_80px"/>
+        <!--协议书-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="@dimen/boc_space_between_40px"-->
+            <!--android:layout_marginLeft="@dimen/boc_space_between_20px"-->
+            <!--android:layout_marginRight="@dimen/boc_space_between_20px"-->
+            <!--android:orientation="horizontal" >-->
+            <!--&lt;!&ndash;选中按钮&ndash;&gt;-->
+            <!--<ImageButton-->
+                <!--android:id="@+id/fragment_shareconversion_checkbox"-->
+                <!--android:state_selected="false"-->
+                <!--android:layout_marginLeft="@dimen/boc_space_between_30px"-->
+                <!--android:layout_width="@dimen/boc_space_between_50px"-->
+                <!--android:layout_height="@dimen/boc_space_between_50px"-->
+                <!--android:background="@drawable/boc_bg_check_image"/>-->
+            <!--&lt;!&ndash;协议内容提示&ndash;&gt;-->
+            <!--<TextView-->
+                <!--android:id="@+id/fragment_shareconversion_agreement"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="@dimen/boc_text_size_common"-->
+                <!--android:layout_marginLeft="@dimen/boc_space_between_30px"-->
+                <!--android:textColor="@color/boc_text_color_gray" />-->
+        <!--</LinearLayout>-->
+
+
+        <!--下一步按钮-->
+        <Button
+            android:id="@+id/fragment_shareconversion_butnext"
+            style="@style/BocButton.BocPrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/boc_space_between_40px"
+            android:text="@string/boc_common_next"
+            android:textSize="@dimen/boc_text_size_common" />
+        <!--理财交易账号-->
+        <TextView
+            android:id="@+id/fragment_shareconversion_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginTop="@dimen/boc_button_height_52px"
+            android:layout_marginBottom="@dimen/boc_space_between_10px"
+            android:text=""
+            android:singleLine="true"
+            android:textColor="@color/dim_foreground_disabled_material_light"
+            android:gravity="center" />
+    </LinearLayout>
+</ScrollView>

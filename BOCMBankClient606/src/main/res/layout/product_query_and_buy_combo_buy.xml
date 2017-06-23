@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 中银理财-组合购买页 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/style_match_match"
+    android:orientation="vertical" 
+    >
+    
+    <!-- 内容区 -->
+    <FrameLayout 
+        style="@style/style_height_weight_1"
+        >
+        <!-- layout_marginTop值为"协议信息"组件高度的一半 -->
+            <!-- android:layout_marginTop="@dimen/bovinvt_layout_content_margin_top" -->
+        <ScrollView 
+            style="@style/style_match_match"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:paddingTop="@dimen/bovinvt_layout_margin_top"
+            android:paddingBottom="@dimen/bovinvt_layout_margin_top"
+            >
+        <LinearLayout 
+            style="@style/style_match_wrap"
+            android:paddingLeft="@dimen/layout_margin_left_right"
+            android:paddingRight="@dimen/layout_margin_left_right"
+            android:orientation="vertical"
+            >
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="交易账户："
+                android:id="@+id/tv_1"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="产品代码："
+                android:id="@+id/tv_2"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="产品名称："
+                android:id="@+id/tv_3"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="产品币种："
+                android:id="@+id/tv_4"
+                />
+            <!-- 钞/汇 -->
+            <LinearLayout 
+                style="@style/style_match_wrap"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                >
+            	<!-- 币种是人民币，显示"-"，否则显示下拉框 -->
+                <TextView 
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/textview_common"
+                    android:gravity="right"
+                    android:text="@string/bocinvt_tv_40"
+                    />
+                <TextView 
+                    android:id="@+id/tv_5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/textview_common"
+                    android:text="@string/bocinvt_tv_41"
+                    android:visibility="gone"
+                    />
+                <!-- 现钞/现汇 -->
+                <RadioGroup
+                            android:id="@+id/rg_ch"
+                            style="@style/style_with_weight_1"
+                            android:orientation="horizontal" >
+                            <RadioButton
+                                android:id="@+id/rb_c"
+                                style="@style/style_radiobutton_with_weigh_1"
+                                android:checked="true"
+                                android:text="@string/bocinvt_tv_68" />
+
+                            <RadioButton
+                                android:id="@+id/rb_h"
+                                style="@style/style_radiobutton_with_weigh_1"
+                                android:text="@string/bocinvt_tv_69" />
+                        </RadioGroup>
+                <!-- <Spinner 
+                    android:id="@+id/sp_1"
+                    style="@style/Spiiner_fill"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:visibility="visible"
+                    /> -->
+            </LinearLayout>
+            
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="认购起点金额："
+                android:id="@+id/tv_6"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="追加认购起点金额："
+                android:id="@+id/tv_7"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="产品成立日："
+                android:id="@+id/tv_8"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="产品到期日："
+                android:id="@+id/tv_9"
+                />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                style="@style/style_match_wrap"
+                app:labelText="购买价格："
+                app:ValueTextColor="red"
+                android:id="@+id/tv_10"
+                />
+            <!-- 组合购买金额 -->
+            <LinearLayout 
+                style="@style/style_match_wrap"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                >
+                <TextView 
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    style="@style/textview_common"
+                    android:gravity="right"
+                    android:text="@string/bocinvt_tv_42"
+                    />
+                <EditText 
+                    android:id="@+id/et_1"
+                    style="@style/edittext_input_numberDecimal_fill"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:maxLength="14"
+                    />
+            </LinearLayout>
+            <!-- 购买金额  中文回显 -->
+                    <TextView
+                        android:id="@+id/money_chinese"
+                        style="@style/style_match_wrap"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:textSize="@dimen/textsize_default"
+                        android:textColor="@color/red"
+                        android:layout_marginBottom="@dimen/common_row_margin"
+                        android:layout_marginLeft="@dimen/common_row_margin"
+                        android:layout_marginRight="@dimen/common_row_margin"
+                        android:gravity="right"
+                        android:text=""
+                        android:visibility="gone"
+                        />
+            <TextView 
+                style="@style/style_match_wrap"
+                android:layout_marginBottom="@dimen/bovinvt_layout_margin_top"
+                android:textColor="@color/transparent_00"
+                android:text="@string/app_name"
+                android:background="@color/transparent_00"
+                />
+            
+        </LinearLayout>
+        </ScrollView>
+        
+        <!-- 标题 -->
+        <!-- <LinearLayout 
+            style="@style/style_match_wrap"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="0dp"
+            > -->
+            <!-- 购买信息 -->
+        <!-- <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/bovinvt_tv_title_height"
+            style="@style/textview_common"
+            android:paddingLeft="@dimen/layout_margin_left_right"
+            android:paddingRight="@dimen/layout_margin_left_right"
+            android:background="@drawable/shape_product_query_and_buy_tv_bg"
+            android:gravity="center"
+            android:text="@string/bocinvt_tv_38"
+            /> -->
+        <!-- </LinearLayout> -->
+    </FrameLayout>
+    
+    <!-- 按钮区 -->
+    <LinearLayout style="@style/style_match_wrap">
+        <!-- <Button 
+            android:id="@+id/btn_cancel"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/cancle"
+            android:textColor="@color/white"
+            /> -->
+        <Button 
+            android:id="@+id/btn_next"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            />
+   	</LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 申请定期/活期账户页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <TextView 
+        android:id="@+id/tv_title_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:layout_marginBottom="@dimen/common_row_margin"
+        android:text="@string/acc_choose_account"
+        android:textSize="@dimen/textsize_one_six"/>
+	
+    <Button 
+        android:id="@+id/btnnext"
+        style="@style/bottombtn"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_red_big"
+        android:text="@string/next"
+        android:textColor="@color/white"/>
+    <TextView 
+        android:id="@+id/tv_tellcontent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnnext"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:layout_marginBottom="@dimen/common_row_margin"
+        android:text="@string/acc_tellcontent"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/textsize_default"/>
+    
+    <ListView 
+        android:id="@+id/cardlist"
+        android:layout_below="@id/tv_title_tip"
+        android:layout_above="@id/tv_tellcontent"
+        style="@style/listviewcomm_fill_haveDivider"
+        android:scrollbars="none"/>
+</RelativeLayout>
+

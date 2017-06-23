@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/bg_for_listview_item_write">
+
+    <!-- 这是固定的头部 -->
+
+    <LinearLayout
+        android:id="@+id/list_view_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/fill_padding" >
+
+        <TextView
+            android:id="@+id/tv_column_1"
+            style="@style/textview_common"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/manage_pre_date"
+            android:textSize="@dimen/textsize_default" />
+
+        <TextView
+            android:id="@+id/tv_column_2"
+            style="@style/textview_common"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/manage_pre_transeq"
+            android:textSize="@dimen/textsize_default" />
+
+        <TextView
+            android:id="@+id/tv_column_3"
+            style="@style/textview_common"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/manage_payee_list"
+            android:textSize="@dimen/textsize_default" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray" />
+
+    <ListView
+        android:id="@+id/list_view"
+        style="@style/listviewcomm_fill_gray_divider" >
+    </ListView>
+
+</LinearLayout>

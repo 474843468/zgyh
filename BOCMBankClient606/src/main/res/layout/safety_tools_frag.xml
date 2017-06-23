@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/safety_tools_root_layout"
+    android:layout_width="match_parent"
+    android:background="@color/default_bg"
+    android:layout_height="match_parent" >
+    
+    <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="62dp"
+            android:background="@drawable/navbar"
+            android:visibility="gone"
+            android:paddingTop="5dp" >
+
+            <Button
+                android:id="@+id/ib_back"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                style="@style/titlebackbtn" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/titleText" />
+
+        </RelativeLayout>
+        
+    <RelativeLayout 
+        android:id="@+id/safety_tools_prompt_info_details_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_layout"
+        android:background="@drawable/bg_for_hardware_prompt_info_details"
+        android:layout_marginTop="@dimen/dp_one_for"
+        android:layout_marginLeft="@dimen/dp_one_for"
+        android:layout_marginRight="@dimen/dp_one_for"
+        android:layout_above="@+id/safety_tools_complete"
+        >
+            
+        <TextView 
+            android:id="@+id/safety_tools_prompt_info_des_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_three_zero"
+            android:layout_marginTop="@dimen/dp_two_zero"
+            android:text="请设置您的默认安全工具："
+            style="@style/hardware_prompt_info_default"
+            />
+        
+        <RadioGroup 
+            android:id="@+id/safety_tools_radio_group"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"       
+			android:layout_below="@+id/safety_tools_prompt_info_des_text"     
+			android:layout_marginLeft="@dimen/dp_five_zero"
+            >
+            <RadioButton 
+                android:id="@+id/safety_tools_default_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:button="@drawable/radiobtn_selector"
+                />
+            
+            <RadioButton 
+                android:id="@+id/safety_tools_tran_code_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:button="@drawable/radiobtn_selector"
+                />
+            
+            
+        </RadioGroup>
+        
+    </RelativeLayout>
+    
+    <Button
+        android:id="@+id/safety_tools_complete"
+        style="@style/bottombtn"
+        android:layout_centerHorizontal="true"
+        android:text="@string/confirm"
+        android:textColor="@color/white" 
+        android:layout_marginTop="@dimen/dp_one_zero"
+        android:layout_above="@+id/safety_tools_bottom_block"
+        />
+    
+    <View  android:id="@+id/safety_tools_bottom_block"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_two_zero"
+        android:layout_alignParentBottom="true"
+        />   
+
+</RelativeLayout>

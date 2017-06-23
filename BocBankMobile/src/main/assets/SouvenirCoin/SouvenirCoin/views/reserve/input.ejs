@@ -1,0 +1,74 @@
+<div class="wrap wrap-justhead">
+    <header class="page-head">
+        <div class="back-img"  def_event="{click: 'back'}"><img src="images/back-icon.png"></div>
+        <h1>填写客户信息</h1>
+    </header>
+    <section>
+        <!--纪念币首页列表开始-->
+        <div class="entry">
+            <div class="entry-type">
+                <form>
+                    <ul>
+                        <li>
+                            <label>客户姓名：</label>
+                            <span class="entry-type-box"><input type="text" placeholder="请输入姓名" name="name" validate="{required:true,reg601:true,maxLength:32}" maxlength="32" tips="客户姓名为必输项,请正确输入客户姓名,姓名最多输入16个汉字或32个字母/数字"></span>
+                        </li>
+                        <li>
+                            <label>手机号：</label>
+                            <span class="entry-type-box"><input type="text" maxlength="11" placeholder="请输入11位手机号" name="mobile"  tips="手机号为必输项,请正确输入11位手机号" validate="{required:true,reg602:true}"></span>
+                        </li>
+                        <li>
+                            <label>证件类型：</label>
+                            <span class="entry-type-box entry-type-choose"  def_event="{click: 'idSelect'}">
+                                <var href="javascript:void(0)" idx="01" class="identyType">身份证</var>
+                                <input type="hidden" value="01" name="identyType">
+                                <input type="hidden" value="身份证" name="identyTypeText">
+                                <img src="images/right-icon.png">
+                            </span>
+                        </li>
+                        <li>
+                            <label>证件号码：</label>
+                            <span class="entry-type-box"><input type="text" placeholder="请输入证件号码" def_event="{blur: 'upcase'}" class="eobj" name="identyNumber" tips="证件号码为必输项,请正确输入证件号码" validate="{required:true,reg01:true}"></span>
+                        </li>
+                        <li>
+                            <label>兑换领取网点：</label>
+                            <span class="entry-type-box entry-type-choose"  def_event="{click: 'citySelect'}">
+                                <var class="r-bankName">请选择</var>
+                                <input type="hidden" value="1" name="bankName">
+                                <input type="hidden" value="1" name="bankId">
+                                <input type="hidden" value="1" name="orgId">
+                                <input type="hidden" value="1" name="bankmobile">
+                                <input type="hidden" value="<%=productInfo.productName%>" name="productName">
+                                <input type="hidden" value="<%=productInfo.briefName%>" name="briefName">
+                                <input type="hidden" value="01" name="channel">
+                                <input type="hidden" value="01" name="orgProvID">
+                                <input type="hidden" value="01" name="orgCityID">
+                                <input type="hidden" value="01" name="province">
+                                <input type="hidden" value="<%=productInfo.proVersion%>" name="proVersion">
+                                <input type="hidden" name="productId" value="<%=productInfo.productId%>">
+                                <img src="images/right-icon.png">
+                            </span>
+                        </li>
+                        <li class="bank-address" style="display: none;">
+                            <label>兑换网店地址：</label>
+                            <span class="entry-type-box entry-type-choose">
+                                <var class="r-bankAdress">请选择</var>
+                                <input type="hidden" value="1" name="address">
+                            </span>
+                        </li>
+                        <li>
+                            <label>预约数量：</label>
+                            <span class="entry-type-box entry-type-choose"  def_event="{click: 'countSelect'}">
+                                <var class="r-count"><%=productInfo.maxNum%></var>
+                                <input type="hidden" value="<%=productInfo.maxNum%>" name="count">
+                                <img src="images/right-icon.png">
+                            </span>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            <button def_event="{click: 'next'}">下一步</button>
+        </div>
+        <!--纪念币首页列表结束-->
+    </section>
+</div>

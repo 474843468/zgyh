@@ -1,0 +1,8 @@
+/***************************************************************************/
+/*                                                                         */
+/*  This obfuscated code was created by Javascript Obfuscator Free Version.*/
+/*  Javascript Obfuscator Free Version can be downloaded here              */
+/*  http://javascriptobfuscator.com                                        */
+/*                                                                         */
+/***************************************************************************/
+var _$_1472=["\x69","\x6A","\x53","\x6C\x65\x6E\x67\x74\x68","\x69\x6E\x69\x74","\x70\x72\x6F\x74\x6F\x74\x79\x70\x65","\x6E\x65\x78\x74"];function Arcfour(){this[_$_1472[0]]=0;this[_$_1472[1]]=0;this[_$_1472[2]]= new Array();}function ARC4init(S){var a,cs,t;for(a=0;a<256;++a){this[_$_1472[2]][a]=a};cs=0;for(a=0;a<256;++a){cs=(cs+this[_$_1472[2]][a]+S[a%S[_$_1472[3]]])&255;t=this[_$_1472[2]][a];this[_$_1472[2]][a]=this[_$_1472[2]][cs];this[_$_1472[2]][cs]=t;};this[_$_1472[0]]=0;this[_$_1472[1]]=0;}function ARC4next(){var t;this[_$_1472[0]]=(this[_$_1472[0]]+1)&255;this[_$_1472[1]]=(this[_$_1472[1]]+this[_$_1472[2]][this[_$_1472[0]]])&255;t=this[_$_1472[2]][this[_$_1472[0]]];this[_$_1472[2]][this[_$_1472[0]]]=this[_$_1472[2]][this[_$_1472[1]]];this[_$_1472[2]][this[_$_1472[1]]]=t;return this[_$_1472[2]][(t+this[_$_1472[2]][this[_$_1472[0]]])&255];}Arcfour[_$_1472[5]][_$_1472[4]]=ARC4init;Arcfour[_$_1472[5]][_$_1472[6]]=ARC4next;function prng_newstate(){return  new Arcfour()}var rng_psize=256;

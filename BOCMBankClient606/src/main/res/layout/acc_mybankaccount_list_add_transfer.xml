@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账户管理列表底部添加自助关联功能界面  wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/front"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/acc_list_item_height"
+    android:layout_marginBottom="@dimen/common_bottom_padding" >
+
+    <LinearLayout
+        android:id="@+id/ll_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_toLeftOf="@+id/acc_frame"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/common_listview_item__half_grqy_Height"
+            android:background="@drawable/shap_for_half_gray"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/btn_close_width"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/img_acc_add_transfer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fill_margin_top"
+                android:src="@drawable/icon_add" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/acc_frame"
+        android:layout_width="@dimen/rightbtnW"
+        android:layout_height="@dimen/rightbtnW"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" >
+
+        <ImageView
+            android:id="@+id/acc_btn_goitem"
+            style="@style/rightbtn_jiantou"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:background="@drawable/img_arrow_write" />
+    </FrameLayout>
+
+</RelativeLayout>

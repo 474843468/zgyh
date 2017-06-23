@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 娑堟伅鏈嶅姟璇︽儏椤甸潰 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/layout_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible" >
+
+        <ImageView
+            android:id="@+id/img_envelope_top_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/layout_envelope"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_envelope_top_bg" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_envelope_top_bg"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_envelope_buttom_bg" />
+
+        <ScrollView
+            android:id="@+id/info_sv"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="@dimen/dp_one_zero"
+            android:layout_marginBottom="@dimen/dp_one_zero"
+			android:layout_marginLeft="@dimen/dp_one_zero"            
+			android:layout_marginRight="@dimen/dp_one_zero"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <LinearLayout
+                    android:id="@+id/info_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/info_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="@dimen/fill_margin_left"
+                        android:layout_marginRight="@dimen/fill_margin_left"
+                        android:layout_marginTop="@dimen/fill_margin_top"
+                        android:textSize="@dimen/textsize_one_nine" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        style="@style/listviewcomm_wrap_gray_divider" />
+
+                    <TextView
+                        android:id="@+id/info_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fill_margin_left"
+                        android:layout_marginRight="@dimen/fill_margin_left_double"
+                        android:layout_gravity="right"
+                        android:textSize="@dimen/textsize_one_five"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/info_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/info_ll"
+                    android:layout_marginLeft="@dimen/fill_margin_left"
+                    android:layout_marginRight="@dimen/fill_margin_left"
+                    android:layout_marginBottom="@dimen/common_click_item_height"
+                    android:textSize="@dimen/textsize_one_seven"  />
+                   <!--  android:gravity="right" -->
+                   
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_below="@+id/info_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/common_click_item_height"
+                     />
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/layout_envelope"
+            android:layout_width="fill_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentBottom="true" >
+
+            <RelativeLayout
+                android:id="@+id/img_envelope"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true" >
+
+                <ImageView
+                    android:layout_width="@dimen/envelope_width"
+                    android:layout_height="@dimen/envelope_height"
+                    android:layout_alignParentLeft="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_envelope_left" />
+
+                <ImageView
+                    android:layout_width="@dimen/envelope_width"
+                    android:layout_height="@dimen/envelope_height"
+                    android:layout_alignParentRight="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/img_envelope_right" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/img_envelope_mid"
+                android:layout_width="@dimen/envelope_mid_width"
+                android:layout_height="@dimen/envelope_mid_height"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_envelope_mid" />
+
+            <ImageView
+                android:id="@+id/info_new"
+                android:layout_width="80dp"
+                android:layout_height="61dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignRight="@+id/img_envelope_mid"
+                android:src="@drawable/img_envelope_new"
+                android:visibility="invisible" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

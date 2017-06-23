@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fadingEdge="none"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 转出账户 -->
+
+        <LinearLayout
+            android:id="@+id/accout_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_acc_out_2dimen_scan_write"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" >
+
+                <ImageView
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:src="@drawable/tran_acc_out_person" />
+
+                <TextView
+                    style="@style/textview_for_list"
+                    android:layout_width="80dip"
+                    android:layout_height="20dip"
+                    android:layout_marginLeft="5dip"
+                    android:gravity="bottom"
+                    android:text="@string/tran_acc_out_person" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_acc_out_mytransfer"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/card_new_height"
+                android:background="@drawable/img_card_new" >
+
+                <LinearLayout
+                    android:id="@+id/dept_out_info_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:text="@string/tran_please_choose_out"
+                    android:textColor="@color/card_text"
+                    android:textSize="@dimen/textsize_two_zero" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_acc_out_list_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/shap_for_dept_tranlist"
+                android:orientation="vertical"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/dept_add_new_tranout_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/tran_acc_bottom"
+                android:gravity="center"
+                android:text="@string/add_new_tranout"
+                android:visibility="gone" />
+        </LinearLayout>
+        <!-- 转入账户 -->
+
+        <LinearLayout
+            android:id="@+id/accin_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/ll_acc_in_2dimen_scan_write"
+                android:layout_width="fill_parent"
+                android:layout_height="25dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:gravity="center_horizontal|bottom"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:src="@drawable/tran_acc_in_person" />
+
+                    <TextView
+                        android:id="@+id/tran_acc_in_person"
+                        style="@style/textview_for_list"
+                        android:layout_width="100dip"
+                        android:layout_height="20dip"
+                        android:layout_marginLeft="5dip"
+                        android:text="@string/tran_acc_in_person_tran" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/add_receipt_person"
+                    style="@style/textview_for_list"
+                    android:layout_width="75dip"
+                    android:layout_height="20dip"
+                    android:layout_gravity="right"
+                    android:background="@drawable/tran_add_payee" />
+            </FrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_acc_in_mytransfer"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/card_new_height"
+                android:background="@drawable/img_card_new" >
+
+                <LinearLayout
+                    android:id="@+id/dept_in_info_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" />
+
+                <TextView
+                    android:id="@+id/tran_please_choose_in"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:text="@string/tran_please_choose_in_tran"
+                    android:textColor="@color/card_text"
+                    android:textSize="@dimen/textsize_two_zero" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/tran_acc_seach_linear"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:background="@drawable/bg_for_listview_item_write"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_five" >
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="@string/tran_add_main_btn"
+                    android:textSize="@dimen/textsize_one_three" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" 
+                     android:layout_weight="3">
+
+                    <Button
+                        android:id="@+id/btn_twoDimension_acc_in_mytransfer"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/layout_height"
+                        android:layout_marginLeft="@dimen/dp_five"
+                        android:layout_weight="1"
+                        android:background="@drawable/tran_two_dimen_btnn" />
+
+                    <Button
+                        android:id="@+id/btn_phoneNum_acc_in_mytransfer"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/layout_height"
+                        android:layout_marginLeft="@dimen/dp_five"
+                        android:layout_weight="1"
+                        android:background="@drawable/tran_mobile_btn" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_acc_in_list_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/shap_for_dept_tranlist"
+                android:orientation="vertical"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/dept_add_new_tranin_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/tran_acc_bottom"
+                android:gravity="center"
+                android:text="@string/add_new_tranin"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dept_save_regular_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/tran_bottom_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <!-- 下标题 -->
+
+                <TextView
+                    android:id="@+id/dept_save_title_tv"
+                    style="@style/tran_little_title_tv"
+                    android:text="@string/tran_seting_little_card" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="#ffffff"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/list_bottom" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/fill_padding_top"
+                        android:paddingRight="@dimen/fill_padding_top"
+                        android:text="@string/trans_setting_start"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textsize_one_three" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/fill_padding_top"
+                        android:paddingLeft="@dimen/fill_padding_top"
+                        android:paddingRight="@dimen/fill_padding_top"
+                        android:text="@string/trans_setting_start2"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textsize_one_three" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

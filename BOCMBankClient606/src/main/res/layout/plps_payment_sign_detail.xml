@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_sign"
+            style="@style/bottombtn"
+            android:onClick="annuityAcctTranOnclick"
+            android:text="签约"/>
+
+        <Button
+            android:id="@+id/btn_change"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/plps_payment_btn_change"
+            android:textColor="@color/white" 
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_terminate"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/plps_payment_btn_terminate"
+            android:textColor="@color/white" 
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/prms_scrollView1_layout"
+        style="@style/scrollview_comm_havemarginbutton"
+        android:layout_above="@id/btn_layout"
+        android:paddingLeft="0dip"
+        android:paddingRight="0dip" >
+
+        <LinearLayout
+            style="@style/confirm_main_style"
+            android:orientation="vertical" >
+
+            <LinearLayout style="@style/linnerlayout_common"
+                android:layout_marginTop="15dip" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/crcd_setUp_confirm_nick"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/nickname"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:text="-" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plps_agent"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/agent"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:text="-" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plps_customername"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/customerName"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:text="-" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plps_payuserno"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/payuserno"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:text="-" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plps_signacct"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/signacct"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:text="-" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/beizhu"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/remarks"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:text="-" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_channel"
+                style="@style/linnerlayout_common"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plps_channel"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/channel"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:text="-" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bocinvt_status"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/statue"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:text="-" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_details_title_height" >
+
+        <TextView
+            android:layout_width="@dimen/common_details_title_width"
+            android:layout_height="@dimen/left_img_width"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_title"
+            android:gravity="center"
+            android:paddingRight="@dimen/btnpaddingtb"
+            android:text="详情"
+            android:textSize="@dimen/textsize_default" />
+    </RelativeLayout>
+
+</RelativeLayout>

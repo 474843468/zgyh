@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账户管理  签约账户成功页面  wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/message_dialog_bg" >
+
+        <ImageView
+            android:id="@+id/img_exit_accdetail_1"
+            android:layout_width="@dimen/btn_dialog_height"
+            android:layout_height="@dimen/btn_dialog_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@color/transparent_00" />
+
+    <LinearLayout
+        android:id="@+id/ll_financeic_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/fill_padding_top" >
+
+        <TextView
+            android:id="@+id/tv_financeic_actnum"
+            style="@style/textview_common"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/acc_financeic_act" />
+
+        <TextView
+            android:id="@+id/tv_financeic_actnum_value"
+            style="@style/textview_act"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/fill_margin_right_fordialog"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dialogbtn_marginTop" >
+
+        <Button
+            android:id="@+id/btnNext"
+            style="@style/bottombtn"
+            android:layout_height="@dimen/btn_dialog_height"
+            android:text="@string/finish" />
+    </LinearLayout>
+
+    <ScrollView
+        style="@style/scrollview_comm"
+        android:layout_above="@+id/ll_btn"
+        android:layout_below="@+id/ll_financeic_num" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/fill_margin_right_fordialog" >
+
+            <TextView
+                android:id="@+id/tv_icsign_title"
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="center"
+                android:text="@string/acc_icsign_success_title"
+                android:textColor="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/ll_bankaccount_old"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/acc_list_item_height"
+                android:layout_below="@+id/tv_icsign_title"
+                android:layout_marginLeft="@dimen/btncommon_marglr"
+                android:layout_marginRight="@dimen/btncommon_marglr"
+                android:background="@drawable/bg_for_listview_item_write"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="@dimen/common_row_margin"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/acc_type_value_old"
+                        style="@style/textview_for_list"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/acc_account_num_old"
+                        style="@style/textview_for_list_act"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="@dimen/common_row_margin"
+                    android:layout_marginLeft="@dimen/common_row_margin"
+                    android:layout_marginRight="@dimen/common_row_margin"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/acc_account_nickname_old"
+                        style="@style/textview_for_list"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:textColor="@color/gray" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+<ImageView
+            android:id="@+id/img_exit_accdetail"
+            android:layout_width="@dimen/close_clickarea_width"
+            android:layout_height="@dimen/close_clickarea_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@color/transparent_00" />
+</RelativeLayout>

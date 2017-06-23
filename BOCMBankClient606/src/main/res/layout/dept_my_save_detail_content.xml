@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/fill_padding_bottom" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+        
+        <LinearLayout
+            android:id="@+id/ll_acc_state"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/layout_height"
+            android:gravity="center"
+            android:paddingRight="@dimen/fill_padding_right" 
+            android:visibility="gone" >
+            
+            <TextView
+                style="@style/textview_common_left"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:text="@string/acc_state" />
+
+            <TextView
+                android:id="@+id/tv_acc_state"
+                style="@style/textview_common_right"
+                android:paddingLeft="@dimen/fill_padding_left" />
+            
+        </LinearLayout>
+        
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/layout_height"
+            android:gravity="center"
+            android:paddingRight="@dimen/fill_padding_right" >
+
+            <TextView
+                android:id="@+id/dept_currency_cashremit_tv"
+                style="@style/textview_common_left"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:text="@string/currency_cashremit" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/fill_padding_left" >
+
+                <TextView
+                    android:id="@+id/dept_currency_tv"
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/dept_cashremit_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                         />
+
+                    <TextView
+                        android:id="@+id/dept_cashremit_tv"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dept_available_balance_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/layout_height"
+            android:gravity="center"
+            android:paddingRight="@dimen/fill_padding_right"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/textview_common_left"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:text="@string/allow_checkout_money" />
+
+            <TextView
+                android:id="@+id/dept_available_balance_tv"
+                style="@style/textview_amount"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:paddingLeft="@dimen/fill_padding_left" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_period_top"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/layout_height"
+            android:gravity="center"
+            android:paddingRight="@dimen/fill_padding_right"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/textview_common_left"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:text="@string/save_time" />
+
+            <TextView
+                android:id="@+id/dept_cd_period_tv_top"
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:paddingLeft="@dimen/fill_padding_left" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_convert_type"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/layout_height"
+            android:gravity="center"
+            android:paddingRight="@dimen/fill_padding_right" >
+
+            <TextView
+                android:id="@+id/dept_is_convert_tv"
+                style="@style/textview_common_left"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:text="@string/tran_mode" />
+
+            <TextView
+                android:id="@+id/dept_convert_type_tv"
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:paddingLeft="@dimen/fill_padding_left" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/layout_period"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/layout_height"
+            android:gravity="center"
+            android:paddingRight="@dimen/fill_padding_right" >
+
+            <TextView
+                style="@style/textview_common_left"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:text="@string/save_time" />
+
+            <TextView
+                android:id="@+id/dept_cd_period_tv"
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:paddingLeft="@dimen/fill_padding_left" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_money_amount"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/layout_height"
+            android:gravity="center"
+            android:paddingRight="@dimen/fill_padding_right"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/textview_common_left"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:text="@string/save_sheet_money" />
+
+            <TextView
+                android:id="@+id/dept_cd_money_amount_tv"
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:paddingLeft="@dimen/fill_padding_left" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_start_accrual_day"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/layout_height"
+            android:gravity="center"
+            android:paddingRight="@dimen/fill_padding_right"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/textview_common_left"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:text="@string/start_accrual_day" />
+
+            <TextView
+                android:id="@+id/dept_cd_interest_startsdate_tv"
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:paddingLeft="@dimen/fill_padding_left" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_end_day"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/layout_height"
+            android:gravity="center"
+            android:paddingRight="@dimen/fill_padding_right" >
+
+            <TextView
+                style="@style/textview_common_left"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:text="@string/end_day" />
+
+            <TextView
+                android:id="@+id/dept_cd_interest_enddate_tv"
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:paddingLeft="@dimen/fill_padding_left" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_sum_day"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/layout_height"
+            android:gravity="center"
+            android:paddingRight="@dimen/fill_padding_right"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/textview_common_left"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:text="@string/sum_day" />
+
+            <TextView
+                android:id="@+id/dept_cd_close_date_tv"
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:paddingLeft="@dimen/fill_padding_left" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_deposit_type"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/layout_height"
+            android:gravity="center"
+            android:paddingRight="@dimen/fill_padding_right" >
+
+            <TextView
+                style="@style/textview_common_left"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:text="@string/save_type" />
+
+            <TextView
+                android:id="@+id/dept_save_type_tv"
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:paddingLeft="@dimen/fill_padding_left" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/layout_height"
+            android:gravity="center"
+            android:paddingRight="@dimen/fill_padding_right" >
+
+            <TextView
+                style="@style/textview_common_left"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:text="@string/forex_custoner_fix_interestRate" />
+
+            <TextView
+                android:id="@+id/dept_interest_rate_tv"
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:paddingLeft="@dimen/fill_padding_left" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/dept_month_save_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/layout_height"
+            android:gravity="center"
+            android:paddingRight="@dimen/fill_padding_right"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/textview_common_left"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:text="@string/month_save" />
+
+            <TextView
+                android:id="@+id/dept_month_save_tv"
+                style="@style/textview_amount"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:paddingLeft="@dimen/fill_padding_left" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/dept_current_money_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/layout_height"
+            android:gravity="center"
+            android:paddingRight="@dimen/fill_padding_right"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/textview_common_left"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:text="@string/dept_balance" />
+
+            <TextView
+                android:id="@+id/dept_current_money_tv"
+                style="@style/textview_amount"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:paddingLeft="@dimen/fill_padding_left" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

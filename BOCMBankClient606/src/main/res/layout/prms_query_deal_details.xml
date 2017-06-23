@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账户贵金属  交易限额设定 确认页面 xyl -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/prms_query_deal_detailes_ok"
+            style="@style/textview_forex_button_cell"
+            android:text="@string/confirm"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/prms_scrollView1_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_layout"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:layout_marginTop="@dimen/prms_price_bottom_height"
+        android:paddingTop="@dimen/common_row_margin">
+    <ScrollView
+        android:layout_marginTop="10dp"
+        style="@style/scrollview_comm">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/prms_buycurrency" />
+
+                <TextView
+                    android:id="@+id/prms_query_deal_detailes_buycurrency"
+                    style="@style/textview_forex_prompt_info"/>
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView android:id="@+id/salecurrency_alert"
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/prms_salecurrencycarishflag" />
+
+                <TextView
+                    android:id="@+id/prms_query_deal_detailes_salecurrency"
+                    style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" 
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/prms_str_cashremit_colon" />
+
+                <TextView
+                    android:id="@+id/prms_query_deal_detailes_cashremit"
+                    style="@style/textview_forex_prompt_info"/>
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/prms_trade_buy_num" />
+
+                <LinearLayout
+                    style="@style/textview_prms_prompt_letetitle_info">
+
+                    <TextView
+                        android:id="@+id/prms_query_deal_detailes_tradebuynum"
+                        style="@style/textview_prms_prompt_middle_info" />
+
+                    <TextView
+                        android:id="@+id/prms_query_deal_detailes_tradebuynum_unit"
+                        style="@style/textview_prms_prompt_end_info"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/prms_trade_sale_num" />
+
+                <LinearLayout
+                    style="@style/textview_prms_prompt_letetitle_info">
+
+                    <TextView
+                        android:id="@+id/prms_query_deal_detailes_tradesalenum"
+                        style="@style/textview_prms_prompt_middle_info" />
+
+                    <TextView
+                        android:id="@+id/prms_query_deal_detailes_tradesalenum_unit"
+                        style="@style/textview_prms_prompt_end_info"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/prms_cjprice" />
+
+                <LinearLayout
+                    style="@style/textview_prms_prompt_letetitle_info" >
+
+                    <TextView
+                        android:id="@+id/prms_query_deal_detailes_tradeprice"
+                        style="@style/textview_prms_prompt_middle_info" />
+
+                    <TextView
+                        android:id="@+id/prms_query_deal_detailes_tradeprice_unit"
+                        style="@style/textview_prms_prompt_end_info"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            
+            <LinearLayout android:id="@+id/tradeAmountLl"
+                style="@style/linnerlayout_common" 
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/finc_tradeamount_colon" />
+
+                <LinearLayout
+                    style="@style/textview_prms_prompt_letetitle_info">
+
+                    <TextView
+                        android:id="@+id/tradeAmount"
+                        style="@style/textview_prms_prompt_middle_info" />
+
+                    <TextView
+                        android:id="@+id/tradeAmountUnit"
+                        style="@style/textview_prms_prompt_end_info"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/finc_realdate_colon" />
+
+                <TextView
+                    android:id="@+id/prms_query_deal_detailes_tradetime"
+                    style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/forex_trade_type" />
+
+                <TextView
+                    android:id="@+id/prms_query_deal_detailes_trademethod"
+                    style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+	</LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_details_title_height"
+        android:layout_marginTop="@dimen/dp_one_zero" >
+
+        <TextView
+            style="@style/isforex_little_title"
+            android:text="@string/prms_query_detailes_header"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

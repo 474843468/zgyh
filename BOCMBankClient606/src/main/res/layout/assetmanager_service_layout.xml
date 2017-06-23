@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/style_match_match"
+    android:orientation="vertical"
+    android:background="@color/transparent_00" >
+    <RadioGroup
+            android:id="@+id/radioGroup"
+            style="@style/style_match_wrap"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rbtn_already"
+                style="@style/twoRadioButtonLeft"
+                android:checked="true"
+                android:text="@string/assetmanager_capital_1" />
+
+            <RadioButton
+                android:id="@+id/rbtn_can"
+                style="@style/twoRadioButtonRight"
+                android:text="@string/assetmanager_capital_2" />
+        </RadioGroup>
+        
+    <TextView 
+        android:id="@+id/tv_tip"
+        style="@style/textview_common_multi_second"
+        android:layout_margin="3dp"
+        android:textColor="@color/gray"
+        android:text="@string/assetmanager_capital_63"
+        android:visibility="gone"
+        />
+    <TextView 
+        android:id="@+id/tv_no_data"
+        style="@style/style_match_match"
+        android:gravity="center"
+        android:textColor="@color/red"
+        android:textSize="18sp"
+        android:text="@string/assetmanager_capital_61"
+        android:visibility="gone"
+        />
+        
+    <!-- 已设置服务概览 -->
+    <ExpandableListView 
+        android:id="@+id/ep_listview"
+        android:layout_marginTop="10dp"
+        style="@style/listviewcomm_fill_noDivider"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"
+        />
+    <LinearLayout  
+        android:id="@+id/lyt_child"
+        style="@style/style_height_weight_1" 
+        android:visibility="gone"
+        >
+    <include layout="@layout/assetmanager_service_layout_child_item"/>
+    </LinearLayout>
+    <!-- 可设置服务概览 -->
+    <ListView 
+        android:id="@+id/listview_can"
+        android:layout_marginTop="10dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        style="@style/listviewcomm_wrap_gray_divider"
+        android:visibility="gone"
+        />
+    
+    <include android:id="@+id/layout_bottom_btn" layout="@layout/assetmanager_bottom_button_layout" android:visibility="gone"/>
+
+</LinearLayout>

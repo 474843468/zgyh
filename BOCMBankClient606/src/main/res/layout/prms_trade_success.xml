@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账户贵金属  交易买卖确认  确认页面 xyl -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/stepbar"
+        layout="@layout/step_title_layout" />
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/prms_trade_success_ok"
+            style="@style/textview_forex_button_cell"
+            android:text="@string/finish"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        style="@style/scrollview_comm_havemarginbutton"
+        android:layout_above="@id/btn_layout"
+        android:layout_below="@id/stepbar" >
+
+        <LinearLayout
+            style="@style/confirm_main_style"
+            android:paddingBottom="10dp"
+            android:orientation="vertical" >
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    android:id="@+id/prms_trade_success_info_tv"
+                    style="@style/confirm_info_textview_style"
+                    />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/prms_trademesuccess_transactionid" />
+
+                <TextView
+                    android:id="@+id/prms_trade_success_transactionid"
+                    style="@style/textview_forex_prompt_info"
+                    android:paddingLeft="0dp"/>
+            </LinearLayout>
+            
+            <LinearLayout style="@style/linnerlayout_common" 
+                android:id="@+id/consign_num_ll"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/prms_query_detailes_entrustId_colon" />
+
+                <TextView
+                    android:id="@+id/prms_trade_success_consign_num"
+                    style="@style/textview_forex_prompt_info"
+                    android:paddingLeft="0dp" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/prms_trade_success_tradestyle_layout"
+                style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/prms_tradestyle" />
+
+                <TextView
+                    android:id="@+id/prms_trade_success_tradestyle"
+                    style="@style/textview_forex_prompt_info"
+                    android:paddingLeft="0dp" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/prms_tradecurrency" />
+
+                <TextView
+                    android:id="@+id/prms_trade_success_tradecurrency"
+                    style="@style/textview_forex_prompt_info"
+                    android:paddingLeft="0dp"  />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    android:id="@+id/trade_num_tv"
+                    style="@style/textview_forex_prompt_message" />
+
+                <LinearLayout
+                    style="@style/textview_prms_prompt_letetitle_info"
+                    android:paddingLeft="0dp" >
+
+                    <TextView
+                        android:id="@+id/prms_trade_success_tradenum"
+                        style="@style/textview_prms_prompt_middle_info"
+                        />
+
+                    <TextView
+                        android:id="@+id/prms_trade_success_tradenum_unit"
+                        style="@style/textview_prms_prompt_end_info" />
+                </LinearLayout>
+            </LinearLayout>
+            
+             <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView android:id="@+id/trade_amount_tv"
+                    style="@style/textview_forex_prompt_message"/>
+
+                <LinearLayout
+                    style="@style/textview_prms_prompt_letetitle_info"
+                    android:paddingLeft="0dp" >
+
+                    <TextView
+                        android:id="@+id/trade_amount"
+                        style="@style/textview_prms_prompt_middle_info"/>
+
+                    <TextView
+                        android:id="@+id/trade_amount_unit"
+                        style="@style/textview_prms_prompt_end_info" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/prms_trademethod" />
+
+                <TextView
+                    android:id="@+id/prms_trade_success_trademethod"
+                    style="@style/textview_forex_prompt_info"
+                    android:paddingLeft="0dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/prms_trade_confirm_nowDeal_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:text="@string/prms_str_baseprice_colon" />
+
+                    <LinearLayout
+                        style="@style/textview_prms_prompt_letetitle_info"
+                        android:paddingLeft="0dp" >
+
+                        <TextView
+                            android:id="@+id/prms_baseprice_tv"
+                            style="@style/textview_prms_prompt_middle_info"
+                             />
+
+                        <TextView
+                            android:id="@+id/prms_baseprice_tv_uint"
+                            style="@style/textview_prms_prompt_end_info" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:text="@string/prms_str_extranprice_colon" />
+
+                    <LinearLayout
+                        style="@style/textview_prms_prompt_letetitle_info"
+                        android:paddingLeft="0dp" >
+
+                        <TextView
+                            android:id="@+id/prms_extranprice_tv"
+                            style="@style/textview_prms_prompt_middle_info"/>
+
+                        <TextView
+                            android:id="@+id/prms_extranprice_tv_unit"
+                            style="@style/textview_prms_prompt_end_info" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <include layout="@layout/prms_entrust_deal_confirm_success" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

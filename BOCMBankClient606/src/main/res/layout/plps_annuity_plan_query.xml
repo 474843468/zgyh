@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_line" >
+
+    <LinearLayout
+        android:id="@+id/querycondition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginRight="@dimen/dialogbtn_marginTop"
+        android:layout_marginLeft="@dimen/dialogbtn_marginTop" >
+
+        <LinearLayout
+            android:id="@+id/linear_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="2dp" >
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="2dp"
+                android:text="选择计划：" />
+            <TextView
+                android:id="@+id/spinner_plan"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/layout_height"
+                android:layout_weight="1"
+                android:background="@drawable/bg_spinner"
+                android:ellipsize="middle"
+                android:gravity="left|center"
+                android:paddingRight="@dimen/edittext_paddingr_middle"
+                android:paddingLeft="@dimen/common_listview_item_paddingLR"
+                android:singleLine="true"
+                android:text="请选择" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnconfirm"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/btn_chaxun_bg"
+            android:onClick="btnNextOnclick"
+            android:text="@string/plps_query_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_default"
+            android:layout_marginBottom="5dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/result_condition"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/querycondition"
+        android:layout_marginTop="@dimen/bottom_margin_top"
+        android:background="@drawable/bg_for_listview_item_write"
+         android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/common_row_margin" >
+
+                <TextView
+                    android:id="@+id/tvtitle_type"
+                    style="@style/textview_for_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/common_details_title_margintop"
+                    android:layout_weight="1.0"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="业务类型"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    style="@style/textview_for_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/common_details_title_margintop"
+                    android:layout_weight="1.0"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="申请日期"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    style="@style/textview_for_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/common_details_title_margintop"
+                    android:layout_weight="1.0"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="处理结果"
+                    android:textSize="@dimen/textsize_default" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/red" />
+
+            <ListView
+                android:id="@+id/listview"
+                style="@style/listviewcomm_wrap_haveDivider"
+                android:divider="@color/gray"
+                android:dividerHeight="1dip" />
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/gray"
+                android:visibility="visible" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

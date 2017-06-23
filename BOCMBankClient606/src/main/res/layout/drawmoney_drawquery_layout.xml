@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/dept_after_query_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/layout_the_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/dept_query"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_bg_query_j"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/fill_margin_top"
+                android:paddingLeft="@dimen/fill_padding_left"
+                android:paddingTop="@dimen/fill_margin_top" >
+
+                <LinearLayout
+                    android:id="@+id/layout_first_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/label_first_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/check_accountno"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/dept_query_no_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/fill_padding_left"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_second_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/label_second_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/save_volume_number"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/dept_query_volumenumber_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/fill_padding_left"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/layut_dept_query_cdnumber"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/label_third_line"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/forex_rate_fix_number1"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <TextView
+                            android:id="@+id/dept_query_cdnumber_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/fill_padding_left"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_default" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/img_arrow_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                         android:layout_below="@id/layut_dept_query_cdnumber"
+                        android:layout_marginRight="@dimen/fill_padding_left"
+                        android:padding="@dimen/dp_five" >
+
+                        <TextView
+                            style="@style/textview_common_down"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/textsize_one_zero" />
+
+                        <ImageView
+                            android:layout_width="@dimen/img_up_width"
+                            android:layout_height="@dimen/img_up_width"
+                            android:src="@drawable/img_arrow_gray_down"
+                            android:textSize="@dimen/textsize_default" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!-- 排序 -->
+
+            <LinearLayout
+                android:id="@+id/dept_ll_sort"
+                android:layout_width="@dimen/finc_throw_layout_height"
+                android:layout_height="@dimen/layout_height"
+                android:layout_below="@+id/dept_query"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btn_paixu"
+                android:paddingRight="@dimen/fill_margin_top"
+                android:visibility="invisible" >
+
+                <Button
+                    android:id="@+id/sort_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_step2" />
+
+                <ImageView
+                    android:id="@+id/img_sort_icon"
+                    android:layout_width="@dimen/common_paixuWH"
+                    android:layout_height="@dimen/common_paixuWH"
+                    android:layout_gravity="center_vertical|right"
+                    android:clickable="false"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/dept_account_list_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_the_top"
+            android:background="@drawable/shap_for_dept_tranlist"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_right"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView style="@style/dividerline" 
+                android:background="@color/gray" />
+
+            <ListView
+                android:id="@+id/dept_notmg_querylist"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:cacheColorHint="@color/transparent_00"
+                android:fadingEdge="none"
+                android:scrollbars="none" >
+            </ListView>
+        </LinearLayout>
+    </RelativeLayout>
+
+   <include layout="@layout/dept_notmg_query_popwindow" />
+
+</FrameLayout>

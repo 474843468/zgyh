@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_main_bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/boc_divide_line"/>
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_5px"/>
+
+    <TextView
+        android:id="@+id/tvDesc"
+        style="@style/tv_small"
+        android:paddingLeft="@dimen/boc_space_between_40px"
+        android:paddingTop="@dimen/boc_space_between_5px"
+        android:visibility="gone"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="@dimen/boc_space_between_20px"
+        android:id="@+id/list_facility"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvNoData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/boc_text_color_common_gray"
+        android:textSize="@dimen/boc_text_size_common"
+        android:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账户管理  临时挂失输入信息页  luqipeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:userProperty="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_input_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_input_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/common_bottom_padding"
+        android:layout_marginTop="@dimen/dp_five"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/bt_btnLast"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_blue_big"
+            android:text="@string/last"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnConfirm"
+            style="@style/bottombtn"
+            android:text="@string/next" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_input_btn"
+        android:layout_below="@+id/ll_input_step"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_marginTop="@dimen/fill_margin_left"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <!--
+                     <TextView
+                    android:id="@+id/tv_input_title_2"
+                    style="@style/textview_common"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fill_margin_top"
+                    android:gravity="center"
+                    android:text="@string/acc_loss_confirm_title_2"
+                    android:textColor="@color/gray" /> -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/layout_height"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/comm_view_left_noweight"
+                            android:layout_weight="6"
+                            android:text="@string/tel_num" />
+
+                        <EditText
+                            android:id="@+id/register_et_login_name"
+                            style="@style/comm_view_right_noweight"
+                            android:layout_weight="4"
+                            android:textColor="@color/black" >
+                            <requestFocus />
+                        </EditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_acc_input_type"
+                            style="@style/textview_common_left_three"
+                            android:text="@string/acc_accounttype" />
+
+                        <TextView
+                            android:id="@+id/tv_acc_input_type_value"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_acc_input_actnum"
+                            style="@style/textview_common_left_three"
+                            android:text="@string/acc_accountnumber" />
+
+                        <TextView
+                            android:id="@+id/tv_acc_input_actnum_value"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+                    <!-- 账户别名 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/acc_account_nickname" />
+
+                        <TextView
+                            android:id="@+id/tv_acc_input_actnum_name"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <!-- 挂失期限 (单选) -->
+
+                    <LinearLayout
+                        android:id="@+id/ll_input_radio"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/dp_five"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="3"
+                            android:gravity="right|center_vertical"
+                            android:text="@string/acc_loss_lossDays"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroup_input_choose"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|bottom"
+                            android:layout_weight="2"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/rb_acc_input_penthemeron"
+                                style="@style/textview_common"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:button="@drawable/radiobtn_selector"
+                                android:checked="true"
+                                android:text="@string/acc_lossDays_1" />
+
+                            <RadioButton
+                                android:id="@+id/rb_acc_input_longTerm"
+                                style="@style/textview_common"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:button="@drawable/radiobtn_selector"
+                                android:text="@string/acc_lossDays_2" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <!-- 是否同时冻结主账户  (单选) -->
+
+                    <LinearLayout
+                        android:id="@+id/ll_input_radio1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/dp_five"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_acc_freeze"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="3"
+                            android:ellipsize="middle"
+                            android:gravity="right|center_vertical"
+                            android:singleLine="true"
+                            android:text="@string/acc_input_account"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroup_input_mainCard"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|bottom"
+                            android:layout_weight="2"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/rb_acc_intpu_freeze_is"
+                                style="@style/textview_common"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_weight="1"
+                                android:button="@drawable/radiobtn_selector"
+                                android:checked="true"
+                                android:text="@string/acc_input_freeze_1" />
+
+                            <RadioButton
+                                android:id="@+id/rb_acc_intpu_freeze_no"
+                                style="@style/textview_common"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:button="@drawable/radiobtn_selector"
+                                android:text="@string/acc_input_freeze_2" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <!-- 挂失期限 -->
+
+                    <LinearLayout
+                        android:id="@+id/ll_acc_input_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_acc_input_freeze"
+                            style="@style/textview_common_left_three"
+                            android:ellipsize="middle"
+                            android:text="@string/acc_loss_date" />
+
+                        <TextView
+                            android:id="@+id/tv_acc_input_ifFreeze"
+                            style="@style/textview_common_right_two"
+                            android:layout_marginLeft="5dp" />
+                    </LinearLayout>
+
+                    <!--
+                        *客户账户冻结后将不允许通过各种方式从该账户中进行资金转出
+				                    （包括信用卡自动还款、基金定投等），但不影响该账户作为收款账户进行资金入账。
+                    -->
+
+                    <TextView
+                        android:id="@+id/intpu_freeze_is"
+                        style="@style/textview_common"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_one_zero"
+                        android:layout_marginRight="@dimen/dp_one_zero"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:text="@string/rb_acc_intpu_freeze_is_show"
+                        android:textColor="@color/red"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/intpu_freeze_no"
+                        style="@style/textview_common"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_one_zero"
+                        android:layout_marginRight="@dimen/dp_one_zero"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:text="@string/rb_acc_intpu_freeze_no_show"
+                        android:textColor="@color/red"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/acc_lossreport_input_prompt"
+                        style="@style/textview_common"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_one_zero"
+                        android:layout_marginRight="@dimen/dp_one_zero"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:text="@string/acc_input_buttom"
+                        android:textColor="@color/red"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

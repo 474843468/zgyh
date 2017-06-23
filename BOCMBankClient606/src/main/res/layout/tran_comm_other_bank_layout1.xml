@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 非关联行内转账设定  MyTransferActivity -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/btn_transet_mytransfer"
+        style="@style/tran_little_card_ll"
+        android:layout_width="match_parent" >
+
+        <TextView
+            android:id="@+id/comm_trans_set_title"
+            style="@style/tran_little_title_tv"
+            android:text="@string/comm_other_bank" />
+
+        <LinearLayout
+            style="@style/tran_little_card_content_ll"
+            android:padding="@dimen/dp_five" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/fill_padding_right" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/prms_currency_colon"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_three" />
+
+                    <TextView
+                        android:id="@+id/tv_commBoc_currency_tranSeting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/tran_currency_rmb"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_three" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/cashRemit"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_three" />
+
+                    <TextView
+                        android:id="@+id/tv_commBoc_cashRemit_tranSeting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/tran_line"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_three" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_trantype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_check_height"
+                    android:layout_gravity="top"
+                    android:layout_weight="7"
+                    android:gravity="center|right"
+                    android:singleLine="true"
+                    android:text="@string/third_cecuritytrade_tradetype"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="horizontal" >
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupForTranType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <RadioButton
+                            android:id="@+id/radio_shishi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/radiobtn_selector"
+                            android:text="@string/tran_shishi_type"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <RadioButton
+                            android:id="@+id/radio_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/radiobtn_selector"
+                            android:text="@string/tran_common_type"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_default" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/radio_shishi_prompt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/tran_prompt_five"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/textsize_default"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/fill_padding_right" >
+
+                <TextView
+                     android:id="@+id/et_acc_bankname_payee_other_bank_write_txt"
+                    style="@style/comm_view_left"
+                    android:singleLine="true"
+                     android:ellipsize="middle"
+                    android:text="@string/acc_bank_name" />
+
+                <LinearLayout
+                    style="@style/textview_common_right_two"
+                     
+                    android:layout_weight="3" >
+
+                    <TextView
+                        android:id="@+id/et_acc_bankname_payee_other_bank_write"
+                        style="@style/textview_common"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/layout_margin_top"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize_one_three"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/btn_query_kbank_othbank_write"
+                        style="@style/no_pic_query_button_style" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/container1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:gravity="center"
+                android:visibility="gone"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/fill_padding_right" >
+
+                <TextView
+                    android:id="@+id/txt_query_bank_txt"
+                    style="@style/comm_view_left"
+                    android:singleLine="true"
+                    android:ellipsize="middle"
+                    android:text="@string/acc_in_bank_name" />
+
+                <LinearLayout
+                    style="@style/textview_common_right_two"
+                    android:layout_weight="3" >
+
+                    <TextView
+                        android:id="@+id/txt_query_bank"
+                         style="@style/textview_common"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingRight="@dimen/layout_margin_top"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize_one_three"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/btn_query_bank"
+                        style="@style/no_pic_query_button_style" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/fill_padding_right" >
+
+                <TextView
+                    style="@style/comm_view_left"
+                    android:text="@string/transferAmount" />
+
+                <EditText
+                    android:id="@+id/et_commBoc_transferAmount_tranSeting"
+                    style="@style/edittext_input_numberDecimal_fill"
+                    android:layout_weight="3"
+                    android:maxLength="14"
+                    android:textColor="@color/black" >
+                </EditText>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_for_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_five"
+                android:gravity="right"
+                android:paddingRight="@dimen/fill_padding_right"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textsize_one_three"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/fill_padding_right" >
+
+                <TextView
+                    style="@style/comm_view_left"
+                    android:text="@string/fuYan" />
+
+                <EditText
+                    android:id="@+id/et_commBoc_remark_tranSeting"
+                    style="@style/edittext_common_fill"
+                    android:layout_weight="3"
+                    android:hint="@string/hint_memo"
+                    android:maxLength="50"
+                    android:textColor="@color/black" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <LinearLayout style="@style/trans_left_tv_4gravityRight" >
+
+                    <CheckBox
+                        android:id="@+id/ck_sendSmcPayee_bocTrans_transSeting"
+                        android:layout_width="@dimen/checkboxWH"
+                        android:layout_height="@dimen/checkboxWH"
+                        android:background="@drawable/save_phone_checkbox_selector"
+                        android:button="@null" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/trans_right_tv_2gravityLeft"
+                    android:gravity="center_vertical"
+                    android:text="@string/sendSmcPayee" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_sendSmcPayee_bocTrans_tranSeting"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/fill_padding_right"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/comm_view_left"
+                    android:text="@string/tran_payeeMobile_set" />
+
+                <EditText
+                    android:id="@+id/et_commBoc_payeeMobile_transSeting"
+                    style="@style/edittext_inputNumber_fill"
+                    android:layout_weight="3"
+                    android:maxLength="15"
+                    android:textColor="@color/black" >
+                </EditText>
+            </LinearLayout>
+            <!-- 保存为常用收款人 -->
+
+            <LinearLayout
+                android:id="@+id/tran_save_payee_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:visibility="gone" >
+
+                <LinearLayout style="@style/trans_left_tv_4gravityRight" >
+
+                    <CheckBox
+                        android:id="@+id/tran_save_payee_checkbox"
+                        android:layout_width="@dimen/checkboxWH"
+                        android:layout_height="@dimen/checkboxWH"
+                        android:background="@drawable/save_phone_checkbox_selector"
+                        android:button="@null" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/trans_right_tv_2gravityLeft"
+                    android:gravity="center_vertical"
+                    android:text="@string/save_payee" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/query_trans_detail"
+                android:textColor="@color/gray" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bottom_margin_top"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_commBoc_nowExe_tranSeting"
+            style="@style/tran_three_btn"
+            android:text="@string/nowExe" />
+
+        <Button
+            android:id="@+id/btn_commBoc_preDateExe_tranSeting"
+            style="@style/tran_three_btn"
+            android:text="@string/preDateExe" />
+    </LinearLayout>
+
+</LinearLayout>

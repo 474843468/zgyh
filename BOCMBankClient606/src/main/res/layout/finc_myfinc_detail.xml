@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 我的基金  基金持仓详细信息 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/finc_btn1"
+            android:text="赎回"
+            style="@style/btn_common_oneline_left"
+
+             />
+        <Button
+            android:id="@+id/finc_btn3"
+            android:text="快速赎回"
+            style="@style/btn_common_oneline_left"
+            android:visibility="gone"
+
+            />
+        <Button
+            android:id="@+id/finc_btn2"
+            style="@style/btn_common_oneline_right"
+
+            android:text="@string/more"
+             />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/scrollview_comm"
+        android:layout_above="@+id/btn_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="@dimen/common_details_messages_paddingtop"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:paddingBottom="@dimen/common_row_margin"
+        android:paddingTop="@dimen/common_details_messages_paddingtop" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/fill_padding_top"
+                android:paddingLeft="@dimen/common_listview_item_paddingLR"
+                android:paddingRight="@dimen/common_listview_item_paddingLR" >
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/confirm_left_textview_style606"
+                        android:text="@string/finc_myfinc_fincCode" />
+
+                    <TextView
+                        android:id="@+id/finc_fincCode"
+                        style="@style/confirm_right_textview_style606" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/confirm_left_textview_style606"
+                        android:text="@string/finc_myfinc_fincName" />
+
+                    <TextView
+                        android:id="@+id/finc_fincName"
+                        style="@style/confirm_right_textview_style606" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/confirm_left_textview_style606"
+                        android:text="@string/finc_currency_colon" />
+
+                    <TextView
+                        android:id="@+id/finc_fincCurrency"
+                        style="@style/confirm_right_textview_style606" />
+                </LinearLayout>
+
+             <!--    <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/confirm_left_textview_style606"
+                        android:text="@string/finc_money_colon_remit" />
+
+                    <TextView
+                        android:id="@+id/finc_money_colon_remit"
+                        style="@style/confirm_right_textview_style606"
+                         />
+                </LinearLayout>
+ -->
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/confirm_left_textview_style606"
+                        android:text="@string/finc_myfinc_netPrice" />
+
+                    <TextView
+                        android:id="@+id/finc_netPrice"
+                        style="@style/confirm_right_textview_style606" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/confirm_left_textview_style606"
+                        android:text="@string/finc_myfinc_netPriceDate" />
+
+                    <TextView
+                        android:id="@+id/finc_myfinc_netPriceDate"
+                        style="@style/confirm_right_textview_style606" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        android:id="@+id/finc_reality_share_left"
+                        style="@style/confirm_left_textview_style606"
+                        android:text="@string/finc_reality_share" />
+
+                    <TextView
+                        android:id="@+id/finc_reality_share"
+                        android:textColor="@color/red"
+                        style="@style/confirm_right_textview_style606" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/confirm_left_textview_style606"
+                        android:text="@string/finc_myfinc_totalCount" />
+
+                    <TextView
+                        android:id="@+id/finc_myfinc_totalCount"
+                        android:textColor="@color/red"
+                        style="@style/confirm_right_textview_style606" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/confirm_left_textview_style606"
+                        android:text="@string/finc_myfinc_currentCapitalisation" />
+
+                    <TextView
+                        android:id="@+id/finc_currentCapitalisation"
+                        style="@style/confirm_right_textview_style606" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_details_title_height"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/common_details_title_margintop" >
+
+        <TextView
+            android:id="@+id/acc_financeic_trans_title"
+            android:layout_width="@dimen/common_details_title_width"
+            android:layout_height="@dimen/common_details_title_height"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_title"
+            android:gravity="center"
+            android:text="@string/finc_myfinc_balance_detail"
+            android:textSize="@dimen/textsize_default" />
+    </RelativeLayout>
+
+</RelativeLayout>

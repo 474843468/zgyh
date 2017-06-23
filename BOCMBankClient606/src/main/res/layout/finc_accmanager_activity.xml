@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 我的基金   基金账户设置 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/finc_acc_detail_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_row_margin_half"
+        android:orientation="vertical" >
+
+        <LinearLayout style="@style/linnerlayout_common" >
+
+            <TextView
+                style="@style/confirm_left_textview_style606"
+                android:text="@string/finc_fundacc_colon" />
+
+            <TextView
+                android:id="@+id/finc_fundacc_tv"
+                style="@style/confirm_right_textview_style606" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout style="@style/linnerlayout_common" >
+
+            <TextView
+                style="@style/confirm_left_textview_style606"
+                android:text="@string/finc_monyacc_colon" />
+
+            <TextView
+                android:id="@+id/finc_monyacc_tv"
+                style="@style/confirm_right_textview_style606" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout style="@style/linnerlayout_common" >
+
+            <TextView
+                style="@style/confirm_left_textview_style606"
+                android:text="@string/finc_risklevel_colon" />
+
+            <TextView
+                android:id="@+id/finc_risklevel_tv"
+                style="@style/confirm_right_textview_style606" >
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin" >
+
+        <Button
+            android:id="@+id/finc_btn1"
+            style="@style/btn_common_oneline_left"
+            android:text="@string/fincn_change_card"
+            android:textSize="@dimen/textsize_default" />
+
+        <Button
+            android:id="@+id/finc_btn2"
+            style="@style/btn_common_oneline_right"
+            android:text="@string/query_more"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_default" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/finc_ListView_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_btn"
+        android:layout_alignLeft="@+id/finc_acc_detail_view"
+        android:layout_below="@id/finc_acc_detail_view"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/finc_ListView"
+            style="@style/finc_listview_fill" >
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,2 @@
+/*! BUILD: 2016-12-19 */
+define("zepto",["./lib/require"],function(){return $}),define("appconfig",[],function(){return{baseUrl:"scripts",waitSeconds:30,paths:{},onAppInitBefore:function(){},onAppInitAfter:function(a,b){a("#localebtn").on("click",function(){var c=a("#localebtn").text();b.changeLocalizeResource("中文"==c?"zh":"en"),a("#localebtn").text("中文"==c?"English":"中文")})},onRouteBefore:function(){},onRouteAfter:function(){}}});

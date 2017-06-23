@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:orientation="vertical">
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.emptyview.CommonEmptyView
+        android:id="@+id/referdetail_emptyview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone" />
+    <!--<com.boc.bocsoft.remoteopenacc.common.view.pulltofresh.XListView-->
+    <!--android:id="@+id/fixedlist"-->
+    <!--android:layout_marginTop="@dimen/boc_space_between_40px"-->
+    <!--android:background="@color/boc_common_cell_color"-->
+    <!--android:cacheColorHint="@android:color/transparent"-->
+    <!--android:divider="@android:color/transparent"-->
+    <!--android:scrollbars="none"-->
+    <!--android:dividerHeight="@dimen/boc_divider_1px"-->
+    <!--android:listSelector="@android:color/transparent"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"/>-->
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullToRefreshLayout
+        android:id="@+id/fixedlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/boc_space_between_40px">
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullableListView
+            android:id="@+id/plv_pull"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never" />
+
+        <include layout="@layout/boc_load_more" />
+    </com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullToRefreshLayout>
+
+
+</LinearLayout>

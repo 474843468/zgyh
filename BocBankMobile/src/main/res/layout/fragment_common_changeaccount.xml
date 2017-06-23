@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/boc_common_bg_color"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/repaymentAccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/boc_space_between_50px"
+                android:layout_marginRight="@dimen/boc_space_between_20px"
+                android:layout_marginTop="15dp"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textColor="@color/boc_text_color_dark_gray"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/boc_space_between_20px"
+                android:layout_marginLeft="@dimen/boc_space_between_20px"
+                android:layout_marginRight="@dimen/boc_space_between_20px"
+                android:background="@drawable/boc_card_background"
+                android:orientation="vertical" >
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                    android:id="@+id/newAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/boc_main_bg_color"
+                    app:editChoiceName="@string/boc_eloan_newRepaymentAccount" />
+
+                <include layout="@layout/boc_divide_line" />
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvHint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/boc_space_between_20px"
+                android:layout_marginLeft="@dimen/boc_space_between_50px"
+                android:layout_marginRight="@dimen/boc_space_between_50px"
+                android:textSize="@dimen/boc_text_size_small"
+                android:visibility="invisible"
+                android:textColor="@color/boc_text_color_rest_gray"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/boc_space_between_40px"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:orientation="horizontal" >
+            <ImageButton
+                android:id="@+id/chbSelect"
+                android:state_selected="false"
+                android:layout_marginLeft="@dimen/boc_space_between_30px"
+                android:layout_width="@dimen/boc_space_between_50px"
+                android:layout_height="@dimen/boc_space_between_50px"
+                android:background="@drawable/boc_bg_check_image"/>
+            <TextView
+                android:id="@+id/tvAgreement"
+                android:textColorHighlight="@color/boc_common_bg_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/boc_text_size_common"
+                android:layout_marginLeft="@dimen/boc_space_between_30px"
+                android:textColor="@color/boc_text_color_common_gray" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/summit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_88px"
+            android:layout_marginTop="@dimen/boc_space_between_40px"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:text="@string/boc_eloan_summit"
+            style="@style/BocButton.BocPrimaryButton" />
+
+        <!-- 安全认证 代码添加块 -->
+
+        <LinearLayout
+            android:id="@+id/ll_security_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/boc_space_between_50px"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="horizontal">
+            <!--安全认证title-->
+            <TextView
+                android:id="@+id/tv_security_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="安全认证："
+                android:textColor="@color/boc_text_color_rest_gray"
+                android:textSize="@dimen/boc_text_size_small" />
+            <!--安全认证方式-->
+            <TextView
+                android:id="@+id/tv_security_value"
+                style="@style/tv_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/boc_text_color_rest_gray"
+                android:layout_marginRight="@dimen/boc_space_between_20px"
+                />
+
+            <!--更改按钮-->
+            <Button
+                android:id="@+id/btn_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="更改"
+                android:paddingLeft="@dimen/boc_space_between_20px"
+                android:paddingRight="@dimen/boc_space_between_20px"
+                android:background="@null"
+                android:textColor="@color/boc_main_button_color"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

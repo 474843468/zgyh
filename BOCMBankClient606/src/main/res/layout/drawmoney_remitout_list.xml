@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 信用卡列表页   huangyuchao -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/cardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/tv_service_title"
+            style="@style/textview_common"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/to_choose_card_for_remit"
+            android:textColor="@color/gray" />
+
+        <Button
+            android:id="@+id/sureButton"
+            style="@style/bottombtn"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/dp_five"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+
+        <ListView
+            android:id="@+id/remit_choose_cardlist"
+            style="@style/listviewcomm_fill_haveDivider"
+            android:layout_above="@+id/dept_save_regular_bottom"
+            android:layout_below="@id/tv_service_title"
+            android:layout_marginTop="@dimen/dp_five"
+            android:scrollbars="none" >
+        </ListView>
+
+        <!-- 下标题 -->
+
+        <LinearLayout
+            android:id="@+id/dept_save_regular_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sureButton"
+            android:layout_marginTop="@dimen/dp_five"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/dept_save_title_tv"
+                style="@style/tran_little_title_tv" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="#ffffff" >
+
+                <ImageView
+                    android:id="@+id/remit_input_prompt"
+                    android:layout_width="@dimen/shap_of_commrequestopen_pdl"
+                    android:layout_height="@dimen/shap_of_commrequestopen_pdl"
+                    android:layout_marginTop="@dimen/dp_two"
+                    android:background="@drawable/remit_input_prompt"
+                    android:gravity="center" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:layout_marginTop="@dimen/dp_two"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/fill_input_prompt"
+                        android:paddingRight="@dimen/fill_padding_top"
+                        android:paddingBottom="@dimen/fill_padding_top"
+                        android:text="@string/remit_input_prompt1"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textsize_one_three" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:paddingBottom="@dimen/fill_padding_top"
+                        android:paddingLeft="@dimen/fill_input_prompt"
+                        android:paddingRight="@dimen/fill_padding_top"
+                        android:text="@string/remit_input_prompt2"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textsize_one_three" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/nocardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_left"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/fill_padding_top" >
+
+            <LinearLayout
+                style="@style/textview_default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <ImageView
+                    android:layout_width="@dimen/dp_six_zero"
+                    android:layout_height="@dimen/dp_six_zero"
+                    android:background="@drawable/forex_no_acc" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_inner"
+                style="@style/textview_default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fill_margin_bottom"
+                android:text="@string/mycrcd_credit_nocard_inner"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/common_bottom_padding_new" >
+
+            <Button
+                android:id="@+id/btn_description"
+                style="@style/bottombtn"
+                android:background="@drawable/btn_red_big"
+                android:text="@string/relevance_new_acc"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

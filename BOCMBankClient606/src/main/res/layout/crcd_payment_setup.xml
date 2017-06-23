@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/stepbar"
+            android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+            layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/nextButton"
+            style="@style/bottombtn"
+            android:text="@string/next"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button_layout"
+        android:layout_below="@+id/ll_step"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView
+            style="@style/scrollview_comm_havemarginbutton"
+            android:fillViewport="false"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:paddingTop="0dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/crcd_tv_common_left"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:focusable="true"
+                    android:paddingLeft="@dimen/fill_margin_top"
+                    android:text="@string/mycrcd_huanbizhong_setup"
+                    android:visibility="gone" />
+
+                <RadioGroup
+                    android:id="@+id/rg_bizhong_setup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:paddingLeft="@dimen/dp_five" >
+
+                    <RadioButton
+                        android:id="@+id/rb_renminbihuan"
+                        style="@style/textview_common"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/btn_dialog_height"
+                        android:button="@drawable/radiobtn_selector"
+                        android:text="@string/mycrcd_all_setup_renhuan" />
+
+                    <RadioButton
+                        android:id="@+id/rb_waibihuan"
+                        style="@style/textview_common"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/btn_dialog_height"
+                        android:layout_marginTop="@dimen/dp_five"
+                        android:button="@drawable/radiobtn_selector"
+                        android:text="@string/mycrcd_all_setup_foreignhuan" />
+
+                    <RadioButton
+                        android:id="@+id/rb_renminbiandwaibi"
+                        style="@style/textview_common"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/btn_dialog_height"
+                        android:layout_marginTop="@dimen/dp_five"
+                        android:button="@drawable/radiobtn_selector"
+                        android:text="@string/mycrcd_setup_ren_and_wai" />
+                </RadioGroup>
+
+                <LinearLayout
+                    android:id="@+id/ll_rmbShow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp_five"
+                    android:paddingRight="@dimen/fill_margin_top" >
+
+                    <TextView
+                        style="@style/crcd_tv_common_left"
+                        android:layout_weight="1.5"
+                        android:text="@string/mycrcd_select_ren_huan_account_sc" />
+
+                    <Spinner
+                        android:id="@+id/forex_rate_currency_buylCode"
+                        style="@style/Spiiner_fill" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_foreignShow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp_five"
+                    android:paddingRight="@dimen/fill_margin_top"
+                    android:visibility="visible" >
+
+                    <TextView
+                        style="@style/crcd_tv_common_left"
+                        android:layout_weight="1.5"
+                        android:text="@string/mycrcd_select_meiyuan_account_sc" />
+
+                    <Spinner
+                        android:id="@+id/forex_rate_currency_type"
+                        style="@style/Spiiner_fill" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp_five" >
+
+                    <TextView
+                        style="@style/crcd_tv_common_left"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:layout_weight="1.5"
+                        android:text="@string/mycrcd_huanmoney_setup" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_money_setup"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="-2dp" >
+
+                        <RadioButton
+                            android:id="@+id/rb_allmoney"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/btn_dialog_height"
+                            android:button="@drawable/radiobtn_selector"
+                            android:text="@string/mycrcd_allmoney_huan" />
+
+                        <RadioButton
+                            android:id="@+id/rb_lowmoney"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/btn_dialog_height"
+                            android:layout_marginTop="@dimen/dp_five"
+                            android:button="@drawable/radiobtn_selector"
+                            android:text="@string/mycrcd_minmoney_huan" />
+                    </RadioGroup>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

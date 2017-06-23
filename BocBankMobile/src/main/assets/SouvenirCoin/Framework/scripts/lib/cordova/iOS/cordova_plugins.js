@@ -1,0 +1,2 @@
+/*! BUILD: 2016-12-16 */
+cordova.define("cordova/plugin_list",function(a,b,c){c.exports=[{file:"plugins/cordova-plugin-bocovsbridge/bocovsbridge.js",id:"cordova-plugin-bocovsbridge.bocovsbridge",pluginId:"cordova-plugin-bocovsbridge",clobbers:["bocovsbridge"]}],c.exports.metadata={}});

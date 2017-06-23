@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 信用卡挂失确认页面 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_btn"
+        android:orientation="vertical" >
+
+        <ScrollView style="@style/scrollview_comm" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_for_listview_item_write"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/fill_margin_bottom"
+                    android:paddingLeft="@dimen/fill_margin_top"
+                    android:paddingRight="@dimen/fill_margin_top"
+                    android:paddingTop="@dimen/fill_padding_top" >
+
+                    <TextView
+                        android:id="@+id/top_title"
+                        style="@style/textview_common"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:text="@string/crcd_setup_guashi"
+                        android:textColor="@color/gray"
+                        android:visibility="visible" />
+
+                    <LinearLayout
+                        android:id="@+id/cardnumId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/top_title"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:text="@string/mycrcd_creditcard_number" />
+
+                        <TextView
+                            android:id="@+id/tv_cardNumber"
+                            style="@style/textview_common_right"
+                            android:singleLine="false"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cardnameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardnumId"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:text="@string/mycrcd_bill_type" />
+
+                        <TextView
+                            android:id="@+id/tv_cardtype"
+                            style="@style/textview_common_right"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cardnicknameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardnameLayout"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:text="@string/mycrcd_bill_name" />
+
+                        <TextView
+                            android:id="@+id/tv_cardnickname"
+                            style="@style/textview_common_right"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cardsendtypeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardnicknameLayout"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:text="@string/mycrcd_creditcard_sendtype" />
+
+                        <TextView
+                            android:id="@+id/tv_cardsendtype"
+                            style="@style/textview_common_right"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cardsendaddressLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardsendtypeLayout"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:text="@string/mycrcd_creditcard_sendaddress" />
+
+                        <TextView
+                            android:id="@+id/tv_cardsendaddress"
+                            style="@style/textview_common_right"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <!-- 挂失补卡费用 -->
+
+                    <LinearLayout
+                        android:id="@+id/ll_lossfee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardsendaddressLayout"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:text="@string/crcd_guashi_lossfee" />
+
+                            <TextView
+                                android:id="@+id/crcd_guashi_lossfee"
+                                style="@style/textview_common_right"
+                                android:textColor="@color/red" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:text="@string/crcd_guashi_lossfeecurrency" />
+
+                            <TextView
+                                android:id="@+id/crcd_guashi_lossfeecurrency"
+                                style="@style/textview_common_right"
+                                android:textColor="@color/red" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_reportfee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll_lossfee"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:text="@string/crcd_guashi_portfee" />
+
+                            <TextView
+                                android:id="@+id/crcd_guashi_portfee"
+                                style="@style/textview_common_right"
+                                android:textColor="@color/red" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:text="@string/crcd_guashi_portfeecurrency" />
+
+                            <TextView
+                                android:id="@+id/crcd_guashi_portfeecurrency"
+                                style="@style/textview_common_right"
+                                android:textColor="@color/red" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_toast"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll_reportfee"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:text="@string/tran_remitSetMealFlag_normal"
+                        android:textColor="@color/gray" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true" >
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_smc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_toast"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal" 
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/smc" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="3" >
+
+                            <RelativeLayout
+                                android:id="@+id/ll_smc_sip"
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1" >
+
+                                <cfca.mobile.sip.SipBox
+                                    android:id="@+id/sipbox_smc"
+                                    style="@style/editext_fill"
+                                    android:maxLength="6"
+                                    android:textSize="@dimen/textsize_default" />
+                            </RelativeLayout>
+
+                            <Button
+                                android:id="@+id/smsbtn"
+                                style="@style/button_smscode"
+                                android:layout_marginRight="@dimen/layout_margin_top" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_active_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ll_smc"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/active_code" />
+
+                        <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="3" >
+
+                            <LinearLayout
+                                android:id="@+id/ll_activecode_sip"
+                                android:layout_width="fill_parent"
+                                android:layout_height="match_parent" >
+
+                                <cfca.mobile.sip.SipBox
+                                    android:id="@+id/sipbox_active"
+                                    style="@style/editext_fill"
+                                    android:maxLength="6"
+                                    android:textSize="@dimen/textsize_default" />
+                            </LinearLayout>
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <com.chinamworld.bocmbci.widget.UsbKeyText
+                        android:id="@+id/sip_usbkey"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ll_active_code"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cardnumId"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:text="@string/mycrcd_guashi_type" />
+
+                        <Spinner
+                            android:id="@+id/crcd_guashitype"
+                            style="@style/Spiiner_fill"
+                            android:layout_marginRight="@dimen/fill_margin_top" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_foreignShow"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/fill_padding_left"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/crcd_tv_common_left"
+                            android:text="@string/mycrcd_select_meiyuan_account" />
+
+                        <Spinner
+                            android:id="@+id/forex_rate_currency_type"
+                            style="@style/Spiiner_fill" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@id/ll_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp_five"
+        android:paddingLeft="@dimen/fill_margin_right"
+        android:paddingRight="@dimen/fill_margin_right" >
+
+        <Button
+            android:id="@+id/nextButton"
+            style="@style/bottombtn"
+            android:text="@string/confirm"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html,charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <script type="text/javascript" src="/BOCWebViewJavascriptBridge.js"></script>
+    <title></title>
+    <style>
+        p{
+            line-height: 20px;
+            font-size: 12px;;
+        }
+        body{
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        h3{
+            color: #222;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        function setUpEvent(elem, eventType, handler) {
+            return (elem.attachEvent ? elem.attachEvent("on" + eventType, handler)
+                    : ((elem.addEventListener) ? elem.addEventListener(eventType, handler, false) : null));
+        }
+        function isMobileIOS(){
+            var ua = navigator.userAgent;
+            if(ua.indexOf('Mobile') > -1 && (ua.indexOf('iPhone') > -1 || ua.indexOf('iPod') > -1 || ua.indexOf('iPad') > -1)){
+                return true;
+            }
+            return false;
+        }
+       window.onload=function(){
+         var contractContent;
+         if(isMobileIOS()){
+             setUpEvent(document,'BOCWebViewJavascriptBridgeReady',function(event){
+                 var bridge = event.bridge;
+                 bridge.init(function(data,responseCallback){
+                 });
+                 bridge.registerHandler('receiveReceiptData', function(data, responseCallback) {
+                    contractContent = data;
+                                        document.getElementById("jiafang").innerHTML = contractContent;
+                 });
+             });
+             return;
+         }else{
+             contractContent =  window.contract.getContractString();
+         }
+            document.getElementById("jiafang").innerHTML = contractContent;
+        };
+    </script>
+</head>
+<body>
+    <div style="text-align: center">
+        <h3 style="font-size: 16px">中国银行股份有限公司个人客户短信通知服务协议书</h3>
+        <div style=" border-bottom: 1px solid #d8d8e0;"></div>
+    </div>
+    <p style="font-weight:bold;">甲方:<u>&nbsp;&nbsp;&nbsp;<span  id="jiafang"></span>&nbsp;&nbsp;&nbsp;</u></p>
+    <p style="font-weight:bold;">乙方:<u>&nbsp;&nbsp;&nbsp;中国银行股份有限公司&nbsp;&nbsp;&nbsp;</span></u></p>
+    <P>
+        甲乙双方本着自愿的原则，为明确双方权利、义务，特拟定协议如下：
+    </P>
+    <P> 第一条 甲方的权利和义务</P>
+
+    <p>1.1 甲方应按照网上银行/自助终端界面要求正确填写或确认有关客户信息、缴费账号、签约账号、接收和发送手机号码等内容，甲方应保证所填写的资料真实、准确、完整。</p>
+
+    <P>1.2 甲方在定制服务时输入的短信通知发送手机号码为甲方指定的唯一可用于向乙方主动发送查询短信的手机号码，接收手机号码为甲方指定的可用于接收乙方发出短信的手机号码。接收手机号码可为多个，每个账号（或卡号）+手机号码为一个收费单位。甲方应保证在定制服务时输入的短信通知手机号码为中国移动、中国联通或中国电信的合法手机号码（不含小灵通号码），并能够正常接收短信，如因甲方或甲方所签约手机功能、状态、信号、服务区域限制等非乙方原因而造成甲方未能收到动户短信，则乙方无需承担相关责任。甲方到境外如不开通漫游服务将无法收到短信。</P>
+
+    <p>1.3 甲方有义务保证其动户短信不会透露给第三者，如因甲方原因造成账户信息泄露，甲方应自行承担因此造成的任何损失。甲方收到的短信动户通知内容与本人知悉的动户情形不符的，应于收到该短信动户通知时立即与乙方核实。</p>
+
+    <P> 1.4 如甲方的短信通知接收或发送手机号码、缴费账户变更，甲方应及时至乙方营业网点或在支持业务的其他渠道进行变更或撤销签约；否则，甲方应自行承担因此造成的任何损失。</P>
+
+    <P>1.5 甲方在销户或销卡前，应先办理取消本协议项下短信服务。
+
+    <P>1.6 本项业务为收费业务，收费标准请见《中国银行服务收费业务价格公告表》，乙方通过网上银行/自助终端向甲方展现收费标准、优惠模式及缴费周期。甲方在此授权乙方从指定的缴费账户上主动扣费，不再另行通知甲方。甲方应确保缴费之日其指定缴费账户内有足够余额，如因甲方缴费账户余额不足或账户状态不正常等导致乙方扣费不成功，乙方将在次月补扣，连续3次扣费不成功，乙方有权自动暂停或终止本服务。本服务暂停后，经甲方短信或书面确认继续使用本服务且补缴短信通知服务费后，乙方可为甲方继续开通并提供本服务。</P>
+
+    <P>1.7 （1）本服务自开通次月起按照前述1.6款进行收费；（2）如约定有免费优惠期，免费优惠期自本服务开通之日起计算，免费优惠期届满后按照前述1.6款收费；（3）甲方缴纳短信通知服务费后，在服务期间甲方提出终止本协议项下短信服务，则已缴纳的短信通知服务费不再退还，请甲方慎重选择缴费周期。
+
+    <P> 第二条 乙方的权利和义务</P>
+
+    <P>2.1 乙方应对甲方提供的申请资料、账户信息和交易信息等资料保密，但法律法规、监管规定另有要求的除外。</P>
+
+    <P> 2.2 乙方有义务在甲方指定的短信通知签约账号/借记卡账户发生余额变动后，将此账户变动信息以手机短信息形式发送至甲方指定的短信通知接收手机号码（因乙方向甲方收取的部分交易手续费、借记卡年费、账户管理费等引起的账户余额变动暂不发送短信）。</P>
+
+    <P>2.3 乙方有义务保证向甲方发送动户短信中交易信息的真实正确性，但短信通知内容不作为入账及对账凭据。</P>
+
+    <P> 第三条 其他</P>
+
+    <P>3.1 乙方系统升级、业务变化或收费变更，乙方将提前以适当形式进行公告或告知客户本人。若甲方有异议，有权选择注销本服务，若甲方未注销本服务或继续接受本服务的，视为同意接受该变更，相关业务按变更后的内容执行。</P>
+
+    <P>3.2 双方在履行本协议的过程中，如发生争议，应协商解决；协商不成的，可向乙方本协议项下开通短信服务的签约账户/借记卡开户行所在地人民法院提起诉讼。</P>
+
+    <P>3.3 本协议受中华人民共和国法律约束，自乙方为甲方开通手机短信通知服务功能之日起生效，有效期为一年。在有效期满前30天，如任何一方未提出终止协议的要求，本协议自动展期一年，上述展期不受次数限制。</P>
+
+    <P>3.4 甲方已仔细阅读并理解本协议，同意并接受本协议书的全部条款和内容。</P>
+</body>
+</html>

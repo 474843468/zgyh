@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/layout_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/textview_common"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/common_row_margin"
+            android:singleLine="true"
+            android:text="@string/blpt_billpay_mobile" />
+
+        <Spinner
+            android:id="@+id/mobile"
+            style="@style/Spiiner_fill"
+            android:layout_width="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginRight="5dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_tip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_mobile"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:text="@string/setting_mobile_tip"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/textsize_default" />
+
+    <Button
+        android:id="@+id/btnconfirm"
+        style="@style/bottombtn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/common_bottom_padding"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:text="@string/confirm"
+        android:onClick="confirmOnclick"
+        android:textColor="@color/white" />
+
+    <ListView
+        android:id="@+id/cardlist"
+        style="@style/listviewcomm_fill_haveDivider"
+        android:layout_above="@id/btnconfirm"
+        android:layout_below="@id/text_tip"
+        android:layout_marginTop="@dimen/layout_padding_left_right"
+        android:scrollbars="none" >
+    </ListView>
+
+</RelativeLayout>

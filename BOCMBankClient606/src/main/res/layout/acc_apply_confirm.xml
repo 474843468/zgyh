@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 申请定期活期账户	确认页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:userProperty="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_step"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/fill_padding_top" >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            style="@style/confirm_info_textview_style"
+                            android:text="@string/acc_confirm_title"
+                            android:textSize="@dimen/textsize_one_six" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:layout_height="match_parent"
+                                android:layout_weight="5.5"
+                                android:text="@string/acc_choose_content" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3.5"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:id="@+id/tv_accnum"
+                                    style="@style/textview_common_right"
+                                    android:paddingLeft="0dip" />
+
+                                <TextView
+                                    android:id="@+id/tv_acctype"
+                                    style="@style/textview_common_right"
+                                    android:layout_marginTop="@dimen/common_row_margin"
+                                    android:paddingLeft="0dip" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_open_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:layout_weight="5.5"
+                                android:text="@string/acc_confirm_opentype" />
+
+                            <TextView
+                                android:id="@+id/tv_acctype_info"
+                                style="@style/textview_common_right"
+                                android:layout_weight="3.5" />
+                        </LinearLayout>
+						<LinearLayout 
+						    android:layout_width="match_parent"
+						    android:layout_height="wrap_content"
+						    android:layout_marginTop="@dimen/common_row_margin"
+						    android:orientation="horizontal">
+						    <TextView 
+						        style="@style/textview_common_left"
+						        android:layout_weight="5.5"
+						        android:text="@string/acc_account_purpose"/>
+						    <TextView 
+						        android:id="@+id/tv_account_purpose"
+						        style="@style/textview_common_right"
+						        android:layout_weight="3.5"
+						        android:singleLine="false"/>
+						</LinearLayout>
+						<LinearLayout 
+						    android:id="@+id/ll_account_open_reason"
+						    android:layout_width="match_parent"
+						    android:layout_height="wrap_content"
+						    android:layout_marginTop="@dimen/common_row_margin"
+						    android:orientation="horizontal"
+						    android:visibility="gone">
+						    <TextView 
+						        android:id="@+id/tv_open_reason"
+						        style="@style/textview_common_left"
+						        android:layout_weight="5.5"
+						        />
+						    <TextView 
+						        android:id="@+id/tv_account_open_reason"
+						        style="@style/textview_common_right"
+						        android:layout_weight="3.5"
+						        android:singleLine="false"/>
+						</LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/ll_sms"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/btn_bottom_height"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="gone" >
+
+                            <TextView
+                                style="@style/textview_common_left_three"
+                                android:layout_height="match_parent"
+                                android:layout_weight="5.5"
+                                android:gravity="center|right"
+                                android:text="@string/smc" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="@dimen/common_row_margin"
+                                android:layout_weight="3.5" >
+
+                                <LinearLayout
+                                    android:id="@+id/ll_sms_sip"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center" >
+
+                                    <cfca.mobile.sip.SipBox
+                                        android:id="@+id/sip_sms"
+                                        style="@style/editext_fill"
+                                        android:maxLength="6"
+                                        android:textSize="@dimen/textsize_default" />
+                                </LinearLayout>
+
+                                <Button
+                                    android:id="@+id/smsbtn"
+                                    style="@style/button_smscode"
+                                    android:layout_marginLeft="@dimen/fill_margin_top"
+                                    android:gravity="center" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_sip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:layout_marginBottom="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="gone" >
+
+                            <TextView
+                                style="@style/comm_view_left"
+                                android:layout_weight="5.5"
+                                android:singleLine="true"
+                                android:text="@string/opt"
+                                android:textSize="@dimen/textsize_default" />
+
+                            <cfca.mobile.sip.SipBox
+                                android:id="@+id/et_cecurity"
+                                style="@style/edittext_inputNumber_fill"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="@dimen/layout_margin_top"
+                                android:layout_weight="3.5"
+                                android:gravity="center_vertical"
+                                android:maxLength="20" />
+                        </LinearLayout>
+
+                        <com.chinamworld.bocmbci.widget.UsbKeyText
+                            android:id="@+id/sip_usbkey"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            userProperty:MargRight="@dimen/layout_margin_top"
+                            userProperty:ShowRate="3:2" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_bottom_padding"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnConfirm"
+                style="@style/bottombtn"
+                android:text="@string/confirm" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bocroa_background"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <!-- 姓名 -->
+
+    <LinearLayout
+        style="@style/bocroa_style_step_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bocroa_step_item_hei"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/bocroa_style_step_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="姓名" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/bocroa_style_step_item_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical" />
+    </LinearLayout>
+    <!-- 姓名全拼 -->
+
+    <LinearLayout
+        style="@style/bocroa_style_step_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bocroa_step_item_hei"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            style="@style/bocroa_style_step_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="拼音" />
+
+        <com.boc.bocsoft.remoteopenacc.common.view.BaseEditText
+            android:id="@+id/et_full_name"
+            style="@style/bocroa_style_step_item_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:inputType="textEmailAddress" />
+    </LinearLayout>
+    <!-- 银行卡号 -->
+
+    <LinearLayout
+        style="@style/bocroa_style_step_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bocroa_step_item_hei"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/bocroa_style_step_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="绑定卡号" />
+
+        <com.boc.bocsoft.remoteopenacc.common.view.BaseEditText
+            android:id="@+id/et_card_num"
+            style="@style/bocroa_style_step_item_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="right|center_vertical"
+            android:hint="@string/bocroa_please_cap_input"
+            android:inputType="number"
+            android:maxLength="23" />
+
+        <View
+            android:layout_width="0.8dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/bocroa_e8ecec" />
+
+        <ImageView
+            android:id="@+id/iv_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/bocroa_take_pic" />
+    </LinearLayout>
+    <!-- 所属银行 -->
+
+    <LinearLayout
+        android:id="@+id/ll_belong_bank"
+        style="@style/bocroa_style_step_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bocroa_step_item_hei"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            style="@style/bocroa_style_step_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="所属银行" />
+
+        <TextView
+            android:id="@+id/tv_belong_bank"
+            style="@style/bocroa_style_select_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="请选择" />
+
+        <TextView
+            android:id="@+id/btn_belong_bank"
+            style="@style/bocroa_style_select_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!-- 开户行 -->
+
+    <LinearLayout
+        android:id="@+id/ll_open_bank"
+        style="@style/bocroa_style_step_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bocroa_step_item_hei"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/bocroa_style_step_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="开户银行" />
+
+        <TextView
+            android:id="@+id/tv_open_bank"
+            style="@style/bocroa_style_select_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="请选择" />
+
+        <TextView
+            android:id="@+id/btn_open_bank"
+            style="@style/bocroa_style_select_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_notice_step_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:textSize="@dimen/bocroa_text_size_small_12dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/bocroa_background" />
+
+</LinearLayout>

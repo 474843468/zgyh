@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/common_bottom_padding_new"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_bg_exit_2_top"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp_two_zero" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/common_row_margin"
+                    android:paddingRight="@dimen/common_row_margin"
+                    android:paddingTop="@dimen/common_row_margin" >
+
+                    <TextView
+                        android:id="@+id/tvcalled"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp_one_zero"
+                        android:text="@string/commoncall"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <!-- <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_seven"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/common_row_margin"
+                    android:paddingRight="@dimen/common_row_margin"
+                    android:text="欢迎使用中国银行手机银行。"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textsize_default" /> -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_five"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/common_row_margin"
+                    android:paddingRight="@dimen/common_row_margin" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ededed"
+                        android:paddingBottom="@dimen/dp_three"
+                        android:paddingLeft="@dimen/dp_seven"
+                        android:paddingRight="@dimen/dp_seven"
+                        android:paddingTop="@dimen/dp_three"
+                        android:text="您的预留信息是："
+                        android:textColor="#a5a4a4"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/tvwelcominfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_seven"
+                        android:paddingLeft="@dimen/dp_seven"
+                        android:paddingRight="@dimen/dp_seven"
+                        android:text="-"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_three_zero"
+                    android:paddingLeft="@dimen/common_row_margin"
+                    android:paddingRight="@dimen/common_row_margin" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="上次登录时间："
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textsize_one_three" />
+
+                    <TextView
+                        android:id="@+id/tvloginday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textsize_one_three" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_five"
+                    android:paddingLeft="@dimen/common_row_margin"
+                    android:paddingRight="@dimen/common_row_margin" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="上次失败登录时间："
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textsize_one_three" />
+
+                    <TextView
+                        android:id="@+id/tvloginday_fail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textsize_one_three" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_one_zero"
+                    android:paddingLeft="@dimen/common_row_margin"
+                    android:paddingRight="@dimen/common_row_margin" >
+
+                    <TextView
+                        android:id="@+id/textinfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="是否确认退出手机银行？"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/textsize_one_six" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/rlyt_logout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_for_login_rlyt" >
+
+               <!--  <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dp_one_zero"
+                    android:paddingTop="@dimen/dp_one_zero"
+                    > -->
+                    <LinearLayout 
+                        android:id="@+id/ly_cancle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+					<TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="取消"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textsize_one_nine" />
+					</LinearLayout>
+					<View
+			            android:id="@+id/v1"
+			            android:layout_width="0.5dip"
+			            android:layout_height="match_parent"    
+			            android:background="@color/gray" />
+					<LinearLayout 
+                        android:id="@+id/ly_logout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/txt_logout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="确定"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textsize_one_nine" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/btn_logout"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_five"
+                        android:layout_toLeftOf="@+id/txt_logout"
+                        android:background="@drawable/selector_for_login_img"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:visibility="gone" />
+                <!-- </RelativeLayout> -->
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

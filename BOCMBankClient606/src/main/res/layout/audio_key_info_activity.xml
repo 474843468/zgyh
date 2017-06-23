@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 音频key(中银E盾)详情页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        style="@style/scrollview_comm"
+        android:layout_marginBottom="@dimen/common_row_margin" >
+
+        <LinearLayout
+            style="@style/confirm_main_style"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/prms_margin_top"
+                android:gravity="center"
+                android:orientation="vertical" >
+            </LinearLayout>
+			<!-- 连接状态 -->
+            <LinearLayout
+                style="@style/linnerlayout_common"
+                android:layout_marginLeft="@dimen/common_row_margin_half" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:text="@string/connect_status" />
+
+                <TextView
+                    android:id="@+id/connect_status"
+                    style="@style/textview_common_right"
+                    android:gravity="center" />
+            </LinearLayout>
+			<!-- PIN码状态 -->
+            <LinearLayout
+                style="@style/linnerlayout_common"
+                android:layout_marginLeft="@dimen/common_row_margin_half" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:text="@string/pin_status" />
+
+                <TextView
+                    android:id="@+id/pin_status"
+                    style="@style/textview_common_right"
+                    android:gravity="center" />
+            </LinearLayout>
+			<!-- 序列号 -->
+            <LinearLayout
+                style="@style/linnerlayout_common"
+                android:layout_marginLeft="@dimen/common_row_margin_half" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:text="@string/sn"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/serial_num"
+                    style="@style/textview_common_right"
+                    android:gravity="center" />
+            </LinearLayout>
+			<!-- 低电状态 -->
+            <LinearLayout
+                style="@style/linnerlayout_common"
+                android:layout_marginLeft="@dimen/common_row_margin_half" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:text="@string/power_status"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/low_power_status"
+                    style="@style/textview_common_right"
+                    android:gravity="center" />
+            </LinearLayout>
+			<!-- 低电状态提示信息 -->
+            <LinearLayout
+                android:id="@+id/low_power_tip"
+                style="@style/linnerlayout_common"
+                android:layout_marginLeft="@dimen/common_row_margin_half"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/low_power_tip_tv"
+                    style="@style/textview_common_right"
+                    android:gravity="right"
+                    android:text="@string/lower_power_tips"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+            <!-- 证书到期日期 -->
+            <LinearLayout
+                style="@style/linnerlayout_common"
+                android:layout_marginLeft="@dimen/common_row_margin_half" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:text="@string/expired_date"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/end_date"
+                    style="@style/textview_common_right"
+                    android:gravity="center" />
+            </LinearLayout>
+            <!-- 音频key版本驱动号 -->
+            <LinearLayout
+                style="@style/linnerlayout_common"
+                android:layout_marginLeft="@dimen/common_row_margin_half" >
+
+                <TextView
+                    android:id="@+id/driver_version_title"
+                    style="@style/confirm_left_textview_style"
+                    android:text="@string/driver_version"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/driver_version"
+                    style="@style/textview_common_right"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linnerlayout_common"
+                android:layout_marginLeft="@dimen/common_row_margin_half" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/audio_key_tips"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_default" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

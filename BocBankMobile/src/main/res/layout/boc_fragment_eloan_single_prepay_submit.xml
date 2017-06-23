@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:scrollbars="none" >
+    <LinearLayout
+        android:id="@+id/llyBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/boc_common_bg_color"
+        android:visibility="visible"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/boc_space_between_34px"
+                android:layout_marginLeft="@dimen/boc_space_between_54px"
+                android:text="@string/boc_eloan_prepay_outstanding_Principal2"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small"/>
+
+            <TextView
+                android:id="@+id/prepayRemain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="@dimen/boc_space_between_6px"
+                android:textStyle="bold"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/boc_card_background"
+            android:orientation="vertical" >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_104px"
+                android:paddingLeft="@dimen/boc_space_between_32px"
+                android:paddingRight="@dimen/boc_space_between_30px">
+
+                <TextView
+                    android:id="@+id/choice_data_name"
+                    android:layout_width="@dimen/boc_space_between_190px"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/choice_data_left_icon"
+                    android:gravity="center_vertical"
+                    android:lineSpacingExtra="@dimen/boc_space_between_6px"
+                    android:textStyle="bold"
+                    android:text="@string/boc_eloan_prepay_type"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_common" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/boc_space_between_18px"
+                    android:layout_toLeftOf="@+id/choice_data_arrow"
+                    android:layout_toRightOf="@+id/choice_data_name"
+                    android:gravity="center_vertical|right">
+
+                    <com.boc.bocsoft.mobile.bocmobile.base.widget.singlemoreselect.SelectGridView
+                        android:id="@+id/viewSelect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/boc_space_between_20px"
+                        android:layout_marginRight="@dimen/boc_space_between_20px"
+                        android:horizontalSpacing="@dimen/boc_space_between_20px"
+                        android:numColumns="2"
+                        app:radioTrue="true"/>
+                </RelativeLayout>
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_divider_1px"
+                android:background="@color/boc_divider_line_color"/>
+            <!--com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditClearWidget -->
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputWidget
+                android:id="@+id/prepay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/include"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="@dimen/boc_space_between_54px"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTotalAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/boc_text_color_rest_gray"
+                android:textSize="@dimen/boc_text_size_small"/>
+
+            <TextView
+                android:id="@+id/tvIntAndCharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/boc_space_between_5px"
+                android:textColor="@color/boc_text_green_gray"
+                android:textSize="@dimen/boc_text_size_small"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/boc_card_background"
+            android:orientation="vertical" >
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                android:id="@+id/repaymentAccount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:editChoiceName="@string/boc_eloan_repaymentAccount" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llyRemainAvl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="@dimen/boc_space_between_54px"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/boc_text_color_rest_gray"
+                android:text="@string/boc_qrpay_available_balance"
+                android:textSize="@dimen/boc_text_size_small"/>
+
+            <TextView
+                android:id="@+id/tvRemainAvl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/boc_text_green_gray"
+                android:textSize="@dimen/boc_text_size_small"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_marginTop="18dp"
+            android:text="@string/boc_eloan_summit"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            style="@style/BocButton.BocPrimaryButton" />
+
+    </LinearLayout>
+</ScrollView>

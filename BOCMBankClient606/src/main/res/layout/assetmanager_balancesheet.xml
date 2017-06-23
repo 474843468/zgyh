@@ -1,0 +1,200 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/style_match_match"
+    android:background="#FFFFFF"
+    tools:context="com.chinamworld.edatatest.MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/lyt_content"
+        style="@style/style_match_wrap"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            style="@style/style_match_wrap"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/lyt_property"
+                style="@style/style_match_wrap"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:paddingLeft="15dp" >
+
+                <LinearLayout
+                    style="@style/style_match_wrap"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_property"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/btn_dialog_height"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="我的资产（元）"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tv_propertynum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_property"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="6dp"
+                    android:background="@drawable/ic_launcher" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/gray_line" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyt_balance"
+                style="@style/style_match_wrap"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="10dp" >
+
+                <LinearLayout
+                    style="@style/style_match_wrap"
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/btn_dialog_height"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="我的负债（元）"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/tv_balancenum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_blance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/ic_launcher" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/gray" >
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="6dp"
+            android:padding="8dp"
+            android:text="以下金融资产负债情况均为您前一日持有信息：  "
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/gray_line" >
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/lyt_conver"
+            android:layout_width="fill_parent"
+            android:layout_height="600dp"
+            android:background="#01ffffff" >
+
+            <WebView
+                android:id="@+id/webView_property"
+                android:layout_width="fill_parent"
+                android:layout_height="500dp" />
+            <Button
+                android:layout_width="fill_parent"
+                android:layout_height="500dp"
+                 android:background="#01ffffff" 
+                ></Button>
+        </FrameLayout>
+
+        
+
+        <TextView
+            android:id="@+id/tv_noneinfo"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+    </LinearLayout>
+  
+    <LinearLayout
+        android:id="@+id/lyt_calendar"
+        style="@style/style_match_wrap"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/gray" >
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/style_match_wrap"
+            android:gravity="center_vertical"
+            android:padding="10dp" >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/assetmanager_calendar" />
+
+            <TextView
+                android:id="@+id/tv_item"
+                style="@style/style_textview_with_weight_1"
+                android:text="资产管理日历" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/more_arrow" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

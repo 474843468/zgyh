@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin" >
+
+        <Button
+            android:id="@+id/btnfinish"
+            style="@style/bottombtn"
+            android:text="@string/finish" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/remit_title_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:text="@string/plps_annuity_plan_changetip"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_default" />
+                <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center" >
+                
+                <ImageView android:layout_width="@dimen/inversitemhight"
+                    android:layout_height="@dimen/inversitemhight"
+                    android:layout_gravity="center"
+                    android:src="@drawable/chenggong"/>
+                
+                <TextView android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/textsize_default"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/black"
+                    android:text="恭喜您，操作成功！"/>
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/plps_annuity_planno" />
+
+                    <TextView
+                        android:id="@+id/planno"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/third_openacc_name" />
+
+                    <TextView
+                        android:id="@+id/username"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/bond_idtype" />
+
+                    <TextView
+                        android:id="@+id/idtype"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        android:id="@+id/year_remain_limit_alert"
+                        style="@style/textview_common_left"
+                        android:text="@string/bond_idnumber" />
+
+                    <TextView
+                        android:id="@+id/idnum"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/bond_customer_phone" />
+
+                    <TextView
+                        android:id="@+id/phone"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/plps_annuity_phone" />
+
+                    <TextView
+                        android:id="@+id/mobile"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/plps_annuity_adress" />
+
+                    <TextView
+                        android:id="@+id/adress"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/third_openacc_postcode" />
+
+                    <TextView
+                        android:id="@+id/postcode"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/safety_email" />
+
+                    <TextView
+                        android:id="@+id/email"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

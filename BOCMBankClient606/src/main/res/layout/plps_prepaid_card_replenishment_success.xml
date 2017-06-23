@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 民生服务-预付卡充值 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_Next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/common_bottom_padding"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnFinish"
+            style="@style/bottombtn"
+            android:background="@drawable/btn_red_big_long"
+            android:text="@string/finish" />
+    </LinearLayout>
+
+    <ScrollView
+        style="@style/listviewcomm_fill_haveDivider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_Next"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fill_margin_top" >
+
+                <TextView
+                    style="@style/confirm_info_textview_style"
+                    android:layout_gravity="center"
+                    android:text="@string/plps_payment_info_detail" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="5.0"
+                    android:text="@string/transaction" />
+
+                <TextView
+                    android:id="@+id/tv_transaction"
+                    style="@style/textview_common_right"
+                    android:layout_marginRight="@dimen/fill_margin_right"
+                    android:layout_weight="3.5"
+                    android:text="@string/tran_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="5.0"
+                    android:text="@string/plps_prepaid_query_type" />
+
+                <TextView
+                    android:id="@+id/tv_pripaidType"
+                    style="@style/textview_common_right"
+                    android:layout_marginRight="@dimen/fill_margin_right"
+                    android:layout_weight="3.5"
+                    android:text="@string/tran_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="5.0"
+                    android:text="@string/plps_prepaid_query_number" />
+
+                <TextView
+                    android:id="@+id/tv_pripaidCarNum"
+                    style="@style/textview_common_right"
+                    android:layout_marginRight="@dimen/fill_margin_right"
+                    android:layout_weight="3.5"
+                    android:text="@string/tran_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="5.0"
+                    android:text="@string/acc_queryispayroll_name" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    style="@style/textview_common_right"
+                    android:layout_marginRight="@dimen/fill_margin_right"
+                    android:layout_weight="3.5"
+                    android:text="@string/tran_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="5.0"
+                    android:text="@string/third_openacc_acc" />
+
+                <TextView
+                    android:id="@+id/tv_account"
+                    style="@style/textview_common_right"
+                    android:layout_marginRight="@dimen/fill_margin_right"
+                    android:layout_weight="3.5"
+                    android:singleLine="false"
+                    android:maxLines="2"
+                    android:text="@string/tran_line" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="5.0"
+                    android:text="@string/plps_prepadi_query_currency" />
+
+                <TextView
+                    android:id="@+id/tv_currency"
+                    style="@style/textview_common_right"
+                    android:layout_marginRight="@dimen/fill_margin_right"
+                    android:layout_weight="3.5"
+                    android:text="@string/rmb_currency" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="5.0"
+                    android:text="@string/acc_financeic_trans_value" />
+
+                <TextView
+                    android:id="@+id/tv_transValue"
+                    style="@style/textview_common_right"
+                    android:layout_marginRight="@dimen/fill_margin_right"
+                    android:layout_weight="3.5"
+                    android:text="@string/tran_line"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

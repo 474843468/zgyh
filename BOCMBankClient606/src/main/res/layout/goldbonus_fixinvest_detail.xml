@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 定投管理查询详情页面 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:userProperty="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/agreequery_ll_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <com.chinamworld.bocmbci.userwidget.TitleAndContentLayout
+            android:id="@+id/titleAndContentLayout_detailinfo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <!-- 小标题信息 -->
+
+            <LinearLayout
+                android:id="@+id/cancel_input_info_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="您正在进行终止定投预约的操作"
+                    android:textColor="@color/fonts_dark_gray"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/cancel_success_info_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="您已经提前终止本条定投预约"
+                    android:textColor="@color/fonts_dark_gray"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <!-- 页面详情展示信息布局  动态添加元素 -->
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimen_two_zero"
+                android:paddingBottom="@dimen/dp_five"
+                android:paddingTop="@dimen/dp_five" >
+
+                <LinearLayout
+                    android:id="@+id/myContainerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </ScrollView>
+            <!-- 底部动态展示信息 -->
+            <!-- 定投提前终止确认页面 -->
+
+            <LinearLayout
+                android:id="@+id/fixCancel_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="right"
+                        android:textColor="@color/fonts_dark_gray"
+                        android:text="提前终止原因："
+                        android:layout_gravity="center_vertical"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/et_fixcancel_ps"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:textSize="15sp"
+                        android:textColor="@color/fonts_black"
+                        android:hint="选填" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="*终止本条定投预约后，可通过“买卖交易”重新进行定投预约。"
+                        android:textColor="@color/fonts_pink"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 安全工具控件 -->
+
+            <LinearLayout
+                android:id="@+id/combinId_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/ll_smc"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_bottom_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center|right"
+                        android:textColor="@color/fonts_dark_gray"
+                        android:text="@string/smc" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="3" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_smc_sip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <cfca.mobile.sip.SipBox
+                                android:id="@+id/sipbox_smc"
+                                style="@style/editext_fill"
+                                android:maxLength="6"
+                                android:textSize="@dimen/textsize_default" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/smsbtn"
+                            style="@style/button_smscode"
+                            android:layout_marginLeft="@dimen/fill_margin_top"
+                            android:layout_marginRight="@dimen/dp_five"
+                            android:gravity="center" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_active_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:textColor="@color/fonts_dark_gray"
+                        android:text="@string/active_code" />
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="3" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_activecode_sip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:paddingRight="@dimen/dp_five" >
+
+                            <cfca.mobile.sip.SipBox
+                                android:id="@+id/sipbox_active"
+                                style="@style/editext_fill"
+                                android:maxLength="6"
+                                android:textSize="@dimen/textsize_default" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+
+                <com.chinamworld.bocmbci.widget.UsbKeyText
+                    android:id="@+id/sip_usbkey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    userProperty:MargRight="@dimen/dp_five"
+                    userProperty:ShowRate="3:2" />
+            </LinearLayout>
+            <!-- 提前终止操作 成功页面 -->
+
+            <LinearLayout
+                android:id="@+id/ll_cancel_success_href"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="left"
+                android:orientation="horizontal"
+                android:singleLine="false"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textsize_default" />
+
+            </LinearLayout>
+        </com.chinamworld.bocmbci.userwidget.TitleAndContentLayout>
+
+   
+ <!-- 详情页面底部按钮 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_right"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/dp_five"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/common_bottom_padding" >
+
+            <Button
+                android:id="@+id/btn_detaillist"
+                style="@style/btn_common_oneline"
+                android:background="@drawable/selector_btn_red"
+                android:text="执行明细" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                style="@style/btn_common_oneline"
+                android:background="@drawable/selector_btn_red"
+                android:text="提前终止" />
+        </LinearLayout>
+        <!-- 终止页面 确认/完成按钮 -->
+
+        <LinearLayout
+            android:id="@+id/ll_cancel_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/dp_five"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/common_bottom_padding"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/btn_next"
+                style="@style/bottombtn_new"
+                android:text="下一步"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_confirm"
+                style="@style/bottombtn_new"
+                android:text="确认"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_success"
+                style="@style/bottombtn_new"
+                android:text="完成"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+ </LinearLayout>
+</FrameLayout>

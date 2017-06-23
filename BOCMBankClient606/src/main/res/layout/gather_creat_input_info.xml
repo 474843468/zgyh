@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dept_save_regular_bottom"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin" >
+
+        <Button
+            android:id="@+id/creat_gather_input_next_btn"
+            style="@style/bottombtn"
+            android:text="@string/next" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/dept_create_layout"
+        style="@style/scrollview_comm_havemarginbutton"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_for_listview_item_write" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/gather_creat_title_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:text="@string/input_payer_info"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_default" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="left"
+                android:text="@string/to_choose_payer_type"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <RadioGroup
+                android:id="@+id/payer_type_radiogroup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:id="@+id/rb_user_from_line_bank"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radiobtn_selector"
+                    android:checked="true"
+                    android:singleLine="true"
+                    android:text="@string/user_from_line_bank"
+                    android:textSize="@dimen/textsize_default" />
+
+                <RadioButton
+                    android:id="@+id/rb_user_from_phone_bank"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin_half"
+                    android:button="@drawable/radiobtn_selector"
+                    android:singleLine="true"
+                    android:text="@string/user_from_phone_bank"
+                    android:textSize="@dimen/textsize_default" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/fill_padding_right"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/payer_name_label" />
+
+                <EditText
+                    android:id="@+id/edit_payer_name"
+                    style="@style/edittext_common_fill_no_weight"
+                    android:maxLength="60"
+                    android:textColor="@color/black" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/fill_padding_right"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/payer_phone_label" />
+
+                <EditText
+                    android:id="@+id/edit_payer_phone"
+                    style="@style/edittext_common_fill_no_weight"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    android:textColor="@color/black" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_line_bank_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/fill_padding_right"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/payer_customer_number_label" />
+
+                <EditText
+                    android:id="@+id/edit_payer_customer_number"
+                    style="@style/edittext_common_fill_no_weight"
+                    android:maxLength="30"
+                    android:textColor="@color/black" >
+                </EditText>
+<!--                     android:hint="@string/hint_line_bank_number" -->
+            </LinearLayout>
+            <TextView 
+                android:layout_height="10dp"
+                android:layout_width="fill_parent"/>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

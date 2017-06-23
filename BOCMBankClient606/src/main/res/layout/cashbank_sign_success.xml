@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 现金宝转入资金 输入信息页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_next"
+            style="@style/bottombtn"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/finish" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_btn"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fill_margin_top"
+                    android:gravity="center"
+                    android:text="您已成功开通现金宝服务"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_default" />
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="姓名：" />
+
+                    <TextView
+                        android:id="@+id/tv_cashbank_name"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" 
+                    >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="证件类型：" />
+
+                    <TextView
+                        android:id="@+id/tv_cashbank_zhengjian_type"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="证件号码：" />
+
+                    <TextView
+                        android:id="@+id/tv_cashbank_zhengjian_no"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_gravity="center"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="手机号码：" />
+
+                    <TextView
+                        android:id="@+id/tv_cashbank_phone_no"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_gravity="center"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="EMAIL：" />
+
+                    <TextView
+                        android:id="@+id/tv_cashbank_email"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4"
+                        android:text="-" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

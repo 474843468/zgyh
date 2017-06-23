@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_select_trans"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/select_currency_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/boc_space_between_20px"
+        android:layout_marginRight="@dimen/boc_space_between_20px"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/boc_space_between_22px"
+            android:text="账户"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:textSize="@dimen/boc_text_size_common" />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.singlemoreselect.SelectGridView
+            android:id="@+id/qrpay_record_select_single_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/boc_space_between_20px"
+            android:horizontalSpacing="@dimen/boc_space_between_20px"
+            android:numColumns="2"
+            android:verticalSpacing="@dimen/boc_space_between_20px"
+            app:radioTrue="true" />
+
+
+    </LinearLayout>
+
+    <include layout="@layout/boc_divide_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/boc_space_between_20px"
+        android:layout_marginRight="@dimen/boc_space_between_20px"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/boc_space_between_22px"
+            android:layout_marginTop="@dimen/boc_space_between_46px"
+            android:text="交易状态"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:textSize="@dimen/boc_text_size_common" />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.singlemoreselect.SelectGridView
+            android:id="@+id/qrpay_record_select_single_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/boc_space_between_20px"
+            android:horizontalSpacing="@dimen/boc_space_between_20px"
+            android:numColumns="3"
+            android:verticalSpacing="@dimen/boc_space_between_20px"
+            app:radioTrue="true" />
+    </LinearLayout>
+</LinearLayout>

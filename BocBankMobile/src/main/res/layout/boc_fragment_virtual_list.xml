@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color">
+
+    <ScrollView
+        android:id="@+id/sv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_apply"
+        android:layout_alignParentTop="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_account"
+                style="@style/tv_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/boc_space_between_20px"
+                android:paddingLeft="@dimen/boc_space_between_20px"
+                android:paddingRight="@dimen/boc_space_between_20px"
+                android:text="@string/boc_virtual_credit_account" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.selectaccoutview.SelectAccountButton
+                android:id="@+id/btn_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/boc_space_between_20px"
+                android:layout_marginTop="@dimen/boc_space_between_20px"
+                android:paddingLeft="@dimen/boc_space_between_20px"
+                android:paddingRight="@dimen/boc_space_between_20px" />
+
+            <TextView
+                android:id="@+id/tv_record"
+                style="@style/tv_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/boc_space_between_20px"
+                android:paddingLeft="@dimen/boc_space_between_20px"
+                android:paddingRight="@dimen/boc_space_between_20px"
+                android:text="@string/boc_virtual_account_list_record"
+                android:visibility="gone" />
+
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.transactionlist.FullListView
+                android:id="@+id/lv_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/boc_space_between_20px"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_no_data"
+        style="@style/tv_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/boc_virtual_credit_account_no_data"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_apply"
+        style="@style/BocButton.BocHalfButton1"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/boc_space_between_20px"
+        android:background="@color/boc_main_button_color"
+        android:text="@string/boc_virtual_account_list_apply"
+        android:visibility="gone" />
+
+</RelativeLayout>

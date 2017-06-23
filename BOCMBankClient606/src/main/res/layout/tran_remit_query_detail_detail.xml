@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 外汇双向宝 未平仓交易查询详情页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/forex_query_deal_detailes_ok"
+            style="@style/bottombtn"
+            android:text="@string/tran_remit_n_query_detail" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_btn"
+        android:layout_marginTop="@dimen/rightbtnW"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView
+            style="@style/scrollview_comm_havemarginbutton"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="@dimen/dp_two_zero"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:paddingTop="0dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/fill_margin_left" >
+
+                <LinearLayout
+                    android:id="@+id/table_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible" >
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:layout_weight="0"
+                                android:text="@string/tran_remit_n_query_tranType" />
+
+                            <TextView
+                                android:id="@+id/tran_remit_n_query_signType"
+                                style="@style/textview_common_right"
+                                android:layout_weight="0" />
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:layout_weight="0"
+                                android:text="@string/tran_remit_n_query_tranTime" />
+
+                            <TextView
+                                android:id="@+id/tran_remit_n_query_autoFlag"
+                                style="@style/textview_common_right"
+                                android:layout_weight="0" />
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:layout_weight="0"
+                                android:text="@string/tran_remit_n_query_tranStatus" />
+
+                            <TextView
+                                android:id="@+id/tran_remit_n_query_reSignType"
+                                style="@style/textview_common_right"
+                                android:layout_weight="0" />
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:layout_weight="0"
+                                android:text="@string/tran_remit_n_query_tranId" />
+
+                            <TextView
+                                android:id="@+id/tran_remit_n_query_mobile"
+                                style="@style/textview_common_right"
+                                android:layout_weight="0" />
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:layout_weight="0"
+                                android:text="@string/tran_remit_n_query_accNo" />
+
+                            <TextView
+                                android:id="@+id/tran_remit_n_query_startDate"
+                                style="@style/textview_common_right"
+                                android:layout_weight="0" />
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:layout_weight="0"
+                                android:text="@string/tran_remit_n_query_bussinessType" />
+
+                            <TextView
+                                android:id="@+id/tran_remit_n_query_endDate"
+                                style="@style/textview_common_right"
+                                android:layout_weight="0" />
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:layout_weight="0"
+                                android:text="@string/tran_remit_n_query_tranAmt" />
+
+                            <TextView
+                                android:id="@+id/tran_remit_n_query_channelName"
+                                style="@style/textview_common_right"
+                                android:layout_weight="0"
+                                android:textColor="@color/red" />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/titleText_stepacc"
+        android:layout_width="@dimen/riskimageWhieght"
+        android:layout_height="@dimen/left_img_width"
+        android:background="@drawable/bg_title"
+        android:gravity="center"
+        android:text="@string/trans_remit_n_query_title"
+        android:textColor="@color/gray_title" />
+
+</RelativeLayout>

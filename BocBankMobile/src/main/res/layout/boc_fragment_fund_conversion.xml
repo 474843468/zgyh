@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_fundname_code"
+                style="@style/tv_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:paddingBottom="@dimen/boc_space_between_20px"
+                android:paddingLeft="@dimen/boc_space_between_40px"
+                android:paddingTop="@dimen/boc_space_between_40px"
+                android:text="fundnamecode"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/boc_space_between_40px"
+                android:layout_marginTop="@dimen/boc_space_between_20px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_fundcompany"
+                    style="@style/tv_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/boc_space_between_40px"
+                    android:text="@string/boc_fund_conversion_company" />
+
+                <TextView
+                    android:id="@+id/tv_fund_company"
+                    style="@style/tv_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/tv_fundcompany"
+                    android:paddingLeft="@dimen/boc_space_between_60px"
+                    android:text="text"
+                    android:textStyle="bold"/>
+            </RelativeLayout>
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                android:id="@+id/item_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/boc_space_between_20px"
+                android:layout_marginRight="@dimen/boc_space_between_20px" />
+
+            <LinearLayout
+                android:id="@+id/ll_fund_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/boc_space_between_20px"
+                android:layout_marginLeft="@dimen/boc_space_between_20px"
+                android:layout_marginRight="@dimen/boc_space_between_20px"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/boc_space_between_30px"
+                android:paddingTop="@dimen/boc_space_between_30px"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_name_left"
+                        style="@style/tv_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/boc_space_between_28px"
+                        android:text="@string/boc_fund_sell_increase_day"/>
+
+                    <TextView
+                        android:id="@+id/txt_value_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="demo"
+                        android:textColor="@color/boc_text_color_red"
+                        android:textSize="@dimen/boc_text_size_little_big"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_name_center"
+                        style="@style/tv_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/boc_space_between_28px"
+                        android:text="@string/boc_fund_sell_netprice"/>
+
+                    <TextView
+                        android:id="@+id/txt_value_center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="demo"
+                        android:textColor="@color/boc_text_color_dark_gray"
+                        android:textSize="@dimen/boc_text_size_common"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        style="@style/tv_small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="date" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_name_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/boc_space_between_28px"
+                        android:text="右边"
+                        android:textColor="@color/boc_text_color_dark_gray"
+                        android:textSize="@dimen/boc_text_size_small"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/txt_value_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="demo"
+                        android:textColor="@color/boc_text_color_dark_gray"
+                        android:textSize="@dimen/boc_text_size_common"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_104px"
+                android:layout_marginLeft="@dimen/boc_space_between_20px"
+                android:layout_marginRight="@dimen/boc_space_between_20px"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    style="@style/tv_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/boc_space_between_32px"
+                    android:text="@string/boc_fund_from_amount"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textStyle="bold" />
+
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.ClearEditText
+                    android:id="@+id/et_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/boc_space_between_20px"
+                    android:layout_marginRight="@dimen/boc_space_between_20px"
+                    android:background="@null"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:hint="@string/boc_fund_amount_hint"
+                    android:paddingBottom="@dimen/boc_space_between_30px"
+                    android:paddingTop="@dimen/boc_space_between_30px"
+                    android:singleLine="true"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textColorHint="@color/boc_text_color_light_gray"
+                    android:textSize="@dimen/boc_text_size_small" />
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/divide_line"
+                layout="@layout/boc_divide_line"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/boc_space_between_20px"
+                android:layout_marginRight="@dimen/boc_space_between_20px" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                android:id="@+id/ew_fund_sell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/boc_space_between_20px"
+                android:layout_marginRight="@dimen/boc_space_between_20px" />
+
+            <TextView
+                style="@style/tv_common"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/boc_space_between_20px"
+                android:layout_marginLeft="@dimen/boc_space_between_52px"
+                android:layout_marginRight="@dimen/boc_space_between_50px"
+                android:text="@string/boc_fund_sell_hint" />
+            <!--电子-->
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/boc_space_between_52px"
+                android:layout_marginRight="@dimen/boc_space_between_50px"
+                android:layout_marginTop="@dimen/boc_space_between_80px"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_agree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/boc_text_mobile_color"
+                    android:button="@drawable/checkbox_style" />
+
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.ClickableSpan.SpannableString
+                    android:id="@+id/tv_agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/cb_agree"
+                    android:layout_marginLeft="@dimen/boc_space_between_26px"
+                    android:layout_toRightOf="@id/cb_agree"
+                    android:textColor="@color/boc_text_mobile_color" />
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_next"
+                style="@style/BocButton.BocPrimaryButton1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/boc_space_between_20px"
+                android:layout_marginTop="@dimen/boc_space_between_40px"
+                android:background="@drawable/boc_button_bg_blue"
+                android:text="@string/boc_common_next"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

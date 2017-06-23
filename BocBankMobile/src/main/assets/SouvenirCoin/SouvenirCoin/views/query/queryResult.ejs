@@ -1,0 +1,58 @@
+<div class="wrap wrap-justhead">
+    <header class="page-head">
+        <!--<img src="images/back-icon.png" def_event="{click:'onBack'}">-->
+        <div class="back-img"  def_event="{click: 'onBack'}"><img src="images/back-icon.png"></div>
+        <h1>查询结果</h1>
+    </header>
+    <section>
+        <p class="revise-words">请在兑换期间<span><%=data.sellStartDate.replace(/-/g,'/')%> ~ <%=data.sellEndDate.replace(/-/g,'/')%></span>持预约时登记的身份证件到预约网点进行兑换。</p>
+        <div class="confirm confirm-list">
+            <div class="confirm-top confirm-top-list">
+                <ul>
+                    <li>
+                        <span>纪念币名称</span>
+                        <span><%=data.productName%></span>
+                    </li>
+                    <li>
+                        <span>预约日期</span>
+                        <span><%=data.createDate.replace(/-/g,'/')%></span>
+                    </li>
+                    <li>
+                        <span>预约数量</span>
+                        <span><%=data.count%></span>
+                    </li>
+                    <li>
+                        <span>客户姓名</span>
+                        <span><%=data.name%></span>
+                    </li>
+                    <li>
+                        <span>手机号码</span>
+                        <span><%=data.mobile%></span>
+                    </li>
+                    <li>
+                        <span>证件类型</span>
+                        <span><%=data.identyType%></span>
+                    </li>
+                    <li>
+                        <span>证件号码</span>
+                        <span><%=data.identyNumber%></span>
+                    </li>
+                    <li>
+                        <span>网点名称</span>
+                        <span><%=data.bankName%></span>
+                    </li>
+                    <li>
+                        <span>网点地址</span>
+                        <span><%=data.address%></span>
+                    </li>
+                    <li>
+                        <span>渠道</span>
+                        <span><%=data.channel%></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button class="revise" id="modify-revise-hide"   def_event="{click:'onModify'}">修改预约数量</button>
+        <button class="revise revise-ui"  id="repal-revise-hide"    def_event="{click:'onCancel'}">撤销</button>
+    </section>
+</div>

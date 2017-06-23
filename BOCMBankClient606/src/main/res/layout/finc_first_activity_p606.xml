@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chinamworld.llbt.userwidget.SlipMenu.SlipDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/inverst_bg_color"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/inverst_bg_color"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <com.chinamworld.llbt.userwidget.scrollview.NewScrollView
+            android:id="@+id/fund_newScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <com.chinamworld.bocmbci.userwidget.investview.InvestPriceView
+                            android:id="@+id/finc_head"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+                        <LinearLayout
+                            android:id="@+id/ll_tab"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/boc_space_between_80px"
+                            android:background="@color/boc_common_cell_color"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/txt_query"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/finc_title_fundinvest_trade_query"
+                                style="@style/finc_text_blod_black_style13"
+                                android:textColor="@color/boc_main_button_color" />
+
+                            <View
+                                style="@style/inverst_fengexian_vertical" />
+                            <TextView
+                                android:id="@+id/txt_protocol"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/finc_title_fundinvest_account_manage"
+                                style="@style/finc_text_blod_black_style13"
+                                android:textColor="@color/boc_main_button_color" />
+                            <View
+                                style="@style/inverst_fengexian_vertical" />
+
+                            <TextView
+                                android:id="@+id/txt_cancel"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/finc_title_fundinvest_cancle"
+                                style="@style/finc_text_blod_black_style13"
+                                android:textColor="@color/boc_main_button_color" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/line_light_gray" />
+                    <View
+                        android:layout_marginTop="@dimen/boc_space_between_20px"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/line_light_gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/boc_space_between_88px"
+                        android:background="@color/bg_light_gray"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/boc_space_between_20px">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/boc_space_between_64px"
+                            android:layout_gravity="center"
+                            android:background="@drawable/finc_search"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:orientation="horizontal"
+                            android:layout_weight="1"
+                            >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="@dimen/boc_space_between_20px"
+                                android:paddingRight="@dimen/boc_space_between_12px"
+                                android:src="@drawable/inverst_search" />
+                            <TextView
+                                android:id="@+id/clear_edit_search"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:background="@null"
+                                android:hint="@string/finc_title_fundinvest_reminder"
+                                android:textColor="@color/fonts_light_gray"
+                                android:textColorHint="@color/fonts_light_gray"
+                                android:textSize="@dimen/fonts_one_three" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/boc_space_between_30px"
+                            android:layout_marginLeft="@dimen/boc_space_between_50px">
+                            <TextView
+                                android:id="@+id/txt_select"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:drawablePadding="@dimen/boc_space_between_10px"
+                                android:drawableRight="@drawable/fund_select"
+                                android:gravity="center"
+                                android:text="@string/finc_title_fundinvest_select"
+                                style="@style/finc_text_blod_gray_style13" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!--</RelativeLayout>-->
+                    <!-- item类型 -->
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/line_light_gray" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <include layout="@layout/finc_item_more_p606" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/v1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/line_light_gray" />
+                    <LinearLayout
+                        android:id="@+id/finc_list_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+                        <include layout="@layout/finc_framelayout_scrollview_list" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/currency_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="#f9f9f9"
+                            android:orientation="horizontal">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                style="@style/finc_text_style13"
+                                android:layout_weight="1"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/finc_title_fundinvest_fincName"/>
+                            <LinearLayout
+                                android:id="@+id/week_profit_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="right"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/finc_text_style13"
+                                    android:layout_gravity="center"
+                                    android:gravity="right|center_vertical"
+                                    android:text="七日年化收益率"
+                                    />
+                                <ImageView
+                                    android:id="@+id/week_profit_img"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="8dp"
+                                    android:paddingLeft="5dp"
+                                    android:paddingBottom="8dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/finc_paixu"/>
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/ten_thousand_profit_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="right"
+                                android:paddingRight="15dp"
+                                android:layout_weight="1">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    style="@style/finc_text_style13"
+                                    android:layout_gravity="center"
+                                    android:gravity="right|center_vertical"
+                                    android:text="万份收益"
+                                    />
+                                <ImageView
+                                    android:id="@+id/ten_thousand_profit_img"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="8dp"
+                                    android:paddingLeft="5dp"
+                                    android:paddingBottom="8dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/finc_paixu"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/line_light_gray" />
+                        <com.chinamworld.llbt.userwidget.refreshliseview.RefreshLayout
+                            android:id="@+id/currency_pull_refresh"
+                            android:layout_width="match_parent"
+                            android:layout_height="fill_parent"
+                            >
+                            <com.chinamworld.llbt.userwidget.refreshliseview.PullableListView
+                                android:id="@+id/currency_type_listview"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:dividerHeight="0.5dp"
+                                android:divider="@color/line_light_gray"
+                                android:background="@color/bg_white" />
+                        </com.chinamworld.llbt.userwidget.refreshliseview.RefreshLayout>
+                    </LinearLayout>
+                </LinearLayout>
+        </com.chinamworld.llbt.userwidget.scrollview.NewScrollView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp">
+                    <FrameLayout
+                        android:id="@+id/finc_title_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:alpha="0"
+                        android:background="@color/bg_white"></FrameLayout>
+                    <RelativeLayout
+                        android:id="@+id/fund_first_title_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        >
+                        <TextView
+                            android:id="@+id/finc_ib_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:drawableLeft="@drawable/share_left_arrow"
+                            android:textSize="@dimen/text_size_13sp"
+                            android:text=""
+                            android:padding="15dp"
+                            android:layout_gravity="left|center_vertical"
+                            />
+                        <TextView
+                            android:id="@+id/tv_title"
+                            android:text="@string/finc_title_fundinvest_new"
+                            style="@style/llbt_titleText"
+                            android:textSize="@dimen/text_size_17sp"
+                            android:layout_width="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            />
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:id="@+id/finc_ib_top_share_btn"
+                                android:text=""
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:padding="@dimen/boc_space_between_30px"
+                                android:drawableLeft="@drawable/llbt_btn_share_black"
+                                android:visibility="gone"
+                                />
+                            <TextView
+                                android:id="@+id/finc_ib_top_right_btn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                android:padding="@dimen/boc_space_between_30px"
+                                android:text=""
+                                android:drawableRight="@drawable/share_more_small"
+                                />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/command_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/finc_recommend_bg"
+                    android:visibility="gone">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/boc_space_between_60px"
+                        android:src="@drawable/goldstore_war"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/fonts_black"
+                        android:textSize="@dimen/fonts_one_three"
+                        android:paddingLeft="@dimen/boc_space_between_26px"
+                        android:gravity="center"
+                        android:text="理财经理为您推荐了优秀产品，请"/>
+                    <TextView
+                        android:id="@+id/finc_recomend_link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/fonts_pink"
+                        android:textSize="@dimen/fonts_one_three"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:textStyle="bold"
+                        android:text="查看"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:gravity="right">
+                        <ImageView
+                            android:id="@+id/finc_recomend_cancle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:src="@drawable/goldstore_cancle"
+                            android:visibility="visible"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffff0000"
+        android:layout_gravity="right"
+        android:orientation="vertical">
+
+        <com.chinamworld.bocmbci.biz.finc.finc_p606.selectview.SelectTypeView
+            android:id="@+id/stv_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:clickable="true" />
+    </LinearLayout>
+
+</com.chinamworld.llbt.userwidget.SlipMenu.SlipDrawerLayout>

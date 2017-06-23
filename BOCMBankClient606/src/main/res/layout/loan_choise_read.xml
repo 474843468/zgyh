@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:layout_width="match_parent"
+            layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_step"
+        android:layout_gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/fill_padding_top" >
+
+            <TextView
+                android:id="@+id/tv_xuzhi_title"
+                style="@style/crcd_tv_common_left"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_five"
+                android:paddingRight="@dimen/dp_five"
+                android:text="@string/loan_choise_read_title"
+                android:textColor="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_xuzhi_title"
+                android:layout_marginTop="@dimen/fill_padding_top"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/fill_margin_left"
+                    android:paddingRight="@dimen/fill_margin_left" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/acc_financeic_trans_bankact"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/loan_choise_read_one"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <TextView
+                            android:id="@+id/loan_choise_input_loanType"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center"
+                            android:paddingLeft="0dp"
+                            android:textSize="@dimen/textsize_default" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/loan_choise_read_two"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <TextView
+                            android:id="@+id/loan_choise_read_two"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center"
+                            android:paddingLeft="0dp"
+                            android:textSize="@dimen/textsize_default" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/loan_choise_read_three"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <TextView
+                            android:id="@+id/loan_choise_read_three"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left|center"
+                            android:paddingLeft="0dp"
+                            android:singleLine="true"
+                            android:textSize="@dimen/textsize_default" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <ScrollView
+                    style="@style/scrollview_fill"
+                    android:layout_centerInParent="true"
+                    android:gravity="left"
+                    android:paddingBottom="@dimen/dp_five"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="0dp"
+                    android:paddingTop="@dimen/fill_margin_top" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/dp_five"
+                        android:paddingRight="@dimen/dp_five" >
+
+                        <TextView
+                            android:id="@+id/text_head"
+                            style="@style/crcd_common_tv"
+                            android:paddingLeft="0dp" />
+
+                        <TextView
+                            android:id="@+id/text_pro"
+                            style="@style/crcd_common_tv"
+                            android:paddingLeft="0dp" />
+
+                        <com.chinamworld.bocmbci.widget.LinearLayoutForListView
+                            android:id="@+id/loan_listView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/dp_five"
+                            android:paddingRight="@dimen/dp_five" />
+
+                        <TextView
+                            style="@style/crcd_tv_common_left"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/dp_five"
+                            android:paddingRight="@dimen/dp_five"
+                            android:text="@string/loan_read_foot" />
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/lastButton"
+                style="@style/btn_common_oneline"
+                android:background="@drawable/btn_blue_big"
+                android:text="@string/noaccept"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/sureButton"
+                style="@style/btn_common_oneline"
+                android:background="@drawable/btn_red_big"
+                android:text="@string/accept"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

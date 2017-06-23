@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 存款管理 我的定期存款 存单列表  选择账号页面 luqp -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/common_bottom_padding" >
+
+    <LinearLayout
+        android:id="@+id/ll_save_deal_type"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/layout_height"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/fill_input_prompt" >
+
+        <TextView
+            style="@style/textview_common_left"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="right"
+            android:paddingRight="@dimen/fill_padding_left"
+            android:text="@string/save_deal_type" />
+
+        <Spinner
+            android:id="@+id/dept_bankbook_spinner"
+            style="@style/textview_common"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_spinner"
+            android:gravity="left"
+            android:paddingLeft="@dimen/fill_padding_left" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/ll_save_deal_type"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/lv_acc_list"
+            style="@style/listviewcomm_fill_gray_divider"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="@dimen/common_row_margin_half"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:cacheColorHint="@color/transparent_00"
+            android:fadingEdge="none"
+            android:scrollbars="none" >
+        </ListView>
+    </RelativeLayout>
+
+</RelativeLayout>

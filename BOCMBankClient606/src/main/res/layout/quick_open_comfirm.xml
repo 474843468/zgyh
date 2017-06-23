@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:userProperty="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_Next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/common_bottom_padding"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnNext"
+            style="@style/bottombtn"
+            android:background="@drawable/btn_red_big_long"
+            android:text="@string/next" />
+    </LinearLayout>
+
+    <ScrollView
+        style="@style/listviewcomm_fill_haveDivider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_Next"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fill_margin_top" >
+
+                <TextView
+                    android:id="@+id/tv_titleTip"
+                    style="@style/confirm_info_textview_style"
+                    android:layout_gravity="center"
+                    android:text="@string/quickOpen_confirm_title" />
+            </FrameLayout>
+            <!-- 姓名 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:focusable="true"
+   				android:focusableInTouchMode="true"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="6"
+                    android:text="@string/acc_queryispayroll_name" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    style="@style/textview_common_right"
+                    android:layout_weight="4" />
+            </LinearLayout>
+
+            <!-- 性别 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="6"
+                    android:text="@string/bocinvt_eva_gender" />
+
+                <TextView
+                    android:id="@+id/tv_gender"
+                    style="@style/textview_common_right"
+                    android:layout_weight="4" />
+            </LinearLayout>
+
+            <!-- 证件类型 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="6"
+                    android:text="@string/bocinvt_eva_identitytype" />
+
+                <TextView
+                    android:id="@+id/tv_identitytype"
+                    style="@style/textview_common_right"
+                    android:layout_weight="4" />
+            </LinearLayout>
+
+            <!-- 证件号码 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="6"
+                    android:text="@string/bocinvt_eva_identityactnum" />
+
+                <TextView
+                    android:id="@+id/tv_identityactnum"
+                    style="@style/textview_common_right"
+                    android:layout_weight="4" />
+            </LinearLayout>
+
+            <!-- 手机号 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="6"
+                    android:text="@string/blpt_billpay_mobile" />
+
+                <TextView
+                    android:id="@+id/tv_mobile"
+                    style="@style/textview_common_right"
+                    android:layout_weight="4" />
+            </LinearLayout>
+
+            <!-- 银行账户 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="6"
+                    android:text="@string/third_openacc_acc" />
+
+                <TextView
+                    android:id="@+id/tv_acc"
+                    style="@style/textview_common_right"
+                    android:layout_weight="4" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_submitHint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/common_row_margin"
+                android:text="@string/quickOpen_submit_hint"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textsize_default"
+                android:visibility="gone" />
+
+            <!-- 手机交易码布局 -->
+
+            <LinearLayout
+                android:id="@+id/layout_sms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_common_left_three"
+                    android:layout_width="fill_parent"
+                    android:layout_weight="5.0"
+                    android:gravity="right"
+                    android:text="@string/smc"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.5"
+                    android:orientation="horizontal" >
+
+                    <cfca.mobile.sip.SipBox
+                        android:id="@+id/sip_sms"
+                        style="@style/edittext_inputNumber_fill"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/titlebackbtn_marginleft"
+                        android:layout_weight="3.5"
+                        android:gravity="center_vertical"
+                        android:maxLength="20" >
+                    </cfca.mobile.sip.SipBox>
+
+                    <Button
+                        android:id="@+id/smsbtn"
+                        style="@style/button_smscode"
+                        android:layout_marginRight="@dimen/layout_margin_top" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 动态口令布局 -->
+
+            <LinearLayout
+                android:id="@+id/layout_otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/comm_view_left"
+                    android:layout_weight="5.0"
+                    android:singleLine="true"
+                    android:text="@string/opt"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" />
+
+                <cfca.mobile.sip.SipBox
+                    android:id="@+id/sip_otp"
+                    style="@style/edittext_inputNumber_fill"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/layout_margin_top"
+                    android:layout_weight="3.5"
+                    android:gravity="center_vertical"
+                    android:maxLength="20" >
+                </cfca.mobile.sip.SipBox>
+            </LinearLayout>
+
+            <com.chinamworld.bocmbci.widget.UsbKeyText
+                android:id="@+id/sip_usbkey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                userProperty:MargRight="@dimen/layout_margin_top"
+                userProperty:ShowRate="10:7" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

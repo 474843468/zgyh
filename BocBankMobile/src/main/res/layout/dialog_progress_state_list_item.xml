@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="15dp">
+
+            <TextView
+                android:id="@+id/tv_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="人民币元"
+                android:textColor="#000"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_margin_account_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="保证金 1031 ****** 0000"
+                android:textColor="#666666"
+                android:textSize="@dimen/boc_text_size_small"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_state"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:padding="26dp"
+            android:src="@drawable/ic_fail"
+            android:visibility="gone"/>
+
+        <ProgressBar
+            android:id="@+id/pb_state"
+            style="@android:style/Widget.ProgressBar"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:indeterminateDrawable="@drawable/custom_progress_draw"
+            android:padding="26dp"
+            android:visibility="visible"/>
+    </LinearLayout>
+</FrameLayout>

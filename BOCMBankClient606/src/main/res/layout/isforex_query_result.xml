@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 外汇双向宝   成交状况查询结果页面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent" >
+	<include 
+	    android:id="@+id/isforex_query_cond"
+	    layout="@layout/isforex_query_condition"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    
+	    />
+    <RelativeLayout
+         
+        android:id="@+id/forex_query_result_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+
+        <LinearLayout
+            android:id="@+id/forex_query_result_condition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/img_bg_query_j"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/titlerightbtn_paddingtb" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin" >
+
+                    <TextView
+                        android:id="@+id/trade_jsCode"
+                        style="@style/textview_forex_prompt_message"
+                        android:gravity="left"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:hint="@string/isForex_vfgRegCurrency1" />
+
+                    <Button
+                        android:id="@+id/isforex_xiankaixianping"
+                        style="@style/bond_query_btn"
+                        android:layout_marginLeft="@dimen/fill_margin_top"
+                        android:layout_marginRight="@dimen/fill_margin_top"
+                        android:gravity="center"
+                        android:text="@string/isForex_xiankaixianping"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/times_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/trade_time"
+                        style="@style/textview_forex_prompt_message"
+                        android:gravity="left"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:hint="@string/acc_query_date" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/fill_padding_right" >
+
+                    <TextView
+                        style="@style/style_bond_tv_up_down"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="@string/down"/>
+
+                    <ImageView
+                        android:id="@+id/img_acc_query_back"
+                        style="@style/query_image_up_style"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:src="@drawable/img_arrow_gray_down" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_main"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/forex_query_result_condition"
+            android:layout_marginBottom="@dimen/fill_margin_bottom"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_left"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/listView_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_row_margin"
+                android:layout_weight="0"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/fill_padding_top"
+                android:paddingTop="@dimen/fill_padding_top" >
+
+                <TextView
+                    android:id="@+id/title_number"
+                    style="@style/bond_tv_15_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|center"
+                    android:text="@string/isForex_query_result2" />
+
+                <TextView
+                    android:id="@+id/title_code"
+                    style="@style/bond_tv_15_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/isForex_query_sellTag1" />
+
+                <TextView
+                    android:id="@+id/title_type"
+                    style="@style/bond_tv_15_gray"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/isForex_query_result1" />
+
+                <ImageView
+                    android:id="@+id/rate_gotoDetail"
+                    style="@style/rightbtn_jiantou"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:src="@drawable/right_arrow"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <ListView
+                    android:id="@+id/rate_listView"
+                    style="@style/listviewcomm_fill_gray_divider"
+                    android:paddingLeft="1dp"
+                    android:paddingRight="1dp" >
+                </ListView>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

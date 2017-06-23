@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nsv_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_main_bg_color">
+
+  <LinearLayout
+      android:id="@+id/ll_content"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+    <!-- 头像区域 -->
+    <com.boc.bocsoft.mobile.bocmobile.buss.system.mine.ui.view.MineHeaderView
+        android:id="@+id/view_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- item 点击区域-->
+    <LinearLayout
+        android:id="@+id/ll_item1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_180px"
+        android:layout_marginTop="@dimen/boc_space_between_20px"
+        android:orientation="horizontal">
+      <include
+          layout="@layout/boc_mine_item_layout"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+      />
+      <include
+          layout="@layout/boc_mine_item_layout"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_marginLeft="1dp"
+          android:layout_weight="1"
+      />
+      <include
+          layout="@layout/boc_mine_item_layout"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_marginLeft="1dp"
+          android:layout_weight="1"
+      />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_item2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_180px"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal">
+      <include
+          layout="@layout/boc_mine_item_layout"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+      />
+      <include
+          layout="@layout/boc_mine_item_layout"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_marginLeft="1dp"
+          android:layout_weight="1"
+      />
+      <include
+          layout="@layout/boc_mine_item_layout"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_marginLeft="1dp"
+          android:layout_weight="1"
+      />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_item3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_180px"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal"
+    >
+      <include
+          layout="@layout/boc_mine_item_layout"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+      />
+      <include
+          layout="@layout/boc_mine_item_layout"
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_marginLeft="1dp"
+          android:layout_weight="1"
+      />
+      <View
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_marginLeft="1dp"
+          android:layout_weight="1"
+          android:background="#ffffffff"
+      />
+    </LinearLayout>
+
+    <View android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_76px"
+       />
+
+    <TextView
+        android:id="@+id/bt_logout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_button_height_96px"
+        android:text="退出登录"
+        android:textColor="@color/boc_text_color_red"
+        android:textSize="@dimen/boc_text_size_common"
+        android:textStyle="bold"
+        android:background="@color/boc_common_cell_color"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/boc_space_between_20px"
+        android:gravity="center"
+        android:textColor="@color/boc_text_color_light_gray"
+        android:textSize="@dimen/boc_text_size_small"
+        android:layout_marginTop="@dimen/boc_space_between_8px"
+    />
+
+  </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

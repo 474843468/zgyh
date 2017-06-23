@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/boc_popdialog_width"
+    android:layout_height="wrap_content"
+    android:background="@color/boc_main_bg_color"
+    android:orientation="vertical"
+    android:layout_gravity="center">
+
+    <!-- 头部title部分 -->
+        <TextView
+            android:id="@+id/popdialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_popdialog_title_height"
+            android:text=""
+            android:textSize="@dimen/boc_text_size_little_big"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:gravity="center"/>
+
+    <!-- 中间内容部分 -->
+   <!--     <view
+            android:id="@+id/popdialog_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/boc_popdialog_180px">
+        </view>-->
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:minHeight="@dimen/boc_popdialog_180px"
+           android:background="@color/boc_text_color_green"
+           android:orientation="vertical">
+           <TextView
+           android:id="@+id/popdialog_content_simple"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:gravity="center|left"
+           android:textColor="@color/boc_text_color_gray"
+               android:visibility="gone"
+           android:textSize="@dimen/boc_text_size_common"/>
+           <LinearLayout
+               android:id="@+id/popdialog_content"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@color/boc_text_color_red"
+
+               android:orientation="vertical">
+
+           </LinearLayout>
+
+       </LinearLayout>
+
+        <!-- 底部按钮部分 -->
+
+        <RelativeLayout
+            android:id="@+id/popdialog_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_popdialog_bottom_height"
+            >
+            <LinearLayout
+                android:id="@+id/popdialog_bottom2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_popdialog_bottom_height"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:background="#ff0000"
+                >
+
+                <TextView
+                    android:id="@+id/tv_bottom2_left"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="xx"
+                    android:textColor="@color/boc_text_color_gray"
+                    android:textSize="@dimen/boc_text_size_little_big"
+                    android:gravity="center"/>
+
+                <View
+                    android:layout_width="@dimen/boc_divider_1px"
+                    android:layout_height="match_parent"
+
+                    android:background="@color/boc_main_bg_color"/>
+                <TextView
+                    android:id="@+id/tv_bottom2_right"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="确认"
+                    android:textColor="@color/boc_text_color_red"
+                    android:textSize="@dimen/boc_text_size_little_big" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/popdialog_bottom1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:background="#ff00ff">
+
+                <TextView
+                    android:id="@+id/tv_bottom1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="复制复制"
+                    android:textSize="@dimen/boc_text_size_little_big"
+                    android:textColor="@color/boc_text_color_red"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </RelativeLayout>
+</LinearLayout>

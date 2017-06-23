@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shap_for_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/contract_title_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_for" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_five"
+                android:layout_marginTop="@dimen/dp_five"
+                android:gravity="center_vertical" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/firstsize"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/tvFirst"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_one_zero"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/secondsize"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_one_zero"
+                    android:text="@string/ccbbank"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" />
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:fadingEdge="none"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_head"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_middle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_foot"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_five"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/common_row_margin"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <CheckBox
+                            android:id="@+id/agree_cb"
+                            style="@style/check_box_style"
+                            android:layout_width="@dimen/btn_connect_height"
+                            android:layout_height="@dimen/btn_connect_height"
+                            
+                            android:gravity="center" />
+
+                        <TextView
+                            android:id="@+id/agree_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:paddingLeft="@dimen/dp_five"
+                            android:text="@string/dept_fiexibleinterest_agree"
+                            android:textSize="@dimen/textsize_default" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fill_margin_left"
+                        android:layout_marginRight="@dimen/fill_margin_right"
+                        android:orientation="horizontal" >
+
+                        <CheckBox
+                            style="@style/check_box_style"
+                            android:layout_width="@dimen/btn_connect_height"
+                            android:layout_height="@dimen/btn_connect_height"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:visibility="invisible" />
+
+                        <TextView
+                            android:id="@+id/tips_warn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/finc_details_star_width"
+                            android:text="@string/please_check"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/textsize_default"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_btnBotom"
+            style="@style/linnerlayout_common"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_cancel"
+                style="@style/btn_common_oneline"
+                android:background="@drawable/btn_gray"
+                android:text="@string/noaccept"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btn_corfirm"
+                style="@style/btn_common_oneline"
+                android:background="@drawable/btn_red_big"
+                android:text="@string/accept" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

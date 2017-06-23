@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 转账记录管理 详情：  TransRecordDetailActivity -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/stepbar"
+        layout="@layout/step_title_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/stepbar"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/titleText_step2"
+            android:layout_width="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/detail"
+            android:textColor="@color/black"
+            android:visibility="invisible" />
+
+        <ScrollView style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:id="@+id/btn_transet_mytransfer"
+                style="@style/tran_body_ll"
+                android:paddingBottom="@dimen/fill_margin_top"
+                android:paddingLeft="@dimen/dp_five"
+                android:paddingRight="@dimen/dp_five" >
+
+                <!-- 转入账户 -->
+
+                <LinearLayout
+                    android:id="@+id/tran_seqbat_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/tran_tuihui_detail_in" />
+
+                    <TextView
+                        android:id="@+id/tv_payerActno"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+                <!-- 转出账户 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/tran_tuihui_detail_out" />
+
+                    <TextView
+                        android:id="@+id/tv_payeeActno"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+                <!-- 退汇金额 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/tran_tuihui_detail_account" />
+
+                    <TextView
+                        android:id="@+id/tv_reexchangeAmount"
+                        style="@style/textview_common_right" 
+                      
+                        android:textColor="@color/red" />
+                </LinearLayout>
+                <!-- 退汇原因-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/tran_tuihui_detail_reexchangeinfo" />
+
+                    <TextView
+                        android:id="@+id/tv_reexchangeInfo"
+                        style="@style/textview_common_right"
+                         android:ellipsize="middle" />
+                </LinearLayout>
+                <!-- 附言-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/tran_tuihui_detail_remittanceinfo" />
+
+                    <TextView
+                        android:id="@+id/tv_remittanceInfo"
+                        style="@style/textview_common_right" 
+                        android:ellipsize="middle"  />
+                </LinearLayout>
+                <!-- 退汇入账日期 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/tran_tuihui_detail_date" />
+
+                    <TextView
+                        android:id="@+id/tv_reexchangeDate"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+                <!--退汇交易状态-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/tran_tuihui_detail_status" />
+
+                    <TextView
+                        android:id="@+id/tv_reexchangeState"
+                        style="@style/textview_common_right"
+                        />
+                </LinearLayout>
+               
+            </LinearLayout> 
+        </ScrollView>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/left_img_width"
+        android:layout_marginTop="@dimen/layout_margin_top" >
+
+        <TextView
+         
+            style="@style/tran_card_title"
+            android:text="@string/tran_tuihui_detail" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

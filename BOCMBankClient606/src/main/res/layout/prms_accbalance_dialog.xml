@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账户贵金属 重设贵金属账户 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/transparent_00"
+    >
+<RelativeLayout 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/fill_margin_left"
+    android:layout_marginRight="@dimen/fill_padding_right"
+    android:layout_marginTop="@dimen/fill_margin_top"
+    android:background="@drawable/message_dialog_bg"
+    android:paddingBottom="@dimen/contenttab_marginbottom"
+    android:layout_centerInParent="true" >
+
+    <ImageView
+        android:id="@+id/img_exit_accdetail"
+        style="@style/Finc_Dialog_Close"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_exit_accdetail"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            style="@style/linnerlayout_common"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="left"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_prms_prompt_dialog_message"
+                android:text="@string/prms_acc_prmsacc"
+                />
+
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/textview_prms_prompt_dialog_info"
+                android:textColor="@color/fonts_pink"
+                 />
+        </LinearLayout>
+
+        <LinearLayout style="@style/linnerlayout_common" >
+
+            <TextView
+                style="@style/textview_prms_prompt_dialog_message"
+                android:text="@string/prms_acctype"
+                />
+
+            <TextView
+                android:id="@+id/prms_acctype"
+                style="@style/textview_prms_prompt_dialog_info"/>
+        </LinearLayout>
+
+        <LinearLayout style="@style/linnerlayout_common" >
+
+            <TextView
+              style="@style/textview_prms_prompt_dialog_message"
+                android:text="@string/prms_accalias"
+                />
+
+            <TextView
+                android:id="@+id/prms_accalias"
+                style="@style/textview_prms_prompt_dialog_info"
+                android:paddingRight="@dimen/common_row_margin"
+               />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal" >
+            style="@style/textview_forex_button_cell"
+            <Button
+                android:id="@+id/reset"
+                style="@style/bottombtn"
+                android:background="@drawable/selector_btn_blue"
+                android:text="@string/prms_acc_resetacc"
+                android:textColor="@color/btn_white"
+
+                android:textSize="@dimen/textsize_default" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+</RelativeLayout>

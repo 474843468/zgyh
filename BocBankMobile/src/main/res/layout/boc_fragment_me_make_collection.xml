@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/sv_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F0EFF5">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F0EFF5"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/boc_space_between_130px"
+        android:paddingLeft="@dimen/boc_space_between_22px"
+        android:paddingRight="@dimen/boc_space_between_22px">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/boc_space_between_22px"
+            android:background="@drawable/boc_button_bg_gray_no_stroke"
+            android:orientation="vertical">
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                android:id="@+id/ecw_choose_payee_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="1.5dp"
+                app:editChoiceContent="请选择"
+                app:editChoiceName="收款账户"/>
+
+            <include layout="@layout/boc_divide_line"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_104px">
+
+                <TextView
+                    android:id="@+id/tv_textview1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/boc_space_between_32px"
+                    android:text="收款人手机号"
+                    android:textColor="#000"
+                    android:textSize="@dimen/boc_text_size_common"/>
+
+                <TextView
+                    android:id="@+id/tv_payee_phone_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="34dp"
+                    android:background="@null"
+                    android:text="000 0000 0000"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/boc_text_size_common"
+                    />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/boc_space_between_22px"
+            android:background="@drawable/boc_button_bg_gray_no_stroke"
+            android:orientation="vertical"
+            android:padding="1.5dp">
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                android:id="@+id/ecw_receipt_way"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:editChoiceContent="人均额收"
+                app:editChoiceName="转账方式"/>
+
+            <include layout="@layout/boc_divide_line"/>
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputWidget
+                android:id="@+id/emiw_average_amount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:id="@+id/ll_total_amount_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputWidget
+                    android:id="@+id/emiw_pay_total_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <include layout="@layout/boc_divide_line"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/boc_space_between_104px"
+                    android:background="@android:color/white"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="128dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/boc_space_between_32px"
+                        android:text="收款人数"
+                        android:textColor="@color/boc_text_color_dark_gray"
+                        android:textSize="@dimen/boc_text_size_common"
+                        />
+
+                    <EditText
+                        android:id="@+id/et_payer_num"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/boc_account_input_hint"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/boc_text_color_red"
+                        android:textColorHint="@color/boc_text_color_light_gray"
+                        android:textSize="@dimen/boc_text_size_common"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/boc_space_between_22px"
+            android:background="@drawable/boc_button_bg_gray_no_stroke"
+            android:orientation="vertical"
+            android:padding="1.5dp">
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                android:id="@+id/ecw_choose_payer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:editChoiceContent="请选择"
+                app:editChoiceName="付款人"/>
+
+            <GridView
+                android:id="@+id/gv_payer_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:horizontalSpacing="@dimen/boc_space_between_14px"
+                android:numColumns="3"
+                android:paddingBottom="@dimen/boc_space_between_32px"
+                android:paddingLeft="@dimen/boc_space_between_32px"
+                android:paddingRight="@dimen/boc_space_between_30px"
+                android:verticalSpacing="@dimen/boc_space_between_16px"></GridView>
+
+            <include layout="@layout/boc_divide_line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/boc_space_between_32px"
+                    android:text="附言"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="12sp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/et_remark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:hint="选填"
+                    android:textColor="#999999"
+                    android:textColorHint="@color/boc_text_color_light_gray"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/boc_space_between_32px"
+            android:layout_marginTop="@dimen/boc_space_between_80px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/boc_space_between_32px"
+                android:text="收款总额"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_common"/>
+
+            <TextView
+                android:id="@+id/tv_total_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/boc_space_between_8px"
+                android:background="@null"
+                android:text="0.00"
+                android:textColor="@color/boc_text_color"
+                android:textSize="@dimen/boc_text_size_common"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="元"
+                android:textColor="#999999"
+                android:textSize="@dimen/boc_text_size_common"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_next_step"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_88px"
+            android:background="@drawable/boc_button_bg_blue"
+            android:gravity="center"
+            android:text="下一步"/>
+
+    </LinearLayout>
+</ScrollView>

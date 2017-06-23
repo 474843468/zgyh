@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 资产管理，查询框 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/style_match_wrap"
+    android:orientation="vertical" 
+    android:padding="10dp"
+    android:background="#F2F2F2"
+    >
+    <RadioGroup
+        android:id="@+id/query_radioGroup"
+        style="@style/style_match_wrap"
+        android:orientation="horizontal" >
+        <RadioButton
+            android:id="@+id/query_rbtn_1"
+            style="@style/radioButtonLeft"
+            android:layout_height="@dimen/step_title_height"
+            android:text="@string/assetmanager_capital_transfer_2"
+            android:textSize="@dimen/textsize_one_two" />
+        <RadioButton
+            android:id="@+id/query_rbtn_2"
+            style="@style/radioButtonMiddle"
+            android:layout_height="@dimen/step_title_height"
+            android:text="@string/assetmanager_capital_transfer_3"
+            android:textSize="@dimen/textsize_one_two" />
+        <RadioButton
+            android:id="@+id/query_rbtn_3"
+            style="@style/radioButtonRight"
+            android:layout_height="@dimen/step_title_height"
+            android:text="@string/assetmanager_capital_transfer_4"
+            android:textSize="@dimen/textsize_one_two" />
+    </RadioGroup>
+    
+    <FrameLayout 
+        style="@style/style_match_wrap"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        >
+        <com.chinamworld.bocmbci.biz.assetmanager.capitalmanager.DashedView 
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            />
+	    <TextView 
+	        android:id="@+id/query_tv_1"
+	        style="@style/style_wrap_wrap"
+	        android:textSize="@dimen/textsize_default"
+	        android:textColor="@color/gray"
+	        android:layout_gravity="center"
+	        android:background="#F2F2F2"
+	        android:paddingLeft="15dp"
+	        android:paddingRight="15dp"
+	        android:singleLine="true"
+	        android:text="@string/assetmanager_capital_transfer_5"
+	        />
+    </FrameLayout>
+    
+    <LinearLayout style="@style/style_match_wrap">
+        <RelativeLayout style="@style/style_with_weight_1"
+            android:layout_marginRight="10dp"
+            >
+        <include 
+            android:id="@+id/include_tv_sp_1"
+            layout="@layout/assetmanager_tv_sp_layout"
+            />
+        </RelativeLayout>
+        <RelativeLayout style="@style/style_with_weight_1"
+            android:layout_marginLeft="10dp"
+            >
+        <include 
+            android:id="@+id/include_tv_sp_2"
+            layout="@layout/assetmanager_tv_sp_layout"
+            />
+        </RelativeLayout>
+    </LinearLayout>
+    
+    <Button 
+        android:id="@+id/btn_query"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/tran_button_red"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="@string/assetmanager_capital_transfer_6"
+        />
+    
+    <LinearLayout 
+        android:id="@+id/layout_recive"
+        style="@style/style_wrap_wrap"
+        android:layout_gravity="right"
+        android:gravity="center_vertical"
+        android:layout_margin="5dp"
+        >
+        <TextView 
+            style="@style/style_wrap_wrap"
+            android:textColor="@color/gray"
+            android:textSize="13sp"
+            android:text="@string/up"
+            />
+        <ImageView 
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/plps_adress_gray_1"
+            android:contentDescription="@string/app_name"
+            />
+    </LinearLayout>
+    
+
+</LinearLayout>

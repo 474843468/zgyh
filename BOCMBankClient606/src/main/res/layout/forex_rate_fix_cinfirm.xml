@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 外汇行情  快速交易 定期交易确认信息页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_sure"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_marginTop="@dimen/fill_margin_top" >
+
+        <Button
+            android:id="@+id/sureButton"
+            style="@style/bottombtn_new"
+            android:text="@string/confirm" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_sure"
+        android:layout_below="@+id/ll_step"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView
+            style="@style/scrollview_comm_havemarginbutton"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/forex_rate_currency_sure"
+                        android:textColor="@color/gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/left_text"
+                            style="@style/bond_tv_15_left"
+                            android:layout_weight="6"
+                            android:text="@string/forex_rate_currency_type"
+                            />
+
+                        <TextView
+                            android:id="@+id/forex_rate_currency_type"
+                            style="@style/bond_tv_15_right"
+                            android:layout_gravity="center"
+                            android:layout_weight="4"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/fix_limitRate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/bond_tv_15_left"
+                            android:layout_weight="6"
+                            android:text="@string/forex_rate_currency_limitRate"
+                            />
+
+                        <TextView
+                            android:id="@+id/forex_rate_currency_limitRate"
+                            style="@style/bond_tv_15_right"
+                            android:layout_weight="4"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/weiTuoRate_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/bond_tv_15_left"
+                            android:layout_weight="6"
+                            android:text="@string/forex_trade_zhiSun_weituo"
+                            />
+
+                        <TextView
+                            android:id="@+id/currency_weiTuoRate"
+                            style="@style/bond_tv_15_right"
+                            android:layout_weight="4"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/zhiSunRate_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/bond_tv_15_left"
+                            android:layout_weight="6"
+                            android:text="@string/forex_trade_two_zhisun"
+                            />
+
+                        <TextView
+                            android:id="@+id/currency_zhiSunRate"
+                            style="@style/bond_tv_15_right"
+                            android:layout_weight="4"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/huoLiRate_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/bond_tv_15_left"
+                            android:layout_weight="6"
+                            android:text="@string/forex_trade_two_huoli"
+                            />
+
+                        <TextView
+                            android:id="@+id/currency_huoLiRate"
+                            style="@style/bond_tv_15_right"
+                            android:layout_weight="4"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/loseRate_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/bond_tv_15_left"
+                            android:layout_weight="6"
+                            android:text="@string/forex_buy_pursuitOfSpread"
+                            />
+
+                        <TextView
+                            android:id="@+id/currency_loseRate"
+                            style="@style/bond_tv_15_right"
+                            android:layout_weight="4"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/times_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/bond_tv_15_left"
+                            android:layout_weight="6"
+                            android:text="@string/forex_trade_zhiSun_times"
+                            />
+
+                        <TextView
+                            android:id="@+id/currency_times"
+                            style="@style/bond_tv_15_right"
+                            android:layout_weight="4"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/bond_tv_15_left"
+                            android:layout_weight="6"
+                            android:text="@string/forex_rate_fix_accNumber"
+                            />
+
+                        <TextView
+                            android:id="@+id/forex_rate_fix_accNumber"
+                            style="@style/bond_tv_15_right"
+                            android:layout_weight="4"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/bond_tv_15_left"
+                            android:layout_weight="6"
+                            android:text="@string/forex_rate_fix_number"
+                            />
+
+                        <TextView
+                            android:id="@+id/forex_rate_fix_number"
+                            style="@style/bond_tv_15_right"
+                            android:layout_weight="4"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/bond_tv_15_left"
+                            android:layout_weight="6"
+                            android:text="@string/forex_trade_buy1"
+                            />
+
+                        <TextView
+                            android:id="@+id/forex_trade_buy1"
+                            style="@style/bond_tv_15_right"
+                            android:layout_weight="4"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/current_rate_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="6" >
+
+                            <TextView
+                                style="@style/bond_tv_15_left"
+                                android:text="@string/forex_rate_currency_rate"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/forex_rate_currency_rate"
+                                style="@style/bond_tv_15_right"
+                                android:layout_weight="1"
+                                />
+
+                            <TextView
+                                style="@style/textview_common_right"
+                                android:gravity="center"
+                                android:text="@string/forex_trade_curr_info"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/textsize_default" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

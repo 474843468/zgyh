@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_Next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/common_bottom_padding"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnNext"
+            style="@style/bottombtn"
+            android:background="@drawable/btn_red_big_long"
+            android:text="@string/next" />
+    </LinearLayout>
+
+    <ScrollView
+        style="@style/listviewcomm_fill_haveDivider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_Next"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:background="@color/whitefornet"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="6dip"
+                android:paddingTop="6dip" >
+
+                <TextView
+                    style="@style/comm_view_left"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/remittance_info_input_remitter_tip"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" />
+            </LinearLayout>
+
+            <!-- 扣款账户 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/remittance_template_detail_swiftAccountNumber" />
+
+                <TextView
+                    android:id="@+id/tv_swiftAccountNumber"
+                    style="@style/textview_common_right" />
+
+                <Button
+                    android:id="@+id/btn_accDetail"
+                    android:layout_width="@dimen/query_btn_width"
+                    android:layout_height="@dimen/step_title_height"
+                    android:layout_marginRight="@dimen/fill_margin_top"
+                    android:background="@drawable/btn_chaxun_bg"
+                    android:drawablePadding="-10dp"
+                    android:text="@string/boci_acctdetail_titlelist"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="您可以点击 "
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/tv_there"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="这里"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text=" 购买外汇"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" />
+            </LinearLayout>
+
+            <!-- 汇款人名称 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/remittance_template_detail_payeeEnName" />
+
+                <TextView
+                    android:id="@+id/tv_remittorCnName"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <!-- 汇款人名称（英文或拼音） -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/remittance_template_detail_remittorName" />
+
+                <TextView
+                    android:id="@+id/tv_remittorName"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <!-- 汇款人地址 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/remittance_template_detail_remittorAddress" />
+
+                <TextView
+                    android:id="@+id/tv_remittorAddress"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <!-- 汇款人邮编 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/remittance_template_detail_remittersZip" />
+
+                <TextView
+                    android:id="@+id/tv_remittersZip"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <!-- 联系电话 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/remittance_template_detail_payerPhone" />
+
+                <TextView
+                    android:id="@+id/tv_payerPhone"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:background="@color/whitefornet"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="6dip"
+                android:paddingTop="6dip" >
+
+                <TextView
+                    style="@style/comm_view_left"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/remittance_info_input_payee_tip"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" />
+            </LinearLayout>
+
+            <!-- 收款地区 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/remittance_template_detail_gatheringArea" />
+
+                <TextView
+                    android:id="@+id/tv_gatheringArea"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <!-- 收款人常驻国家（地区） -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/remittance_template_detail_payeePermanentCountry" />
+
+                <TextView
+                    android:id="@+id/tv_payeePermanentCountry"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <!-- 收款人名称 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/remittance_template_detail_payeeEnName" />
+
+                <TextView
+                    android:id="@+id/tv_payeeEnName"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <!-- 收款人地址 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/remittance_template_detail_payeeEnAddress" />
+
+                <TextView
+                    android:id="@+id/tv_payeeEnAddress"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <!-- 收款人账号 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/remittance_template_detail_payeeActno" />
+
+                <TextView
+                    android:id="@+id/tv_payeeActno"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <!-- 收款银行SWIFT代码 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/remittance_template_detail_payeeBankSwift" />
+
+                <TextView
+                    android:id="@+id/tv_payeeBankSwift"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <!-- 收款银行全称 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/remittance_template_detail_payeeBankName" />
+
+                <TextView
+                    android:id="@+id/tv_payeeBankName"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <!-- 收款行行号 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/remittance_template_detail_payeeBankNum" />
+
+                <TextView
+                    android:id="@+id/tv_payeeBankNum"
+                    style="@style/textview_common_right" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_input3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

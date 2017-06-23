@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:scrollbars="none">
+    <!--赎回-确认界面-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/boc_common_bg_color"
+        android:layout_marginTop="@dimen/boc_space_between_16px"
+        android:orientation="vertical">
+        <!--赎回份额-头部-->
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableHead
+            android:id="@+id/fund_redeem_confirm_head_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailContentView
+            android:id="@+id/fund_redeem_confirm_detail_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="如果您申请赎回的基金当日被赎回的份额超出该支基金总份额的10%时，您的赎回申请不能成功执行，请您选择"
+            android:layout_marginLeft="@dimen/boc_space_between_50px"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:layout_marginTop="@dimen/boc_space_between_30px"
+            android:layout_marginBottom="@dimen/boc_space_between_30px"
+            android:textColor="@color/boc_text_color_common_gray"
+            android:textSize="@dimen/boc_text_size_small"
+            />
+
+        <!--确认按钮-->
+        <Button
+            android:id="@+id/fund_redeem_confirm_bt"
+            style="@style/BocButton.BocPrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:text="@string/boc_common_sure"
+            android:layout_marginTop="@dimen/boc_space_between_40px"
+            android:layout_marginRight="@dimen/boc_space_between_16px"
+            android:layout_marginLeft="@dimen/boc_space_between_16px"
+            android:textSize="@dimen/boc_text_size_common" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_btnBotom"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/confirm_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_one_zero"
+                android:gravity="center" />
+
+            <ScrollView style="@style/scrollview_comm" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <com.chinamworld.bocmbci.userwidget.LabelTextView
+                        android:id="@+id/ltv_interestaccnum"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_five"
+                        custom:labelText="签约账户：" />
+
+                    <com.chinamworld.bocmbci.userwidget.LabelTextView
+                        android:id="@+id/ltv_interestproducttype"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_five"
+                        custom:labelText="签约类型：" />
+
+                    <com.chinamworld.bocmbci.userwidget.LabelTextView
+                        android:id="@+id/ltv_beginAmount_begintime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_five"
+                        custom:labelText="起点金额：/起存期：" />
+
+                    <com.chinamworld.bocmbci.userwidget.LabelTextView
+                        android:id="@+id/ltv_Limit_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_five"
+                        custom:labelText="存款金额不低于起存金额最低天数要求：/起存期存款总金额最低要求：" />
+
+                    <!--
+                       <com.chinamworld.bocmbci.userwidget.LabelTextView
+                        android:id="@+id/ltv_beginAmountDays"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:labelText="已持有天数：" />
+                    -->
+ 						<TextView
+                        android:id="@+id/Limit_date_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_one_zero"
+                        android:layout_marginRight="@dimen/dp_one_zero"
+                        android:layout_marginTop="@dimen/dp_five" 
+                        android:textColor="@color/red"
+                        android:visibility="gone"/>
+                    <com.chinamworld.bocmbci.userwidget.LabelTextView
+                        android:id="@+id/ltv_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_five"
+                        custom:labelText="协议期限：" />
+
+                    <!--
+                         <com.chinamworld.bocmbci.userwidget.LabelTextView
+                        android:id="@+id/ltv_markettype"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        custom:labelText="结息类型：" />
+                    -->
+
+                    <TextView
+                        android:id="@+id/tv_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_two_zero"
+                        android:layout_marginRight="@dimen/dp_two_zero"
+                        android:layout_marginTop="@dimen/dp_five" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_btnBotom"
+            style="@style/linnerlayout_common"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_cancel"
+                style="@style/btn_common_oneline"
+                android:background="@drawable/btn_gray"
+                android:text="@string/cancle"
+                android:textColor="@color/black" />
+
+            <Button
+                android:id="@+id/btn_corfirm"
+                style="@style/btn_common_oneline"
+                android:background="@drawable/btn_red_big"
+                android:text="@string/confirm" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

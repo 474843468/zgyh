@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/boc_common_cell_color"
+    android:descendantFocusability="blocksDescendants">
+
+    <ImageView
+        android:id="@+id/btn_checkbox"
+        android:layout_width="@dimen/boc_space_between_46px"
+        android:layout_height="@dimen/boc_space_between_46px"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/boc_space_between_30px"
+        android:layout_marginRight="@dimen/boc_space_between_20px"
+        android:background="@drawable/boc_bg_check_image"
+        android:state_selected="false"/>
+
+    <TextView
+        android:id="@+id/tv_todate"
+        style="@style/tv_small"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/btn_checkbox"
+        android:paddingTop="@dimen/boc_space_between_24px"
+        android:textStyle="bold"
+        android:textColor="@color/boc_text_color_dark_gray"
+        tools:text="@string/boc_pledge_deposit_todate"/>
+
+    <TextView
+        android:id="@+id/tv_period"
+        style="@style/tv_small"
+        android:layout_below="@id/tv_todate"
+        android:layout_marginTop="@dimen/boc_space_between_5px"
+        android:layout_toRightOf="@id/btn_checkbox"
+        android:textColor="@color/boc_text_color_common_gray"
+        android:paddingBottom="@dimen/boc_space_between_20px" />
+
+    <TextView
+        android:id="@+id/tv_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/boc_text_size_common"
+        android:layout_alignBottom="@id/tv_period"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/boc_text_color_dark_gray"
+        android:paddingRight="@dimen/boc_space_between_26px"/>
+
+    <TextView
+        android:id="@+id/tv_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_money"
+        android:layout_toLeftOf="@id/tv_money"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/boc_text_size_common"
+        android:textStyle="bold"
+        android:paddingRight="@dimen/boc_space_between_18px"
+        tools:text="@string/boc_finance_account_transfer_recharge_max_money"/>
+
+    <include layout="@layout/boc_divide_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_divider_1px"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

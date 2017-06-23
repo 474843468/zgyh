@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 基金 行情单个基金详情页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/common_bottom_padding" >
+
+    <RelativeLayout
+        android:id="@+id/loan_query_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:layout_above="@id/layout1"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_loan_query_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dp_five"
+                android:paddingTop="@dimen/dp_five" >
+
+                <RadioButton
+                    android:id="@+id/product_button"
+                    style="@style/new606_radioButtonLeft"
+                    android:layout_height="@dimen/dp_for_zero"
+                    android:text="产品属性"
+                    android:checked="true"
+                    android:textSize="@dimen/textsize_one_two" />
+
+                <RadioButton
+                    android:id="@+id/by_button"
+                    style="@style/new606_radioButtonMid"
+                    android:layout_height="@dimen/dp_for_zero"
+                    android:text="购买属性"
+                    android:textSize="@dimen/textsize_one_two" />
+
+                <RadioButton
+                    android:id="@+id/redeem_button"
+                    style="@style/new606_radioButtonRight"
+                    android:layout_height="@dimen/dp_for_zero"
+                    android:text="赎回属性"
+                    android:textSize="@dimen/textsize_one_two" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/body_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/rl_loan_query_title" >
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/finc_buy"
+                style="@style/btn_common_oneline_left"
+                android:text="@string/finc_buy"
+                 />
+
+            <Button
+                android:id="@+id/finc_invesment"
+                style="@style/btn_common_oneline_right"
+                android:text="@string/finc_inves"
+                 />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/titleDetail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_details_title_height"
+        android:layout_marginTop="@dimen/common_details_title_margintop"
+        android:visibility="gone" >
+
+        <TextView
+            android:layout_width="@dimen/common_details_title_width"
+            android:layout_height="@dimen/common_details_title_height"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_title"
+            android:gravity="center"
+            android:text="@string/finc_funddetail"
+            android:textSize="@dimen/textsize_default" />
+    </RelativeLayout>
+
+</RelativeLayout>

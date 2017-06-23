@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<HTML>
+ <HEAD>
+ <meta charset="utf-8" />
+ <title>HTML5 SIP DEMO </title>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+
+<link href="Keyboard/keyboard.css" rel="stylesheet" type="text/css"/>
+     <style>
+         body, html {
+             -webkit-user-select: none;
+             -moz-user-select: none;
+             -ms-user-select: none;
+             user-select: none;
+         }
+     </style>
+<SCRIPT>
+function log(msg) {
+    var timestamp = Date.now();
+    var p = document.getElementById("log");
+    p.innerHTML = timestamp + " " + msg + "\n" + p.innerHTML;
+}
+</SCRIPT>
+<script type="text/javascript" src="sip.test.js"></script>
+
+<SCRIPT>
+    var completeKeyboard = null;
+    var numberKeyboard = null;
+    function doneCallback(sipBoxId) {
+        log(sipBoxId);
+    }
+    function initInput() {
+        initCompleteKeyboard();
+        initNumberKeyboard();
+        initSipBoxComplete("SIPBox1");
+        initSipBoxComplete("SIPBox2");
+        initSipBoxNum("SIPBox3");
+    }
+
+    function setUpEvent(elem, eventType, handler) {
+        return (elem.attachEvent ? elem.attachEvent("on" + eventType, handler)
+                : ((elem.addEventListener) ? elem.addEventListener(eventType, handler, false) : null));
+    }
+
+    function initCompleteKeyboard() {
+        if(completeKeyboard == null) {
+            completeKeyboard = new CFCAKeyboard("CompleteKeyboard", KEYBOARD_TYPE_COMPLETE);
+        }
+        completeKeyboard.setDoneCallback(doneCallback);
+        var serverRandom = document.getElementById("serverRandom").value;
+        // 安全控件1和2需要绑定到全键盘
+        completeKeyboard.bindInputBox("SIPBox1");
+        if(CFCA_OK != completeKeyboard.setServerRandom(serverRandom)) alert("setServerRandom error");
+        completeKeyboard.bindInputBox("SIPBox2");
+        if(CFCA_OK != completeKeyboard.setServerRandom(serverRandom)) alert("setServerRandom error");
+        completeKeyboard.hideKeyboard();
+    }
+
+    function initNumberKeyboard() {
+        if(numberKeyboard == null) {
+            numberKeyboard = new CFCAKeyboard("NumberKeyboard", KEYBOARD_TYPE_DIGITAL);
+        }
+        var x = document.getElementById("SIPBox3");
+        numberKeyboard.bindInputBox(x || "SIPBox3");
+        numberKeyboard.hideKeyboard();
+        var serverRandom = document.getElementById("serverRandom").value;
+        if(CFCA_OK != numberKeyboard.setServerRandom(serverRandom)) alert("setServerRandom error");
+    }
+
+    function initSipBoxComplete(sipboxId) {
+        var sipBox1 = document.getElementById(sipboxId);
+        setUpEvent(sipBox1, "focus",function(event) {
+                sipBox1.blur();
+                completeKeyboard.bindInputBox(sipboxId);
+                numberKeyboard.hideKeyboard();
+                completeKeyboard.showKeyboard();
+        });
+    }
+    function initSipBoxNum(sipboxId) {
+        var sipBox2 = document.getElementById(sipboxId);
+        setUpEvent(sipBox2, "focus",function(event) {
+                sipBox2.blur();
+                numberKeyboard.bindInputBox(sipboxId);
+                completeKeyboard.hideKeyboard();
+                numberKeyboard.showKeyboard();
+        });
+    }
+    function getKeyboard(sipboxId) {
+        if(sipboxId !== "SIPBox3") {
+            return completeKeyboard;
+        }
+        else{
+            return numberKeyboard;
+        }
+    }
+    function setProperty(sipboxId) {
+        var keyboard = getKeyboard(sipboxId);
+        var publicKeyIndex = document.getElementById("publicKeyOpenPlatform").checked
+                    ? PUBLIC_KEY_OPEN_PLATFORM : PUBLIC_KEY_EBANK;
+        var outputType = document.getElementById("outputTypeHash").checked
+                    ? OUTPUT_TYPE_HASH : OUTPUT_TYPE_ORIGINAL;
+        var cipherType = document.getElementById("cipherTypeSM2").checked
+                    ? CIPHER_TYPE_SM2 : CIPHER_TYPE_RSA;
+        var minLength = parseInt(document.getElementById("minLength").value);
+        var maxLength = parseInt(document.getElementById("maxLength").value);
+        var matchRegex = document.getElementById("matchRegex").value;
+        var serverRandom = document.getElementById("serverRandom").value;
+
+        if(CFCA_OK != keyboard.setMinLength(minLength, sipboxId)) alert("setMinLength error");
+        if(CFCA_OK != keyboard.setMaxLength(maxLength, sipboxId)) alert("setMaxLength error");
+        if(CFCA_OK != keyboard.setOutputType(outputType, sipboxId)) alert("setOutputType error");
+        if(CFCA_OK != keyboard.setPublicKeyToEncrypt(publicKeyIndex, sipboxId)) alert("setEncryptToEncrypt error");
+        if(CFCA_OK != keyboard.setServerRandom(serverRandom, sipboxId)) alert("setServerRandom error");
+        if(CFCA_OK != keyboard.setCipherType(cipherType, sipboxId)) alert("setCipherType error");
+        if(CFCA_OK != keyboard.setMatchRegex(matchRegex, sipboxId)) alert("setMatchRegex error");
+    }
+
+    function clearInput(sipboxId) {
+        var keyboard = getKeyboard(sipboxId);
+        keyboard.clearInputValue(sipboxId);
+    }
+
+    function getEncrypt(sipboxId) {
+        var keyboard = getKeyboard(sipboxId);
+        var decryptStr = 'java -jar Decrypt.jar bocnet.pfx 11111111 ';
+        var resultTextarea = document.getElementById("encryptedResult");
+        resultTextarea.value = "";
+        var encryptedInputValue = keyboard.getEncryptedInputValue(sipboxId);
+        var errorCode = keyboard.getErrorCode(sipboxId).toString(16);
+        if(errorCode != CFCA_OK) {
+            resultTextarea.value += "加密输入数据错误: 0x" + errorCode + "\n";
+            return;
+        } else{
+            resultTextarea.value += "加密输入数据: " + encryptedInputValue + "\n";
+        }
+        var encryptedClientRandom = keyboard.getEncryptedClientRandom(sipboxId);
+        errorCode = keyboard.getErrorCode(sipboxId).toString(16);
+        if(errorCode != CFCA_OK) {
+            resultTextarea.value += "加密客户端随机数错误: 0x" + errorCode + "\n";
+            return;
+        } else{
+            resultTextarea.value += "加密客户端随机数: " + encryptedClientRandom + "\n";
+        }
+        decryptStr += encryptedClientRandom + ' MTIzNDU2Nzg5MDk4NzY1NA== ' + encryptedInputValue + ' 1';
+        resultTextarea.value += "解密串：: " + decryptStr + "\n";
+    }
+
+    function checkRegex(sipboxId) {
+        if(completeKeyboard.checkMatchRegex(sipboxId)) {
+            alert("正则表达式匹配");
+        } else {
+            alert("正则表达式不匹配");
+        }
+    }
+
+    function checkEqual(sipboxId1, sipboxId2) {
+        if(completeKeyboard.checkInputValueMatch(sipboxId1, sipboxId2)) {
+            alert('SIPBox1与SIPBox2输入内容一致!');
+        } else {
+            alert('SIPBox1与SIPBox2输入内容不一致!');
+        }
+    }
+
+    function getVersion() {alert("Version: " + getCFCAKeyboardVersion()); }
+	window.onload=initInput;
+    setUpEvent(document, "touchstart", function(e) {
+        var elem = e.srcElement || e.target;
+        var noNeedHideIds = ["CompleteKeyboard", "NumberKeyboard",
+            "SIPBox1", "SIPBox2", "SIPBox3",
+            "clearSIPBox1", "clearSIPBox2", "clearSIPBox3",
+            "getSIPBox1Value", "getSIPBox2Value", "getSIPBox3Value",
+            "checkInputValueMatch", "getVersion"
+        ];
+        while(elem) {
+            if(noNeedHideIds.indexOf(elem.id) !== -1) {
+                return;
+            }
+            elem = elem.parentNode;
+        }
+        completeKeyboard.hideKeyboard();
+        numberKeyboard.hideKeyboard();
+    });
+</SCRIPT>
+</HEAD>
+
+<body id="mobile" style="margin:0; padding:0;">
+<main>
+<div id="pagewrap" data-role="page" data-theme="b">
+	<h4>JavaScript SIP Demo</h4>
+	<h3>公共属性</h3>
+	<div id = "publicProperties" data-mini="true">
+    <table border="0" cellspacing="0">
+    	<tr height="30">
+            <td> publicKeyIndex:</td>
+            <td colspan="2">
+            	<fieldset data-role="controlgroup" data-type="horizontal">
+                <input type="radio" data-mini="true" name="publicKeyIndex" id="publicKeyOpenPlatform"  value="0" />
+                <label for="publicKeyOpenPlatform">开放平台</label>
+                <input type="radio" data-mini="true" name="publicKeyIndex" id="publicKeyEBank" value="1" checked="checked"/>
+                <label for="publicKeyEBank">网银系统</label>
+                </fieldset>
+            </td>
+        </tr>
+        <tr height="30">
+            <td> OutputType:</td>
+            <td colspan="2">
+            	<fieldset data-role="controlgroup" data-type="horizontal">
+                <input type="radio" data-mini="true" name="outputType" id="outputTypeHash" checked="checked" value="1" />
+                <label for="outputTypeHash">哈希加密</label>
+                <input type="radio" data-mini="true" name="outputType" id="outputTypeOriginal"  value="2" />
+                <label for="outputTypeOriginal">原文加密</label>
+                </fieldset>
+            </td>
+        </tr>
+		<tr height="30">
+            <td> CipherType:</td>
+            <td colspan="2">
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                <input type="radio" data-mini="true" name="cipherType" id="cipherTypeSM2" checked="checked" value="0" />
+                <label for="cipherTypeSM2">SM2</label>
+                <input type="radio" data-mini="true" name="cipherType" id="cipherTypeRSA" value="1" />
+                <label for="cipherTypeRSA">RSA</label>
+                </fieldset>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" height="30">MinLength:</td>
+            <td colspan="1" height="30">
+                <input id="minLength" name="minLength" value="6" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" height="30">Maxlength:</td>
+            <td colspan="1" height="30">
+                <input id="maxLength"  name="maxLength" value="8" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" height="30">MatchRegex:</td>
+            <td colspan="1" height="30">
+            	<!-- BOC regex
+            	^[A-Za-z0-9\!\@\#\$\%\^\&\*\_]*([0-9]+[A-Za-z0-9\!\@\#\$\%\^\&\*\_]*[A-Za-z]+|[A-Za-z]+[A-Za-z0-9\!\@\#\$\%\^\&\*\_]*[0-9]+)[A-Za-z0-9\!\@\#\$\%\^\&\*\_]*$
+            	\S{6,8}
+            	-->
+                <input id="matchRegex" name="matchRegex"  value=""/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" height="30">ServerRandom:</td>
+            <td colspan="1" height="30">
+                <input id="serverRandom" name="serverRandom"  value="MTIzNDU2Nzg5MDk4NzY1NA==" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" height="30">
+                <button data-mini="true" id="setSIPBox1Porperties" name="SIPBox1" onClick='setProperty("SIPBox1")'>应用至控件1</button>
+            </td>
+            <td colspan="1" height="30">
+                <button data-mini="true" id="setSIPBox2Porperties" name="SIPBox2" onClick='setProperty("SIPBox2")'>应用至控件2</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" height="30">
+                <button data-mini="true" id="setSIPBox2Porperties" name="SIPBox2" onClick='setProperty("SIPBox3")'>应用至控件3</button>
+            </td>
+        </tr>
+    </table>
+	</div>
+<hr/>
+    <h3>公共接口</h3>
+    <div id="wrap">
+        <table border="0" cellpadding="2" cellspacing="0">
+            <tr>
+                <td colspan="1" height="30">
+                    <button type="button" data-mini="true" id="getVersion" onClick = 'getVersion()'>获取版本号</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+<h3>安全控件</h3>
+	<div id="SIPBox" >
+    <table border="0" cellpadding="2" cellspacing="0">
+            <tr><td colspan="2">加密结果:</td></tr>
+            <tr>
+                <td colspan="2">
+                    <textarea id="encryptedResult" name="encryptedResult" cols="30" rows="30"></textarea>
+                </td>
+            </tr>
+        <tr>
+            <td colspan="2" height="30">
+                <button data-mini="true" id="getSIPBox1Value" name="SIPBox1" onClick = 'getEncrypt("SIPBox1")' >获取控件1结果</button>
+            </td>
+        </tr>
+		<tr>
+            <td colspan="2" height="30">
+                <button data-mini="true" id="getSIPBox2Value" name="SIPBox2" onClick = 'getEncrypt("SIPBox2")'>获取控件2结果</button>
+            </td>
+        </tr>
+		<tr>
+            <td colspan="2" height="30">
+                <button data-mini="true" id="getSIPBox3Value" name="SIPBox3" onClick = 'getEncrypt("SIPBox3")'>获取控件3结果</button>
+            </td>
+        </tr>
+        <tr>
+        	<td colspan="2" height="30">
+            	<button data-mini="true" id="checkInputValueMatch" name="SIPBox1AndSIPBox2" onClick = 'checkEqual("SIPBox1", "SIPBox2")' >检测控件1控件2内容是否一致</button>
+        	</td>
+        </tr>
+            <tr>
+                <td colspan="2">
+                    log: <pre id="log" style="border: 1px solid #ccc;height:100px;overflow: scroll;"></pre>
+                </td>
+            </tr>
+        <tr>
+            <td colspan="2" height="30">安全控件1</td>
+        </tr>
+        <tr>
+            <td colspan="2" height="30">
+                <input type="text" id="SIPBox1" name="SIPBox1"  value="" readonly="true"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" height="30">
+                <button data-mini="true" id="clearSIPBox1" name="SIPBox1" onClick = 'clearInput("SIPBox1")'>清空</button>
+            </td>
+            <td colspan="1" height="30">
+                <button data-mini="true" id="checkSIPBox1" name="SIPBox1" onClick = 'checkRegex("SIPBox1")'>正则匹配</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" height="30">安全控件2</td>
+        </tr>
+        <tr>
+            <td colspan="2" height="30">
+                <input type="text" id="SIPBox2" name="SIPBox2"  value="" readonly="true"/>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" height="30">
+                <button data-mini="true" id="clearSIPBox2" name="SIPBox2" onClick = 'clearInput("SIPBox2")'>清空</button>
+            </td>
+            <td colspan="1" height="30">
+                <button data-mini="true" id="checkSIPBox2" name="SIPBox2" onClick = 'checkRegex("SIPBox2")'>正则匹配</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" height="30">安全控件3</td>
+        </tr>
+        <tr>
+            <td colspan="2" height="30">
+                <input type="text" id="SIPBox3" name="SIPBox3"  value="" readonly="true" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" height="30">
+                <button data-mini="true" id="clearSIPBox3" name="SIPBox3" onClick = 'clearInput("SIPBox3")'>清空</button>
+            </td>
+            <td colspan="1" height="30">
+                <button data-mini="true" id="checkSIPBox3" name="SIPBox3" onClick = 'checkRegex("SIPBox3")'>正则匹配</button>
+            </td>
+        </tr>
+    </table>
+	</div>
+    </div>
+</main>
+<DIV id="CompleteKeyboard"></DIV>
+<DIV id="NumberKeyboard"></DIV>
+</body>
+</html>

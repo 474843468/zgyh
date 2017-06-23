@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/boc_common_cell_color"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout_body"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical">
+        <!--标题-->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="25dp"
+            android:gravity="center_vertical"
+            android:maxEms="8"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:layout_alignParentLeft="true"
+            android:textSize="13dp"
+            android:text="aaaa"/>
+        <TextView
+            android:id="@+id/tv_value_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentRight="true"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            android:text="cccc"
+            android:textColor="@color/boc_main_button_color"/>
+        <!--文本 和按钮 共用一个textview-->
+        <TextView
+            android:id="@+id/tv_value"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/tv_title"
+            android:layout_toLeftOf="@id/tv_value_button"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/boc_text_color_common_gray"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            android:text=""/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v_devide"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/boc_common_view_line" />
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>JavaScript SIP Demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+<script language="JavaScript" type="text/javascript" src="./Crypto/prng4.js"></script>
+<script language="JavaScript" type="text/javascript" src="./Crypto/rng.js"></script>
+<script language="JavaScript" type="text/javascript" src="./Crypto/jsbn.js"></script>
+<script language="JavaScript" type="text/javascript" src="./Crypto/rsa.js"></script>
+<script language="JavaScript" type="text/javascript" src="./Crypto/base64.js"></script>
+<script language="JavaScript" type="text/javascript" src="./Crypto/des.js"></script>
+<script language="JavaScript" type="text/javascript" src="./Crypto/sha1.js"></script>
+
+<script language="JavaScript">var _$_1767=["\x76\x61\x6C\x75\x65","\x6E","\x65\x6E\x63\x72\x79\x70\x74\x54\x65\x73\x74","\x61\x64\x37\x30\x65\x35\x33\x66\x30\x66\x36\x30\x31\x61\x32\x38\x66\x34\x38\x63\x30\x61\x66\x65\x32\x64\x37\x63\x38\x38\x30\x33\x61\x38\x36\x31\x34\x38\x31\x35\x38\x33\x32\x30\x31\x38\x36\x63\x37\x34\x65\x31\x33\x31\x38\x32\x61\x31\x65\x61\x32\x30\x31\x62\x63\x35\x33\x36\x30\x30\x38\x65\x38\x38\x39\x63\x66\x66\x39\x64\x37\x35\x32\x66\x30\x37\x64\x31\x39\x62\x64\x33\x31\x65\x37\x36\x63\x64\x33\x31\x65\x30\x64\x31\x62\x36\x33\x63\x38\x34\x62\x39\x61\x36\x64\x33\x65\x65\x36\x34\x34\x30\x31\x65\x34\x35\x39\x39\x66\x62\x38\x32\x32\x32\x39\x61\x66\x36\x64\x35\x62\x63\x39\x61\x32\x61\x65\x31\x30\x34\x35\x35\x65\x64\x37\x35\x66\x65\x31\x36\x33\x65\x32\x30\x33\x31\x62\x38\x64\x35\x31\x64\x32\x38\x64\x64\x36\x61\x32\x35\x31\x35\x65\x63\x65\x36\x34\x39\x35\x66\x64\x65\x66\x32\x39\x66\x39\x33\x61\x66\x32\x30\x30\x33\x31\x34\x31\x62\x62\x64\x61\x38\x63\x33\x63\x35\x36\x63\x65\x32\x66\x35\x37\x30\x61\x63\x32\x38\x64\x66\x39\x61\x39\x37\x61\x61\x38\x31\x62\x36\x64\x32\x38\x32\x63\x39\x33\x63\x65\x64\x39\x32\x37\x32\x34\x35","\x65","\x31\x30\x30\x30\x31","\x6B\x65\x79","\x33\x31\x33\x32\x33\x33\x33\x34\x33\x35\x33\x36\x33\x37\x33\x38\x33\x39\x33\x30\x33\x39\x33\x38\x44\x39\x42\x44\x36\x44\x35\x43\x31\x46\x33\x30\x46\x45\x37\x32\x45\x45\x43\x36\x39\x35\x34\x33","\x69\x76","\x33\x37\x33\x36\x33\x35\x33\x34\x32\x45\x45\x30\x36\x42\x36\x41","\x70\x6C\x61\x69\x6E\x74\x65\x78\x74","\x6C\x65\x6E\x67\x74\x68","\u8BF7\u8F93\u5165\u5F85\u52A0\u5BC6\u6570\u636E","\x73\x65\x74\x50\x75\x62\x6C\x69\x63","\x74\x65\x73\x74\x20\x69\x73\x20\x3A\x20","\x65\x6E\x63\x72\x79\x70\x74","\x63\x69\x70\x68\x65\x72\x74\x65\x78\x74","\x63\x69\x70\x68\x65\x72\x62\x36\x34","\x73\x74\x61\x74\x75\x73","\x54\x69\x6D\x65\x3A\x20","\x6D\x73","\u8BF7\u8F93\u5165\u5DF2\u52A0\u5BC6\u6570\u636E","\x72\x65\x73\x2E\x6C\x65\x6E\x67\x74\x68\x3A","\x0A\x73\x75\x62\x53\x74\x72\x2E\x6C\x65\x6E\x67\x74\x68\x3A","\x63\x68\x61\x72\x43\x6F\x64\x65\x41\x74","\x73\x75\x62\x73\x74\x72"];function set_key(){document[_$_1767[2]][_$_1767[1]][_$_1767[0]]=_$_1767[3];document[_$_1767[2]][_$_1767[4]][_$_1767[0]]=_$_1767[5];document[_$_1767[2]][_$_1767[6]][_$_1767[0]]=_$_1767[7];document[_$_1767[2]][_$_1767[8]][_$_1767[0]]=_$_1767[9];}function do_rsa_encrypt(){var eq=document[_$_1767[2]][_$_1767[10]][_$_1767[0]];if(eq[_$_1767[11]]==0){alert(_$_1767[12]);return ;};rng_seed_time();var em= new Date();var es= new RSAKey();es[_$_1767[13]](document[_$_1767[2]][_$_1767[1]][_$_1767[0]],document[_$_1767[2]][_$_1767[4]][_$_1767[0]]);var et=b64_sha1(eq);alert(_$_1767[14]+et);var ep=es[_$_1767[15]](eq);var el= new Date();if(ep){document[_$_1767[2]][_$_1767[16]][_$_1767[0]]=linebrk(ep,64);document[_$_1767[2]][_$_1767[17]][_$_1767[0]]=linebrk(hex2b64(ep),64);document[_$_1767[2]][_$_1767[18]][_$_1767[0]]=_$_1767[19]+(el-em)+_$_1767[20];};}function do_3des_encrypt(){var eq=document[_$_1767[2]][_$_1767[10]][_$_1767[0]];if(eq[_$_1767[11]]==0){alert(_$_1767[12]);return ;};var S=hexToStringForDES(document[_$_1767[2]][_$_1767[6]][_$_1767[0]]);var dN=hexToStringForDES(document[_$_1767[2]][_$_1767[8]][_$_1767[0]]);var em= new Date();var ep=des(S,eq,1,1,dN,1);var el= new Date();var er=stringToHexForDES(ep);if(er){document[_$_1767[2]][_$_1767[16]][_$_1767[0]]=linebrk(er,64);document[_$_1767[2]][_$_1767[17]][_$_1767[0]]=linebrk(hex2b64(er),64);document[_$_1767[2]][_$_1767[18]][_$_1767[0]]=_$_1767[19]+(el-em)+_$_1767[20];};}function do_3des_decrypt(){var eo=document[_$_1767[2]][_$_1767[17]][_$_1767[0]];if(eo[_$_1767[11]]==0){alert(_$_1767[21]);return ;};var S=hexToStringForDES(document[_$_1767[2]][_$_1767[6]][_$_1767[0]]);var dN=hexToStringForDES(document[_$_1767[2]][_$_1767[8]][_$_1767[0]]);var en=hexToStringForDES(b64tohex(eo));var em= new Date();var ep=des(S,en,0,1,dN,0);alert(_$_1767[22]+ep[_$_1767[11]]+_$_1767[23]+ep[_$_1767[25]](0,ep[_$_1767[11]]-ep[_$_1767[24]](ep[_$_1767[11]]-1))[_$_1767[11]]);var el= new Date();if(ep){document[_$_1767[2]][_$_1767[10]][_$_1767[0]]=ep;document[_$_1767[2]][_$_1767[18]][_$_1767[0]]=_$_1767[19]+(el-em)+_$_1767[20];};}</script>
+
+<body onLoad='set_key();'>
+<h1>JavaScript SIP Demo</h1>
+<form name="encryptTest">
+<h2>RSA public key</h2><p>
+Public exponent (hex):<br>
+<input name="e" type="text" size=20><p>
+Modulus (hex):<br>
+<textarea name="n" rows=4 cols=70></textarea><br>
+<h2>3DES key and iv</h2><p>
+3DES key (hex):<br>
+<textarea name="key" rows=4 cols=70></textarea><p>
+3DES iv (hex):<br>
+<textarea name="iv" rows=4 cols=70></textarea><p>
+<hr>
+Plaintext (string):<br>
+<textarea name="plaintext" rows=4 cols=70></textarea><p>
+<input type="button" value="RSAEncrypt" onClick="do_rsa_encrypt();">
+<input type="button" value="3DESEncrypt" onClick="do_3des_encrypt();">
+<input type="button" value="3DESDecrypt" onClick="do_3des_decrypt();"><p>
+Ciphertext (hex):<br>
+<textarea name="ciphertext" rows=4 cols=70></textarea><p>
+Ciphertext (base64):<br>
+<textarea name="cipherb64" rows=3 cols=70></textarea><p>
+Status:<br>
+<input name="status" type="text" size=40><p>
+</form>
+</body>
+</html>

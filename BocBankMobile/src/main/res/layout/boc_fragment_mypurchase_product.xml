@@ -1,0 +1,124 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/boc_main_bg_color">
+
+    <RelativeLayout
+        android:id="@+id/account_details"
+        android:layout_width="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_height="70dp"
+        android:layout_marginRight="@dimen/boc_space_between_16px"
+        android:layout_marginLeft="@dimen/boc_space_between_16px"
+        android:layout_marginTop="@dimen/boc_space_between_20px"
+        android:background="@drawable/boc_card_background">
+        <ImageView
+            android:id="@+id/account_image"
+            android:layout_width="@dimen/boc_card_pic_width"
+            android:layout_height="@dimen/boc_card_pic_height"
+            android:layout_marginBottom="@dimen/boc_card_account_pic_margin_bottom"
+            android:layout_marginLeft="@dimen/boc_card_account_pic_margin_left"
+            android:layout_marginRight="@dimen/boc_card_account_pic_margin_right"
+            android:layout_marginTop="@dimen/boc_card_account_pic_margin_top"
+            android:scaleType="fitCenter"/>
+        <TextView
+            android:layout_toRightOf="@+id/account_image"
+            android:id="@+id/account_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6225882901113488"
+            android:textSize="@dimen/boc_space_between_26px"
+            android:layout_marginTop="@dimen/boc_card_account_pic_margin_top"
+            android:textColor="@color/boc_text_color_common_gray"/>
+
+        <TextView
+            android:layout_below="@+id/account_number"
+            android:layout_toRightOf="@+id/account_image"
+            android:id="@+id/account_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/boc_card_account_amount_padding_bottom"
+            android:textSize="@dimen/boc_space_between_26px"
+            android:text="工资卡"
+            android:textColor="@color/boc_text_color_common_gray"/>
+    </RelativeLayout>
+
+
+    <View style="@style/divider_horizontal" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/no_data_query"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+         >
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.emptyview.CommonEmptyView
+                android:id="@+id/no_data"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/show_dara_query"
+            android:layout_marginTop="@dimen/boc_card_account_amount_padding_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           >
+
+            <ListView
+                android:id="@+id/listview_mypurchase_showpurchase"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </ListView>
+
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

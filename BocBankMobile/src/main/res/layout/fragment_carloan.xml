@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/car_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bg_consumefinance_carloan"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                />
+
+            <Button
+                android:id="@+id/car_btn"
+                android:layout_centerHorizontal="true"
+                android:text="@string/consumefinance_loanapply_btntext"
+                android:textColor="@color/boc_common_cell_color"
+                android:layout_alignBottom="@+id/car_bg"
+                android:layout_marginBottom="@dimen/boc_space_between_86px"
+                style="@style/BocButton.BocConsumeFinanceButton"
+                android:textStyle="bold"
+                />
+        </RelativeLayout>
+    </ScrollView>
+    <include layout="@layout/boc_consumefinance_blacktitle"
+        android:id="@+id/firsttitle"
+        android:layout_width="@dimen/boc_space_between_88px"
+        android:layout_height="@dimen/boc_space_between_88px"></include>
+</FrameLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 资产管理-跨行资金归集 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/style_match_match"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_detail"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big_normal"
+            android:text="@string/assetmanager_havesetservice_interbankcollect_detail" />
+
+        <Button
+            android:id="@+id/btn_more"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big_normal"
+            android:text="@string/assetmanager_havesetservice_interbankcollect_more" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_tl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_btn"
+        android:layout_marginBottom="@dimen/leftMenuHW"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_marginTop="@dimen/rightbtnW"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView
+            style="@style/style_height_weight_1"
+            android:layout_marginTop="@dimen/rightbtnW"
+            android:padding="@dimen/common_row_margin" >
+
+            <LinearLayout
+                style="@style/style_match_wrap"
+                android:orientation="vertical" >
+
+                <com.chinamworld.bocmbci.userwidget.LabelTextView
+                    android:id="@+id/label_collectaccount"
+                    style="@style/style_match_wrap"
+                    app:labelText="归集账户："
+                    app:weightShowRate="2:3" />
+
+                <com.chinamworld.bocmbci.userwidget.LabelTextView
+                    android:id="@+id/label_bycollectaccount"
+                    style="@style/style_match_wrap"
+                    app:labelText="被归集账户："
+                    app:weightShowRate="2:3" />
+
+                <com.chinamworld.bocmbci.userwidget.LabelTextView
+                    android:id="@+id/label_bycollectaccountname"
+                    style="@style/style_match_wrap"
+                    app:labelText="被归集账户户名："
+                    app:weightShowRate="2:3" />
+
+                <com.chinamworld.bocmbci.userwidget.LabelTextView
+                    android:id="@+id/label_bycollectaccountbank"
+                    style="@style/style_match_wrap"
+                    app:labelText="被归集账户开户行："
+                    app:weightShowRate="2:3" />
+
+                <com.chinamworld.bocmbci.userwidget.LabelTextView
+                    android:id="@+id/label_collectmethod"
+                    style="@style/style_match_wrap"
+                    app:labelText="归集方式："
+                    app:weightShowRate="2:3" />
+
+                <LinearLayout
+                    android:id="@+id/lyt_leaveamout"
+                    style="@style/style_match_wrap"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tv_amountname"
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:singleLine="true"
+                        android:text="@string/collect_retain_amount" />
+
+                    <TextView
+                        android:id="@+id/tv_amount"
+                        style="@style/edittext_inputNumber_fill"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:background="@null"
+                        android:textColor="@color/red"
+                        android:gravity="center_vertical"
+                        android:maxLength="11"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <com.chinamworld.bocmbci.userwidget.LabelTextView
+                    android:id="@+id/label_collectperiod"
+                    style="@style/style_match_wrap"
+                    app:labelText="归集周期："
+                    app:weightShowRate="2:3" />
+
+                <com.chinamworld.bocmbci.userwidget.LabelTextView
+                    android:id="@+id/label_collectrule"
+                    style="@style/style_match_wrap"
+                    app:labelText="周期执行日："
+                    app:weightShowRate="2:3" />
+
+                <com.chinamworld.bocmbci.userwidget.LabelTextView
+                    android:id="@+id/label_colletsetdate"
+                    style="@style/style_match_wrap"
+                    app:labelText="归集设置日期："
+                    app:weightShowRate="2:3" />
+
+                <com.chinamworld.bocmbci.userwidget.LabelTextView
+                    android:id="@+id/label_colletstate"
+                    style="@style/style_match_wrap"
+                    app:labelText="归集状态："
+                    app:weightShowRate="2:3" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <TextView
+        style="@style/titleText_stepacc"
+        android:layout_width="200dp"
+        android:layout_height="@dimen/left_img_width"
+        android:background="@drawable/bg_title"
+        android:gravity="center"
+        android:text="已设置被归集账户详情"
+        android:textColor="@color/gray_title" />
+
+</RelativeLayout>

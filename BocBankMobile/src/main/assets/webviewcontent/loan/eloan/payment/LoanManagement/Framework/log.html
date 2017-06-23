@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset='utf-8' />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>前端日志</title>
+		<style type="text/css">
+			html, body, .logs{
+				width: 100%;
+				margin: 0 0;
+			}
+			.log{
+				width: 100%;
+				border: 1px solid #444343;
+				background-color: #A0B08E;
+				margin-bottom: 3px;
+				padding: 3px;
+				border-radius: 5px;
+				word-break:break-all;
+			}
+			.ERROR{
+				background-color: #DFB08E;
+			}
+			.request{
+				background-color: #A0B0BE;
+			}
+			.stack{
+				margin-left: 50px;
+			}
+			.blockstyle{
+				width: 99%;
+				height: 20px;
+				background-color:#5E6011;
+				text-align: center;
+				display: block;
+				padding: 5px;
+				margin-bottom: 3px;
+				border-radius: 5px;
+			}
+		</style>
+		<script>
+			function $(id){
+				return document.getElementById(id);
+			}
+			function showLog(){
+				var logstr = localStorage.getItem("log") || "";
+				var logObj = (new Function("return " + logstr + ";"))();
+				var c = $("logs");
+				for(var f in logObj){
+					var div = document.createElement("div");
+					div.className = "log "+logObj[f].type+" "+logObj[f].msg.substr(0,logObj[f].msg.indexOf(' '));
+					div.innerHTML =  logObj[f].date +" " + logObj[f].type + " " + logObj[f].url + " " + logObj[f].msg.replace(/\n/g, "<br />");
+					if(logObj[f].stack){
+						var stk = document.createElement("div");
+						stk.className = "stack";
+						stk.innerHTML = logObj[f].stack.replace(/\n/g, "<br />");
+						div.appendChild(stk);
+					}
+					c.appendChild(div);
+				}
+				
+				var cl = $("clear");
+				cl.onclick = clear;
+			}
+			function clear(){
+				localStorage.removeItem("log");
+				localStorage.removeItem("ads");
+				window.location.reload();
+			}
+		</script>
+	</head>
+	<body onload="showLog()">
+		<a href="#bottom" id="top" name="top" class="blockstyle">直达底部</a>
+		<div id="logs"></div>
+		<a href="#top" id="bottom" name="bottom" class="blockstyle">直达顶部</a>
+		<a href="javascript:void(0)" id="clear" class="blockstyle">清空日志</a>
+	</body>
+</html>

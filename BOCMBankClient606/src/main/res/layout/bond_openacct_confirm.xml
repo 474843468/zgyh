@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 债券开户确认页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:userProperty="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_step"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical"
+            android:padding="@dimen/fill_padding_top" >
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/blpt_main_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_bill_tip"
+                            style="@style/confirm_info_textview_style"
+                            android:gravity="center"
+                            android:text="@string/bond_openacct_confirm"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <!-- 项目  start -->
+
+                        <LinearLayout
+                            android:id="@+id/layout_bank"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/bond_tv_15_left"
+                                android:layout_weight="6.5"
+                                android:text="@string/bond_mybond_title2"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_bankacct"
+                                style="@style/bond_tv_15_right"
+                                android:layout_weight="3.5"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/bondtype_title"
+                                style="@style/bond_tv_15_left"
+                                android:layout_weight="6.5"
+                                android:text="@string/bond_acctopen_bondaccttype"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_bondaccttype"
+                                style="@style/bond_tv_15_right"
+                                android:layout_weight="3.5"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/bond_tv_15_left"
+                                android:layout_weight="6.5"
+                                android:text="@string/bond_customer_name"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_customName"
+                                style="@style/bond_tv_15_right"
+                                android:layout_weight="3.5"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/bond_tv_15_left"
+                                android:layout_weight="6.5"
+                                android:text="@string/bond_customer_gender"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_gender"
+                                style="@style/bond_tv_15_right"
+                                android:layout_weight="3.5"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/bond_tv_15_left"
+                                android:layout_weight="6.5"
+                                android:text="@string/bond_customer_countrycode"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_countrycode"
+                                style="@style/bond_tv_15_right"
+                                android:layout_weight="3.5"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/bond_tv_15_left"
+                                android:layout_weight="6.5"
+                                android:text="@string/bond_idtype"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_idtype"
+                                style="@style/bond_tv_15_right"
+                                android:layout_weight="3.5"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/bond_tv_15_left"
+                                android:layout_weight="6.5"
+                                android:text="@string/bond_idnumber"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_idnum"
+                                style="@style/bond_tv_15_right"
+                                android:layout_weight="3.5"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/bond_tv_15_left"
+                                android:layout_weight="6.5"
+                                android:text="@string/bond_customer_adress"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_adress"
+                                style="@style/bond_tv_15_right"
+                                android:layout_weight="3.5"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/bond_tv_15_left"
+                                android:layout_weight="6.5"
+                                android:text="@string/bond_customer_postcode"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_postcode"
+                                style="@style/bond_tv_15_right"
+                                android:layout_weight="3.5"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/bond_tv_15_left"
+                                android:layout_weight="6.5"
+                                android:text="@string/bond_customer_phone"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_phone"
+                                style="@style/bond_tv_15_right"
+                                android:layout_weight="3.5"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/bond_tv_15_left"
+                                android:layout_weight="6.5"
+                                android:text="@string/bond_customer_fax"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_fax"
+                                style="@style/bond_tv_15_right"
+                                android:layout_weight="3.5"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/bond_tv_15_left"
+                                android:layout_weight="6.5"
+                                android:text="@string/bond_customer_email"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_email"
+                                style="@style/bond_tv_15_right"
+                                android:layout_weight="3.5"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/bond_tv_15_left"
+                                android:layout_width="0dp"
+                                android:layout_weight="3.5"
+                                android:text="@string/bond_history_transFee"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6.5"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="0dip"
+                                    android:paddingRight="0dip"
+                                    android:singleLine="true"
+                                    android:text="10.00"
+                                    android:textColor="@color/fonts_pink"
+                                    android:textSize="@dimen/textsize_default" />
+
+                                <TextView
+                                    style="@style/bond_textview_15_black_1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="0dip"
+                                    android:singleLine="true"
+                                    android:text="人民币元"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <!-- 项目  end -->
+
+                        <LinearLayout
+                            android:id="@+id/layout_sms"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="gone" >
+
+                            <TextView
+                                style="@style/bond_tv_15_left"
+                                android:layout_width="fill_parent"
+                                android:layout_weight="3"
+                                android:gravity="right"
+                                android:text="@string/smc"
+                                android:textSize="@dimen/textsize_default" />
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2" >
+
+                                <cfca.mobile.sip.SipBox
+                                    android:id="@+id/sip_sms"
+                                    style="@style/edittext_inputNumber_fill"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="@dimen/titlebackbtn_marginleft"
+                                    android:gravity="center_vertical"
+                                    android:maxLength="20" >
+                                </cfca.mobile.sip.SipBox>
+
+                                <Button
+                                    android:id="@+id/smsbtn"
+                                    style="@style/button_smscode_new"
+                                    android:layout_marginRight="@dimen/btncommon_marglr" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_sip"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="gone" >
+
+                            <TextView
+                                style="@style/bond_tv_15_left"
+                                android:layout_weight="3"
+                                android:singleLine="true"
+                                android:text="@string/opt"
+                                android:textSize="@dimen/textsize_default" />
+
+                            <cfca.mobile.sip.SipBox
+                                android:id="@+id/et_cecurity_ps"
+                                style="@style/edittext_inputNumber_fill"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="@dimen/btncommon_marglr"
+                                android:layout_weight="2"
+                                android:gravity="center_vertical"
+                                android:maxLength="20" >
+                            </cfca.mobile.sip.SipBox>
+                        </LinearLayout>
+
+                        <com.chinamworld.bocmbci.widget.UsbKeyText
+                            android:id="@+id/sip_usbkey"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            userProperty:MargRight="@dimen/btncommon_marglr"
+                            userProperty:ShowRate="3:2" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fill_margin_top"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnConfirm"
+                style="@style/bottombtn_new"
+                android:text="@string/confirm" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

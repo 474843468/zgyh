@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.boc.bocsoft.mobile.bocmobile.base.widget.SlipMenu.SlipDrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout_transfer_query"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+            <com.boc.bocsoft.mobile.framework.widget.TitleBarView
+                android:id="@+id/select_title_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </com.boc.bocsoft.mobile.framework.widget.TitleBarView>
+        </FrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#CBCAD7"/>
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.TabPageIndicator.TabPageIndicatorWidget
+            android:id="@+id/tab_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#CBCAD7"/>
+        <LinearLayout
+            android:id="@+id/ll_choose_select"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#F9F9F9"
+            android:gravity="right"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_select"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/boc_select_gray"
+                android:gravity="center"
+                android:paddingLeft="@dimen/boc_space_between_30px"
+                android:paddingRight="@dimen/boc_space_between_30px"
+                android:text="筛选"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold"/>
+        </LinearLayout>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.selectview.selecttimerangenew.SelectTimeRangeNew
+        android:id="@+id/right_drawer_transfer_query"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:clickable="true"/>
+
+</com.boc.bocsoft.mobile.bocmobile.base.widget.SlipMenu.SlipDrawerLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 中银理财  登记账户选择账户界面  wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/common_bottom_padding" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_financeic_choose_title"
+        style="@style/textview_step4"
+        android:layout_below="@+id/ll_step"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:paddingLeft="@dimen/fill_margin_left"
+        android:text="@string/bocinvt_binding_title"
+        android:textColor="@color/gray" />
+
+    <Button
+        android:id="@+id/btnNext"
+        style="@style/bottombtn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/common_bottom_padding_new"
+        android:layout_marginTop="@dimen/dp_five"
+        android:text="@string/next" />
+
+    <ListView
+        android:id="@+id/bocinvt_binding_list"
+        style="@style/listviewcomm_fill_haveDivider"
+        android:layout_above="@+id/btnNext"
+        android:layout_below="@+id/tv_financeic_choose_title"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left" >
+    </ListView>
+
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:id="@+id/sv_content"
+        style="@style/scrollview_comm_havemarginbutton"
+        android:layout_above="@+id/bt_submit"
+        android:layout_marginBottom="@dimen/common_row_margin"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:paddingRight="@dimen/shap_of_save_confirm_pdr" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+            <RelativeLayout
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+            <TextView
+                android:id="@+id/tv_confirm_msg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_row_margin"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:text="@string/epay_bom_set_payment_confirm_tv_title"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_default" />
+
+            <LinearLayout
+                android:id="@+id/ll_al"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_confirm_msg"
+                android:layout_marginBottom="@dimen/common_row_margin"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:baselineAligned="false"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/epay_bom_set_payment_confirm_tv_acc_list" />
+
+                <LinearLayout
+                    android:id="@+id/ll_selected_acclist"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_confirm_bar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_al" >
+			
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                    
+                <include layout="@layout/epay_pub_confirm" />
+                
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/bt_submit"
+        style="@style/bottombtn"
+        android:layout_alignParentBottom="true"
+        android:text="@string/confirm" />
+
+</RelativeLayout>

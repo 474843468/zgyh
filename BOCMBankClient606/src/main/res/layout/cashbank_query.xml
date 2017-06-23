@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+        <com.chinamworld.bocmbci.userwidget.QueryView
+          	android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/queryControlView"
+         
+         >
+         <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <!-- 定投状态 -->
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/common_row_margin_half"
+                    android:layout_marginLeft="@dimen/comm_confirm_leftiterm_marginleft"
+                    android:layout_marginRight="@dimen/comm_confirm_leftiterm_marginleft"
+                    android:layout_marginTop="@dimen/common_row_margin" >
+
+                    <TextView
+                        android:id="@+id/cash_type"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/cash_type" />
+
+                    <Spinner
+                        android:id="@+id/cash_type_info"
+                        style="@style/Spiiner_fill"
+                        android:layout_height="@dimen/layout_height"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/cash_type"
+                        android:background="@drawable/bg_spinner"
+                        android:ellipsize="middle"
+                        android:entries="@array/goldbonus_fixinvest_status"
+                        android:gravity="center_vertical"
+                        android:prompt="@string/isForex_query_result4" />
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/header_for_combinate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <!-- 定投状态 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fill_margin_left"
+                        android:layout_marginRight="@dimen/fill_margin_left"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/cash_type" />
+
+                        <TextView
+                            android:id="@+id/textview_status_value"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+         </com.chinamworld.bocmbci.userwidget.QueryView>
+        <RelativeLayout
+            android:id="@+id/layout_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            >
+                <ListView
+                android:id="@+id/listview"
+                style="@style/listviewcomm_wrap_haveDivider"
+                android:divider="@color/gray"
+                android:dividerHeight="1dip"/>
+            </RelativeLayout> 
+        
+        
+     </LinearLayout>
+     </RelativeLayout>

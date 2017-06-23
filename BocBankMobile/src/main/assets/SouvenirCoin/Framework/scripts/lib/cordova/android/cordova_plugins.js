@@ -1,0 +1,2 @@
+/*! BUILD: 2016-12-16 */
+cordova.define("cordova/plugin_list",function(a,b,c){c.exports=[{file:"plugins/cordova-plugin-whitelist/whitelist.js",id:"cordova-plugin-whitelist.whitelist",runs:!0},{file:"plugins/cordova-plugin-bocovsbridge/bocovsbridge.js",id:"cordova-plugin-bocovsbridge.bocovsbridge",runs:!0}],c.exports.metadata={"cordova-plugin-whitelist":"1.0.0","cordova-plugin-bocovsbridge":"1.0.0"}});

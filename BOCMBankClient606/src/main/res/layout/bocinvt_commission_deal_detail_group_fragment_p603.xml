@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.chinamworld.bocmbci.userwidget.TitleAndContentLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="详情" >
+
+        <com.chinamworld.bocmbci.userwidget.LabelTextView
+            android:id="@+id/ltv_commission_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:labelText="委托日期：" />
+
+        <com.chinamworld.bocmbci.userwidget.LabelTextView
+            android:id="@+id/ltv_product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:labelText="产品名称：" />
+
+        <com.chinamworld.bocmbci.userwidget.LabelTextView
+            android:id="@+id/ltv_currency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:labelText="产品币种：" />
+
+          <com.chinamworld.bocmbci.userwidget.LabelTextView
+            android:id="@+id/ltv_cashremmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:labelText="钞/汇：" />
+          
+        <com.chinamworld.bocmbci.userwidget.LabelTextView
+            android:id="@+id/ltv_purchase_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:labelText="购买金额：" />
+
+        <com.chinamworld.bocmbci.userwidget.LabelTextView
+            android:id="@+id/ltv_deal_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:labelText="成交金额：" />
+
+        <com.chinamworld.bocmbci.userwidget.LabelTextView
+            android:id="@+id/ltv_deal_channel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:labelText="交易渠道：" />
+
+        <com.chinamworld.bocmbci.userwidget.LabelTextView
+            android:id="@+id/ltv_deal_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            custom:labelText="交易状态：" />
+    </com.chinamworld.bocmbci.userwidget.TitleAndContentLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/bt_group_list"
+            style="@style/bottombtn"
+            android:layout_width="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:text="被组合产品列表"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/bt_revoke"
+            style="@style/bottombtn"
+            android:layout_width="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:text="撤单"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

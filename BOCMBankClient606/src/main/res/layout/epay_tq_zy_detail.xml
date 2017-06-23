@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_button"
+        android:layout_marginBottom="@dimen/common_row_margin"
+        android:padding="0dp" >
+
+        <RelativeLayout
+            android:id="@+id/rl_order_detail"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="@dimen/dp_two_zero"
+            android:background="@drawable/bg_for_listview_item_write" >
+
+            <ScrollView
+                android:id="@+id/ll_on"
+                style="@style/scrollview_fill"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="@dimen/dp_three_zero" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="1.5"
+                            android:text="@string/epay_tq_zy_detail_tv_order_no" />
+
+                        <TextView
+                            android:id="@+id/tv_order_no"
+                            style="@style/textview_common_right" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_oa"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="1.5"
+                            android:text="@string/epay_tq_zy_detail_tv_order_amount" />
+
+                        <TextView
+                            android:id="@+id/tv_order_amount"
+                            style="@style/textview_common_right"
+                            android:textColor="@color/red" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_pt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="1.5"
+                            android:text="@string/epay_tq_zy_detail_tv_pay_time" />
+
+                        <TextView
+                            android:id="@+id/tv_pay_time"
+                            style="@style/textview_common_right" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_mn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="1.5"
+                            android:text="@string/epay_tq_zy_detail_tv_merchant_name" />
+
+                        <TextView
+                            android:id="@+id/tv_merchant_name"
+                            style="@style/textview_common_right" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_cc"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="1.5"
+                            android:text="@string/epay_tq_zy_detail_tv_cur_code" />
+
+                        <TextView
+                            android:id="@+id/tv_cur_code"
+                            style="@style/textview_common_right" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_pcn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="1.5"
+                            android:text="@string/epay_tq_zy_detail_tv_pay_card_no" />
+
+                        <TextView
+                            android:id="@+id/tv_pay_card_no"
+                            style="@style/textview_common_right" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_pct"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="1.5"
+                            android:text="@string/epay_tq_zy_detail_tv_pay_card_type" />
+
+                        <TextView
+                            android:id="@+id/tv_pay_card_type"
+                            style="@style/textview_common_right" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_pn"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="1.5"
+                            android:text="@string/epay_tq_zy_detail_tv_plan_number" />
+
+                        <TextView
+                            android:id="@+id/tv_plan_number"
+                            style="@style/textview_common_right" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_os"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="1.5"
+                            android:text="@string/epay_tq_zy_detail_tv_order_status" />
+
+                        <TextView
+                            android:id="@+id/tv_order_status"
+                            style="@style/textview_common_right" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_ot"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="1.5"
+                            android:text="@string/epay_tq_zy_detail_tv_order_time" />
+
+                        <TextView
+                            android:id="@+id/tv_order_time"
+                            style="@style/textview_common_right" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_order_note"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="1.5"
+                            android:text="@string/epay_tq_zy_detail_tv_order_note" />
+
+                        <TextView
+                            android:id="@+id/tv_order_note"
+                            style="@style/textview_common_right" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/common_row_margin"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="1.5"
+                            android:text="@string/remark_info" />
+
+                        <TextView
+                            android:id="@+id/tv_remark_info"
+                            style="@style/textview_common_right" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <TextView
+            style="@style/titleText_stepacc"
+            android:layout_width="@dimen/common_details_title_width"
+            android:layout_height="@dimen/left_img_width"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/bottom_margin_top"
+            android:background="@drawable/bg_title"
+            android:gravity="center"
+            android:text="@string/epay_tq_detail_tv_title"
+            android:textColor="@color/gray_title" />
+
+        <RelativeLayout
+            android:id="@+id/rl_pay_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_order_detail"
+            android:visibility="gone" >
+
+            <include layout="@layout/epay_tq_pay_detail" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_back_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_pay_content"
+            android:visibility="gone" >
+
+            <include layout="@layout/epay_tq_back_detail" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <!-- </com.chinamworld.bocmbci.biz.epay.transquery.widget.EpayDetailScroller> -->
+
+    <LinearLayout
+        android:id="@+id/ll_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/bt_ensure"
+            style="@style/bottombtn"
+            android:text="@string/confirm" />
+    </LinearLayout>
+
+</RelativeLayout>

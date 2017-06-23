@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color">
+
+    <include layout="@layout/boc_fund_statement_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"/>
+
+    <include layout="@layout/boc_divide_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_divider_1px"
+        android:layout_alignParentBottom="true"/>
+
+    <com.boc.bocsoft.mobile.bocmobile.buss.fund.common.fundstatement.ui.StatementScrollView
+        android:id="@+id/stsl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/makeValuell"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <include layout="@layout/boc_fund_nodate"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contentHeardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/boc_fund_persional"></include>
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vpContent"
+                android:layout_width="match_parent"
+                android:background="@color/boc_common_bg_color"
+                android:layout_height="match_parent">
+            </android.support.v4.view.ViewPager>
+
+        </LinearLayout>
+
+        <com.boc.bocsoft.mobile.framework.widget.tabLayout.SlidingTabLayout
+            android:id="@+id/lyt_tab"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_70px"
+            android:layout_marginTop="@dimen/boc_space_between_20px"
+            android:background="@color/boc_common_cell_color"
+            app:tl_bar_gravity="CENTER_HORIZONAL"
+            app:tl_indicator_color="@color/boc_text_color_red"
+            app:tl_indicator_height="2dp"
+            app:tl_indicator_width_equal_title="true"
+            app:tl_tab_padding="@dimen/boc_space_between_60px"
+            app:tl_textBold="BOTH"
+            app:tl_textSelectColor="@color/boc_text_color_red"
+            app:tl_textUnselectColor="@color/boc_text_color_common_gray"
+            app:tl_underline_color="@color/boc_common_bg_color"
+            app:tl_underline_height="2dp"/>
+
+    </FrameLayout>
+    </com.boc.bocsoft.mobile.bocmobile.buss.fund.common.fundstatement.ui.StatementScrollView>
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/fundTrans"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/boc_common_cell_color"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/fundStatementBalance"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:textColor="@color/boc_common_bg_color"-->
+            <!--android:text="持仓信息"-->
+            <!--android:drawablePadding="10dp"-->
+            <!--android:drawableBottom="@drawable/boc_button_blue_selector"/>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/fundpersionalTrans"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_weight="1"-->
+            <!--android:textColor="@color/boc_common_bg_color"-->
+            <!--android:text="交易流水"-->
+            <!--android:drawableBottom="@drawable/boc_button_blue_selector" />-->
+
+    <!--</LinearLayout>-->
+
+<!--<LinearLayout-->
+    <!--android:id="@+id/fundtimelt"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:orientation="vertical"-->
+    <!--android:visibility="gone">-->
+    <!--<com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget-->
+        <!--android:id="@+id/fundSttime"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--app:editChoiceName="@string/boc_eloan_draw_time" />-->
+<!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/fundMarket"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--android:visibility="gone">-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:layout_marginTop="30dp"-->
+        <!--android:gravity="center"-->
+        <!--android:background="@color/boc_common_cell_color"-->
+        <!--android:paddingLeft="15dp"-->
+        <!--android:paddingRight="15dp"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/fundkmTv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="13dp"-->
+            <!--android:textColor="@color/boc_text_color_light_gray" />-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="right"-->
+            <!--android:orientation="vertical">-->
+            <!--<TextView-->
+                <!--android:id="@+id/fundkmRno"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="13dp"-->
+                <!--android:textColor="@color/boc_text_color_light_gray" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/fundkmNo"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="13dp"-->
+                <!--android:textColor="@color/boc_text_color_light_gray" />-->
+        <!--</LinearLayout>-->
+
+    <!--</LinearLayout>-->
+    <!--<include layout="@layout/boc_divide_line"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/boc_divider_1px" />-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="60dp"-->
+        <!--android:gravity="center"-->
+        <!--android:background="@color/boc_common_cell_color"-->
+        <!--android:paddingLeft="15dp"-->
+        <!--android:paddingRight="15dp"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/floatingTv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="13dp"-->
+            <!--android:textColor="@color/boc_text_color_light_gray"-->
+            <!--/>-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="right"-->
+            <!--android:orientation="vertical">-->
+            <!--<TextView-->
+                <!--android:id="@+id/floatingRno"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="13dp"-->
+                <!--android:textColor="@color/boc_text_color_light_gray" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/floatingNo"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="13dp"-->
+                <!--android:textColor="@color/boc_text_color_light_gray" />-->
+        <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+    <!--<LinearLayout-->
+        <!--android:id="@+id/statementPager"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--android:visibility="gone">-->
+    <!--<com.boc.bocsoft.mobile.framework.widget.tabLayout.SlidingTabLayout-->
+        <!--android:id="@+id/lyt_tab"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/boc_space_between_70px"-->
+        <!--android:layout_marginTop="@dimen/boc_space_between_20px"-->
+        <!--android:background="@color/boc_common_cell_color"-->
+        <!--app:tl_bar_gravity="CENTER_HORIZONAL"-->
+        <!--app:tl_indicator_color="@color/boc_text_color_red"-->
+        <!--app:tl_indicator_height="2dp"-->
+        <!--app:tl_indicator_width_equal_title="true"-->
+        <!--app:tl_tab_padding="@dimen/boc_space_between_60px"-->
+        <!--app:tl_textBold="BOTH"-->
+        <!--app:tl_textSelectColor="@color/boc_text_color_red"-->
+        <!--app:tl_textUnselectColor="@color/boc_text_color_common_gray"-->
+        <!--app:tl_underline_color="@color/boc_common_bg_color"-->
+        <!--app:tl_underline_height="2dp"/>-->
+
+    <!--<android.support.v4.view.ViewPager-->
+        <!--android:id="@+id/vpContent"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:background="@color/boc_common_bg_color"-->
+        <!--android:layout_height="match_parent">-->
+    <!--</android.support.v4.view.ViewPager>-->
+    <!--</LinearLayout>-->
+ <!--<LinearLayout-->
+     <!--android:layout_width="match_parent"-->
+     <!--android:layout_height="match_parent"-->
+     <!--android:gravity="center"-->
+     <!--android:orientation="vertical">-->
+     <!--<ImageView-->
+         <!--android:id="@+id/statementIv"-->
+         <!--android:layout_width="wrap_content"-->
+         <!--android:layout_height="wrap_content"-->
+         <!--android:background="@drawable/boc_statement"-->
+         <!--android:visibility="gone"/>-->
+     <!--<TextView-->
+         <!--android:id="@+id/statementHit"-->
+         <!--android:layout_width="match_parent"-->
+         <!--android:layout_height="wrap_content"-->
+         <!--android:layout_marginTop="5dp"-->
+         <!--android:gravity="center"-->
+         <!--android:textColor="@color/boc_text_mobile_color"-->
+         <!--android:textSize="15dp"-->
+         <!--android:textStyle="bold" />-->
+ <!--</LinearLayout>-->
+</LinearLayout>

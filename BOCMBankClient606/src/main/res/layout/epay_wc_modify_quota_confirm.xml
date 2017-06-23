@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:id="@+id/sv_content"
+        style="@style/scrollview_with_no_padding"
+        android:layout_above="@+id/bt_ensure"
+        android:layout_marginBottom="@dimen/common_row_margin"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:paddingBottom="@dimen/fill_padding_bottom"
+        android:paddingTop="@dimen/fill_padding_top" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+            <TextView
+                android:id="@+id/tv_msg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_row_margin"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:text="@string/epay_wc_modify_confirm_tv_msg"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_default" />
+
+            <LinearLayout
+                android:id="@+id/ll_acc_number"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_msg"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="1.0"
+                    android:text="@string/epay_wc_spa_tv_acc" />
+
+                <TextView
+                    android:id="@+id/tv_acc_number"
+                    style="@style/textview_common_right"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_currency"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_acc_number"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="1.0"
+                    android:text="@string/epay_wc_spa_tv_currency" />
+
+                <TextView
+                    android:id="@+id/tv_currency"
+                    style="@style/textview_common_right"
+                    android:layout_weight="1.0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_dmq"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_currency"
+                android:layout_marginBottom="@dimen/common_row_margin"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0" >
+
+                    <TextView
+                   		android:id="@+id/tv_cust_max_quota_txt"
+                        style="@style/textview_common_left"
+                        android:singleLine="false"
+                        android:text="@string/epay_wc_spa_tv_day_max_quota_text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="：" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_cust_max_quota"
+                    style="@style/textview_money_adapter"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                   android:gravity="left|bottom"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_confirm_bar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_dmq"
+                android:paddingRight="@dimen/shap_of_save_confirm_pdr" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                     >
+                    
+                <include layout="@layout/epay_pub_confirm" />
+                
+
+                
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/bt_ensure"
+        style="@style/bottombtn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/fill_margin_bottom"
+        android:text="@string/confirm" />
+
+</RelativeLayout>

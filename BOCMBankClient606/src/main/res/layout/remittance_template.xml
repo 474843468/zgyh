@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 功能外置 基金  查询条件页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_combinate_queryproduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/recommendation_link"
+        android:orientation="vertical" >
+
+        <!-- 快速查询 -->
+
+        <RelativeLayout
+            android:id="@+id/layout_fast"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+            
+
+            <Button
+                android:id="@+id/btn_fastquery"
+                style="@style/outlay_query_button_style"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_five"
+                android:gravity="center|center_vertical"
+                android:onClick="btnFastQueryOnclick"
+                android:background="@drawable/icon_bianji"
+                android:textSize="@dimen/textsize_one_six" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/editView"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_chaxun_icon" />
+
+            <EditText
+                android:id="@+id/editView"
+                style="@style/edittext_inputNumber_fill"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/btn_fastquery"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                android:hint="请输入关键字搜索"
+                android:inputType="text" >
+
+                <requestFocus />
+            </EditText>
+
+        </RelativeLayout>
+
+        <!-- 查询条件 -->
+
+        
+    </LinearLayout>
+
+</RelativeLayout>

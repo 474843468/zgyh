@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+        <TextView
+        android:id="@+id/text_tip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:gravity="center"
+        android:paddingLeft="@dimen/fill_padding_top"
+        android:text="@string/plps_payment_service"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/textsize_default" />
+
+      <!--   <ScrollView
+            android:id="@+id/plps_scroll"
+            style="@style/scrollview_comm" > -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+				<GridView 
+				    android:id="@+id/plps_grid_view"
+				    android:numColumns="4"
+				    android:layout_width="match_parent"
+				    android:layout_height="match_parent"
+				    android:horizontalSpacing="@dimen/bottom_dialog_item_padding"
+				    android:listSelector="#00000000"
+				    android:layout_marginBottom="@dimen/dp_one_zero">
+                </GridView>
+            </LinearLayout>
+       <!--  </ScrollView> -->
+    </LinearLayout>
+
+</RelativeLayout>

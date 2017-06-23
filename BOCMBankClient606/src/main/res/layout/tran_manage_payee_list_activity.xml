@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 转账汇款  wangchao  收款管理列表 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/rg_manage_payee"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_left_manage_payee"
+            style="@style/radioButtonLeft"
+            android:text="@string/mangage_boc_payee"
+            android:textSize="@dimen/textsize_one_two" />
+
+        <RadioButton
+            android:id="@+id/rb_middle_manage_payee"
+            style="@style/radioButtonMiddle"
+            android:text="@string/mangage_otherbank_payee"
+            android:textSize="@dimen/textsize_one_two" />
+
+        <RadioButton
+            android:id="@+id/rb_right_manage_payee"
+            style="@style/radioButtonRight"
+            android:text="@string/mangage_otherebps_payee"
+            android:textSize="@dimen/textsize_one_two" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/manage_boc_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/list_view_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/fill_padding_top"
+            android:paddingLeft="@dimen/layout_margin_top"
+            android:paddingTop="@dimen/fill_padding_top" >
+
+            <TextView
+                android:id="@+id/tv_column_1"
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:text="@string/manage_payee_phone_num"
+                android:textSize="@dimen/textsize_one_two" />
+
+            <TextView
+                android:id="@+id/tv_column_2"
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:text="@string/manage_payee_num"
+                android:textSize="@dimen/textsize_one_two" />
+
+            <TextView
+                android:id="@+id/tv_column_3"
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:gravity="center"
+                android:text="@string/manage_payee_list"
+                android:textSize="@dimen/textsize_one_two" />
+
+            <ImageView
+                android:id="@+id/rate_gotoDetail"
+                android:layout_width="@dimen/shap_of_commrequestopen_pdl"
+                android:layout_height="@dimen/shap_of_commrequestopen_pdl"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:src="@drawable/right_arrow"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_line_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/list_view_header"
+            android:src="@color/gray_line" />
+
+        <ListView
+            android:id="@+id/lv_query_result_trans_records"
+            style="@style/listviewcomm_fill_gray_divider"
+            android:layout_below="@+id/img_line_1" >
+        </ListView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/manage_other_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/list_view_header1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/fill_padding_top"
+            android:paddingLeft="@dimen/layout_margin_top"
+            android:paddingTop="@dimen/fill_padding_top" >
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:text="@string/manage_payee_num"
+                android:textSize="@dimen/textsize_one_two" />
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:gravity="center"
+                android:text="@string/manage_payee_list"
+                android:textSize="@dimen/textsize_one_two" />
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:text="@string/manage_payee_num_inbank"
+                android:textSize="@dimen/textsize_one_two" />
+
+            <ImageView
+                android:layout_width="@dimen/shap_of_commrequestopen_pdl"
+                android:layout_height="@dimen/shap_of_commrequestopen_pdl"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:src="@drawable/right_arrow"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/list_view_header1"
+            android:src="@color/gray_line" />
+
+        <ListView
+            android:id="@+id/lv_other_bank_manage_payee"
+            style="@style/listviewcomm_fill_gray_divider"
+            android:layout_below="@+id/img_line" >
+        </ListView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/manage_otherebps_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/list_view_header2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/fill_padding_top"
+            android:paddingLeft="@dimen/layout_margin_top"
+            android:paddingTop="@dimen/fill_padding_top" >
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:text="@string/manage_payee_num"
+                android:textSize="@dimen/textsize_one_two" />
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:gravity="center"
+                android:text="@string/manage_payee_list"
+                android:textSize="@dimen/textsize_one_two" />
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:text="@string/manage_payee_num_inbank"
+                android:textSize="@dimen/textsize_one_two" />
+
+            <ImageView
+                android:layout_width="@dimen/shap_of_commrequestopen_pdl"
+                android:layout_height="@dimen/shap_of_commrequestopen_pdl"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:src="@drawable/right_arrow"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/list_view_header2"
+            android:src="@color/gray_line" />
+
+        <ListView
+            android:id="@+id/lv_other_ebps_manage_payee"
+            style="@style/listviewcomm_fill_gray_divider"
+            android:layout_below="@+id/img_line1" >
+        </ListView>
+    </RelativeLayout>
+
+</LinearLayout>

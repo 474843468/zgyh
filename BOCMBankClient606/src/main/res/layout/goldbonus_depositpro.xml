@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 贵金属积利金  定存管理  定期产品 综合页面  输入、确认、结果页面   linyl -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/goldbonus_depositpro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <com.chinamworld.bocmbci.userwidget.TitleAndContentLayout
+            android:id="@+id/titleAndContentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <!-- 确认页面标题提示信息 -->
+
+            <LinearLayout
+                android:id="@+id/depositpro_confirm_info_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="请确认您的定存信息"
+                    android:textColor="@color/boc_text_color_common_gray"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <!-- 结果页面标题信息 -->
+
+            <LinearLayout
+                android:id="@+id/depositpro_success_info_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv_success_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="交易成功，记录您的交易流水号，以便核实交易情况"
+                    android:textColor="@color/boc_text_color_common_gray"
+                    android:textSize="15sp"
+                    />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimen_two_zero"
+                android:paddingBottom="@dimen/dp_five"
+                android:paddingTop="@dimen/dp_five" >
+
+                <LinearLayout
+                    android:id="@+id/myContainerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </ScrollView>
+            <!-- 输入页面  活期转定期数量 -->
+
+            <LinearLayout
+                android:id="@+id/input_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_agr_modify_amount"
+                    style="@style/comm_view_left"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/fonts_dark_gray"
+                    android:text="活期转定期数量：" />
+
+                <LinearLayout
+                
+                    android:layout_height="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/et_inputnum"
+                        style="@style/edittext_input_numberDecimal_fill"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:maxLength="14"
+                        android:singleLine="true"
+                        android:textColor="@color/fonts_black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/edittext_height"
+                        android:gravity="left|center"
+                        android:text=" 克       "
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/fonts_black"
+                        android:textSize="@dimen/textsize_one_three" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.chinamworld.bocmbci.userwidget.TitleAndContentLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/boc_space_between_20px"
+            android:orientation="horizontal" >
+			
+            <!-- 温馨提示 -->
+            <LinearLayout
+                android:id="@+id/ll_wenxin" 
+                android:layout_width="match_parent"
+            	android:layout_height="wrap_content"
+            	android:orientation="vertical">
+                <com.chinamworld.bocmbci.biz.goldbonus.MyTextView
+                	android:layout_width="match_parent"
+                	android:layout_height="wrap_content"
+                	android:layout_margin="5dp"
+                	android:gravity="left"
+                	android:text="    1.交易数量起点为1克，每1克递增。\n    2.定期贵金属积利不支持提前终止。"
+                	android:textColor="@color/boc_text_color_common_gray" />
+            	
+            	<Button
+                	android:id="@+id/depositpro_next"
+                	style="@style/bottombtn_new"
+                	android:text="@string/next" />
+			</LinearLayout>
+            <Button
+                android:id="@+id/depositpro_confirm"
+                style="@style/bottombtn_new"
+                android:text="@string/confirm"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/depositpro_finish"
+                style="@style/bottombtn_new"
+                android:text="@string/finish"
+                android:visibility="gone" />
+       
+    	</LinearLayout>
+	</LinearLayout>
+</FrameLayout>

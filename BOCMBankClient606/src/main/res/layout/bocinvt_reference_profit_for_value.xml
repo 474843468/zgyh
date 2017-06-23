@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/tv_profit_summarize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical" >
+
+        <com.chinamworld.bocmbci.userwidget.LabelTextView
+            android:id="@+id/ltv_amt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           
+            custom:ValueTextColor="red"
+            custom:labelText="@string/bocinvt_amt" />
+
+        <com.chinamworld.bocmbci.userwidget.LabelTextView
+            android:id="@+id/ltv_balamt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            
+            custom:ValueTextColor="red"
+            custom:labelText="@string/bocinvt_balamt" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <TextView
+            android:id="@+id/tv_reminder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bocinvt_profit_reminder_for_value"
+            android:textColor="@color/gray" />
+    </LinearLayout>
+
+</LinearLayout>

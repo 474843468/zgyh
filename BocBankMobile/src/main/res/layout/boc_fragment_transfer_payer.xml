@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#fff"
+              android:orientation="vertical">
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#D8D8E0"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:background="@color/boc_main_btn_bg_color"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_search_payer"
+            android:layout_width="match_parent"
+            android:layout_height="27.8dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/boc_space_between_24px"
+            android:layout_marginRight="@dimen/boc_space_between_24px"
+            android:background="@drawable/boc_edittext_bg_grey"
+            android:drawableLeft="@drawable/boc_image_search"
+            android:drawablePadding="@dimen/boc_space_between_20px"
+            android:hint="付款人名称"
+            android:paddingLeft="@dimen/boc_space_between_20px"
+            android:paddingRight="16dp"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textColorHint="#cccccc"
+            android:textSize="@dimen/boc_space_between_28px"/>
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#D8D8E0"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/transfer_payer_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#D8D8E0"
+            android:dividerHeight="0.5dp"
+            android:overScrollMode="never"/>
+
+        <TextView
+            android:id="@+id/tv_queryfaile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="暂无常用付款人"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:visibility="gone"
+            />
+
+    </FrameLayout>
+
+</LinearLayout>

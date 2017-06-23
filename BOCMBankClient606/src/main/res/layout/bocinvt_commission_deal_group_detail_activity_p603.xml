@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 委托交易组合购买的被组合产品详情 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="-12dp"
+        android:background="@drawable/bocinvt_bg_rectangle_gray_sideline_round_corners"
+        android:orientation="vertical"
+        android:paddingTop="12dp" >
+
+        <include layout="@layout/bocinvt_three_view_bisection_horizontal" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray" />
+
+        <ListView
+            android:id="@+id/list"
+            style="@style/listviewcomm_fill_gray_divider" >
+        </ListView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bocinvt_bg_gray_solid"
+        android:paddingBottom="3dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="3dp"
+        android:text="产品列表" />
+
+</RelativeLayout>

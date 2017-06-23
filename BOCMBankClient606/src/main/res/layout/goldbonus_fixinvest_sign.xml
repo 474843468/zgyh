@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 定投预约 页面  linyl -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical" >
+
+            <!-- 请选择预约信息 -->
+
+            <LinearLayout
+                android:id="@+id/fixinvest_sign_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="请选择预约信息"
+                    android:textColor="@color/fonts_dark_gray"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:orientation="vertical" >
+
+                <!-- 交易周期 -->
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/common_row_margin_half"
+                    android:layout_marginLeft="@dimen/comm_confirm_leftiterm_marginleft"
+                    android:layout_marginRight="@dimen/comm_confirm_leftiterm_marginleft"
+                    android:layout_marginTop="@dimen/common_row_margin" >
+
+                    <TextView
+                        android:id="@+id/goldbonus_fixsign_fixFreque"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/fonts_dark_gray"
+                        android:text="@string/goldbonus_busitrade_fixFreque" />
+
+                    <Spinner
+                        android:id="@+id/sp_goldbonus_fixsign_fixFreque"
+                        style="@style/Spiiner_fill"
+                        android:layout_height="@dimen/layout_height"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/goldbonus_fixsign_fixFreque"
+                        android:background="@drawable/bg_spinner"
+                        android:ellipsize="middle"
+                        android:gravity="center_vertical"
+                        android:entries="@array/limitUnit_CN1"
+                        android:prompt="@string/goldbonus_busitrade_fixFreque1" />
+                </RelativeLayout>
+
+                <!-- 交易日期 -->
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/common_row_margin_half"
+                    android:layout_marginLeft="@dimen/comm_confirm_leftiterm_marginleft"
+                    android:layout_marginRight="@dimen/comm_confirm_leftiterm_marginleft"
+                    android:layout_marginTop="3dp" >
+
+                    <TextView
+                        android:id="@+id/goldbonus_fixsign_fixPayDate"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/fonts_dark_gray"
+                        android:text="@string/goldbonus_busitrade_fixPayDate" />
+
+                    <Spinner
+                        android:id="@+id/sp_goldbonus_fixsign_fixPayDate"
+                        style="@style/Spiiner_fill"
+                        android:layout_height="@dimen/layout_height"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/goldbonus_fixsign_fixPayDate"
+                        android:background="@drawable/bg_spinner"
+                        android:ellipsize="middle"
+                        android:gravity="center_vertical"
+                        android:prompt="@string/goldbonus_busitrade_fixPayDate1" />
+                </RelativeLayout>
+                <!-- 提示信息 -->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/common_row_margin_half"
+                    android:layout_marginLeft="@dimen/comm_confirm_leftiterm_marginleft"
+                    android:layout_marginRight="@dimen/comm_confirm_leftiterm_marginleft"
+                    android:layout_marginTop="3dp" >
+
+                    <TextView
+                        android:id="@+id/textinfo"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="周末及法定节假日除外" 
+                        android:textColor="@color/fonts_pink"
+                    	android:textSize="15sp"
+                    	android:textStyle="bold"/>
+				</RelativeLayout>
+                <!-- 结束条件 -->
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/common_row_margin_half"
+                    android:layout_marginLeft="@dimen/comm_confirm_leftiterm_marginleft"
+                    android:layout_marginRight="@dimen/comm_confirm_leftiterm_marginleft"
+                    android:layout_marginTop="3dp" >
+
+                    <TextView
+                        android:id="@+id/goldbonus_fixsign_end"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/fonts_dark_gray"
+                        android:text="@string/goldbonus_busitrade_end" />
+
+                    <TextView
+                        android:id="@+id/goldbonus_fixsign_endinfo"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/goldbonus_fixsign_end"
+                        android:text="累计交易次数  " />
+
+                    <Spinner
+                        android:id="@+id/sp_goldbonus_fixsign_termNum"
+                        style="@style/Spiiner_fill"
+                        android:layout_height="@dimen/layout_height"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/goldbonus_fixsign_endinfo"
+                        android:background="@drawable/bg_spinner"
+                        android:ellipsize="middle"
+                        android:gravity="center_vertical"
+                        android:prompt="@string/goldbonus_busitrade_end2" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/boc_space_between_20px">
+
+                <Button
+                    android:id="@+id/btnnext"
+                    style="@style/bottombtn_new"
+                    android:text="@string/next" />
+            </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

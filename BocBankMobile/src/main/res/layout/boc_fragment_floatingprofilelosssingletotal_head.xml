@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/boc_divider_line_color"
+    android:orientation="vertical">
+    <include
+        layout="@layout/boc_divide_line"
+        android:id="@+id/divide_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_20px"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fund_info">
+        <TextView
+            android:id="@+id/fund_name"
+            style="@style/BocTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/boc_space_between_10px"
+            android:paddingLeft="@dimen/boc_space_between_20px"
+            android:paddingTop="@dimen/boc_space_between_20px"
+            android:text="名称"/>
+
+        <TextView
+            android:id="@+id/fund_code"
+            style="@style/BocTextView"
+            android:textColor="@color/boc_btn_txt_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="名称"/>
+    </LinearLayout>
+
+    <include layout="@layout/boc_fund_floatingprofileloss_comm_total"></include>
+
+    <TextView
+        android:id="@+id/all_profile_loss"
+        style="@style/BocTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/boc_space_between_10px"
+        android:paddingLeft="@dimen/boc_space_between_20px"
+        android:paddingTop="@dimen/boc_space_between_20px"
+        android:text="@string/boc_fund_profileloss_total_profileloss_detail"/>
+
+</LinearLayout>

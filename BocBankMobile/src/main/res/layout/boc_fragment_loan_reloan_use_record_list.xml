@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.boc.bocsoft.mobile.bocmobile.base.widget.SlipMenu.SlipDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutSlipDrawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llyHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llyNodata"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvNoData"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:textSize="@dimen/boc_text_size_common" />
+        </LinearLayout>
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullToRefreshLayout
+            android:id="@+id/other_loan_online_query_view"
+            android:background="@color/boc_common_bg_color"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.showlistview.PinnedSectionListView
+                android:id="@+id/lvUseRecord"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never" />
+
+            <include layout="@layout/boc_load_more" />
+        </com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullToRefreshLayout>
+    </LinearLayout>
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.selectview.selecttimerangenew.SelectTimeRangeNew
+        android:id="@+id/viewSelectTime"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:clickable="true" />
+</com.boc.bocsoft.mobile.bocmobile.base.widget.SlipMenu.SlipDrawerLayout>
+

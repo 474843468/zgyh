@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/img_bg_query_j"
+    android:paddingLeft="@dimen/fill_padding"
+    android:paddingRight="@dimen/fill_padding"
+    android:paddingTop="@dimen/fill_padding" >
+
+    <LinearLayout
+        android:id="@+id/spinner_bar_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/textview_common"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/layout_height"
+            android:layout_marginRight="@dimen/dp_five"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/dp_five"
+            android:text="支付方式:" />
+
+        <Spinner
+            android:id="@+id/s_payment_type"
+            style="@style/Spiiner_fill" />
+
+        <Spinner
+            android:id="@+id/s_payment_way"
+            style="@style/Spiiner_fill"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/spinner_bar_2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_bar_1"
+        android:layout_marginTop="@dimen/dp_five"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/textview_common"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/layout_height"
+            android:layout_marginRight="@dimen/dp_five"
+            android:gravity="center_vertical"
+            android:paddingRight="@dimen/dp_five"
+            android:text="支付账户:" />
+
+        <Spinner
+            android:id="@+id/s_payment_account"
+            style="@style/Spiiner_fill"
+            android:paddingRight="@dimen/dp_three_zero" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/spinner_bar_2"
+        android:layout_marginBottom="@dimen/dp_five"
+        android:layout_marginTop="@dimen/dp_five"
+        android:baselineAligned="false" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bt_week"
+                style="@style/buttonLeft"
+                android:singleLine="true"
+                android:text="@string/epay_tq_tv_week"
+                android:textSize="@dimen/textsize_one_two" />
+
+            <Button
+                android:id="@+id/bt_month"
+                style="@style/buttonMiddle"
+                android:singleLine="true"
+                android:text="@string/epay_tq_tv_month"
+                android:textSize="@dimen/textsize_one_two" />
+
+            <Button
+                android:id="@+id/bt_three_month"
+                style="@style/buttonRight"
+                android:singleLine="true"
+                android:text="@string/epay_tq_tv_three_month"
+                android:textSize="@dimen/textsize_one_two" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/query_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_button"
+        android:layout_marginTop="@dimen/dp_five"
+        android:orientation="horizontal" >
+
+        <include layout="@layout/base_query_fengge" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/spinner_bar_3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/query_tip"
+        android:layout_marginTop="@dimen/dp_five"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_start_date"
+            style="@style/textview_common"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/layout_height"
+            android:layout_marginRight="@dimen/dp_five"
+            android:layout_weight="1"
+            android:background="@drawable/bg_spinner"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_five"
+            android:paddingRight="@dimen/dp_five" />
+
+        <TextView
+            android:id="@+id/tv_end_date"
+            style="@style/textview_common"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/layout_height"
+            android:layout_marginLeft="@dimen/dp_five"
+            android:layout_weight="1"
+            android:background="@drawable/bg_spinner"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/dp_five"
+            android:paddingRight="@dimen/dp_five" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_query"
+        style="@style/query_button_style"
+        android:layout_below="@id/spinner_bar_3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:singleLine="true"
+        android:text="@string/epay_pub_tv_query"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_one_two" />
+
+    <RelativeLayout
+        android:id="@+id/rl_slip_up"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_query"
+        android:gravity="right"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/textview_common_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/edittext_paddinglr"
+            android:layout_toLeftOf="@+id/img_slip_up"
+            android:textSize="@dimen/textsize_default" />
+
+        <ImageView
+            android:id="@+id/img_slip_up"
+            android:layout_width="@dimen/rightbtnW"
+            android:layout_height="@dimen/rightbtnH"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/img_arrow_gray_up" />
+    </RelativeLayout>
+
+</RelativeLayout>

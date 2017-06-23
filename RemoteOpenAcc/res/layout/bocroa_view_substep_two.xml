@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bocroa_background"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bocroa_step_item_hei"
+        android:gravity="center_horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            style="@style/bocroa_style_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="身份证信息" />
+    </RelativeLayout>
+    <!-- 照片 -->
+
+    <LinearLayout
+        android:id="@+id/ll_picture_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bocroa_white"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <!-- 身份证正面 -->
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <!-- 提示View -->
+
+            <LinearLayout
+                android:id="@+id/rl_shot_front"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_front_tips"
+                    style="@style/bocroa_style_28px_dbdee3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="20dp"
+                    android:drawableTop="@drawable/bocroa_id_no_shut"
+                    android:gravity="center"
+                    android:text="拍摄身份证正面\n（姓名、身份证号一面）" />
+            </LinearLayout>
+            <!-- 显示身份证view -->
+
+            <ImageView
+                android:id="@+id/iv_id_front"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="3dp" />
+            <!-- 身份证上层view -->
+
+            <RelativeLayout
+                android:id="@+id/rl_shot_front_float"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/iv_front_shot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginTop="7dp"
+                    android:src="@drawable/bocroa_id_have_shut" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/bocroa_e5e8e9" />
+        <!-- 身份证背面 -->
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <!-- 背面提示view -->
+
+            <LinearLayout
+                android:id="@+id/rl_shot_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_back_tips"
+                    style="@style/bocroa_style_28px_dbdee3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="20dp"
+                    android:drawableTop="@drawable/bocroa_id_no_shut"
+                    android:gravity="center"
+                    android:text="拍摄身份证背面\n（签证机关、有效期限一面）" />
+            </LinearLayout>
+            <!-- 背面图片 -->
+
+            <ImageView
+                android:id="@+id/iv_id_back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:padding="3dp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_shot_back_float"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" >
+
+                <!-- 上层view -->
+
+                <ImageView
+                    android:id="@+id/iv_back_shot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="7dp"
+                    android:layout_marginTop="7dp"
+                    android:src="@drawable/bocroa_id_have_shut" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!-- <ImageView -->
+    <!-- android:id="@+id/tv_count" -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:visibility="visible" /> -->
+
+    <TextView
+        android:id="@+id/tv_id_notice"
+        style="@style/bocroa_style_step_title"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/bocroa_step_item_hei"
+        android:gravity="center_vertical"
+        android:text="请保证您拍摄的照片清晰、无反光。"
+        android:textColor="@color/bocroa_gray_b3bbc2"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/ll_identity"
+        style="@style/bocroa_style_step_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bocroa_step_item_hei"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/bocroa_style_step_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bocroa_identity_num" />
+
+        <com.boc.bocsoft.remoteopenacc.common.view.BaseEditText
+            android:id="@+id/et_identity_num"
+            style="@style/bocroa_style_14px_333333"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/bocroa_indicator_right_padding"
+            android:layout_weight="1"
+            android:background="@null"
+            android:clickable="false"
+            android:digits="0123456789X"
+            android:focusable="false"
+            android:gravity="right"
+            android:maxLength="18" />
+    </LinearLayout>
+    <!-- 签发日期 -->
+
+    <LinearLayout
+        style="@style/bocroa_style_step_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bocroa_step_item_hei"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/bocroa_style_step_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="签发日期" />
+
+        <com.boc.bocsoft.remoteopenacc.common.view.BaseEditText
+            android:id="@+id/et_validity_start"
+            style="@style/bocroa_style_step_item_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:hint="例“20201109”"
+            android:maxLength="10" />
+    </LinearLayout>
+    <!-- 截止日期 -->
+
+    <LinearLayout
+        style="@style/bocroa_style_step_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bocroa_step_item_hei"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/bocroa_style_step_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="截止日期" />
+
+        <com.boc.bocsoft.remoteopenacc.common.view.BaseEditText
+            android:id="@+id/et_validity_end"
+            style="@style/bocroa_style_step_item_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:hint="例“20201109”"
+            android:maxLength="10" />
+    </LinearLayout>
+    <!-- 民族 -->
+
+    <LinearLayout
+        android:id="@+id/ll_national"
+        style="@style/bocroa_style_step_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bocroa_step_item_hei"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/bocroa_style_step_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="民族" />
+
+        <TextView
+            android:id="@+id/tv_national"
+            style="@style/bocroa_style_select_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="请选择" />
+
+        <TextView
+            android:id="@+id/btn_national"
+            style="@style/bocroa_style_select_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bocroa_step_item_hei"
+        android:gravity="center_horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            style="@style/bocroa_style_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="居住地" />
+    </RelativeLayout>
+    <!-- 城市 -->
+
+    <LinearLayout
+        android:id="@+id/ll_city"
+        style="@style/bocroa_style_step_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bocroa_step_item_hei"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            style="@style/bocroa_style_step_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="居住城市" />
+
+        <TextView
+            android:id="@+id/tv_city"
+            style="@style/bocroa_style_select_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="请选择" />
+
+        <TextView
+            android:id="@+id/btn_city"
+            style="@style/bocroa_style_select_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!-- 详细地址 -->
+
+    <LinearLayout
+        style="@style/bocroa_style_step_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bocroa_step_item_hei"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            style="@style/bocroa_style_step_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="所在区县" />
+
+        <com.boc.bocsoft.remoteopenacc.common.view.BaseEditText
+            android:id="@+id/et_region"
+            style="@style/bocroa_style_step_item_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:hint="区/县" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/bocroa_style_step_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bocroa_step_item_hei"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            style="@style/bocroa_style_step_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="详细地址" />
+
+        <com.boc.bocsoft.remoteopenacc.common.view.BaseEditText
+            android:id="@+id/et_doorplate"
+            style="@style/bocroa_style_step_item_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:hint="街道/小区/门牌号" />
+    </LinearLayout>
+    <!-- 邮编 -->
+
+    <LinearLayout
+        style="@style/bocroa_style_step_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bocroa_step_item_hei"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            style="@style/bocroa_style_step_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="邮编" />
+
+        <com.boc.bocsoft.remoteopenacc.common.view.BaseEditText
+            android:id="@+id/et_post_code"
+            style="@style/bocroa_style_step_item_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="例如：100000"
+            android:inputType="number"
+            android:maxLength="6" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bocroa_step_item_hei"
+        android:gravity="center_horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            style="@style/bocroa_style_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="工作信息" />
+    </RelativeLayout>
+
+    <!-- 职业 -->
+
+    <LinearLayout
+        android:id="@+id/ll_profession"
+        style="@style/bocroa_style_step_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bocroa_step_item_hei"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/bocroa_style_step_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="职业" />
+
+        <TextView
+            android:id="@+id/tv_profession"
+            style="@style/bocroa_style_select_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="请选择" />
+
+        <TextView
+            android:id="@+id/btn_profession"
+            style="@style/bocroa_style_select_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!-- 行业 -->
+
+    <LinearLayout
+        android:id="@+id/ll_industry"
+        style="@style/bocroa_style_step_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bocroa_step_item_hei"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            style="@style/bocroa_style_step_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="行业" />
+
+        <TextView
+            android:id="@+id/tv_industry"
+            style="@style/bocroa_style_select_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="请选择" />
+
+        <TextView
+            android:id="@+id/btn_industry"
+            style="@style/bocroa_style_select_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!-- 单位名称 -->
+
+    <LinearLayout
+        style="@style/bocroa_style_step_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bocroa_step_item_hei"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            style="@style/bocroa_style_step_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="单位名称" />
+
+        <com.boc.bocsoft.remoteopenacc.common.view.BaseEditText
+            android:id="@+id/et_compony_name"
+            style="@style/bocroa_style_step_item_edit"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:hint="单位名称" />
+    </LinearLayout>
+    <!-- 月收入 -->
+
+    <LinearLayout
+        android:id="@+id/ll_month_income"
+        style="@style/bocroa_style_step_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bocroa_step_item_hei"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            style="@style/bocroa_style_step_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="月收入" />
+
+        <TextView
+            android:id="@+id/tv_month_income"
+            style="@style/bocroa_style_select_tv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="请选择" />
+
+        <TextView
+            android:id="@+id/btn_month_income"
+            style="@style/bocroa_style_select_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="70dp" />
+
+</LinearLayout>

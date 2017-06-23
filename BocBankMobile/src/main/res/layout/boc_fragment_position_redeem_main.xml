@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:scrollbars="none">
+    <!--赎回-申请界面-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/boc_common_bg_color"
+        android:orientation="vertical">
+        <!--产品名称+产品代码-->
+        <TextView
+            android:id="@+id/redeem_prod_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_space_between_50px"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:layout_marginTop="@dimen/boc_space_between_40px"
+            android:text="中银智慧理财产品第322期（600987）"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:textSize="@dimen/boc_text_size_common"
+            android:textStyle="bold" />
+        <!--净值 显示内容（-可赎回份额，持有份额，赎回手续费，业绩报酬(浮动管理费)）-->
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailContentView
+            android:id="@+id/redeem_net_value_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginTop="@dimen/boc_space_between_10px" />
+        <!--非净值 显示内容（-可赎回份额，持有份额，份额面值）-->
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailContentView
+            android:id="@+id/redeem_no_net_value_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginTop="@dimen/boc_space_between_10px" />
+        <!--赎回份额-全部赎回-部分赎回-->
+        <!--<com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditClearWidget-->
+        <!--android:id="@+id/redeem_redeem_quantity"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/boc_space_between_20px"-->
+        <!--android:layout_marginRight="@dimen/boc_space_between_20px"-->
+        <!--android:layout_marginTop="@dimen/boc_space_between_30px"-->
+        <!--android:orientation="vertical" />-->
+
+        <!-- 用款金额 -->
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputWidget
+            android:id="@+id/redeem_redeem_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:layout_marginTop="@dimen/boc_space_between_30px" />
+        <!--赎回份额-全部赎回-不允许部分赎回-->
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+            android:id="@+id/redeem_redeem_quantity_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:layout_marginTop="@dimen/boc_view_height_2px"
+            android:orientation="vertical"
+            android:visibility="gone" />
+        <!--最少赎回份数和最低持有份额-布局-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_80px"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/boc_space_between_20px">
+
+            <!--最少赎回份数和最低持有份额-value-->
+            <TextView
+                android:id="@+id/redeem_minnumber_and_minhold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/boc_space_between_50px"
+                android:layout_marginRight="@dimen/boc_space_between_20px"
+                android:text="最少赎回500份，最低持有份额100"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:textSize="@dimen/boc_text_size_small" />
+        </LinearLayout>
+        <!--赎回方式-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:background="@color/boc_titlebar_bg_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/boc_space_between_32px"
+            android:paddingRight="@dimen/boc_space_between_30px">
+            <!--赎回方式title-->
+
+            <TextView
+                android:id="@+id/redeem_redeem_type_title"
+                android:layout_width="@dimen/boc_space_between_190px"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="@dimen/boc_space_between_6px"
+                android:text="@string/boc_position_redeem_type"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_common"
+                android:textStyle="bold" />
+            >
+            <!--赎回方式value-->
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.singlemoreselect.SelectGridView
+                android:id="@+id/redeem_redeem_type_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="@dimen/boc_space_between_20px"
+                android:numColumns="2"
+                app:radioTrue="true" />
+
+        </LinearLayout>
+        <!--赎回日期-->
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+            android:id="@+id/redeem_redeem_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:layout_marginTop="@dimen/boc_view_height_2px"
+            android:orientation="vertical"
+            android:visibility="gone"/>
+        <!--下一步按钮-->
+        <Button
+            android:id="@+id/redeem_btnext"
+            style="@style/BocButton.BocPrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/boc_space_between_60px"
+            android:text="@string/boc_common_next"
+            android:textSize="@dimen/boc_text_size_common" />
+
+        <!--温馨提示-->
+        <TextView
+            android:id="@+id/redeem_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_space_between_50px"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:layout_marginTop="@dimen/boc_space_between_60px"
+            android:text="@string/boc_position_redeem_tips"
+            android:textColor="@color/boc_text_color_common_gray"
+            android:textSize="@dimen/boc_text_size_common" />
+
+    </LinearLayout>
+</ScrollView>

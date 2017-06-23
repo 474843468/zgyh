@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/forex_query_transfer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="3.5" >
+
+            <LinearLayout
+                android:id="@+id/ll_query_condition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/img_bg_query_j"
+                    android:orientation="vertical"
+                    android:padding="@dimen/fill_padding" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/layout_height"
+                            android:gravity="center"
+                            android:text="@string/large_cd_acc_number"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <TextView
+                            android:id="@+id/large_cd_acc_number_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/layout_height"
+                            android:gravity="center"
+                            android:textSize="@dimen/textsize_default" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rg_manage_query"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:layout_marginBottom="@dimen/dp_two"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/layout_height"
+                            android:gravity="center"
+                            android:text="@string/large_cd_query_period"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <Spinner
+                            android:id="@+id/large_cd_tran_type"
+                            style="@style/Spiiner_fill_middle" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_query_date_preandexe"
+                        style="@style/query_button_style"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp_seven"
+                        android:gravity="center" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_pull_up_query_preandexe"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/fill_padding_top" >
+
+                        <TextView
+                            android:id="@+id/textView1"
+                            style="@style/textview_common_up"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:textSize="@dimen/textsize_one_three" />
+
+                        <ImageView
+                            android:layout_width="@dimen/img_up_width"
+                            android:layout_height="@dimen/img_up_width"
+                            android:layout_gravity="right"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:src="@drawable/img_arrow_gray_up" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/large_cd_all_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginBottom="@dimen/common_bottom_padding_new"
+                    android:layout_marginLeft="@dimen/fill_margin_right"
+                    android:layout_marginRight="@dimen/fill_margin_right"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <ListView
+                        android:id="@+id/dept_notmg_queryalllist"
+                        style="@style/listviewcomm_fill_haveDivider"
+                        android:scrollbars="none" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 下拉            start -->
+
+            <LinearLayout
+                android:id="@+id/querycondition_down"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv_down"
+                    style="@style/textview_common_down"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textSize="@dimen/textsize_one_zero" />
+
+                <ImageView
+                    android:id="@+id/forex_querycondition_down"
+                    android:layout_width="@dimen/img_up_width"
+                    android:layout_height="@dimen/img_up_width"
+                    android:layout_gravity="bottom"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:src="@drawable/img_arrow_gray_down" />
+            </LinearLayout>
+            <!-- 下拉           end -->
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent_00"
+            android:orientation="vertical" >
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 功能外置 中银理财  查询条件页面    sunh -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_combinate_queryproduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f2f2f2"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/layout_fast"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/layout_fast_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_five"
+                android:gravity="center|center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_five" >
+
+                <ImageView
+                    android:layout_width="@dimen/dp_three_zero"
+                    android:layout_height="@dimen/dp_three_zero"
+                    android:background="@drawable/btn_outlay_down_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="筛选"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textsize_one_six" />
+            </LinearLayout>
+
+            <Button
+                style="@style/outlay_down_button_style"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_five"
+                android:gravity="center|center_vertical"
+                android:text="@string/product_choose"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textsize_one_six"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/v1"
+                android:layout_width="1dip"
+                android:layout_height="@dimen/dp_five_zero"
+                android:layout_marginLeft="@dimen/dp_five"
+                android:layout_marginRight="@dimen/dp_five"
+                android:layout_toRightOf="@+id/layout_fast_more"
+                android:background="@color/outlay_line" />
+
+            <Button
+                android:id="@+id/btn_fastquery"
+                style="@style/outlay_query_button_style"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_five"
+                android:gravity="center|center_vertical"
+                android:onClick="btnFastQueryOnclick"
+                android:text="@string/query"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_one_six" />
+
+            <EditText
+                android:id="@+id/editView"
+                style="@style/edittext_inputNumber_fill"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/btn_fastquery"
+                android:layout_toRightOf="@+id/v1"
+                android:hint="请输入产品代码进行快速查询"
+                android:inputType="text" 
+                android:textSize="@dimen/textsize_one_two"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_combination"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" 
+            android:visibility="gone"
+          >
+
+            <!-- 604增加产品类型 -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/common_row_margin"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="horizontal" 
+                >
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.6"
+                    android:gravity="right"
+                    android:text="@string/bocinvt_product_type" />
+                <Spinner
+                    android:id="@+id/spinner_product_type"
+                    style="@style/Spiiner_outlay_fill"
+                    android:layout_weight="1.0"
+                    android:prompt="@string/bocinvt_tv_52" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/common_row_margin"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.6"
+                    android:gravity="right"
+                    android:text="@string/productRiskType" />
+
+                <Spinner
+                    android:id="@+id/boci_productRiskType_query"
+                    style="@style/Spiiner_outlay_fill"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:prompt="@string/riskType_null" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_row_margin"
+                android:layout_marginRight="@dimen/common_row_margin"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.6"
+                    android:gravity="right"
+                    android:text="@string/prms_currency_colon_outlay" />
+
+                <Spinner
+                    android:id="@+id/boci_currencode"
+                    style="@style/Spiiner_outlay_fill"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:prompt="@string/productCurCode_null" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_row_margin"
+                android:layout_marginRight="@dimen/common_row_margin"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.6"
+                    android:gravity="right"
+                    android:text="@string/timeLimithave" />
+
+                <Spinner
+                    android:id="@+id/boci_prodTimeLimit_query"
+                    style="@style/Spiiner_outlay_fill"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:prompt="@string/timeLimit_null" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_row_margin"
+                android:layout_marginRight="@dimen/common_row_margin"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.6"
+                    android:gravity="right"
+                    android:text="@string/boci_status" />
+
+                <Spinner
+                    android:id="@+id/boci_xpadStatus_query"
+                    style="@style/Spiiner_outlay_fill"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1.0"
+                    android:prompt="@string/boci_status_null" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:layout_marginTop="@dimen/dp_one_zero"
+                android:background="@color/outlay_line" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/layout_combination_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_five"
+                    android:gravity="center|center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_five" >
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_three_zero"
+                        android:layout_height="@dimen/dp_three_zero"
+                        android:background="@drawable/btn_outlay_up_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="筛选"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/textsize_one_six" />
+                </LinearLayout>
+
+                <Button
+                    style="@style/outlay_up_button_style"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_one_zero"
+                    android:gravity="center|center_vertical"
+                    android:text="@string/product_choose"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textsize_one_six"
+                    android:visibility="gone" />
+
+                <View
+                    android:id="@+id/v2"
+                    android:layout_width="1dip"
+                    android:layout_height="@dimen/dp_five_zero"
+                    android:layout_marginLeft="@dimen/dp_five"
+                    android:layout_marginRight="@dimen/dp_five"
+                    android:layout_toRightOf="@+id/layout_combination_more"
+                    android:background="@color/outlay_line_v" />
+
+                <LinearLayout
+                    android:id="@+id/btn_combinate_queryproduct"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/step_title_height"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="@dimen/dp_one_zero"
+                    android:layout_toRightOf="@+id/v2"
+                    android:background="@drawable/outlay_query_btn_linbg"
+                    android:gravity="center|center_vertical" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|center_vertical" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/outlay_btn_chaxun_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/query"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/textsize_one_five" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

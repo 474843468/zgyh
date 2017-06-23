@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_main_bg_color"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/head"
+        layout="@layout/boc_layout_head" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRow
+                android:id="@+id/customer_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/boc_space_between_20px"
+                app:textName="@string/boc_account_user_name" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRow
+                android:id="@+id/phone_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:textName="@string/boc_accept_sms_num" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRow
+                android:id="@+id/range_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:textName="@string/boc_account_range" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRow
+                android:id="@+id/signed_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/boc_space_between_20px"
+                app:textName="@string/boc_account_signed_date" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRow
+                android:id="@+id/signed_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:textName="@string/boc_account_signed_way" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRow
+                android:id="@+id/signed_author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:textName="@string/boc_account_signed_author" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DeatilsBottomTableButtom
+                android:id="@+id/modify"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/boc_space_between_20px"
+                app:textTitle="@string/boc_account_modify" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DeatilsBottomTableButtom
+                android:id="@+id/close"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/boc_space_between_20px"
+                app:textTitle="@string/boc_account_close" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+基金-风险评估
+一、类对应函数
+1.FundRiskEvaluationQuestionFragment：答题页面；
+2.FundRiskEvaluationResultFragment：结果页面
+二、使用规则
+1.进入答题页面
+FundRiskEvaluationQuestionFragment fragment = new FundRiskEvaluationQuestionFragment(this.getClass());
+start(fragment);
+参数描述：this.getClass()代表入口Fragment，答题完毕，进入结果页，点击完成后，返回入口Fragment，回调reInit()；请在入口Fragment该函数进行风险评估等级再次查询。
+2.进入结果页面
+FundRiskEvaluationResultFragment fragment = new FundRiskEvaluationResultFragment(this.getClass());
+start(fragment);
+参数描述：this.getClass()代表入口Fragment

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 基金短期理财账户列表 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_for_listview_item_write" >
+
+    <LinearLayout
+        android:id="@+id/finc_listheader_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="9dp"
+        android:paddingTop="9dp" >
+
+        <LinearLayout
+            android:id="@+id/layout_main"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/list_header_tv1"
+                style="@style/textview_common"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/list_header_tv2"
+                style="@style/textview_common"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/list_header_tv3"
+                style="@style/textview_common"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/right_iv"
+            style="@style/rightbtn_jiantou"
+            android:layout_gravity="center_vertical"
+            android:visibility="invisible"
+            android:layout_marginLeft="@dimen/common_row_margin"
+            android:layout_marginRight="@dimen/common_row_margin" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/finc_combin_query_listView_layout"
+        style="@style/finc_linnerlayout_qury"
+        android:layout_below="@+id/finc_listheader_layout" >
+
+         <TextView android:id="@+id/divider"
+        style="@style/dividerline" />
+         
+        <ListView
+            android:id="@+id/finc_combin_query_listView"
+            style="@style/finc_listview_fill"
+            android:dividerHeight="1dp" >
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:padding="@dimen/boc_space_between_20px"
+              android:background="@color/boc_common_bg_color"
+              android:orientation="vertical"
+    >
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+        android:id="@+id/select_master_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:editChoiceName="选择主卡"
+        android:layout_marginBottom="@dimen/boc_space_between_22px"
+        app:editChoiceNameBold="true" />
+
+    <LinearLayout
+        android:id="@+id/content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputWidget
+        android:id="@+id/card_brand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:editChoiceName="申请品牌"
+        app:editChoiceNameBold="true" />
+
+    <include layout="@layout/boc_divide_line"/>
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputWidget
+        android:id="@+id/quota_single"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:editChoiceName="单笔交易限额"
+        app:editChoiceNameBold="true" />
+
+     <include layout="@layout/boc_divide_line"/>
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputWidget
+        android:id="@+id/quota_per_day"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:editChoiceName="日限额"
+        android:visibility="visible"
+        app:editChoiceNameBold="true" />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.assignment.SelectAgreementView
+            android:id="@+id/select_agreement_view"
+            android:layout_marginTop="@dimen/boc_space_between_30px"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btn_next"
+        style="@style/BocButton.BocPrimaryButton1"
+        android:layout_width="match_parent"
+        android:text="@string/boc_common_next" />
+
+    </LinearLayout>
+</LinearLayout>

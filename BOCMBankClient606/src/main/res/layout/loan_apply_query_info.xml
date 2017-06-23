@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 我的外汇  定期详情页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/loan_tradeButton"
+            style="@style/bottombtn"
+            android:text="@string/query" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_btn"
+        android:layout_marginTop="@dimen/rightbtnW"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:gravity="left"
+            android:text="@string/loan_apply_query_title"
+            android:textSize="@dimen/textsize_default" />
+
+        <ScrollView
+            style="@style/scrollview_comm_havemarginbutton"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/name_left"
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:text="@string/loan_apply_name"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <EditText
+                        android:id="@+id/et_loan_apply_name_value"
+                        style="@style/edittext_input_numberDecimal_fill"
+                        android:layout_weight="2"
+                        android:inputType="text"
+                        android:layout_marginRight="10dp"
+                        android:textSize="@dimen/textsize_default" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:text="@string/loan_apply_iphone"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <EditText
+                        android:id="@+id/et_loan_apply_iphone_value"
+                        style="@style/edittext_input_numberDecimal_fill"
+                        android:maxLength="30"
+                        android:inputType="textPhonetic"
+                        android:digits="0123456789()-"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_default" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:text="@string/loan_apply_emali"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <EditText
+                        android:id="@+id/et_loan_apply_email_value"
+                        style="@style/edittext_input_numberDecimal_fill"
+                        android:maxLength="100"
+                        android:inputType="textEmailAddress"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_default" >
+                    </EditText>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/titleText_stepacc"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/left_img_width"
+        android:background="@drawable/bg_title"
+        android:gravity="center"
+        android:text="@string/loan_apply_query_title_one"
+        android:textColor="@color/gray_title" />
+
+</RelativeLayout>

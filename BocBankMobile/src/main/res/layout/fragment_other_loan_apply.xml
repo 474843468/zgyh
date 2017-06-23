@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_main_bg_color"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/llyNodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvNoData"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/boc_text_color_common_gray"
+            android:textSize="@dimen/boc_text_size_common" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_select"
+        style="@style/tv_small"
+        android:paddingBottom="@dimen/boc_space_between_20px"
+        android:paddingLeft="@dimen/boc_popdialog_padding_40px"
+        android:paddingTop="@dimen/boc_space_between_20px"
+        android:text="@string/boc_loan_apply_other_select_type"/>
+
+    <ListView
+        android:id="@+id/lv_loantype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/boc_divider_loan_apply_other_list"
+        android:dividerHeight="@dimen/boc_divider_1px"/>
+
+</LinearLayout>

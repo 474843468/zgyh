@@ -1,0 +1,69 @@
+<!-- 我的外汇     活期item- -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/prms_accbalance_mid_height"
+    android:background="@drawable/prms_img_card_mid"
+    android:paddingLeft="@dimen/common_listview_item_paddingLR" >
+
+    <LinearLayout
+        android:id="@+id/forex_sellButton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+         android:layout_marginRight="@dimen/dp_one_zero"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/common_listview_item_paddingLR" >
+
+        <TextView
+            style="@style/textview_common"
+            android:layout_width="@dimen/prms_accbalance_sellicon_height"
+            android:layout_height="@dimen/prms_accbalance_sellicon_height"
+            android:background="@drawable/prms_img_maichu"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prms_sale"
+            android:textColor="@color/gray"
+            android:textSize="9sp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/left_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/forex_sellButton"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/dp_one_zero"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/forex_accCode_and_cash"
+            style="@style/textview_common"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dp_three_zero"
+            android:layout_alignParentLeft="true"
+            android:gravity="bottom"
+             android:layout_gravity="center_vertical"
+           android:textColor="@color/black" />
+
+      
+
+            <TextView
+                  android:layout_below="@+id/forex_accCode_and_cash"
+                android:id="@+id/forex_accBalance"
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_gravity="center"
+               android:textColor="@color/red"/>
+
+           
+       
+    </RelativeLayout>
+
+</RelativeLayout>

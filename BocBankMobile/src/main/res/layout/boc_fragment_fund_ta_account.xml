@@ -1,0 +1,77 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:orientation="vertical" >
+
+    <!--有TA账户列表-->
+    <LinearLayout
+        android:id="@+id/llyTaAccount"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:layout_marginBottom= "10dp">
+            <ListView
+            android:id="@+id/lv_ta_acc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/boc_divider_line_color"
+            android:dividerHeight="@dimen/boc_space_between_2px"
+            android:listSelector="@android:color/transparent"
+            android:overScrollMode="never"
+            android:scrollbars="none"/>
+    </LinearLayout>
+
+
+    <!--无TA账户列表-->
+    <LinearLayout
+        android:id="@+id/llyNoAccount"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/ivIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/boc_cash_installment_no_account" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop= "@dimen/boc_space_between_50px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/boc_space_between_6px"
+                android:text="您暂无关联的TA账户，请"
+                android:textColor="@color/boc_black"
+                android:textSize="@dimen/boc_text_size_small" />
+
+            <TextView
+                android:id="@+id/tvRegist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="登记"
+                android:textColor="@color/boc_main_button_color"
+                android:textSize="@dimen/boc_text_size_small" />
+            </LinearLayout>
+
+    </LinearLayout>
+
+    <!--空白页面接口请求成功前-->
+    <LinearLayout
+        android:id="@+id/llyBlank"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+        </LinearLayout>>
+
+</FrameLayout>

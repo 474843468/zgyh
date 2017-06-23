@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:layout_marginBottom="@dimen/fill_margin_bottom"
+    android:orientation="vertical">
+	<LinearLayout android:id="@+id/locationLl"
+	    style="@style/linnerlayout_common"
+	    android:layout_margin="0dp"
+	    android:gravity="left" 
+	    android:paddingLeft="@dimen/dp_one_zero"
+	    android:paddingRight="@dimen/dp_one_zero"
+	    android:paddingTop="@dimen/dp_five"
+	    android:paddingBottom="@dimen/dp_five"
+	    android:background="@drawable/order_img_bg_dibiao"
+	    android:layout_height="@dimen/dp_for_zero"
+	    android:visibility="gone">
+
+         <TextView
+             style="@style/order_textview_common_no_weight"
+             android:text="@string/order_your_location"
+             android:gravity="center_vertical"
+             android:drawableLeft="@drawable/order_icon_dibiao"/>
+
+         <TextView
+             android:id="@+id/your_location"
+             style="@style/order_textview_common_right_no_weight"/>
+     </LinearLayout>
+     <LinearLayout 
+         android:layout_width="match_parent"
+         android:layout_height="@dimen/dp_for_zero">
+         <RelativeLayout 
+             style="@style/order_main_area_choose">
+	         <Spinner
+	              android:id="@+id/province"
+	              style="@style/order_main_area_choose"
+	              android:paddingLeft="@dimen/dp_one_zero" />
+	         <ImageView android:layout_width="wrap_content"
+	             android:layout_height="wrap_content"
+	             android:src="@drawable/order_img_arrow_list"
+	             android:scaleType="centerInside"
+	             android:layout_alignParentRight="true"
+	             android:layout_centerVertical="true"
+	             android:layout_marginRight="@dimen/dp_three"/>
+         </RelativeLayout>
+         <RelativeLayout 
+             style="@style/order_main_area_choose">
+	         <Spinner
+	              android:id="@+id/city"
+	              style="@style/order_main_area_choose"
+	              android:paddingLeft="@dimen/dp_one_zero" />
+	         <ImageView android:layout_width="wrap_content"
+	             android:layout_height="wrap_content"
+	             android:src="@drawable/order_img_arrow_list"
+	             android:scaleType="centerInside"
+	             android:layout_alignParentRight="true"
+	             android:layout_centerVertical="true"
+	             android:layout_marginRight="@dimen/dp_three"/>
+         </RelativeLayout>
+         <RelativeLayout 
+             style="@style/order_main_area_choose">
+	         <Spinner
+	              android:id="@+id/area"
+	              style="@style/order_main_area_choose_right"
+	              android:paddingLeft="@dimen/dp_one_zero" />
+	         <ImageView android:layout_width="wrap_content"
+	             android:layout_height="wrap_content"
+	             android:src="@drawable/order_img_arrow_list"
+	             android:scaleType="centerInside"
+	             android:layout_alignParentRight="true"
+	             android:layout_centerVertical="true"
+	             android:layout_marginRight="@dimen/dp_three"/>
+         </RelativeLayout>
+     </LinearLayout>
+     <LinearLayout style="@style/linnerlayout_common"
+         android:layout_margin="0dp"
+         android:paddingLeft="@dimen/dp_one_zero"
+	     android:paddingRight="@dimen/dp_one_zero"
+	     android:paddingTop="@dimen/dp_five"
+	     android:paddingBottom="@dimen/dp_five"
+	     android:layout_height="@dimen/dp_five_zero"
+         android:background="@drawable/order_img_search_bg">
+		<EditText 
+		    android:id="@+id/search_area"
+		    style="@style/edittext_common_fill"
+		    android:hint="@string/order_key_query"
+		    android:layout_marginRight="@dimen/dp_one_zero"/>
+		<Button
+             android:id="@+id/btnquery"
+             style="@style/query_button_style"/>
+     </LinearLayout>
+     <FrameLayout 
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:padding="@dimen/dp_one_zero">
+	     <LinearLayout  android:id="@+id/order_list_titile"
+	         android:layout_width="match_parent"
+	         android:layout_height="match_parent"
+	         android:orientation="vertical"
+	         android:visibility="gone">
+	         <LinearLayout
+		         style="@style/linnerlayout_common"
+		         android:layout_margin="0dp"
+		         android:gravity="left">
+				 <TextView
+		             style="@style/order_textview_common_no_weight"
+		             android:gravity="left|center_vertical"
+		             android:text="@string/order_choose_order" />
+		     </LinearLayout>
+		     <ListView
+		        android:id="@+id/listview"
+		        android:background="@drawable/bg_for_listview_item_write"
+		        style="@style/listviewcomm_fill_haveDivider"
+		        android:divider="@color/gray"
+        		android:dividerHeight="1dip"
+		        android:cacheColorHint="@color/transparent_00"
+		      	android:listSelector="@drawable/selector_for_listiterm_click"
+		        android:scrollbars="none" 
+		        android:layout_marginTop="@dimen/dp_five">
+	   		 </ListView>
+	     </LinearLayout>
+	     <TextView android:id="@+id/tip"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:layout_gravity="center"
+               android:gravity="left|center_vertical"
+               android:text="@string/order_mainarea_tip_new"
+               android:textColor="@color/gray"
+               android:textSize="@dimen/textsize_default"
+               android:padding="@dimen/dp_one_zero" />			
+     </FrameLayout>
+</LinearLayout>
+</RelativeLayout>

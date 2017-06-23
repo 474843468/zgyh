@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/sureButton"
+            style="@style/bottombtn"
+            android:text="@string/next"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button_layout"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView
+            style="@style/scrollview_comm_havemarginbutton"
+            android:fillViewport="false"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:paddingTop="0dp" >
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_two_zero"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:shrinkColumns="1" >
+
+                <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                    <TextView
+                        android:id="@+id/tv_acc_loss_actnum"
+                        style="@style/textview_common_left"
+                        android:layout_weight="0"
+                        android:text="@string/mycrcd_selected_creditcard" />
+
+                    <TextView
+                        android:id="@+id/finc_accNumber"
+                        style="@style/textview_common_right"
+                        android:layout_weight="0" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                    <TextView
+                        android:id="@+id/tv_acc_loss_type"
+                        style="@style/textview_common_left"
+                        android:layout_weight="0"
+                        android:text="@string/mycrcd_bill_check_type" />
+
+                    <TextView
+                        android:id="@+id/finc_accId"
+                        style="@style/textview_common_right"
+                        android:layout_weight="0" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                    <TextView
+                        android:id="@+id/type_text"
+                        style="@style/textview_common_left"
+                        android:layout_weight="0" />
+
+                    <TextView
+                        android:id="@+id/et_email"
+                        style="@style/textview_common_right"
+                        android:layout_weight="0" />
+                </TableRow>
+
+                <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_weight="0"
+                        android:text="@string/mycrcd_check_baillDate_address" />
+
+                    <Spinner
+                        android:id="@+id/bailDate"
+                        style="@style/Spinner_comm_view_right"
+                        android:layout_marginRight="@dimen/dp_one_zero"
+                        android:layout_weight="1" />
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

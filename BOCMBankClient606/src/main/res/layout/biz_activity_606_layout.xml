@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 首页主题 -->
+<com.chinamworld.bocmbci.widget.MyRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rltotal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/btn_pink">
+
+        <Button
+            android:id="@+id/ib_back"
+            style="@style/titlebackbtn"
+            android:text="@string/back"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fonts_one_four"
+            android:background="@color/transparent_00"
+            android:drawableLeft="@drawable/img_arrow_gray_left"
+            android:drawablePadding="-8dp"
+            />
+        <!--返回按钮-白色字体-->
+        <!--<LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            >
+
+            <ImageView
+                android:layout_width="13dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/img_arrow_gray_left"
+            />
+            <TextView
+                style="@style/titlebacktext"
+                android:layout_width="wrap_content"
+                android:text="@string/back"
+                android:textColor="@color/white"
+                android:layout_marginLeft="1dp"
+                android:gravity="center"
+                android:background="@color/transparent_00"
+                android:textSize="@dimen/fonts_one_four"
+                />
+        </LinearLayout>-->
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/titleText"
+            android:textSize="@dimen/fonts_one_seven"
+            android:text=""
+            />
+
+        <RelativeLayout
+            android:id="@+id/titlebar_right"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <RelativeLayout
+                android:id="@+id/ib_top_right_other_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <Button
+                    android:id="@+id/ib_top_right_btn_b"
+                    style="@style/titlerightbtn_b"
+                    android:layout_marginRight="@dimen/dp_five"
+                    android:layout_toLeftOf="@+id/ib_top_right_btn"
+                    android:textColor="@color/btn_white"
+                    android:background="@color/transparent_00"
+                    android:textSize="@dimen/fonts_one_four"
+                    android:visibility="gone"/>
+
+                <!--主菜单按钮&#45;&#45;白色字体-->
+                <Button
+                    android:id="@+id/ib_top_right_btn"
+                    style="@style/titlerighttext"
+                    android:gravity="center"
+                    android:text="@string/go_main"
+                    android:textColor="@color/btn_white"
+                    android:background="@color/transparent_00"
+                    android:textSize="@dimen/fonts_one_four"
+                    android:visibility="visible"
+                />
+                <Button
+                    android:id="@+id/finish"
+                    style="@style/titlerightbtn"
+                    android:gravity="center"
+                    android:text="@string/finish"
+                    android:textColor="@color/btn_white"
+                    android:background="@color/transparent_00"
+                    android:textSize="@dimen/fonts_one_four"
+                    android:visibility="gone"/>
+                <TextView
+                    android:id="@+id/cityAdress"
+                    android:layout_width="@dimen/inversitemhight"
+                    android:layout_height="@dimen/titlebackbtn_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/fill_margin_left"
+                    android:ellipsize="end"
+                    android:gravity="right|center_vertical"
+                    android:singleLine="true"
+                    android:textColor="@color/btn_white"
+                    android:textSize="@dimen/fonts_one_four"
+                    android:visibility="gone"
+                />
+
+                <Button
+                    android:id="@+id/ib_setting_btn"
+                    style="@style/titlerightbtn"
+                    android:layout_width="@dimen/titlebackbtn_height"
+                    android:layout_height="@dimen/titlebackbtn_height"
+                    android:background="@drawable/selector_for_titile_setting"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/ib_top_right_login_btn"
+                style="@style/titlerightbtn"
+                android:gravity="center"
+                android:text="@string/login"
+                android:textColor="@color/btn_white"
+                android:background="@color/transparent_00"
+                android:textSize="@dimen/fonts_one_four"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/popuBtntest"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_above="@+id/sliding_menu_view"
+        android:layout_below="@+id/main_layout"
+        android:background="@color/transparent_00"/>
+
+    <Button
+        android:id="@+id/popuBtn"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_above="@+id/sliding_menu_view"
+        android:layout_below="@+id/main_layout"
+        android:background="@color/transparent_00"/>
+
+    <Button
+        android:id="@+id/popuBtnVisible"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_above="@+id/sliding_menu_view"
+        android:layout_below="@+id/main_layout"
+        android:background="@color/transparent_00"/>
+
+    <RelativeLayout
+        android:id="@+id/sliding_menu_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/foot_layout"
+        android:layout_below="@+id/main_layout"
+        android:layout_marginBottom="@dimen/contenttab_marginbottom"
+        android:background="@color/bg_white"
+        >
+        <!--android:background="@drawable/bg_content"-->
+
+        <LinearLayout
+            android:id="@+id/sliding_body"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/common_bottom_padding_new"
+            android:paddingLeft="@dimen/fill_margin_left"
+            android:paddingRight="@dimen/fill_margin_left"
+            android:paddingTop="@dimen/fill_margin_top">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sliding_bodytwo"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:visibility="gone">
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_show"
+                android:layout_width="@dimen/fill_margin_left_double"
+                android:layout_height="@dimen/dp_seven_zero"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_out"/>
+
+            <LinearLayout
+                android:id="@+id/sliding_tab"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/llleftmenu"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="2.5"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/leftlistbtn"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@drawable/leftall"/>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ListView
+                                android:id="@+id/lv_main"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:cacheColorHint="@color/transparent_00"
+                                android:divider="@color/black"
+                                android:dividerHeight="0.5dp"
+                                android:fadingEdge="none"
+                                android:listSelector="@color/transparent_00"
+                                android:scrollbars="none">
+                            </ListView>
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="0.5dp"
+                                android:background="@color/black"/>
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <ImageView
+                        android:id="@+id/imageTall"
+                        android:layout_width="@dimen/dp_five"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="-2dp"
+                        android:layout_marginTop="-3dp"
+                        android:background="@drawable/left_line"/>
+
+                    <FrameLayout
+                        android:layout_width="@dimen/fill_margin_left_double"
+                        android:layout_height="fill_parent">
+
+                        <Button
+                            android:id="@+id/btn_hide_all"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:background="@color/transparent_00"/>
+
+                        <Button
+                            android:id="@+id/btn_hide"
+                            android:layout_width="@dimen/fill_margin_left_double"
+                            android:layout_height="@dimen/dp_seven_zero"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/btn_in"/>
+                    </FrameLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_fill_show"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent_00"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/foot_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fram_ll"
+        android:layout_alignParentBottom="true">
+
+        <include
+            android:id="@+id/menu_popwindow"
+            layout="@layout/foot"/>
+    </LinearLayout>
+
+</com.chinamworld.bocmbci.widget.MyRelativeLayout>

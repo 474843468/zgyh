@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res/com.chinamworld.bocmbci"
+    >
+    
+    <ScrollView 
+        style="@style/style_height_weight_1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:id="@+id/layout_content"
+        >
+        <LinearLayout 
+            style="@style/style_match_match"
+            android:orientation="vertical"
+            >
+            <TextView 
+	            style="@style/textview_common_multi_second"
+	            android:layout_gravity="center_horizontal"
+	            android:textColor="@color/gray"
+	            android:layout_marginTop="10dp"
+	            android:text="请确认收款人信息"
+	            />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+	            style="@style/style_match_wrap"
+	            android:layout_marginTop="20dp"
+	            app:labelText="收款人账户："
+	            app:weightShowRate="2:3"
+	            android:id="@+id/label_tv_1"
+	            />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+	            style="@style/style_match_wrap"
+	            app:labelText="收款人姓名："
+	            app:weightShowRate="2:3"
+	            android:id="@+id/label_tv_2"
+	            />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+	            style="@style/style_match_wrap"
+	            app:labelText="账户所属银行："
+	            app:weightShowRate="2:3"
+	            android:id="@+id/label_tv_3"
+	            />
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+	            style="@style/style_match_wrap"
+	            app:labelText="开户行名称："
+	            app:weightShowRate="2:3"
+	            android:id="@+id/label_tv_4"
+	            />
+            
+            <TextView style="@style/style_match_wrap"/>
+        </LinearLayout>
+    </ScrollView>
+    
+    <!-- 按钮 -->
+    <include layout="@layout/assetmanager_bottom_button_layout"/>
+
+</LinearLayout>

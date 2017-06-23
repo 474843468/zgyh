@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 中银理财  产品详情界面 wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/btn1"
+            style="@style/radioButtonLeft"
+            android:layout_height="@dimen/step_title_height"
+            android:checked="true"
+            android:text="基本属性"
+            android:textSize="@dimen/textsize_one_two" />
+
+        <RadioButton
+            android:id="@+id/btn2"
+            style="@style/radioButtonMiddle"
+            android:layout_height="@dimen/step_title_height"
+            android:text="购买属性"
+            android:textSize="@dimen/textsize_one_two" />
+
+        <RadioButton
+            android:id="@+id/btn3"
+            style="@style/radioButtonRight"
+            android:layout_height="@dimen/step_title_height"
+            android:text="赎回属性"
+            android:textSize="@dimen/textsize_one_two" />
+    </RadioGroup>
+
+    <!-- 购买按钮、更多 按钮 -->
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp_five"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/common_bottom_padding" >
+        <Button style="@style/btn_common_oneline"
+            android:id="@+id/btn_buy"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/buy"
+            android:textColor="@color/white"
+            />
+        <Button style="@style/btn_common_oneline"
+            android:id="@+id/btn_more"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/bocinvt_btn_more"
+            android:textColor="@color/white"
+            />
+
+        <!-- <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <Button
+                android:id="@+id/btn_buy_buydetail"
+                style="@style/bottombtn"
+                android:text="@string/buy" />
+
+            <Button
+                android:id="@+id/btn_contract_detail"
+                style="@style/bottombtn"
+                android:text="@string/contract"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        投资协议申请按钮
+        <Button
+            android:id="@+id/btn_description_buydetail"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/bocinvt_agreement"
+            android:textColor="@color/white"
+            android:visibility="gone" /> -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_btn"
+        android:layout_below="@id/radioGroup"
+        android:layout_marginTop="@dimen/rightbtnW"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/titleText_step2"
+            android:layout_width="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/detail"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+
+        <ScrollView style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/base_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:visibility="visible"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/acct_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/bocinvt_buy_number" />
+
+                        <TextView
+                            android:id="@+id/boci_combinacct"
+                            style="@style/textview_common_right_two"
+                            android:layout_height="@dimen/layout_height"
+                            android:layout_marginRight="@dimen/common_row_margin"
+                            android:background="@drawable/bg_spinner"
+                            android:ellipsize="middle"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/edittext_paddinglr"
+                            android:paddingRight="@dimen/fill_margin_right"
+                            android:singleLine="true"
+                            android:text="请选择账户" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/prodCode" />
+
+                        <TextView
+                            android:id="@+id/tv_prodCode_detail"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/prodName" />
+
+                        <TextView
+                            android:id="@+id/tv_prodName_detail"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/currency1" />
+
+                        <TextView
+                            android:id="@+id/tv_curCode_detail"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <!-- 预计年收益率-字段 ，业绩基准型产品独有-->
+                    <LinearLayout
+                        android:id="@+id/layout_yearlyRR"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" 
+                        >
+
+                        <TextView
+                            android:id="@+id/yearlyRR_detail"
+                            style="@style/textview_common_left_three"
+                            android:ellipsize="middle"
+                            android:text="@string/yearlyRR" />
+
+                        <TextView
+                            android:id="@+id/tv_yearlyRR_detail"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+                    
+                    <!-- 单位净值-字段，类基金理财产品独有-->
+                    <LinearLayout
+                        android:id="@+id/layout_jingzhi"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" 
+                        >
+
+                        <TextView
+                            android:id="@+id/tv_jingzhi"
+                            style="@style/textview_common_left_three"
+                            android:ellipsize="middle"
+                            android:text="@string/bocinvt_tv_63" />
+
+                        <TextView
+                            android:id="@+id/tv_jingzhi_link"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+                    <!-- 净值日期-字段，类基金理财产品独有-->
+                    <LinearLayout
+                        android:id="@+id/layout_jingzhi_date"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" 
+                        >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:ellipsize="middle"
+                            android:text="@string/bocinvt__value_date" />
+
+                        <TextView
+                            android:id="@+id/tv_jingzhi_date"
+                            style="@style/textview_common_right_two"
+                             />
+                    </LinearLayout>
+
+                    <!-- 份额面值，净值产品不显示 -->
+                    <LinearLayout
+                        android:id="@+id/layout_femz"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/buyPrice2" />
+
+                        <TextView
+                            android:id="@+id/tv_buyPrice_detail"
+                            style="@style/textview_common_right_two"
+                            android:textColor="@color/red" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/timeLimit" />
+
+                        <TextView
+                            android:id="@+id/tv_prodTimeLimit_detail"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/applyObj" />
+
+                        <TextView
+                            android:id="@+id/tv_applyObj_detail"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/boci_query_status" />
+
+                        <TextView
+                            android:id="@+id/tv_status_detail"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+                    
+                     <!-- P604新增，剩余额度 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/bocinvt_tv_33" />
+
+                    <TextView
+                        android:id="@+id/tv_sy"
+                        style="@style/textview_common_right_two" 
+                        android:textColor="@color/red"/>
+                </LinearLayout>
+                    
+                    <!-- P603新增 ，产品类型 -->
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/bocinvt_product_type" />
+
+                        <TextView
+                            android:id="@+id/tv_product_type"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/bocinvt_product_danager_type" />
+
+                        <TextView
+                            android:id="@+id/prodRiskType"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/bocinvt_product_danager_grade" />
+
+                        <TextView
+                            android:id="@+id/tv_prodRisklvl_detail"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <!-- 周期属性P603删除该字段 -->
+                    <!-- <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/periodical" />
+
+                        <TextView
+                            android:id="@+id/tv_periodical_detail"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout> -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/sellingDate" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2" >
+
+                            <TextView
+                                android:id="@+id/tv_sellingDate_start"
+                                style="@style/textview_common"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/tv_sellingDate_end"
+                                style="@style/textview_common"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/prodBegin" />
+
+                        <TextView
+                            android:id="@+id/tv_prodBegin_detail"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/prodEnd" />
+
+                        <TextView
+                            android:id="@+id/tv_prodEnd_detail"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/trade_channel" />
+
+                        <TextView
+                            android:id="@+id/transfer_channel"
+                            style="@style/textview_common_right_two"
+                            android:singleLine="false" />
+                    </LinearLayout>
+                    
+                    <!-- P603新增，交易时间 -->
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/bocinvt_product_buy_time" />
+
+                        <TextView
+                            android:id="@+id/tv_product_buy_time"
+                            style="@style/textview_common_right_two"
+                            android:singleLine="false" />
+                    </LinearLayout>
+                    
+                    <!-- P603新增，挂单时间 -->
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/bocinvt_product_order_time" />
+
+                        <TextView
+                            android:id="@+id/tv_product_order_time"
+                            style="@style/textview_common_right_two"
+                            android:singleLine="false" />
+                    </LinearLayout>
+
+                    <!-- 非交易时间挂单，P603删除该字段 -->
+                    <!-- <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/outtimeorder_title"
+                            style="@style/textview_common_left_three"
+                            android:ellipsize="middle"
+                            android:text="@string/bocinvt_outtimeorder" />
+
+                        <TextView
+                            android:id="@+id/outtimeorder"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout> -->
+
+					<!-- 到期本金到账日，非净值型产品显示 -->
+                    <LinearLayout
+                        android:id="@+id/layout_benjin_date"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/paymentdate_title"
+                            style="@style/textview_common_left_three"
+                            android:ellipsize="middle"
+                            android:text="@string/bocinvt_paymentdate" />
+
+                        <TextView
+                            android:id="@+id/paymentdate"
+                            style="@style/textview_common_right_two"
+                            android:singleLine="false" />
+                    </LinearLayout>
+
+                    <!-- 付息规则，非净值型产品显示 -->
+                    <LinearLayout
+                        android:id="@+id/layout_fugz"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/bocinvt_couponpay" />
+
+                        <TextView
+                            android:id="@+id/couponpay"
+                            style="@style/textview_common_right_two"
+                            android:singleLine="false" />
+                    </LinearLayout>
+
+                    <!-- 产品剩余额度，P603删除该字段 -->
+                    <!-- <LinearLayout
+                        android:id="@+id/layout_availamt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/bocinvt_availableamt" />
+
+                        <TextView
+                            android:id="@+id/availableAmt"
+                            style="@style/textview_common_right_two"
+                            android:textColor="@color/red" />
+                    </LinearLayout> -->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/buy_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/buyStartingAmount_detail"
+                            style="@style/textview_common_left_three"
+                            android:ellipsize="middle"
+                            android:text="@string/bocinvt_subamount" />
+
+                        <TextView
+                            android:id="@+id/tv_buyStartingAmount_detail"
+                            style="@style/textview_common_right_two"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/appendStrating"
+                            style="@style/textview_common_left_three"
+                            android:ellipsize="middle"
+                            android:text="@string/bocinvt_addamount" />
+
+                        <TextView
+                            android:id="@+id/tv_appendStartingAmount_detail"
+                            style="@style/textview_common_right_two"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:ellipsize="middle"
+                            android:text="@string/bocinvt_baseamount" />
+
+                        <TextView
+                            android:id="@+id/baseAmount"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <!-- 认购撤单规则，P603删除 -->
+                    <!-- <LinearLayout
+                        android:id="@+id/layout_isCanCancle"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/isCanCancle" />
+
+                        <TextView
+                            android:id="@+id/isCanCancle"
+                            style="@style/textview_common_right_two"
+                            android:singleLine="false" />
+                    </LinearLayout> -->
+
+                    <LinearLayout
+                        android:id="@+id/layout_buyType"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal"
+                        android:visibility="visible" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/buyType" />
+
+                        <TextView
+                            android:id="@+id/buyType"
+                            style="@style/textview_common_right_two"
+                            android:singleLine="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/bocinvt_buykoukuan" />
+
+                        <TextView
+                            android:id="@+id/tv_tip"
+                            style="@style/textview_common_right_two"
+                            android:singleLine="false"
+                            android:text="@string/bocinvt_buykoukuan_value" />
+                    </LinearLayout>
+                    <!-- P603增加，认购手续费 -->
+                    <LinearLayout
+                        android:id="@+id/layout_rgsxf"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_l_rgsxf"
+                            style="@style/textview_common_left_three"
+                            android:ellipsize="middle"
+                            android:text="认购手续费：" />
+
+                        <TextView
+                            android:id="@+id/tv_rgsxf"
+                            style="@style/textview_common_right_two"
+                            android:singleLine="false"
+                            android:text="" />
+                    </LinearLayout>
+                    <!-- P603增加，申购手续费 -->
+                    <LinearLayout
+                        android:id="@+id/layout_sgsxf"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_l_sgsxf"
+                            style="@style/textview_common_left_three"
+                            android:ellipsize="middle"
+                            android:text="申购手续费：" />
+
+                        <TextView
+                            android:id="@+id/tv_sgsxf"
+                            style="@style/textview_common_right_two"
+                            android:singleLine="false"
+                            android:text="" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/red_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:id="@+id/layout_unred"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dip"
+                        android:layout_marginRight="2dip"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal"
+                        android:paddingBottom="6dip"
+                        android:paddingTop="6dip"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:gravity="center_horizontal"
+                            android:text="不开放主动赎回" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/redlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_common_left_three"
+                                android:text="@string/bocinvt_lowlimitamount" />
+
+                            <TextView
+                                android:id="@+id/lowlimitamount"
+                                style="@style/textview_common_right_two"
+                                 />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_common_left_three"
+                                android:text="@string/bocinvt_limitholdbalance" />
+
+                            <TextView
+                                android:id="@+id/limitholdbalance"
+                                style="@style/textview_common_right_two"
+                                 />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_common_left_three"
+                                android:text="@string/bocinvt_selltype" />
+
+                            <TextView
+                                android:id="@+id/selltype"
+                                style="@style/textview_common_right_two"
+                                android:singleLine="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/paymenttype"
+                                style="@style/textview_common_left_three"
+                                android:ellipsize="middle"
+                                android:text="@string/bocinvt_sellpamenttype" />
+
+                            <TextView
+                                android:id="@+id/sellpaymenttype"
+                                style="@style/textview_common_right_two"
+                                android:singleLine="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_shsydzgz"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/rofit"
+                                style="@style/textview_common_left_three"
+                                android:ellipsize="middle"
+                                android:text="@string/bocinvt_profit" />
+
+                            <TextView
+                                android:id="@+id/profit"
+                                style="@style/textview_common_right_two"
+                                android:singleLine="false" />
+                        </LinearLayout>
+                        <!-- P603新增，赎回手续费 -->
+                        <LinearLayout
+                            android:id="@+id/layout_shsxf"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/tv_l_shsxf"
+                                style="@style/textview_common_left_three"
+                                android:ellipsize="middle"
+                                android:text="赎回手续费：" />
+
+                            <TextView
+                                android:id="@+id/tv_shsxf"
+                                android:singleLine="false"
+                                style="@style/textview_common_right_two"/>
+                        </LinearLayout>
+                        <!-- P603新增，浮动管理费 -->
+                        <LinearLayout
+                            android:id="@+id/layout_fdglf"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/tv_l_fdglf"
+                                style="@style/textview_common_left_three"
+                                android:ellipsize="middle"
+                                android:text="业绩报酬（浮动管理费）：" />
+
+                            <TextView
+                                android:id="@+id/tv_fdglf"
+                                android:singleLine="false"
+                                style="@style/textview_common_right_two"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/productType" />
+
+                        <TextView
+                            android:id="@+id/tv_brandName_detail"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_outTimeOrder"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/outtext"
+                            style="@style/textview_common_left_three"
+                            android:ellipsize="middle"
+                            android:text="@string/outTimeOrder" />
+
+                        <TextView
+                            android:id="@+id/outTimeOrder"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/detaillong"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_five"
+                    android:layout_marginRight="@dimen/dp_five"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/bocinvt_detaillong"
+                        android:textColor="@color/gray" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+                </TextView>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/titleText_stepacc"
+        android:layout_width="@dimen/common_details_title_width"
+        android:layout_height="@dimen/left_img_width"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_title"
+        android:gravity="center"
+        android:paddingRight="@dimen/btnpaddingtb"
+        android:text="@string/bocinvt_des_title"
+        android:textColor="@color/gray_title"
+        android:visibility="gone" />
+
+</RelativeLayout>

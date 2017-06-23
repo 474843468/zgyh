@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 申请定期活期账户	用户选择页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_step"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/fill_padding" >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/confirm_info_textview_style"
+                                android:text="@string/acc_choose_open_type"
+                                android:textSize="@dimen/textsize_one_six" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:layout_height="match_parent"
+                                android:layout_weight="5.5"
+                                android:text="@string/acc_choose_content" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3.5"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:id="@+id/tv_accnum"
+                                    style="@style/textview_common_right"
+                                    android:paddingLeft="0dip" />
+
+                                <TextView
+                                    android:id="@+id/tv_acctype"
+                                    style="@style/textview_common_right"
+                                    android:layout_marginTop="@dimen/common_row_margin"
+                                    android:paddingLeft="0dip" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_apply"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" 
+                            android:visibility="gone">
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:layout_height="match_parent"
+                                android:layout_weight="5.5"
+                                android:text="@string/acc_choose_opentype" />
+
+                            <RadioGroup
+                                android:id="@+id/rg_accopentype"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3.5"
+                                android:orientation="vertical" >
+
+                                <RadioButton
+                                    android:id="@+id/rb_demand"
+                                    style="@style/acc_choose_radioButtom"
+                                    android:checked="true"
+                                    android:paddingLeft="@dimen/dp_two_zero"
+                                    android:text="@string/acc_choose_demand_deposits" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_fixed"
+                                    style="@style/acc_choose_radioButtom"
+                                    android:layout_marginTop="@dimen/common_row_margin"
+                                    android:paddingLeft="@dimen/dp_two_zero"
+                                    android:text="@string/acc_choose_fixed_deposits" />
+                            </RadioGroup>
+                        </LinearLayout>
+						
+                        <LinearLayout 
+                            android:id="@+id/ll_manage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+                            
+                            <TextView 
+                                style="@style/textview_common_left"
+                                android:layout_weight="5.5"
+                                android:text="@string/acc_choose_opentype"/>
+                            
+                            <TextView 
+                                style="@style/textview_common_right"
+                                android:layout_weight="3.5"
+                                android:text="@string/acc_choose_fixed"/>
+                        </LinearLayout>
+                        
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_common_left"
+                                android:layout_height="match_parent"
+                                android:layout_weight="5.5"
+                                android:text="@string/acc_account_purpose" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3.5"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    style="@style/textview_common_right"
+                                    android:paddingLeft="0dip"
+                                    android:text="@string/acc_choose_oneormore" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/common_row_margin"
+                                    android:orientation="horizontal" >
+
+                                    <CheckBox
+                                        android:id="@+id/cb_saved"
+                                        style="@style/acc_checkbox" />
+
+                                    <TextView
+                                        style="@style/acc_checkbox_of_textview"
+                                        android:text="@string/acc_saved" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/common_row_margin"
+                                    android:orientation="horizontal" >
+
+                                    <CheckBox
+                                        android:id="@+id/cb_wages_paying"
+                                        style="@style/acc_checkbox" />
+
+                                    <TextView
+                                        style="@style/acc_checkbox_of_textview"
+                                        android:text="@string/acc_wages_paying" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/common_row_margin"
+                                    android:orientation="horizontal" >
+
+                                    <CheckBox
+                                        android:id="@+id/cb_social_medical"
+                                        style="@style/acc_checkbox" />
+
+                                    <TextView
+                                        style="@style/acc_checkbox_of_textview"
+                                        android:text="@string/acc_social_medical" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/common_row_margin"
+                                    android:orientation="horizontal" >
+
+                                    <CheckBox
+                                        android:id="@+id/cb_investment"
+                                        style="@style/acc_checkbox" />
+
+                                    <TextView
+                                        style="@style/acc_checkbox_of_textview"
+                                        android:text="@string/acc_investment" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/common_row_margin"
+                                    android:orientation="horizontal" >
+
+                                    <CheckBox
+                                        android:id="@+id/cb_repayment_loan"
+                                        style="@style/acc_checkbox" />
+
+                                    <TextView
+                                        style="@style/acc_checkbox_of_textview"
+                                        android:text="@string/acc_repayment_loan" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/common_row_margin"
+                                    android:orientation="horizontal" >
+
+                                    <CheckBox
+                                        android:id="@+id/cb_deal_day_paying"
+                                        style="@style/acc_checkbox" />
+
+                                    <TextView
+                                        style="@style/acc_checkbox_of_textview"
+                                        android:text="@string/acc_deal_day_paying" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/common_row_margin"
+                                    android:orientation="horizontal" >
+
+                                    <CheckBox
+                                        android:id="@+id/cb_others"
+                                        style="@style/acc_checkbox" />
+
+                                    <TextView
+                                        style="@style/acc_checkbox_of_textview"
+                                        android:text="@string/acc_others" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_open_account_reason"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/common_row_margin"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:orientation="horizontal"
+                            android:visibility="gone" >
+
+                            <TextView
+                                android:id="@+id/tv_account_open_reason"
+                                style="@style/textview_common_left"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="5.5" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3.5"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    style="@style/textview_common_right"
+                                    android:paddingLeft="0dip"
+                                    android:text="@string/acc_choose_oneormore" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/common_row_margin"
+                                    android:orientation="horizontal" >
+
+                                    <CheckBox
+                                        android:id="@+id/cb_leaving"
+                                        style="@style/acc_checkbox" />
+
+                                    <TextView
+                                        style="@style/acc_checkbox_of_textview"
+                                        android:text="@string/acc_leaving" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/common_row_margin"
+                                    android:orientation="horizontal" >
+
+                                    <CheckBox
+                                        android:id="@+id/cb_studing"
+                                        style="@style/acc_checkbox" />
+
+                                    <TextView
+                                        style="@style/acc_checkbox_of_textview"
+                                        android:text="@string/acc_studing" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/common_row_margin"
+                                    android:orientation="horizontal" >
+
+                                    <CheckBox
+                                        android:id="@+id/cb_working"
+                                        style="@style/acc_checkbox" />
+
+                                    <TextView
+                                        style="@style/acc_checkbox_of_textview"
+                                        android:text="@string/acc_working" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/common_row_margin"
+                                    android:orientation="horizontal" >
+
+                                    <CheckBox
+                                        android:id="@+id/cb_investing"
+                                        style="@style/acc_checkbox" />
+
+                                    <TextView
+                                        style="@style/acc_checkbox_of_textview"
+                                        android:text="@string/acc_investing" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/common_row_margin"
+                                    android:orientation="horizontal" >
+
+                                    <CheckBox
+                                        android:id="@+id/cb_other"
+                                        style="@style/acc_checkbox" />
+
+                                    <TextView
+                                        style="@style/acc_checkbox_of_textview"
+                                        android:text="@string/acc_others" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_bottom_padding"
+            android:layout_marginTop="@dimen/fill_padding_top"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnNext"
+                style="@style/bottombtn"
+                android:text="@string/next" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

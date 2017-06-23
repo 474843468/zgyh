@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 消息服务画面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/list_bottom" >
+
+    <!--
+    <LinearLayout
+        android:id="@+id/layout_top_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/layout_margin_top"
+        android:paddingLeft="@dimen/layout_padding_left_right"
+        android:paddingRight="@dimen/layout_padding_left_right"
+        android:paddingTop="@dimen/fill_padding_top" >
+
+        <TextView
+            android:id="@+id/contract_title_tv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="中国银行个人网上银行现金宝服务协议"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/textsize_one_six" />
+
+    </LinearLayout>
+    -->
+
+    <ScrollView
+        android:id="@+id/dept_create_layout"
+        style="@style/scrollview_fill"
+        android:background="@drawable/bg_for_listview_item_write" >
+
+        <LinearLayout
+            style="@style/tran_detail_activity_ll"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/layout_padding_left_right"
+            android:paddingRight="@dimen/layout_padding_left_right" >
+
+            <TextView
+                android:id="@+id/tv_question"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_six" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="@string/agreementcontent"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_for"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_question_detail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_for" />
+
+            <LinearLayout
+                android:id="@+id/llyt_biaoge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_one_zero"
+                android:background="@drawable/bg_for_click_content"
+                android:orientation="vertical" 
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/layout_yields_query"
+                    style="@style/common_click_first_item_style"
+                    android:background="#FEF8DC" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="转入资金时间" />
+
+                    <ImageView
+                        android:layout_width="1px"
+                        android:layout_height="fill_parent"
+                        android:background="@color/gray_line" />
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="首次计收益显示时间" />
+                </LinearLayout>
+
+                <ImageView style="@style/divider_imag_style" />
+
+                <LinearLayout
+                    style="@style/common_click_item_style" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="周一15:00～周二15:00" />
+
+                    <ImageView
+                        android:layout_width="1px"
+                        android:layout_height="fill_parent"
+                        android:background="@color/gray_line" />
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="周四" />
+                </LinearLayout>
+
+                <ImageView style="@style/divider_imag_style" />
+
+                <LinearLayout
+                    style="@style/common_click_item_style" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="周二15:00～周三15:00" />
+
+                    <ImageView
+                        android:layout_width="1px"
+                        android:layout_height="fill_parent"
+                        android:background="@color/gray_line" />
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="周五" />
+                </LinearLayout>
+
+                <ImageView style="@style/divider_imag_style" />
+
+                <LinearLayout
+                    style="@style/common_click_item_style" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="周三15:00～周四15:00" />
+
+                    <ImageView
+                        android:layout_width="1px"
+                        android:layout_height="fill_parent"
+                        android:background="@color/gray_line" />
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="周六" />
+                </LinearLayout>
+
+                <ImageView style="@style/divider_imag_style" />
+
+                <LinearLayout
+                    style="@style/common_click_item_style" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="周四15:00～周五15:00" />
+
+                    <ImageView
+                        android:layout_width="1px"
+                        android:layout_height="fill_parent"
+                        android:background="@color/gray_line" />
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="下周二" />
+                </LinearLayout>
+
+                <ImageView style="@style/divider_imag_style" />
+
+                <LinearLayout
+                    style="@style/common_click_last_item_style" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="周五15:00～下周一15:00" />
+
+                    <ImageView
+                        android:layout_width="1px"
+                        android:layout_height="fill_parent"
+                        android:background="@color/gray_line" />
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="下周三" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

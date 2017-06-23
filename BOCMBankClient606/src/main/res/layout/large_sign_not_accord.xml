@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 大额存单签约 签约提示页面 add luqp 2016年1月8日17:18:07 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF"
+    android:orientation="vertical" >
+
+    <!-- 大额存单签约 无符合要求账户 提示页面 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shap_for_content"
+        android:orientation="vertical" >
+
+        <LinearLayout 
+            android:id="@+id/ll_no_accord"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_five_zero"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="@dimen/dp_six_zero"
+                    android:layout_height="@dimen/dp_six_zero"
+                    android:background="@drawable/no_accord" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_two"
+                    android:layout_marginTop="@dimen/dp_two"
+                    android:text="@string/large_cd_no_accord"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_one_five"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- String 提示語:android:text="@string/notsigned" -->
+
+            <TextView
+                android:id="@+id/prompt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/textsize_one_nine"
+                android:text="@string/large_cd_acc_type"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_two" />
+        </LinearLayout>
+
+        <!-- 该账户尚未关联至电子银行，请到柜台办理网银账户关联。-->
+
+        <LinearLayout
+            android:id="@+id/ll_prompt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_five_zero"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="@dimen/dp_six_zero"
+                    android:layout_height="@dimen/dp_six_zero"
+                    android:background="@drawable/forex_no_accord" />
+
+                <LinearLayout
+                    android:id="@+id/ll_acc_nub"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_five"
+                    android:orientation="horizontal"
+                    android:visibility="visible" >
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/large_cd_capital_acc_new"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_nine" />
+
+                    <TextView
+                        android:id="@+id/tv_acc_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_nine" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- String 提示語:android:text="@string/notsigned" -->
+
+            <TextView
+                android:id="@+id/prompt_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/textsize_one_nine"
+                android:text="@string/large_cd_acc_prompt"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_two" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chinamworld.bocmbci.widget.VerticalScrollview xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/common_bottom_padding" >
+
+        <!-- 转出基金 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/finc_throwout_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/tran_bg_acc" >
+
+                <LinearLayout
+                    android:id="@+id/ll_acc_out_2dimen_scan_write"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="@dimen/fill_padding_top" >
+
+                    <ImageView
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:src="@drawable/tran_acc_out_person" />
+
+                    <TextView
+                        android:layout_width="80dip"
+                        android:layout_height="20dip"
+                        android:layout_marginLeft="5dip"
+                        android:gravity="bottom"
+                        android:text="@string/finc_myfinc_fund_out" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/finc_out_info_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dip"
+                    android:layout_below="@+id/ll_acc_out_2dimen_scan_write" >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/finc_out_info_layout"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="0dip" >
+
+                    <ImageView
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:src="@drawable/tran_acc_hand" />
+
+                    <TextView
+                        android:id="@+id/finc_throw_out_select_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dip"
+                        android:layout_marginLeft="5dip"
+                        android:gravity="bottom"
+                        android:text="@string/finc_please_choose_out"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/finc_throwout_list_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/shap_for_dept_tranlist"
+                android:visibility="gone" >
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 转入基金 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fill_margin_top" >
+
+            <RelativeLayout
+                android:id="@+id/finc_throwin_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:layout_marginBottom="@dimen/fill_margin_bottom"
+                android:background="@drawable/tran_bg_acc" >
+
+                <LinearLayout
+                    android:id="@+id/ll_acc_in_2dimen_scan_write"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="@dimen/fill_padding_top" >
+
+                    <ImageView
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:src="@drawable/tran_acc_in_person" />
+
+                    <TextView
+                        android:layout_width="80dip"
+                        android:layout_height="20dip"
+                        android:layout_marginLeft="5dip"
+                        android:gravity="bottom"
+                        android:text="@string/finc_myfinc_fund_in" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/finc_in_info_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60dip"
+                    android:layout_below="@+id/ll_acc_in_2dimen_scan_write" >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/finc_in_info_layout"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="0dip" >
+
+                    <ImageView
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:src="@drawable/tran_acc_hand" />
+
+                    <TextView
+                        android:id="@+id/finc_throw_in_select_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dip"
+                        android:layout_marginLeft="5dip"
+                        android:gravity="bottom"
+                        android:text="@string/finc_please_choose_in"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/finc_throwin_list_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/shap_for_dept_tranlist"
+                android:visibility="gone" >
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/finc_throw_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:orientation="vertical" >
+
+            <LinearLayout style="@style/linnerlayout_common"
+                android:layout_marginTop="@dimen/common_row_margin" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/finc_myfinc_throw_thow_total" />
+
+                <EditText
+                    android:id="@+id/finc_throw_edit"
+                     style="@style/edittext_input_numberDecimal_fill" 
+                     android:maxLength="14"
+                     />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/finc_myfinc_throw_throwType" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    style="@style/Spiiner_fill"
+                     />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/finc_confrim"
+            style="@style/bottombtn_606"
+            android:text="@string/next"
+
+            android:layout_marginTop="@dimen/common_row_margin"/>
+    </LinearLayout>
+
+</com.chinamworld.bocmbci.widget.VerticalScrollview>

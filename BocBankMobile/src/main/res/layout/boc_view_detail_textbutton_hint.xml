@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="62dp"
+    android:background="@color/boc_common_cell_color">
+
+    <LinearLayout
+        android:id="@+id/ll_left"
+        android:layout_width="@dimen/boc_space_between_160px"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="25dp"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:maxEms="8"
+            android:text=""
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:textSize="13dp"/>
+
+        <TextView
+            android:id="@+id/tv_title_hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/boc_text_color_common_gray"
+            android:textSize="13dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_body"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/ll_left"
+        android:gravity="center">
+
+
+        <TextView
+            android:id="@+id/tv_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/boc_text_color_common_gray"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            android:text=""/>
+
+        <TextView
+            android:id="@+id/tv_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_value"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/boc_main_button_color"
+            android:textSize="13dp"
+            android:textStyle="bold"
+            android:visibility="visible"
+            android:text=""/>
+        <TextView
+            android:id="@+id/tv_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_value"
+            android:textColor="@color/boc_text_color_common_gray"
+            android:text=""/>
+    </RelativeLayout>
+    <View
+        android:id="@+id/v_devide"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/boc_common_view_line"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible"/>
+
+</RelativeLayout>

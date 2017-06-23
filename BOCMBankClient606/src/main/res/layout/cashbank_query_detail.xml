@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:id="@+id/blpt_main_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <!-- 项目  start -->
+            
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_three_zero"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/comm_view_left"
+                    android:layout_weight="6.5"
+                    android:singleLine="true"
+                    android:text="@string/trade_date" />
+
+                <TextView
+                    android:id="@+id/tv_trans_date"
+                    style="@style/comm_view_right"
+                    android:layout_weight="3.5"
+                    android:paddingLeft="0dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/comm_view_left"
+                    android:layout_weight="6.5"
+                    android:singleLine="true"
+                    android:text="基金公司代码：" />
+
+                <TextView
+                    android:id="@+id/tv_fund_company_no"
+                    style="@style/comm_view_right"
+                    android:layout_weight="3.5"
+                    android:paddingLeft="0dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/comm_view_left"
+                    android:layout_weight="6.5"
+                    android:singleLine="true"
+                    android:text="@string/bocinvt_trfType" />
+
+                <TextView
+                    android:id="@+id/tv_trans_type"
+                    style="@style/comm_view_right"
+                    android:layout_weight="3.5"
+                    android:paddingLeft="0dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_trans_acc_label"
+                    style="@style/comm_view_left"
+                    android:layout_weight="6.5"
+                    android:singleLine="true"
+                    android:text="付款账户：" />
+
+                <TextView
+                    android:id="@+id/tv_trans_acc"
+                    style="@style/comm_view_right"
+                    android:layout_weight="3.5"
+                    android:paddingLeft="0dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" 
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/comm_view_left"
+                    android:layout_weight="6.5"
+                    android:singleLine="true"
+                    android:text="@string/currency" />
+
+                <TextView
+                    android:id="@+id/tv_trans_currency"
+                    style="@style/comm_view_right"
+                    android:layout_weight="3.5"
+                    android:paddingLeft="0dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_trans_amount_label"
+                    style="@style/comm_view_left"
+                    android:layout_weight="6.5"
+                    android:singleLine="true"
+                    android:text="转入金额：" />
+
+                <TextView
+                    android:id="@+id/tv_trans_amount"
+                    style="@style/comm_view_right"
+                    android:layout_weight="3.5"
+                    android:paddingLeft="0dp"
+                    android:singleLine="true"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textsize_one_two" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/comm_view_left"
+                    android:layout_weight="6.5"
+                    android:singleLine="true"
+                    android:text="交易状态：" />
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    style="@style/comm_view_right"
+                    android:layout_weight="3.5"
+                    android:paddingLeft="0dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_one_two" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/comm_view_left"
+                    android:layout_weight="6.5"
+                    android:singleLine="true"
+                    android:text="交易渠道：" />
+
+                <TextView
+                    android:id="@+id/tv_front_id"
+                    style="@style/comm_view_right"
+                    android:layout_weight="3.5"
+                    android:paddingLeft="0dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_one_two" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/titleText_stepacc"
+        android:layout_width="@dimen/common_details_title_width"
+        android:layout_height="@dimen/left_img_width"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bg_title"
+        android:gravity="center"
+        android:text="@string/forex_trade_detail"
+        android:textColor="@color/gray_title" />
+
+</RelativeLayout>

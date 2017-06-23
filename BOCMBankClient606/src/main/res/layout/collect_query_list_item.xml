@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 资金归集 明细结果信息项 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/body"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_for_listview_item_selector" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/arrow"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/fill_padding" 
+            android:paddingTop="@dimen/fill_padding"
+            android:paddingBottom="@dimen/fill_padding">
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:shrinkColumns="1" >
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="0"
+                        android:singleLine="true"
+                        android:text="@string/collect_transDate" />
+
+                    <TextView
+                        android:id="@+id/tv_date"
+                        style="@style/comm_view_right"
+                        android:layout_weight="0"
+                        android:paddingLeft="0dp"
+                        android:singleLine="true" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="0"
+                        android:singleLine="true"
+                        android:text="@string/collect_trans_number" />
+
+                    <TextView
+                        android:id="@+id/tv_workno"
+                        style="@style/comm_view_right"
+                        android:layout_weight="0"
+                        android:paddingLeft="0dp"
+                        android:paddingRight="0dp"
+                        android:singleLine="true" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="0"
+                        android:singleLine="true"
+                        android:text="@string/collect_status" />
+
+                    <TextView
+                        android:id="@+id/tv_status"
+                        style="@style/comm_view_right"
+                        android:layout_weight="0"
+                        android:paddingLeft="0dp"
+                        android:singleLine="true" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="0"
+                        android:singleLine="true"
+                        android:text="@string/collect_success_amount" />
+
+                    <TextView
+                        android:id="@+id/tv_amount"
+                        style="@style/comm_view_right"
+                        android:layout_weight="0"
+                        android:paddingLeft="0dp"
+                        android:textColor="@color/red"
+                        android:singleLine="true" />
+                </TableRow>
+
+                <TableRow android:visibility="gone" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="0"
+                        android:singleLine="true"
+                        android:text="@string/bizhong" />
+
+                    <TextView
+                        style="@style/comm_view_right"
+                        android:layout_weight="0"
+                        android:paddingLeft="0dp"
+                        android:singleLine="true"
+                        android:text="@string/renmingbi" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="0"
+                        android:singleLine="true"
+                        android:text="@string/collect_count" />
+
+                    <TextView
+                        android:id="@+id/tv_count"
+                        style="@style/comm_view_right"
+                        android:layout_weight="0"
+                        android:paddingLeft="0dp"
+                        android:singleLine="true" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="0"
+                        android:singleLine="true"
+                        android:text="@string/collect_mode" />
+
+                    <TextView
+                        android:id="@+id/tv_mode"
+                        style="@style/comm_view_right"
+                        android:layout_weight="0"
+                        android:paddingLeft="0dp"
+                        android:singleLine="true" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="0"
+                        android:singleLine="true"
+                        android:text="发起方式：" />
+
+                    <TextView
+                        android:id="@+id/tv_collect"
+                        style="@style/comm_view_right"
+                        android:layout_weight="0"
+                        android:paddingLeft="0dp"
+                        android:singleLine="true" />
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/comm_view_left"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="0"
+                    android:singleLine="true"
+                    android:text="@string/beizhu"
+                    android:textColor="@color/gray" />
+
+                <TextView
+                    android:id="@+id/tv_remark"
+                    style="@style/comm_view_right"
+                    android:layout_weight="0"
+                    android:layout_width="fill_parent"
+                    android:paddingLeft="0dp"
+                    android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="@dimen/shap_of_commrequestopen_pdl"
+            android:layout_height="@dimen/shap_of_commrequestopen_pdl"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:src="@drawable/right_arrow" />
+    </RelativeLayout>
+
+</LinearLayout>

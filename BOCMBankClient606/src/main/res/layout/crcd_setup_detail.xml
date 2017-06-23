@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/lastButton"
+            style="@style/btn_common_oneline_four"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/mycrcd_setup_huankuan"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/sureButton"
+            style="@style/btn_common_oneline_four"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/mycrcd_setup_auto_huankuan"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button_layout"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView
+            style="@style/scrollview_comm_havemarginbutton"
+            android:paddingLeft="0dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/fill_padding_top"
+                        android:text="@string/mycrcd_huankuan_setup_detail"
+                        android:textColor="@color/gray"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/fill_padding_top"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:text="@string/mycrcd_credit_card" />
+
+                        <TextView
+                            android:id="@+id/tv_cardNumber"
+                            style="@style/textview_common_right"
+                            android:singleLine="false"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_ben"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/common_row_margin"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    style="@style/textview_common_left"
+                                    android:text="@string/mycrcd_setup_huankuan_selftype" />
+
+                                <TextView
+                                    android:id="@+id/mycrcd_accounted_type"
+                                    style="@style/textview_common_right" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ben_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone" >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/common_row_margin"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        style="@style/textview_common_left"
+                                        android:text="@string/mycrcd_setup_huankuan_zhanghao" />
+
+                                    <TextView
+                                        android:id="@+id/mycrcd_selected_creditcard"
+                                        style="@style/textview_common_right"
+                                        android:singleLine="false" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/common_row_margin"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        style="@style/textview_common_left"
+                                        android:text="@string/mycrcd_setup_huankuan_currencytype" />
+
+                                    <TextView
+                                        android:id="@+id/mycrcd_accounted_money"
+                                        style="@style/textview_common_right" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/common_row_margin"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        android:id="@+id/fix_sellcode"
+                                        style="@style/textview_common_left"
+                                        android:text="@string/mycrcd_huankuan_auto_setup" />
+
+                                    <TextView
+                                        android:id="@+id/rate_fix_sellCode"
+                                        style="@style/textview_common_right" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_waibi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/common_row_margin"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/currency_buycode"
+                                    style="@style/textview_common_left"
+                                    android:text="@string/mycrcd_setup_huankuan_waibisetup" />
+
+                                <TextView
+                                    android:id="@+id/rate_currency_buyCode"
+                                    style="@style/textview_common_right" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/wai_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone" >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/common_row_margin"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        style="@style/textview_common_left"
+                                        android:text="@string/mycrcd_setup_huankuan_account" />
+
+                                    <TextView
+                                        android:id="@+id/rate_currency_type"
+                                        style="@style/textview_common_right"
+                                        android:singleLine="false" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/common_row_margin"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        style="@style/textview_common_left"
+                                        android:text="@string/mycrcd_setup_huankuan_waibi" />
+
+                                    <TextView
+                                        android:id="@+id/rate_fix_papRate"
+                                        style="@style/textview_common_right" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/common_row_margin"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        style="@style/textview_common_left"
+                                        android:text="@string/mycrcd_huankuan_money_setup" />
+
+                                    <TextView
+                                        android:id="@+id/rate_fix_comRate"
+                                        style="@style/textview_common_right" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/titleText_stepacc"
+        android:layout_width="@dimen/crcd_common_details_title_width"
+        android:layout_height="@dimen/left_img_width"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_title"
+        android:gravity="center"
+        android:text="@string/mycrcd_huankuan_setup_detail"
+        android:textColor="@color/gray_title" />
+
+</RelativeLayout>

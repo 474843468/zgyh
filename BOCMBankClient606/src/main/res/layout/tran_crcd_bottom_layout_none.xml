@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 非关联行内转账设定  MyTransferActivity -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/btn_transet_mytransfer"
+        style="@style/tran_little_card_ll" >
+
+        <TextView
+            android:id="@+id/comm_trans_set_title"
+            style="@style/tran_little_title_tv"
+            android:text="@string/comm_boc_trans" />
+
+        <LinearLayout style="@style/tran_little_card_content_ll" >
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/fill_padding_right" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:text="@string/bizhong" />
+
+                    <Spinner
+                        android:id="@+id/crcd_currency"
+                        style="@style/Spiiner_fill"
+                        android:layout_weight="3" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_cashRemit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/fill_padding_right" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:text="@string/chaohui" />
+
+                    <Spinner
+                        android:id="@+id/crcd_cashRemit"
+                        style="@style/Spiiner_fill"
+                        android:layout_weight="3" />
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/fill_padding_right" >
+
+                <TextView
+                    style="@style/comm_view_left"
+                    android:gravity="right"
+                    android:text="@string/transferAmount" />
+
+                <EditText
+                    android:id="@+id/et_huankuan_count"
+                    style="@style/edittext_input_numberDecimal_fill"
+                    android:layout_weight="3"
+                    android:maxLength="14"
+                    android:textColor="@color/black" >
+                </EditText>
+            </LinearLayout>
+
+            
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/fill_padding_right" >
+
+                <TextView
+                    style="@style/comm_view_left"
+                    android:gravity="right"
+                    android:text="@string/fuYan" />
+
+                <EditText
+                    android:id="@+id/et_huankuan_fuyan"
+                    style="@style/edittext_common_fill"
+                    android:layout_weight="3"
+                    android:hint="@string/hint_memo"
+                    android:maxLength="50"
+                    android:textColor="@color/black" >
+                </EditText>
+            </LinearLayout>
+
+            
+
+            
+           
+
+            
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/query_trans_detail"
+                android:textColor="@color/gray" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bottom_margin_top"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_commBoc_nowExe_tranSeting"
+            style="@style/tran_three_btn"
+            android:text="@string/nowExe" />
+
+        <Button
+            android:id="@+id/btn_commBoc_preDateExe_tranSeting"
+            style="@style/tran_three_btn"
+            android:text="@string/preDateExe" />
+
+        <Button
+            android:id="@+id/btn_commBoc_prePeriodExe_tranSeting"
+            style="@style/tran_three_btn"
+            android:text="@string/prePeriodExe" />
+    </LinearLayout>
+
+</LinearLayout>

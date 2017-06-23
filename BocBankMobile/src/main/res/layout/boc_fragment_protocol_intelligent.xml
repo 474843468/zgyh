@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:id="@+id/ll_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/boc_space_between_20px"
+        android:paddingRight="@dimen/boc_space_between_20px"
+        android:paddingTop="@dimen/boc_space_between_30px">
+
+        <TextView
+            android:id="@+id/txt_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/boc_space_between_30px"
+            android:paddingLeft="@dimen/boc_space_between_32px"
+            android:paddingRight="@dimen/boc_space_between_30px"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:textSize="@dimen/boc_text_size_little_big"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/ll_head_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/boc_space_between_32px"
+            android:paddingRight="@dimen/boc_space_between_30px">
+
+        </LinearLayout>
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+            android:id="@+id/choice_currency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:editChoiceContent="现汇"
+            app:editChoiceName="钞/汇"
+            app:editChoiceNameBold="true" />
+
+        <include layout="@layout/boc_divide_line" />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+            android:id="@+id/choice_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:editChoiceContent="定额"
+            app:editChoiceName="投资金额模式"
+            app:editChoiceNameBold="true" />
+
+        <include layout="@layout/boc_divide_line" />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputWidget
+            android:id="@+id/money_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:editChoiceNameBold="true" />
+
+        <include layout="@layout/boc_divide_line" />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputWidget
+            android:id="@+id/money_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:editChoiceNameBold="true" />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditClearWidget
+            android:id="@+id/edt_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/boc_space_between_20px"
+            app:editClearName="投资期数" />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.assignment.SelectAgreementView
+            android:id="@+id/read"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/boc_space_between_80px" />
+
+        <Button
+            android:id="@+id/btn_next"
+            style="@style/BocButton.BocPrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_88px"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginTop="@dimen/boc_space_between_30px"
+            android:text="@string/boc_account_next" />
+
+        <TextView
+            android:id="@+id/txt_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/boc_space_between_60px"
+            android:layout_marginTop="@dimen/boc_space_between_60px"
+            android:gravity="center"
+            android:textColor="@color/boc_text_mobile_color"
+            android:textSize="@dimen/boc_text_size_common"
+            tools:text="理财交易账户" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/acc_query_transfer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+    <LinearLayout
+        android:id="@+id/ll_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_query_condition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img_bg_query_j"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ccr_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/comm_confirm_leftiterm_marginleft"
+            android:layout_marginRight="@dimen/comm_confirm_leftiterm_marginleft"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:orientation="vertical" >
+			<LinearLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal">
+			    <TextView 
+			        style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/layout_height"
+                android:ellipsize="middle"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/edittext_paddinglr"
+                android:paddingRight="@dimen/fill_margin_right"
+                android:singleLine="true"
+                android:text="选择计划："/>
+            <!-- <TextView
+                android:id="@+id/spPlanname"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/layout_height"
+                android:layout_weight="1"
+                android:background="@drawable/bg_spinner"
+                android:ellipsize="middle"
+                android:gravity="center"
+                android:paddingRight="@dimen/fill_margin_right"
+                android:singleLine="true"
+                android:text="计划名称" /> -->
+
+                <TextView
+                    android:id="@+id/spPlanname"
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_spinner"
+                    android:ellipsize="middle"
+                    android:gravity="left|center"
+                    android:paddingRight="@dimen/fill_margin_left_double"
+                    android:paddingLeft="@dimen/shap_of_save_confirm_pdb"
+                    android:singleLine="true"
+                    android:text="请选择"/>
+
+			</LinearLayout>
+			<LinearLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:layout_marginTop="@dimen/dp_five">
+			    <TextView 
+			        style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/layout_height"  
+                android:ellipsize="middle"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/edittext_paddinglr"
+                android:paddingRight="@dimen/fill_margin_right"
+                android:singleLine="true"
+                android:text="服务类别："/>
+            <TextView
+                android:id="@+id/spServicetype"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/layout_height"
+                android:layout_weight="1"
+                android:background="@drawable/bg_spinner"
+                android:ellipsize="middle"
+                android:gravity="left|center"
+                android:paddingRight="@dimen/fill_margin_right"
+                android:paddingLeft="@dimen/shap_of_save_confirm_pdb"
+                android:singleLine="true"
+                android:text="请选择" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/acc_query_choosedate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fill_margin_bottom"
+            android:layout_marginRight="@dimen/fill_margin_bottom"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_onweek"
+                style="@style/buttonLeft"
+                android:text="@string/prms_str_oneweek"
+                android:textSize="@dimen/textsize_one_three" />
+
+            <Button
+                android:id="@+id/btn_onmonth"
+                style="@style/buttonMiddle"
+                android:text="最近一个月"
+                android:textSize="@dimen/textsize_one_three" />
+
+            <Button
+                android:id="@+id/btn_threemonth"
+                style="@style/buttonRight"
+                android:text="最近三个月"
+                android:textSize="@dimen/textsize_one_three" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fill_margin_bottom"
+            android:layout_marginRight="@dimen/fill_margin_bottom"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:orientation="horizontal" >
+
+            <include layout="@layout/plps_query_info_prompt" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/acc_query_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/comm_confirm_leftiterm_marginleft"
+            android:layout_marginRight="@dimen/comm_confirm_leftiterm_marginleft"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/startdate"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginRight="@dimen/fill_margin_right"
+                android:layout_weight="1"
+                android:background="@drawable/bg_spinner"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/edittext_paddinglr" />
+
+            <TextView
+                android:id="@+id/enddate"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginLeft="@dimen/fill_margin_left"
+                android:layout_weight="1"
+                android:background="@drawable/bg_spinner"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/edittext_paddinglr" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/comm_confirm_leftiterm_marginleft"
+            android:layout_marginRight="@dimen/comm_confirm_leftiterm_marginleft"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_query"
+                style="@style/query_button_style" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="@dimen/common_row_margin"
+            android:layout_marginRight="@dimen/common_row_margin" >
+
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/textview_common_up"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="right|bottom"
+                android:textSize="@dimen/textsize_one_three" />
+
+            <ImageView
+                android:id="@+id/query_up"
+                style="@style/query_image_up_style"
+                android:layout_gravity="bottom"
+                android:src="@drawable/img_arrow_gray_up" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/result_condition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/img_bg_query_no"
+        android:orientation="vertical"
+        android:padding="@dimen/fill_padding_left"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_acc_query_date"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plps_plan_query" />
+
+            <TextView
+                android:id="@+id/planname"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plps_annuity_service_type" />
+
+            <TextView
+                android:id="@+id/servicetype"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/acc_query_date" />
+
+            <TextView
+                android:id="@+id/query_date"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/down_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_common_down"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/common_paixuWH"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:gravity="right|bottom" />
+
+            <ImageView
+                android:id="@+id/img_acc_query_back"
+                style="@style/query_image_up_style"
+                android:layout_gravity="bottom"
+                android:src="@drawable/img_arrow_gray_down" />
+        </LinearLayout>
+    </LinearLayout>
+    	<RelativeLayout
+                android:id="@+id/layout_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                >
+
+                <include layout="@layout/plps_annuity_list_result" />
+            </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

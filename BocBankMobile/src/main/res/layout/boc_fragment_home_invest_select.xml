@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/boc_common_view_line"
+        android:orientation="horizontal"
+        android:paddingBottom="1dp"
+        android:paddingTop="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/boc_main_btn_bg_color"
+            android:gravity="left|center"
+            android:paddingLeft="@dimen/boc_space_between_60px"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/ding" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boc_main_invest_notice1"
+                android:textColor="@color/boc_text_color_common_gray" />
+
+            <TextView
+                android:id="@+id/tv_added_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/boc_text_color_dark_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boc_main_invest_notice2"
+                android:textColor="@color/boc_text_color_common_gray" />
+
+            <TextView
+                android:id="@+id/tv_remainder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/boc_text_color_dark_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boc_main_invest_notice3"
+                android:textColor="@color/boc_text_color_common_gray" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:text="[账户贵金属]"
+                    android:textColor="@color/boc_text_color_dark_gray" />
+
+                <LinearLayout
+                    android:id="@+id/lv_gold_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/boc_divider_line_color" />
+
+                <TextView
+                    android:id="@+id/addGoldAction"
+                    style="@style/BocButton.BocWhiteBgButton"
+                    android:layout_height="@dimen/boc_space_between_80px"
+                    android:gravity="center"
+                    android:text="添加"
+                    android:textColor="@color/boc_main_button_color"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:text="[基金]"
+                    android:textColor="@color/boc_text_color_dark_gray" />
+
+                <LinearLayout
+                    android:id="@+id/lv_fund_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/boc_divider_line_color" />
+
+                <TextView
+                    android:id="@+id/addFundAction"
+                    style="@style/BocButton.BocWhiteBgButton"
+                    android:gravity="center"
+                    android:layout_height="@dimen/boc_space_between_80px"
+                    android:text="添加"
+                    android:textColor="@color/boc_main_button_color"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:text="[结汇购汇]"
+                    android:textColor="@color/boc_text_color_dark_gray" />
+
+                <LinearLayout
+                    android:id="@+id/lv_fess_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/boc_divider_line_color" />
+
+                <TextView
+                    android:id="@+id/addFessAction"
+                    style="@style/BocButton.BocWhiteBgButton"
+                    android:gravity="center"
+                    android:layout_height="@dimen/boc_space_between_80px"
+                    android:text="添加"
+                    android:textColor="@color/boc_main_button_color"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

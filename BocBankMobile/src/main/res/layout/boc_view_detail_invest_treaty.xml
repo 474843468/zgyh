@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/boc_common_cell_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/boc_space_between_30px">
+
+        <TextView
+            android:id="@+id/tv_tds_type"
+            style="@style/tv_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textColor="@color/boc_text_color_dark_gray" />
+
+        <TextView
+            android:id="@+id/tv_memo"
+            style="@style/tv_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_tds_date"
+            android:gravity="center_vertical"
+            android:textColor="@color/boc_text_color_common_gray"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_tds_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:textColor="@color/boc_text_color_red"
+            android:textSize="@dimen/boc_text_size_small"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_tds_date"
+            style="@style/tv_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_tds_type"
+            android:gravity="center_vertical"
+            android:textColor="@color/boc_text_color_common_gray" />
+
+        <TextView
+            android:id="@+id/tv_tds_unit"
+            style="@style/tv_small"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_tds_type"
+            android:gravity="center_vertical"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <View style="@style/divider_horizontal" />
+
+</LinearLayout>

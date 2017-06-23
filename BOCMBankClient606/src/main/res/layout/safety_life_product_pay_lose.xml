@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 寿险缴费界面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_right"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnFinish"
+            style="@style/textview_forex_button_cell"
+            android:text="@string/quit" />
+    </LinearLayout>
+
+    <ScrollView
+        style="@style/scrollview_comm"
+        android:layout_above="@+id/btn_layout"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:paddingBottom="@dimen/common_row_margin"
+        android:paddingTop="@dimen/common_details_messages_paddingtop"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/fill_margin_top"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <TextView
+                android:id="@+id/tv_loseInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fill_margin_top"
+                android:padding="@dimen/fill_margin_top"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

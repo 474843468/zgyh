@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账单缴费已申请的缴费信息列表页 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dp_seven_zero"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/common_listview_item_paddingLR"
+        android:paddingRight="@dimen/common_listview_item_paddingLR" >
+
+        <TextView
+            android:id="@+id/tv_company"
+            style="@style/textview_for_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_dispname"
+            style="@style/textview_for_list_act"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:singleLine="true" 
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/bottom_margin_top"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/common_row_margin" >
+
+            <TextView
+                android:id="@+id/tvtitle_acc"
+                style="@style/textview_for_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_of_bottom_btn"
+                android:layout_marginTop="@dimen/common_details_title_margintop"
+                android:layout_weight="1.0"/>
+
+            <TextView
+                android:id="@+id/tvtitle_type"
+                style="@style/textview_for_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/common_details_title_margintop"
+                android:layout_weight="1.0"
+                android:gravity="center_horizontal"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+
+        <ListView
+            android:id="@+id/ver_hadapply"
+            style="@style/listviewcomm_wrap_haveDivider"
+            android:divider="@color/gray"
+            android:dividerHeight="1dip"
+            android:scrollbars="none"
+             />
+        <View
+            android:id="@+id/view_line"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray" />
+    </LinearLayout>
+
+</RelativeLayout>

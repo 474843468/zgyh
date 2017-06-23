@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_home"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View style="@style/divider_horizontal" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.operation.ResultHead
+                android:id="@+id/result_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.operation.ResultDetail
+                android:id="@+id/result_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.operation.ResultBottom
+                android:id="@+id/result_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_home"
+        style="@style/BocResultButton"
+        android:layout_marginTop="@dimen/boc_space_between_20px"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="@string/boc_result_home" />
+
+</RelativeLayout>

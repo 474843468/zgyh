@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/common_bottom_padding_new"
+        android:layout_marginTop="@dimen/common_row_margin" >
+
+        <Button
+            android:id="@+id/nextBtn"
+            style="@style/bottombtn"
+            android:text="@string/delete" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_acc_lose_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:paddingTop="@dimen/dp_five"
+        android:text="@string/trans_remit_setmeal_del_title_input"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/textsize_default" />
+
+    <ListView
+        android:id="@+id/lv_sharedAcc"
+        style="@style/listviewcomm_fill_gray_divider"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_below="@+id/tv_acc_lose_title"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write" >
+    </ListView>
+
+</RelativeLayout>

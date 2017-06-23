@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 汇款查询的详情 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        style="@style/scrollview_comm_havemarginbutton"
+        android:layout_above="@+id/dept_btn_layout"
+        android:layout_marginTop="@dimen/layout_margin_top"
+        android:scrollbars="none" >
+
+        <LinearLayout style="@style/tran_detail_activity_ll" >
+
+            <LinearLayout
+                android:id="@+id/layout_remitout_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_common_left_three"
+                    android:text="@string/remitout_no" />
+
+                <TextView
+                    android:id="@+id/tv_remitout_no"
+                    style="@style/textview_common_right_two" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left_three"
+                    android:text="@string/remitout_account" />
+
+                <TextView
+                    android:id="@+id/tv_remit_acount"
+                    style="@style/textview_common_right_two" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left_three"
+                    android:text="@string/bizhong" />
+
+                <TextView
+                    android:id="@+id/tv_remit_bizhong"
+                    style="@style/textview_common_right_two" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left_three"
+                    android:text="@string/remit_money_amout" />
+
+                <TextView
+                    android:id="@+id/tv_remit_money_amout"
+                    style="@style/textview_common_right_two"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left_three"
+                    android:text="@string/get_remit_name" />
+
+                <TextView
+                    android:id="@+id/tv_get_remit_name"
+                    style="@style/textview_common_right_two" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left_three"
+                    android:text="@string/get_remit_phone" />
+
+                <TextView
+                    android:id="@+id/tv_get_remit_phone"
+                    style="@style/textview_common_right_two" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left_three"
+                    android:text="@string/fuYan" />
+
+                <TextView
+                    android:id="@+id/tv_remit_fuyan"
+                    style="@style/textview_common_right_two" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left_three"
+                    android:text="@string/remitout_date_label" />
+
+                <TextView
+                    android:id="@+id/tv_remit_date"
+                    style="@style/textview_common_right_two" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left_three"
+                    android:text="@string/remitout_state_label" />
+
+                <TextView
+                    android:id="@+id/tv_remit_state"
+                    style="@style/textview_common_right_two" />
+            </LinearLayout>
+
+            <!-- 有效期至 -->
+             <LinearLayout
+                 android:id="@+id/ll_dueDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left_three"
+                    android:text="@string/dueDate" />
+
+                <TextView
+                    android:id="@+id/tv_remit_dueDate"
+                    style="@style/textview_common_right_two" />
+            </LinearLayout>
+            
+             <!-- 取款日期 -->
+             <LinearLayout
+                 android:id="@+id/ll_receiptDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_common_left_three"
+                    android:text="@string/get_remit_date" />
+
+                <TextView
+                    android:id="@+id/tv_remit_receiptDate"
+                    style="@style/textview_common_right_two" />
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/layout_get_remit_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_common_left_three"
+                    android:text="@string/get_remit_date" />
+
+                <TextView
+                    android:id="@+id/tv_get_remit_date"
+                    style="@style/textview_common_right_two" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_remit_agence_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_common_left_three"
+                    android:text="@string/remit_agence_name" />
+
+                <TextView
+                    android:id="@+id/tv_remit_agence_name"
+                    style="@style/textview_common_right_two" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_remit_agence_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_common_left_three"
+                    android:text="@string/remit_agence_number" />
+
+                <TextView
+                    android:id="@+id/tv_remit_agence_number"
+                    style="@style/textview_common_right_two" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left_three"
+                    android:text="@string/trade_channel" />
+
+                <TextView
+                    android:id="@+id/channel"
+                    style="@style/textview_common_right_two" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="10dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/dept_title_tv"
+        style="@style/tran_card_title"
+        android:text="@string/remit_query_detail" />
+
+    <LinearLayout
+        android:id="@+id/dept_btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/layout_margin_top" >
+
+        <Button
+            android:id="@+id/btn_send_msg"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/send_message_notify"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_cancle"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/tran_cancle"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

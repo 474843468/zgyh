@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 保险暂存保单列表页 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/bottom_margin_top"
+            android:paddingTop="@dimen/bottom_margin_top" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="6"
+                android:singleLine="true"
+                android:text="@string/safety_hold_pro_detail_prod_type" />
+
+            <Spinner
+                android:id="@+id/sp_safetyType"
+                style="@style/spinner_forex_prompt_info"
+                android:layout_marginRight="5dp"
+                android:layout_weight="3"
+                android:paddingRight="35dip" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.chinamworld.bocmbci.widget.SwipeListView
+        xmlns:swipe="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/safety_listview"
+        style="@style/listviewcomm_fill_haveDivider"
+        android:layout_below="@id/layout"
+        android:layout_marginBottom="@dimen/fill_margin_left"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_marginTop="8dip"
+        android:scrollbars="none"
+        swipe:swipeActionLeft="dismiss"
+        swipe:swipeCloseAllItemsWhenMoveList="true"
+        swipe:swipeFrontView="@+id/front"
+        swipe:swipeMode="both" />
+
+</RelativeLayout>

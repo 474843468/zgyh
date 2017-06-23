@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:id="@+id/sv_content"
+        style="@style/scrollview_with_no_padding"
+        android:layout_above="@+id/bt_ensure"
+        android:layout_marginBottom="@dimen/common_row_margin"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:paddingBottom="@dimen/fill_padding_bottom"
+        android:paddingTop="@dimen/fill_padding_top" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/tv_result_msg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_row_margin"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:text="@string/epay_modify_quota_result_title"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_default" />
+
+            <LinearLayout
+                android:id="@+id/ll_currency"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_result_msg"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/epay_wc_spa_tv_currency" />
+
+                <TextView
+                    android:id="@+id/tv_currency"
+                    style="@style/textview_common_right"
+                    android:text="@string/rmb_currency" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_dmq"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_currency"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/epay_pub_day_max_quota" />
+
+                <TextView
+                    android:id="@+id/tv_day_max_quota"
+                    style="@style/textview_money_adapter"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_pmq"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_dmq"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/epay_pub_per_max_quota" />
+
+                <TextView
+                    android:id="@+id/tv_per_max_quota"
+                    style="@style/textview_money_adapter"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_pmq"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:text="@string/epay_pub_cust_max_quota" />
+
+                <TextView
+                    android:id="@+id/tv_cust_max_quota"
+                    style="@style/textview_money_adapter"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/bt_ensure"
+        style="@style/bottombtn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/fill_margin_bottom"
+        android:text="@string/finish" />
+
+</RelativeLayout>

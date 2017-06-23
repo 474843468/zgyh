@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_parent_query_button"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_divider_1px"
+        android:background="@color/boc_divide_color" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_74px"
+        android:background="@color/white"
+        android:gravity="center">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5" />
+        <!--自选按钮和底部红线-->
+        <LinearLayout
+            android:id="@+id/ll_self_ly"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/boc_space_between_20px"
+            android:visibility="gone"
+            android:paddingRight="@dimen/boc_space_between_20px">
+
+            <Button
+                android:id="@+id/btn_selfchose"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_80px"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="自选"
+                android:textColor="@color/boc_text_color_red"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/ly_selfchose"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:background="@color/boc_text_color_red" />
+        </LinearLayout>
+        <!--贵金属按钮和底部红线-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/boc_space_between_20px"
+            android:paddingRight="@dimen/boc_space_between_20px">
+
+            <Button
+                android:id="@+id/btn_gold"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_80px"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="贵金属"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/ly_gold"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:background="@color/boc_text_color_red"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/boc_space_between_20px"
+            android:paddingRight="@dimen/boc_space_between_20px">
+
+            <Button
+                android:id="@+id/btn_forex"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_80px"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="外汇"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/ly_forex"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:background="@color/boc_text_color_red"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_divider_1px"
+        android:background="@color/boc_divide_color" />
+    <!--<View style="@style/view_split_gray"/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_60px"
+        android:background="@color/bocroa_white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_space_between_30px"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="编辑 |"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="货币对"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:textSize="@dimen/boc_text_size_small" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="卖出价"
+            android:textColor="@color/boc_text_color_common_gray"
+            android:textSize="@dimen/boc_text_size_small" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="买入价"
+            android:textColor="@color/boc_text_color_common_gray"
+            android:textSize="@dimen/boc_text_size_small" />
+
+        <TextView
+            android:id="@+id/tv_riseorfall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawablePadding="-10dp"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:text="涨跌幅"
+            android:textColor="@color/boc_text_color_common_gray"
+            android:textSize="@dimen/boc_text_size_small" />
+    </LinearLayout>
+
+</LinearLayout>

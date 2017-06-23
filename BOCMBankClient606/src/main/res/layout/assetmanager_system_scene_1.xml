@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/style_match_wrap"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+    <!-- 币种 -->
+    		<include android:id="@+id/tv_tv_1" layout="@layout/assetmanager_scene_tv_tv_underline_layout"/>
+	        <View style="@style/style_line_1" android:layout_marginLeft="10dp"/>
+    <!-- 钞汇 -->
+    		<include android:id="@+id/tv_tv_2" layout="@layout/assetmanager_scene_tv_tv_underline_layout"/>
+	        <View style="@style/style_line_1" android:layout_marginLeft="10dp"/>
+    <!-- 执行模式 -->
+	        <include android:id="@+id/tv_tv_3" layout="@layout/assetmanager_scene_tv_tv_underline_layout"/>
+	        <View style="@style/style_line_1" android:layout_marginLeft="10dp"/>
+    <!-- 执行周期 -->
+	        <include android:id="@+id/tv_tv_4" layout="@layout/assetmanager_scene_tv_tv_underline_layout"/>
+	        <View style="@style/style_line_1"/>
+    <!-- 具体执行日 -->
+	        <include android:id="@+id/tv_tv_5" layout="@layout/assetmanager_scene_tv_tv_underline_layout"/>
+	        <View style="@style/style_line_1"/>
+	        
+	        <!-- 终止日期 -->
+   			 <LinearLayout 
+   			     android:id="@+id/layout_endDate"
+   			     style="@style/style_match_wrap" 
+   			     android:layout_margin="10dp" 
+   			     android:gravity="center_vertical"
+   			     android:visibility="visible"
+   			     >
+	            <TextView 
+	                style="@style/textview_common_multi_second"
+	                android:layout_marginRight="3dp"
+	                android:text="@string/assetmanager_capital_10"
+	                android:visibility="visible"
+	                />
+	            <TextView 
+		    		    android:id="@+id/tv_sp_2"
+		        		style="@style/style_tv_spinner"
+		        		android:layout_width="0dp"
+		        		android:layout_weight="1"
+		                />
+	            <LinearLayout 
+	                android:id="@+id/layout_forever"
+	                style="@style/style_wrap_wrap" 
+	                android:padding="3dp" 
+	                android:gravity="center_vertical"
+	                android:visibility="visible"
+	                >
+	            <CheckBox 
+	                android:id="@+id/check_box_forever"
+	                style="@style/check_box_style" />
+	            <TextView style="@style/textview_common_multi_second"
+	                android:text="@string/assetmanager_capital_7"
+	                />
+	        	</LinearLayout>
+        	</LinearLayout>
+        	
+   			 <View style="@style/style_line_1" android:layout_marginLeft="10dp"/>
+        <!-- 划转规则 -->
+        <LinearLayout
+            android:id="@+id/layout_rule" 
+            style="@style/style_match_wrap" 
+            android:layout_margin="10dp" 
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            >
+                <TextView 
+	                android:id="@+id/tv_rule_1"
+	                style="@style/textview_common_multi_second"
+	                android:text="@string/assetmanager_capital_11"
+	                />
+                <LinearLayout style="@style/style_match_wrap">
+	            <EditText 
+	                android:id="@+id/ed_rule_1"
+	                style="@style/edittext_input_numberDecimal_wrap"
+	                android:layout_width="0dp"
+	                android:layout_weight="1"
+	                android:maxLength="14"
+	                />
+	            <TextView 
+	                android:id="@+id/tv_rule_2"
+	                style="@style/textview_common_multi_second"
+	                android:text="@string/assetmanager_capital_12"
+	                />
+	            </LinearLayout>
+        </LinearLayout>
+        <View style="@style/style_line_1"/>
+	    <TextView 
+	        android:id="@+id/tv_tip"
+	        style="@style/textview_common_multi_second"
+	        android:layout_margin="10dp"
+	        android:textColor="@color/gray"
+	        android:text="@string/assetmanager_capital_8"
+	        />
+	    
+	    <!-- 发送短息 -->
+	    <RelativeLayout style="@style/style_match_wrap" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+	    <include android:id="@+id/layout_send_msg" layout="@layout/assetmanager_send_messger"/>
+	    </RelativeLayout>
+	    
+	    <!-- 按钮 -->
+	    <include android:id="@+id/layout_bottom_button" layout="@layout/assetmanager_bottom_button_layout"/>
+    
+
+</LinearLayout>

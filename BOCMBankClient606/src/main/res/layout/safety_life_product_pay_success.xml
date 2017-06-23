@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 寿险缴费界面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_right"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnFinish"
+            style="@style/textview_forex_button_cell"
+            android:text="@string/finish" />
+    </LinearLayout>
+
+    <ScrollView
+        style="@style/scrollview_comm"
+        android:layout_above="@+id/btn_layout"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:paddingBottom="@dimen/common_row_margin"
+        android:paddingTop="@dimen/common_details_messages_paddingtop"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/success" />
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fill_margin_top" >
+
+                <TextView
+                    style="@style/confirm_info_textview_style"
+                    android:layout_gravity="center"
+                    android:text="@string/safety_success_title" />
+            </FrameLayout>
+
+            <!-- 交易日期 -->
+            <!--
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/bocinvt_paymentDate" />
+
+                <TextView
+                    android:id="@+id/tv_paymentDate"
+                    style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+
+            保单到期日
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/safety_hold_pro_detail_risk_bill_enddate" />
+
+                <TextView
+                    android:id="@+id/tv_enddate"
+                    style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+            -->
+            <!-- 保险公司 -->
+
+            <LinearLayout
+                style="@style/linnerlayout_common"
+                android:layout_marginTop="@dimen/fill_margin_top" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/safety_hold_pro_detail_risk_company_name" />
+
+                <TextView
+                    android:id="@+id/tv_company"
+                    style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+
+            <!-- 产品名称 -->
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/safety_hold_pro_detail_prod_name" />
+
+                <TextView
+                    android:id="@+id/tv_prodName"
+                    style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+
+            <!-- 保单生效日 -->
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/safety_hold_pro_detail_risk_bill_effdate1" />
+
+                <TextView
+                    android:id="@+id/tv_effdate"
+                    style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fill_margin_left"
+                android:layout_marginRight="@dimen/fill_margin_right"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textsize_default" />
+            <!--
+            保单号
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/safety_hold_pro_detail_risk_bill_code" />
+
+                <TextView
+                    android:id="@+id/tv_code"
+                    style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+
+            购买份数
+
+            <LinearLayout
+				android:id="@+id/ll_copies"
+				style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/safety_hold_pro_detail_deal" />
+
+                <TextView
+                    android:id="@+id/tv_copies"
+                    style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+
+            合计保费
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/safety_hold_pro_detail_risk_fee" />
+
+                <TextView
+                    android:id="@+id/tv_prem"
+                    style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+
+            账号
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/acc_accountnumber" />
+
+                <TextView
+                    android:id="@+id/tv_accountNumber"
+                    style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+
+            电子邮箱
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/safety_hold_pro_detail_applicant_email" />
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+
+            客户测评结果
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/order_customer_type" />
+
+                <TextView
+                    android:id="@+id/tv_custType"
+                    style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+
+            签署协议确认
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/safety_hold_pro_detail_prod_code" />
+
+                <TextView
+                    android:id="@+id/safety_hold_pro_code"
+                    style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+
+            保单索取方式
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/safety_lifeInsurance_bnft_policyHandFlag" />
+
+                <TextView
+                    android:id="@+id/tv_policyHandFlag"
+                    style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+
+
+            -->
+            <LinearLayout 
+                android:visibility="invisible"
+                style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:text="@string/safety_lifeInsurance_bnft_policyHandFlag" />
+
+                <TextView
+                    style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 外汇双向宝  交易状况查询     三级菜单项 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/mune_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_for_click_content"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/menu11"
+            style="@style/common_click_first_item_style"
+            android:gravity="center"
+            android:visibility="visible" >
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/query"
+                android:textSize="@dimen/textsize_default" />
+
+            <ImageView
+                style="@style/rightbtn_jiantou"
+                android:background="@drawable/right_arrow" />
+        </LinearLayout>
+
+        <ImageView
+            style="@style/divider_imag_style"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/menu4"
+            style="@style/common_click_last_item_style"
+            android:gravity="center" >
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dept_zntzck_sign"
+                android:textSize="@dimen/textsize_default" />
+
+            <ImageView
+                style="@style/rightbtn_jiantou"
+                android:background="@drawable/right_arrow" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/textview_common"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/mune_view"
+        android:orientation="vertical" >
+
+        <ScrollView
+            style="@style/scrollview_comm_havemarginbutton"
+            android:fillViewport="false"
+            android:paddingLeft="@dimen/common_row_margin"
+            android:paddingRight="@dimen/common_row_margin" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dept_zntzck_mune_text"
+                android:singleLine="false"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_default" >
+            </TextView>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

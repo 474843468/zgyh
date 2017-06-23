@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_usbkey"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/usbkey_ll_sms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+       
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/usbkey_tv_sms"
+            style="@style/textview_common_left"
+            android:text="@string/smc" />
+
+        <FrameLayout
+            android:id="@+id/usbkey_sms_frameLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/usbkey_child_sms"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <cfca.mobile.sip.SipBox
+                    android:id="@+id/usbkey_sip_sms"
+                    style="@style/editext_fill"
+                    android:maxLength="6"
+                    android:textSize="@dimen/textsize_default" >
+                </cfca.mobile.sip.SipBox>
+
+                <Button
+                    android:id="@+id/usbkey_smsbtn"
+                    style="@style/button_smscode"
+                    android:layout_marginLeft="@dimen/fill_margin_top"
+                    android:gravity="center" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/usbkey_ll_opt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:gravity="center"
+
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/usbkey_tv_opt"
+            style="@style/textview_common_left_three"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/opt"
+            android:textSize="@dimen/textsize_default" />
+
+        <FrameLayout
+            android:id="@+id/usbkey_opt_frameLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <cfca.mobile.sip.SipBox
+                    android:id="@+id/usbkey_sip_opt"
+                    style="@style/editext_fill"
+                    android:maxLength="6"
+                    android:textSize="@dimen/textsize_default" >
+                </cfca.mobile.sip.SipBox>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_activecode_sip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:gravity="center"
+        android:orientation="horizontal"
+
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/textview_common_left_three"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/usbkey_code"
+            android:textSize="@dimen/textsize_default" />
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:id="@+id/ll_audio_sip"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:id="@+id/sip_usbkey"
+                    style="@style/editext_fill"
+                    android:hint="@string/usbkey_conts"
+                    android:longClickable="false"
+                    android:maxLength="8"
+                    android:password="true"
+                    android:singleLine="true"
+                    android:textSize="@dimen/textsize_default" />
+
+                <EditText
+                    android:id="@+id/tv_usbkey"
+                    style="@style/editext_fill"
+                    android:enabled="false"
+                    android:text="@string/sbkey_text_content"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textsize_default"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_needpassword_sip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:gravity="center"
+        android:orientation="horizontal"
+
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/password_tv"
+            style="@style/textview_common_left_three"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/atmPassword"
+            android:textSize="@dimen/textsize_default" />
+
+        <FrameLayout
+            android:id="@+id/password_frameLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <cfca.mobile.sip.SipBox
+                    android:id="@+id/password_sipbox"
+                    style="@style/editext_fill"
+                    android:maxLength="6"
+                    android:textSize="@dimen/textsize_default" >
+                </cfca.mobile.sip.SipBox>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

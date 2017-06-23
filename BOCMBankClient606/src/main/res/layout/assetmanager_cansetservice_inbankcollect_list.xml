@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 资产管理-跨行资金归集 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/style_match_match"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_collectbyhand"
+            style="@style/bottombtn"
+            android:text="@string/assetmanager_havesetservice_interbankcollect_colletcbyhand" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_tl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_btn"
+        android:layout_marginBottom="@dimen/leftMenuHW"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_marginTop="@dimen/rightbtnW"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/rightbtnW"
+            android:padding="@dimen/common_row_margin" >
+
+            <TextView
+                style="@style/textview_for_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/common_details_title_margintop"
+                android:layout_weight="1.0"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="@string/assetmanager_havesetservice_interbankcollect_account"
+                android:textSize="@dimen/textsize_default" />
+
+            <TextView
+                style="@style/textview_for_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/common_details_title_margintop"
+                android:layout_weight="1.0"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="@string/assetmanager_havesetservice_interbankcollect_accountname"
+                android:textSize="@dimen/textsize_default" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@color/gray" />
+
+        <ListView
+            android:id="@+id/listview"
+            style="@style/listviewcomm_wrap_haveDivider"
+            android:divider="@color/gray"
+            android:dividerHeight="1dip"
+            android:listSelector="@android:drawable/list_selector_background" />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="@color/gray" />
+         <TextView
+            android:id="@+id/tv_uncollect_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fill_margin_bottom"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_right"
+            android:padding="@dimen/fill_padding"
+            android:text="没有符合条件的查询记录，您可以通过网银渠道添加他行可归集账户。"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/textsize_default"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_collecttitle"
+        style="@style/titleText_stepacc"
+        android:layout_width="200dp"
+        android:layout_height="@dimen/left_img_width"
+        android:background="@drawable/bg_title"
+        android:gravity="center"
+        android:textColor="@color/gray_title" />
+
+</RelativeLayout>

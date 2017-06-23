@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/boc_common_bg_color"
+        android:orientation="vertical" >
+
+        <!-- 身份信息 -->
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_space_between_54px"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/boc_text_color_dark_gray" />
+        <!-- 手机号 -->
+
+        <TextView
+            android:id="@+id/tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_space_between_54px"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/boc_text_color_dark_gray" />
+        <!-- 地址信息 title -->
+
+        <TextView
+            android:id="@+id/addInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/boc_item_bg_color"
+            android:paddingBottom="@dimen/boc_space_between_14px"
+            android:paddingLeft="@dimen/boc_space_between_32px"
+            android:paddingTop="@dimen/boc_space_between_14px"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:textSize="@dimen/boc_text_size_small" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/boc_card_background"
+            android:orientation="vertical" >
+
+            <!-- 地区 选择view -->
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                android:id="@+id/district"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:editChoiceName="@string/boc_eloan_district" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_divider_1px"
+                android:background="@color/boc_divider_line_color" />
+            <!-- 街道选择view -->
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditClearWidget
+                android:id="@+id/street"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:editClearName="@string/boc_eloan_street" />
+        </LinearLayout>
+        <!-- 联系人信息 -->
+
+        <TextView
+            android:id="@+id/label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/boc_item_bg_color"
+            android:paddingBottom="@dimen/boc_space_between_14px"
+            android:paddingLeft="@dimen/boc_space_between_32px"
+            android:paddingTop="@dimen/boc_space_between_14px"
+            android:textColor="@color/boc_black"
+            android:textSize="@dimen/boc_text_size_small" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="0dp"
+            android:background="@drawable/boc_card_background"
+            android:orientation="vertical" >
+
+            <!-- 关系 选择view -->
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                android:id="@+id/relationship"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:editChoiceName="@string/boc_eloan_relationship" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_divider_1px"
+                android:background="@color/boc_divider_line_color" />
+            <!-- 姓名 -->
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditClearWidget
+                android:id="@+id/nameEdit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:editClearName="@string/boc_eloan_nameEdit" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_divider_1px"
+                android:background="@color/boc_divider_line_color" />
+            <!-- 手机号 -->
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditClearWidget
+                android:id="@+id/telEdit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:editClearName="@string/boc_eloan_telEdit" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/boc_card_background"
+            android:orientation="vertical" >
+
+            <!-- 还款账户  选择view -->
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                android:id="@+id/repaymentAccount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:editChoiceName="@string/boc_eloan_repaymentAccount" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <!-- 勾选按钮 -->
+
+            <ImageButton
+                android:id="@+id/checkbox"
+                android:layout_width="@dimen/boc_space_between_50px"
+                android:layout_height="@dimen/boc_space_between_50px"
+                android:layout_marginLeft="@dimen/boc_space_between_30px"
+                android:background="@drawable/boc_bg_check_image"
+                android:state_selected="false" />
+            <!-- 协议 签署 -->
+
+            <TextView
+                android:id="@+id/agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/boc_space_between_30px"
+                android:textColor="@color/boc_text_color_gray"
+                android:textSize="@dimen/boc_text_size_common" />
+        </LinearLayout>
+        <!-- 下一步按钮 -->
+
+        <Button
+            android:id="@+id/next"
+            style="@style/BocButton.BocPrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/boc_space_between_40px"
+            android:layout_marginTop="@dimen/boc_space_between_50px"
+            android:text="@string/boc_eloan_draw_next" />
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bocinvt_bg_rectangle_gray_sideline_round_corners" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView 
+		    	android:layout_width="match_parent"
+            	android:layout_height="wrap_content"
+            	android:text="@string/bocinvt_quantity_reminder"
+            	android:gravity="center"
+            	android:textColor="@color/gray"
+            	android:layout_marginLeft="10dp"
+            	android:layout_marginRight="10dp"
+            	android:textSize="@dimen/textsize_default"/>
+            
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/ltv_product_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:labelText="@string/bocinvt_product_code" />
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/ltv_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:labelText="@string/bocinvt_product_name" />
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/ltv_currency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:labelText="@string/curCode" />
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/ltv_cash_remittance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:labelText="@string/bocinvt_cash_remittance" />
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/ltv_estimate_apy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:labelText="@string/bocinvt_transition_estimate_apy" />
+
+              <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/ltv_product_deadline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:labelText="@string/bocinvt_transition_product_deadline" />
+              
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/ltv_residue_limit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:labelText="@string/bocinvt_transition_residue_limit" />
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/ltv_starting_amount_for_first_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:labelText="@string/bocinvt_transition_starting_amount_for_first" />
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/ltv_starting_amount_for_superaddition_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:labelText="@string/bocinvt_transition_starting_amount_for_superaddition" />
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/ltv_purchase_base"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:labelText="@string/bocinvt_transition_purchase_base" />
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/ltv_can_revoke"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:labelText="@string/bocinvt_transition_can_revoke" />
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/ltv_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:labelText="@string/bocinvt_transition_account" />
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/ltv_holding_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:labelText="@string/bocinvt_transition_holding_quantity" />
+            
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/ltv_enable_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:labelText="@string/bocinvt_transition_enable_quantity" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:gravity="right"
+                    android:text="@string/bocinvt_transition_transition_quantity"
+                    android:textColor="@color/black"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/et_exchange_number"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_weight="3"
+                    android:inputType="numberDecimal"
+                    android:maxLength="14"
+                    android:layout_marginRight="5dp"
+                    android:textSize="@dimen/textsize_default"
+                    android:singleLine="true"
+                    android:background="@drawable/bg_for_edittext" />
+            </LinearLayout>
+            <TextView
+        		android:id="@+id/tv_chinese_numeral"
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:gravity="right"
+        		android:textColor="@color/red"
+        		android:layout_marginBottom="20dp" />
+            <TextView
+        		android:layout_width="match_parent"
+        		android:layout_height="wrap_content"
+        		android:gravity="center"
+        		android:layout_marginBottom="100dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_next"
+        style="@style/bottombtn"
+        android:onClick="onClick"
+        android:text="@string/next" />
+
+</LinearLayout>

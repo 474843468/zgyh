@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 关联信用卡购汇设定  MyTransferActivity -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/tran_little_card_ll" >
+
+        <!-- 标题 -->
+
+        <TextView
+            style="@style/tran_little_title_tv"
+            android:text="@string/tran_remit_repay" />
+
+        <LinearLayout style="@style/tran_little_card_content_ll" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shap_for_dept_tranlist"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/layout_padding_bottom"
+                android:paddingLeft="@dimen/layout_padding_left_right" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/fill_padding_right" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:text="@string/credit_currency"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_two" />
+
+                    <TextView
+                        android:id="@+id/relation_credit_card_currency"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_two" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="18"
+                        android:gravity="left"
+                        android:text="@string/rel_creditType"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_two" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_creditType_transSeting"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:gravity="left"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/rb_all_transSeting"
+                            android:button="@drawable/radiobtn_selector"
+                            android:checked="true"
+                            android:text="@string/rel_quanE_repay"
+                            android:textSize="@dimen/textsize_one_two" />
+
+                        <RadioButton
+                            android:id="@+id/rb_part_transSeting"
+                            android:button="@drawable/radiobtn_selector"
+                            android:singleLine="true"
+                            android:text="@string/rel_buFen_repay"
+                            android:textSize="@dimen/textsize_one_two" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="@string/repayAmountValue"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_two" />
+
+                    <EditText
+                        android:id="@+id/et_amount_rel_creditCard_transSeting"
+                        style="@style/edittext_input_numberDecimal_fill"
+                        android:maxLength="14"
+                        android:textColor="@color/black" >
+                    </EditText>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_for_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_five"
+                    android:gravity="right"
+                    android:paddingRight="@dimen/fill_padding_right"
+                    android:textColor="@color/red"
+                    android:visibility="gone"
+                    android:textSize="@dimen/textsize_one_three" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bottom_margin_top"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_next_creditCard_transSeting"
+            style="@style/bottombtn"
+            android:text="@string/next" />
+    </LinearLayout>
+
+</LinearLayout>

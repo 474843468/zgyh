@@ -1,0 +1,177 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:id="@+id/rootLayout"
+    android:background="@color/lianlong_color_222a47">
+    <!-- 外置广告页 -->
+    <FrameLayout
+        android:id="@+id/loginOutLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/lianlong_space_between_388px"
+        android:visibility="gone"
+        >
+
+        <Button
+            android:id="@+id/login_bt"
+            android:layout_width="@dimen/lianlong_space_between_220px"
+            android:layout_height="@dimen/lianlong_space_between_70px"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="12dp"
+            android:text="登录"
+            android:textSize="@dimen/lianlong_text_size_common"
+            android:textStyle="bold"
+            android:textColor="@color/lianlong_common_cell_color"
+            android:background="@drawable/inverst_login"/>
+
+    </FrameLayout>
+
+    <!-- 登录后页面 -->
+    <FrameLayout
+        android:visibility="visible"
+        android:id="@+id/loginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- 登录后参考市值 -->
+        <FrameLayout
+            android:id="@+id/priceview_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lianlong_space_between_388px"
+            android:paddingTop="56dp">
+            <LinearLayout
+                android:orientation="vertical"
+
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/lianlong_space_between_74px"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/lyt_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+                    android:alpha="0.5"
+                   >
+                    <RelativeLayout
+
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:paddingTop="5dp"
+                            android:id="@+id/tv_refvalue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+
+                            android:text="@string/llbt_invest_message_1"
+                            android:textSize="@dimen/lianlong_text_size_small"
+                            android:textColor="@color/lianlong_common_cell_color"
+                            />
+
+                        <ImageView
+                            android:id="@+id/img_open"
+                            android:layout_toRightOf="@id/tv_refvalue"
+                           android:paddingTop="5dp"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="12dp"
+                            android:layout_alignBottom="@+id/tv_refvalue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/llbt_ima_openeye"
+
+                            />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <TextView
+                        android:id="@+id/amount_tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/lianlong_text_size_supper_big_max_bold"
+                        tools:text="12345677"
+                        android:textColor="@color/white" />
+                    <TextView
+                        android:id="@+id/amount_tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text=".09"
+                        android:textSize="28sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <FrameLayout
+            android:id="@+id/ima_help"
+            android:layout_gravity="right"
+            android:padding="@dimen/lianlong_space_between_30px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="19dp"
+                android:background="@drawable/llbt_help"
+                android:alpha="0.5"/>
+        </FrameLayout>
+        </FrameLayout>
+
+        <!-- 我的持仓 -->
+        <FrameLayout
+            android:id="@+id/fl_mypositioned"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/boc_space_between_88px"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:id="@+id/my_positioned"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/lianlong_color_222a47"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/foreign_landing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="我的持仓"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="17sp"/>
+
+                    <Button
+                        android:id="@+id/my_positioned_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/share_right_arrows"/>
+
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="#bf5303"
+                    />
+            </LinearLayout>
+        </FrameLayout>
+
+    </FrameLayout>
+
+</FrameLayout>

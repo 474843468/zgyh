@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="#fff"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:text="操作中，请稍后"
+        android:textColor="#000"
+        android:textSize="@dimen/boc_text_size_small"
+        android:textStyle="bold"/>
+
+    <include layout="@layout/boc_divide_line"/>
+
+    <LinearLayout
+        android:id="@+id/ll_add_new_bail"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="新增保证金"
+                android:textColor="#000"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_add_new_bail"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:padding="26dp"
+            android:src="@drawable/ic_fail"
+            android:visibility="gone"/>
+
+        <ProgressBar
+            android:id="@+id/pb_add_new_bail"
+            style="@android:style/Widget.ProgressBar"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:indeterminateDrawable="@drawable/custom_progress_draw"
+            android:padding="26dp"
+            android:visibility="visible"/>
+    </LinearLayout>
+
+    <include layout="@layout/boc_divide_line"/>
+
+    <LinearLayout
+        android:id="@+id/ll_change_trade_state"
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="变更交易账户"
+                android:textColor="#000"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_change_trade_state"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:padding="26dp"
+            android:src="@drawable/ic_fail"
+            android:visibility="gone"/>
+
+        <ProgressBar
+            android:id="@+id/pb_change_trade_state"
+            style="@android:style/Widget.ProgressBar"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:indeterminateDrawable="@drawable/custom_progress_draw"
+            android:padding="26dp"
+            android:visibility="visible"/>
+    </LinearLayout>
+
+    <include layout="@layout/boc_divide_line"/>
+
+    <TextView
+        android:id="@+id/tv_ok"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:gravity="center"
+        android:text="完成"
+        android:textColor="#FF6666"
+        android:textSize="@dimen/boc_text_size_small"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+</LinearLayout>

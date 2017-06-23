@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/acc_query_transfer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible" >
+
+    <RelativeLayout
+        android:id="@+id/acc_query_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_bottom_width"
+        android:background="@drawable/img_bg_card_chaxun"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/dp_five"
+        android:paddingTop="@dimen/dp_five" >
+
+        <ImageView
+            android:id="@+id/acc_frame_left"
+            style="@style/rightbtn_jiantou"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/img_arrow_gray_left" />
+
+        <ImageView
+            android:id="@+id/acc_btn_goitem"
+            style="@style/rightbtn_jiantou"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/img_arrow_gray_right" />
+
+        <com.chinamworld.bocmbci.widget.CustomGallery
+            android:id="@+id/viewPager"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/btn_bottom_width"
+            android:layout_toLeftOf="@+id/acc_btn_goitem"
+            android:layout_toRightOf="@+id/acc_frame_left"
+            android:spacing="@dimen/dp_one_zero" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/acc_query_horizontal"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/ll_query_condition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_bg_query_j"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/fill_margin_top"
+                android:paddingRight="@dimen/fill_margin_top" >
+
+                <Spinner
+                    android:id="@+id/et_loandate"
+                    style="@style/Spiiner_outlay_fill"
+                    android:layout_below="@+id/radioloanGroup"
+                    android:layout_marginLeft="@dimen/fill_margin_top"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/btnxiaofeiHistoryQuery"
+                    style="@style/no_pic_query_button_style"
+                    android:layout_marginLeft="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:text="@string/query"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_default"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_upLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:padding="@dimen/fill_padding_right" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    style="@style/textview_common_up"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textSize="@dimen/textsize_xiala" />
+
+                <ImageView
+                    android:id="@+id/acc_query_up"
+                    style="@style/query_image_up_style"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/fill_margin_top"
+                    android:src="@drawable/img_arrow_gray_up" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/querycondition_down"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_down"
+                style="@style/textview_common_down"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right" />
+
+            <ImageView
+                android:id="@+id/acc_querycondition_down"
+                style="@style/query_image_up_style"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/fill_margin_top"
+                android:src="@drawable/img_arrow_gray_down" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

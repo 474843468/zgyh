@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color">
+    <!--中银理财&#45;&#45;持仓详情-净值-->
+    <ScrollView
+        android:id="@+id/sl_content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/fragment_netvalue_bottonbtn">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_20px"
+                android:background="@color/boc_common_bg_color" />
+            <!--份额转换-头部-->
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableHead
+                android:id="@+id/fragment_netvalue_detailtabhead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <!--产品简介-->
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailContentView
+                android:id="@+id/fragment_netvalue_detailcontent_view2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/boc_card_list_arrow_width" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_88px"
+                android:background="@color/boc_common_bg_color"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/fragment_netvalue_info_shouyi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/boc_space_between_30px"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fragment_netvalue_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/boc_common_cell_color"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+                    <!--截止2016/09/06，您持有的1000份产品的总盈亏估算为33,000.00元。-->
+                    <TextView
+                        android:id="@+id/fragment_netvalue_income"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/boc_space_between_30px"
+                        android:text=""
+                        android:textColor="@color/boc_text_color_dark_gray"
+                        android:textSize="@dimen/boc_text_size_small" />
+                    <!--上一计息周期为 2016/04/10 - 2016/05/10-->
+
+                </LinearLayout>
+
+                <include layout="@layout/boc_divide_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:background="@color/boc_common_cell_color"
+                    android:orientation="horizontal">
+
+                    <!--持仓盈亏-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/fragment_netvalue_position_loss"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/boc_trans_financial_netvalue_main_profit_and_loss"
+                            android:textColor="@color/boc_text_color_common_gray"
+                            android:textSize="@dimen/boc_text_size_small" />
+
+                        <TextView
+                            android:id="@+id/fragment_netvalue_position_loss_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textColor="@color/boc_text_color_dark_gray"
+                            android:textSize="@dimen/boc_text_size_small" />
+                    </LinearLayout>
+                    <!--以实现盈亏-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/fragment_netvalue_position_profit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/boc_trans_financial_netvalue_main_profit_and_loss_realize"
+                            android:textColor="@color/boc_text_color_common_gray"
+                            android:textSize="@dimen/boc_text_size_small" />
+
+                        <TextView
+                            android:id="@+id/fragment_netvalue_position_profit_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textColor="@color/boc_text_color_dark_gray"
+                            android:textSize="@dimen/boc_text_size_small" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <include layout="@layout/boc_divide_line" />
+                <!--净值说明-->
+                <TextView
+                    android:id="@+id/fragment_netvalue_explain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/boc_space_between_30px"
+                    android:text="@string/boc_trans_financial_netvalue_main_explain"
+                    android:textColor="@color/boc_text_mobile_color"
+                    android:textSize="@dimen/boc_text_size_small" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fragment_netvalueterm_noearn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_96px"
+                android:background="@color/boc_common_cell_color"
+                android:gravity="center"
+                android:padding="@dimen/boc_card_list_arrow_width"
+                android:text="暂无收益"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!--赎回，继续购买，按钮点击-->
+    <LinearLayout
+        android:id="@+id/fragment_netvalue_bottonbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone"
+
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/boc_divider_line_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fragment_netvalue_redeem"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_96px"
+                android:layout_weight="1"
+                android:background="@color/boc_common_cell_color"
+                android:gravity="center"
+                android:onClick="true"
+                android:text="@string/boc_position_redeem_main_title"
+                android:textColor="@color/bg_finance_selector_write_onclick"
+                android:textSize="@dimen/boc_text_size_common"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/boc_divider_line_color" />
+
+            <TextView
+                android:id="@+id/fragment_netvalue_goonbuy"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_96px"
+                android:layout_weight="1"
+                android:background="@color/boc_text_color_red"
+                android:gravity="center"
+                android:onClick="true"
+                android:text="@string/boc_trans_financial_position_main_select_tab_sale"
+                android:textColor="@color/bg_finance_selector_red_onclick"
+                android:textSize="@dimen/boc_text_size_common"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

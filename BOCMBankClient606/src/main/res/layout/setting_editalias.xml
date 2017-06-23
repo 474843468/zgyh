@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 服务设定 修改别名页面  xyl -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+
+  <LinearLayout
+            android:id="@+id/btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+
+
+            <Button
+                android:id="@+id/set_confirm"
+                style="@style/bottombtn"
+                android:text="@string/confirm"
+                android:textColor="@color/white"
+                 />
+        </LinearLayout>
+        <ScrollView
+            android:layout_above="@id/btn_layout" 
+           android:layout_marginBottom="@dimen/common_row_margin"
+            style="@style/scrollview_comm" >
+
+           <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:paddingTop="@dimen/common_details_messages_paddingtop"
+            android:orientation="vertical" >
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/confirm_left_textview_style"
+                        android:layout_weight="3"
+                        android:text="@string/set_acctype" />
+
+                    <TextView
+                        android:id="@+id/set_editalias_acctype"
+                        android:layout_weight="2"
+                        style="@style/confirm_right_textview_style" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/input_left_textview_style"
+                         android:layout_weight="3"
+                        android:text="@string/set_acc" />
+
+                    <TextView
+                        android:id="@+id/set_editalias_acc"
+                         android:layout_weight="2"
+                        style="@style/confirm_right_textview_style" />
+                </LinearLayout>
+
+                 <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/input_left_textview_style"
+                         android:layout_weight="3"
+                        android:text="@string/set_oledaccalias_colon" />
+
+                    <TextView
+                        android:id="@+id/set_oledaccalias_colon"
+                         android:layout_weight="2"
+                        style="@style/confirm_right_textview_style" />
+
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/input_left_textview_style"
+                         android:layout_weight="3"
+                        android:text="@string/set_newaccalias" />
+
+                    <EditText
+                        android:id="@+id/set_editalias_accalias"
+                         android:layout_weight="2"
+                         style="@style/editext_fill"
+                        android:maxLength="20" >
+                        <requestFocus />
+                    </EditText>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+      
+
+</RelativeLayout>

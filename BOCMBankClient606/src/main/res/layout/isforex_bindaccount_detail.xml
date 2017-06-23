@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 我的基金 投资基金详细信息 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_00" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/message_dialog_bg" >
+
+        <ImageView
+            android:id="@+id/img_exit_accdetail1"
+            android:layout_width="@dimen/dp_six_zero"
+            android:layout_height="@dimen/dp_five_zero"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@color/transparent_00" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/img_exit_accdetail1" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:paddingRight="@dimen/fill_margin_right_fordialog" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/common_row_margin"
+                    android:layout_marginRight="@dimen/fill_margin_right"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:gravity="right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:textColor="@color/fonts_black"
+                        android:text="@string/isForex_myRate_accNumber" />
+
+                    <TextView
+                        android:id="@+id/finc_accountId"
+                        style="@style/textview_forex_prompt_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="8"
+                        android:textColor="@color/fonts_pink" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                    android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                    android:layout_weight="3"
+                    android:background="@drawable/bg_for_listview_item_write"
+                    android:gravity="right" >
+
+                    <ListView
+                        android:id="@+id/finc_accListView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:listSelector="@color/transparent_00"
+                        android:scrollbars="none" >
+                    </ListView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/common_row_margin_half"
+                    android:layout_marginTop="@dimen/fill_margin_bottom"
+                    android:layout_weight="0"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <Button
+                        android:id="@+id/isForex_bzjAccInfoButton"
+                        style="@style/textview_forex_button_cell"
+                        android:text="@string/isForex_bzjAccInfo"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_exit_accdetail"
+        android:layout_width="@dimen/close_clickarea_height"
+        android:layout_height="@dimen/close_clickarea_height"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@color/transparent_00" />
+
+</RelativeLayout>

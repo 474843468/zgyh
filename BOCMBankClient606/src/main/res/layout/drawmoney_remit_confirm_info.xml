@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:userProperty="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin" >
+
+        <Button
+            android:id="@+id/remit_confirm_next_btn"
+            style="@style/bottombtn"
+            android:text="@string/confirm" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/layout_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/shap_for_dept_tranlist"
+        android:paddingBottom="@dimen/layout_margin_top" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/remit_title_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:text="@string/ensure_remit_info"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_default" />
+
+            <TextView
+                android:id="@+id/remit_title_second"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="left"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:text="@string/rememeber_get_remit_pwd"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_default"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/remitout_account" />
+
+                <TextView
+                    android:id="@+id/remitout_confirm_account"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/remit_confirm_phone_lable"
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/get_remit_phone" />
+
+                <TextView
+                    android:id="@+id/remit_confirm_phone"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/get_remit_name" />
+
+                <TextView
+                    android:id="@+id/remit_confirm_name"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/remit_money_amout" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:paddingLeft="@dimen/edittext_paddinglr" >
+
+                    <TextView
+                        android:id="@+id/remit_cashremit_tv"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="@dimen/dp_five"
+                        android:text="@string/tran_atm_currency" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/remit_confirm_amount"
+                        style="@style/textview_common_right_no_weight"
+                        android:textColor="@color/red" >
+                    </TextView>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 有效期至 -->
+
+            <LinearLayout
+                android:id="@+id/due_date_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_no_weight"
+                        android:layout_weight="5"
+                        android:text="@string/dueDate" />
+
+                    <TextView
+                        android:id="@+id/due_date"
+                        style="@style/comm_view_right_noweight"
+                        android:layout_weight="3"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" >
+                    </TextView>
+                </LinearLayout>
+
+                <!-- *请通知收款人在有效期内支取，逾期不取则该笔汇款失效。 -->
+
+                <TextView 
+                    style="@style/textview_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_one_zero"
+                    android:layout_marginRight="@dimen/dp_one_zero"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:text="@string/tv_dueDate"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/fuYan" />
+
+                <TextView
+                    android:id="@+id/remit_confirm_fuyan"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="3"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_pass1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/set_get_remit_pw_set" />
+
+                <LinearLayout
+                    android:id="@+id/layout_pass_1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="@dimen/fill_padding_right"
+                    android:layout_weight="3"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/edittext_paddinglr" >
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_pass2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/ensure_get_remit_pw" />
+
+                <LinearLayout
+                    android:id="@+id/layout_pass_2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="@dimen/fill_padding_right"
+                    android:layout_weight="3"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/edittext_paddinglr" >
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_phone_code"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/epay_pub_note_code" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginRight="@dimen/fill_padding_right"
+                    android:layout_weight="3"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:id="@+id/layout_phone_code"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="3"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/edittext_paddinglr" >
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="@dimen/btn_margin_left"
+                        android:layout_weight="4"
+                        android:orientation="horizontal" >
+
+                        <Button
+                            android:id="@+id/btn_phone_check"
+                            style="@style/button_smscode" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_pass3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="5"
+                    android:text="@string/epay_pub_dynamic_code" />
+
+                <LinearLayout
+                    android:id="@+id/layout_pass_3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginRight="@dimen/fill_padding_right"
+                    android:layout_weight="3"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/edittext_paddinglr" >
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.chinamworld.bocmbci.widget.UsbKeyText
+                android:id="@+id/sip_usbkey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                userProperty:MargRight="@dimen/fill_padding_right"
+                userProperty:PaddLeft="@dimen/edittext_paddinglr"
+                userProperty:ShowRate="5:3" />
+
+            <TextView
+                android:id="@+id/tv_add_notice"
+                style="@style/textview_common"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_one_zero"
+                android:layout_marginRight="@dimen/dp_one_zero"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:text="@string/tran_atm_confirm_notice"
+                android:visibility="gone"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="10dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

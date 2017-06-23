@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/hardware_frag_root_layout"
+    android:layout_width="match_parent"
+    android:background="@color/default_bg"
+    android:layout_height="match_parent" >
+    
+    <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="62dp"
+            android:background="@drawable/navbar"
+            android:visibility="gone"
+            android:paddingTop="5dp" >
+
+            <Button
+                android:id="@+id/ib_back"
+                android:textColor="@color/white"
+                android:text="@string/back"
+                style="@style/titlebackbtn" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/titleText" />
+
+        </RelativeLayout>
+        
+    <TextView
+        android:id="@+id/hardware_prompt_info"
+        style="@style/hardware_prompt_info"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_for_zero"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/title_layout"
+        android:gravity="center"
+        android:background="@drawable/safety_step5"
+        android:text="@string/hardware_prompt_info"
+        />
+        
+    <View 
+        android:id="@+id/hardware_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_two"
+        android:layout_below="@+id/hardware_prompt_info"
+        android:background="@color/gray_line"
+        />
+    
+    <RelativeLayout 
+        android:id="@+id/hardware_prompt_info_details_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/hardware_line"
+        android:background="@drawable/bg_for_hardware_prompt_info_details"
+        android:layout_marginTop="@dimen/dp_one_for"
+        android:layout_marginLeft="@dimen/dp_one_for"
+        android:layout_marginRight="@dimen/dp_one_for"
+        android:layout_above="@+id/hardware_confirm_btn"
+        >
+            
+        <TextView 
+            android:id="@+id/hardware_prompt_info_details_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_for_zero"
+            android:layout_marginLeft="@dimen/dp_two_zero"
+            android:layout_marginRight="@dimen/dp_two_zero"
+            style="@style/hardware_prompt_info"
+            android:text="@string/hardware_unbind_machine_prompt_info_details"
+            />
+    </RelativeLayout>
+    
+    <Button 
+        android:id="@+id/hardware_confirm_btn"
+ 		android:layout_centerHorizontal="true"
+        style="@style/bottombtn"
+        android:text="@string/next"
+        android:textColor="@color/white" 
+        android:layout_marginTop="@dimen/dp_one_zero"
+        android:layout_above="@+id/hardware_bottom_block"        
+        />
+
+    <View  android:id="@+id/hardware_bottom_block"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_two_zero"
+        android:layout_alignParentBottom="true"
+        />
+    
+</RelativeLayout>

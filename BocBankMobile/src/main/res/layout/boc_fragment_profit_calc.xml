@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:paddingBottom="@dimen/boc_space_between_20px"
+    android:paddingLeft="@dimen/boc_space_between_20px"
+    android:paddingRight="@dimen/boc_space_between_20px"
+    android:paddingTop="@dimen/boc_space_between_30px">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_bottom"
+        android:layout_alignParentTop="true"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/boc_fragment_profit_calc_extra" />
+
+            <include layout="@layout/boc_fragment_profit_calc_standard" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/boc_common_cell_color"
+        android:paddingBottom="@dimen/boc_space_between_30px"
+        android:paddingLeft="@dimen/boc_space_between_32px"
+        android:paddingRight="@dimen/boc_space_between_30px"
+        android:paddingTop="@dimen/boc_space_between_30px"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txt_left"
+            style="@style/BocTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:text="@string/boc_wealth_profit" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/txt_left"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_profit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/boc_text_color_red"
+                android:textSize="@dimen/boc_text_size_supper_big_max"
+                tools:text="000000000" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/BocTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/boc_wealth_profit_times_1" />
+
+                <TextView
+                    android:id="@+id/txt_times"
+                    style="@style/BocTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/boc_wealth_profit_times_2"
+                    android:background="@drawable/boc_text_bg_orange"
+                    android:textColor="@color/boc_common_cell_color"/>
+
+                <TextView
+                    style="@style/BocTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/boc_wealth_profit_times_3" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

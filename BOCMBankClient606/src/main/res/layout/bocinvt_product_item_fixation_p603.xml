@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_fixation_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_for_click_list_item"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/earnings_type_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_earnings_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fixation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <!-- p603批次中银理财固定期限类产品item显示 -->
+
+        <TextView
+            android:id="@+id/tv_hold_share"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="@color/red" />
+
+        <TextView
+            android:id="@+id/tv_due_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_earnings_percent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="@dimen/product_list_item_right_arrow_width"
+            android:layout_height="@dimen/product_list_item_right_arrow_width"
+            android:layout_gravity="center_vertical|right"
+            android:layout_margin="5dp"
+            android:background="@drawable/img_arrow_gray_right_clicked_down" />
+
+        <ImageView
+            android:id="@+id/arrow2"
+            android:layout_width="@dimen/product_list_item_right_arrow_width"
+            android:layout_height="@dimen/product_list_item_right_arrow_width"
+            android:layout_gravity="center_vertical|right"
+            android:layout_margin="5dp"
+            android:background="@drawable/img_arrow_gray_down2"
+            android:visibility="gone" />
+    </LinearLayout>
+    <!--  -->
+
+    <ImageView
+        android:id="@+id/img_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:src="@color/gray_line"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/boc_query_detail_result"
+        style="@style/listviewcomm_fill_gray_divider"
+        android:visibility="gone" >
+    </ListView>
+
+</LinearLayout>

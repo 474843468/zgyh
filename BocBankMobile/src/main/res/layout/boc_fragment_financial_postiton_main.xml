@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:orientation="vertical">
+    <!--数据显示内容-->
+    <ScrollView
+        android:id="@+id/sl_content_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/boc_main_bg_color"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <!--中银理财-我的持仓-持仓列表界面-->
+        <LinearLayout
+            android:id="@+id/ll_content_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <!--现金管理类产品-->
+            <LinearLayout
+                android:id="@+id/ll_content_view1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_cash_management_products"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:paddingLeft="@dimen/boc_space_between_30px"
+                    android:text="现金管理类"
+                    android:textColor="@color/boc_black"
+                    android:textSize="@dimen/boc_text_size_small"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.measureview.MeasureListView
+                    android:id="@+id/listview_cash_management_products"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/boc_space_between_20px"
+                    android:clipToPadding="false"
+                    android:divider="@null"
+                    android:dividerHeight="@dimen/boc_divider_1px"
+                    android:fadingEdge="none"
+                    android:footerDividersEnabled="false"
+                    android:overScrollMode="never"
+                    android:paddingBottom="10dp"
+                    android:scrollbars="none" />
+
+            </LinearLayout>
+            <!--净值开放类产品-->
+            <LinearLayout
+                android:id="@+id/ll_content_view2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+                <!--android:layout_height="@dimen/boc_space_between_80px"-->
+                <TextView
+                    android:id="@+id/tv_net_value_open_products"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:paddingLeft="@dimen/boc_space_between_30px"
+                    android:text="净值开放类"
+                    android:textColor="@color/boc_black"
+                    android:textSize="@dimen/boc_text_size_small"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.measureview.MeasureListView
+                    android:id="@+id/listview_net_value_open_products"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/boc_space_between_20px"
+                    android:clipToPadding="false"
+                    android:dividerHeight="@dimen/boc_divider_1px"
+                    android:divider="@null"
+                    android:fadingEdge="none"
+                    android:footerDividersEnabled="false"
+                    android:overScrollMode="never"
+                    android:paddingBottom="10dp"
+                    android:scrollbars="none" />
+
+            </LinearLayout>
+            <!--固定期限类产品-->
+            <LinearLayout
+                android:id="@+id/ll_content_view3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_fixed_term_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:paddingLeft="@dimen/boc_space_between_30px"
+                    android:text="固定期限类"
+                    android:textColor="@color/boc_black"
+                    android:textSize="@dimen/boc_text_size_small"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.measureview.MeasureListView
+                    android:id="@+id/listview_fixed_term_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/boc_space_between_20px"
+                    android:clipToPadding="false"
+                    android:divider="@null"
+                    android:fadingEdge="none"
+                    android:dividerHeight="@dimen/boc_divider_1px"
+                    android:footerDividersEnabled="false"
+                    android:overScrollMode="never"
+                    android:paddingBottom="10dp"
+                    android:scrollbars="none" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <!--内容显示布局-无数据时-->
+    <RelativeLayout
+        android:id="@+id/rl_content_view_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.emptyview.CommonEmptyView
+            android:id="@+id/view_no_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center" />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.wealthmanagemenadviertisementview.WealthManagemenAdviertisementView
+            android:id="@+id/view_no_data_adviertisement"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_marginBottom="@dimen/boc_space_between_20px"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.boc.bocsoft.mobile.bocmobile.base.widget.SlipMenu.SlipDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.boc.bocsoft.mobile.framework.widget.TitleBarView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_titlebar_height" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullToRefreshLayout
+                android:id="@+id/pull_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullableListView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    android:scrollbars="none"
+
+                    android:descendantFocusability="afterDescendants"
+                />
+
+                <include layout="@layout/boc_load_more" />
+            </com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullToRefreshLayout>
+
+            <include layout="@layout/boc_fragment_wealth_search" />
+            <RelativeLayout
+                android:id="@+id/rl_parent_empty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal">
+
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.AccountListItemView.PartialLoadView
+                    android:id="@+id/part_load_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txt_no_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/boc_text_color_rest_gray"
+                    android:textSize="@dimen/boc_space_between_26px"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_select"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:clickable="true">
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.selectview.selecttype.SelectTypeView
+            android:id="@+id/select_type_sort"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.selectview.selecttype.SelectTypeView
+            android:id="@+id/select_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</com.boc.bocsoft.mobile.bocmobile.base.widget.SlipMenu.SlipDrawerLayout>

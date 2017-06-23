@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_00" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/fill_margin_bottom"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:background="@drawable/message_dialog_bg" >
+
+        <ImageButton
+            android:id="@+id/dept_close_ib"
+            android:layout_width="@dimen/close_clickarea_height"
+            android:layout_height="@dimen/close_clickarea_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="-14dp"
+            android:layout_marginTop="-14dp"
+            android:background="@color/transparent_00" />
+
+        <LinearLayout
+            android:id="@+id/dept_image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/dept_close_ib"
+            android:layout_toLeftOf="@+id/dept_close_ib"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_close_height"
+                android:layout_marginLeft="@dimen/fill_margin_top"
+                android:src="@drawable/icon_pig"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/fill_margin_right_fordialog"
+            android:layout_marginTop="@dimen/dp_five"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/fill_padding_bottom" >
+
+            <Button
+                android:id="@+id/dept_checkout_btn"
+                style="@style/isforex_two_left_btn"
+                android:text="@string/isForex_manage_biange"
+                />
+
+            <Button
+                android:id="@+id/dept_create_notice_btn"
+                style="@style/isforex_two_right_btn"
+                android:text="@string/query_more"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollview"
+            style="@style/dialog_scrollview"
+            android:layout_above="@+id/ll_btn"
+            android:layout_below="@+id/dept_image_layout" >
+
+            <LinearLayout
+                style="@style/tran_body_ll"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:shrinkColumns="1" >
+
+                    <TableRow>
+
+                        <TextView
+                            style="@style/textview_forex_prompt_message"
+                            android:layout_weight="0"
+                            android:text="@string/third_cecuritytrade_cecacc" />
+
+                        <TextView
+                            android:id="@+id/isforex_bailAcc"
+                            style="@style/textview_forex_prompt_info"
+                            android:layout_weight="0"
+                            android:singleLine="false" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <TextView
+                            style="@style/textview_forex_prompt_message"
+                            android:layout_weight="0"
+                            android:text="@string/third_cecuritytrade_bankacc" />
+
+                        <TextView
+                            android:id="@+id/isforex_tradeAcc"
+                            style="@style/textview_forex_prompt_info"
+                            android:layout_weight="0"
+                            android:singleLine="false" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <TextView
+                            style="@style/textview_forex_prompt_message"
+                            android:layout_weight="0"
+                            android:text="@string/forex_customer_accType" />
+
+                        <TextView
+                            style="@style/textview_forex_prompt_info"
+                            android:layout_weight="0"
+                            android:text="@string/isForex_manage_type" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <TextView
+                            style="@style/textview_forex_prompt_message"
+                            android:layout_weight="0"
+                            android:text="@string/forex_customer_accAlias" />
+
+                        <TextView
+                            android:id="@+id/isforex_tradeAcc_nickname"
+                            style="@style/textview_forex_prompt_info"
+                            android:layout_weight="0"
+                            android:singleLine="true" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <TextView
+                            style="@style/textview_forex_prompt_message"
+                            android:layout_weight="0"
+                            android:text="@string/isForex_code_sx" />
+
+                        <TextView
+                            android:id="@+id/isForex_vfgRegCurrency1"
+                            style="@style/textview_forex_prompt_info"
+                            android:layout_weight="0" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <TextView
+                            style="@style/textview_forex_prompt_message"
+                            android:layout_weight="0"
+                            android:text="@string/isForex_manage_produce_times" />
+
+                        <TextView
+                            android:id="@+id/isForex_manage_produce_times"
+                            style="@style/textview_forex_prompt_info"
+                            android:layout_weight="0" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <TextView
+                            style="@style/textview_forex_prompt_message"
+                            android:layout_weight="0"
+                            android:text="@string/isForex_manage_liquidationRatio" />
+
+                        <TextView
+                            android:id="@+id/isForex_manage_liquidationRatio"
+                            style="@style/textview_forex_prompt_info"
+                            android:layout_weight="0" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <TextView
+                            style="@style/textview_forex_prompt_message"
+                            android:layout_weight="0"
+                            android:text="@string/isForex_manage_warnRatio" />
+
+                        <TextView
+                            android:id="@+id/isForex_manage_warnRatio"
+                            style="@style/textview_forex_prompt_info"
+                            android:layout_weight="0" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <LinearLayout
+                            style="@style/textview_common_left"
+                            android:layout_weight="0" >
+
+                            <TextView
+                                style="@style/textview_forex_prompt_message"
+                                android:text="@string/isForex_manage_needMarginRatio"
+                                />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/isForex_manage_needMarginRatio"
+                            style="@style/textview_forex_prompt_info"
+                            android:layout_gravity="bottom"
+                            android:gravity="bottom"
+                             />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <TextView
+                            style="@style/textview_forex_prompt_message"
+                            android:layout_weight="0"
+                            android:text="@string/isForex_manage_openRate" />
+
+                        <TextView
+                            android:id="@+id/isForex_manage_openRate"
+                            style="@style/textview_forex_prompt_info"
+                            android:layout_weight="0" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

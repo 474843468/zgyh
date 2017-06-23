@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 第三方存管 台账查询界面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/query_result_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/ll_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <include layout="@layout/epay_tq_queried_bar" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/fill_margin_bottom"
+                android:layout_marginLeft="@dimen/fill_margin_left"
+                android:layout_marginRight="@dimen/fill_margin_right"
+                android:background="@drawable/bg_for_listview_item_write" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/bg_for_listview_item_write"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_list_header"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/btn_bottom_height"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="@string/epay_tq_tv_trans_date" />
+
+                        <TextView
+                            style="@style/textview_common"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="@string/epay_tq_tv_order_num" />
+
+                        <TextView
+                            style="@style/textview_common"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="@string/epay_tq_tv_business_name" />
+
+                        <ImageView
+                            android:id="@+id/im_arrw"
+                            style="@style/rightbtn_jiantou"
+                            android:layout_weight="0"
+                            android:background="@drawable/right_arrow"
+                            android:visibility="invisible" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/tv_gray_line"
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/gray" />
+
+                    <com.chinamworld.bocmbci.widget.LoadMoreListView
+                        android:id="@+id/lv_result_list"
+                        style="@style/listviewcomm_wrap_gray_divider"
+                        android:listSelector="@android:drawable/list_selector_background" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_info_prompt"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="@dimen/fill_margin_bottom"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_right"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:gravity="center"
+        android:padding="@dimen/fill_padding"
+        android:text="@string/epay_tq_tv_msg"
+        android:textColor="@color/gray"
+        android:visibility="gone" />
+
+</RelativeLayout>

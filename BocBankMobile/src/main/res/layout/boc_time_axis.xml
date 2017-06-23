@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_cell_color"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/rl_axis"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/top_line"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/boc_yellow_end"/>
+
+            <TextView
+                android:id="@+id/bottom_line"
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/boc_yellow_end"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/circle"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/boc_circle_timeaxis"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="@dimen/boc_space_between_220px"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/rl_axis"
+        android:layout_marginLeft="@dimen/boc_space_between_20px">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/tv_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="基金迟滞"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@id/rl_title"
+        android:layout_toRightOf="@id/rl_title">
+
+        <TextView
+            android:id="@+id/tv_amount"
+            style="@style/tv_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2000"/>
+
+        <TextView
+            android:id="@+id/tv_description"
+            style="@style/tv_very_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_amount"
+            android:visibility="visible"/>
+    </RelativeLayout>
+</RelativeLayout>

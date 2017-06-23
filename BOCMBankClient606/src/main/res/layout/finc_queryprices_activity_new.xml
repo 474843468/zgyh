@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 全部行情 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:id="@+id/ll_query_result"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/ll_query_condition"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <ListView
+            android:id="@+id/finc_query_list"
+            style="@style/listviewcomm_wrap_haveDivider"
+            android:layout_marginBottom="@dimen/fill_margin_bottom"
+            android:visibility="gone" >
+        </ListView>
+
+        <ListView
+            android:id="@+id/fast_query_list"
+            style="@style/listviewcomm_wrap_haveDivider"
+            android:layout_marginBottom="@dimen/fill_margin_bottom"
+            android:visibility="gone" >
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_query_condition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <include layout="@layout/finc_query_condition" />
+        
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_five"
+                android:orientation="horizontal" >
+                <TextView
+                    android:layout_width="@dimen/dp_one_zero"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/sort_unit_net"
+                    style="@style/bond_tv_15_gray"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center|right"
+                    android:text="单位净值" />
+
+                <TextView
+                    android:id="@+id/sort_daily_growth_rate"
+                    style="@style/bond_tv_15_gray"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center|right"
+                    android:text="日增长率" />
+
+                <TextView
+                    android:id="@+id/sort_fund_state"
+                    style="@style/bond_tv_15_gray"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="基金状态" />
+            </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 中银理财  我的理财产品列表信息页  wangmengmeng -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ocrm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <include layout="@layout/bocnvt_title2_layout" />
+    </RelativeLayout>
+    <!-- 理财产品类型选择 -->
+
+    <LinearLayout
+        android:id="@+id/switch_product_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bocinvt_hold_manager_product_type" />
+
+        <Spinner
+            android:id="@+id/sp_product_types"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_spinner"
+            android:paddingLeft="@dimen/edittext_paddinglr"
+            android:paddingRight="@dimen/edittext_paddinglr" />
+    </LinearLayout>
+
+    <RelativeLayout
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:layout_marginBottom="@dimen/common_bottom_padding_new"
+         android:layout_marginLeft="@dimen/fill_margin_left"
+         android:layout_marginRight="@dimen/fill_margin_left"
+         android:background="@drawable/bg_for_listview_item_write"
+         android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/content_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <include layout="@layout/bocinvt_product_list_header_p603" />
+
+        <ListView
+            android:id="@+id/boci_product_list"
+            style="@style/listviewcomm_fill_noDivider"
+            android:divider="@color/gray"
+            android:dividerHeight="0.5dp" />
+    </LinearLayout>
+	</RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/empty_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="10dp"
+        android:minHeight="400dp"
+        android:background="@drawable/bocinvt_bg_rectangle_gray_sideline_round_corners"
+        android:orientation="vertical" >
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/bocinvt_empty_text"
+        android:textColor="@color/blue"
+        android:textSize="20sp" />
+
+    </RelativeLayout>
+</LinearLayout>

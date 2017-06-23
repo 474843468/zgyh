@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_content" >
+
+    <!-- 重置密码step -->
+
+    <include
+        android:id="@+id/stepbar"
+        layout="@layout/step_title_layout" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        style="@style/scrollview_comm_havemarginbutton"
+        android:layout_above="@+id/btn_layout"
+        android:layout_below="@+id/stepbar" >
+
+        <RelativeLayout style="@style/tran_detail_activity_ll" >
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/tv_pass_modify_message"
+                android:src="@drawable/chenggong" />
+
+            <TextView
+                android:id="@+id/tv_pass_modify_message"
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/reset_password_success_detail" 
+                android:paddingLeft="@dimen/fill_padding_left"
+                android:paddingRight="@dimen/fill_padding_left"
+                android:layout_marginTop="@dimen/layout_margin_top"/>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/findpwd_btn_conf"
+            style="@style/bottombtn"
+            android:text="@string/finish" />
+    </LinearLayout>
+
+</RelativeLayout>

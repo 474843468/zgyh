@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/finc_select_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txt_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/boc_space_between_88px"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/boc_space_between_36px"
+            android:gravity="center_vertical"
+            android:text="取消"
+            android:textColor="@color/boc_text_color_red"
+            android:textSize="@dimen/boc_text_size_small" />
+
+        <include layout="@layout/finc_divide_line" />
+        </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/finc_select_top"
+        android:layout_above="@+id/ll_bottom">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+        <!--<ListView-->
+        <com.chinamworld.bocmbci.biz.finc.finc_p606.util.MeasureListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/boc_divider_line_color"
+            android:dividerHeight="0.5dp"
+            android:overScrollMode="never"
+            android:paddingBottom="@dimen/boc_space_between_30px"
+            android:paddingLeft="@dimen/boc_space_between_30px"
+            android:paddingRight="@dimen/boc_space_between_30px"
+            android:scrollbars="none" />
+        <LinearLayout
+            android:id="@+id/company_layout"
+            android:layout_marginBottom="65dp"
+            android:background="@drawable/finc_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:padding="@dimen/boc_space_between_20px"
+                style="@style/textview_prms_prompt_end_info"
+                android:layout_width="100dp"
+                android:gravity="left"
+                android:layout_gravity="center"
+                android:text="基金公司"/>
+            <TextView
+                android:id="@+id/company_tv"
+                android:layout_width="fill_parent"
+                android:padding="@dimen/boc_space_between_20px"
+                android:layout_marginRight="@dimen/boc_space_between_20px"
+                android:layout_gravity="center"
+                android:gravity="right"
+                style="@style/textview_prms_prompt_end_info"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/goldstore_jiantou_right"
+                android:drawablePadding="@dimen/boc_space_between_10px"
+                android:text="全部"/>
+        </LinearLayout>
+    </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_96px"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <!--<include layout="@layout/finc_divide_line" />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_left"
+                style="@style/inverst_detail_white_btn"
+                android:textSize="@dimen/fonts_one_five"
+                android:text="重置"
+                 />
+
+            <Button
+                android:id="@+id/btn_right"
+                style="@style/inverst_detail_red_btn"
+                android:textSize="@dimen/fonts_one_five"
+                android:text="确认"
+                 />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

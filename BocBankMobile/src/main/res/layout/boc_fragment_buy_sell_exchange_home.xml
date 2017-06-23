@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_buss_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!--购汇-->
+        <TextView
+            android:id="@+id/tv_buy_exchange"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableBottom="@drawable/boc_icon"
+            android:gravity="center"
+            android:text="@string/boc_buy_exchange" />
+        <!--结汇-->
+        <TextView
+            android:id="@+id/tv_sell_exchange"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableBottom="@drawable/boc_icon"
+            android:gravity="center"
+            android:text="@string/boc_sell_exchange" />
+        <!--交易查询-->
+        <TextView
+            android:id="@+id/tv_trans_query"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableBottom="@drawable/boc_icon"
+            android:gravity="center"
+            android:text="@string/boc_trans_query" />
+    </LinearLayout>
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.swipeRefreshLayout.SuperSwipeRefreshLayout
+        android:id="@+id/cus_cast_remit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:id="@+id/lv_cast_remit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@color/boc_divide_color"
+            android:dividerHeight="@dimen/boc_space_between_1px"
+            android:fadingEdge="none" />
+    </com.boc.bocsoft.mobile.bocmobile.base.widget.swipeRefreshLayout.SuperSwipeRefreshLayout>
+</LinearLayout>

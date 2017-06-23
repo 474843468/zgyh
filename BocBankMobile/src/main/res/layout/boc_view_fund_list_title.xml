@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llyFundListTitle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/boc_space_between_10px"
+    android:paddingBottom="@dimen/boc_space_between_10px"
+    android:orientation="horizontal"
+    android:background="@color/boc_common_cell_color">
+    <!-- 左侧标题的父容器 -->
+    <LinearLayout
+        android:id="@+id/llyFundNameDesc"
+        android:layout_width="@dimen/boc_space_between_280px"
+        android:layout_height="@dimen/boc_space_between_60px"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/item_title_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/boc_fund_name_desc"
+            android:gravity="center"
+            android:textSize="@dimen/boc_text_size_small"
+            android:textColor="@color/boc_text_color_common_gray"/>
+    </LinearLayout>
+
+    <com.boc.bocsoft.mobile.bocmobile.buss.fund.fundproduct.home.ui.SyncHorizontalScrollView
+        android:id="@+id/shsrvListTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+        <LinearLayout
+            android:id="@+id/llySortFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+        </LinearLayout>
+    </com.boc.bocsoft.mobile.bocmobile.buss.fund.fundproduct.home.ui.SyncHorizontalScrollView>
+
+    <LinearLayout
+        android:id="@+id/llyCurrency"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="horizontal">
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 中银理财  历史交易查询以及结果页面  wangmengmeng -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_query_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <!-- 中银理财  查询条件页面 -->
+
+        <LinearLayout
+            android:id="@+id/ll_combinate_queryproduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_bg_query_j"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_row_margin_half"
+                android:layout_marginLeft="@dimen/comm_confirm_leftiterm_marginleft"
+                android:layout_marginRight="@dimen/comm_confirm_leftiterm_marginleft"
+                android:layout_marginTop="@dimen/common_row_margin" >
+
+                <!--
+                 <Button
+                android:id="@+id/btn_query"
+                android:layout_width="@dimen/btn_bottom_height"
+                android:layout_height="@dimen/btn_bottom_height"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_five"
+                android:background="@drawable/bocinvt_acctdetail_query"
+                android:onClick="acctDetailOnclick"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                android:textSize="@dimen/textsize_one_for" />
+                -->
+
+                <TextView
+                    android:id="@+id/texttitle_trfType"
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/bocinvt_trfType" />
+
+                <Spinner
+                    android:id="@+id/boci_acct_trfType"
+                    style="@style/Spiiner_fill"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/texttitle_trfType"
+                    android:background="@drawable/bg_spinner"
+                    android:ellipsize="middle"
+                    android:entries="@array/queryTraType"
+                    android:gravity="center_vertical"
+                    android:prompt="@string/finc_tradetype" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_row_margin_half"
+                android:layout_marginLeft="@dimen/comm_confirm_leftiterm_marginleft"
+                android:layout_marginRight="@dimen/comm_confirm_leftiterm_marginleft"
+                android:layout_marginTop="3dp" >
+
+                <TextView
+                    android:id="@+id/texttitle_trfAcc"
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/prms_tradeacc" />
+
+                <TextView
+                    android:id="@+id/boci_acct_trfAcc"
+                    style="@style/textview_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/texttitle_trfAcc"
+                    android:background="@drawable/bg_spinner"
+                    android:ellipsize="middle"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/edittext_paddinglr"
+                    android:paddingRight="@dimen/fill_margin_right"
+                    android:singleLine="true"
+                    />
+                <!--  android:text="请选择账户" -->
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_row_margin_half"
+                android:layout_marginLeft="@dimen/comm_confirm_leftiterm_marginleft"
+                android:layout_marginRight="@dimen/comm_confirm_leftiterm_marginleft"
+                android:layout_marginTop="3dp" >
+
+                <TextView
+                    android:id="@+id/texttitle_trfCurrency"
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/prms_tradecurrency" />
+
+                <Spinner
+                    android:id="@+id/boci_acct_trfCurrency"
+                    style="@style/Spiiner_fill"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/texttitle_trfCurrency"
+                    android:background="@drawable/bg_spinner"
+                    android:ellipsize="middle"
+                    android:gravity="center_vertical"
+                    android:prompt="@string/productCurCode_null" />
+            </RelativeLayout>
+
+            <!-- 隐藏原币种选择下拉列表 -->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/comm_confirm_leftiterm_marginleft"
+                android:layout_marginRight="@dimen/comm_confirm_leftiterm_marginleft"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <Spinner
+                    android:id="@+id/boci_productType_query"
+                    style="@style/Spiiner_fill"
+                    android:layout_marginRight="@dimen/fill_margin_right"
+                    android:prompt="@string/productType_null"
+                    android:visibility="gone" />
+
+                <Spinner
+                    android:id="@+id/boci_productCurCode_query"
+                    style="@style/Spiiner_fill"
+                    android:prompt="@string/productCurCode_null" />
+            </LinearLayout>
+            <!-- 隐藏一周 一月 三月按钮 -->
+           
+        <LinearLayout
+            android:id="@+id/acc_query_choosedate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/comm_confirm_leftiterm_marginleft"
+            android:layout_marginRight="@dimen/comm_confirm_leftiterm_marginleft"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <Button
+                android:id="@+id/btn_acc_onweek"
+                style="@style/buttonLeft"
+                android:text="@string/prms_str_oneweek"
+                android:textSize="@dimen/textsize_one_three" />
+
+            <Button
+                android:id="@+id/btn_acc_onmonth"
+                style="@style/buttonMiddle"
+                android:text="@string/prms_str_onemonth"
+                android:textSize="@dimen/textsize_one_three" />
+
+            <Button
+                android:id="@+id/btn_acc_threemonth"
+                style="@style/buttonRight"
+                android:text="@string/prms_str_threemonth"
+                android:textSize="@dimen/textsize_one_three" />
+        </LinearLayout>
+           
+
+
+           
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fill_margin_bottom"
+            android:layout_marginRight="@dimen/fill_margin_bottom"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+            <include layout="@layout/base_query_fengge" />
+        </LinearLayout>
+           
+
+            <LinearLayout
+                android:id="@+id/acc_query_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/comm_confirm_leftiterm_marginleft"
+                android:layout_marginRight="@dimen/comm_confirm_leftiterm_marginleft"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/acc_query_transfer_startdate"
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_marginRight="@dimen/fill_margin_right"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_spinner"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/edittext_paddinglr" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/layout_height"
+                    android:text="到" />
+
+                <TextView
+                    android:id="@+id/acc_query_transfer_enddate"
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_marginLeft="@dimen/fill_margin_right"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_spinner"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/edittext_paddinglr" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/comm_confirm_leftiterm_marginleft"
+                android:layout_marginRight="@dimen/comm_confirm_leftiterm_marginleft"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <android.widget.Button
+                    android:id="@+id/btn_combinate_queryproduct"
+                    style="@style/query_button_style" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_up"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_row_margin"
+                android:layout_marginRight="@dimen/common_row_margin" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    style="@style/textview_common_up"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:gravity="right|bottom"
+                    android:textSize="@dimen/textsize_one_three" />
+
+                <ImageView
+                    android:id="@+id/bocinvt_query_up"
+                    style="@style/query_image_up_style"
+                    android:layout_gravity="bottom"
+                    android:focusable="false"
+                    android:src="@drawable/img_arrow_gray_up" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 历史交易查询条件信息展示 -->
+
+        <LinearLayout
+            android:id="@+id/query_result_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_bg_query_j"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/header_for_combinate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <!--
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_row_margin"
+                    android:layout_marginRight="@dimen/common_row_margin"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/bocinvt_trfType" />
+
+                    <TextView
+                        android:id="@+id/bocinvt_acct_value"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true" />
+                </LinearLayout>
+                -->
+                <!--
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_row_margin"
+                    android:layout_marginRight="@dimen/common_row_margin"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/prms_tradeacc" />
+
+                    <TextView
+                        android:id="@+id/bocinvt_acct_value2"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true" />
+                </LinearLayout>
+                -->
+                <!-- 交易类型 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fill_margin_left"
+                    android:layout_marginRight="@dimen/fill_margin_left"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/bocinvt_trfType" />
+
+                    <TextView
+                        android:id="@+id/textview_tratype_value"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true" />
+                </LinearLayout>
+                <!-- 交易账户 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fill_margin_left"
+                    android:layout_marginRight="@dimen/fill_margin_left"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/investaccountstring" />
+
+                    <TextView
+                        android:id="@+id/bocinvt_acct_value3"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true" />
+                </LinearLayout>
+                <!-- 产品种类 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fill_margin_left"
+                    android:layout_marginRight="@dimen/fill_margin_left"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/tv_boci_producttype"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/productType" />
+
+                        <TextView
+                            android:id="@+id/tv_boci_producttype_value"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <!-- 交易币种 -->
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_boci_currency"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/prms_tradecurrency" />
+
+                        <TextView
+                            android:id="@+id/tv_boci_currency_value"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 查询日期 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fill_margin_left"
+                    android:layout_marginRight="@dimen/fill_margin_left"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_boci_status"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bocinvt_queryDate" />
+
+                    <TextView
+                        android:id="@+id/tv_boci_date_value"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/common_row_margin"
+                    android:layout_marginLeft="@dimen/fill_margin_left"
+                    android:layout_marginRight="@dimen/fill_margin_left"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_down"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/common_paixuWH"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:gravity="right|bottom" />
+
+                    <ImageView
+                        android:id="@+id/img_boci_query_back"
+                        style="@style/query_image_up_style"
+                        android:layout_gravity="bottom"
+                        android:src="@drawable/img_arrow_gray_down" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_tranhistory"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="@dimen/common_bottom_padding_new"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_left"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/titlebackbtn_width"
+                    android:layout_marginBottom="@dimen/fill_margin_left_fu"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/boci_product_name"
+                        style="@style/textview_common"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/common_row_margin_half"
+                        android:layout_weight="1.1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/prod_name" />
+
+                    <TextView
+                        android:id="@+id/boci_yearlyRR"
+                        style="@style/textview_common"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.6"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/yearly_RR" />
+
+                    <TextView
+                        android:id="@+id/boci_timeLimit"
+                        style="@style/textview_common"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.2"
+                        android:layout_marginRight="@dimen/common_row_margin_half"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/prodTime_limit" />
+
+                    <ImageView
+                        android:id="@+id/boci_gotoDetail"
+                        android:layout_width="@dimen/shap_of_commrequestopen_pdl"
+                        android:layout_height="@dimen/shap_of_commrequestopen_pdl"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:src="@drawable/right_arrow"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:src="@color/gray_line" />
+
+                <ListView
+                    android:id="@+id/boci_query_list"
+                    style="@style/listviewcomm_fill_gray_divider" >
+                </ListView>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+</FrameLayout>

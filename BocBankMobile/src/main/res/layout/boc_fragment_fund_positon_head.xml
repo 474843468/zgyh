@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/boc_fund_position_head"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/boc_common_bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/boc_divide_line"></include>
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.expandableitemview.ExpandableItemView
+        android:id="@+id/ex_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+    </com.boc.bocsoft.mobile.bocmobile.base.widget.expandableitemview.ExpandableItemView>
+
+    <include
+        android:id="@+id/v_bottom_line"
+        layout="@layout/boc_divide_line"></include>
+
+    <RelativeLayout
+        android:id="@+id/rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_80px"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/view_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/boc_space_between_16px"
+            android:layout_marginBottom="@dimen/boc_space_between_16px"
+            android:layout_centerInParent="true"
+            android:background="@drawable/boc_bg_letter"></TextView>
+
+        <TextView
+            android:id="@+id/tv_left"
+            style="@style/tv_common"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/view_divider"
+            android:gravity="center_horizontal"
+            android:text="@string/boc_fund_position_chudel_button"
+            android:textColor="@color/boc_btn_txt_blue"
+            />
+
+        <TextView
+            android:id="@+id/tv_right"
+            style="@style/tv_common"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/view_divider"
+            android:gravity="center_horizontal"
+            android:text="@string/boc_fund_position_persional_button"
+            android:textColor="@color/boc_btn_txt_blue"/>
+    </RelativeLayout>
+
+    <include layout="@layout/boc_divide_line"></include>
+
+    <include
+        android:id="@+id/v_devide"
+        layout="@layout/boc_divide_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_20px"
+        android:background="@color/boc_common_bg_color">
+    </include>
+
+</LinearLayout>

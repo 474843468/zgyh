@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 中银理财  购买产品输入信息页—非周期性产品 wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/common_bottom_padding"
+        android:layout_marginTop="@dimen/dp_five"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_pre_submit"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_blue_big"
+            android:text="@string/last"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_next_submit"
+            style="@style/bottombtn"
+            android:text="@string/next" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_btn"
+        android:layout_below="@+id/ll_step"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView
+            style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/bocinvt_buy_number" />
+
+                    <TextView
+                        android:id="@+id/tv_prodNum_submit"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+                
+                <!-- P603新增，产品代码 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/prodCode" />
+
+                    <TextView
+                        android:id="@+id/tv_product_code"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/prodName" />
+
+                    <TextView
+                        android:id="@+id/tv_prodName_submit"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/currency1" />
+
+                    <TextView
+                        android:id="@+id/tv_curCode_submit"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:id="@+id/buy_cashremit_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/bocinvt_tv_40" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2" >
+
+                        <TextView
+                            android:id="@+id/rmb_submit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text="@string/bocinvt_tv_41"
+                            android:visibility="gone" />
+
+                        <!-- <Spinner 
+		                    android:id="@+id/sp_1"
+		                    style="@style/Spiiner_fill"
+		                    android:visibility="visible"
+		                    /> -->
+                        <RadioGroup
+                            android:id="@+id/rg_cashRemit"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/bill"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:button="@drawable/radiobtn_selector"
+                                android:checked="true"
+                                android:text="@string/bill" />
+
+                            <RadioButton
+                                android:id="@+id/remit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:button="@drawable/radiobtn_selector"
+                                android:text="@string/remit" />
+                        </RadioGroup>
+                    </FrameLayout>
+                </LinearLayout>
+                
+                <!-- P603新增，预计年收益率 ,非净值型产品显示-->
+                <LinearLayout
+                    android:id="@+id/layout_profit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                     >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/yearlyRR" />
+
+                    <TextView
+                        android:id="@+id/tv_profit"
+                        style="@style/textview_common_right_two" 
+                        />
+                </LinearLayout>
+                <!-- P603新增，产品期限 ,非净值型显示-->
+                <LinearLayout
+                    android:id="@+id/layout_pro_limit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/timeLimithave" />
+
+                    <TextView
+                        android:id="@+id/tv_limit"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+                <!-- P603新增，剩余额度 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/bocinvt_tv_33" />
+
+                    <TextView
+                        android:id="@+id/tv_sy"
+                        style="@style/textview_common_right_two" 
+                        android:textColor="@color/red"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_1"
+                        style="@style/textview_common_left_three"
+                        android:text="@string/bocinvt_subamount" 
+                        android:ellipsize="middle"/>
+
+                    <TextView
+                        android:id="@+id/tv_buyStartingAmount_submit"
+                        style="@style/textview_common_right_two"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/appendStrating"
+                        style="@style/textview_common_left_three"
+                        android:ellipsize="middle"
+                        android:text="@string/bocinvt_tv_34" />
+
+                    <TextView
+                        android:id="@+id/tv_appendStartingAmount_submit"
+                        style="@style/textview_common_right_two"
+                        />
+                </LinearLayout>
+                
+                <!-- P603增加，购买金额基数 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:ellipsize="middle"
+                        android:text="@string/bocinvt_baseamount" />
+
+                    <TextView
+                        android:id="@+id/tv_base_money"
+                        style="@style/textview_common_right_two"
+                        />
+                </LinearLayout>
+                <!-- P603增加，交易手续费，净值型产品独有 -->
+                <LinearLayout
+                    android:id="@+id/layout_poundage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" 
+                    android:visibility="visible"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_s_r_sxf"
+                        android:ellipsize="middle"
+                        style="@style/textview_common_left_three"
+                        android:text="@string/bocinvt_tv_82" />
+
+                    <TextView
+                        android:id="@+id/tv_poundage"
+                        style="@style/textview_common_right_two"
+                        android:textColor="@color/red"
+                        android:singleLine="false"
+                        />
+                </LinearLayout>
+                <!-- P603增加，是否允许撤单 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:ellipsize="middle"
+                        android:text="@string/bocinvt_tv_35" />
+
+                    <TextView
+                        android:id="@+id/tv_can_cancel"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <!-- <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/sellingDate" />
+
+                    <TextView
+                        android:id="@+id/tv_sellingDate_submit"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout> -->
+
+                <!-- <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/prodBegin" />
+
+                    <TextView
+                        android:id="@+id/tv_aprodBegin_submit"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout> -->
+
+                <!-- <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/prodEnd" />
+
+                    <TextView
+                        android:id="@+id/tv_prodEnd_submit"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout> -->
+
+                
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/bocinvt_buy_price" />
+
+                    <EditText
+                        android:id="@+id/et_buyprice_submit"
+                        style="@style/edittext_input_numberDecimal_fill"
+                        android:layout_weight="2"
+                        android:maxLength="14" 
+                        android:inputType="numberDecimal"
+                        android:layout_marginRight="@dimen/dp_five"
+                        android:hint="@string/buy_amount_input"/>
+                </LinearLayout>
+                
+                <!-- 购买金额  中文回显 -->
+                    <TextView
+                        android:id="@+id/money_chinese"
+                        style="@style/style_match_wrap"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:textSize="@dimen/textsize_default"
+                        android:textColor="@color/red"
+                        android:layout_marginBottom="@dimen/common_row_margin"
+                        android:layout_marginLeft="@dimen/common_row_margin"
+                        android:layout_marginRight="@dimen/common_row_margin"
+                        android:gravity="right"
+                        android:text=""
+                        android:visibility="gone"
+                        />
+                    <!-- 柜员营销代码 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/martCode" />
+
+                    <EditText
+                        android:id="@+id/et_martCode_submit"
+                        style="@style/edittext_common_fill"
+                        android:layout_weight="2"
+                        android:hint="@string/choose_input"
+                        android:maxLength="20"
+                        android:layout_marginRight="@dimen/dp_five"
+                         />
+                </LinearLayout>
+                
+                <!-- 是否指定日期赎回 -->
+                <LinearLayout
+                    android:id="@+id/layout_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_sfzdrqsh"
+                        style="@style/textview_common_left_three"
+                        android:text="@string/bocinvt_tv_66" 
+                        android:ellipsize="middle"/>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2" >
+
+                        <TextView
+                            android:id="@+id/tv_date_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:visibility="gone" />
+
+                        <RadioGroup
+                            android:id="@+id/rg_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/rb_date_yes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:button="@drawable/radiobtn_selector"
+                                android:checked="true"
+                                android:text="@string/yes" />
+
+                            <RadioButton
+                                android:id="@+id/rb_date_no"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:button="@drawable/radiobtn_selector"
+                                android:text="@string/no" />
+                        </RadioGroup>
+                    </FrameLayout>
+                </LinearLayout>
+                <!-- 是否指定赎回日期提示信息 -->
+                <TextView 
+                    android:id="@+id/tv_tip_message"
+                    style="@style/style_match_wrap"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textsize_default"
+                    android:gravity="left"
+                    android:text="@string/bocinvt_tv_70"
+                    />
+                    
+                <!-- P603增加，赎回日期 -->
+                <LinearLayout
+                    android:id="@+id/layout_appdatered"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout 
+                        style="@style/style_match_wrap"
+                        android:gravity="center"
+                        >
+	                    <TextView
+	                        style="@style/textview_common_left_three"
+	                        android:text="@string/bocinvt_tv_36" />
+	
+	                    <TextView
+	                        android:id="@+id/sp_buy_back_date"
+	                        style="@style/style_tv_spinner"
+	                        android:layout_weight="2"
+	                        android:layout_marginRight="@dimen/dp_five"/>
+                    </LinearLayout>
+                <!-- 指定赎回日期提示信息 -->
+                <TextView 
+                    android:id="@+id/tv_message"
+                    style="@style/style_match_wrap"
+                    android:textSize="@dimen/textsize_default"
+                    android:textColor="@color/red"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text=""
+                    />
+                </LinearLayout>
+                
+                <!-- P603增加，投资期数 -->
+                <LinearLayout
+                    android:id="@+id/layout_tzqs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                     >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/bocinvt_product_stage" />
+
+                    <EditText
+                        android:id="@+id/et_buy_lim"
+                        style="@style/edittext_inputNumber_fill"
+                        android:layout_weight="2"
+                        android:maxLength="14"
+                        android:inputType="number"
+                        android:text="1" 
+                        android:layout_marginRight="@dimen/dp_five" />
+                </LinearLayout>
+
+                
+
+                <TextView style="@style/textview_common_left_three" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

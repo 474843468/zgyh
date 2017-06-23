@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shap_for_dept_tranlist"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/layout_padding_left_right"
+        android:paddingRight="@dimen/layout_padding_left_right"
+        android:paddingBottom="@dimen/layout_padding_bottom" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/fill_padding_right" 
+            android:layout_marginTop="@dimen/layout_margin_top">
+
+            <TextView
+                style="@style/comm_view_left"
+                android:text="@string/bizhong" />
+
+            <TextView
+                android:id="@+id/dept_currency_tv"
+                style="@style/comm_view_right" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/fill_padding_right" 
+            android:layout_marginTop="@dimen/layout_margin_top">
+
+            <TextView
+                style="@style/comm_view_left"
+                android:text="@string/save_money" />
+
+            <EditText
+                android:id="@+id/dept_save_money_et"
+                style="@style/comm_view_right"
+                android:layout_height="@dimen/edittext_height"
+                        android:background="@drawable/bg_for_edittext"
+                android:inputType="numberDecimal"
+                android:maxLength="14"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" 
+                android:hint="@string/least_save_money">
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/fill_padding_right" 
+            android:layout_marginTop="@dimen/layout_margin_top">
+
+            <TextView
+                style="@style/comm_view_left"
+                android:text="@string/fuYan" />
+
+            <EditText
+                android:id="@+id/dept_message_et"
+                style="@style/comm_view_right"
+                android:layout_height="@dimen/edittext_height"
+                        android:background="@drawable/bg_for_edittext"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" 
+                android:hint="@string/hint_memo">
+            </EditText>
+        </LinearLayout>
+        <TextView android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mysave_bottom"
+            android:paddingLeft="@dimen/fill_padding_right"
+            android:paddingRight="@dimen/fill_padding_right"
+            android:textColor="@color/gray"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/btn_dialog_height"
+        android:gravity="center"
+        android:orientation="horizontal" 
+        android:layout_marginTop="@dimen/bottom_margin_top">
+
+        <Button
+            android:id="@+id/dept_nowExe_btn"
+            style="@style/tran_three_btn"
+            android:text="@string/nowExe" />
+
+        <Button
+            android:id="@+id/dept_preDateExe_btn"
+            style="@style/tran_three_btn"
+            android:text="@string/preDateExe" />
+
+        <Button
+            android:id="@+id/dept_prePeriodExe_btn"
+            style="@style/tran_three_btn"
+            android:text="@string/prePeriodExe" />
+    </LinearLayout>
+
+</LinearLayout>

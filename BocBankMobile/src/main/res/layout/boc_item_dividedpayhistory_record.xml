@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/boc_space_between_20px"
+                android:paddingLeft="@dimen/boc_space_between_30px"
+                android:paddingRight="@dimen/boc_space_between_30px"
+                android:paddingTop="@dimen/boc_space_between_20px"
+    >
+
+    <TextView
+        android:id="@+id/tv_instmt_category"
+        tools:text="分期类型"
+        android:layout_marginBottom="2dp"
+        android:textColor="@color/boc_text_color_dark_gray"
+        android:textSize="@dimen/boc_text_size_little_big"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/installment_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:textSize="@dimen/boc_text_size_common"
+            tools:text="2012/05/14"/>
+
+        <LinearLayout
+            android:id="@+id/ll_instmt_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/installment_date"
+            android:layout_alignLeft="@id/installment_date"
+            android:layout_marginTop="@dimen/boc_space_between_8px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.boc.bocsoft.mobile.bocmobile.buss.creditcard.myinstallment.widget.ProgressView
+                android:id="@+id/installment_progress"
+                android:layout_width="@dimen/boc_space_between_160px"
+                android:layout_height="14dp"
+                android:layout_marginRight="@dimen/boc_space_between_10px"
+                android:layout_marginTop="@dimen/boc_space_between_2px"/>
+
+            <TextView
+                android:id="@+id/installment_progress_content"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/installment_progress"
+                android:gravity="end"
+                android:maxLines="1"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_common"
+                tools:text="12/12期"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/installment_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/ll_instmt_progress"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:textSize="@dimen/boc_text_size_common"
+            android:textStyle="bold"
+            tools:text="2,800.00"/>
+
+        <TextView
+            android:id="@+id/installment_accomplished"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/installment_amount"
+            android:layout_alignRight="@id/installment_amount"
+            android:layout_marginBottom="@dimen/boc_space_between_2px"
+            tools:text="@string/boc_crcd_myinstallment_accomplished"
+            android:textColor="@color/boc_text_color_green"
+            android:textSize="@dimen/boc_text_size_common"/>
+    </RelativeLayout>
+
+</LinearLayout>

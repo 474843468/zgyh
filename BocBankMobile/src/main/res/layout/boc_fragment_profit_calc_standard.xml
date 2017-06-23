@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_parent_profit_standard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:orientation="vertical">
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditClearWidget
+        android:id="@+id/edt_rate_standard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:editClearName="@string/boc_wealth_profit_rate" />
+
+    <include layout="@layout/boc_divide_line" />
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditClearWidget
+        android:id="@+id/edt_date_standard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:editClearName="@string/boc_wealth_profit_date" />
+
+    <include layout="@layout/boc_divide_line" />
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditClearWidget
+        android:id="@+id/edt_period_standard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:editClearName="@string/boc_wealth_profit_period" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/boc_space_between_20px"
+        android:orientation="horizontal">
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputWidget
+            android:id="@+id/edt_money_standard"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/boc_space_between_104px"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_calc_standard"
+            style="@style/BocButton.BocPrimaryButton"
+            android:layout_width="@dimen/boc_space_between_180px"
+            android:layout_height="match_parent"
+            android:layout_marginRight="0dp"
+            android:text="@string/boc_wealth_profit_btn" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/boc_space_between_40px"
+        android:text="@string/boc_wealth_profit_hint"
+        android:textColor="@color/boc_text_mobile_color"
+        android:textSize="@dimen/boc_text_size_common" />
+</LinearLayout>

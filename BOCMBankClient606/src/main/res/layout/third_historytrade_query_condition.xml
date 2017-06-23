@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/acc_query_transfer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/acc_query_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_bottom_width"
+        android:background="@drawable/img_bg_card_chaxun"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/acc_frame_left"
+            style="@style/rightbtn_jiantou"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/img_arrow_gray_left" />
+
+        <ImageView
+            android:id="@+id/acc_frame_right"
+            style="@style/rightbtn_jiantou"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/img_arrow_gray_right" />
+
+        <com.chinamworld.bocmbci.widget.CustomGallery
+            android:id="@+id/galy_account"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/acc_list_item_height"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/acc_frame_right"
+            android:layout_toRightOf="@+id/acc_frame_left"
+            android:layout_weight="1"
+            android:fadingEdgeLength="0dp"
+            android:spacing="10dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_query_condition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/acc_query_horizontal"
+        android:background="@drawable/img_bg_query_j"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/acc_query_choose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/comm_confirm_leftiterm_marginleft"
+            android:layout_marginRight="@dimen/comm_confirm_leftiterm_marginleft"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:orientation="horizontal" >
+
+            <Spinner
+                android:id="@+id/acc_currency_spinner"
+                style="@style/bond_sp_15_1"
+                android:layout_marginRight="@dimen/fill_margin_right" />
+
+            <Spinner
+                android:id="@+id/acc_cashRemit_spinner"
+                style="@style/bond_sp_15_1"
+                android:layout_marginLeft="@dimen/fill_margin_left" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/acc_query_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/comm_confirm_leftiterm_marginleft"
+            android:layout_marginRight="@dimen/comm_confirm_leftiterm_marginleft"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_acc_onweek"
+                    style="@style/new_radioButtonLeft"
+                    android:singleLine="true"
+                    android:text="@string/epay_tq_tv_week"
+                    android:textSize="@dimen/textsize_one_two" />
+
+                <Button
+                    android:id="@+id/btn_acc_onmonth"
+                    style="@style/new_radioButtonMid"
+                    android:singleLine="true"
+                    android:text="@string/epay_tq_tv_month"
+                    android:textSize="@dimen/textsize_one_two" />
+
+                <Button
+                    android:id="@+id/btn_acc_threemonth"
+                    style="@style/new_radioButtonRight"
+                    android:singleLine="true"
+                    android:text="@string/epay_tq_tv_three_month"
+                    android:textSize="@dimen/textsize_one_two" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_five"
+                android:orientation="horizontal" >
+
+                <include layout="@layout/base_query_fengge" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_five"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/acc_query_transfer_startdate"
+                    style="@style/bond_sp_15_1"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_marginRight="@dimen/fill_margin_right"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    />
+
+                <TextView
+                    android:id="@+id/acc_query_transfer_enddate"
+                    style="@style/bond_sp_15_1"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_marginLeft="@dimen/fill_margin_left"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_query"
+                style="@style/bond_query_btn"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:singleLine="true"
+                android:text="@string/epay_pub_tv_query"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_up"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/common_paixuWH"
+            android:layout_marginRight="@dimen/fill_margin_bottom" >
+
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/style_bond_tv_up_down"
+                android:layout_height="@dimen/common_paixuWH"
+                android:layout_weight="1"
+                android:gravity="center_vertical|right"
+                android:text="@string/up" />
+
+            <ImageView
+                android:id="@+id/acc_query_up"
+                style="@style/query_image_up_style"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/img_arrow_gray_up" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

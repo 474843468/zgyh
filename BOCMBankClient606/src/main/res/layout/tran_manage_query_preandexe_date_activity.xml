@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/rg_manage_query"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_right"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_left_manage_query"
+            style="@style/twoRadioButtonLeft"
+            android:text="@string/query_pre_date" />
+
+        <RadioButton
+            android:id="@+id/rb_right_manage_query"
+            style="@style/twoRadioButtonRight"
+            android:text="@string/query_exe_date" />
+    </RadioGroup>
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+ 
+
+        <!-- 展现根据开始，结束时间查询的结果，同时显示输入的开始，结束时间 start -->
+
+        <RelativeLayout
+            android:id="@+id/forex_query_result_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" >
+
+            <!-- 显示内容: 查询时间:2014/01/26-2014/04/26 start -->
+
+            <LinearLayout
+                android:id="@+id/forex_query_result_condition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/img_bg_query_j"
+                android:orientation="vertical" 
+>
+
+                <LinearLayout
+                    android:id="@+id/pull_down_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_marginLeft="@dimen/fill_margin_left"
+                    android:layout_marginRight="@dimen/fill_margin_left"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/trade_time"
+                        style="@style/textview_common_right"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:hint="@string/acc_query_date" />
+
+                    <TextView
+                        style="@style/textview_common_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|bottom"
+                        android:textSize="@dimen/textsize_one_three" />
+
+                    <ImageView
+                        android:id="@+id/img_acc_query_back"
+                        style="@style/query_image_up_style"
+                        android:layout_gravity="center|bottom"
+                        android:src="@drawable/img_arrow_gray_down" />
+                </LinearLayout>
+            </LinearLayout>
+            <!-- 显示内容: 查询时间:2014/01/26-2014/04/26 end -->
+
+
+
+
+        <!-- search start -->
+
+       
+        
+        
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/forex_query_transfer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_query_condition"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_query_bg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/fill_margin_bottom"
+                            android:background="@drawable/img_bg_query_j"
+                            android:orientation="vertical"
+                            android:padding="@dimen/fill_padding"
+                            android:visibility="visible" >
+
+                            <LinearLayout
+                                android:id="@+id/acc_query_choosedate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" >
+
+                                <Button
+                                    android:id="@+id/btn_oneweek_query_date_preandexe"
+                                    style="@style/buttonLeft"
+                                    android:text="@string/prms_str_oneweek"
+                                    android:textSize="@dimen/textsize_one_three" />
+
+                                <Button
+                                    android:id="@+id/btn_onemonth_query_date_preandexe"
+                                    style="@style/buttonMiddle"
+                                    android:text="@string/prms_str_onemonth"
+                                    android:textSize="@dimen/textsize_one_three" />
+
+                                <Button
+                                    android:id="@+id/btn_threemonth_query_date_preandexe"
+                                    style="@style/buttonRight"
+                                    android:text="@string/prms_str_threemonth"
+                                    android:textSize="@dimen/textsize_one_three" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/common_row_margin"
+                                android:orientation="horizontal" >
+
+                                <include layout="@layout/base_query_fengge" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/acc_query_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/common_row_margin"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/tv_startdate_query_date_preandexe"
+                                    style="@style/Spinner_comm_view_right"
+                                    android:hint="@string/prms_query_startdate" />
+
+                                <TextView
+                                    android:id="@+id/tv_enddate_query_date_preandexe"
+                                    style="@style/Spinner_comm_view_right"
+                                    android:layout_marginLeft="@dimen/fill_margin_left"
+                                    android:hint="@string/prms_query_enddate" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/comm_confirm_leftiterm_marginleft"
+                                android:layout_marginRight="@dimen/comm_confirm_leftiterm_marginleft"
+                                android:layout_marginTop="@dimen/common_row_margin"
+                                android:gravity="center"
+                                android:orientation="horizontal" >
+
+                                <Button
+                                    android:id="@+id/btn_query_date_preandexe"
+                                    style="@style/query_button_style" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/ll_pull_up_query_preandexe"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:id="@+id/textView1"
+                                    style="@style/textview_common_up"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="right|bottom"
+                                    android:textSize="@dimen/textsize_one_three" />
+
+                                <ImageView
+                                    style="@style/query_image_up_style"
+                                    android:layout_gravity="bottom"
+                                    android:clickable="false"
+                                    android:focusable="false"
+                                    android:src="@drawable/img_arrow_gray_up" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!-- 下拉            start -->
+
+                    <LinearLayout
+                        android:id="@+id/querycondition_down"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gray"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/tv_down"
+                            style="@style/textview_common_down"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:textSize="@dimen/textsize_one_three" />
+
+                        <ImageView
+                            android:id="@+id/forex_querycondition_down"
+                            android:layout_width="@dimen/img_up_width"
+                            android:layout_height="@dimen/img_up_width"
+                            android:layout_gravity="bottom"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:src="@drawable/img_arrow_gray_down" />
+                    </LinearLayout>
+                    <!-- 下拉           end -->
+                </FrameLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <!-- search  end -->
+
+    </RelativeLayout>
+ <!-- 展现根据开始，结束时间查询的结果，同时显示输入的开始，结束时间 start -->
+
+
+            <!-- 2个listView展现结果 start -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/forex_query_layout"
+            >
+
+                <LinearLayout
+                    android:id="@+id/ll_pre_date_query"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/common_bottom_padding_new"
+                    android:layout_marginLeft="@dimen/fill_margin_right"
+                    android:layout_marginRight="@dimen/fill_margin_right"
+                    android:background="@drawable/bg_for_listview_item_write"
+                    android:orientation="vertical" 
+                    android:visibility="gone" 
+                    >
+
+                    <ListView
+                        android:id="@+id/lv_pre_date_query_result"
+                        style="@style/listviewcomm_fill_gray_divider" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_exe_date_query"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/common_bottom_padding_new"
+                    android:layout_marginLeft="@dimen/fill_margin_right"
+                    android:layout_marginRight="@dimen/fill_margin_right"
+                    android:background="@drawable/bg_for_listview_item_write"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <ListView
+                        android:id="@+id/lv_exe_date_query_result"
+                        style="@style/listviewcomm_fill_gray_divider" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- 2个listView展现结果 end -->
+</LinearLayout>

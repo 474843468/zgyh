@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账单缴费缴费信息详情页 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_cance"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_blue_big"
+            android:text="@string/blpt_bill_cance"
+            android:textColor="@color/white" />
+          <Button
+            android:id="@+id/btn_pay"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/blpt_bill_pay"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/prms_scrollView1_layout"
+        style="@style/scrollview_comm_havemarginbutton"
+        android:layout_above="@id/btn_layout"
+        android:paddingLeft="0dip"
+        android:paddingRight="0dip">
+
+        <LinearLayout
+            style="@style/confirm_main_style"
+            android:orientation="vertical" >
+
+            <LinearLayout style="@style/linnerlayout_common" 
+                android:layout_marginTop="@dimen/rightbtnH">
+
+                <TextView
+                    android:id="@+id/tv_bill_title"
+                    style="@style/confirm_info_textview_style"/>
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" 
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:textColor="@color/gray"
+                    android:gravity="left"
+                    android:layout_marginLeft="25dip"
+                    android:text="@string/blpt_bill_tishi" />
+            </LinearLayout>
+	
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blpt_billpay_date"
+                    android:textSize="@dimen/textsize_default"
+                    android:layout_width="fill_parent"/>
+
+                <TextView
+                    android:id="@+id/tv_pay_date"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_width="fill_parent"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:textSize="@dimen/textsize_default"
+                    android:text="@string/blpt_billpay_adress"
+                    style="@style/confirm_left_textview_style" />
+
+                <TextView
+                    android:id="@+id/tv_pay_adress"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                     android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:textSize="@dimen/textsize_default"
+                    android:text="@string/blpt_billpay_type"
+					/>
+
+                <TextView
+                    android:id="@+id/tv_pay_type"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                     android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:textSize="@dimen/textsize_default"
+                    android:text="@string/blpt_had_new_list_acc" />
+
+                <TextView
+                    android:id="@+id/tv_pay_number"
+                    style="@style/confirm_right_textview_style" 
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR"/>
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    android:id="@+id/ph_title"
+                    style="@style/confirm_left_textview_style"
+                     android:layout_height="wrap_content"
+                    android:layout_width="fill_parent"
+                    android:textSize="@dimen/textsize_default"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/tv_pay_phone"
+                    style="@style/confirm_right_textview_style"
+                    android:layout_marginLeft="@dimen/common_listview_item_paddingLR" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_details_title_height" >
+
+        <TextView
+            android:layout_width="@dimen/common_details_title_width"
+            android:layout_height="@dimen/left_img_width"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_title"
+            android:gravity="center"
+            android:paddingRight="@dimen/btnpaddingtb"
+            android:text="@string/blpt_bill_confirm_info"
+            android:textSize="@dimen/textsize_default" />
+    </RelativeLayout>
+
+</RelativeLayout>

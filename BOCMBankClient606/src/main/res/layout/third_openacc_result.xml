@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical" >
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        style="@style/isforex_little_cell_title"
+                        android:layout_marginTop="@dimen/fill_padding"
+                        android:text="@string/isForex_myrate_succ1" />
+
+                    <TextView
+                        style="@style/isforex_little_cell_title"
+                        android:paddingLeft="@dimen/fill_padding_left"
+                        android:paddingRight="@dimen/fill_padding_right"
+                        android:text="@string/openacc_query_success_prompt"
+                        />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/fill_padding"
+                        android:shrinkColumns="1" >
+
+                        <TableRow>
+
+                            <TextView
+                                style="@style/textview_forex_prompt_message"
+                                android:layout_weight="1"
+                                android:singleLine="true"
+                                android:text="@string/third_openacc_acc"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_bank_account"
+                                android:layout_weight="10"
+                                style="@style/textview_forex_prompt_info"
+                                android:singleLine="true"
+                                />
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                            <TextView
+                                android:id="@+id/tv_department_region_lable"
+                                style="@style/textview_forex_prompt_message"
+                                android:layout_weight="1"
+                                android:singleLine="true"
+                                android:text="@string/department_region"
+                               />
+
+                            <TextView
+                                android:id="@+id/tv_department_region"
+                                android:layout_weight="10"
+                                style="@style/textview_forex_prompt_info"
+                                android:singleLine="true"
+                                />
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                            <TextView
+                                style="@style/textview_forex_prompt_message"
+                                android:layout_weight="1"
+                                android:singleLine="true"
+                                android:text="@string/third_openacc_company"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_stock_company"
+                                android:layout_weight="10"
+                                style="@style/textview_forex_prompt_info"
+                                android:singleLine="true"
+                                />
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                            <TextView
+                                style="@style/textview_forex_prompt_message"
+                                android:layout_weight="1"
+                                android:singleLine="true"
+                                android:text="@string/third_openacc_companypartname"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_department_name"
+                                android:layout_weight="10"
+                                style="@style/textview_forex_prompt_info"
+                                android:singleLine="true"
+                                />
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                            <TextView
+                                style="@style/textview_forex_prompt_message"
+                                android:layout_weight="1"
+                                android:singleLine="true"
+                                android:text="@string/third_openacc_province_aprt"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_department_address"
+                                android:layout_weight="10"
+                                style="@style/textview_forex_prompt_info"
+                                android:singleLine="true"
+                                />
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                            <TextView
+                                style="@style/textview_forex_prompt_message"
+                                android:layout_weight="1"
+                                android:singleLine="true"
+                                android:text="@string/department_link_name"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_department_link_name"
+                                android:layout_weight="10"
+                                style="@style/textview_forex_prompt_info"
+                                android:singleLine="true"
+                                />
+                        </TableRow>
+
+                        <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                            <TextView
+                                android:id="@+id/tv_department_link_phone_lable"
+                                style="@style/textview_forex_prompt_message"
+                                android:layout_weight="1"
+                                android:singleLine="true"
+                                android:text="@string/department_link_phone"
+                                />
+
+                            <TextView
+                                android:id="@+id/tv_department_link_phone"
+                                android:layout_weight="10"
+                                style="@style/textview_forex_prompt_info"
+                                android:singleLine="true"
+                                />
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_bottom_padding"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnfinish"
+                style="@style/textview_forex_button_cell"
+                android:text="@string/finish"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

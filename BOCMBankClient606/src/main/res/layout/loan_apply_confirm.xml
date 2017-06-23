@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 我的外汇  定期详情页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/loan_tradeButton"
+            style="@style/bottombtn"
+            android:text="@string/confirmsubmit" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_btn"
+        android:layout_marginTop="@dimen/rightbtnW"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView
+            style="@style/scrollview_comm_havemarginbutton"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:text="@string/safety_productbuy_msgfill_firsttitle"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_default" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="7dp" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:text="@string/loan_apply_city"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/loan_apply_city"
+                        style="@style/comm_view_right"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                     android:paddingLeft="7dp"
+                    android:orientation="horizontal" >
+                   <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:text="@string/loan_apply_type"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/loan_apply_type"
+                        style="@style/comm_view_right"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_default" />
+                  
+                </LinearLayout>
+
+               <TextView
+                   android:id="@+id/loan_tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:text="@string/loan_apply_select_client_message"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_default" />
+               
+               <LinearLayout
+                   android:id="@+id/loan_apply_client_name_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:visibility="gone"
+                     android:paddingLeft="7dp"
+                    android:orientation="horizontal" >
+                   <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:text="@string/epay_treaty_add_confirm_tv_cust_name"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/loan_apply_client_name"
+                        style="@style/comm_view_right"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_default" />
+                  
+                </LinearLayout>
+                
+               <LinearLayout
+                   android:id="@+id/loan_apply_gender_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:visibility="gone"
+                     android:paddingLeft="7dp"
+                    android:orientation="horizontal" >
+                   <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:text="@string/bond_customer_gender"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/loan_apply_gender"
+                        style="@style/comm_view_right"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_default" />
+                  
+                </LinearLayout>
+      
+      
+                <LinearLayout
+                    android:id="@+id/loan_apply_age_value_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:paddingLeft="7dp" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:text="@string/loan_apply_age"
+                        android:textSize="@dimen/textsize_default" />
+                    <TextView
+                        android:id="@+id/loan_apply_age_value"
+                        style="@style/comm_view_right"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+               
+                 <LinearLayout
+                    android:id="@+id/loan_apply_entName_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="left"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:paddingLeft="7dp" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:text="@string/loan_apply_entname"
+                        android:textSize="@dimen/textsize_default" />
+
+                   <TextView
+                        android:id="@+id/loan_apply_entName"
+                        style="@style/comm_view_right"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:id="@+id/loan_apply_officeAddress_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="left"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:paddingLeft="7dp" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:text="@string/loan_apply_officeAddress"
+                        android:textSize="@dimen/textsize_default" />
+
+                   <TextView
+                        android:id="@+id/loan_apply_officeAddress"
+                        style="@style/comm_view_right"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:id="@+id/loan_apply_mainBusiness_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="left"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:paddingLeft="7dp" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:text="@string/loan_apply_mainBusiness"
+                        android:textSize="@dimen/textsize_default" />
+
+                  <TextView
+                        android:id="@+id/loan_apply_mainBusiness"
+                        style="@style/comm_view_right"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:id="@+id/loan_apply_principalName_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="left"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:paddingLeft="7dp" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:text="@string/loan_apply_principalName"
+                        android:textSize="@dimen/textsize_default" />
+
+                  <TextView
+                        android:id="@+id/loan_apply_principalName"
+                        style="@style/comm_view_right"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+              
+                <LinearLayout
+                    android:id="@+id/loan_apply_iphone_value_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:paddingLeft="7dp" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:text="@string/loan_apply_iphone"
+                        android:textSize="@dimen/textsize_default" />
+                    
+                    <TextView
+                        android:id="@+id/loan_apply_iphone_value"
+                        style="@style/comm_view_right"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/loan_apply_emali_value_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:paddingLeft="7dp" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:text="@string/loan_apply_emali"
+                        android:textSize="@dimen/textsize_default" />
+                    <TextView
+                        android:id="@+id/loan_apply_emali_value"
+                        style="@style/comm_view_right"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="@string/loan_apply_loanmessage"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_default" />
+                <LinearLayout
+                    android:id="@+id/loan_apply_house_price_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="7dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/loan_apply_house_price_left"
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:singleLine="true"
+                        android:text="@string/loan_apply_house_price"
+                        android:textSize="@dimen/textsize_default" />
+                     <TextView
+                        android:id="@+id/loan_apply_house_price_value"
+                        style="@style/comm_view_right"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+              
+                <LinearLayout
+                    android:id="@+id/loan_apply_tuitiona_alimony_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="7dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tuitiona_alimony_left"
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:singleLine="true"
+                        android:text="@string/loan_apply_tuitiona_alimony"
+                        android:textSize="@dimen/textsize_default" />
+                      <TextView
+                        android:id="@+id/loan_apply_tuitiona_alimony_value"
+                        style="@style/comm_view_right"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+              
+                 <LinearLayout
+                    android:id="@+id/loan_apply_car_price_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="7dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:text="@string/loan_apply_car_price"
+                        android:textSize="@dimen/textsize_default" />
+                    <TextView
+                        android:id="@+id/loan_apply_car_price_value"
+                        style="@style/comm_view_right"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:id="@+id/loan_apply_currency_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="7dp"
+                    android:visibility="gone"
+                     >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/loan_choise_input_code" />
+
+                    <TextView
+                        android:id="@+id/text_loan_currency"
+                        style="@style/comm_view_right"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+                
+               <LinearLayout
+                    android:id="@+id/loan_amount_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="7dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/loan_amount_left"
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:text="@string/loan_apply_amount"
+                        android:textSize="@dimen/textsize_default" />
+                   <TextView
+                        android:id="@+id/loan_amount_value"
+                        style="@style/comm_view_right"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+              
+               <LinearLayout
+                    android:id="@+id/loan_choise_input_loanPeriod_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="7dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:text="@string/loan_choise_input_loanPeriod"
+                        android:textSize="@dimen/textsize_default" />
+                    <TextView
+                        android:id="@+id/loan_choise_input_loanPeriod_value"
+                        style="@style/comm_view_right"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+                
+               <!--是否提供抵押担保  -->
+               <LinearLayout
+                    android:id="@+id/loan_apply_guaTypeFlag_title"
+                  android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="7dp"
+                    android:visibility="gone"  >
+
+                    <TextView
+                        android:id="@+id/loan_apply_guaTypeFlag_left"
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                         android:singleLine="true"
+                        android:text="@string/loan_apply_pledge_guarantee"
+                        android:textSize="@dimen/textsize_default" />
+                    <TextView
+                        android:id="@+id/loan_apply_guaTypeFlag"
+                        style="@style/comm_view_right"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_default" />
+
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:id="@+id/loan_apply_guarantee_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="7dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:text="@string/loan_apply_guarantee"
+                        android:textSize="@dimen/textsize_default" />
+                    <TextView
+                        android:id="@+id/loan_apply_guarantee"
+                        style="@style/comm_view_right"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+                
+               <LinearLayout
+                    android:id="@+id/loan_apply_buy_house_age_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="7dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                         android:id="@+id/loan_apply_buy_house_age_left"
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:text="@string/loan_apply_buy_house_age"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize_default" />
+                    <TextView
+                        android:id="@+id/loan_apply_buy_house_value"
+                        style="@style/comm_view_right"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+                
+                 <LinearLayout
+                    android:id="@+id/loan_apply_guarantee_way_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp_five"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:text="@string/loan_apply_guarantee_way"
+                        android:textSize="@dimen/textsize_default" />
+                     <TextView
+                        android:id="@+id/loan_apply_guarantee_way"
+                        style="@style/comm_view_right"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+                 
+
+        
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="top"
+                    android:orientation="horizontal"
+                    android:paddingLeft="7dp" >
+
+                    <TextView
+                        android:id="@+id/loan_apply_business_transaction_place_left"
+                        style="@style/textview_common_left_three"
+                        android:text="@string/loan_apply_business_transaction_place_new" />
+
+                    <TextView
+                        android:id="@+id/loan_apply_business_transaction_place"
+                        style="@style/comm_view_right"
+                        android:layout_weight="2"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+               
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="7dp" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="3"
+                        android:text=""
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/titleText_stepacc"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/left_img_width"
+        android:background="@drawable/bg_title"
+        android:gravity="center"
+        android:text="@string/loan_apply_affirm_title"
+        android:textColor="@color/gray_title" />
+
+</RelativeLayout>

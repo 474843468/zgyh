@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 信息提示框 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shap_for_progress"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/modify_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/reset_new_password" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:layout_marginRight="@dimen/fill_margin_right"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/comm_view_left_noweight"
+                android:layout_weight="2"
+                android:text="@string/set_newloginpass" />
+
+            <cfca.mobile.sip.SipBox
+                android:id="@+id/modify_pwd_sip"
+                style="@style/login_edittext"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:maxLength="20" >
+            </cfca.mobile.sip.SipBox>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:layout_marginRight="@dimen/fill_margin_right"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/comm_view_left_noweight"
+                android:layout_weight="2"
+                android:text="@string/set_newloginpassconfrim" />
+
+            <cfca.mobile.sip.SipBox
+                android:id="@+id/modify_pwd_sip_confirm"
+                style="@style/login_edittext"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:maxLength="20" >
+            </cfca.mobile.sip.SipBox>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/layout_height"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:layout_below="@+id/modify_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/confirm_btn"
+            style="@style/dialogbtn"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/set_title_editpass"
+            android:textColor="@color/white" 
+            android:textSize="@dimen/textsize_one_for"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_main_bg_color"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/boc_main_bg_color"
+        android:layout_marginLeft="@dimen/boc_space_between_20px"
+        android:layout_marginRight="@dimen/boc_space_between_20px"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_fundname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="中银薪钱包"
+            android:lines="1"
+            android:layout_marginTop="@dimen/boc_space_between_20px"
+            android:layout_marginLeft="@dimen/boc_space_between_40px"
+            android:textSize="@dimen/boc_text_size_common"
+            android:textStyle="bold"
+            android:textColor="@color/boc_text_color_dark_gray"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/boc_space_between_160px"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/boc_space_between_40px"
+                android:gravity="center_vertical"
+                android:text="基金公司"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small" />
+
+            <TextView
+                android:id="@+id/tv_fundcompany"
+                style="@style/tv_small"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/boc_space_between_50px"
+                android:layout_marginRight="@dimen/boc_space_between_30px"
+                android:gravity="center_vertical"
+                android:maxLines="2" />
+        </LinearLayout>
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.moneyruler.ExactBoundaryMoneyRulerWidget
+            android:id="@+id/ruler_fundmoneyamount"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_320px"
+            android:layout_marginTop="0.5dp"
+            android:background="@color/boc_main_bg_color"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_104px"
+            android:paddingLeft="@dimen/boc_space_between_32px"
+            android:background="@color/boc_common_cell_color"
+            android:paddingRight="@dimen/boc_space_between_30px">
+
+            <TextView
+                android:id="@+id/choice_data_name"
+                android:layout_width="@dimen/boc_space_between_190px"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/choice_data_left_icon"
+                android:gravity="center_vertical"
+                android:lineSpacingExtra="@dimen/boc_space_between_6px"
+                android:textStyle="bold"
+                android:text="执行方式"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_common" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true" android:layout_marginLeft="@dimen/boc_space_between_18px"
+                android:layout_toLeftOf="@+id/choice_data_arrow"
+                android:layout_toRightOf="@+id/choice_data_name"
+                android:gravity="center_vertical|right">
+
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.singlemoreselect.SelectGridView
+                    android:id="@+id/viewSelect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/boc_space_between_20px"
+                    android:layout_marginRight="@dimen/boc_space_between_20px"
+                    android:horizontalSpacing="@dimen/boc_space_between_20px"
+                    android:numColumns="2"
+                    app:radioTrue="true"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+            android:id="@+id/et_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:editChoiceName="指定日期"
+            app:editChoiceNameBold="true"
+            android:visibility="gone"
+            />
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/boc_space_between_20px"
+        android:layout_marginRight="@dimen/boc_space_between_20px"
+        android:layout_marginTop="@dimen/boc_space_between_80px"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/cb_agree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/checkbox_style" />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.ClickableSpan.SpannableString
+            android:id="@+id/ss_agreement"
+            style="@style/tv_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/cb_agree"
+            android:layout_marginLeft="@dimen/boc_space_between_26px"
+            android:layout_toRightOf="@id/cb_agree"
+            android:textColor="@color/boc_text_mobile_color" />
+
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_fund_agreement_hk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:layout_marginTop="@dimen/boc_space_between_80px"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <CheckBox
+                android:id="@+id/cb_hk_agree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/checkbox_style" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.ClickableSpan.SpannableString
+                android:id="@+id/ss_hk_agreement"
+                style="@style/tv_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/cb_hk_agree"
+                android:layout_marginLeft="@dimen/boc_space_between_26px"
+                android:layout_toRightOf="@id/cb_hk_agree"
+                android:textColor="@color/boc_text_mobile_color" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_next"
+            style="@style/BocButton.BocPrimaryButton1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_button_height_88px"
+            android:text="@string/boc_account_next" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                >
+                <!--资金账户-->
+                <TextView
+                    android:id="@+id/tv_account_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="资金账户"
+                    android:textColor="@color/boc_text_color_rest_gray"
+                    android:textSize="@dimen/boc_text_size_small" />
+
+                <TextView
+                    android:id="@+id/tv_security_value"
+                    style="@style/tv_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/boc_text_color_rest_gray"
+                    android:layout_marginRight="@dimen/boc_space_between_20px"
+                    />
+
+                <!--更改按钮-->
+                <Button
+                    android:id="@+id/btn_change"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="更改"
+                    android:paddingLeft="@dimen/boc_space_between_20px"
+                    android:paddingRight="@dimen/boc_space_between_20px"
+                    android:background="@null"
+                    android:textColor="@color/boc_main_button_color"
+                    android:textSize="@dimen/boc_text_size_small"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.ClickableSpan.SpannableString
+                android:id="@+id/ss_balance"
+                style="@style/tv_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可用余额"
+                android:layout_marginBottom="@dimen/boc_space_between_40px"
+                android:layout_marginTop="@dimen/boc_space_between_20px"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>

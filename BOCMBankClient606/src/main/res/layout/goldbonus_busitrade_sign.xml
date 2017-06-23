@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 贵金属积利金 买卖交易 定投预约 确认、结果页面   linyl -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:userProperty="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/goldbonus_fixsign"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <com.chinamworld.bocmbci.userwidget.TitleAndContentLayout
+            android:id="@+id/titleAndContentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <!-- 确认页面标题提示信息 -->
+
+            <LinearLayout
+                android:id="@+id/sign_confirm_info_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="请确认您的预约信息"
+                    android:textColor="@color/fonts_dark_gray"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <!-- 结果页面标题信息 -->
+
+            <LinearLayout
+                android:id="@+id/sign_success_info_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="交易委托已被接受！请您记录交易序号，以便核实交易情况"
+                    android:textColor="@color/fonts_dark_gray"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimen_two_zero"
+                android:paddingBottom="@dimen/dp_five"
+                android:paddingTop="@dimen/dp_five" >
+
+                <LinearLayout
+                    android:id="@+id/myContainerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </ScrollView>
+
+            <!-- 安全工具控件 -->
+
+            <LinearLayout
+                android:id="@+id/ll_smc"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_bottom_height"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_common_left_three"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:gravity="center|right"
+                    android:textColor="@color/boc_text_color_common_gray"
+                    android:text="@string/smc" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="3" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_smc_sip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center" >
+
+                        <cfca.mobile.sip.SipBox
+                            android:id="@+id/sipbox_smc"
+                            style="@style/editext_fill"
+                            android:maxLength="6"
+                            android:textSize="@dimen/textsize_default" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/smsbtn"
+                        style="@style/button_smscode"
+                        android:layout_marginLeft="@dimen/fill_margin_top"
+                        android:layout_marginRight="@dimen/dp_five"
+                        android:gravity="center" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_active_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_common_left_three"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:textColor="@color/boc_text_color_common_gray"
+                    android:text="@string/active_code" />
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="3" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_activecode_sip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:paddingRight="@dimen/dp_five" >
+
+                        <cfca.mobile.sip.SipBox
+                            android:id="@+id/sipbox_active"
+                            style="@style/editext_fill"
+                            android:maxLength="6"
+                            android:textSize="@dimen/textsize_default" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <com.chinamworld.bocmbci.widget.UsbKeyText
+                android:id="@+id/sip_usbkey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                userProperty:MargRight="@dimen/dp_five"
+                userProperty:ShowRate="3:2" />
+             <!-- 定投预约 成功页面 链接-->
+
+            <LinearLayout
+                android:id="@+id/ll_sign_success_href"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/tv_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textsize_default" />
+            </LinearLayout>
+        </com.chinamworld.bocmbci.userwidget.TitleAndContentLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/boc_space_between_20px">
+
+            <Button
+                android:id="@+id/sign_confirm"
+                style="@style/bottombtn_new"
+                android:text="@string/confirm"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/sign_finish"
+                style="@style/bottombtn_new"
+                android:text="@string/finish"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

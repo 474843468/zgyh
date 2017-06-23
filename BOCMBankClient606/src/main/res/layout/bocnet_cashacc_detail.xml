@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/top"
+        android:layout_alignParentTop="true"
+        layout="@layout/bocnet_acc_detail_top" />
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:orientation="horizontal" >
+
+        <Button android:id="@+id/accDetail"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/mycrcd_bill_detail" />
+
+        <Button
+            android:id="@+id/button"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_below="@id/top"
+        android:layout_marginTop="10dip"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_bill_type" />
+
+                    <TextView
+                        android:id="@+id/acct_type"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/bocinvt_eva_name" />
+
+                    <TextView
+                        android:id="@+id/acc_nickname"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+                
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/acc_financeic_accountState" />
+
+                    <TextView
+                        android:id="@+id/acc_status"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        android:id="@+id/tv_bill"
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_bill_code" />
+
+                    <TextView
+                        android:id="@+id/acc_num"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/acc_financeic_eCashUpperLimit" />
+
+                    <TextView
+                        android:id="@+id/eCashUpperLimit"
+                        style="@style/textview_common_right"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/acc_financeic_singleLimit" />
+
+                    <TextView
+                        android:id="@+id/singleLimit"
+                        style="@style/textview_common_right"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/acc_financeic_totalBalance" />
+
+                    <TextView
+                        android:id="@+id/supplyBalance"
+                        style="@style/textview_common_right"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_add_currency"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

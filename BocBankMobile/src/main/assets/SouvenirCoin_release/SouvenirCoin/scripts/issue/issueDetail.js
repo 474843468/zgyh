@@ -1,0 +1,2 @@
+/*! BUILD: 2016-12-19 */
+define(["zepto","common","model","viewcontroller","issueProvince"],function(a,b,c,d){var e=a.extendCls(d,{services:["PsnCoinPubInfoQuery"],ejs:"../SouvenirCoin/views/issue/issueDetail.ejs",onLoadFinish:function(){}});return b.Module.sub({init:function(){this.reserveView=new e({id:"reserveView",el:".stacks",eloper:"html",data:{productId:"",queryType:"0",province:""}}),this.reserveView.load()}})});

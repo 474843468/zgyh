@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 我的信用卡    信用卡详情页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/fill_margin_bottom"
+        android:background="@drawable/message_dialog_bg" >
+
+        <ImageView
+            android:id="@+id/img_exit_accdetail1"
+            android:layout_width="@dimen/dp_for_zero"
+            android:layout_height="@dimen/exit_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@color/transparent_00" />
+
+        <LinearLayout
+            android:id="@+id/ll_beedtype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/img_exit_accdetail1"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_renminbi"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/step_title_height"
+                android:layout_weight="1"
+                android:background="@drawable/acc_top_left"
+                android:text="@string/mycrcd_renmibi"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <Button
+                android:id="@+id/btn_waibi"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/step_title_height"
+                android:layout_weight="1"
+                android:background="@drawable/acc_top_right"
+                android:text="@string/mycrcd_meiyuan"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/step_title_height"
+                android:layout_weight="1" >
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_btnBotom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/fill_margin_bottom"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/fill_margin_top"
+            android:paddingRight="@dimen/fill_margin_top" >
+
+            <Button
+                android:id="@+id/btn_shoukuan"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_bottom_height"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/btn_gray"
+                android:text="@string/mycrcd_bill_receive"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_fukuan"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_bottom_height"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/fill_margin_top"
+                android:layout_weight="1"
+                android:background="@drawable/btn_gray"
+                android:text="@string/mycrcd_bill_payment"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_xinyonghuan"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_bottom_height"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/btn_gray"
+                android:text="@string/mycrcd_credit_huan" />
+
+            <Button
+                android:id="@+id/btn_gohuihuan"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_bottom_height"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/btn_gray"
+                android:text="@string/mycrcd_gohui_huan" />
+
+            <Button
+                android:id="@+id/btn_more"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_bottom_height"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/btn_gray"
+                android:text="@string/more" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_btnBotom"
+            android:layout_below="@+id/ll_beedtype"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="@dimen/fill_padding_top" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_bill_type" />
+
+                    <TextView
+                        android:id="@+id/tv_prodCode_detail"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_bill_name" />
+
+                    <TextView
+                        android:id="@+id/acc_accountnickname_value"
+                        style="@style/textview_common_right"
+                        android:singleLine="true" />
+
+                    <FrameLayout
+                        android:id="@+id/fl_nickname"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:visibility="gone" >
+
+                        <EditText
+                            android:id="@+id/et_acc_nickname"
+                            style="@style/edittext_common_fill"
+                            android:layout_gravity="center_vertical"
+                            android:focusable="true"
+                            android:gravity="center_vertical"
+                            android:imeOptions="actionDone"
+                            android:singleLine="true"
+                            android:textSize="@dimen/textsize_default" >
+                        </EditText>
+
+                        <Button
+                            android:id="@+id/btn_update_nickname"
+                            android:layout_width="@dimen/btn_close_height"
+                            android:layout_height="@dimen/btn_close_height"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_margin="@dimen/edittext_paddinglr"
+                            android:background="@drawable/img_shuru_gou" />
+                    </FrameLayout>
+
+                    <ImageView
+                        android:id="@+id/img_acc_update_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:src="@drawable/icon_bianji"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_bill"
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_bill_code" />
+
+                    <TextView
+                        android:id="@+id/tv_curCode_detail"
+                        style="@style/textview_common_right"
+                        android:singleLine="true" />
+
+                    <Button
+                        android:id="@+id/img_crcd_setup"
+                        android:layout_width="@dimen/btn_bottom_width"
+                        android:layout_height="@dimen/btn_bottom_height"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="right"
+                        android:background="@drawable/btn_red_big"
+                        android:text="@string/mycrcd_setup"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_beedtype1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <Button
+                        android:id="@+id/btn_description_buydetail"
+                        style="@style/crcd_twoRadioButtonLeft"
+                        android:text="@string/mycrcd_renmibi" />
+
+                    <Button
+                        android:id="@+id/btn_buy_buydetail"
+                        style="@style/crcd_twoRadioButtonRight"
+                        android:text="@string/mycrcd_meiyuan" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_billType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mycrcd_bill_seed" />
+
+                    <TextView
+                        android:id="@+id/tv_bill_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_bill_score" />
+
+                    <TextView
+                        android:id="@+id/tv_score"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_bill_all_balance" />
+
+                    <TextView
+                        android:id="@+id/tv_prodTimeLimit_detail"
+                        style="@style/textview_common_right"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_bill_balance" />
+
+                    <LinearLayout
+                        style="@style/textview_common_right"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_buyPrice_detail"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/red" />
+
+                        <TextView
+                            android:id="@+id/tv_buyPrice_name"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gray" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_bill_total_facility" />
+
+                    <TextView
+                        android:id="@+id/tv_applyObj_detail"
+                        style="@style/textview_common_right"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mycrcd_bill_degreeamount" />
+
+                    <TextView
+                        android:id="@+id/tv_status_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mycrcd_bill_avalibleamount" />
+
+                    <TextView
+                        android:id="@+id/tv_prodRisklvl_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_bill_installamount" />
+
+                    <TextView
+                        android:id="@+id/tv_periodical_detail"
+                        style="@style/textview_common_right"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_bill_divided_keyong" />
+
+                    <TextView
+                        android:id="@+id/tv_billdivide_keyong"
+                        style="@style/textview_common_right"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_bill_divided_loanBalanceLimit" />
+
+                    <TextView
+                        android:id="@+id/tv_billdivide_loanBalanceLimit"
+                        style="@style/textview_common_right"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_cun_lixi"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_bill_cun_lixi" />
+
+                    <TextView
+                        android:id="@+id/tv_cun_lixi"
+                        style="@style/textview_common_right"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_lixi_tax"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_bill_cun_lixitax" />
+
+                    <TextView
+                        android:id="@+id/tv_lixitax"
+                        style="@style/textview_common_right"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_exit_accdetail"
+        android:layout_width="@dimen/close_clickarea_height"
+        android:layout_height="@dimen/close_clickarea_height"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@color/transparent_00" />
+
+</RelativeLayout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shap_for_dept_tranlist"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/layout_padding_bottom"
+        android:paddingLeft="@dimen/layout_padding_left_right"
+        android:paddingRight="@dimen/layout_padding_left_right" >
+
+        <LinearLayout
+            android:id="@+id/ll_renmingbi_sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/fill_padding_right" >
+
+            <TextView
+                style="@style/comm_view_left"
+                android:text="@string/bizhong"
+                android:layout_weight="8"  />
+
+            <Spinner
+                android:id="@+id/dept_currency_spinner"
+                style="@style/Spiiner_fill"
+                android:layout_weight="3"
+                android:visibility="gone" />
+            
+             <!-- 人民币 -->
+            <TextView
+                android:id="@+id/tv_renmingbi"
+                style="@style/textview_common_right"
+                android:layout_weight="3"
+                android:text="@string/renmingbi"
+                android:visibility="visible" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/fill_padding_right" >
+
+            <TextView
+                style="@style/comm_view_left"
+                android:text="@string/chaohui"
+                android:layout_weight="8"  />
+
+            <Spinner
+                android:id="@+id/dept_money_mark_spinner"
+                style="@style/Spiiner_fill"
+                android:layout_weight="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/fill_padding_right" >
+
+            <TextView
+                style="@style/comm_view_left"
+                android:text="@string/save_time"
+                android:layout_weight="8"  />
+
+            <Spinner
+                android:id="@+id/dept_save_time_spinner"
+                style="@style/Spiiner_fill"
+                android:layout_weight="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/fill_padding_right" >
+
+            <TextView
+                style="@style/comm_view_left"
+                android:text="@string/save_money"
+                android:layout_weight="8"  />
+
+            <EditText
+                android:id="@+id/dept_save_money_et"
+                style="@style/comm_view_right"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@drawable/bg_for_edittext"
+                android:hint="@string/least_save_money"
+                android:inputType="numberDecimal"
+                android:maxLength="14"
+                android:singleLine="true"
+                android:textColor="@color/black" >
+            </EditText>
+        </LinearLayout>
+        
+        <!-- 转存方式 add by 2016年3月19日 luqp -->
+        <LinearLayout
+            android:id="@+id/ll_promise_way"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/fill_padding_right"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/comm_view_left"
+                android:text="@string/promise_way"
+                android:layout_weight="8" />
+
+            <TextView
+                android:id="@+id/promise_way_type"
+                style="@style/textview_common_right"
+                android:layout_weight="3"
+                android:text="@string/dept_tran_mode" />
+        </LinearLayout>
+        
+        <TextView
+            android:id="@+id/tv_prompts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:paddingLeft="@dimen/fill_padding_right"
+            android:paddingRight="@dimen/fill_padding_right"
+            android:text="@string/mysave_bottom_new"
+            android:textColor="@color/red"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/fill_padding_right" >
+
+            <TextView
+                style="@style/comm_view_left"
+                android:text="@string/fuYan" 
+                android:layout_weight="8" />
+
+            <EditText
+                android:id="@+id/dept_message_et"
+                style="@style/comm_view_right"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@drawable/bg_for_edittext"
+                android:hint="@string/hint_memo"
+                android:maxLength="50"
+                android:singleLine="true"
+                android:textColor="@color/black" >
+            </EditText>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/fill_padding_right"
+            android:paddingRight="@dimen/fill_padding_right"
+            android:text="@string/mysave_bottom"
+            android:textColor="@color/gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/btn_dialog_height"
+        android:layout_marginTop="@dimen/bottom_margin_top"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/dept_nowExe_btn"
+            style="@style/tran_three_btn"
+            android:text="@string/nowExe" />
+
+        <Button
+            android:id="@+id/dept_preDateExe_btn"
+            style="@style/tran_three_btn"
+            android:text="@string/preDateExe" />
+
+        <Button
+            android:id="@+id/dept_prePeriodExe_btn"
+            style="@style/tran_three_btn"
+            android:text="@string/prePeriodExe" />
+    </LinearLayout>
+
+</LinearLayout>

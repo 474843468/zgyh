@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/forex_nextButton"
+            style="@style/textview_forex_button_cell"
+            android:text="@string/next" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/ll_btn"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <TextView
+            style="@style/textview_common"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/isForex_manage_sign_choise"
+            android:textColor="@color/gray" />
+
+        <ListView
+            android:id="@+id/product_list"
+            style="@style/listviewcomm_fill_haveDivider"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin" >
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>

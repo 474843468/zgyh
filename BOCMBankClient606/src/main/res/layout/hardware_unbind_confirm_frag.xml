@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:userProperty="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/hardware_frag_root_layout"
+    android:layout_width="match_parent"
+    android:background="@color/default_bg"
+    android:layout_height="match_parent" >
+    
+     <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="62dp"
+            android:background="@drawable/navbar"
+            android:visibility="gone"
+            android:paddingTop="5dp" >
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/titleText" />
+
+        </RelativeLayout>
+        
+     <RelativeLayout 
+        android:id="@+id/hardware_prompt_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_for_zero"
+        android:layout_below="@+id/title_layout"
+        android:background="@color/white"
+        >
+        
+        <TextView 
+            android:id="@+id/hardware_prompt_info_step01"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            style="@style/hardware_prompt_info"
+            android:layout_toLeftOf="@+id/hardware_arrow_img"
+            android:text="@string/hardware_prompt_info_step01"
+            android:background="@drawable/safety_step1"
+            />
+        
+        <ImageView 
+            android:id="@+id/hardware_arrow_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+        
+        <TextView 
+            android:id="@+id/hardware_prompt_info_step02"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            style="@style/hardware_prompt_info_default"
+            android:layout_toRightOf="@+id/hardware_arrow_img"
+            android:text="@string/hardware_prompt_info_step02"
+            android:background="@drawable/safety_step4"
+            />
+        
+    </RelativeLayout>
+    
+    <View 
+        android:id="@+id/hardware_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_two"
+        android:layout_below="@+id/hardware_prompt_info_layout"
+        android:background="@color/gray_line"
+        />
+    
+    
+    <RelativeLayout 
+        android:id="@+id/hardware_prompt_info_details_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/hardware_line"
+        android:background="@drawable/bg_for_hardware_prompt_info_details"
+        android:layout_marginTop="@dimen/dp_one_for"
+        android:layout_marginLeft="@dimen/dp_one_for"
+        android:layout_marginRight="@dimen/dp_one_for"
+        android:layout_above="@+id/hardware_confirm_btn"
+        >
+        
+         <LinearLayout  
+            android:id="@+id/ll_smc"
+            style="@style/linnerlayout_common"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:layout_below="@+id/hardware_prompt_info_details_text"
+            android:visibility="gone"
+                    >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/safety_tools_setting_trancation_code_des" />
+
+                    <LinearLayout style="@style/textview_common_right" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_smc_sip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <cfca.mobile.sip.SipBox
+                                android:id="@+id/sipbox_smc"
+                                style="@style/editext_fill"
+                                android:maxLength="6"
+                                android:textSize="@dimen/textsize_default" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/smsbtn"
+                            style="@style/button_smscode"
+                            android:layout_marginLeft="@dimen/fill_margin_top"
+                            android:layout_marginRight="@dimen/dp_five"
+                            android:gravity="center" />
+                    </LinearLayout>
+                </LinearLayout>
+        
+        <LinearLayout
+                    android:id="@+id/ll_active_code"
+                    style="@style/linnerlayout_common"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:layout_below="@+id/ll_smc"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/active_code" />
+
+                    <FrameLayout style="@style/textview_common_right">
+
+                        <LinearLayout
+                            android:id="@+id/ll_activecode_sip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:paddingRight="@dimen/dp_five" >
+
+                            <cfca.mobile.sip.SipBox
+                                android:id="@+id/sipbox_active"
+                                style="@style/editext_fill"
+                                android:maxLength="6"
+                                android:textSize="@dimen/textsize_default"/>
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+        
+         <com.chinamworld.bocmbci.widget.UsbKeyText
+                android:id="@+id/hardware_sip_usbkey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_two_zero"
+                android:layout_marginRight="@dimen/dp_seven"
+				android:layout_marginTop="@dimen/dp_three_zero"
+			    android:layout_below="@+id/ll_active_code"
+                android:orientation="horizontal"
+                userProperty:ShowRate="3:2" />
+        
+        
+        <TextView 
+            android:id="@+id/hardware_prompt_info_details_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_for_zero"
+            android:layout_marginLeft="@dimen/dp_two_zero"
+            android:layout_marginRight="@dimen/dp_two_zero"
+            style="@style/hardware_prompt_info"
+            android:text="@string/hardware_unbind_prompt_info"
+            />
+        
+        <TextView 
+            android:id="@+id/hardware_prompt_info_des_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textsize_default"
+            android:text="@string/hardware_bind_machine_dynamic_password"
+            android:layout_marginLeft="@dimen/dp_two_zero"
+            android:layout_alignBottom="@+id/hardware_passwd_et"
+            android:layout_alignTop="@+id/hardware_passwd_et"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            />
+        
+			<cfca.mobile.sip.SipBox 
+			    android:id="@+id/hardware_passwd_et"
+			    android:layout_width="@dimen/dp_one_for_zero"
+			    android:layout_height="@dimen/edittext_height"
+			    android:background="@drawable/bg_for_edittext"
+			    android:layout_marginTop="@dimen/dp_three_zero"
+			    android:layout_below="@+id/hardware_prompt_info_details_text"
+			    android:layout_alignLeft="@+id/hardware_trancation_code_et"
+			    android:visibility="gone"
+			    />
+			
+		<TextView 
+            android:id="@+id/hardware_prompt_info_tran_code_des_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/textsize_default"
+            android:text="@string/hardware_bind_machine_trancation_code"
+            android:layout_alignLeft="@+id/hardware_prompt_info_des_text"
+            android:layout_alignBottom="@+id/hardware_trancation_code_et"
+            android:layout_alignTop="@+id/hardware_trancation_code_et"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            />
+			
+			<cfca.mobile.sip.SipBox 
+			    android:id="@+id/hardware_trancation_code_et"
+			    android:layout_width="@dimen/dp_one_for_zero"
+			    android:layout_height="@dimen/edittext_height"
+			    android:background="@drawable/bg_for_edittext"
+			    android:layout_below="@+id/hardware_passwd_et"
+			    android:layout_marginTop="@dimen/dp_one_zero"
+			    android:layout_toRightOf="@+id/hardware_prompt_info_tran_code_des_text"
+			    android:visibility="gone"
+			    />
+        
+    </RelativeLayout>
+    
+    <Button 
+        android:id="@+id/hardware_confirm_btn"
+		android:layout_marginTop="@dimen/dp_one_zero"
+		android:text="@string/confirm"
+		android:textColor="@color/white"
+		android:layout_above="@+id/hardware_bottom_block"
+		android:textSize="@dimen/textsize_one_five"
+        style="@style/bottombtn"
+        />
+    
+    <View  android:id="@+id/hardware_bottom_block"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_two_zero"
+        android:layout_alignParentBottom="true"
+        />
+    
+
+</RelativeLayout>

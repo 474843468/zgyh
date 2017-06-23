@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 查询结果页面 -->
+
+    <RelativeLayout
+        android:id="@+id/result_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/fill_padding_bottom" >
+		
+        <LinearLayout
+            android:id="@+id/tatale"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible" >
+			 <LinearLayout
+            android:id="@+id/ll_query_condition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/acc_query_horizontal"
+            android:background="@drawable/img_bg_query_j"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/spinner_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fill_padding_left"
+                android:layout_marginRight="@dimen/fill_padding_right"
+                android:layout_marginTop="@dimen/fill_margin_top"
+                android:orientation="vertical" >
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/crcd_two_select" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dp_five_zero"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal" >
+
+                    <Spinner
+                        android:id="@+id/times_spinner"
+                        style="@style/Spiiner_fill"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/fill_margin_right"
+                        android:gravity="center" />
+
+                    <Button
+                        android:id="@+id/search"
+                        style="@style/query_button_style606"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="@dimen/textsize_default"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_upLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingBottom="@dimen/dp_five"
+                android:paddingLeft="@dimen/fill_padding_right"
+                android:paddingRight="@dimen/fill_padding_right" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    style="@style/textview_common_up"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textSize="@dimen/textsize_xiala" />
+
+                <ImageView
+                    android:id="@+id/acc_query_up"
+                    style="@style/query_image_up_style"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/img_arrow_gray_up606" />
+            </LinearLayout>
+        </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/acc_query_result_condition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/img_bg_query_no"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fill_padding_top"
+                    android:paddingTop="@dimen/fill_margin_top" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/queryTimeAlert"
+                            style="@style/bond_textview_common_outlay_detail606"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/acc_query_date" />
+
+                        <TextView
+                            android:id="@+id/queryTime"
+                            style="@style/outlay_textview_label1606"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/xiala_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/dp_five"
+                    android:paddingRight="@dimen/fill_padding_right" >
+
+                    <TextView
+                        style="@style/textview_common_down"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textSize="@dimen/textsize_xiala" />
+
+                    <ImageView
+                        android:id="@+id/img_acc_query_back"
+                        style="@style/query_image_up_style"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:src="@drawable/img_arrow_gray_down606" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/crcd_choserl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/acc_query_result_condition"
+                android:paddingBottom="@dimen/fill_margin_top"
+                android:paddingLeft="@dimen/dp_three_zero"
+                android:paddingRight="@dimen/dp_three_zero"
+                android:paddingTop="@dimen/fill_padding_bottom" >
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/rb1"
+                        style="@style/new606_radioButtonLeft"
+                        android:checked="true"
+                        android:textSize="@dimen/textsize_one_two"
+                        android:layout_height="@dimen/dp_three_zero"
+                        android:text="@string/finc_myfinc_balanceInfo" />
+
+                    <RadioButton
+                        android:id="@+id/rb2"
+                        android:textSize="@dimen/textsize_one_two"
+                        android:layout_height="@dimen/dp_three_zero"
+                        style="@style/new606_radioButtonRight"
+                        android:text="@string/finc_myfinc_tradeTrasaction" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/list_view_finc"
+                style="@style/finc_linnerlayout_qury"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/crcd_choserl" >
+
+                <include layout="@layout/finc_listheader_attention" />
+
+                <ListView
+                    android:id="@+id/fundStateBalanResult"
+                    style="@style/finc_listview_fill" >
+                </ListView>
+
+                <ListView
+                    android:id="@+id/fundTransSaction"
+                    style="@style/finc_listview_fill" >
+                </ListView>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/mianze"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:padding="@dimen/dp_one_zero"
+        android:text="@string/finc_myfinc_fundStatement_disclaimer"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/textsize_one_two"
+        android:visibility="visible" />
+
+    <!-- 查询条件 -->
+
+</FrameLayout>

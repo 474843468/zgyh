@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_for_listview_item_write" >
+
+    <TextView
+        android:id="@+id/text_tip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:gravity="center"
+        android:paddingLeft="@dimen/fill_padding_top"
+        android:text="@string/plps_prepaid_choose"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/textsize_default" />
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:onClick="resetOnclick"
+            android:text="@string/plps_prepaid_reset"
+            android:textColor="@color/white" />
+
+        <Button
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:onClick="queryOnclick"
+            android:text="@string/plps_query_name"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn_layout"
+        android:layout_below="@id/text_tip"
+        android:orientation="vertical" >
+
+        <LinearLayout style="@style/linnerlayout_common" >
+
+            <TextView
+                style="@style/textview_common_left"
+                android:layout_weight="1"
+                android:text="@string/plps_prepaid_type" />
+
+            <Spinner
+                android:id="@+id/cardtype"
+                style="@style/Spiiner_fill"
+                android:layout_width="fill_parent"
+                android:layout_gravity="left"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:paddingRight="30dip" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/linnerlayout_common" >
+
+            <TextView
+                style="@style/textview_common_left"
+                android:layout_weight="1"
+                android:text="@string/plps_prepaid_cardnum" />
+
+            <EditText
+                android:id="@+id/cardname"
+                style="@style/edittext_common_fill"  
+                android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                android:hint="请输入" 
+                android:inputType="number"
+                android:maxLength="19"/>
+        </LinearLayout>
+
+        <LinearLayout style="@style/linnerlayout_common" >
+
+            <TextView
+                style="@style/textview_common_left"
+                android:layout_weight="1"
+                android:text="@string/plps_prepsid_password" />
+
+            <!--
+               <EditText 
+               android:id="@+id/password"
+                style="@style/edittext_common_fill"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                android:hint="请输入"
+                android:password="true"
+                android:maxLength="6"
+                android:inputType="number" />
+
+            -->
+
+            <cfca.mobile.sip.SipBox
+                android:id="@+id/password"
+                style="@style/edittext_common_fill"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                android:hint="请输入"
+                android:maxLength="6"
+                android:password="true" >
+            </cfca.mobile.sip.SipBox>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

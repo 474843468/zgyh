@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 我的账户贵金属 首页 xyl -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/common_bottom_padding_new" >
+
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/common_row_margin"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left" >
+
+        <TextView
+            android:id="@+id/prms_acc_number"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_left"
+            android:background="@drawable/prms_myacc_bg1"
+            android:gravity="center"
+            android:textSize="@dimen/textsize_default" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerLayout"
+        android:layout_marginTop="@dimen/common_listview_item_paddingLR_fu"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/fill_margin_left"
+        android:paddingRight="@dimen/fill_margin_left"
+        android:paddingTop="@dimen/common_row_margin_half" >
+
+        <TextView
+            android:id="@+id/prms_acc_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin_half"
+            android:text="@string/prms_acc_info1"
+            android:textSize="@dimen/textsize_step4" />
+
+        <ListView
+            android:id="@+id/gridView1"
+            style="@style/listviewcomm_fill_noDivider"
+            android:layout_marginTop="@dimen/common_row_margin_half"
+            android:visibility="gone" >
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/prms_noavaliblebalance_ll"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="@dimen/common_row_margin"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <TextView android:id="@+id/no_banlance_alert"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="您的账户暂无余额!" 
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_wuyue" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

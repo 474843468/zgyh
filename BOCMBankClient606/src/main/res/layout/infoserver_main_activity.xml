@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_right" >
+
+            <LinearLayout
+                android:id="@+id/layout_message"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/step_title_height"
+                android:orientation="horizontal" >
+
+                <RelativeLayout
+                    android:id="@+id/layout_system"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_left_selector" >
+
+                    <TextView
+                        android:id="@+id/btn_system"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/system_message"
+                        
+                        android:textSize="@dimen/textsize_one_two" />
+
+                    <View
+                        android:id="@+id/view_system"
+                        android:layout_width="@dimen/rightbtnH"
+                        android:layout_height="@dimen/rightbtnH"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/btn_system"
+                        android:background="@drawable/img_qipao"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_system"
+                        android:layout_width="@dimen/rightbtnH"
+                        android:layout_height="@dimen/rightbtnH"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/btn_system"
+                        android:background="@drawable/more_info_prompt"
+                        android:visibility="gone" 
+                        android:textColor="@color/white"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_new"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_middle_selector" >
+
+                    <TextView
+                        android:id="@+id/btn_new"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/new_message"
+                        android:textSize="@dimen/textsize_one_two" />
+
+                    <TextView
+                        android:id="@+id/tv_new"
+                        android:layout_width="@dimen/rightbtnH"
+                        android:layout_height="@dimen/rightbtnH"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/btn_new"
+                        android:background="@drawable/more_info_prompt"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="10dp"
+                         android:visibility="gone"
+                         />
+
+                    <View
+                        android:id="@+id/view_new"
+                        android:layout_width="@dimen/rightbtnH"
+                        android:layout_height="@dimen/rightbtnH"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/btn_new"
+                        android:background="@drawable/img_qipao"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_vip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_right_selector" >
+
+                    <TextView
+                        android:id="@+id/btn_vip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/vip_message"
+                        android:textSize="@dimen/textsize_one_two" />
+
+                    <View
+                        android:id="@+id/view_vip"
+                        android:layout_width="@dimen/rightbtnH"
+                        android:layout_height="@dimen/rightbtnH"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@+id/btn_vip"
+                        android:background="@drawable/img_qipao"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tv_vip"
+                        android:layout_width="@dimen/rightbtnH"
+                        android:layout_height="@dimen/rightbtnH"
+                        android:layout_alignParentTop="true"
+                        android:layout_toRightOf="@id/btn_vip"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:textSize="10dp"
+                        android:background="@drawable/more_info_prompt"
+                         android:visibility="gone"
+                         />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/content_root"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <com.chinamworld.bocmbci.widget.CustomViewPager
+                android:id="@+id/pager"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/arrow_up"
+                android:background="@drawable/bg_for_listview_item_write" />
+
+            <View
+                android:id="@+id/arrow_up"
+                android:layout_width="30dp"
+                android:layout_height="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="-2dp"
+                android:background="@drawable/arrow_up" >
+            </View>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

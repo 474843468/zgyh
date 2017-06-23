@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 第三方存管 台账查询界面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/third_platforacct_query_condition_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/third_platforacct_query_condition"
+        />
+
+    <LinearLayout
+        android:id="@+id/acc_query_result_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/acc_query_result_condition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_qury1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/fill_padding_left"
+                android:paddingRight="@dimen/fill_padding_right"
+                android:paddingTop="@dimen/fill_padding_top" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/bond_tv_15_gray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cecurity_trade_account" />
+
+                        <TextView
+                            android:id="@+id/tv_cecurity_account"
+                            style="@style/bond_textview_15_black_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/bond_tv_15_gray"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/query_date_space" />
+
+                    <TextView
+                        android:id="@+id/tv_acc_query_date"
+                        style="@style/bond_textview_15_black_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/fill_padding_left"
+                android:paddingRight="@dimen/fill_padding_right" >
+
+                <TextView
+                    style="@style/textview_common_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/common_paixuWH"
+                    android:gravity="right|bottom" />
+
+                <ImageView
+                    style="@style/query_image_up_style"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/img_arrow_gray_down" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/lyt_query_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/fill_margin_bottom"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_right"
+            android:background="@drawable/bg_for_listview_item_write" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/bg_for_listview_item_write"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/ll_list_header"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/btn_bottom_height"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/bond_tv_15_gray"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/query_time" />
+
+                    <TextView
+                        style="@style/bond_tv_15_gray"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/third_currency" />
+
+                    <TextView
+                        style="@style/bond_tv_15_gray"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/third_trade_mny" />
+
+                    <ImageView
+                        android:id="@+id/im_arrw"
+                        style="@style/rightbtn_jiantou"
+                        android:layout_weight="0"
+                        android:background="@drawable/right_arrow"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/tv_gray_line"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
+
+                <com.chinamworld.bocmbci.widget.LoadMoreListView
+                    android:id="@+id/lv_result_list"
+                    style="@style/listviewcomm_wrap_gray_divider"
+                    android:listSelector="@android:drawable/list_selector_background" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_cecurity_info_prompt"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="@dimen/fill_margin_bottom"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_right"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:padding="@dimen/fill_padding"
+        android:text="@string/cecurity_info_prompt"
+        android:textColor="@color/gray"
+        android:visibility="gone" />
+
+</LinearLayout>

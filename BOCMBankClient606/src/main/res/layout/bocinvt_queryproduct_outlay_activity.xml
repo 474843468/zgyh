@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 功能外置 中银理财  查询以及结果页面  sunh -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_query_result"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/ll_query_condition"
+       android:background="@color/white"
+        android:orientation="vertical" 
+       android:visibility="gone"
+    >
+
+        <LinearLayout
+            android:id="@+id/sort_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/common_row_margin" 
+            android:gravity="center_vertical"
+            >
+  			<TextView
+                android:id="@+id/sort_yearlyrr"
+                style="@style/textview_common"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/common_row_margin"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="sortByYearRROnclick"
+                android:text="年收益率/单位净值" />
+            <TextView
+                android:id="@+id/sort_limit"
+                style="@style/textview_common"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_row_margin"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="sortByLimitOnclick"
+                android:text="产品期限" />
+
+            <TextView
+                android:id="@+id/sort_buystartingamount"
+                style="@style/textview_common"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/common_row_margin"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="sortByBuyAmoutOnclick"
+                android:text="起购金额" />
+
+          
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/boci_query_list"
+            style="@style/listviewcomm_wrap_haveDivider"
+            android:layout_marginBottom="@dimen/fill_margin_bottom"
+          
+            android:visibility="gone" >
+        </ListView>
+
+        <ListView
+            android:id="@+id/fast_query_list"
+            style="@style/listviewcomm_wrap_haveDivider"
+            android:layout_marginBottom="@dimen/fill_margin_bottom"
+           
+            android:visibility="gone" >
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_query_condition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <include layout="@layout/bocinvt_queryproduct_outlay_condition" />
+    </LinearLayout>
+
+</RelativeLayout>

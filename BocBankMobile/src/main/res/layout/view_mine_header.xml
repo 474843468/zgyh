@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mine_header_bg"
+>
+   <ImageView
+       android:id="@+id/iv_bg"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_marginLeft="12dp"
+       android:layout_marginRight="12dp"
+       android:layout_centerInParent="true"
+       />
+
+   <TextView
+       android:id="@+id/view_right_bg"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignTop="@+id/iv_photo"
+       android:layout_alignBottom="@id/iv_photo"
+       android:layout_toRightOf="@id/iv_photo"
+       android:layout_marginRight="12dp"
+       android:textSize="@dimen/boc_text_size_very_small"
+       android:textColor="@color/bocroa_white"
+       android:layout_marginLeft="4dp"
+   />
+   <com.boc.bocsoft.mobile.bocmobile.buss.system.mine.ui.view.CircleImageView
+       android:id="@id/iv_photo"
+       android:layout_width="30dp"
+       android:layout_height="30dp"
+       android:layout_centerInParent="true"
+       app:border_color="#ffffff"
+       app:border_width="1dp"
+   />
+   <TextView
+       android:id="@+id/tv_left"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center_vertical"
+       android:paddingLeft="12dp"
+       android:textColor="#ffffff"
+       android:textStyle="bold"
+       android:textSize="@dimen/boc_text_size_small"
+       android:layout_centerVertical="true"
+       android:layout_toLeftOf="@id/iv_photo"
+       android:layout_marginLeft="10dp"
+       android:paddingRight="20dp"
+       android:maxLines="1"
+       android:ellipsize="end"
+       android:clickable="true"
+       android:focusable="true"
+   />
+
+   <TextView
+       android:id="@+id/tv_login"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_centerHorizontal="true"
+       android:textColor="#ffffff"
+       android:textSize="15sp"
+       android:paddingLeft="30dp"
+       android:paddingRight="30dp"
+       android:minHeight="30dp"
+       android:text="登录"
+       android:layout_alignParentBottom="true"
+       android:background="@drawable/mine_photo_right"
+       android:gravity="center"
+       android:layout_marginBottom="8dp"
+       android:visibility="gone"
+   />
+
+</RelativeLayout>

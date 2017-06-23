@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:background="@color/pale_red"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="6dip"
+        android:paddingTop="6dip" >
+
+        <TextView
+            style="@style/comm_view_left"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/remittance_info_input_remitter_tip"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_default" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/common_row_margin"
+        android:layout_marginRight="@dimen/common_row_margin"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Spinner
+                android:id="@+id/sp_payAcct"
+                style="@style/Spiiner_fill"
+                android:layout_width="match_parent"
+                android:layout_marginRight="@dimen/common_listview_item_paddingLR" />
+
+            <Button
+                android:id="@+id/btn_accDetail"
+                android:layout_width="@dimen/query_btn_width"
+                android:layout_height="@dimen/step_title_height"
+                android:layout_marginLeft="@dimen/fill_margin_top"
+                android:background="@drawable/btn_chaxun_bg"
+                android:drawablePadding="-10dp"
+                android:text="@string/boci_acctdetail_titlelist"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="您可点击 "
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <TextView
+                android:id="@+id/tv_there"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/remittance_here"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/textsize_default" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text=" 购买外汇"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/common_row_margin" >
+
+            <TextView
+                android:id="@+id/tv_keyForName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:singleLine="true"
+                android:text="@string/remittance_info_input_remitter_name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <Button
+                android:id="@+id/btn_use_template"
+                android:layout_width="@dimen/query_btn_width"
+                android:layout_height="@dimen/step_title_height"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/fill_margin_top"
+                android:background="@drawable/btn_chaxun_bg"
+                android:drawablePadding="-10dp"
+                android:text="@string/remittance_info_input_remitter_use_template"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@id/btn_use_template"
+                android:layout_toRightOf="@id/tv_keyForName"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+        </RelativeLayout>
+
+        
+        <!-- 名称 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/remittance_info_input_name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <EditText
+                android:id="@+id/et_name"
+                style="@style/edittext_common_fill"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dip"
+                android:gravity="center_vertical"
+                android:maxLength="35"
+                android:hint="请输入汇款人名称（英文或拼音）"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+        </LinearLayout>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:text="请与汇款账户的户名保持一致，如不一致将影响您的款项顺利汇出"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_default" />
+        <!-- 地址 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/remittance_info_input_adress"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <EditText
+                android:id="@+id/et_adress"
+                style="@style/edittext_common_fill"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dip"
+                android:gravity="center_vertical"
+                android:maxLength="88"
+                android:hint="No.1,Fuxingmen Nei Dajie,Beijing"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="CHINA"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:text="请填写详细地址，须包括省/直辖市/自治区，且必须详细到门牌号，否则将影响您的款项顺利汇出。"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_default" />
+        <!-- 邮编 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/bocinvt_eva_postcode"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+
+            <EditText
+                android:id="@+id/et_post"
+                style="@style/edittext_inputNumber_fill"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dip"
+                android:gravity="center_vertical"
+                android:hint="请输入汇款人邮编"
+                android:inputType="number"
+                android:maxLength="6"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+        </LinearLayout>
+        <!-- 电话 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/bocinvt_eva_phone"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+			<!-- android:digits="1234567890" -->
+            <EditText
+                android:id="@+id/et_phone"
+                style="@style/edittext_common_fill"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dip"
+                android:gravity="center_vertical"
+                android:maxLength="15"
+                android:hint="请输入汇款人联系电话"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

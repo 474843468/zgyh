@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/message_dialog_bg" >
+
+        <ImageView
+            android:id="@+id/img_exit_accdetail_1"
+            android:layout_width="@dimen/btn_dialog_height"
+            android:layout_height="@dimen/btn_dialog_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@color/transparent_00" />
+		<LinearLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:gravity="center"
+		    android:layout_marginTop="@dimen/common_row_margin_half">
+		    <TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="@dimen/btn_close_height"
+		        android:gravity="center"
+		        android:text="@string/remittance_choose_payee_bank"
+		        android:textColor="@color/black"
+		        android:textStyle="bold"/>
+		</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/img_exit_accdetail_1"
+            android:layout_toLeftOf="@+id/img_exit_accdetail_1"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_close_height"
+                android:layout_marginLeft="@dimen/fill_margin_top"
+                android:src="@drawable/icon_huoqi" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_close_height"
+                android:layout_marginLeft="@dimen/fill_margin_top"
+                android:src="@drawable/icon_guijinshu" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/img_exit_accdetail_1"
+            android:layout_marginRight="@dimen/fill_margin_right_fordialog"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/btn_query"
+                    android:layout_width="@dimen/dp_six_zero"
+                    android:layout_height="@dimen/step_title_height"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/btn_chaxun_bg"
+                    android:drawablePadding="-10dp"
+                    android:text="@string/query"
+                    android:textColor="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/btn_query"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <!-- SWIFT代码 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:singleLine="true"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="@dimen/common_row_margin"
+                            android:text="@string/remittance_info_input_swiftCode"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <EditText
+                            android:id="@+id/et_swiftCode"
+                            style="@style/edittext_common_fill"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="5dip"
+                            android:maxLength="11"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                    <!-- 银行名称 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:singleLine="true"
+                            android:layout_weight="1"
+                            android:layout_marginLeft="@dimen/common_row_margin"
+                            android:text="@string/tran_shishi_bankname"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <EditText
+                            android:id="@+id/et_bankname"
+                            style="@style/edittext_common_fill"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginRight="5dip"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/listview"
+                style="@style/listviewcomm_wrap_haveDivider"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:background="@drawable/bg_for_listview_item_write"
+                android:divider="@null"
+                android:scrollbars="none" >
+            </ListView>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_exit_accdetail"
+        android:layout_width="@dimen/close_clickarea_width"
+        android:layout_height="@dimen/close_clickarea_height"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@color/transparent_00" />
+
+</RelativeLayout>

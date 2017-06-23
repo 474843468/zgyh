@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color">
+
+    <include layout="@layout/boc_divide_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_divider_1px"
+        android:layout_alignParentBottom="true"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/boc_divider_1px"
+        android:layout_marginBottom="40dp"
+        android:fillViewport="true"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="45dp"
+            android:orientation="vertical">
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableHead
+                android:id="@+id/validDetailHead"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailContentView
+                android:id="@+id/validDetailRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/fundetailq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/funddetailend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="15dp"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/funddetailbut"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:background="@color/boc_common_cell_color">
+
+        <TextView
+            android:id="@+id/fundStop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/boc_text_color_red"
+            android:textSize="15dp"
+            android:text="@string/boc_fundvalid_bntstop"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="45dp"
+            android:background="@color/boc_common_bg_color"/>
+
+        <TextView
+            android:id="@+id/fundCancelorder"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/boc_text_color_red"
+            android:textSize="15dp"
+            android:text="@string/boc_fundvalid_bntcancelorder"/>
+        
+        <TextView
+            android:id="@+id/fundUpdate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            android:background="@color/boc_text_color_red"
+            android:textColor="@color/boc_common_cell_color"
+            android:text="@string/boc_fundvalid_bntupdata"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fundbntPause"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:background="@color/boc_common_cell_color"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/fundCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/boc_text_color_red"
+            android:textSize="15dp"
+            android:text="@string/boc_fundvalid_bntcancelorder"/>
+
+        <TextView
+            android:id="@+id/fundStart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            android:background="@color/boc_text_color_red"
+            android:textColor="@color/boc_common_cell_color"
+            android:text="@string/boc_fundvalid_bntstart"/>
+    </LinearLayout>
+</RelativeLayout>

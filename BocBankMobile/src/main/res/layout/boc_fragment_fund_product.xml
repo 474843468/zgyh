@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.boc.bocsoft.mobile.bocmobile.base.widget.SlipMenu.SlipDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--内容布局-->
+    <!--因涉及到悬浮标题以下内容分层显示-->
+    <FrameLayout
+        android:id="@+id/flyBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/boc_common_bg_color">
+
+        <!--最下层： list列表-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/boc_titlebar_height"
+            android:orientation="vertical">
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullToRefreshLayout
+                android:id="@+id/pull_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullableListView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:listSelector="@android:color/transparent"
+                    android:dividerHeight="@dimen/boc_space_between_px"
+                    android:overScrollMode="never"
+                    android:scrollbars="none" />
+
+                <include layout="@layout/boc_load_more" />
+            </com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullToRefreshLayout>
+        </LinearLayout>
+
+        <!--倒数第二层：登陆以及市值部分、搜索框、基金类型选择、列表标题-->
+        <LinearLayout
+            android:id="@+id/llyContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--登陆、市值部分-->
+            <include layout="@layout/boc_fragment_fund_product_content"
+                android:id="@+id/layoutProductContent"/>
+
+            <include layout="@layout/boc_divide_line"/>
+            <!--搜索框 筛选部分-->
+            <include layout="@layout/boc_fragment_fund_search" />
+            <!--基金类型选择，列表标题头； 因类型选择可展开，展开时要挡住底部-->
+            <FrameLayout
+                android:id="@+id/flyFundTypeAndTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--标题-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/boc_space_between_76px"
+                    android:orientation="vertical">
+                    <include layout="@layout/boc_divide_line" />
+                    <com.boc.bocsoft.mobile.bocmobile.buss.fund.fundproduct.home.ui.FundProductTitleView
+                        android:id="@+id/viewFundProductTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </com.boc.bocsoft.mobile.bocmobile.buss.fund.fundproduct.home.ui.FundProductTitleView>
+                    <include layout="@layout/boc_divide_line" />
+                </LinearLayout>
+
+                <!--基金类型选择-->
+                <com.boc.bocsoft.mobile.bocmobile.buss.fund.fundproduct.home.ui.FundTypeSelectView
+                    android:id="@+id/viewSelectFundType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </com.boc.bocsoft.mobile.bocmobile.buss.fund.fundproduct.home.ui.FundTypeSelectView>
+            </FrameLayout>
+        </LinearLayout>
+
+        <!--标题 + 推荐-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_titlebar_height">
+                <!--标题背景-->
+                <FrameLayout
+                    android:id="@+id/flyHeaderBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:alpha="1"></FrameLayout>
+                <!--标题栏-->
+                <com.boc.bocsoft.mobile.framework.widget.TitleBarView
+                    android:id="@+id/title_view"
+                    android:layout_width="match_parent"
+                    app:barBackground="@color/transparent"
+                    android:layout_height="@dimen/boc_titlebar_height" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/llyRecBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/boc_space_between_30px"
+                android:paddingRight="@dimen/boc_space_between_20px"
+                android:visibility="gone"
+                android:background="@color/boc_bg_color_yellow_fund_rec"
+                android:orientation="vertical">
+                <include layout="@layout/boc_divide_line"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingTop="@dimen/boc_space_between_10px"
+                    android:paddingBottom="@dimen/boc_space_between_10px">
+
+                    <ImageView
+                        android:id="@+id/imvRecLeftIcon"
+                        android:layout_width="@dimen/boc_space_between_40px"
+                        android:layout_height="@dimen/boc_space_between_40px"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/boc_tip_icon"/>
+
+                    <ImageView
+                        android:id="@+id/imvRecCloseIcon"
+                        android:layout_width="@dimen/boc_space_between_40px"
+                        android:layout_height="@dimen/boc_space_between_40px"
+                        android:padding="@dimen/boc_space_between_8px"
+                        android:layout_alignParentRight="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/boc_btn_close"/>
+
+                    <TextView
+                        android:id="@+id/tvFundRecDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/imvRecCloseIcon"
+                        android:layout_toRightOf="@+id/imvRecLeftIcon"
+                        android:layout_marginLeft="@dimen/boc_space_between_20px"
+                        android:layout_marginRight="@dimen/boc_space_between_20px"
+                        android:textColor="@color/boc_text_color_common_gray"
+                        android:textSize="@dimen/boc_text_size_small"
+                        android:text="基金经理向您推荐了产品，请查看"/>
+
+                </RelativeLayout>
+                <include layout="@layout/boc_divide_line"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <!--筛选菜单-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:clickable="true">
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.selectview.selecttype.SelectTypeView
+            android:id="@+id/select_type"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+        <com.boc.bocsoft.mobile.bocmobile.buss.fund.fundproduct.home.ui.FundCompanySelectView
+            android:id="@+id/viewFundCompanySel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+        </com.boc.bocsoft.mobile.bocmobile.buss.fund.fundproduct.home.ui.FundCompanySelectView>
+    </FrameLayout>
+
+</com.boc.bocsoft.mobile.bocmobile.base.widget.SlipMenu.SlipDrawerLayout>

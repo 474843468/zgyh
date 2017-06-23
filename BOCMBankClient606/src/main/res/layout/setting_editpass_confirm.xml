@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 服务设定 修改登录密码确认  xyl -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/set_btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/set_editpass_confirm"
+            style="@style/bottombtn"
+            android:text="@string/confirm"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <ScrollView
+        style="@style/scrollview_comm"
+        android:layout_above="@id/set_btn_layout"
+        android:layout_marginBottom="@dimen/common_row_margin" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/common_details_messages_paddingtop" >
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+            <LinearLayout
+                android:id="@+id/set_smc_layout"
+                style="@style/linnerlayout_common"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:text="@string/set_smc" />
+
+                <LinearLayout
+                    style="@style/confirm_right_textview_style"
+                    android:orientation="horizontal" >
+
+                    <cfca.mobile.sip.SipBox
+                        android:id="@+id/set_smc_edit"
+                        style="@style/editext_fill"
+                        android:maxLength="6" />
+
+                    <Button
+                        android:id="@+id/set_get"
+                        style="@style/button_smscode"
+                        android:layout_marginLeft="@dimen/common_listview_item_paddingLR" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/set_otp_layout"
+                style="@style/linnerlayout_common"
+                 android:visibility="gone">
+
+                <TextView
+                    style="@style/input_left_textview_style"
+                    android:text="@string/set_otp" />
+
+                <cfca.mobile.sip.SipBox
+                    android:id="@+id/set_otp_edit"
+                    style="@style/editext_fill"
+                    android:maxLength="6" />
+            </LinearLayout>
+
+            <com.chinamworld.bocmbci.widget.UsbKeyText
+                android:id="@+id/sip_usbkey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:layout_marginRight="@dimen/common_row_margin_half"
+                android:gravity="center"
+                android:orientation="horizontal" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

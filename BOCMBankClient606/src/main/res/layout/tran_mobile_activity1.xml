@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:fadingEdge="none"
+    android:scrollbars="none"
+    tools:context=".biz.acc.relevanceaccount.AccCreditCardConfirmActivity" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical" >
+
+        <!-- 转出账户 -->
+
+        <LinearLayout
+            android:id="@+id/accout_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_acc_out_2dimen_scan_write"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" >
+
+                <ImageView
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:src="@drawable/tran_acc_out_person" />
+
+                <TextView
+                    style="@style/textview_for_list"
+                    android:layout_width="80dip"
+                    android:layout_height="20dip"
+                    android:layout_marginLeft="5dip"
+                    android:gravity="bottom"
+                    android:text="@string/tran_acc_out_person" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_acc_out_mytransfer"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/card_new_height"
+                android:background="@drawable/img_card_new" >
+
+                <LinearLayout
+                    android:id="@+id/dept_out_info_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:text="@string/tran_please_choose_out"
+                    android:textColor="@color/card_text"
+                    android:textSize="@dimen/textsize_two_zero" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_acc_out_list_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/shap_for_dept_tranlist"
+                android:visibility="gone" >
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/dept_add_new_tranout_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/tran_acc_bottom"
+                android:gravity="center"
+                android:text="@string/add_new_tranout"
+                android:visibility="gone" />
+        </LinearLayout>
+        <!-- 转入账户 -->
+
+        <LinearLayout
+            android:id="@+id/accin_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_acc_in_2dimen_scan_write"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal" >
+
+                <ImageView
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:src="@drawable/tran_acc_in_person" />
+
+                <TextView
+                    style="@style/textview_for_list"
+                    android:layout_width="80dip"
+                    android:layout_height="20dip"
+                    android:layout_marginLeft="5dip"
+                    android:gravity="bottom"
+                    android:text="@string/tran_acc_in_person" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_acc_in_mytransfer"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/card_new_height"
+                android:layout_marginTop="@dimen/dp_five"
+                android:background="@drawable/img_card_new"
+                android:paddingBottom="@dimen/dp_five"
+                android:paddingLeft="@dimen/dp_five"
+                android:paddingRight="@dimen/dp_five"
+                android:paddingTop="@dimen/dp_five" >
+
+                <LinearLayout
+                    android:id="@+id/dept_in_info_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="2"
+                            android:gravity="right"
+                            android:text="@string/payeeMobile"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_one_two" />
+
+                        <EditText
+                            android:id="@+id/tran_in_mobile"
+                            style="@style/edittext_inputNumber_fill"
+                            android:layout_height="fill_parent"
+                            android:maxLength="15"
+                            android:paddingLeft="@dimen/layout_margin_top" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="@dimen/layout_margin_top"
+                        android:layout_weight="1" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="2"
+                            android:gravity="right"
+                            android:text="@string/mobile_tran_payeeName"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_one_two" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="1" >
+
+                            <EditText
+                                android:id="@+id/tran_in_name"
+                                style="@style/edittext_common_fill"
+                                android:layout_height="fill_parent"
+                                android:paddingLeft="@dimen/layout_margin_top"
+                                android:textColor="@color/black" />
+
+                            <Button
+                                android:id="@+id/btn_add_contract"
+                                android:layout_width="@dimen/main_icon_width"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/layout_margin_top"
+                                android:background="@drawable/tran_contants"
+                                android:textColor="@color/black" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_acc_in_list_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:background="@drawable/shap_for_dept_tranlist"
+                android:visibility="gone" >
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/dept_add_new_tranin_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/tran_acc_bottom"
+                android:gravity="center"
+                android:text="@string/add_new_tranin"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dept_save_regular_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:orientation="vertical" >
+
+            <!-- 下标题 -->
+
+            <TextView
+                android:id="@+id/dept_save_title_tv"
+                style="@style/tran_little_title_tv"
+                android:text="@string/mobile_trans" />
+
+            <LinearLayout
+                style="@style/tran_little_card_content_ll"
+                android:background="@color/white" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_height"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/fill_padding_right" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/layout_height"
+                        android:layout_weight="1"
+                        android:gravity="center|left"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="@string/bizhong"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_one_three" />
+
+                        <TextView
+                            android:id="@+id/tv_commBoc_currency_tranSeting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="@string/tran_currency_rmb"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_one_three" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/layout_height"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="@string/cashRemit"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_one_three" />
+
+                        <TextView
+                            android:id="@+id/tv_commBoc_cashRemit_tranSeting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="-"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_one_three" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/fill_padding_right" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:text="@string/transferAmount" />
+
+                    <EditText
+                        android:id="@+id/et_commBoc_transferAmount_tranSeting"
+                        style="@style/edittext_input_numberDecimal_fill"
+                        android:layout_weight="3"
+                        android:maxLength="14"
+                        android:textColor="@color/black" >
+                    </EditText>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_for_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_five"
+                    android:gravity="right"
+                    android:paddingRight="@dimen/fill_padding_right"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textsize_one_three"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/fill_padding_right" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:text="@string/attach_message" />
+
+                    <EditText
+                        android:id="@+id/et_commBoc_remark_tranSeting"
+                        style="@style/edittext_common_fill"
+                        android:layout_weight="3"
+                        android:hint="@string/hint_memo"
+                        android:maxLength="50"
+                        android:textColor="@color/black" >
+                    </EditText>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:paddingLeft="@dimen/fill_padding_right"
+                    android:text="@string/query_trans_detail"
+                    android:textColor="@color/gray" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- 底部按钮 -->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/bottom_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/tran_mobile_next"
+                style="@style/bottombtn"
+                android:text="@string/next" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

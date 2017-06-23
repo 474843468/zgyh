@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--2016年10月13日 19:48:48  yx add  固定显示项目-->
+    <LinearLayout
+        android:id="@+id/layout_top_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/layout_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/boc_divide_line" />
+
+        <TextView
+            android:id="@+id/txt_details_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_96px"
+            android:background="@color/boc_common_cell_color"
+            android:gravity="center"
+            android:text="@string/boc_result_detail"
+            android:textColor="@color/boc_main_button_color"
+            android:textSize="@dimen/boc_space_between_30px"
+            android:visibility="visible" />
+
+        <include layout="@layout/boc_divide_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <include layout="@layout/boc_divide_line" />
+    </LinearLayout>
+</LinearLayout>

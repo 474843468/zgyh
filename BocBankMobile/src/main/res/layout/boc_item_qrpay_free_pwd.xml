@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_qrpay_item_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/boc_space_between_20px"
+        android:layout_marginRight="@dimen/boc_space_between_20px"
+        android:layout_marginTop="@dimen/boc_space_between_20px"
+        android:gravity="center_vertical"
+        android:textColor="@color/boc_text_color_dark_gray"
+        android:textSize="@dimen/boc_text_size_small"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/boc_space_between_20px"
+        android:layout_marginRight="@dimen/boc_space_between_20px"
+        android:layout_marginTop="@dimen/boc_space_between_20px"
+        android:background="@drawable/boc_card_background"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_card_account_height"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_qrpay_pic"
+                android:layout_width="@dimen/boc_card_pic_width"
+                android:layout_height="@dimen/boc_card_pic_height"
+                android:layout_marginBottom="@dimen/boc_card_account_pic_margin_bottom"
+                android:layout_marginLeft="@dimen/boc_card_account_pic_margin_left"
+                android:layout_marginRight="@dimen/boc_card_account_pic_margin_right"
+                android:layout_marginTop="@dimen/boc_card_account_pic_margin_top"
+                android:scaleType="fitCenter"
+                android:src="@drawable/boc_cardpic_account_current" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/boc_card_account_info_padding_bottom"
+                android:paddingTop="@dimen/boc_card_account_info_padding_top">
+
+                <TextView
+                    android:id="@+id/tv_qrpay_number"
+                    style="@style/tv_common"
+                    android:layout_gravity="top"
+                    android:layout_weight="1"
+                    android:text="6225123123"
+                    android:textColor="@color/boc_text_color_dark_gray" />
+
+                <TextView
+                    android:id="@+id/tv_qrpay_name"
+                    style="@style/tv_small"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="0.0"
+                    android:text="长城信用卡" />
+            </LinearLayout>
+
+
+            <CheckBox
+                android:id="@+id/cb_qrpay_free"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/boc_space_between_30px"
+                android:background="@drawable/boc_bg_checkbox"
+                android:button="@null"
+                android:visibility="gone" />
+
+            <com.boc.bocsoft.mobile.bocmobile.buss.qrcodepay.widget.FreePassListItemView.PartialLoadView
+                android:id="@+id/iv_qrpay_loading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/boc_space_between_40px"
+                android:paddingBottom="@dimen/boc_space_between_14px"
+                android:paddingLeft="@dimen/boc_space_between_32px"
+                android:paddingRight="@dimen/boc_space_between_32px"
+                android:paddingTop="@dimen/boc_space_between_14px"
+                android:scaleType="centerInside"
+                android:src="@drawable/boc_partial_refresh"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_qrpay_free_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/boc_space_between_30px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/boc_space_between_30px"
+            android:paddingTop="@dimen/boc_space_between_20px"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boc_qrpay_free_limit"
+                android:textColor="@color/boc_text_color_gray"
+                android:textSize="@dimen/boc_text_size_common" />
+
+            <TextView
+                android:id="@+id/tv_qrpay_quota"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/boc_space_between_6px"
+                android:text="300元/笔"
+                android:textColor="@color/boc_text_color"
+                android:textSize="@dimen/boc_text_size_common" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/boc_space_between_20px"
+        android:layout_marginRight="@dimen/boc_space_between_20px"
+        android:layout_marginTop="@dimen/boc_space_between_20px"
+        android:background="@drawable/boc_card_background"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_104px"
+            android:paddingLeft="@dimen/boc_space_between_32px"
+            android:paddingRight="@dimen/boc_space_between_30px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/boc_qrpay_card_debit"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_common"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/boc_bg_checkbox"
+                android:button="@null" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/boc_space_between_30px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/boc_space_between_20px"
+            android:paddingTop="@dimen/boc_space_between_20px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/boc_qrpay_free_limit"
+                android:textColor="@color/boc_text_color_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/boc_space_between_6px"
+                android:text="300元/笔"
+                android:textColor="@color/boc_text_color" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

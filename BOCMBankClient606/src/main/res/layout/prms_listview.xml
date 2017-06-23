@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/lytTitle"
+        android:layout_alignParentTop="true"
+        layout="@layout/biz_title_with_refresh_btn"
+         />
+
+
+    <TextView
+        android:id="@+id/prms_priceheaderview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/common_row_margin_half"
+        android:gravity="left"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/textsize_one_zero"
+       />
+
+    <ListView
+        android:id="@+id/listview"
+        style="@style/listviewcomm_fill_haveDivider"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/prms_priceheaderview"
+        android:layout_below="@id/lytTitle"
+        android:scrollbars="none" >
+    </ListView>
+
+</RelativeLayout>

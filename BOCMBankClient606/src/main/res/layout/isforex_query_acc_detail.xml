@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 外汇双向宝   对账单交易查询详情页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/forex_query_deal_detailes_ok"
+            style="@style/textview_forex_button_cell"
+            android:text="@string/confirm" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_btn"
+        android:layout_marginTop="@dimen/rightbtnW"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView
+            style="@style/scrollview_comm_havemarginbutton"
+            android:paddingLeft="0dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fill_margin_left"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/common_row_margin" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:text="@string/isForex_query_acc_number" />
+
+                    <TextView
+                        android:id="@+id/forex_trade_number"
+                        style="@style/textview_forex_prompt_info"
+                         />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:text="@string/isForex_vfgRegCurrency1" />
+
+                    <TextView
+                        android:id="@+id/forex_trade_sell"
+                        style="@style/textview_forex_prompt_info"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:text="@string/isForex_query_acc_cash" />
+
+                    <TextView
+                        android:id="@+id/forex_trade_sell_code"
+                        style="@style/textview_forex_prompt_info"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:text="@string/isForex_query_acc_accType" />
+
+                    <TextView
+                        android:id="@+id/forex_trade_buy"
+                        style="@style/textview_forex_prompt_info"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:text="@string/isForex_query_acc_accTag" />
+
+                    <TextView
+                        android:id="@+id/forex_trade_code"
+                        style="@style/textview_forex_prompt_info"
+                         />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:text="@string/isForex_query_acc_money" />
+
+                    <TextView
+                        android:id="@+id/forex_trade_type"
+                        style="@style/textview_forex_prompt_info"
+                        android:textColor="@color/fonts_pink" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:text="@string/isForex_query_acc_accMoney" />
+
+                    <TextView
+                        android:id="@+id/forex_trade_times"
+                        style="@style/textview_forex_prompt_info"
+                        android:layout_weight="4"
+                        android:textColor="@color/fonts_pink" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:text="@string/isForex_query_acc_times" />
+
+                    <TextView
+                        android:id="@+id/forex_trade_wtType"
+                        style="@style/textview_forex_prompt_info"
+                         />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/isforex_little_title"
+        android:text="@string/forex_trade_detail"
+        />
+
+</RelativeLayout>

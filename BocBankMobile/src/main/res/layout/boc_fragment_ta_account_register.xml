@@ -1,0 +1,64 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/boc_common_bg_color"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/boc_space_between_20px"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/boc_card_background"
+            android:orientation="vertical" >
+
+            <!--基金交易账户-->
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                android:id="@+id/fincAccount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:editChoiceName = "@string/boc_fund_trans_account" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_divider_1px"
+                android:background="@color/boc_divider_line_color" />
+
+            <!-- 基金TA账户 -->
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditClearWidget
+                android:id="@+id/TaAccountNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:editClearName="@string/boc_fund_ta_account" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_divider_1px"
+                android:background="@color/boc_divider_line_color" />
+
+            <!--注册登记机构名称-->
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                android:id="@+id/undRegName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:editChoiceName="@string/boc_fund_reg_name" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_next"
+                style="@style/BocButton.BocPrimaryButton"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/boc_space_between_40px"
+                android:layout_marginTop="@dimen/boc_space_between_50px"
+                android:text="@string/boc_common_next"/>
+    </LinearLayout>
+</FrameLayout>

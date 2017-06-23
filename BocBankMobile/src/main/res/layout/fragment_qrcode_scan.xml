@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <com.boc.bocsoft.mobile.framework.zxing.scan.CameraView
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <include
+        layout="@layout/boc_view_titlebar_qrcode_scan"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_titlebar_height"/>
+
+    <RelativeLayout
+        android:id="@+id/scan_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titlebar_scan">
+
+        <ImageView
+            android:id="@+id/iv_mask_top"
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/boc_scan_mask"/>
+
+        <com.boc.bocsoft.mobile.framework.zxing.scan.ScanBoxView
+            android:id="@+id/view_scan_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_mask_top"
+            android:layout_centerHorizontal="true"
+            app:boxBackground="@drawable/boc_scan_box_bg"
+            app:scanLine="@drawable/boc_scan_line"
+            app:boxHeight="@dimen/boc_scan_box_size"
+            app:boxWidth="@dimen/boc_scan_box_size"
+            app:scanLineTopMargin="-7dp"/>
+
+        <ImageView
+            android:id="@+id/iv_mask_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/view_scan_box"
+            android:background="@color/boc_scan_mask"/>
+
+        <ImageView
+            android:id="@+id/iv_mask_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_above="@id/iv_mask_bottom"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/iv_mask_top"
+            android:layout_toLeftOf="@id/view_scan_box"
+            android:background="@color/boc_scan_mask"/>
+
+        <ImageView
+            android:id="@+id/iv_mask_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_above="@id/iv_mask_bottom"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/iv_mask_top"
+            android:layout_toRightOf="@id/view_scan_box"
+            android:background="@color/boc_scan_mask"/>
+
+        <TextView
+            android:id="@+id/tv_tips"
+            style="@style/tv_small"
+            android:layout_below="@id/view_scan_box"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:text="@string/boc_qrcode_scan_tips"
+            android:textColor="@color/boc_common_cell_color"/>
+
+        <TextView
+            android:id="@+id/btn_gallery"
+            style="@style/tv_common"
+            android:layout_below="@id/tv_tips"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:text="@string/boc_qrcode_select_from_gallery"
+            android:textColor="@color/boc_main_button_color"/>
+
+        <TextView
+            android:id="@+id/btn_my_qrcode"
+            style="@style/tv_common"
+            android:layout_below="@id/btn_gallery"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="11dp"
+            android:text="@string/boc_qrcode_myself"
+            android:textColor="@color/boc_main_button_color"/>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/sbremit_outlay_label"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/currency_name_tv"
+            style="@style/textview_default"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingBottom="@dimen/fill_padding_top"
+            android:paddingTop="@dimen/fill_padding_top"
+            android:text="@string/currency_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textsize_one_two" />
+    </LinearLayout>
+
+    <com.chinamworld.bocmbci.biz.sbremit.user_defined_control.InterceptScrollContainer
+        android:id="@+id/scroollContainter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/textView1"
+        android:focusable="false"
+        android:weightSum="5" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.chinamworld.bocmbci.biz.sbremit.user_defined_control.MyHScrollView
+                android:id="@+id/horizontalScrollView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:id="@+id/modelLayoutId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/sell_rate_tv"
+                        style="@style/textview_default"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/fill_padding_top"
+                        android:paddingTop="@dimen/fill_padding_top"
+                        android:text="@string/selling_rate"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_two" />
+
+                    <TextView
+                        android:id="@+id/buy_rate_tv"
+                        style="@style/textview_default"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/fill_padding_top"
+                        android:paddingTop="@dimen/fill_padding_top"
+                        android:text="@string/buying_rate"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_two" />
+
+                    <TextView
+                        android:id="@+id/buy_note_rate_tv"
+                        style="@style/textview_default"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/fill_padding_top"
+                        android:paddingTop="@dimen/fill_padding_top"
+                        android:text="@string/cash_buying_rate"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_two" />
+
+                    <TextView
+                        android:id="@+id/sell_note_rate_tv"
+                        style="@style/textview_default"
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/fill_padding_top"
+                        android:paddingTop="@dimen/fill_padding_top"
+                        android:text="@string/cash_buying_rate"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_two" />
+                </LinearLayout>
+            </com.chinamworld.bocmbci.biz.sbremit.user_defined_control.MyHScrollView>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/indicatorId"
+            android:layout_width="150dp"
+            android:layout_height="8dp"
+            android:background="#f00"
+            android:visibility="gone" />
+    </com.chinamworld.bocmbci.biz.sbremit.user_defined_control.InterceptScrollContainer>
+
+</RelativeLayout>

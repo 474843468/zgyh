@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 我的基金   基金账户设置 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_relevance_debit_title"
+        style="@style/textview_common"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/ll_step"
+        android:paddingBottom="@dimen/common_row_margin_half"
+        android:paddingLeft="@dimen/fill_margin_right"
+        android:paddingTop="@dimen/common_row_margin_half"
+        android:text="@string/finc_acc_regisitAcc_first_info"
+        android:textColor="@color/gray"
+         />
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:gravity="center"
+        android:orientation="horizontal"
+       >
+
+        <Button
+            android:id="@+id/sureButton"
+            style="@style/bottombtn_606"
+            android:text="@string/confirm"
+             />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/finc_ListView"
+        style="@style/listviewcomm_wrap_haveDivider"
+        android:layout_above="@+id/ll_btn"
+        android:layout_alignLeft="@+id/tv_relevance_debit_title"
+        android:layout_below="@+id/tv_relevance_debit_title"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_right"
+        android:paddingLeft="@dimen/common_listview_item_paddingLR"
+        android:paddingRight="@dimen/common_listview_item_paddingLR" >
+    </ListView>
+
+</RelativeLayout>

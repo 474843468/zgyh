@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_122px"
+        android:background="@android:color/white"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="@dimen/boc_space_between_130px"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:id="@+id/tvNumber"
+                android:layout_width="@dimen/boc_space_between_54px"
+                android:layout_height="@dimen/boc_space_between_40px"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:background="@drawable/boc_bg_round_text"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:text=""/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvDateAndAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/boc_loan_repay_shouldpay"
+                    android:singleLine="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/boc_space_between_5px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvCapital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/boc_eloan_prepayPrincipal"
+                    android:singleLine="true"
+                    android:textColor="@color/boc_text_color_common_gray"
+                    android:textSize="@dimen/boc_text_size_small"/>
+
+                <View
+                    android:id="@+id/view_separate_line"
+                    android:layout_width="0.5dp"
+                    android:layout_height="@dimen/boc_space_between_20px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/boc_space_between_18px"
+                    android:layout_marginRight="@dimen/boc_space_between_18px"
+                    android:background="@color/boc_text_color_whitepressed"/>
+
+                <TextView
+                    android:id="@+id/tvInterest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/boc_eloan_prepayInterest"
+                    android:textColor="@color/boc_text_color_common_gray"
+                    android:textSize="@dimen/boc_text_size_small"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <include layout="@layout/boc_divide_line" />
+</LinearLayout>

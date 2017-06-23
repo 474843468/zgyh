@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <include android:id="@+id/step" 
+        layout="@layout/order_step"
+        android:layout_alignParentTop="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/common_bottom_padding_new"
+        android:paddingLeft="@dimen/fill_margin_left"
+        android:paddingRight="@dimen/fill_margin_left"
+        android:layout_below="@+id/step">
+	    <LinearLayout
+	        android:id="@+id/btn_sure"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentBottom="true"
+	        android:layout_marginTop="@dimen/fill_margin_top">
+	
+	        <Button
+	            android:id="@+id/finc_btn1"
+	            style="@style/btn_common_oneline"
+	            android:background="@drawable/btn_red_big"
+	            android:text="@string/last"/>
+	
+	        <Button
+	            android:id="@+id/finc_btn2"
+	            style="@style/btn_common_oneline"
+	            android:background="@drawable/btn_red_big"
+	            android:text="@string/confirm"/>
+	    </LinearLayout>
+	
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:layout_above="@+id/btn_sure"
+	        android:background="@drawable/bg_for_listview_item_write"
+	        android:orientation="vertical" >
+	
+	        <ScrollView style="@style/scrollview_little_margin" >
+	
+	            <LinearLayout
+	                android:layout_width="fill_parent"
+	                android:layout_height="wrap_content"
+	                android:orientation="vertical" >
+	                
+	                <LinearLayout android:id="@+id/take_on_success_tip_ll"
+	                    style="@style/linnerlayout_common">
+	
+	                    <TextView android:id="@+id/title_tv"
+	                        style="@style/textview_common_right"
+	                        android:text="@string/order_please_confirm_info_ycqh" 
+	                        android:textColor="@color/gray"
+	                        android:singleLine="false"/>
+	
+	                </LinearLayout>
+	                
+	                <LinearLayout style="@style/linnerlayout_common" >
+	
+	                    <TextView
+	                        style="@style/textview_common_left"
+	                        android:text="@string/order_customer_name" />
+	
+	                    <TextView
+	                        android:id="@+id/customerName"
+	                        style="@style/textview_common_right"
+	                        android:layout_weight="1"/>
+	                </LinearLayout>
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView
+	                        style="@style/textview_common_left"
+	                        android:text="@string/trans_remit_phone"/>
+	
+	                    <TextView
+	                        android:id="@+id/phoneNum"
+	                        style="@style/textview_common_right"
+	                        android:layout_weight="1"/>
+	                </LinearLayout>
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView
+	                        style="@style/textview_common_left"
+	                        android:text="@string/order_name"/>
+	
+	                    <TextView
+	                        android:id="@+id/orderName"
+	                        style="@style/textview_common_right"
+	                        android:layout_weight="1"/>
+	                </LinearLayout>
+	
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView style="@style/textview_common_left"
+	                        android:text="@string/order_adress"/>
+	
+	                    <TextView
+	                        android:id="@+id/orderAdress"
+	                        style="@style/textview_common_right"
+	                        android:layout_weight="1"/>
+	                </LinearLayout>
+	                
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView style="@style/textview_common_left"
+	                        android:text="@string/order_mobile"/>
+	
+	                    <TextView
+	                        android:id="@+id/orderMobile"
+	                        style="@style/textview_common_right"
+	                        android:layout_weight="1"/>
+	                </LinearLayout>
+	                
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView style="@style/textview_common_left"
+	                        android:text="@string/order_buniness_time"/>
+	
+	                    <TextView
+	                        android:id="@+id/orderBusinessTime"
+	                        style="@style/textview_common_right"
+	                        android:layout_weight="1"/>
+	                </LinearLayout>
+	                <LinearLayout android:id="@+id/orderServiceTypeLl"
+	                    style="@style/linnerlayout_common"
+	                    android:visibility="visible">
+	
+	                    <TextView style="@style/textview_common_left"
+	                        android:text="@string/order_service_type"/>
+	
+	                    <TextView
+	                        android:id="@+id/orderServiceType"
+	                        style="@style/textview_common_right"
+	                        android:text="@string/order_special_service"
+	                        android:textColor="@color/red"/>
+	                </LinearLayout>
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView style="@style/textview_common_left"
+	                        android:text="@string/order_yewu_name"/>
+	
+	                    <TextView
+	                        android:id="@+id/orderServiceName"
+	                        style="@style/textview_common_right"
+	                        android:textColor="@color/red"/>
+	                </LinearLayout>
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView style="@style/textview_common_left"
+	                        android:text="@string/order_book_time"/>
+	
+	                    <TextView
+	                        android:id="@+id/orderTime"
+	                        style="@style/textview_common_right"
+	                        android:textColor="@color/red"/>
+	                </LinearLayout>
+	                <LinearLayout android:id="@+id/orderAmountOfCashLl"
+	                    style="@style/linnerlayout_common"
+	                    android:visibility="gone">
+	
+	                    <TextView style="@style/textview_common_left"
+	                        android:text="@string/order_amount_of_cash"/>
+	
+	                    <TextView
+	                        android:id="@+id/orderAmountOfCash"
+	                        style="@style/textview_common_right"
+	                        android:textColor="@color/red"/>
+	                </LinearLayout>
+	                <LinearLayout style="@style/linnerlayout_common">
+	
+	                    <TextView style="@style/textview_common_left"
+	                        android:text="@string/beizhu"/>
+	
+	                    <TextView
+	                        android:id="@+id/beizhu"
+	                        style="@style/textview_common_right"
+	                        android:layout_weight="1"/>
+	                </LinearLayout>
+	                
+	                <LinearLayout android:id="@+id/identify_code_ll"
+	                    style="@style/linnerlayout_common">
+	
+	                    <TextView
+	                        style="@style/textview_common_left"
+	                        android:text="@string/login_image_code"/>
+						<LinearLayout style="@style/textview_common_right">
+		                    <EditText 
+		                        style="@style/login_edittext"
+	                            android:layout_width="0dp"
+	                            android:inputType="number"
+	                            android:digits="0123456789abcdefghijklmnopqrstuvwxyz"
+	                            android:maxLength="4"
+	                            android:textSize="@dimen/textsize_default"
+		                        android:id="@+id/orderInputIdentifyCode"/>
+		                    <Button
+	                             android:id="@+id/ib_image_code"
+	                             style="@style/auth_image"
+	                             android:layout_gravity="center_vertical"
+	                             android:background="@drawable/selector_for_image_code"
+	                             android:text="加载中..."
+	                             android:layout_marginLeft="@dimen/dp_two" />
+						</LinearLayout>
+	                </LinearLayout>
+	                
+	                <LinearLayout
+	                    style="@style/linnerlayout_common"
+	                    android:visibility="invisible">
+	
+	                    <TextView style="@style/textview_common_left"
+	                        android:text="@string/order_period"/>
+	
+	                    <Spinner
+	                        style="@style/Spinner_comm_view_right"
+	                        android:layout_weight="1"/>
+	                </LinearLayout>
+	            </LinearLayout>
+	        </ScrollView>
+	    </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

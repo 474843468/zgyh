@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 转账汇款  选择二维码 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:paddingLeft="@dimen/fill_margin_right"
+    android:paddingRight="@dimen/fill_margin_right">
+
+    <include
+        android:id="@+id/stepbar"
+        layout="@layout/step_title_layout" />
+
+    <TextView
+        android:id="@+id/title_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/edittext_paddinglr"
+        android:paddingTop="@dimen/edittext_paddinglr"
+        android:text="@string/two_dimen_generate_info"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/textsize_one_three" />
+
+    <ListView
+        android:id="@+id/lv_2dimen_select_acc"
+        style="@style/listviewcomm_fill_haveDivider"
+        android:layout_above="@+id/bottom_btn_layout"
+        android:layout_below="@+id/title_tv"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/bottom_btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/layout_margin_top" >
+
+        <Button
+            android:id="@+id/btn_next_2dimen_generate_select"
+            style="@style/bottombtn"
+            android:text="@string/next" />
+    </LinearLayout>
+
+</RelativeLayout>

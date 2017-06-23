@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 账户贵金属 首页 -->
+<com.chinamworld.llbt.userwidget.scrollview.NewScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/sc"
+    android:background="@color/bg_white">
+
+    <LinearLayout
+        android:background="@color/bg_white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.chinamworld.bocmbci.userwidget.investview.InvestPriceView
+                android:id="@+id/investPriceView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/ll_btn_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <Button
+                    android:id="@+id/btn_query"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/btn_dialog_height"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="交易查询"
+                    android:textColor="@color/fonts_blue"
+                    android:textSize="@dimen/fonts_one_four"
+                    android:textStyle="bold" />
+                <!--<View
+                    android:layout_width="0.1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/fonts_light_gray"
+                    />-->
+                <Button
+                    android:id="@+id/btn_accountmanager"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/btn_dialog_height"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="账户管理"
+                    android:textColor="@color/fonts_blue"
+                    android:textSize="@dimen/fonts_one_four"
+                    android:textStyle="bold" />
+                <!--<View
+                    android:layout_width="0.1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/fonts_light_gray"
+                    />-->
+                <Button
+                    android:id="@+id/btn_recall"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/btn_dialog_height"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="委托交易查询"
+                    android:textColor="@color/fonts_blue"
+                    android:textSize="@dimen/fonts_one_four"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <!--android:layout_height="2dp"-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/line_light_gray"></LinearLayout>
+
+
+        <!--android:background="@color/bg_light_gray"-->
+        <!--android:textSize="@dimen/fonts_one_four"-->
+
+        <!--2016/12/01-->
+        <!-- android:layout_height="@dimen/btn_dialog_height"-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/lianlong_space_between_60px"
+            android:layout_gravity="center"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@color/lianlong_currency_pair_title_color">
+
+            <!--android:textColor="@color/fonts_gray_li"-->
+            <!--android:textSize="@dimen/fonts_one_four"-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+
+                android:paddingRight="@dimen/fill_padding_right"
+
+                >
+
+                <TextView
+                    android:id="@+id/tv_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="编辑 |"
+                    android:textColor="@color/boc_text_color_common_gray"
+                    android:textSize="@dimen/boc_text_size_small" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="货币对"
+
+
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_small" />
+            </LinearLayout>
+
+            <!--android:layout_marginLeft="@dimen/dp_two_zero"-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="卖出价"
+
+                android:paddingRight="@dimen/dp_one_zero"
+                android:layout_marginLeft="@dimen/dp_one_zero"
+
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="买入价"
+
+                android:paddingRight="@dimen/dp_one_zero"
+                android:layout_marginLeft="@dimen/dp_one_zero"
+
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small" />
+
+            <TextView
+                android:id="@+id/tv_riseorfall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center"
+                android:text="涨跌幅"
+                android:paddingRight="15dp"
+                android:drawablePadding="-15dp"
+                android:drawableRight="@drawable/share_flat"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line_light_gray"></LinearLayout>
+
+        <com.chinamworld.llbt.userwidget.refreshliseview.DownRefreshLayout
+            android:id="@+id/pull_down_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!--   <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical">
+       -->
+
+            <com.chinamworld.llbt.userwidget.refreshliseview.PullableListView
+                android:id="@+id/lv_prms"
+                style="@style/listviewcomm_fill_haveDivider"
+                android:layout_width="match_parent"
+
+                android:background="@color/white">
+
+            </com.chinamworld.llbt.userwidget.refreshliseview.PullableListView>
+
+
+            <!--  <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:background="@color/bg_light_gray">
+
+                  <TextView
+                      android:id="@+id/tv_refishtime"
+                      style="@style/textview_common"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_margin="10dp"
+                      android:textColor="@color/fonts_light_gray"
+                      android:textSize="@dimen/fonts_one_four" />
+              </LinearLayout>-->
+            <!--  </LinearLayout>-->
+
+
+        </com.chinamworld.llbt.userwidget.refreshliseview.DownRefreshLayout>
+        <!-- <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:background="@color/bg_light_gray">
+
+             <TextView
+                 android:id="@+id/tv_refishtime"
+                 style="@style/textview_common"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="10dp"
+                 android:textColor="@color/fonts_light_gray"
+                 android:textSize="@dimen/fonts_one_four" />
+         </LinearLayout>-->
+    </LinearLayout>
+</com.chinamworld.llbt.userwidget.scrollview.NewScrollView>

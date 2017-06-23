@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link rel="stylesheet" href="../css/myStyle.css" />
+		<script src="../js/pub/constants.js"></script>
+		<script src="../js/pub/pub.js"></script>
+		<script src="../js/pub/jquery-1.9.0.min.js"></script>
+		<script src="../js/pub/jquery.mobile-1.3.0.min.js"></script>
+		<script src="../js/logic/dk.js"></script>
+		<title>贷款类计算器</title>
+	</head>
+	<body>
+		<div data-role="page">
+			<!--------------------------Content------------------------------------>
+			<div data-role="content" class="jqm-content">
+
+				<!------------------------------------菜单--------------------------------->
+				<ul data-role="listview" data-inset="true" data-theme="i"
+					data-icon="false"
+					class="jqm-list">
+					<li data-section="Widgets">
+						<fieldset class="ui-grid-a">
+							<div class="ui-block-a">
+								<label for="select_menu" class="label-center">
+									当前菜单
+								</label>
+							</div>
+							<div class="ui-block-b">
+								<select id="select_menu" data-mini="true" data-theme="i" >
+								</select>
+							</div>
+						</fieldset>
+					</li>
+				</ul>
+
+				<!------------------------------------等额还款--------------------------------->
+				<div id="dehk" fn="fn_dehk_init">
+					<ul data-role="listview" data-inset="true" data-theme="i"
+						data-icon="false"
+						class="jqm-list">
+						<li data-section="Widgets">
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label for="dehk_edInitLoan" class="label-center">
+										贷款金额(元)
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<input data-mini="true" type="number" name="dehk_edInitLoan"
+										id="dehk_edInitLoan" value="" data-theme="i" />
+								</div>
+							</fieldset>
+						</li>
+						<li data-section="Widgets">
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label for="dehk_dLine" class="label-center">
+										贷款期限(年)
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<input data-mini="true" type="number" name="dehk_dLine"
+										id="dehk_dLine" value="" data-theme="i" />
+								</div>
+							</fieldset>
+						</li>
+						<li data-section="Widgets">
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label for="dehk_edLoanRate" class="label-center">
+										贷款利率(%)
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<input data-mini="true" type="number" name="dehk_edLoanRate"
+										id="dehk_edLoanRate" value="" data-theme="i" />
+								</div>
+							</fieldset>
+						</li>
+						<li data-section="Widgets">
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label for="dehk_formula" class="label-center">
+										还款方式
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<select name="dehk_formula" id="dehk_formula" data-mini="true" data-theme="i" >
+										<option value="3">
+											一次性付清
+										</option>
+										<option value="1">
+											等额本息
+										</option>
+										<option value="2">
+											等额本金
+										</option>
+									</select>
+								</div>
+							</fieldset>
+						</li>
+					</ul>
+					<div data-role="fieldcontain">
+						<button id="dehk_btnCalc" data-mini="true" data-theme="j">
+							计算
+						</button>
+					</div>
+					<div data-role="fieldcontain">
+						<table data-role="table" id="table-column-toggle"
+						data-mode="column" class="ui-responsive table-stroke" data-theme="i" >
+							<thead>
+								<tr>
+									<th style="padding:0px" class="label-center">
+										期次
+									</th>
+									<th style="padding:0px" class="label-center">
+										偿还本息
+									</th>
+									<th style="padding:0px" class="label-center">
+										偿还利息
+									</th>
+									<th style="padding:0px" class="label-center">
+										偿还本金
+									</th>
+								</tr>
+							</thead>
+							<tbody id="dehk_table-column-body">
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<!------------------------------------个人房贷--------------------------------->
+				<div id="grfd" fn="fn_grfd_init">
+					<ul data-role="listview" data-inset="true" data-theme="i"
+						data-icon="false"
+						class="jqm-list">
+						<li data-section="Widgets">
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label for="grfd_calcaulator_type" class="label-center">
+										计算方式
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<select name="grfd_calcaulator_type" id="grfd_calcaulator_type" data-theme="i"
+										data-mini="true" >
+										<option value="1">
+											根据面积、单价
+										</option>
+										<option value="2">
+											根据贷款总额
+										</option>
+									</select>
+								</div>
+							</fieldset>
+						</li>
+					</ul>
+					<ul data-role="listview" data-inset="true" data-theme="i"
+						data-icon="false"
+						class="jqm-list">
+						<li data-section="Widgets" id="grfd_calcaulator_type_li_1">
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label for="grfd_price" class="label-center">
+										单价(元)
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<input data-mini="true" type="number" name="grfd_price"
+										id="grfd_price" value="" data-theme="i" />
+								</div>
+							</fieldset>
+						</li>
+						<li data-section="Widgets" id="grfd_calcaulator_type_li_2">
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label for="grfd_area" class="label-center">
+										面积(平方米)
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<input data-mini="true" type="number" name="grfd_area"
+										id="grfd_area" value="" data-theme="i" />
+								</div>
+							</fieldset>
+						</li>
+						<li data-section="Widgets" id="grfd_calcaulator_type_li_3">
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label for="grfd_mortgageRatio" class="label-center">
+										按揭比重(%)
+									</label>
+								</div>
+								<div class="ui-block-b">
+								
+								<input data-mini="true" type="number" name="grfd_area"
+										id="grfd_mortgageRatio" value="" data-theme="i" />
+								
+									<!-- select id="grfd_mortgageRatio" data-mini="true"
+										>
+										<option value="90">
+											九成
+										</option>
+										<option value="80">
+											八成
+										</option>
+										<option value="70">
+											七成
+										</option>
+										<option value="60">
+											六成
+										</option>
+										<option value="50">
+											五成
+										</option>
+										<option value="40">
+											四成
+										</option>
+										<option value="30">
+											三成
+										</option>
+										<option value="20">
+											两成
+										</option>
+									</select>
+									 -->
+								</div>
+							</fieldset>
+						</li>
+						<li data-section="Widgets" id="grfd_calcaulator_type_li_4">
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label for="grfd_loanSum" class="label-center">
+										贷款总额
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<input data-mini="true" type="number" name="grfd_loanSum"
+										id="grfd_loanSum" value="" data-theme="i" />
+								</div>
+							</fieldset>
+						</li>
+						<li data-section="Widgets">
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label for="grfd_mortgagePeriods" class="label-center">
+										按揭期限(年)
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<input data-mini="true" type="number" name="grfd_mortgagePeriods"
+										id="grfd_mortgagePeriods" value="" data-theme="i" />
+								</div>
+							</fieldset>
+						</li>
+						<li data-section="Widgets">
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label for="grfd_mortgageRate" class="label-center">
+										按揭利率(%)
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<input data-mini="true" type="number" name="grfd_mortgageRate"
+										id="grfd_mortgageRate" value="" data-theme="i" />
+								</div>
+							</fieldset>
+						</li>
+					</ul>
+
+					<div data-role="fieldcontain">
+						<button id="grfd_btnCalc" data-mini="true" data-theme="j" >
+							计算
+						</button>
+					</div>
+
+					<ul data-role="listview" data-inset="true" data-theme="i"
+						data-icon="false"
+						class="jqm-list">
+						<li data-section="Widgets">
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label class="label-center">
+										房款总额
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<span id="grfd_houseLoanSum" name="result" style="float: right"></span>
+								</div>
+							</fieldset>
+							<hr />
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label class="label-center">
+										贷款总额
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<span id="grfd_loanSum_d" name="result" style="float: right"></span>
+								</div>
+							</fieldset>
+							<hr />
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label class="label-center">
+										还款总额
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<span id="grfd_repaySum" name="result" style="float: right"></span>
+								</div>
+							</fieldset>
+							<hr />
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label class="label-center">
+										支付利息
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<span id="grfd_interestSum" name="result" style="float: right"></span>
+								</div>
+							</fieldset>
+							<hr />
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label class="label-center">
+										首期付款
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<span id="grfd_firstTermPay" name="result" style="float: right"></span>
+								</div>
+							</fieldset>
+							<hr />
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label class="label-center">
+										月均还款
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<span id="grfd_eachMonthPay" name="result" style="float: right"></span>
+								</div>
+							</fieldset>
+						</li>
+					</ul>
+				</div>
+
+				<!------------------------------------提前还款--------------------------------->
+				<div id="tqhk" fn="fn_tqhk_init">
+					<ul data-role="listview" data-inset="true" data-theme="i"
+						data-icon="false"
+						class="jqm-list">
+						<li data-section="Widgets">
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label for="tqhk_loanSum" class="label-center">
+										贷款总额(元)
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<input data-mini="true" type="number" name="tqhk_loanSum" data-theme="i"
+										id="tqhk_loanSum" value="" />
+								</div>
+							</fieldset>
+						</li>
+						<li data-section="Widgets">
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label for="tqhk_oldRepayTerm" class="label-center">
+										原还款期限(年)
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<input data-mini="true" type="number" name="tqhk_oldRepayTerm" data-theme="i"
+										id="tqhk_oldRepayTerm" value="" />
+								</div>
+							</fieldset>
+						</li>
+						<li data-section="Widgets">
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label for="tqhk_loanRate" class="label-center">
+										贷款利率(%)
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<input data-mini="true" type="number" name="tqhk_loanRate" data-theme="i"
+										id="tqhk_loanRate" value="" />
+								</div>
+							</fieldset>
+						</li>
+						<li data-section="Widgets">
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label for="tqhk_firstRepayDate" class="label-center">
+										初次还款时间
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<input data-mini="true" type="month" name="tqhk_firstRepayDate" data-theme="i"
+										id="tqhk_firstRepayDate" value="" />
+								</div>
+							</fieldset>
+						</li>
+						<li data-section="Widgets">
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label for="tqhk_predictRepayDate" class="label-center">
+										预计提前还款时间
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<input data-mini="true" type="month"
+										name="tqhk_predictRepayDate" id="tqhk_predictRepayDate" data-theme="i"
+										value="" />
+								</div>
+							</fieldset>
+						</li>
+						<li data-section="Widgets" id="tqhk_hide_last_li">
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label for="tqhk_repayType" class="label-center">
+										还款方式
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<select id="tqhk_repayType" name="tqhk_repayType" data-theme="i"
+										data-mini="true" >
+										<option value="1">
+											一次性付清
+										</option>
+										<option value="2">
+											部分提前还款(不包含当月还款额)
+										</option>
+									</select>
+								</div>
+							</fieldset>
+						</li>
+						<li data-section="Widgets" id="tqhk_repayType_li_1">
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label for="tqhk_repeiedDispose" class="label-center">
+										还款后处理方式
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<select id="tqhk_repeiedDispose" name="tqhk_repeiedDispose" data-theme="i"
+										data-mini="true" >
+										<option value="1">
+											缩短还款年限 ，月还款额基本不变
+										</option>
+										<option value="2">
+											减少月还款额，还款期不变
+										</option>
+									</select>
+								</div>
+							</fieldset>
+						</li>
+						<li data-section="Widgets" id="tqhk_repayType_li_2">
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label for="tqhk_prepaymentAmount" class="label-center">
+										提前还款额
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<input data-mini="true" type="number"
+										name="tqhk_prepaymentAmount" id="tqhk_prepaymentAmount"
+										value="" data-theme="i" />
+								</div>
+							</fieldset>
+						</li>
+					</ul>
+
+					<div data-role="fieldcontain">
+						<button id="tqhk_btnCalc" data-mini="true" data-theme="j">
+							计算
+						</button>
+					</div>
+
+					<ul data-role="listview" data-inset="true" data-theme="i"
+						data-icon="false"
+						class="jqm-list">
+						<li data-section="Widgets">
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label class="label-center">
+										原月还款额
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<span id="tqhk_oldEachMonthPay" name="result" style="float: right"></span>
+								</div>
+							</fieldset>
+							<hr id="tqhk_repay_hr_3" />
+							<fieldset class="ui-grid-a" id="tqhk_repay_fieldset_3">
+								<div class="ui-block-a">
+									<label class="label-center">
+										原最后还款期限
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<span id="tqhk_oldLastTerm" name="result" style="float: right"></span>
+								</div>
+							</fieldset>
+							<hr />
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label class="label-center">
+										已还款总额
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<span id="tqhk_repaiedAmountSum" name="result" style="float: right"></span>
+								</div>
+							</fieldset>
+							<hr />
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label class="label-center">
+										已还利息
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<span id="tqhk_repaiedInterestSum" name="result" style="float: right"></span>
+								</div>
+							</fieldset>
+							<hr />
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label class="label-center">
+										该月一次还款额
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<span id="tqhk_curMonthPay" name="result" style="float: right"></span>
+								</div>
+							</fieldset>
+							<hr />
+							<fieldset class="ui-grid-a" id="tqhk_repay_fieldset_1">
+								<div class="ui-block-a">
+									<label class="label-center">
+										下月起月还款额
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<span id="tqhk_nextMonthPay" name="result" style="float: right"></span>
+								</div>
+							</fieldset>
+							<hr id="tqhk_repay_hr_1" />
+							<fieldset class="ui-grid-a">
+								<div class="ui-block-a">
+									<label class="label-center">
+										节省利息支出
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<span id="tqhk_economizeInterest" name="result" style="float: right"></span>
+								</div>
+							</fieldset>
+							<hr id="tqhk_repay_hr_2" />
+							<fieldset class="ui-grid-a" id="tqhk_repay_fieldset_2">
+								<div class="ui-block-a">
+									<label class="label-center">
+										新的最后还款期
+									</label>
+								</div>
+								<div class="ui-block-b">
+									<span id="tqhk_newLastTerm" name="result" style="float: right"></span>
+								</div>
+							</fieldset>
+						</li>
+					</ul>
+				</div>
+
+				<!------------------------------------使用说明--------------------------------->
+				<ul data-role="listview" data-inset="true" data-theme="i"
+					data-icon="false"
+					class="jqm-list">
+					<li id="explain_content"></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

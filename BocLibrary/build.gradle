@@ -1,0 +1,71 @@
+apply plugin: 'com.android.library'
+
+
+//此处设置控制 BocLibrary中的 jar和so 类型， devJar为开发的jar  productJar为生产版本的jar
+// devJarDebug devJarRelease productJarDebug productJarRelease
+ext{
+    productBuildParam="devJarRelease"//开发
+//  productBuildParam="productJarRelease"//生产
+}
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+
+    sourceSets{
+        devJar{
+            jniLibs.srcDirs=['jni','jni_debug']
+        }
+
+        productJar{
+            jniLibs.srcDirs=['jni','jni_release']
+        }
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors{
+        devJar {
+            minSdkVersion 14
+            targetSdkVersion 21
+        }
+        productJar{
+            minSdkVersion 14
+            targetSdkVersion 21
+        }
+    }
+
+    setDefaultPublishConfig(productBuildParam)
+    print '--------BocLibrary 编译版本:'
+    println getDefaultPublishConfig()
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.android.support:support-v4:21.0.3'
+    //开发版本使用  libs_debug下的包  ，生产版本使用libs_release下的包
+    if (productBuildParam.toLowerCase().contains('devjar')) {
+        compile fileTree(dir: 'libs_debug', include: ['*.jar'])
+    } else {
+        compile fileTree(dir: 'libs_release', include: ['*.jar'])
+    }
+
+    repositories {
+//        jcenter()
+        mavenLocal()
+    }
+}

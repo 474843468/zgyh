@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 结售汇 购汇 输入信息页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/next"
+            style="@style/bottombtn"
+            android:text="@string/next" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_btn"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="@string/bremit_acc" />
+
+                    <TextView
+                        android:id="@+id/bremit_acc"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_gravity="center"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="@string/bremit_money_type" />
+
+                    <Spinner
+                        android:id="@+id/bremit_money_type"
+                        style="@style/Spiiner_fill_small"
+                        android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                        android:layout_weight="4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_height="match_parent"
+                        android:layout_weight="6"
+                        android:text="@string/currency_type" />
+
+                    <RadioGroup
+                        android:id="@+id/rg_accopentype"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/spot_exchange"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="top"
+                            android:button="@drawable/radiobtn_selector"
+                            android:text="现汇" />
+
+                        <RadioButton
+                            android:id="@+id/cash_exchange"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:gravity="top"
+                            android:layout_weight="1"
+                            android:button="@drawable/radiobtn_selector"
+                            android:text="现钞" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/message"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:layout_marginLeft="@dimen/common_row_margin_half"
+                    android:orientation="horizontal" 
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_default"
+                        android:textColor="@color/red"
+                        android:singleLine="false"
+                        android:text="@string/bremit_money_record" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_gravity="center"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="@string/bremit_money_new" />
+
+                    <EditText
+                        android:id="@+id/bremit_money"
+                        style="@style/edittext_common_fill"
+                        android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                        android:layout_weight="4"
+                        android:inputType="numberDecimal"
+                        android:maxLength="14" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/largest_exchange_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/largest_exchange_calculate"
+                        style="@style/textview_common_left"
+                        android:layout_gravity="center"
+                        android:layout_weight="4"
+                        android:gravity="right"
+                        android:text="@string/largest_purchase"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/largest_exchange"
+                        style="@style/textview_common_right"
+                        android:layout_weight="6"
+                        android:text="0"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/message2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:layout_marginLeft="@dimen/common_row_margin_half"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_default"
+                        android:textColor="@color/red"
+                        android:singleLine="false"
+                        android:text="@string/bremit_money_record_two" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/cur_reference_price_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin_half"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/cur_reference_price_alert"
+                        style="@style/textview_common_left"
+                        android:layout_gravity="center"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="@string/cur_reference_price" />
+
+                    <TextView
+                        android:id="@+id/cur_reference_price"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/source_tv"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:singleLine="true"
+                            android:text="@string/capital_use" />
+
+                        <ImageView
+                            android:id="@+id/source_instruction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/edittext_height"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/source_tv"
+                            android:src="@drawable/sbremit_source_instruction" />
+                    </RelativeLayout>
+
+                    <Spinner
+                        android:id="@+id/capital_use"
+                        style="@style/Spiiner_fill_small"
+                        android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                        android:layout_weight="4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/year_have_used_limit_alert"
+                        style="@style/textview_common_left"
+                        android:layout_gravity="center"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="@string/year_have_used_limit" />
+
+                    <TextView
+                        android:id="@+id/year_have_used_limit"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/year_remain_limit_alert"
+                        style="@style/textview_common_left"
+                        android:layout_gravity="center"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="@string/year_remain_limit" />
+
+                    <TextView
+                        android:id="@+id/year_remain_limit"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4" />
+                </LinearLayout>
+
+                 <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal"
+                     >
+                    
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

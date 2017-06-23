@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#D8D8E0"/>
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:background="@color/boc_main_btn_bg_color">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="@dimen/boc_space_between_24px"
+            android:layout_marginRight="@dimen/boc_space_between_24px"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/boc_edittext_bg_grey"
+            android:drawablePadding="@dimen/boc_space_between_20px"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/boc_space_between_20px"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_width="@dimen/boc_space_between_104px"
+                android:layout_height="match_parent"
+                android:paddingBottom="12.5dp"
+                android:paddingLeft="@dimen/boc_space_between_40px"
+                android:paddingRight="2dp"
+                android:paddingTop="12.5dp"
+                android:src="@drawable/boc_image_search"/>
+
+            <EditText
+                android:id="@+id/et_search_content"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@null"
+                android:drawablePadding="@dimen/boc_space_between_20px"
+                android:hint="所属银行名称"
+                android:paddingBottom="6.1dp"
+                android:paddingTop="6.1dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textColorHint="#cccccc"
+                android:textSize="@dimen/boc_space_between_28px"/>
+
+            <ImageView
+                android:id="@+id/iv_delete_text"
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:layout_marginRight="16dp"
+                android:padding="14dp"
+                android:scaleType="fitXY"
+                android:visibility="invisible"
+                android:src="@drawable/boc_btn_delete"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

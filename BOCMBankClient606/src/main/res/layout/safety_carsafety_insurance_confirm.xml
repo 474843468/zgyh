@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 车险投保确认界面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/layout_step"
+        layout="@layout/safety_carsafety_step" />
+
+    <LinearLayout
+        android:id="@+id/btnlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/fill_margin_top"
+        android:layout_marginRight="@dimen/fill_margin_top"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnNext"
+            style="@style/textview_forex_button_cell"
+            android:text="@string/next" />
+    </LinearLayout>
+
+    <ScrollView
+        style="@style/listviewcomm_fill_haveDivider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnlayout"
+        android:layout_below="@id/layout_step"
+        android:layout_marginLeft="@dimen/fill_margin_top"
+        android:layout_marginRight="@dimen/fill_margin_top"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!-- 产品类型 -->
+
+            <LinearLayout
+                android:id="@+id/ll_safetytype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/bottom_margin_top"
+                android:paddingTop="@dimen/bottom_margin_top"
+                android:visibility="visible" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="5.5"
+                    android:singleLine="true"
+                    android:text="@string/safety_hold_pro_detail_prod_type"
+                   />
+
+                <TextView
+                    android:id="@+id/tv_safetytype"
+                    style="@style/textview_forex_prompt_info"
+                    android:layout_weight="3.5"
+                    android:ellipsize="end"
+                    android:paddingLeft="0dip"
+                    android:singleLine="true"
+                    />
+            </LinearLayout>
+            <!-- 保险公司名称 -->
+
+            <LinearLayout
+                android:id="@+id/layout_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/bottom_margin_top"
+                android:paddingTop="@dimen/bottom_margin_top"
+                android:visibility="visible" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_weight="5.5"
+                    android:singleLine="true"
+                    android:text="@string/safety_hold_pro_detail_risk_company"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_company"
+                    style="@style/textview_forex_prompt_info"
+                    android:layout_weight="3.5"
+                    android:ellipsize="end"
+                    android:paddingLeft="0dip"
+                    android:singleLine="true"
+                     />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:background="@color/whitefornet"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="6dip"
+                android:paddingTop="6dip" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:text="@string/safety_carsafety_carInfoDetil"
+                     />
+            </LinearLayout>
+            <!-- 车牌号 -->
+
+            <LinearLayout
+                android:id="@+id/ll_licenseNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_carinfo_licenseNo" />
+
+                <TextView
+                    android:id="@+id/tv_licenseNo"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+            <!-- 品牌型号 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_carinfo_brandName" />
+
+                <TextView
+                    android:id="@+id/tv_brandName"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+            <!-- 车辆识别代码 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_carinfo_frameNo" />
+
+                <TextView
+                    android:id="@+id/tv_frameNo"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+            <!-- 发动机号 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_carinfo_engineNo" />
+
+                <TextView
+                    android:id="@+id/tv_engineNo"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+            <!-- 注册日期 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_carinfo_enrollDate" />
+
+                <TextView
+                    android:id="@+id/tv_enrollDate"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+            <!-- 车辆品牌 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_carinfo_vehicleBrand" />
+
+                <TextView
+                    android:id="@+id/tv_vehicleBrand"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+            <!-- 车辆型号 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_carinfo_vehicleModel" />
+
+                <TextView
+                    android:id="@+id/tv_vehicleModel"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+            <!-- 年款 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_carinfo_modelYear" />
+
+                <TextView
+                    android:id="@+id/tv_modelYear"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+            <!-- 座位数 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_carinfo_seatNum" />
+
+                <TextView
+                    android:id="@+id/tv_seatNum"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+            <!-- 新车购置价 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_carinfo_newCarPrice" />
+
+                <TextView
+                    android:id="@+id/tv_newCarPrice"
+                   style="@style/textview_forex_prompt_info"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:background="@color/whitefornet"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="6dip"
+                android:paddingTop="6dip" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:text="@string/safety_carsafety_safetyAndmoney"
+                     />
+            </LinearLayout>
+
+            <!-- 保险详情区域，在此区域添加之前所选先别的信息 -->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fill_margin_top" >
+
+                <TextView
+                    android:id="@+id/tv_bill_tip"
+                    style="@style/confirm_info_textview_style"
+                    android:layout_gravity="center"
+                    android:text="@string/safety_carsafety_safetydetil" />
+            </FrameLayout>
+            
+            <LinearLayout
+                android:id="@+id/ll_safetyItemInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fill_margin_top"
+                android:layout_marginRight="@dimen/fill_margin_top"
+                android:gravity="center"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <!-- 不计免赔合计 -->
+
+            <LinearLayout
+                android:id="@+id/ll_bj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="不计免赔合计：" />
+
+                <TextView
+                    android:id="@+id/tv_bj"
+                   style="@style/textview_forex_prompt_info"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+            
+            <!-- <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fill_margin_top" >
+
+                <TextView
+                    style="@style/confirm_info_textview_style"
+                    android:layout_gravity="center"
+                    android:text="@string/safety_carsafety_Taxdetil" />
+            </FrameLayout>
+            
+            车船税当年缴费
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_carsafety_taxCurrent" />
+
+                <TextView
+                    android:id="@+id/tv_taxCurrent"
+                   style="@style/textview_forex_prompt_info"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+            往年补缴
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_carsafety_taxFormer" />
+
+                <TextView
+                    android:id="@+id/tv_taxFormer"
+                   style="@style/textview_forex_prompt_info"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+            滞纳金
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_carsafety_taxLatafee" />
+
+                <TextView
+                    android:id="@+id/tv_taxLatafee"
+                   style="@style/textview_forex_prompt_info"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+            车船税总计
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_carsafety_totalTax" />
+
+                <TextView
+                    android:id="@+id/tv_totalTax"
+                   style="@style/textview_forex_prompt_info"
+                    android:textColor="@color/red" />
+            </LinearLayout> -->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fill_margin_top" >
+
+                <TextView
+                    style="@style/confirm_info_textview_style"
+                    android:layout_gravity="center"
+                    android:text="@string/safety_carsafety_Premiumdetil" />
+            </FrameLayout>
+            <!-- 交强险总保费 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_carsafety_jqxPremium" />
+
+                <TextView
+                    android:id="@+id/tv_jqxPremium"
+                   style="@style/textview_forex_prompt_info"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+            <!-- 商业险总保费 -->
+
+            <LinearLayout
+                android:id="@+id/ll_totalBizRealPremium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_carsafety_totalBizRealPremium" />
+
+                <TextView
+                    android:id="@+id/tv_totalBizRealPremium"
+                   style="@style/textview_forex_prompt_info"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+            <!-- 车船税总计 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_carsafety_totalTax" />
+
+                <TextView
+                    android:id="@+id/tv_totalTax2"
+                   style="@style/textview_forex_prompt_info"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+            <!-- 应缴款项 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_carsafety_totalRealPremium" />
+
+                <TextView
+                    android:id="@+id/tv_Current"
+                   style="@style/textview_forex_prompt_info"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:background="@color/whitefornet"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="6dip"
+                android:paddingTop="6dip" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:text="@string/safety_carinfo_carOwnerInfo" />
+            </LinearLayout>
+            <!-- 车主姓名 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_carinfo_carOwnerName" />
+
+                <TextView
+                    android:id="@+id/tv_carOwnerName"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+            <!-- 车主证件类型 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_carinfo_carOwnerIdType" />
+
+                <TextView
+                    android:id="@+id/tv_carOwnerIdType"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+            <!-- 车主证件号码 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_carinfo_carOwnerId" />
+
+                <TextView
+                    android:id="@+id/tv_carOwnerId"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:background="@color/whitefornet"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="6dip"
+                android:paddingTop="6dip" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:text="@string/safety_hold_pro_detail_applicant_info"
+                     />
+            </LinearLayout>
+            <!-- 姓名 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_buyername" />
+
+                <TextView
+                    android:id="@+id/tv_applicantName"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+            <!-- 手机号码 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_carsafety_applicantPhone" />
+
+                <TextView
+                    android:id="@+id/tv_applicantPhone"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+            <!-- 证件类型 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_hold_pro_detail_applicant_cred_type" />
+
+                <TextView
+                    android:id="@+id/tv_applicantIdType"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+            <!-- 证件号码 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_hold_pro_detail_applicant_cred_num" />
+
+                <TextView
+                    android:id="@+id/tv_applicantId"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+            <!-- 电子邮箱 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_hold_pro_detail_applicant_email" />
+
+                <TextView
+                    android:id="@+id/tv_applicantEmail"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:background="@color/whitefornet"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="6dip"
+                android:paddingTop="6dip" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:text="@string/safety_carsafety_benInfo"
+                     />
+            </LinearLayout>
+            <!-- 姓名 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_buyername" />
+
+                <TextView
+                    android:id="@+id/tv_byApplicantName"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+            <!-- 手机号码 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_carsafety_applicantPhone" />
+
+                <TextView
+                    android:id="@+id/tv_byApplicantPhone"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+            <!-- 证件类型 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_hold_pro_detail_applicant_cred_type" />
+
+                <TextView
+                    android:id="@+id/tv_byApplicantIdType"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+            <!-- 证件号码 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_hold_pro_detail_applicant_cred_num" />
+
+                <TextView
+                    android:id="@+id/tv_byApplicantId"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:background="@color/whitefornet"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="6dip"
+                android:paddingTop="6dip" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:text="@string/safety_carsafety_otherInfoSim"
+                   />
+            </LinearLayout>
+            <!-- 发票抬头 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_invoice_title" />
+
+                <TextView
+                    android:id="@+id/tv_invoice_title"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+            <!-- 收件人姓名 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_invoice_hadname" />
+
+                <TextView
+                    android:id="@+id/tv_invoice_hadname"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+            <!-- 收件人电话 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_carsafety_shoujianrenPhone" />
+
+                <TextView
+                    android:id="@+id/tv_invoice_hadphone"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+            <!-- 配送地址 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/safety_invoice_adress2" />
+
+                <TextView
+                    android:id="@+id/tv_invoice_adress"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+            <!-- 邮编 -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message" 
+                    android:text="@string/bocinvt_eva_postcode" />
+
+                <TextView
+                    android:id="@+id/tv_invoice_postcode"
+                   style="@style/textview_forex_prompt_info" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tran_save_payee_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/fill_margin_top"
+                android:gravity="center"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal" >
+
+                    <CheckBox
+                        android:id="@+id/cb_isCheck"
+                        android:layout_width="@dimen/checkboxWH"
+                        android:layout_height="@dimen/checkboxWH"
+                        android:background="@drawable/save_phone_checkbox_selector"
+                        android:button="@null" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fill_margin_top"
+                    android:gravity="center_vertical"
+                    android:text="我已阅读并同意"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/tv_TouBaoShengMing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="《投保声明》"
+                    android:textColor="@color/blue"
+                    android:textSize="@dimen/textsize_default" />
+            </LinearLayout>
+            <!-- 手机验证码布局 -->
+
+            <LinearLayout
+                android:id="@+id/ll_sms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_common_left_three"
+                    android:layout_width="fill_parent"
+                    android:layout_weight="5.0"
+                    android:gravity="right"
+                    android:text="@string/safety_carsafety_sms"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.5"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/et_sms"
+                        style="@style/edittext_inputNumber_fill"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/titlebackbtn_marginleft"
+                        android:gravity="center_vertical"
+                        android:inputType="textPassword"
+                        android:maxLength="6" />
+
+                    <Button
+                        android:id="@+id/smsbtn"
+                        style="@style/button_smscode"
+                        android:layout_marginRight="@dimen/layout_margin_top" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_tip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fill_margin_top"
+                android:layout_marginRight="@dimen/fill_margin_top"
+                android:layout_marginTop="@dimen/fill_margin_top"
+                android:text="手机验证码已自动发到您的手机上，请查收并输入。"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textsize_default"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

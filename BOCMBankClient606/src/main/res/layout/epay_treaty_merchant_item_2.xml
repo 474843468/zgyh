@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:id="@+id/ll_merchant_card"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/acc_list_item_height"
+        android:background="@drawable/img_card"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/common_listview_item_paddingLR"
+        android:paddingRight="@dimen/common_listview_item_paddingLR" >
+
+        <TextView
+            android:id="@+id/tv_merchant_name"
+            style="@style/textview_common"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_weight="1"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/textsize_one_one" />
+
+        <RelativeLayout
+            android:id="@+id/rl_acc_types"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_at"
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/epay_treaty_add_merchant_item_tv_acctype" />
+
+            <TextView
+                android:id="@+id/tv_acc_types"
+                style="@style/textview_common_right"
+                android:layout_below="@id/tv_at" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_gou"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/sucess_rightbg"
+        android:visibility="gone" />
+
+</RelativeLayout>

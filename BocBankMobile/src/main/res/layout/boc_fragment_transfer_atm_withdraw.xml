@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/boc_space_between_20px">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_parent_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/boc_space_between_20px"
+                android:paddingRight="@dimen/boc_space_between_20px">
+
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                    android:id="@+id/choice_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/boc_space_between_20px"
+                    app:editChoiceName="@string/boc_transfer_atm_draw_account"
+                    app:editChoiceNameBold="true" />
+
+                <LinearLayout
+                    android:id="@+id/ll_balance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/boc_space_between_40px"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/boc_space_between_32px"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/boc_transfer_balance"
+                        android:textColor="@color/boc_text_color_cinerous"
+                        android:textSize="@dimen/boc_text_size_small" />
+
+                    <TextView
+                        android:id="@+id/txt_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/boc_text_color"
+                        android:textSize="@dimen/boc_text_size_small"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/boc_space_between_104px"
+                    android:layout_marginBottom="@dimen/boc_space_between_20px"
+                    android:background="@color/boc_common_cell_color"
+                    android:paddingRight="@dimen/boc_space_between_30px">
+
+                    <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputWidget
+                        android:id="@+id/money_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:editChoiceName="@string/boc_transfer_atm_draw_money"
+                        app:editChoiceNameBold="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/boc_space_between_20px"
+                        android:text="@string/boc_common_currency"
+                        android:textColor="@color/boc_text_color_dark_gray"
+                        android:textSize="@dimen/boc_text_size_common" />
+                </RelativeLayout>
+
+                <!--预留密码-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/boc_space_between_104px"
+                    android:background="@color/boc_common_cell_color"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/boc_space_between_32px"
+                    android:paddingRight="@dimen/boc_space_between_30px">
+
+                    <TextView
+                        android:layout_width="@dimen/boc_space_between_190px"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:lineSpacingExtra="@dimen/boc_space_between_6px"
+                        android:text="@string/boc_transfer_password"
+                        android:textColor="@color/boc_text_color_dark_gray"
+                        android:textSize="@dimen/boc_text_size_common"
+                        android:textStyle="bold" />
+
+                    <cfca.mobile.sip.SipBox
+                        android:id="@+id/sipbox_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/boc_transfer_hint_password"
+                        android:paddingLeft="@dimen/boc_space_between_50px"
+                        android:singleLine="true"
+                        android:textColor="@color/boc_text_color_dark_gray"
+                        android:textColorHint="@color/boc_text_color_light_gray"
+                        android:textSize="@dimen/boc_text_size_common" />
+                </LinearLayout>
+
+                <include layout="@layout/boc_divide_line" />
+                <!--确认预留密码-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/boc_space_between_104px"
+                    android:background="@color/boc_common_cell_color"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/boc_space_between_32px"
+                    android:paddingRight="@dimen/boc_space_between_30px">
+
+                    <TextView
+                        android:layout_width="@dimen/boc_space_between_190px"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:lineSpacingExtra="@dimen/boc_space_between_6px"
+                        android:text="@string/boc_transfer_password_again"
+                        android:textColor="@color/boc_text_color_dark_gray"
+                        android:textSize="@dimen/boc_text_size_common"
+                        android:textStyle="bold" />
+
+                    <cfca.mobile.sip.SipBox
+                        android:id="@+id/sipbox_password_again"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/boc_transfer_hint_password_again"
+                        android:paddingLeft="@dimen/boc_space_between_50px"
+                        android:singleLine="true"
+                        android:textColor="@color/boc_text_color_dark_gray"
+                        android:textColorHint="@color/boc_text_color_light_gray"
+                        android:textSize="@dimen/boc_text_size_common" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/boc_space_between_104px"
+                    android:layout_marginTop="@dimen/boc_space_between_20px"
+                    android:background="@color/boc_common_cell_color"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/boc_space_between_32px"
+                    android:paddingRight="@dimen/boc_space_between_30px">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/boc_transfer_atm_draw_phone"
+                        android:textColor="@color/boc_text_color_dark_gray"
+                        android:textSize="@dimen/boc_text_size_common"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txt_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical|right"
+                        android:paddingLeft="@dimen/boc_space_between_110px"
+                        android:text="134 0914 1234"
+                        android:textColor="@color/boc_text_color_dark_gray"
+                        android:textSize="@dimen/boc_text_size_common" />
+                </LinearLayout>
+
+                <include layout="@layout/boc_divide_line" />
+
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditClearWidget
+                    android:id="@+id/edit_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/boc_space_between_104px"
+                    android:background="@color/boc_common_cell_color"
+                    app:editClearHint="@string/boc_transfer_hint_empty"
+                    app:editClearName="@string/boc_transfer_comment" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_confirm"
+                style="@style/BocButton.BocPrimaryButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_88px"
+                android:layout_marginTop="@dimen/boc_space_between_80px"
+                android:text="@string/boc_account_next" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

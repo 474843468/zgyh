@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/bg_qrpay_csan"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_qrcollection_code_big"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/boc_common_cell_color"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_qrcollection_code_big"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"/>
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_titlebar_height"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/iv_qrcollection_title_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:src="@drawable/boc_back_white"/>
+
+        <TextView
+            android:id="@+id/tv_qrcollection_title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="收款"
+            android:textColor="@color/boc_common_cell_color"
+            android:textSize="@dimen/boc_text_size_big"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/iv_qrcollection_title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="@string/boc_qrpay_setting_money"
+            android:textColor="@color/boc_common_cell_color"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/boc_space_between_20px"
+        android:layout_marginRight="@dimen/boc_space_between_20px"
+        android:layout_marginTop="@dimen/boc_space_between_30px"
+        android:background="@drawable/boc_card_background"
+        >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_aboveto_qrcode1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="@string/boc_qrpay_aboveto_qrcode1"
+                android:textColor="@color/boc_text_color_dark_gray"
+                />
+
+            <ImageView
+                android:id="@+id/iv_qrcollection_code_qrcode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/boc_space_between_20px"
+                android:layout_marginRight="@dimen/boc_space_between_20px"
+                android:layout_marginTop="@dimen/boc_space_between_20px"/>
+            <TextView
+                android:id="@+id/tv_aboveto_qrcode2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_56px"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/tv_aboveto_qrcode3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="@string/boc_qrpay_aboveto_qrcode1"
+                android:visibility="gone"
+                android:textColor="@color/boc_text_color_dark_gray"
+                />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_divider_1px"
+                android:layout_marginLeft="@dimen/boc_space_between_20px"
+                android:layout_marginRight="@dimen/boc_space_between_20px"
+                android:layout_marginTop="@dimen/boc_space_between_30px"
+                android:background="@color/boc_common_view_line"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_110px"
+                android:layout_marginLeft="@dimen/boc_space_between_20px"
+                android:layout_marginRight="@dimen/boc_space_between_20px"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/boc_space_between_10px"
+                    android:lineSpacingExtra="@dimen/boc_space_between_6px"
+                    android:text="@string/boc_pledge_info_payee_account"
+                    android:textColor="@color/boc_text_color_gray"
+                    android:textSize="@dimen/boc_text_size_small"/>
+
+                <TextView
+                    android:id="@+id/tv_qrcollection_code_pay_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/boc_space_between_10px"
+                    android:lineSpacingExtra="@dimen/boc_space_between_6px"
+                    android:text="6234 ****** 1234"
+                    android:textColor="@color/boc_text_color_gray"
+                    android:textSize="@dimen/boc_text_size_small"/>
+
+                <TextView
+                    android:id="@+id/tv_qrcollection_code_change_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/boc_space_between_20px"
+                    android:lineSpacingExtra="@dimen/boc_space_between_6px"
+                    android:padding="@dimen/boc_space_between_10px"
+                    android:text="@string/boc_qrpay_change"
+                    android:textColor="@color/boc_main_button_color"
+                    android:textSize="@dimen/boc_text_size_small"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/show_relativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/shoukuanzongji_relative"
+            android:background="#bbffffff"
+            android:visibility="gone"
+            >
+            <TextView
+                android:id="@+id/show_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.00元"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:layout_centerInParent="true"
+                android:textSize="@dimen/boc_text_size_56px"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:textSize="@dimen/boc_text_size_very_small"
+                android:text="付款人"
+                android:layout_marginBottom="20dp"
+                android:layout_above="@+id/show_payeename"
+                />
+            <TextView
+                android:id="@+id/show_payeename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:textSize="@dimen/boc_text_size_20dp"
+                android:layout_marginBottom="20dp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/shoukuanzongji_relative"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_110px"
+            android:layout_below="@+id/linearLayout1"
+            android:visibility="gone"
+            >
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_divider_1px"
+                android:background="@color/boc_common_view_line"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/boc_space_between_20px"
+                android:text="收款总计:"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_common"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/tv_shoukuanzongji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/boc_space_between_20px"
+                android:text="0 元"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:textSize="@dimen/boc_text_size_common"
+                />
+
+        </RelativeLayout>
+        <ListView
+            android:id="@+id/lv_boc_fragment_qrcollection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/shoukuanzongji_relative"
+            android:divider="@color/boc_common_view_line"
+            >
+
+        </ListView>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_110px"
+        android:layout_marginLeft="@dimen/boc_space_between_20px"
+        android:layout_marginRight="@dimen/boc_space_between_20px"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_qrcode_collection_refresh_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/boc_space_between_30px"
+            android:src="@drawable/icon_qrpay_refresh"/>
+
+        <TextView
+            android:id="@+id/qrcode_collection_refresh_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/boc_space_between_20px"
+            android:text="@string/boc_qrpay_pay_hand_refresh"
+            android:textColor="@color/boc_common_cell_color"
+            android:textSize="@dimen/boc_text_size_small"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+
+</LinearLayout>

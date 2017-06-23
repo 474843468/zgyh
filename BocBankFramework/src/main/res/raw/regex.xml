@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<regex>
+    <!-- 字段说明
+    收款人姓名
+        <empty_tips>pesap_payee_name_empty_tips</tips> 为空时提示 默认为"" 这里字符串资源id
+        <regex_tips>pesap_payee_name_error_tips</regex_tips>                格式不对提示 
+        。。。 提示细化？
+        <max_length></max_length>                最大长度int -1 时不限制   默认不限制
+        <min_length></min_length>                最小长度 int -1 时不限制  默认不限制
+        <is_full_word>true</is_full_word>        是否可以全角 boolean 默认允许
+        <chinese_length></chinese_length>        中文所占字符 默认为2
+         <regex_str></regex_str>                 正则
+    </item>
+    
+    
+    <item style="payee_name" des="收款人姓名">
+        <empty_tips>payee_name_empty_tips</empty_tips>
+        <regex_tips>pesap_payee_name_error_tips</regex_tips>
+        <max_length>1</max_length>
+        <min_length>76</min_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>true</is_full_word>
+    </item>
+     -->
+
+     <item style="ovs_dcs_ss_daymountcode" des="每日限额">
+        <empty_tips>ovs_dcs_bs_quota_empty_tips_android</empty_tips>
+        <regex_tips>ovs_dcs_bs_quota_error_tips_android</regex_tips>
+        <regex_str>^[0-9]*$</regex_str>
+        <min_length>0</min_length>
+        <max_length>13</max_length>
+        <chinese_length></chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+    <item style="ovs_dcs_ss_customeralias" des="客户别名">
+        <empty_tips>ovs_dcs_ss_customeralias_empty_tips</empty_tips>
+        <regex_tips>ovs_dcs_ss_customeralias_error_tips</regex_tips>
+        <regex_str>^[a-zA-Z0-9\/+\-?()\s.,']*$</regex_str>
+        <min_length>1</min_length>
+        <max_length>80</max_length>
+        <chinese_length></chinese_length>
+        <is_full_word>false</is_full_word>
+      </item>
+
+    <!--     ======================2016-8-1814:31:38- 转账汇款===== -->
+    <item style="mbdi_tr_trans_payeeacctname" des="收款人名称">
+        <empty_tips>收款人名称不能为空</empty_tips>
+        <regex_tips>收款人姓名：最长60个字符或30个中文字符</regex_tips>
+        <regex_str>^[\s\S]{0,60}$</regex_str>
+        <min_length>1</min_length>
+        <max_length>60</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>true</is_full_word>
+    </item>
+
+
+    <item style="mbdi_tr_ebs_trans_payeeacctno" des="收款账号（跨行）">
+        <empty_tips>收款账号不能为空</empty_tips>
+        <regex_tips>收款账号最长31个字符</regex_tips>
+        <regex_str>^\d{1,31}$</regex_str>
+        <min_length>0</min_length>
+        <max_length>31</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>true</is_full_word>
+    </item>
+
+    <item style="mbdi_tr_trans_payeeacctno" des="收款账号">
+        <empty_tips>收款账号不能为空</empty_tips>
+        <regex_tips>收款账号由12-17或19位数字组成</regex_tips>
+        <regex_str>^\d{12,17}$|\d{19}$</regex_str>
+        <min_length>12</min_length>
+        <max_length>19</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>true</is_full_word>
+    </item>
+
+    <item style="mbdi_tr_trans_mobile" des="收款人手机号">
+        <empty_tips>手机号好好</empty_tips>
+        <regex_tips>收款人手机号：11位数字</regex_tips>
+        <regex_str>^\d{11}$</regex_str>
+        <min_length>11</min_length>
+        <max_length>11</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+
+    <item style="mbdi_tr_trans_remark" des="附言">
+        <empty_tips>附言岩岩</empty_tips>
+        <regex_tips>附言：最长50个字符或25个中文字符</regex_tips>
+        <regex_str>^[\s\S]{0,50}$</regex_str>
+        <min_length>0</min_length>
+        <max_length>50</max_length>
+        <chinese_length>2</chinese_length>
+        <is_full_word>false</is_full_word>
+    </item>
+    <!--     ======================2016-8-1814:31:38- 转账汇款===== -->
+	 
+</regex>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/boc_common_cell_color">
+
+    <RelativeLayout
+        android:id="@+id/layout_01"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_116px">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/security_e_shield"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:textSize="@dimen/boc_text_size_little_big" />
+
+        <ImageView
+            android:id="@+id/btn_dialog_cancel"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:scaleType="center"
+            android:src="@drawable/boc_btn_close" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/layout_01"
+        android:background="@color/boc_divider_line_color" />
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.dialogview.securityverify.eshield.PESACaPasswordEditText
+        android:id="@+id/etoken_pesac"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/layout_01"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="@dimen/boc_space_between_50px" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_96px"
+        android:layout_below="@id/etoken_pesac" />
+
+</RelativeLayout>

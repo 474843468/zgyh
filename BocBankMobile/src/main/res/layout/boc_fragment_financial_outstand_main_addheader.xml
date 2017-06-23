@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--<include layout="@layout/boc_divide_line" />-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_20px"
+            android:background="@color/boc_common_bg_color" />
+        <!--份额转换-头部-->
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableHead
+            android:id="@+id/outstand_fragment_detailtabhead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <!--产品简介-->
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailContentView
+            android:id="@+id/outstand_fragment_detailcontent_view2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <!--listview 列表显示-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/boc_space_between_20px"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:layout_marginLeft="@dimen/boc_space_between_30px"
+                android:text="@string/boc_trans_financial_position_main_sharelist"
+                android:textColor="@color/boc_black"
+                android:textSize="@dimen/boc_text_size_small" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fragment_outstand_noearn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_96px"
+            android:background="@color/boc_common_cell_color"
+            android:gravity="center"
+            android:padding="@dimen/boc_card_list_arrow_width"
+            android:text="暂无份额"
+            android:textColor="@color/boc_text_color_common_gray"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <!--赎回，份额转换，继续购买，按钮点击-->
+
+</RelativeLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/style_match_wrap"
+    android:background="@color/transparent_00"
+    android:orientation="vertical" >
+
+    <RelativeLayout 
+        style="@style/style_match_wrap" 
+        android:paddingTop="2dp" 
+        android:paddingBottom="2dp"
+        >
+
+        <LinearLayout 
+            style="@style/style_wrap_wrap" 
+            android:orientation="horizontal"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            >
+        <ImageView
+            android:id="@+id/image_includ"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/ic_launcher"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/tv_includ_1"
+            style="@style/textview_common_multi_second"
+            android:layout_marginLeft="2dp"
+            android:text="@string/assetmanager_capital_3" />
+        </LinearLayout>
+        
+        <!-- 手动输入账户 -->
+        <TextView 
+            android:id="@+id/tv_btn_hand"
+            style="@style/textview_common_multi_second"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_round_red"
+            android:padding="2dp"
+            android:textColor="@color/red"
+            android:textSize="13sp"
+            android:text="手动输入账户"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/style_match_wrap" >
+
+        <TextView
+            android:id="@+id/tv_includ_2"
+            style="@style/textview_common"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/assetmanager_accound_bg"
+            android:gravity="center"
+            android:text="@string/assetmanager_capital_5"
+            android:textColor="#FF6662"
+            android:visibility="visible" />
+
+       
+
+        <com.chinamworld.bocmbci.biz.assetmanager.capitalmanager.MyListView
+            android:id="@+id/listview_includ"
+            style="@style/listviewcomm_wrap_noDivider"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/layout_includ"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:background="@drawable/assetmanager_accound_bg"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/tv_includ_3"
+                style="@style/textview_common_multi_second"
+                android:layout_gravity="center_horizontal"
+                android:text="" />
+
+            <LinearLayout style="@style/style_match_wrap" android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_includ_4"
+                    style="@style/style_textview_with_weight_1"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/tv_includ_5"
+                    style="@style/textview_common_multi_second"
+                    android:text=""
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/style_match_wrap" android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_includ_6"
+                    style="@style/style_textview_with_weight_1"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/tv_includ_7"
+                    style="@style/textview_common_multi_second"
+                    android:text=""
+                    android:textColor="@color/red" />
+            </LinearLayout>
+        </LinearLayout>
+         <TextView
+            android:id="@+id/tv_includ_2_alert"
+            style="@style/textview_common"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_includ"
+            android:textColor="#FF6662"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

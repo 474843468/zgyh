@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 信用卡还款统一界面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/btn_transet_mytransfer"
+        style="@style/tran_little_card_ll"
+        android:layout_width="match_parent" >
+
+        <TextView
+            android:id="@+id/crcd_trans_set_title"
+            style="@style/tran_little_title_tv"
+            android:text="@string/mycrcd_zhangdan_zhuan" />
+
+        <LinearLayout
+            style="@style/tran_little_card_content_ll"
+            android:padding="@dimen/dp_five" >
+
+            <LinearLayout
+                android:id="@+id/ll_paytype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_check_height"
+                    android:layout_gravity="top"
+                    android:layout_weight="7"
+                    android:gravity="center|right"
+                    android:singleLine="true"
+                    android:text="@string/crcd_paytype"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="horizontal" >
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupForpaytype"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <RadioButton
+                            android:id="@+id/radio_huankuan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:button="@null"
+                          
+                            android:drawableLeft="@drawable/radiobtn_selector"
+                            android:text="@string/crcd_credit_card_payment"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <RadioButton
+                            android:id="@+id/radio_gouhui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:button="@null"
+                          
+                            android:drawableLeft="@drawable/radiobtn_selector"
+                            android:text="@string/crcd_credit_card_reimbursement"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_default" />
+                    </RadioGroup>
+
+                   
+                </LinearLayout>
+            </LinearLayout>
+
+            </LinearLayout>
+
+            
+    <LinearLayout
+            style="@style/tran_little_card_content_ll"
+            android:id="@+id/ll_huankuan"
+            android:padding="@dimen/dp_five" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                      android:padding="@dimen/dp_five"
+                     >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:text="@string/bizhong" />
+
+                    <Spinner
+                        android:id="@+id/crcd_currency"
+                        style="@style/Spiiner_fill"
+                        android:layout_weight="3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_cashRemit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                      android:padding="@dimen/dp_five">
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:text="@string/chaohui" />
+
+                    <Spinner
+                        android:id="@+id/crcd_cashRemit"
+                        style="@style/Spiiner_fill"
+                        android:layout_weight="3" />
+                </LinearLayout>
+
+                <LinearLayout
+                android:id="@+id/ll_paymode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                   android:padding="@dimen/dp_five" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_check_height"
+                    android:layout_gravity="top"
+                    android:layout_weight="7"
+                    android:gravity="center|right"
+                    android:singleLine="true"
+                    android:text="@string/crcd_paymode"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:orientation="horizontal" >
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupForpaymode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <RadioButton
+                            android:id="@+id/radio_payall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/radiobtn_selector"
+                            android:text="@string/crcd_payall"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <RadioButton
+                            android:id="@+id/radio_paylimit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/radiobtn_selector"
+                            android:text="@string/crcd_paylimit"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_default" />
+                         <RadioButton
+                            android:id="@+id/radio_payself"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:button="@null"
+                            android:drawableLeft="@drawable/radiobtn_selector"
+                            android:text="@string/crcd_payself"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/textsize_default" />
+                    </RadioGroup>
+
+                   
+                </LinearLayout>
+            </LinearLayout>
+            
+             
+
+                    
+         	 <TextView
+              	android:id="@+id/credit_new_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"            
+                android:textColor="@color/gray"
+                 android:gravity="center"
+                 android:visibility="gone"
+                android:padding="@dimen/dp_five" />
+
+                      <LinearLayout
+                          android:id="@+id/ll_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"                   
+                    android:orientation="vertical"
+                    >  
+            
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/fill_padding_right" >
+
+                    <TextView
+                        android:id="@+id/tv_huankuan_count"
+                        style="@style/comm_view_left"
+                        android:text="@string/repayAmountValue" />
+
+                    <EditText
+                        android:id="@+id/et_huankuan_count"
+                        style="@style/edittext_input_numberDecimal_fill"
+                        android:layout_weight="3"
+                        android:maxLength="14"
+                        android:textColor="@color/black" >
+                    </EditText>
+                </LinearLayout>
+                  <TextView
+                    android:id="@+id/tv_for_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_five"
+                    android:gravity="right"
+                    android:paddingRight="@dimen/fill_padding_right"
+                    android:textColor="@color/red"
+                    android:visibility="gone"
+                    android:textSize="@dimen/textsize_one_three" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/fill_padding_right" >
+
+                <TextView
+                    style="@style/comm_view_left"
+                    android:text="@string/fuYan" />
+
+                <EditText
+                    android:id="@+id/et_huankuan_fuyan"
+                    style="@style/edittext_common_fill"
+                    android:layout_weight="3"
+                    android:hint="@string/hint_memo"
+                    android:maxLength="50"
+                    android:textColor="@color/black" >
+                </EditText>
+            </LinearLayout>
+ </LinearLayout>
+            
+          </LinearLayout>
+
+            
+           
+    <LinearLayout style="@style/tran_little_card_content_ll" 
+          android:id="@+id/ll_gouhui"
+          
+            android:padding="@dimen/dp_five" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shap_for_dept_tranlist"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/layout_padding_bottom"
+                android:paddingLeft="@dimen/layout_padding_left_right" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/fill_padding_right" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:text="@string/credit_currency"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_two" />
+
+                    <TextView
+                        android:id="@+id/crcd_card_currency"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_two" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="18"
+                        android:gravity="left"
+                        android:text="@string/rel_creditType"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_two" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroupForgouhuitype"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:gravity="left"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/radio_gouhuiall"
+                            android:button="@drawable/radiobtn_selector"
+                            android:checked="true"
+                            android:text="@string/rel_quanE_repay"
+                            android:textSize="@dimen/textsize_one_two" />
+
+                        <RadioButton
+                            android:id="@+id/radio_gouhuipart"
+                            android:button="@drawable/radiobtn_selector"
+                            android:singleLine="true"
+                            android:text="@string/rel_buFen_repay"
+                            android:textSize="@dimen/textsize_one_two" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="@string/repayAmountValue"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_two" />
+
+                    <EditText
+                     
+                        android:id="@+id/et_gouhui_count"
+                        style="@style/edittext_input_numberDecimal_fill"
+                        android:maxLength="14"
+                        android:textColor="@color/black" >
+                    </EditText>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_for_gouhuiamount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_five"
+                    android:gravity="right"
+                    android:paddingRight="@dimen/fill_padding_right"
+                    android:textColor="@color/red"
+                    android:visibility="gone"
+                    android:textSize="@dimen/textsize_one_three" />
+            </LinearLayout>
+        </LinearLayout>
+
+            
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                   android:padding="@dimen/dp_five"
+                android:text="@string/credit_card_return_info"
+                android:textColor="@color/gray" />
+        
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_next"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bottom_margin_top"
+        android:gravity="center"
+     
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_crcd_next"
+            style="@style/tran_three_btn"
+            android:text="@string/next" />
+
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/ll_more_next"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bottom_margin_top"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_commBoc_nowExe_tranSeting"
+            style="@style/tran_three_btn"
+            android:text="@string/nowExe" />
+
+        <Button
+            android:id="@+id/btn_commBoc_preDateExe_tranSeting"
+            style="@style/tran_three_btn"
+            android:text="@string/preDateExe" />
+
+        <Button
+            android:id="@+id/btn_commBoc_prePeriodExe_tranSeting"
+            style="@style/tran_three_btn"
+            android:text="@string/prePeriodExe" />
+    </LinearLayout>
+
+</LinearLayout>

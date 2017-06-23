@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fefefe"
+>
+  <View
+      android:id="@+id/view_topdivider"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/boc_divider_1px"
+      android:background="@color/boc_divide_color"
+  />
+
+  <TextView
+      android:id="@+id/tv_type"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/view_topdivider"
+      android:layout_marginLeft="@dimen/boc_space_between_30px"
+      android:layout_marginRight="@dimen/boc_space_between_8px"
+      android:paddingBottom="@dimen/boc_space_between_10px"
+      android:paddingTop="@dimen/boc_space_between_10px"
+      android:maxLines="1"
+      android:textColor="@color/boc_text_color_dark_gray"
+      android:textSize="@dimen/boc_text_size_small"
+      tools:text="[基金]"
+  />
+
+  <TextView
+      android:id="@+id/tv_tips"
+      android:layout_width="wrap_content"
+      android:minWidth="@dimen/boc_space_between_80px"
+      android:layout_height="@dimen/boc_space_between_30px"
+      android:textSize="@dimen/boc_text_size_super_small"
+      android:gravity="center"
+      android:background="@drawable/boc_bg_blue_with_conner"
+      android:textColor="@color/boc_common_cell_color"
+      android:maxLines="1"
+      android:layout_marginRight="@dimen/boc_space_between_30px"
+      android:layout_alignBaseline="@id/tv_type"
+      android:layout_alignParentRight="true"
+  />
+
+  <com.boc.bocsoft.mobile.bocmobile.base.widget.AccountListItemView.PartialLoadView
+      android:id="@+id/view_loading"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentRight="true"
+      android:paddingRight="@dimen/boc_space_between_38px"
+      android:paddingLeft="@dimen/boc_space_between_38px"
+      android:layout_alignTop="@id/tv_type"
+      android:layout_alignBottom="@id/tv_type"
+      android:scaleType="center"
+  />
+
+  <TextView
+      android:id="@+id/tv_name"
+      android:layout_width="wrap_content"
+      android:layout_height="match_parent"
+      android:layout_alignBaseline="@id/tv_type"
+      android:layout_toRightOf="@id/tv_type"
+      android:layout_toLeftOf="@id/tv_tips"
+      android:layout_marginRight="8dp"
+      android:textColor="@color/boc_text_color_dark_gray"
+      android:textSize="@dimen/boc_text_size_small"
+      android:textStyle="bold"
+      android:maxLines="1"
+      android:ellipsize="end"
+      tools:text="中银惠民宝第001期"/>
+
+<!--  <View
+      android:id="@+id/view_top_divider"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/boc_divider_1px"
+      android:layout_below="@id/tv_type"
+      android:background="@color/boc_divide_color"
+      android:layout_marginBottom="@dimen/boc_space_between_20px"
+      android:layout_marginLeft="@dimen/boc_space_between_22px"
+      android:paddingRight="@dimen/boc_space_between_6px"
+  />-->
+  <!-- 第二行数据 -->
+  <LinearLayout
+      android:id="@+id/ll_line_1"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/tv_type"
+      android:orientation="horizontal"
+      android:paddingLeft="@dimen/boc_space_between_30px"
+      android:paddingRight="@dimen/boc_space_between_30px"
+      android:gravity="center_vertical"
+      android:layout_marginTop="@dimen/boc_space_between_8px"
+  >
+
+    <TextView
+        android:id="@+id/tv_title_left"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_horizontal|bottom"
+        android:maxLines="1"
+        style="@style/home_module_text1"
+        android:layout_margin="0dp"
+        tools:text="日净值增长率"
+    />
+    <TextView
+        android:id="@+id/tv_title_middle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_horizontal|bottom"
+        style="@style/home_module_text1"
+        android:maxLines="1"
+        android:layout_margin="0dp"
+        tools:text="日净值增长率"
+    />
+
+    <TextView
+        android:id="@+id/tv_title_right"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_horizontal|bottom"
+        android:maxLines="1"
+        android:layout_margin="0dp"
+        style="@style/home_module_text1"
+    />
+
+  </LinearLayout>
+
+
+  <LinearLayout
+      android:id="@+id/ll_line_2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/ll_line_1"
+      android:orientation="horizontal"
+      android:paddingLeft="@dimen/boc_space_between_30px"
+      android:paddingRight="@dimen/boc_space_between_30px"
+      android:clipChildren="false"
+      android:layout_marginTop="@dimen/boc_space_between_12px"
+  >
+    <TextView
+        android:id="@+id/tv_value_left"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_horizontal|bottom"
+        style="@style/home_module_text1"
+        android:layout_margin="0dp"
+        android:maxLines="1"
+        android:textColor="@color/boc_text_color_red"
+        android:textSize="@dimen/boc_text_size_20dp"
+        tools:text="0.48%"
+    />
+
+
+    <TextView
+        android:id="@+id/tv_value_middle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_horizontal|bottom"
+        android:maxLines="1"
+        style="@style/home_module_text1"
+        android:layout_margin="0dp"
+        android:text="--"
+        android:textStyle="bold"
+        tools:text="0.48%"
+    />
+
+
+    <TextView
+        android:id="@+id/tv_value_right"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_horizontal|bottom"
+        android:maxLines="1"
+        style="@style/home_module_text1"
+        android:layout_margin="0dp"
+        android:text="--"
+        android:textStyle="bold"
+        tools:text="在售"
+    />
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/ll_line3"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/ll_line_2"
+      android:orientation="horizontal"
+      android:paddingLeft="@dimen/boc_space_between_30px"
+      android:paddingRight="@dimen/boc_space_between_30px"
+      android:paddingTop="@dimen/boc_space_between_20px"
+      >
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_horizontal|bottom"
+        android:maxLines="1"
+        style="@style/home_module_text1"
+        android:textColor="@color/boc_black"
+        android:textSize="@dimen/boc_text_size_super_small"
+        android:layout_margin="0dp"
+        tools:text="2016/09/02"
+    />
+    <Space android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <Space android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+  </LinearLayout>
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/boc_divider_1px"
+      android:layout_below="@id/ll_line3"
+      android:background="@color/boc_divider_line_color"
+      android:layout_marginTop="@dimen/boc_space_between_24px"
+  />
+
+</RelativeLayout>

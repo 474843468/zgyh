@@ -1,0 +1,2 @@
+/*! BUILD: 2016-12-16 */
+define(["zepto","common","model","viewcontroller","issueCity"],function(a,b,c,d,e){var f=a.extendCls(d,{services:["PsnCoinPubInfoQuery"],ejs:"../SouvenirCoin/views/issue/issueProvince.ejs",onLoadFinish:function(){},showCity:function(){new e({id:"reserveView",el:".stacks",eloper:"html",data:{productId:"",queryType:"0",province:""}})}});return b.Module.sub({init:function(){this.reserveView=new f({id:"reserveView",el:".stacks",eloper:"html",className:"coin",data:{productId:"",queryType:"0",province:""}}),this.reserveView.load()}})});

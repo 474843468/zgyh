@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 贷款管理  历史还款信息查询前视图  wangmengmeng -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/loan_query_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rl_loan_query_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dp_five"
+                android:paddingLeft="@dimen/common_listview_item__half_grqy_Height"
+                android:paddingRight="@dimen/common_listview_item__half_grqy_Height"
+                android:paddingTop="@dimen/dp_five" >
+
+                <RadioButton
+                    android:id="@+id/btn1"
+                    style="@style/radioButtonLeft"
+                    android:layout_height="@dimen/dp_for_zero"
+                    android:text="@string/btnGoHistory" />
+
+                <RadioButton
+                    android:id="@+id/btn2"
+                    style="@style/radioButtonMiddle"
+                    android:layout_height="@dimen/dp_for_zero"
+                    android:text="@string/btnGoOverDue" />
+
+                <RadioButton
+                    android:id="@+id/btn3"
+                    style="@style/radioButtonRight"
+                    android:layout_height="@dimen/dp_for_zero"
+                    android:text="@string/btnGoRemain" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/pager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/rl_loan_query_title" >
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

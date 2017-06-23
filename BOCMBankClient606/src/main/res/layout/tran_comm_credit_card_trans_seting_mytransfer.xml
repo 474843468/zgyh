@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 非关联信用卡转账设定 MyTransferActivity -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/tran_little_card_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            style="@style/tran_little_title_tv"
+            android:text="@string/comm_credit_card_trans" />
+
+        <LinearLayout style="@style/tran_little_card_content_ll" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/fill_padding_right" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_weight="1"
+                    android:gravity="center|left"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/bizhong"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_three" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/tran_currency_rmb"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_three" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/layout_height"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/cashRemit"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_three" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="-"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_three" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/fill_padding_right" >
+
+                <TextView
+                    style="@style/comm_view_left"
+                    android:text="@string/repayAmountValue" />
+
+                <EditText
+                    android:id="@+id/et_repayAmountValue_comm_creditCard_transSeting"
+                    style="@style/edittext_input_numberDecimal_fill"
+                    android:layout_weight="3"
+                    android:maxLength="14"
+                    android:textColor="@color/black" >
+                </EditText>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_for_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_five"
+                android:gravity="right"
+                android:paddingRight="@dimen/fill_padding_right"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textsize_one_three"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/fill_padding_right" >
+
+                <TextView
+                    style="@style/comm_view_left"
+                    android:text="@string/fuYan" />
+
+                <EditText
+                    android:id="@+id/tran_memo_tv"
+                    style="@style/edittext_common_fill"
+                    android:layout_weight="3"
+                    android:hint="@string/hint_memo"
+                    android:textColor="@color/black" >
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_sendSmc_ck_comm_creditCard_transSeting"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <LinearLayout style="@style/trans_left_tv_4gravityRight" >
+
+                    <CheckBox
+                        android:id="@+id/ck_sendSmcPayee_comm_creditCard_transSeting"
+                        android:layout_width="@dimen/checkboxWH"
+                        android:layout_height="@dimen/checkboxWH"
+                        android:background="@drawable/save_phone_checkbox_selector"
+                        android:button="@null" />
+                </LinearLayout>
+
+                <TextView
+                    style="@style/trans_right_tv_2gravityLeft"
+                    android:gravity="center_vertical"
+                    android:text="@string/sendSmcPayee" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_payeeMobile_comm_creditCard_tranSeting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/fill_padding_right"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/comm_view_left"
+                    android:text="@string/tran_payeeMobile_set" />
+
+                <EditText
+                    android:id="@+id/et_payeeMobile_comm_creditCard_transSeting"
+                    style="@style/edittext_inputNumber_fill"
+                    android:layout_weight="3"
+                    android:maxLength="15"
+                    android:textColor="@color/black" >
+                </EditText>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:text="@string/comm_credit_card_repay_info"
+                android:textColor="@color/gray" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bottom_margin_top"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_next_comm_creditCard_transSeting"
+            style="@style/bottombtn"
+            android:text="@string/next" />
+    </LinearLayout>
+
+</LinearLayout>

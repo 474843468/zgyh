@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/acc_query_result_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    
+       <RelativeLayout
+        android:id="@+id/acc_query_condition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/acc_query_result_condition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/img_bg_query_j"
+        android:orientation="vertical"
+        android:padding="@dimen/fill_padding_left" 
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_acc_info_currency"
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/trans_atm_account" />
+
+                <TextView
+                    android:id="@+id/tv_acc_info_currency_value"
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_acc_query_date"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/acc_query_date" />
+
+            <TextView
+                android:id="@+id/tv_acc_query_date_value"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/textview_common_down"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/common_paixuWH"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:gravity="right|bottom" />
+
+            <ImageView
+                android:id="@+id/img_acc_query_back"
+                style="@style/query_image_up_style"
+                android:layout_gravity="bottom"
+                android:src="@drawable/img_arrow_gray_down" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/acc_query_condition"
+        android:layout_marginBottom="@dimen/common_bottom_padding_new"
+        android:layout_marginLeft="@dimen/fill_margin_top"
+        android:layout_marginRight="@dimen/fill_margin_top"
+        android:background="@drawable/bg_for_listview_item_write" 
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/ll_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titlebackbtn_width"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/boci_product_name"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/common_row_margin_half"
+                android:layout_weight="1.3"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/bocinvt_paymentDatenull" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.7"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/bocinvt_payPrice" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.2"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/isForex_query_result4" />
+
+            <ImageView
+                android:layout_width="@dimen/shap_of_commrequestopen_pdl"
+                android:layout_height="@dimen/shap_of_commrequestopen_pdl"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:src="@drawable/right_arrow"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/ll_top"
+            android:layout_gravity="center"
+            android:background="@color/gray_line"
+            android:gravity="center" />
+
+        <ListView
+            android:id="@+id/lv_acc_query_result"
+            style="@style/listviewcomm_fill_gray_divider"
+            android:layout_below="@+id/iv" >
+        </ListView>
+    </RelativeLayout>
+
+</RelativeLayout>

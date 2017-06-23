@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_item"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/btn_bottom_width" >
+
+    <RelativeLayout
+        android:id="@+id/back"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/btn_bottom_width"
+        android:tag="back" >
+
+        <FrameLayout
+            android:id="@+id/acc_frame_back"
+            android:layout_width="@dimen/rightbtnW"
+            android:layout_height="@dimen/rightbtnW"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/acc_btn_goitem_back"
+                android:layout_width="@dimen/rightbtnW"
+                android:layout_height="@dimen/rightbtnH"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/ll_acc_msg_back"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/btn_bottom_width"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/acc_frame_back"
+            android:background="@drawable/img_ka_press"
+            android:gravity="center" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/acc_list_item_height"
+                android:text="@string/safety_hold_pro_detail_second_title"
+                android:textColor="@color/black" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/front"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_bottom_width" >
+
+        <FrameLayout
+            android:id="@+id/acc_frame"
+            android:layout_width="@dimen/rightbtnW"
+            android:layout_height="@dimen/rightbtnW"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/acc_btn_goitem"
+                style="@style/rightbtn_jiantou"
+                android:layout_gravity="center"
+                android:background="@drawable/img_arrow_write" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/ll_acc_msg"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/prms_gride_height"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/acc_frame"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:gravity="center" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/btn_bottom_width" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="@dimen/dialogbtn_marginTop"
+                    android:paddingRight="@dimen/dialogbtn_marginTop"
+                    android:paddingTop="4dp" >
+
+                    <TextView
+                        android:id="@+id/tv_safetyName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:textColor="@color/fonts_dark_gray"
+                        android:textSize="@dimen/fonts_one_five"  />
+
+                    <TextView
+                        android:id="@+id/tv_buyDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/fonts_dark_gray"
+                        android:textSize="@dimen/fonts_one_five"  />
+
+                    <TextView
+                        android:id="@+id/tv_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/fonts_one_five"  />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imageViewright"
+                style="@style/sucess_right_iv"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/acc_btn_gocancelrelation"
+        android:layout_width="@dimen/icon_dele_HW"
+        android:layout_height="@dimen/icon_dele_HW"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/icon_del"
+        android:visibility="gone" />
+
+</RelativeLayout>

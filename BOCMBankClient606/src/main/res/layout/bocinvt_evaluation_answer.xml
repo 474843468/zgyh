@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 中银理财 回答问题容器页  wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp_five"
+        android:paddingBottom="@dimen/common_bottom_padding_new" >
+
+        <Button
+            android:id="@+id/btnLast"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_blue_big"
+            android:text="@string/last_boc"
+            android:textSize="@dimen/textsize_one_seven"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnNext"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/next_boc"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/fund_btn_common_oneline_right_press_state"
+            android:text="@string/submit"
+            android:textSize="@dimen/textsize_one_seven" />
+    </LinearLayout>
+
+    <!--
+         <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottom_btn"
+        android:layout_below="@+id/ll_step"
+        android:orientation="vertical" >
+
+
+    -->
+
+    <ScrollView
+        style="@style/scrollview_comm"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_btn"
+        android:layout_below="@+id/ll_step"
+        android:layout_marginLeft="@dimen/common_row_margin"
+        android:layout_marginRight="@dimen/common_row_margin"
+        android:layout_marginTop="@dimen/common_row_margin" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/answer_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_for_listview_item_write"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ViewFlipper
+        android:id="@+id/viewPager"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+    <!-- </FrameLayout> -->
+
+</RelativeLayout>

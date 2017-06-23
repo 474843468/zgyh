@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 外汇行情页面 item -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/foreign_item_ll"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/boc_common_cell_color"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/boc_space_between_30px"
+        android:layout_marginRight="@dimen/boc_space_between_20px"
+        android:layout_marginTop="@dimen/boc_space_between_20px"
+        android:layout_marginBottom="@dimen/boc_space_between_20px"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_buy_sell_cilck"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/forex_sourceCurCde"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="编辑|货币对"
+                    android:textColor="@color/lianlong_text_color_dark_gray"
+                    android:textSize="@dimen/lianlong_text_size_small"
+                    android:layout_gravity="left"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center"
+                android:layout_marginRight="@dimen/boc_text_size_super_small"
+                android:orientation="vertical">
+
+                <!--<TextView
+                    android:id="@+id/forex_sell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="卖出价"
+                    android:textColor="@color/lianlong_text_color_dark_gray"
+                    android:textSize="12dp"
+                    android:textStyle="bold"/>-->
+                <com.chinamworld.llbt.userwidget.NumberStyleTextView
+                    android:id="@+id/forex_buy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical|center"
+                android:layout_marginRight="@dimen/boc_text_size_super_small"
+                android:orientation="vertical">
+
+                <!--<TextView
+                    android:id="@+id/forex_buy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="买入价"
+                    android:textColor="@color/lianlong_text_color_dark_gray"
+                    android:textSize="12dp"
+                    android:textStyle="bold"/>-->
+                <com.chinamworld.llbt.userwidget.NumberStyleTextView
+                    android:id="@+id/forex_sell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text=""
+                />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/forex_rise_fall_amplitude"
+                android:layout_width="@dimen/boc_space_between_140px"
+                android:layout_height="@dimen/boc_space_between_56px"
+                android:layout_marginBottom="@dimen/default_circle_indicator_radius"
+                android:layout_marginLeft="@dimen/boc_space_between_5px"
+                android:layout_marginRight="@dimen/boc_space_between_5px"
+                android:layout_marginTop="@dimen/default_circle_indicator_radius"
+                android:background="@drawable/llbt_btn_corner_gray"
+                android:gravity="center"
+                android:padding="5dip">
+
+                <TextView
+                    android:id="@+id/rise_and_fall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/lianlong_common_cell_color"
+                    android:textSize="@dimen/boc_text_size_small"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="请先设置以下被归集账户的归集规则。"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/textsize_default" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/list_view_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/fill_padding_top"
+            android:paddingLeft="@dimen/layout_margin_top"
+            android:paddingRight="@dimen/shap_of_commrequestopen_pdl"
+            android:paddingTop="@dimen/fill_padding_top" >
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:text="@string/collect_account"
+                android:textSize="@dimen/textsize_one_two" />
+
+           
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:text="@string/collect_account_bank"
+                android:textSize="@dimen/textsize_one_two" />
+             <TextView
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:text="@string/collect_account_name"
+                android:textSize="@dimen/textsize_one_two" />
+        </LinearLayout>
+
+       
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_line" />
+
+        <RelativeLayout
+            android:id="@+id/uncollect_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <ListView
+                android:id="@+id/lv_uncollect"
+                style="@style/listviewcomm_wrap_gray_divider"
+                android:layout_height="match_parent"
+                android:listSelector="@android:drawable/list_selector_background" />
+
+            <TextView
+                android:id="@+id/tv_uncollect_prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="@dimen/fill_margin_bottom"
+                android:layout_marginLeft="@dimen/fill_margin_left"
+                android:layout_marginRight="@dimen/fill_margin_right"
+                android:padding="@dimen/fill_padding"
+                android:text="没有符合条件的查询记录，您可以通过网银渠道添加他行可归集账户。"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_default"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

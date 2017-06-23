@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:layout_width="match_parent"
+            layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/ll_step"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:orientation="vertical" >
+
+        <ScrollView
+            style="@style/scrollview_fill"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:gravity="center" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_five"
+                    android:shrinkColumns="1" >
+
+                    <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="0"
+                            android:text="@string/mycrcd_selected_creditcard" />
+
+                        <TextView
+                            android:id="@+id/tv_card_number"
+                            style="@style/textview_common_right"
+                            android:layout_weight="1"
+                            android:singleLine="false" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/tv_card_type"
+                            style="@style/crcd_tv_common"
+                            android:layout_weight="0" />
+
+                        <TextView
+                            android:id="@+id/tv_card_step"
+                            style="@style/crcd_tv_common"
+                            android:layout_weight="0" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="0"
+                            android:text="@string/mycrcd_accounted_type" />
+
+                        <TextView
+                            android:id="@+id/mycrcd_accounted_type"
+                            style="@style/textview_common_right"
+                            android:layout_weight="1" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="0"
+                            android:text="@string/mycrcd_accounted_description" />
+
+                        <TextView
+                            android:id="@+id/mycrcd_selected_creditcard"
+                            style="@style/textview_common_right"
+                            android:layout_weight="1" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="0"
+                            android:text="@string/mycrcd_accounted_money" />
+
+                        <TextView
+                            android:id="@+id/mycrcd_accounted_money"
+                            style="@style/textview_common_right"
+                            android:layout_weight="1"
+                            android:singleLine="false"
+                            android:textColor="@color/red" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:paddingRight="@dimen/fill_margin_right" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="0"
+                            android:text="@string/mycrcd_divide_num" />
+
+                        <Spinner
+                            android:id="@+id/forex_rate_currency_buylCode"
+                            style="@style/Spiiner_fill"
+                            android:layout_weight="1" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <TextView
+                            android:id="@+id/money_text"
+                            style="@style/textview_common_left"
+                            android:layout_weight="0"
+                            android:text="@string/mycrcd_divide_type" />
+
+                        <Spinner
+                            android:id="@+id/forex_rate_currency_type"
+                            style="@style/Spiiner_fill"
+                            android:visibility="gone" />
+
+                        <TextView
+                            style="@style/textview_common_right"
+                            android:layout_weight="1"
+                            android:text="@string/mycrcd_one_shouqu" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:visibility="invisible" >
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_botom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/trade_nextButton"
+                style="@style/bottombtn"
+                android:text="@string/next"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

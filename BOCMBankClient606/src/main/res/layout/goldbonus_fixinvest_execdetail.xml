@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 定投管理 执行明细页面 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+	
+    <!-- android:layout_marginBottom="@dimen/common_bottom_padding_new"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left" -->
+    <RelativeLayout
+        android:id="@+id/rl_tranhistory"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/titlebackbtn_width"
+                android:layout_marginBottom="@dimen/fill_margin_left_fu"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="已执行情况明细"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/gray_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/titlebackbtn_width"
+                android:layout_marginBottom="@dimen/fill_margin_left_fu"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+                <!-- <com.chinamworld.bocmbci.userwidget.ListTitleView 
+           					 android:layout_width="fill_parent"
+           					 android:layout_height="wrap_content"
+            				android:text="定投执行日期;成交牌价（人民币/克）;执行结果"
+            				user:weightShowRate="1:2:1"
+              			></com.chinamworld.bocmbci.userwidget.ListTitleView> -->
+              	<FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2">		
+				<LinearLayout 
+				    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+                	<TextView
+                    	android:id="@+id/boci_product_name"
+                   	 	style="@style/textview_common"
+                    	android:layout_width="wrap_content"
+                    	android:layout_height="wrap_content"
+                    	android:layout_marginLeft="@dimen/common_row_margin_half"
+                    	android:text="定投执行日期" />
+                	<ImageView 
+                        android:id="@+id/fixinvestdate_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bocinvt_sort_down"/>
+				</LinearLayout>
+				</FrameLayout>
+                <TextView
+                    android:id="@+id/boci_yearlyRR"
+                    style="@style/textview_common"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="优惠后牌价（人民币/克）" />
+
+                <TextView
+                    android:id="@+id/boci_timeLimit"
+                    style="@style/textview_common"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="@dimen/common_row_margin_half"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="执行结果" />
+
+                <ImageView
+                    android:id="@+id/boci_gotoDetail"
+                    android:layout_width="@dimen/shap_of_commrequestopen_pdl"
+                    android:layout_height="@dimen/shap_of_commrequestopen_pdl"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:src="@drawable/right_arrow"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_line_one"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:src="@color/gray_line" />
+
+            <ListView
+                android:id="@+id/goldbonus_execdetail_list"
+                style="@style/listviewcomm_fill_gray_divider" >
+            </ListView>
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

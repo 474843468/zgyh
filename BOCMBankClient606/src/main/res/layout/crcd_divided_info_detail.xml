@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/sureButton"
+            style="@style/bottombtn"
+            android:text="@string/mycrcd_divided_jieqing_ruzhang"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_layout"
+        android:layout_marginTop="@dimen/rightbtnW"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView
+            style="@style/scrollview_fill"
+            android:layout_marginTop="@dimen/dp_two_zero"
+            android:gravity="center"
+            android:paddingLeft="0dp"
+            android:paddingBottom="@dimen/dp_five"
+            android:paddingRight="0dp"
+            android:paddingTop="0dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_acc_loss_actnum"
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/mycrcd_divided_fenqi_detail"
+                    android:textColor="@color/gray"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_credit_card" />
+
+                    <TextView
+                        android:id="@+id/finc_accNumber"
+                        style="@style/textview_common_right"
+                        android:singleLine="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_acc_loss_type"
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_divided_fenqi_date" />
+
+                    <TextView
+                        android:id="@+id/finc_fenqidate"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_divided_fenqi_miaoshu" />
+
+                    <TextView
+                        android:id="@+id/finc_miaoshus"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_divided_fenqi_bizhong" />
+
+                    <TextView
+                        android:id="@+id/finc_bizhong"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_divided_fenqi_amount" />
+
+                    <TextView
+                        android:id="@+id/finc_fincName"
+                        style="@style/textview_common_right"
+                        android:singleLine="false"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_divided_fenqi_qinum" />
+
+                    <TextView
+                        android:id="@+id/finc_qinum"
+                        style="@style/textview_common_right"
+                        android:singleLine="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/money"
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_divided_fenqi_type" />
+
+                    <TextView
+                        android:id="@+id/finc_fenqitype"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_divided_fenqi_firstmoney" />
+
+                    <TextView
+                        android:id="@+id/finc_firstamount"
+                        style="@style/textview_common_right"
+                        android:singleLine="false"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_divided_fenqi_nextmoney" />
+
+                    <TextView
+                        android:id="@+id/finc_nextmoney"
+                        style="@style/textview_common_right"
+                        android:singleLine="false"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_divided_fenqi_hasrumoney" />
+
+                    <TextView
+                        android:id="@+id/finc_hasrumoney"
+                        style="@style/textview_common_right"
+                        android:singleLine="false"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_divided_fenqi_remiannonum" />
+
+                    <TextView
+                        android:id="@+id/finc_remiannonum"
+                        style="@style/textview_common_right"
+                        android:singleLine="false" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_divided_fenqi_remiannomoney" />
+
+                    <TextView
+                        android:id="@+id/finc_remiannomoney"
+                        style="@style/textview_common_right"
+                        android:singleLine="false"
+                        android:textColor="@color/red" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_divided_fenqi_nextdate" />
+
+                    <TextView
+                        android:id="@+id/finc_nextdate"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/titleText_stepacc"
+        android:layout_width="@dimen/crcd_common_details_title_width"
+        android:layout_height="@dimen/left_img_width"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_title"
+        android:gravity="center"
+        android:text="@string/mycrcd_divided_fenqi_detail"
+        android:textColor="@color/gray_title" />
+
+</RelativeLayout>

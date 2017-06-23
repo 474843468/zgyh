@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_hot_product_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/boc_space_between_30px"
+        android:text="@string/boc_hot_product"
+        android:textColor="@color/boc_text_color_dark_gray"
+        android:textSize="@dimen/boc_text_size_little_big"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <GridView
+        android:id="@+id/gv_hot_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/boc_space_between_30px"
+        android:layout_marginRight="@dimen/boc_space_between_30px"
+        android:cacheColorHint="@color/transparent"
+        android:horizontalSpacing="@dimen/boc_space_between_20px"
+        android:listSelector="@color/transparent"
+        android:numColumns="3"
+        android:verticalSpacing="@dimen/boc_space_between_20px"></GridView>
+
+    <LinearLayout
+        android:id="@+id/ll_hisRed_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/boc_space_between_30px"
+            android:background="@color/boc_main_btn_bg_color"
+            android:paddingBottom="@dimen/boc_space_between_22px"
+            android:paddingLeft="@dimen/boc_space_between_30px"
+            android:paddingTop="@dimen/boc_space_between_22px"
+            android:text="@string/boc_record_history"
+            android:textColor="@color/boc_text_color_common_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/boc_divide_color" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_record_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/boc_common_cell_color"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@null"
+        android:listSelector="@color/transparent"></ListView>
+
+</LinearLayout>

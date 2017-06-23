@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账单缴费新服务申请信息填写页 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:userProperty="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_step"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/layout_padding_left_right"
+            android:paddingRight="@dimen/layout_padding_left_right"
+            android:paddingBottom="@dimen/fill_padding_top"
+            android:paddingTop="@dimen/fill_padding_top"  >
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_bill_title"
+                        style="@style/confirm_info_textview_style"
+                        android:gravity="center"
+                        android:singleLine="false"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_tran"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/comm_view_left"
+                            android:layout_weight="3.6"
+                            android:singleLine="true"
+                            android:text="@string/bond_tran_seq" />
+
+                        <TextView
+                            android:id="@+id/tv_tranid"
+                            style="@style/comm_view_right"
+                            android:layout_weight="2.2"
+                            android:paddingLeft="@dimen/common_listview_item_paddingLR"
+                            android:singleLine="true"
+                            android:textColor="@color/black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/blpt_main_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:orientation="vertical" >
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_sms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                         android:visibility="gone">
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:layout_width="fill_parent"
+                            android:layout_weight="3.9"
+                            android:gravity="right"
+                            android:text="@string/blpt_pub_note_code" />
+
+                        <cfca.mobile.sip.SipBox
+                            android:id="@+id/sip_sms"
+                            style="@style/edittext_inputNumber_fill"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                            android:layout_marginRight="@dimen/titlebackbtn_marginleft"
+                            android:layout_weight="3.8"
+                            android:gravity="center_vertical"
+                            android:maxLength="20" >
+                        </cfca.mobile.sip.SipBox>
+
+                        <Button
+                            android:id="@+id/smsbtn"
+                            style="@style/button_smscode"
+                            android:layout_marginRight="@dimen/layout_margin_top" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/sipbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/blpt_tv_relevance_phonepwd"
+                            style="@style/textview_common_left_three"
+                            android:layout_width="fill_parent"
+                            android:layout_weight="3.6"
+                            android:gravity="right" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_sip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/edittext_height"
+                            android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                            android:layout_marginRight="@dimen/layout_margin_top"
+                            android:layout_weight="2.3" >
+                        </LinearLayout>
+                    </LinearLayout>
+
+					 <com.chinamworld.bocmbci.widget.UsbKeyText
+					     android:id="@+id/sip_usbkey"
+					     android:layout_width="match_parent"
+					     android:layout_height="wrap_content"
+					     android:layout_marginTop="@dimen/common_row_margin"
+					     android:gravity="center"
+					     android:orientation="horizontal"
+					     userProperty:ShowRate="36:23"
+					     userProperty:PaddLeft="@dimen/common_listview_item_paddingLR"
+					     userProperty:MargRight="@dimen/layout_margin_top" />
+
+                    <TextView
+                        android:id="@+id/tv_bill_tip"
+                        style="@style/confirm_info_textview_style"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="left"
+                        android:singleLine="false"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_bottom_padding"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnLast"
+                style="@style/btn_common_oneline"
+                android:background="@drawable/btn_blue_big"
+                android:text="@string/last"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnnext"
+                style="@style/bottombtn"
+                android:text="@string/next" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

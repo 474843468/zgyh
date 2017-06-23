@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_titlebar_height"
+        android:background="@color/boc_text_color_blue_gray"
+        android:orientation="vertical">
+
+        <com.boc.bocsoft.mobile.framework.widget.TitleBarView
+            android:id="@+id/title_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_titlebar_height" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.swipeRefreshLayout.SuperSwipeRefreshLayout
+            android:id="@+id/pull_push_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="@color/transparent"
+                android:divider="@color/boc_divide_color"
+                android:dividerHeight="@dimen/boc_space_between_1px"
+                android:fadingEdge="none"
+                android:overScrollMode="never"
+                android:scrollbars="none" />
+        </com.boc.bocsoft.mobile.bocmobile.base.widget.swipeRefreshLayout.SuperSwipeRefreshLayout>
+
+        <include layout="@layout/boc_fragment_long_short_forex_among_title" />
+
+
+        <!--<FrameLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<com.boc.bocsoft.mobile.bocmobile.base.widget.PullAndPushLayout.PullAndPushLayout-->
+        <!--android:id="@+id/pull_push_refresh"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+
+        <!--<com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullableListView-->
+        <!--android:id="@+id/listview"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:overScrollMode="never"-->
+        <!--android:scrollbars="none" />-->
+
+        <!--<include layout="@layout/boc_load_more" />-->
+        <!--</com.boc.bocsoft.mobile.bocmobile.base.widget.PullAndPushLayout.PullAndPushLayout>-->
+
+        <!--<include layout="@layout/boc_fragment_long_short_forex_among_title" />-->
+
+        <TextView
+            android:id="@+id/tv_no_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="无结果"
+            android:textColor="@color/boc_black"
+            android:visibility="invisible" />
+        <!--</FrameLayout>-->
+
+    </FrameLayout>
+
+</LinearLayout>

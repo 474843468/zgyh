@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 基金  买入 指定日期执行 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        style="@style/tran_bottom_ll"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/finc_last"
+            style="@style/tran_last_btn"
+            android:text="@string/last"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/finc_next"
+            style="@style/bottombtn_606"
+            android:text="@string/next" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/stepbar"
+        layout="@layout/step_title_layout" />
+
+    <ScrollView
+        style="@style/scrollview_comm_havemarginbutton"
+        android:layout_above="@id/btn_layout"
+        android:layout_below="@id/stepbar" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical"
+            android:padding="@dimen/fill_padding_left" >
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/tran_exe_type" />
+
+                <TextView
+                    style="@style/confirm_right_textview_style606"
+                    android:text="@string/finc_extrDay_deal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/exeDate" />
+
+                <TextView
+                    android:id="@+id/finc_extrdate_tv"
+                    style="@style/Spiiner_fill_middle"
+                    android:background="@drawable/bg_spinner"
+                    android:gravity="center_vertical"
+                    android:text="@string/please_choose" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                style="@style/linnerlayout_common"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/exeDate" />
+
+                <RelativeLayout
+                    android:id="@+id/finc_fundcompany_spinner_layout"
+                    style="@style/textview_common_right_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                    android:layout_weight="1" >
+
+                    <Spinner
+                        android:id="@+id/finc_fundcompany_spinner"
+                        style="@style/Spiiner_fill_big"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default"
+                        />
+
+                <!--     <TextView
+                        android:id="@+id/company_text_spinner"
+                        style="@style/Spiiner_fill_big"
+                        android:gravity="center_vertical"
+                        android:text="@string/tran_please_choose"
+                        android:textSize="@dimen/textsize_default" /> -->
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/fill_padding_top"
+                android:text="@string/finc_extraday_deal_info2"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_default" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

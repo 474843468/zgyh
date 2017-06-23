@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 账户贵金属 首页 -->
+<com.chinamworld.llbt.userwidget.LLBTScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_white"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <!-- <include layout="@layout/prms_main_detial_title" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/line_light_gray"></LinearLayout>
+
+    <!--android:layout_height="@dimen/btn_query_width"-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_220px"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/tv_referPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|left"
+                tools:text="326.10"
+                android:textColor="@color/btn_pink"
+                android:textStyle="bold"
+                android:textSize="@dimen/spinner_height"
+                android:layout_marginTop="@dimen/boc_space_between_40px"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/boc_space_between_30px"
+                >
+
+                <TextView
+                    android:id="@+id/tv_currDiff"
+                    style="@style/bond_textview_15_dark"
+                    android:gravity="center_vertical|left"
+                    android:textSize="@dimen/fonts_one_five"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_currPercentDiff"
+                    style="@style/bond_textview_15_dark"
+                    android:layout_marginLeft="6dp"
+                    android:gravity="center_vertical|left"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:textSize="@dimen/fonts_one_five"
+                    android:textColor="@color/bg_white"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/image_collect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                android:background="@drawable/base_btn_left_back_black"/>
+            <TextView
+                android:id="@+id/tv_saleRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/fonts_one_three" />
+
+            <TextView
+                android:id="@+id/tv_buyRate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/fonts_one_three" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <!--  <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/btn_dialog_height"
+          android:background="@color/white">
+
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="@dimen/btn_dialog_height"
+              android:layout_weight="1"
+              android:gravity="center"
+              android:layout_marginLeft="4dp"
+              android:orientation="vertical">
+
+              <TextView
+                  android:id="@+id/tv_time"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+
+                  android:text="2016/10/26 08:12:45"
+                  android:textStyle="bold"
+                  android:textColor="@color/fonts_gray_li"
+                  android:textSize="@dimen/fonts_one_three" />
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="0dp"
+              android:gravity="center"
+              android:layout_height="@dimen/btn_dialog_height"
+              android:layout_weight="1"
+              android:orientation="vertical">
+              <TextView
+
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:text="开"
+                  android:textStyle="bold"
+                  android:textColor="@color/fonts_gray_li"
+                  android:textSize="@dimen/fonts_one_three" />
+              <TextView
+
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:text="320"
+                  android:layout_marginTop="4dp"
+                  android:textStyle="bold"
+                  android:textColor="@color/fonts_gray_li"
+                  android:textSize="@dimen/fonts_one_three" />
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="0dp"
+              android:gravity="center"
+              android:layout_height="@dimen/btn_dialog_height"
+              android:layout_weight="1"
+              android:orientation="vertical">
+              <TextView
+
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:text="高"
+                  android:textStyle="bold"
+                  android:textColor="@color/fonts_gray_li"
+                  android:textSize="@dimen/fonts_one_three" />
+              <TextView
+
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:text="320"
+                  android:layout_marginTop="4dp"
+                  android:textStyle="bold"
+                  android:textColor="@color/fonts_gray_li"
+                  android:textSize="@dimen/fonts_one_three"/>
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="@dimen/btn_dialog_height"
+              android:layout_weight="1"
+              android:gravity="center"
+              android:orientation="vertical">
+              <TextView
+
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:text="低"
+                  android:textStyle="bold"
+                  android:textColor="@color/fonts_gray_li"
+                  android:textSize="@dimen/fonts_one_three" />
+              <TextView
+
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:text="320"
+                  android:layout_marginTop="4dp"
+                  android:textStyle="bold"
+                  android:textColor="@color/fonts_gray_li"
+                  android:textSize="@dimen/fonts_one_three" />
+          </LinearLayout>
+
+
+      </LinearLayout>-->
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="@color/line_light_gray"></LinearLayout>-->
+
+
+    <!-- <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="@dimen/btn_dialog_height"
+         android:layout_gravity="center"
+         android:layout_marginLeft="4dp"
+         android:background="@color/white"
+         android:layout_marginRight="4dp"
+        >
+         <Button
+             android:id="@+id/btn_KOrZ"
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:layout_weight="1"
+             android:gravity="center"
+             android:layout_marginLeft="6dp"
+             android:background="@drawable/forex_double_arrow"
+             />
+
+
+         <TextView
+             android:id="@+id/tv_onehour"
+             android:layout_width="0dp"
+             android:layout_height="@dimen/btn_dialog_height"
+             android:layout_gravity="center"
+             android:layout_weight="1"
+             android:gravity="center"
+             android:text="1小时"
+             android:drawableBottom="@drawable/prms_chose"
+             android:textColor="@color/btn_pink"
+             android:textSize="@dimen/textsize_one_three" />
+
+         <TextView
+             android:id="@+id/tv_fourhour"
+             android:layout_width="0dp"
+             android:layout_height="@dimen/btn_dialog_height"
+             android:layout_gravity="center"
+             android:layout_weight="1"
+             android:gravity="center"
+             android:text="4小时"
+             android:textColor="@color/black"
+             android:textSize="@dimen/textsize_one_three" />
+
+         <TextView
+             android:id="@+id/tv_day"
+             android:layout_width="0dp"
+             android:layout_height="@dimen/btn_dialog_height"
+             android:layout_gravity="center"
+             android:layout_weight="1"
+             android:background="@null"
+             android:gravity="center"
+             android:text="日"
+             android:textColor="@color/black"
+             android:textSize="@dimen/textsize_one_three" />
+         <TextView
+             android:id="@+id/tv_week"
+             android:layout_width="0dp"
+             android:layout_height="@dimen/btn_dialog_height"
+             android:layout_gravity="center"
+             android:layout_weight="1"
+             android:gravity="center"
+             android:text="周"
+             android:textColor="@color/black"
+             android:textSize="@dimen/textsize_one_three" />
+         <TextView
+             android:id="@+id/tv_mounth"
+             android:layout_width="0dp"
+             android:layout_height="@dimen/btn_dialog_height"
+             android:layout_gravity="center"
+             android:layout_weight="1"
+             android:gravity="center"
+             android:text="月"
+             android:textColor="@color/black"
+             android:textSize="@dimen/textsize_one_three" />
+     </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/gray"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+        <com.chinamworld.bocmbci.userwidget.sfkline.InverstKLineView
+            android:id="@+id/query_KTendency_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/encode_view"
+            ></com.chinamworld.bocmbci.userwidget.sfkline.InverstKLineView>
+            </LinearLayout>
+        </ScrollView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                layout="@layout/prms_bottom_button_layout"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
+</com.chinamworld.llbt.userwidget.LLBTScrollView>

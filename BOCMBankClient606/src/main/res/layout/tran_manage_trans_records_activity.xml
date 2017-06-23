@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 转账管理  wangchao 转账记录管理 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/forex_query_result_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/common_bottom_padding_new"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/forex_query_result_condition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/img_bg_query_j"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/fill_margin_left" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/query_range"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/tv_query_range"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/all"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pull_down_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginRight="@dimen/titlerightbtn_paddingtb"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/trade_time"
+                    style="@style/textview_common_right"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="@string/acc_query_date" />
+
+                <TextView
+                    style="@style/textview_common_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:textSize="@dimen/textsize_one_three" />
+
+                <ImageView
+                    android:id="@+id/img_acc_query_back"
+                    android:layout_width="@dimen/img_up_width"
+                    android:layout_height="@dimen/img_up_width"
+                    android:layout_gravity="center|bottom"
+                    android:gravity="center"
+                    android:src="@drawable/img_arrow_gray_down" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <!-- search start -->
+
+    <RelativeLayout
+        android:id="@+id/forex_query_transfer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/ll_query_condition"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_query_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/img_bg_query_j"
+                        android:orientation="vertical"
+                        android:padding="@dimen/fill_padding" >
+
+                        <Spinner
+                            android:id="@+id/sp_trans_cremit_manage_trans_records"
+                            style="@style/Spiiner_fill"
+                            android:gravity="center|left" />
+
+                        <LinearLayout
+                            android:id="@+id/acc_query_choosedate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/btn_oneweek_trans_records"
+                                style="@style/buttonLeft"
+                                android:text="@string/prms_str_oneweek"
+                                android:textSize="@dimen/textsize_one_three" />
+
+                            <Button
+                                android:id="@+id/btn_onemonth_trans_records"
+                                style="@style/buttonMiddle"
+                                android:text="@string/prms_str_onemonth"
+                                android:textSize="@dimen/textsize_one_three" />
+
+                            <Button
+                                android:id="@+id/btn_threemonth_trans_records"
+                                style="@style/buttonRight"
+                                android:text="@string/prms_str_threemonth"
+                                android:textSize="@dimen/textsize_one_three" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:orientation="horizontal" >
+
+                            <include layout="@layout/base_query_fengge" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/acc_query_date"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/fill_margin_top"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/tv_startdate_trans_records"
+                                style="@style/Spinner_comm_view_right"
+                                android:hint="@string/prms_query_startdate" />
+
+                            <TextView
+                                android:id="@+id/tv_enddate_trans_records"
+                                style="@style/Spinner_comm_view_right"
+                                android:layout_marginLeft="@dimen/fill_margin_left"
+                                android:hint="@string/prms_query_enddate" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/comm_confirm_leftiterm_marginleft"
+                            android:layout_marginRight="@dimen/comm_confirm_leftiterm_marginleft"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <Button
+                                android:id="@+id/btn_query_trans_records"
+                                style="@style/query_button_style" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_pull_up_query_preandexe"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/dp_five"
+                            android:paddingTop="@dimen/dp_five" >
+
+                            <TextView
+                                android:id="@+id/textView1"
+                                style="@style/textview_common_up"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="right|bottom"
+                                android:textSize="@dimen/textsize_one_three" />
+
+                            <ImageView
+                                style="@style/query_image_up_style"
+                                android:layout_gravity="bottom"
+                                android:clickable="false"
+                                android:focusable="false"
+                                android:src="@drawable/img_arrow_gray_up" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <!-- 下拉            start -->
+
+                <LinearLayout
+                    android:id="@+id/querycondition_down"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/gray"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tv_down"
+                        style="@style/textview_common_down"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:textSize="@dimen/textsize_one_zero" />
+
+                    <ImageView
+                        android:id="@+id/forex_querycondition_down"
+                        style="@style/query_image_up_style"
+                        android:layout_gravity="bottom"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:src="@drawable/img_arrow_gray_down" />
+                </LinearLayout>
+                <!-- 下拉           end -->
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <!-- search  end -->
+
+    <LinearLayout
+        android:id="@+id/ll_result_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_right"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" 
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/list_view_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/fill_padding_top"
+            android:paddingLeft="@dimen/layout_margin_top"
+            android:paddingTop="@dimen/fill_padding_top" >
+
+            <TextView
+                android:id="@+id/tv_column_1"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/tran_date"
+                android:textSize="@dimen/textsize_one_two" />
+
+            <TextView
+                android:id="@+id/tv_column_2"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/manage_transaction_id"
+                android:textSize="@dimen/textsize_one_two" />
+
+            <TextView
+                android:id="@+id/tv_column_3"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/manage_payee_list"
+                android:textSize="@dimen/textsize_one_two" />
+
+            <ImageView
+                android:id="@+id/rate_gotoDetail"
+                android:layout_width="@dimen/shap_of_commrequestopen_pdl"
+                android:layout_height="@dimen/shap_of_commrequestopen_pdl"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:src="@drawable/right_arrow"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="@color/gray_line" />
+
+        <ListView
+            android:id="@+id/lv_query_result_trans_records"
+            style="@style/listviewcomm_fill_gray_divider" >
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

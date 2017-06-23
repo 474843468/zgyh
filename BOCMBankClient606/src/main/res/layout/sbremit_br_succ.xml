@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 结售汇 购汇 输入信息页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/sbremit_bremit_success_ok"
+            style="@style/bottombtn"
+            android:text="@string/finish"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_btn"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView style="@style/scrollview_comm">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                    <TextView
+				        android:id="@+id/titleText"
+				        style="@style/confirm_info_textview_style"
+				        android:layout_marginTop="@dimen/fill_margin_top"
+				        android:paddingLeft="@dimen/forex_make_code_spacing"
+				        android:paddingRight="@dimen/forex_make_code_spacing"
+				        android:text="@string/sremit_succ_alert"/>
+
+<!--                     <TextView -->
+<!--                         style="@style/textview_common_fill_wheight" -->
+<!--                         android:text="@string/bremit_succ_alert2"  -->
+<!--                         android:gravity="center"/> -->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin_half"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:layout_gravity="center"
+                        android:gravity="right"
+                        android:text="@string/trade_serial_number" />
+
+					<TextView
+                        android:id="@+id/trade_serial_number"
+                        style="@style/textview_common_right_two" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin_half"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="@string/bremit_acc" />
+
+                    <TextView
+                        android:id="@+id/bremit_acc"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin_half"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_gravity="center"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="@string/money_type_br" />
+
+                    <TextView
+                        android:id="@+id/money_type"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin_half"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_gravity="center"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="@string/bremit_money_new" />
+
+                    <TextView
+                        android:id="@+id/bremit_money"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4" 
+                        android:textColor="@color/red"/>
+                </LinearLayout>
+				<LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin_half"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_gravity="center"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="@string/exchange_reference_price" />
+
+                    <TextView
+                        android:id="@+id/exchange_reference_price"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin_half"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_gravity="center"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="@string/rmb_money" />
+
+                    <TextView
+                        android:id="@+id/rmb_money"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4" 
+                        android:textColor="@color/red"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin_half"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_gravity="center"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="@string/capital_use" />
+
+                    <TextView
+                        android:id="@+id/capital_use"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin_half"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_gravity="center"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="@string/trade_status" />
+
+                    <TextView
+                        android:id="@+id/trade_status"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4" />
+                </LinearLayout>
+               
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin_half"
+                    android:orientation="horizontal" >
+
+                    <TextView android:id="@+id/year_have_used_limit_alert"
+                        style="@style/textview_common_left"
+                        android:layout_gravity="center"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="@string/year_have_used_limit" />
+
+                    <TextView
+                        android:id="@+id/year_have_used_limit"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin_half"
+                    android:orientation="horizontal" >
+
+                    <TextView android:id="@+id/year_remain_limit_alert"
+                        style="@style/textview_common_left"
+                        android:layout_gravity="center"
+                        android:layout_weight="6"
+                        android:gravity="right"
+                        android:text="@string/year_remain_limit" />
+
+                    <TextView
+                        android:id="@+id/year_remain_limit"
+                        style="@style/textview_common_right"
+                        android:layout_weight="4" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin_half"
+                    android:orientation="horizontal" >
+                    </TextView>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

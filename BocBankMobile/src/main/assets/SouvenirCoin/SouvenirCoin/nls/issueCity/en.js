@@ -1,0 +1,2 @@
+/*! BUILD: 2016-12-16 */
+define([],function(){return{l_loginname:"Name: ",l_password:"Password: ",l_validcode:"Validation Char: ",l_refresbtn:"refresh",l_loginbtn:"sign in",l_nothaveaccount:"Do not have an account for BOC online Bank or mobile bank?",l_click1:"Click the ",l_click2:"Reserve open account online"}});

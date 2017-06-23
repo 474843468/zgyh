@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+        <LinearLayout android:id="@+id/top_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+	    <include 
+	        layout="@layout/bocnet_acc_detail_top"/>
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:id="@+id/acc_query_transfer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/ll_query_condition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/acc_query_horizontal"
+            android:background="@drawable/img_bg_query_j"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/crcd_choserl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                     android:visibility="gone"
+                android:paddingLeft="@dimen/fill_padding_left"
+                android:paddingRight="@dimen/fill_padding_right"
+                android:paddingTop="@dimen/fill_margin_top" >
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+               
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/loan_his_btn1"
+                        style="@style/twoRadioButtonLeft"
+                        android:checked="true"
+                        android:text="@string/mycrcd_no_bill" />
+
+                    <RadioButton
+                        android:id="@+id/loan_his_btn2"
+                        style="@style/twoRadioButtonRight"
+                        android:text="@string/mycrcd_has_bill" />
+                </RadioGroup>
+            </RelativeLayout>
+			<LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="@dimen/fill_padding_left" 
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_acc_info_currency"
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/mycrcd_query_code" />
+
+                <TextView
+                    android:id="@+id/accNum"
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnLoanHistoryQuery"
+                style="@style/query_button_style"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textSize="@dimen/textsize_default"/>
+
+            <LinearLayout android:visibility="visible"
+                android:id="@+id/spinner_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fill_padding_left"
+                android:layout_marginRight="@dimen/fill_padding_right"
+                android:layout_marginTop="@dimen/fill_margin_top"
+                android:orientation="vertical" >
+
+<!--                 <TextView -->
+<!--                     style="@style/textview_common" -->
+<!--                     android:layout_width="fill_parent" -->
+<!--                     android:layout_height="wrap_content" -->
+<!--                     android:text="@string/crcd_two_select" /> -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dp_five_zero"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal" >
+
+                    <Spinner
+                        android:id="@+id/times_spinner"
+                        style="@style/Spiiner_fill"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/fill_margin_right"
+                        android:gravity="center" />
+
+                    <Button
+                        android:id="@+id/yichi_search"
+                        style="@style/no_pic_query_button_style"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="@dimen/textsize_default"
+                        android:visibility="visible" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_upLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingBottom="@dimen/dp_five"
+                android:paddingLeft="@dimen/fill_padding_right"
+                android:paddingRight="@dimen/fill_padding_right" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    style="@style/textview_common_up"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textSize="@dimen/textsize_xiala" />
+
+                <ImageView
+                    android:id="@+id/acc_query_up"
+                    style="@style/query_image_up_style"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/img_arrow_gray_up" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

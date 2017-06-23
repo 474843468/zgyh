@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:paddingBottom="@dimen/common_row_margin" >
+
+        <Button
+            android:id="@+id/btn_cancle"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_blue_big"
+            android:text="@string/cancle" />
+
+        <Button
+            android:id="@+id/next_btn"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/confirm" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/layout_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/shap_for_dept_tranlist"
+        android:paddingBottom="@dimen/layout_margin_top"
+        android:paddingLeft="@dimen/layout_padding_left_right"
+        android:paddingRight="@dimen/layout_padding_left_right" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/second_title_tv_1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:text="@string/title_input_new_phone_number"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_default" />
+
+            <TextView
+                android:id="@+id/second_title_tv_2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:text="@string/title_modify_number_success"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_default"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="0px"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="3"
+                    android:text="@string/payer_customer_number_label" />
+
+                <TextView
+                    android:id="@+id/payer_customer_number"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="2"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="3"
+                    android:text="@string/payer_type_label" />
+
+                <TextView
+                    android:id="@+id/payer_type"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="2"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="3"
+                    android:text="@string/payer_name_label_no_blank" />
+
+                <TextView
+                    android:id="@+id/payer_name"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="2"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_payer_old_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="3"
+                    android:text="@string/old_phone_number_label" />
+
+                <TextView
+                    android:id="@+id/old_phone_number"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="2"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_payer_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="3"
+                    android:text="@string/payer_phone_label" />
+
+                <TextView
+                    android:id="@+id/payer_phone"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="2"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" >
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_edit_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/textview_common_no_weight"
+                    android:layout_weight="3"
+                    android:text="@string/new_phone_number_label" />
+
+                <EditText
+                    android:id="@+id/new_phone_number"
+                    style="@style/edittext_common_fill_no_weight"
+                    android:layout_marginRight="@dimen/fill_padding_right"
+                    android:layout_weight="2"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    android:paddingLeft="@dimen/edittext_paddinglr"
+                    android:textColor="@color/black" >
+                </EditText>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="10dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/boc_common_cell_color"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="@string/security_e_shield"
+        android:textColor="@color/boc_text_color_dark_gray"
+        android:textSize="@dimen/boc_text_size_little_big" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/title"
+        android:background="@color/boc_divider_line_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="@dimen/boc_space_between_50px">
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.dialogview.securityverify.eshield.PESAGifMovieView
+            android:id="@+id/e_shield_animation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:gif="@drawable/boc_eshield_anim_password" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/e_shield_animation"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/boc_space_between_40px"
+            android:layout_marginTop="@dimen/boc_space_between_30px"
+            android:text="@string/security_e_shield_animation"
+            android:textColor="@color/boc_text_color_gray"
+            android:textSize="@dimen/boc_text_size_common" />
+    </RelativeLayout>
+
+</RelativeLayout>

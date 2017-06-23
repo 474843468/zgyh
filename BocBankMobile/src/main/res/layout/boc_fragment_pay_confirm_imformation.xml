@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F0EFF5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/boc_divider_line_color"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="人均额"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/boc_text_size_common"/>
+
+            <TextView
+                android:id="@+id/tv_average_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="100.00"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.5dp"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="86dp"
+                    android:layout_height="wrap_content"
+                    android:text="预计总额"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/boc_text_size_common"/>
+
+                <TextView
+                    android:id="@+id/tv_total_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="300.00"
+                    android:textColor="#c0c0c0"
+                    android:textSize="@dimen/boc_text_size_common"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="86dp"
+                    android:layout_height="wrap_content"
+                    android:text="收款账号"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/boc_text_size_common"/>
+
+                <TextView
+                    android:id="@+id/tv_payee_actno"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0000******0000"
+                    android:textColor="#c0c0c0"
+                    android:textSize="@dimen/boc_text_size_common"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="86dp"
+                    android:layout_height="wrap_content"
+                    android:text="附言        "
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/boc_text_size_common"/>
+
+                <TextView
+                    android:id="@+id/tv_remark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="附言内容附言内容附言内容"
+                    android:textColor="#c0c0c0"
+                    android:textSize="@dimen/boc_text_size_common"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_payer_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="86dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginTop="6dp"
+                    android:text="付款人"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/boc_text_size_common"/>
+
+                <TextView
+                    android:id="@+id/tv_payer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/boc_text_size_common"/>
+
+                <ListView
+                    android:id="@+id/lv_payer_list"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                </ListView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRowButton
+            android:id="@+id/security_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.5dp">
+
+        </com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRowButton>
+
+
+        <Button
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/boc_button_bg_blue_no_conner"
+            android:text="确认"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/boc_text_size_common"/>
+    </LinearLayout>
+</ScrollView>

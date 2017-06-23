@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/safety_tools_root_layout"
+    android:layout_width="match_parent"
+    android:background="@color/default_bg"
+    android:layout_height="match_parent" >
+    
+    <RelativeLayout
+            android:id="@+id/title_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="62dp"
+            android:background="@drawable/navbar"
+            android:visibility="gone"
+            android:paddingTop="5dp" >
+
+            <Button
+                android:id="@+id/ib_back"
+                android:textColor="@color/white"
+                android:text="@string/back"
+                style="@style/titlebackbtn" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/titleText" />
+
+        </RelativeLayout>
+        
+    <RelativeLayout 
+        android:id="@+id/safety_tools_prompt_info_details_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_layout"
+        android:background="@drawable/bg_for_hardware_prompt_info_details"
+        android:layout_marginTop="@dimen/dp_one_for"
+        android:layout_marginLeft="@dimen/dp_one_for"
+        android:layout_marginRight="@dimen/dp_one_for"
+        android:layout_above="@+id/safety_tools_setting_confirm"
+        >
+            
+        <TextView 
+            android:id="@+id/safety_tools_phone_des_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/edittext_height"
+            android:textSize="@dimen/textsize_default"
+            android:layout_above="@+id/safety_tools_prompt_info_des_text"
+            android:text="@string/safety_tools_setting_phone_des"
+            android:layout_alignRight="@+id/safety_tools_prompt_info_des_text"
+            />
+        
+        <TextView 
+            android:id="@+id/safety_tools_phone_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/edittext_height"
+            android:textSize="@dimen/textsize_default"
+            android:layout_above="@+id/safety_tools_prompt_info_des_text"
+            android:layout_alignLeft="@+id/safety_tools_msg_et"
+            />
+        
+        
+
+        <TextView 
+            android:id="@+id/safety_tools_prompt_info_des_text"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/edittext_height"
+            android:textSize="@dimen/textsize_default"
+            android:text="@string/safety_tools_setting_trancation_code_des"
+            android:layout_marginTop="@dimen/dp_three_zero"
+            android:layout_marginLeft="@dimen/dp_two_zero"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            />
+        
+			<cfca.mobile.sip.SipBox 
+			    android:id="@+id/safety_tools_msg_et"
+			    android:layout_width="@dimen/dp_eight_zero"
+			    android:layout_height="@dimen/edittext_height"
+			    android:background="@drawable/bg_for_edittext"
+			    android:layout_toRightOf="@+id/safety_tools_prompt_info_des_text"
+			    android:layout_alignBottom="@+id/safety_tools_prompt_info_des_text"
+			    android:maxLength="6"
+			    android:layout_marginLeft="@dimen/dp_one_zero"
+			    />
+			
+			<Button 
+			    android:id="@+id/safety_tools_get_msg_btn"
+			    android:layout_width="@dimen/dp_five_zero"
+			    android:layout_height="@dimen/dp_for_zero"
+			    android:background="@drawable/btn_red_big_long"
+			    android:text="@string/aquire"
+			    android:textColor="@color/white"
+			    android:layout_alignBottom="@+id/safety_tools_msg_et"
+			    android:layout_toRightOf="@+id/safety_tools_msg_et"
+			    android:layout_marginLeft="@dimen/dp_two_zero"
+			    />
+        
+    </RelativeLayout>
+    
+    <Button
+        android:id="@+id/safety_tools_setting_confirm"
+        android:layout_centerHorizontal="true"
+        style="@style/bottombtn"
+        android:text="@string/confirm"
+        android:textColor="@color/white" 
+        android:layout_marginTop="@dimen/dp_one_zero"
+        android:layout_above="@+id/safety_tools_bottom_block"
+        />
+    
+ <View  android:id="@+id/safety_tools_bottom_block"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_two_zero"
+        android:layout_alignParentBottom="true"
+        />        
+    
+
+</RelativeLayout>

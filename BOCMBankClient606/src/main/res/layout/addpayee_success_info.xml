@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin" >
+
+        <Button
+            android:id="@+id/finish"
+            style="@style/bottombtn"
+            android:onClick="btnNextOnclick"
+            android:text="@string/confirm" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    style="@style/linnerlayout_common"
+                    android:layout_marginTop="30dp"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="@dimen/inversitemhight"
+                        android:layout_height="@dimen/inversitemhight"
+                        android:layout_gravity="center"
+                        android:src="@drawable/chenggong" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="恭喜您，操作成功！"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/payeeName" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/accPayee" />
+
+                    <TextView
+                        android:id="@+id/num"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/payee_mobile" />
+
+                    <TextView
+                        android:id="@+id/mobile"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+                <LinearLayout 
+                    android:id="@+id/accBankName"
+                    style="@style/linnerlayout_common"
+                    android:visibility="gone"
+                     >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/acc_in_bank_name" />
+
+                    <TextView
+                        android:id="@+id/accinbankname"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+                <LinearLayout 
+                    android:id="@+id/accBankNameNew"
+                    style="@style/linnerlayout_common"
+                    android:visibility="gone"
+                     >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/acc_bank_name_new" />
+
+                    <TextView
+                        android:id="@+id/accinbanknamenew"
+                        style="@style/textview_common_right" />
+                </LinearLayout>
+                
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_for_listview_item_write"
+    android:gravity="center" >
+
+    <TextView
+        android:id="@+id/text_tip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:gravity="center"
+        android:paddingLeft="@dimen/fill_padding_top"
+        android:text="@string/plps_binding_telephone_modify"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/textsize_default" />
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnquery"
+            style="@style/bottombtn"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/fill_margin_top"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:background="@drawable/btn_red_big"
+            android:onClick="btnConfirmOnclick"
+            android:text="@string/large_cd_confirm"
+            android:textColor="@color/white" />
+    </LinearLayout>
+   
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnconfirm"
+        android:layout_below="@id/text_tip"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        android:paddingTop="50dp" >
+
+        <LinearLayout style="@style/linnerlayout_common" >
+
+            <TextView
+                style="@style/textview_common_left"
+                android:layout_weight="1"
+                android:text="@string/plps_binding_phone"
+                />
+
+            <TextView
+                android:id="@+id/bindphone"
+                style="@style/textview_common_left"
+                android:layout_weight="1.1"
+                android:gravity="center" />
+        </LinearLayout>
+        <LinearLayout style="@style/linnerlayout_common" >
+
+            <TextView
+                style="@style/textview_common_left"
+                android:layout_weight="1"
+                android:text="@string/plps_new_phonenumber"
+                />
+
+           <EditText
+                android:id="@+id/phone"
+                style="@style/edittext_inputNumber_fill"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.1"
+                android:gravity="center_vertical"
+                android:inputType="number"
+                android:maxLength="11"
+                android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

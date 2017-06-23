@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp_five"
+        android:paddingLeft="@dimen/dp_one_zero"
+        android:paddingRight="@dimen/dp_one_zero"
+        android:paddingTop="@dimen/dp_five" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <FrameLayout
+                    android:id="@+id/fl_nickname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" >
+
+                    <EditText
+                        android:id="@+id/et_acc_nickname"
+                        style="@style/edittext_common_fill"
+                        android:layout_gravity="center_vertical"
+                        android:focusable="true"
+                        android:gravity="center_vertical"
+                        android:imeOptions="actionDone"
+                        android:maxLength="20"
+                        android:paddingRight="@dimen/btn_smscode_height"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize_default" >
+                    </EditText>
+
+                    <Button
+                        android:id="@+id/btn_update_nickname"
+                        android:layout_width="@dimen/btn_close_height"
+                        android:layout_height="@dimen/btn_close_height"
+                        android:layout_gravity="center_vertical|right"
+                        android:background="@drawable/img_shuru_gou" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_nickname"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_bindName"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:singleLine="true" >
+                    </TextView>
+
+                    <ImageView
+                        android:id="@+id/img_acc_update_nickname"
+                        android:layout_width="@dimen/btn_connect_height"
+                        android:layout_height="@dimen/btn_connect_height"
+                        android:layout_marginLeft="@dimen/dp_one_zero"
+                        android:src="@drawable/icon_bianji" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/card_three_row_paddingTop"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_bindbankNmae"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_one_for" />
+
+                <TextView
+                    android:id="@+id/tv_bind_accountNumber"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:singleLine="true"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textsize_one_for" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

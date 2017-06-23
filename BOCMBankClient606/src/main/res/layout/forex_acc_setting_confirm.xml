@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 外汇    账户设置确认 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_step"
+        android:layout_centerInParent="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_left"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:layout_weight="1"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical"
+            android:padding="@dimen/fill_padding_top" >
+
+            <TextView
+                android:id="@+id/tv_confirm_title_2"
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/forex_acc_setting_confirminfo"
+                android:textColor="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_acc_loss_type"
+                        style="@style/bond_tv_15_left"
+                        android:layout_weight="1"
+                        android:text="@string/forex_customer_accNumber" />
+
+                    <TextView
+                        android:id="@+id/acc_number"
+                        android:layout_weight="1"
+                        style="@style/bond_tv_15_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/bond_tv_15_left"
+                        android:layout_weight="1"
+                        android:text="@string/forex_customer_accAlias" />
+
+                    <TextView
+                        android:id="@+id/acc_alias"
+                        android:layout_weight="1"
+                        style="@style/bond_tv_15_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/bond_tv_15_left"
+                        android:layout_weight="1"
+                        android:text="@string/forex_customer_accType" />
+
+                    <TextView
+                        android:id="@+id/acc_type"
+                        android:layout_weight="1"
+                        style="@style/bond_tv_15_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/textLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/common_row_margin"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/forex_code"
+                        style="@style/textview_common"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/forex_myfinc_blance_code" />
+
+                    <TextView
+                        android:id="@+id/forex_cash"
+                        style="@style/textview_common"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/finc_myfinc_blance_cash1" />
+
+                    <TextView
+                        android:id="@+id/forex_balance"
+                        style="@style/textview_common"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/finc_myfinc_blance_balance1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <ListView
+                        android:id="@+id/acc_listView"
+                        style="@style/listviewcomm_wrap_haveDivider"
+                        android:listSelector="#00000000" >
+                    </ListView>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/fill_margin_top"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_left"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/acc_last"
+                style="@style/isforex_two_left_btn"
+                android:text="@string/last"
+                />
+
+            <Button
+                android:id="@+id/acc_sure"
+                style="@style/isforex_two_right_btn"
+                android:text="@string/confirm"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

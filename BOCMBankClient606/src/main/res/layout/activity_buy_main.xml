@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0eff5">
+
+    <ScrollView
+        android:id="@+id/sc_rootview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout7"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/prms_zoushitu_width"
+                android:background="@color/white" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_default"
+                        android:text="@string/goldstore_branchtype"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp" >
+
+                    <TextView
+                        android:id="@+id/tv_storetype_select"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text=""
+                        />
+
+                    <ImageView
+                        android:id="@+id/ima_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:padding="15dp"
+                        android:src="@drawable/goldstore_jiantou_right" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"
+             >
+
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                >
+                <LinearLayout
+                    android:id="@+id/ll_layout1"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:gravity="center">
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/buy_Size"
+                    android:textSize="@dimen/textsize_default"
+                    android:id="@+id/textView16"
+                    android:textColor="#ff6666"
+                    android:textStyle="bold"
+                     />
+
+                    <ImageView
+                        android:id="@+id/ima_byweighttline"
+                        android:layout_width="85dp"
+                        android:layout_height="2dp"
+                        android:background="#ff6666"
+                        android:layout_marginTop="10dp"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/buy_figure"
+                    android:padding="10dp"
+                    android:textSize="@dimen/textsize_default"
+                    android:id="@+id/textView17"
+                    android:textStyle="bold"/>
+                    <ImageView
+                        android:id="@+id/ima_byamountline"
+                        android:layout_width="85dp"
+                        android:layout_height="2dp"
+                        android:background="#ff6666"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        />
+                </LinearLayout>
+                </LinearLayout>
+                <ImageView
+                    android:layout_below="@id/ll_layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:src="@color/gray_line"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight="8"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                >
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/imageView4"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/goldstore_jian" />
+
+                <EditText
+                    android:id="@+id/et_buyNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:layout_weight="1"
+                    android:text="1"
+                    android:textColor="#ff6666"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:inputType="number"
+                    android:maxLength="13"
+                    android:textSize="@dimen/textsize_default"
+                    android:background="@null"
+                    android:drawableBottom="@drawable/goldstore_fengge_xu"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="right"
+                        android:id="@+id/imageView5"
+                        android:src="@drawable/goldstore_add" />
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/white">
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_horizontal|top"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/textView15"
+                    android:visibility="visible"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:id="@+id/ll_zhuanzhang">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="您当前账户余额不足"
+                            />
+                        <TextView
+                            android:id="@+id/tv_zhuanzhang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="去转账"
+                            android:textColor="#00aaee"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="购买价格："
+                android:textColor="#91a2a8"
+                android:textSize="@dimen/textsize_default"
+                android:id="@+id/textView14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#91a2a8"
+                android:textSize="@dimen/textsize_default"
+                android:id="@+id/textView19" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buy_hint1"
+                android:textColor="#91a2a8"
+                android:textSize="@dimen/textsize_default"
+                android:id="@+id/textView20" />
+
+        </LinearLayout>
+
+        <Button
+            style="@style/bottombtn2"
+            android:id="@+id/button2"
+            android:background="@drawable/goldstore_buttom_background"
+            android:layout_width="match_parent"
+            android:text="下一步"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="50dp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buy_account"
+                android:textSize="@dimen/textsize_default"
+                android:id="@+id/textView21"
+                android:textColor="#91a2a8"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#91a2a8"
+                android:layout_marginLeft="5dp"
+                android:textSize="@dimen/textsize_default"
+                android:id="@+id/textView22" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buy_change"
+                android:textSize="@dimen/textsize_default"
+                android:id="@+id/textView23"
+                android:layout_marginLeft="20dp"
+                android:textColor="#00aaee"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="如果该产品是由银行员工号向您推荐，可以 ⊕ 营销代码"
+                android:textColor="#91a2a8"
+                android:textSize="13sp"
+                android:id="@+id/textView24" />
+            <LinearLayout
+                android:id="@+id/ll_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                >
+                <TextView
+                    android:id="@+id/tv_banker_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="营销代码为    "
+                    android:textColor="#91a2a8"
+                    android:textSize="@dimen/textsize_default"
+                    />
+
+                <ImageView
+                    android:id="@+id/ima_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/goldstore_update"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="#91a2a8"
+                android:singleLine="false"
+                android:text="1. 手机银行APP端交易时间为周一早7:00至晚20:00，周二至周五早6:00至晚20:00。\n2. 按克重购买时，最小购买单位为1克，追加克重必须是1克的整数倍；按金额购买时，最小购买金额为300人民币元，追加金额必须是300元的整数倍。"
+                android:id="@+id/textView27" />
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

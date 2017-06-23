@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html,charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <title></title>
+
+    <style>
+        p{
+            line-height: 20px;
+            font-size: 12px;;
+        }
+        body{
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        h3{
+            color: #222;
+            font-size: 16px;
+        }
+
+
+    </style>
+    <script>
+
+        function setUpEvent(elem, eventType, handler) {
+            return (elem.attachEvent ? elem.attachEvent("on" + eventType, handler)
+                    : ((elem.addEventListener) ? elem.addEventListener(eventType, handler, false) : null));
+        }
+
+        function isMobileIOS(){
+            var ua = navigator.userAgent;
+            if(ua.indexOf('Mobile') > -1 && (ua.indexOf('iPhone') > -1 || ua.indexOf('iPod') > -1 || ua.indexOf('iPad') > -1)){
+                return true;
+            }
+            return false;
+        }
+
+window.onload=function(){
+    var contractContent;
+    if(isMobileIOS()){
+        setUpEvent(document,'BOCWebViewJavascriptBridgeReady',function(event){
+                   var bridge = event.bridge;
+                   bridge.init(function(data,responseCallback){
+                               });
+                   bridge.registerHandler('receiveReceiptData', function(data, responseCallback) {
+                                          contractContent = data;
+                                          document.getElementById("jiafang").innerHTML = contractContent;
+                                          });
+                   });
+                   return;
+    }else{
+          contractContent =  JSON.parse(window.contract.getJsonContract());//contract
+		  document.getElementById("jiafang").innerHTML = contractContent.customerName;
+    }
+
+};
+
+    </script>
+</head>
+<body>
+<div style="text-align: center">
+    <h3>中国银行股份有限公司虚拟卡服务协议 </h3>
+    <div style=" border-bottom: 1px solid #d8d8e0;"></div>
+</div>
+<p style="font-weight:bold;">甲方:<u>&nbsp;&nbsp;&nbsp;<span id="jiafang"></span>&nbsp;&nbsp;&nbsp;</u></p>
+<p style="font-weight:bold;">乙方:<u>&nbsp;&nbsp;&nbsp;中国银行股份有限公司&nbsp;&nbsp;&nbsp;</u></p>
+<P>
+    根据国家相关法律法规的规定，为维护双方利益，规范双方行为，甲乙双方本着自愿、平等、互利的原则，就中国银行信用卡产品持卡人（以下简称“甲方”）使用中国银行股份有限公司（以下简称“乙方”）中国银行虚拟卡服务（以下简称“虚拟卡”）签订如下协议：</P>
+<p><b>第一条</b> 乙方提供的中国银行虚拟卡服务是指甲方向乙方申请并经乙方批准后，在其已持有的中国银行信用卡（以下简称实体卡）账户下建立虚拟卡，该虚拟卡设有卡号、生效日期、失效日期、安全验证码、单笔交易限额、累计交易限额。甲方可自主设置该虚拟卡的生效日期、失效日期、单笔交易限额、累计交易限额等要素，并通过移动终端、互联网络等向乙方发出支付指令，实现虚拟卡账户下的货币支付与资金转移。</p>
+<p><b>第二条</b> 甲方申请使用乙方的虚拟卡相关服务功能必须首先成功申请乙方信用卡产品并成为网上银行或电话银行或手机银行或缤纷生活服务的客户，其中网上银行和手机银行需为理财版以上客户。</p>
+<p><b>第三条</b> 甲方可通过乙方电话银行、网上银行、手机银行、缤纷生活、积分365网站等渠道申请虚拟卡服务。开通虚拟卡之后，甲方可使用虚拟卡卡号、有效期、安全验证码等信息办理乙方网上银行支付、手机银行支付等电子支付业务以及第三方支付公司或银行卡组织的无卡支付业务。其中办理乙方网上银行支付、手机银行支付等电子支付业务的，还需成为相应电子支付业务客户、签订相关支付服务协议并指定虚拟卡账户为支付账户。</p>
+<p><b>第四条</b> 甲方使用虚拟卡办理第三方支付公司或银行卡组织的无卡支付业务，乙方仅验证支付指令中的虚拟卡卡号、失效日期和安全验证码。经验证上述三项要素相符的交易，乙方均视为甲方亲自办理，甲方不得要求变更或撤销已经提交的支付指令。甲方应妥善保管虚拟卡卡号、有效期、安全验证码，如上述信息被盗或遗失，甲方应及时拨打乙方客户服务热线或至乙方柜台通知乙方，办理相应的注销、变更等手续。</p>
+<p><b>第五条</b> 甲方使用虚拟卡进行支付，将直接占用甲方申请该虚拟卡时所指定的实体卡的信用额度，甲方应保证该实体卡的支付能力，并严格遵守支付结算业务的相关法律法规，不得利用网上支付业务服务或账户从事任何欺诈、洗钱、恐怖融资等违反法律、法规、监管规定的行为。如甲方违反上述约定，乙方有权中止或终止虚拟卡服务，因此给乙方造成损失的，甲方应予赔偿。</p>
+<p><b>第六条</b> 如因甲方实体卡账户或虚拟卡已销户或账户状态不正常（挂失、冻结、逾期）、卡片状态不正常（未激活、挂失、销卡、止付）、余额不足等原因，导致乙方无法履行本协议的，乙方不承担任何责任。</p>
+<p><b>第七条</b> 如甲方应在乙方规定的限额内设置单笔交易限额，以及累计交易限额。如果甲方在支付过程中超出交易限额，该笔交易将无法完成支付。</p>
+<p><b>第八条</b> 甲方使用虚拟卡进行支付后，交易金额将在甲方办理虚拟卡时指定的实体卡账户内记账，甲方应按乙方的信用卡还款约定向实体卡直接进行还款。</p>
+<p><b>第九条</b> 甲方与除甲乙双方之外的任何第三方机构（包括第三方支付平台、甲方所购买商品或服务的销售方、商品配送方等）之间的交易纠纷与乙方无关。乙方不受理甲方对上述第三方的投诉。</p>
+<p><b>第十条</b> 乙方可以根据业务发展需要以及与电子支付商户合作情况增加、删除或变更合作的商户。</p>
+<p><b>第十一条</b> 本协议作为甲乙双方已经签署的信用卡领用合约及其他既有协议和约定的补充部分而非替代文件，与其具有同样的法律效力。甲方在使用乙方提供的服务时应遵守相关信用卡领用合约、章程、电子银行章程和已签署的其他所有相关协议及约定。</p>
+<p><b>第十二条</b> 甲方发现自身未按规定操作，或由于自身其他原因造成支付指令未执行、未适当执行、延迟执行的，应及时通过拨打乙方服务热线或到营业网点通知乙方。乙方应积极调查并告知甲方调查结果。乙方网上银行、手机银行等服务提供账户资金余额、交易记录等查询功能，甲方可随时登录乙方网上银行、手机银行进行查询。一方发现支付错误或账户款项差错的，应及时与另一方核实处理。</p>
+<p><b>第十三条</b> 非乙方原因（通讯线路故障、网络故障及断电、停电等）造成电子支付指令未执行、未适当执行、延迟执行的，不属乙方责任，甲方可选择其他途径进行相关支付交易。因不可抗力造成电子支付指令未执行、未适当执行、延迟执行的，各方应采取积极措施防止损失扩大。</p>
+<p><b>第十四条</b> 乙方应依法对甲方的资料信息、交易记录等保密。除国家法律、行政法规另有规定或甲方授权外，乙方应当拒绝除甲方本人以外的任何单位或个人的查询。</p>
+<p><b>第十五条</b> 甲乙双方在履行本协议的过程中，如发生争议应协商解决，协商不成的，任何一方均可向乙方所在地人民法院提起诉讼。</p>
+<p><b>第十六条</b> 本协议的成立、生效、履行和解释，均适用中华人民共和国法律；法律无明文规定的，可适用通行的金融惯例。</p>
+<p><b>第十七条</b> 本协议自甲方通过网上银行、手机银行、缤纷生活、积分365网站等渠道同意并经过认证工具认证后开通虚拟卡服务之时起生效，通过电话银行申请开通的，自电话银行身份认证通过后开通虚拟能服务之时起生效；本协议自撤销虚拟卡功能服务之时起终止。所有时点均以乙方业务系统记录的时间为准。协议终止并不意味着终止前所发生的未完成交易指令的撤销，也不能消除因终止前的交易所带来的任何法律后果。</p>
+<p><b>第十八条</b> 如因系统升级、业务变化，或根据业务发展需要修改本协议，乙方将提前进行公告。若甲方有异议，有权选择注销相关服务，若甲方未注销相关服务或继续接受相关服务，即视为甲方同意并接受该变更或修改，相关业务或规则按变更或修改后的内容执行。</p>
+<p>本业务规则所称“公告”指在乙方营业网点及门户网站【http://www.boc.cn】等进行公告。</P>
+</body>
+</html>

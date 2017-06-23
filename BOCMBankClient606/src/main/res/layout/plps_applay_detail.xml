@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+     <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin" >
+
+        <Button
+            android:id="@+id/confirm"
+            style="@style/bottombtn"
+            android:onClick="btnOkOnclick"
+            android:text="完成" />
+    </LinearLayout>
+
+    <!-- <LinearLayout
+        
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" > -->
+
+        <ScrollView
+            style="@style/scrollview_comm_havemarginbutton"
+            android:layout_above="@+id/layout_bottom"
+            android:paddingLeft="0dip"
+            android:paddingRight="0dip" >
+
+            <LinearLayout
+                style="@style/confirm_main_style"
+                android:orientation="vertical" >
+
+                <!-- <TextView
+                    android:id="@+id/remit_title_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:text="@string/plps_payment_info_detail"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_default" /> -->
+
+                <LinearLayout style="@style/linnerlayout_common"
+                    android:layout_marginTop="15dip" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/plps_annuity_seqno" />
+
+                    <TextView
+                        android:id="@+id/servicename"
+                        style="@style/textview_common_right"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        android:id="@+id/year_remain_limit_alert"
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/order_service_type" />
+
+                    <TextView
+                        android:id="@+id/agent"
+                        style="@style/textview_common_right"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/plps_apply_colon" />
+
+                    <TextView
+                        android:id="@+id/nickname"
+                        style="@style/textview_common_right"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/trans_mobile_handleDate" />
+
+                    <TextView
+                        android:id="@+id/customerName"
+                        style="@style/textview_common_right"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/plps_annuity_handleresult" />
+
+                    <TextView
+                        android:id="@+id/phone"
+                        style="@style/textview_common_right"
+                        android:text="-" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="1.3"
+                        android:text="@string/plps_info" />
+
+                    <TextView
+                        android:id="@+id/payuserno"
+                        style="@style/textview_common_right"
+                        android:text="-" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+   <!--  </LinearLayout> -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_details_title_height" >
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="@dimen/common_details_title_width"
+            android:layout_height="@dimen/left_img_width"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_title"
+            android:gravity="center"
+            android:paddingRight="@dimen/btnpaddingtb"
+            android:text="详情"
+            android:textSize="@dimen/textsize_default" />
+    </RelativeLayout>
+
+</RelativeLayout>

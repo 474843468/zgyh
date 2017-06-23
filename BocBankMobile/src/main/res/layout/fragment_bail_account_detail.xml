@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F0EFF5"
+            android:fillViewport="false">
+
+    <LinearLayout
+        android:id="@+id/ll_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#fff"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_currency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="@dimen/boc_space_between_40px"
+                android:text="账户暂计盈亏"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small"/>
+
+            <TextView
+                android:id="@+id/tv_current_profit_loss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="@dimen/boc_space_between_20px"
+                android:text="50,000.00"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="28dp"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/boc_space_between_40px"
+                android:background="#D3D2D7"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_prod_name_notice"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="保证金净值"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_small"/>
+
+                <TextView
+                    android:id="@+id/tv_margin_net_balance"
+                    style="@style/tv_small"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:layout_toRightOf="@+id/tv_prod_name_notice"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxWidth="160dp"
+                    android:singleLine="true"
+                    android:text="50,000.00"
+                    android:textColor="@color/boc_text_color_common_gray"
+                    android:textSize="@dimen/boc_text_size_small"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_prod_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:text=""
+                    android:textColor="@color/boc_main_button_color"
+                    android:textSize="@dimen/boc_text_size_small"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#D3D2D7"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="14dp"
+                    android:text="账户余额"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_small"/>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_renminbi"
+                            style="@style/tv_small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="6dp"
+                            android:ellipsize="end"
+                            android:maxWidth="160dp"
+                            android:singleLine="true"
+                            android:text=""
+                            android:textColor="@color/boc_text_color_common_gray"
+                            android:textSize="@dimen/boc_text_size_small"
+                            android:textStyle="bold"
+                            android:visibility="gone"/>
+
+                        <TextView
+                            android:id="@+id/tv_remit_banlance"
+                            style="@style/tv_small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="6dp"
+                            android:ellipsize="end"
+                            android:maxWidth="160dp"
+                            android:singleLine="true"
+                            android:text="美元/现汇 50,000.00"
+                            android:textColor="@color/boc_text_color_common_gray"
+                            android:textSize="@dimen/boc_text_size_small"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:id="@+id/tv_cash_banlance"
+                            style="@style/tv_small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="6dp"
+                            android:layout_toRightOf="@+id/tv_prod_name_notice"
+                            android:ellipsize="end"
+                            android:maxWidth="160dp"
+                            android:singleLine="true"
+                            android:text="美元/现钞 50,000.00"
+                            android:textColor="@color/boc_text_color_common_gray"
+                            android:textSize="@dimen/boc_text_size_small"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_alarm_flag"
+                        android:layout_width="57dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top|end"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@drawable/bg_red"
+                        android:gravity="center"
+                        android:paddingBottom="1dp"
+                        android:paddingTop="1dp"
+                        android:text="余额不足"
+                        android:textColor="#FF4444"
+                        android:textSize="@dimen/boc_text_size_very_small"/>
+                </FrameLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="@dimen/boc_space_between_20px"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="资金账户"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small"/>
+
+            <TextView
+                android:id="@+id/tv_account_num"
+                style="@style/tv_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4563 ****** 5115"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_change_contract"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="8dp"
+                android:paddingRight="15dp"
+                android:text="更换"
+                android:textColor="@color/boc_main_button_color"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="0.5dp"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="保证金账户"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small"/>
+
+            <TextView
+                android:id="@+id/tv_currency_and_pro"
+                style="@style/tv_small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:text="[美元]保证金 1031 ****** 0072"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="0.5dp"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="已占用保证金"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small"/>
+
+            <TextView
+                android:id="@+id/tv_margin_occupied"
+                style="@style/tv_small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:text="10,000.00"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="0.5dp"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="可用保证金"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small"/>
+
+            <TextView
+                android:id="@+id/tv_margina_vailable"
+                style="@style/tv_small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:text="20,000.00"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="0.5dp"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="最大可交易额"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small"/>
+
+            <TextView
+                android:id="@+id/tv_max_trade_amount"
+                style="@style/tv_small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:text="500,000.00"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:layout_marginTop="0.5dp"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="保证金充足率"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small"/>
+
+            <TextView
+                android:id="@+id/tv_margin_rate"
+                style="@style/tv_small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:text="50000%"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="126dp"
+            android:layout_marginTop="11dp"
+            android:background="#fff">
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.progress.LiquidationAndWarnRatio
+                android:id="@+id/lwr_ratio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="交易所需保证\n金比例"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small"/>
+
+            <TextView
+                android:id="@+id/tv_need_margin_ratio"
+                style="@style/tv_small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:text="11150%"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="41dp"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="开仓充足率"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small"/>
+
+            <TextView
+                android:id="@+id/tv_open_rate"
+                style="@style/tv_small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:text="500%"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <TextView
+            style="@style/tv_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:padding="15dp"
+            android:text="当您的保证金充足率处于20%以下时，银行将按照“单笔亏损比率从大到小顺序”的原则进行逐笔强制平仓，直至保证金充足率上升至20%（含）以上为止。当保证金比率降至50%以下、20%（含）以上时，您需要追加保证金。保证金比率为100%及以上时视为充足。"
+            android:textColor="#A9A9A9"
+            android:textSize="@dimen/boc_text_size_small"/>
+
+        <TextView
+            android:id="@+id/tv_bail_transfer"
+            style="@style/tv_small"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="#fff"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="保证金存入/转出"
+            android:textColor="@color/boc_main_button_color"
+            android:textSize="@dimen/boc_text_size_small"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_cancel_contract"
+            style="@style/tv_small"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="23dp"
+            android:layout_marginTop="10dp"
+            android:background="#fff"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="解约"
+            android:textColor="@color/boc_text_color_red"
+            android:textSize="@dimen/boc_text_size_small"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</ScrollView>

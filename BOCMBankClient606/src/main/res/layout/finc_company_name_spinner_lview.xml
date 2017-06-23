@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+        <!--<TextView
+            android:id="@+id/tv_title"
+            style="@style/titleText606"
+            android:background="@color/fundp606_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:text="基金公司" />-->
+    <RelativeLayout
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/fundp606_title"
+        android:layout_alignParentTop="true">
+        <TextView
+            android:id="@+id/finc_company_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/share_left_arrow"
+            android:textSize="@dimen/text_size_13sp"
+            android:text=""
+            android:padding="15dp"
+            android:layout_gravity="left|center_vertical"
+            />
+        <TextView
+            style="@style/titleText"
+            android:textSize="@dimen/text_size_17sp"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:text="基金公司" />
+    </RelativeLayout>
+    <!--<TextView
+        android:id="@+id/tv_title"
+        style="@style/titleText"
+        android:textSize="@dimen/text_size_17sp"
+        android:layout_height="44dp"
+        android:layout_width="match_parent"
+        android:background="@color/fundp606_title"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:text="基金公司" />-->
+    
+     <TextView
+        android:id="@+id/all_company"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+         android:gravity="center_vertical"
+         android:layout_below="@id/tv_title"
+        android:paddingLeft="10dip"
+        android:textColor="@color/black"
+        android:text="全部" />
+
+    <ListView
+        android:id="@+id/lv_popup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:divider="#ffced2d7"
+        android:dividerHeight="1.0px"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_gravity="center"
+        android:fadingEdgeLength="0dip"
+        android:layout_below="@id/all_company"
+        android:listSelector="@null"
+        android:scrollbars="none" />
+
+    <com.chinamworld.bocmbci.widget.AlphabeticalView
+        android:id="@+id/alphaView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/all_company"
+        android:layout_marginTop="5dip" />
+  
+</RelativeLayout>

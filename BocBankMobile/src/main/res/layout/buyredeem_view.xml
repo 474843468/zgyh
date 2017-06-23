@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--第一个圆和第二个圆中间的线-->
+    <ImageView
+        android:id="@+id/iv_2"
+        android:layout_width="@dimen/boc_space_between_40px"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_sp1"
+        android:layout_alignTop="@+id/tv_sp1"
+        android:background="@drawable/line" />
+
+    <!--第二圆-->
+    <LinearLayout
+        android:id="@+id/ll_3"
+        android:layout_width="@dimen/boc_space_between_40px"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_2"
+        android:layout_alignTop="@+id/tv_2"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/boc_space_between_40px"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/line" />
+
+        <ImageView
+            android:id="@+id/iv_3"
+            android:layout_width="@dimen/boc_space_between_40px"
+            android:layout_height="@dimen/boc_space_between_40px"
+            android:background="@drawable/oval_" />
+
+        <ImageView
+            android:id="@+id/line_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/line_"
+            android:visibility="visible" />
+    </LinearLayout>
+    <!--第二个圆和第三个圆之间的线-->
+    <ImageView
+        android:id="@+id/iv_4"
+        android:layout_width="@dimen/boc_space_between_40px"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_sp2"
+        android:layout_alignTop="@+id/tv_sp2"
+        android:background="@drawable/line_"
+        android:visibility="visible" />
+    <!--第三个圆-->
+    <LinearLayout
+        android:id="@+id/ll_5"
+        android:layout_width="@dimen/boc_space_between_40px"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_3"
+        android:layout_alignTop="@+id/tv_3"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/line_" />
+
+        <ImageView
+            android:id="@+id/iv_5"
+            android:layout_width="@dimen/boc_space_between_40px"
+            android:layout_height="@dimen/boc_space_between_40px"
+            android:background="@drawable/oval_1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <!--第一个圆-->
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_width="@dimen/boc_space_between_40px"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/tv_1"
+        android:layout_alignTop="@+id/tv_1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/iv_1"
+            android:layout_width="@dimen/boc_space_between_40px"
+            android:layout_height="@dimen/boc_space_between_40px"
+            android:background="@drawable/oval" />
+
+        <ImageView
+            android:layout_width="@dimen/boc_space_between_40px"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/line" />
+    </LinearLayout>
+
+    <!--第一个圆对应的字-->
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/boc_space_between_20px"
+        android:layout_toRightOf="@+id/ll_1"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp"
+        android:text=""
+        android:textColor="#1fbba6"
+        android:textSize="@dimen/boc_text_size_small" />
+    <!--第一个字和第二个字之间的间距-->
+    <TextView
+        android:id="@+id/tv_sp1"
+        android:layout_width="200dp"
+        android:layout_height="15dp"
+        android:layout_alignLeft="@+id/tv_1"
+        android:layout_below="@+id/tv_1" />
+    <!--第二个字和第三个字之间的间距-->
+    <TextView
+        android:id="@+id/tv_sp2"
+        android:layout_width="200dp"
+        android:layout_height="15dp"
+        android:layout_alignLeft="@+id/tv_1"
+        android:layout_below="@+id/tv_2" />
+    <!--第二个圆对应的字-->
+    <TextView
+        android:id="@+id/tv_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_1"
+        android:layout_below="@+id/tv_sp1"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp"
+        android:text=""
+        android:textColor="#222222"
+        android:textSize="@dimen/boc_text_size_small" />
+    <!--第三个圆对应的字-->
+    <TextView
+        android:id="@+id/tv_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_1"
+        android:layout_below="@+id/tv_sp2"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp"
+        android:text=""
+        android:textColor="#222222"
+        android:textSize="@dimen/boc_text_size_small"
+        android:visibility="visible" />
+
+</RelativeLayout>

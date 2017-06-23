@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_sure"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/trade_nextButton"
+            style="@style/bottombtn"
+            android:text="@string/next"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_sure"
+        android:layout_below="@+id/ll_step"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView
+            style="@style/scrollview_comm_havemarginbutton"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:paddingTop="0dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="5"
+                        android:text="@string/loan_choise_input_loanType"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/loan_choise_input_loanType"
+                        style="@style/comm_view_right"
+                        android:layout_weight="5"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="5"
+                        android:text="@string/loan_actNum1"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/loan_choise_accountNumber1"
+                        style="@style/comm_view_right"
+                        android:layout_weight="5"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="5"
+                        android:text="@string/loan_choise_pa_moneys"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/loan_choise_pa_moneys"
+                        style="@style/comm_view_right"
+                        android:layout_weight="5"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="5"
+                        android:text="@string/forex_customer_fix_cash1"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/forex_customer_fix_cash"
+                        style="@style/comm_view_right"
+                        android:layout_weight="5"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="5"
+                        android:text="@string/prms_currency_colon"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/loan_choise_input_code"
+                        style="@style/comm_view_right"
+                        android:layout_weight="5"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="5"
+                        android:singleLine="false"
+                        android:text="@string/loan_repay_loanPeriod"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/loan_repay_loanPeriod"
+                        style="@style/comm_view_right"
+                        android:layout_weight="5"
+                        android:singleLine="false"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="5"
+                        android:text="@string/loan_repay_loanToDate"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/loan_repay_loanToDate"
+                        style="@style/comm_view_right"
+                        android:layout_weight="5"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="5"
+                        android:text="@string/loan_repay_remainCapital"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/loan_repay_remainCapital"
+                        style="@style/comm_view_right"
+                        android:layout_weight="5"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="5"
+                        android:text="@string/loan_repay_interestType"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/loan_repay_interestType"
+                        style="@style/comm_view_right"
+                        android:layout_weight="5"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="5"
+                        android:text="@string/loan_repay_remainIssue"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/loan_repay_remainIssue"
+                        style="@style/comm_view_right"
+                        android:layout_weight="5"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="5"
+                        android:text="@string/loan_repay_thisIssueRepayDate"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/loan_repay_thisIssueRepayDate"
+                        style="@style/comm_view_right"
+                        android:layout_weight="5"
+                        android:singleLine="false"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="5"
+                        android:text="@string/loan_repay_thisIssueRepayAmount"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/loan_repay_thisIssueRepayAmount"
+                        style="@style/comm_view_right"
+                        android:layout_weight="5"
+                        android:singleLine="false"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/text_left"
+                        style="@style/comm_view_left"
+                        android:layout_weight="5"
+                        android:singleLine="true"
+                        android:text="@string/loan_repay_thisIssueRepayInterest"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/loan_repay_thisIssueRepayInterest"
+                        style="@style/comm_view_right"
+                        android:layout_weight="5"
+                        android:singleLine="false"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/dp_one_zero" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="5"
+                        android:text="提前还款本金："
+                        android:textSize="@dimen/textsize_default" />
+
+                    <EditText
+                        android:id="@+id/loan_repay_loanRate"
+                        style="@style/edittext_input_numberDecimal_fill"
+                        android:layout_weight="5"
+                        android:maxLength="14"
+                        android:textSize="@dimen/textsize_default" >
+                        <requestFocus />
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/dp_one_zero" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_weight="5"
+                        android:text="@string/loan_repay_payAccountNumber"
+                        android:textSize="@dimen/textsize_default" />
+                     <RelativeLayout
+                        style="@style/textview_common_right_two"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                        android:layout_marginRight="@dimen/common_listview_item_paddingLR" >
+                    
+
+                    <Spinner
+                        android:id="@+id/loan_repay_payAccountNumber"
+                        style="@style/Spinner_comm_view_right"
+                        android:singleLine="false"
+                        android:textColor="@color/red"
+                        android:scrollbars="none"
+                        android:textSize="@dimen/textsize_default" />
+                     <TextView
+                            android:id="@+id/text_spinner"
+                            style="@style/Spinner_comm_view_right"
+                            android:gravity="center_vertical"
+                            android:text="@string/tran_please_choose"
+                            android:textSize="@dimen/textsize_default" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

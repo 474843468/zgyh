@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 功能外置 中银理财  我的理财产品详情界面 sunh -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp_five"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/common_bottom_padding" >
+
+        <Button
+            android:id="@+id/btn_description_buydetail_outlay"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/boc_des_deal" />
+
+        <Button
+            android:id="@+id/btn_buy_buydetail_outlay"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="购买/签约" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_btn"
+        android:layout_marginTop="@dimen/rightbtnW"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/titleText_step2"
+            android:layout_width="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/detail"
+            android:textColor="@color/black"
+            android:visibility="invisible" />
+
+        <ScrollView
+            style="@style/scrollview_comm"
+            android:paddingLeft="@dimen/dp_five"
+            android:paddingRight="@dimen/dp_five" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/base_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/acct_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/bocinvt_buy_number" />
+
+                        <TextView
+                            android:id="@+id/boci_combinacct"
+                            style="@style/textview_common_right_two"
+                            android:layout_height="@dimen/layout_height"
+                            android:layout_marginRight="@dimen/common_row_margin"
+                            android:background="@drawable/bg_spinner"
+                            android:ellipsize="middle"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/edittext_paddinglr"
+                            android:paddingRight="@dimen/fill_margin_right"
+                            android:singleLine="true"
+                            android:text="请选择账户" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/prodCode" />
+
+                        <TextView
+                            android:id="@+id/tv_prodCode_detail"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/prodName" />
+
+                        <TextView
+                            android:id="@+id/tv_prodName_detail"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/currency_new" />
+
+                        <TextView
+                            android:id="@+id/tv_curCode_detail"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+ <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/buyPrice2" />
+
+                        <TextView
+                            android:id="@+id/tv_buyPrice_detail"
+                            style="@style/textview_common_right_two"
+                            android:textColor="@color/red" />
+                    </LinearLayout>
+                      <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/timeLimit" />
+
+                        <TextView
+                            android:id="@+id/tv_prodTimeLimit_detail"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/yearlyRR_detail"
+                            style="@style/textview_common_left_three"
+                            android:ellipsize="middle"
+                            android:text="@string/yearlyRR" />
+
+                        <TextView
+                            android:id="@+id/tv_yearlyRR_detail"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                   
+
+                  
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/applyObj" />
+
+                        <TextView
+                            android:id="@+id/tv_applyObj_detail"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+<LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/prodRiskType" />
+
+                        <TextView
+                            android:id="@+id/prodRiskType"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+                      <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/periodical" />
+
+                        <TextView
+                            android:id="@+id/tv_periodical_detail"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+                    
+
+                    
+
+
+                  
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/sellingDate" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2" >
+
+                            <TextView
+                                android:id="@+id/tv_sellingDate_start"
+                                style="@style/textview_common"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:id="@+id/tv_sellingDate_end"
+                                style="@style/textview_common"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/prodBegin" />
+
+                        <TextView
+                            android:id="@+id/tv_prodBegin_detail"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/prodEnd" />
+
+                        <TextView
+                            android:id="@+id/tv_prodEnd_detail"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+  <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/buyStartingAmount_detail"
+                            style="@style/textview_common_left_three"
+                            android:ellipsize="middle"
+                            android:text="@string/bocinvt_subamount" />
+
+                        <TextView
+                            android:id="@+id/tv_buyStartingAmount_detail"
+                            style="@style/textview_common_right_two"
+                            android:textColor="@color/red" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/appendStrating"
+                            style="@style/textview_common_left_three"
+                            android:ellipsize="middle"
+                            android:text="@string/bocinvt_addamount" />
+
+                        <TextView
+                            android:id="@+id/tv_appendStartingAmount_detail"
+                            style="@style/textview_common_right_two"
+                            android:textColor="@color/red" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:ellipsize="middle"
+                            android:text="@string/bocinvt_baseamount" />
+
+                        <TextView
+                            android:id="@+id/baseAmount"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+               
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" 
+    	android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/outtimeorder_title"
+                            style="@style/textview_common_left_three"
+                            android:ellipsize="middle"
+                            android:text="@string/bocinvt_outtimeorder" />
+
+                        <TextView
+                            android:id="@+id/outtimeorder"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" 
+                            android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/paymentdate_title"
+                            style="@style/textview_common_left_three"
+                            android:ellipsize="middle"
+                            android:text="@string/bocinvt_paymentdate" />
+
+                        <TextView
+                            android:id="@+id/paymentdate"
+                            style="@style/textview_common_right_two"
+                            android:singleLine="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" 
+                            android:visibility="gone">
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/bocinvt_couponpay" />
+
+                        <TextView
+                            android:id="@+id/couponpay"
+                            style="@style/textview_common_right_two"
+                            android:singleLine="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_availamt"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/bocinvt_availableamt" />
+
+                        <TextView
+                            android:id="@+id/availableAmt"
+                            style="@style/textview_common_right_two"
+                            android:textColor="@color/red" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/titleText"
+        style="@style/titleText_stepacc"
+        android:layout_width="@dimen/common_details_title_width"
+        android:layout_height="@dimen/left_img_width"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_title"
+        android:gravity="center"
+        android:paddingRight="@dimen/btnpaddingtb"
+        android:text="@string/bocinvt_detail_title"
+        android:textColor="@color/gray_title" />
+
+</RelativeLayout>

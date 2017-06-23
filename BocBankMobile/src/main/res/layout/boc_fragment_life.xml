@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+  <com.boc.bocsoft.mobile.bocmobile.buss.system.life.ui.view.LifeTopView
+      android:id="@+id/view_topbar"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/boc_titlebar_height"/>
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/boc_divider_1px"/>
+
+  <android.support.v4.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="#ffffff">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+      <!-- 轮播广告 -->
+      <com.boc.bocsoft.mobile.bocmobile.base.widget.banner.ConvenientBanner
+          android:id="@+id/view_banner"
+          android:layout_width="match_parent"
+          android:layout_height="150dp"
+          android:background="#ffffff"
+          app:canLoop="true"/>
+      <View android:layout_width="match_parent"
+          android:layout_height="@dimen/boc_divider_1px"
+          android:background="#eaedf0"
+      />
+      <!-- 可拖动菜单  -->
+      <com.boc.bocsoft.mobile.bocmobile.base.widget.gridview.DragGridView
+          android:id="@+id/view_menu"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="#ffffff"
+          android:listSelector="@null"
+          android:numColumns="4"
+          android:scrollbars="none"
+          android:stretchMode="columnWidth"
+          android:horizontalSpacing="1dp"
+          android:verticalSpacing="1dp"
+          app:horizontalSpacingColor="#eaedf0"
+          app:verticalSpacingColor="#eaedf0"/>
+  <!--    <com.boc.bocsoft.mobile.bocmobile.base.widget.gridview.DragGridView
+          android:id="@+id/view_menu"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="#ffffff"
+          android:horizontalSpacing="0dp"
+          android:listSelector="@null"
+          android:numColumns="4"
+          android:scrollbars="none"
+          android:stretchMode="columnWidth"
+          android:verticalSpacing="0dp"
+          android:paddingLeft="@dimen/boc_space_between_16px"
+          android:paddingRight="@dimen/boc_space_between_16px"
+          android:paddingTop="@dimen/boc_space_between_20px"
+          android:paddingBottom="@dimen/boc_space_between_50px"
+      />-->
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/boc_space_between_18px"
+          android:background="#ffeaedf0"/>
+
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/boc_divider_1px"
+          android:background="@color/boc_divider_line_color"/>
+      <!-- 优惠券 优惠商户 -->
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+        <include
+            layout="@layout/boc_life_doublue_item_view"
+            android:id="@+id/view_item_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+        />
+        <View
+            android:layout_width="@dimen/boc_divider_1px"
+            android:layout_height="match_parent"
+            android:background="@color/boc_divider_line_color"/>
+
+        <include
+            layout="@layout/boc_life_doublue_item_view"
+            android:id="@+id/view_item_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+        />
+
+      </LinearLayout>
+
+      <!-- 排队预约 纪念币预约 -->
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/boc_divider_1px"
+          android:background="@color/boc_divider_line_color"/>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+
+        <include
+            layout="@layout/boc_life_doublue_item_view"
+            android:id="@+id/view_item_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+        />
+
+        <View
+            android:layout_width="@dimen/boc_divider_1px"
+            android:layout_height="match_parent"
+            android:background="@color/boc_divider_line_color"/>
+
+        <include
+            layout="@layout/boc_life_doublue_item_view"
+            android:id="@+id/view_item_4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+        />
+
+      </LinearLayout>
+      <View
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/boc_divider_1px"
+          android:background="@color/boc_divider_line_color"/>
+    </LinearLayout>
+
+  </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

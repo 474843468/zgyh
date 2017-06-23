@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/rltotal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f0eff5">
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/ib_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/boc_space_between_12px"
+            android:drawableLeft="@drawable/goldstore_back_icon"
+            android:padding="15dp"
+            android:text=""
+            android:textSize="@dimen/textsize_one_three"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/titleText"
+            android:text="外汇"
+            android:textColor="@color/black"
+            android:textSize="@dimen/boc_space_between_34px"
+            android:visibility="visible"/>
+
+        <LinearLayout
+            android:id="@+id/ll_currency_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/currency_right"
+                style="@style/titleText"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/boc_space_between_34px"/>
+
+            <TextView
+                android:id="@+id/currency_right_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/acc_trans"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/titlebar_right"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <RelativeLayout
+                android:id="@+id/ib_top_right_other_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+                    <TextView
+                        android:id="@+id/foreign_share"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/btn_chaxun_icon"
+                        android:gravity="center"
+                        android:padding="@dimen/boc_space_between_30px"
+                        android:text=""
+                        android:textSize="@dimen/boc_space_between_34px"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:id="@+id/ib_top_right_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/goldstore_point_more"
+                        android:gravity="center"
+                        android:padding="@dimen/boc_space_between_30px"
+                        android:text=""
+                        android:textSize="@dimen/boc_space_between_34px"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/sliding_menu_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/foot_layout"
+        android:layout_below="@+id/main_layout"
+        android:background="@drawable/bg_content">
+
+        <LinearLayout
+            android:id="@+id/sliding_body"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/gray"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/common_bottom_padding_new">
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

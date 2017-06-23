@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 我的外汇     定期首页 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/top_acc_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/btn_bottom_height"
+            android:background="@drawable/prms_myacc_bg1"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_right"
+            android:orientation="horizontal" >
+
+            <TextView android:id="@+id/acc_type"
+                style="@style/textview_common_left"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/foreign_currency_exchange_acc" />
+
+            <TextView
+                android:id="@+id/customer_accNumber"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/fill_margin_left"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:text="@string/my_fore_exchange_remain" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/common_row_margin" >
+
+            <LinearLayout
+                android:id="@+id/has_acc"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:id="@+id/layout_main"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="4"
+                    android:background="@drawable/bg_for_listview_item_write"
+                    android:orientation="vertical" >
+
+
+<!--                     <LinearLayout -->
+<!--                         android:layout_width="fill_parent" -->
+<!--                         android:layout_height="1dp" -->
+<!--                         android:background="@color/gray" -->
+<!--                         android:orientation="horizontal" > -->
+<!--                     </LinearLayout> -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="3" 
+                        android:orientation="vertical">
+
+                        <ListView
+                            android:id="@+id/remain_money_listView"
+                            style="@style/listviewcomm_fill_gray_divider_new"
+                            android:listSelector="#00000000"
+                            android:scrollbars="none" >
+                        </ListView>
+                        <ImageView 
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/gray_line"
+                            />
+                        <TextView
+                            android:id="@+id/outsideMessage"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="@string/outsideMessage"
+                            android:textColor="@color/red" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+			<!-- 暂无余额提示 -->
+            <LinearLayout
+                android:id="@+id/no_acc"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/bg_for_listview_item_write"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_three_zero"
+                    android:gravity="center"
+                    android:text="@string/forex_no_acc" />
+
+                <ImageView
+                    style="@style/wuyue"
+                    android:layout_marginTop="@dimen/dp_two_zero" />
+            </LinearLayout>
+        </FrameLayout>
+        <TextView 
+             style="@style/textview_common"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:gravity="left"
+             android:text="@string/my_fore_exchange_remain_bottom"
+             android:textColor="@color/gray"
+             android:textSize="@dimen/textsize_one_zero"
+             android:textStyle="bold"
+             android:visibility="gone"  />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 修改投资协议页面 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 总的修改字段及信息  根据不同类型 展示对应的修改项目 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <!-- 金额模式 -->
+
+        <LinearLayout
+            android:id="@+id/agr_modify_amounttype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/fill_padding_right"
+            android:paddingRight="@dimen/fill_padding_right"
+            android:visibility="visible" >
+
+            <TextView
+                style="@style/comm_view_left"
+                android:layout_weight="1"
+                android:text="金额模式：" />
+            <!-- 可修改时显示 -->
+
+            <Spinner
+                android:id="@+id/sp_agr_modify_amounttype"
+                style="@style/Spiiner_fill"
+                android:entries="@array/boc_invest_agree_amounttype"
+                android:prompt="@string/boc_invest_amounttypr_spprompt"
+                android:spinnerMode="dialog" />
+            <!-- 不可修改时显示 -->
+
+            <TextView
+                android:id="@+id/tv_amounttype"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_three"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 金额 -->
+
+        <LinearLayout
+            android:id="@+id/agr_modify_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/fill_padding_right"
+            android:paddingRight="@dimen/fill_padding_right"
+            android:visibility="visible" >
+
+            <!-- 定额金额的修改 -->
+
+            <LinearLayout
+                android:id="@+id/amount_dinge_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_agr_modify_amount"
+                        style="@style/comm_view_left"
+                        android:layout_weight="1"
+                        android:text="协议投资金额：" />
+
+                    <EditText
+                        android:id="@+id/et_agr_modify_amount"
+                        style="@style/edittext_input_numberDecimal_fill"
+                        android:layout_weight="1"
+                        android:maxLength="14"
+                        android:singleLine="true"
+                        android:textColor="@color/black" />
+                    <!-- 不可修改时显示 -->
+
+                    <TextView
+                        android:id="@+id/tv_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_three"
+                        android:visibility="gone" />
+                </LinearLayout>
+                <!-- amount 大写回显 -->
+
+                <TextView
+                    android:id="@+id/tv_for_amount_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_five"
+                    android:gravity="right"
+                    android:paddingRight="@dimen/fill_padding_right"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textsize_one_three"
+                    android:visibility="gone" />
+            </LinearLayout>
+            <!-- 不定额 的金额修改 -->
+
+            <LinearLayout
+                android:id="@+id/amount_budinge_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/tv_agr_modify_amount_min"
+                        style="@style/comm_view_left"
+                        android:layout_weight="1"
+                        android:text="账户保留余额：" />
+
+                    <EditText
+                        android:id="@+id/et_agr_modify_amount_min"
+                        style="@style/edittext_input_numberDecimal_fill"
+                        android:layout_weight="1"
+                        android:maxLength="14"
+                        android:singleLine="true"
+                        android:textColor="@color/black" />
+                    <!-- 不可修改时显示 -->
+
+                    <TextView
+                        android:id="@+id/tv_minamount"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_three"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_for_minamount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_five"
+                    android:gravity="right"
+                    android:paddingRight="@dimen/fill_padding_right"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textsize_one_three"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin" >
+
+                    <TextView
+                        android:id="@+id/tv_agr_modify_amount_max"
+                        style="@style/comm_view_left"
+                        android:layout_weight="1"
+                        android:text="最大购买金额：" />
+
+                    <EditText
+                        android:id="@+id/et_agr_modify_amount_max"
+                        style="@style/edittext_input_numberDecimal_fill"
+                        android:layout_weight="1"
+                        android:maxLength="14"
+                        android:singleLine="true"
+                        android:textColor="@color/black" />
+                    <!-- 不可修改时显示 -->
+
+                    <TextView
+                        android:id="@+id/tv_maxamount"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:layout_weight="1"
+                        android:gravity="left|center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textsize_one_three"
+                        android:visibility="gone" />
+                </LinearLayout>
+				<!-- 购买触发金额 为 0 提示信息 -->
+                <TextView
+                    android:id="@+id/tv_maxamountinfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="购买触发金额为0时，系统将全额购买"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textsize_one_three"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_for_maxamount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_five"
+                    android:gravity="right"
+                    android:paddingRight="@dimen/fill_padding_right"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textsize_one_three"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 期数 -->
+
+        <LinearLayout
+            android:id="@+id/agr_modify_period"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/fill_padding_right"
+            android:paddingRight="@dimen/fill_padding_right"
+            android:visibility="visible" >
+
+            <TextView
+                style="@style/comm_view_left"
+                android:layout_weight="1"
+                android:text="签约期数：" />
+            <!-- 可修改时显示 -->
+
+            <EditText
+                android:id="@+id/et_agr_modify_period"
+                style="@style/edittext_inputNumber_fill"
+                android:layout_weight="1"
+                android:maxLength="14"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+            <!-- 不可修改时显示 -->
+
+            <TextView
+                android:id="@+id/tv_period"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_three"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- 已执行期数 和剩余期数 -->
+
+        <LinearLayout
+            android:id="@+id/mycontainerLayout_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <!-- 多次赎回协议 动态显示 协议申购金额 -->
+
+        <LinearLayout
+            android:id="@+id/ll_xysgje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/comm_view_left"
+                android:layout_weight="1"
+                android:text="协议申购金额：" />
+
+            <TextView
+                android:id="@+id/tv_agrsgje"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_weight="1"
+                android:gravity="left|center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_three" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

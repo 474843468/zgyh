@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账户管理 我的电子现金账户 充值输入界面  wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/ll_financeic_trans"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ScrollView
+                style="@style/scrollview_comm"
+                android:layout_weight="1"
+                android:background="@drawable/bg_for_listview_item_write" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingRight="@dimen/dp_five" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/acc_financeic_trans_bankact"
+                            style="@style/textview_common_left_three"
+                            android:text="@string/acc_out" />
+
+                        <TextView
+                            android:id="@+id/acc_financeic_trans_bankact_value"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/acc_financeic_trans_icact"
+                            style="@style/textview_common_left_three"
+                            android:text="@string/acc_financeic_act" />
+
+                        <Spinner
+                            android:id="@+id/spinner_choose_actnum"
+                            style="@style/Spiiner_fill"
+                            android:layout_weight="2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/acc_financeic_trans_currency"
+                            style="@style/textview_common_left_three"
+                            android:text="@string/currency1" />
+
+                        <TextView
+                            android:id="@+id/acc_financeic_trans_currency_value"
+                            style="@style/textview_common_right_two"
+                            android:text="@string/renmingbi" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/acc_financeic_trans_maxnum"
+                            style="@style/textview_common_left_three"
+                            android:text="@string/acc_financeic_trans_maxvalue" />
+
+                        <TextView
+                            android:id="@+id/acc_financeic_trans_maxnum_value"
+                            style="@style/textview_common_right_two"
+                            android:textColor="@color/red" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/acc_financeic_trans_num"
+                            style="@style/textview_common_left_three"
+                            android:text="@string/acc_financeic_trans_value" />
+
+                        <EditText
+                            android:id="@+id/et_financeic_trans_num_value"
+                            style="@style/edittext_input_numberDecimal_fill"
+                            android:layout_weight="2"
+                            android:singleLine="true" >
+                        </EditText>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_bottom_padding"
+                android:layout_marginTop="@dimen/dp_five"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btnNext"
+                    style="@style/bottombtn"
+                    android:background="@drawable/btn_red_big"
+                    android:text="@string/next"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_financeic_transrel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <ScrollView
+                style="@style/scrollview_comm"
+                android:layout_weight="1"
+                android:background="@drawable/bg_for_listview_item_write" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingRight="@dimen/dp_five" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/acc_financeic_transrel_bankact"
+                            style="@style/textview_common_left_three"
+                            android:text="@string/acc_out" />
+
+                        <TextView
+                            android:id="@+id/acc_financeic_transrel_bankact_value"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/acc_financeic_transrel_payeeName"
+                            style="@style/textview_common_left_three"
+                            android:text="@string/payeeName" />
+
+                        <EditText
+                            android:id="@+id/acc_financeic_transrel_payeeName_value"
+                            style="@style/edittext_common_fill"
+                            android:layout_weight="2"
+                            android:maxLength="60"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/acc_financeic_transrel_icact"
+                            style="@style/textview_common_left_three"
+                            android:text="@string/acc_financeic_act" />
+
+                        <EditText
+                            android:id="@+id/acc_financeic_transrel_icact_value"
+                            style="@style/edittext_inputNumber_fill"
+                            android:layout_weight="2"
+                            android:maxLength="19"
+                            android:singleLine="true" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/acc_financeic_transrel_icact_repeat"
+                            style="@style/textview_common_left_three"
+                            android:text="@string/acc_financeic_act_repeat" />
+
+                        <EditText
+                            android:id="@+id/acc_financeic_transrel_icact_repeat_value"
+                            style="@style/edittext_inputNumber_fill"
+                            android:layout_weight="2"
+                            android:longClickable="false"
+                            android:maxLength="19"
+                            android:singleLine="true" >
+                        </EditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/acc_financeic_transrel_currency"
+                            style="@style/textview_common_left_three"
+                            android:text="@string/currency1" />
+
+                        <TextView
+                            android:id="@+id/acc_financeic_transrel_currency_value"
+                            style="@style/textview_common_right_two"
+                            android:text="@string/renmingbi" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/acc_financeic_transrel_num"
+                            style="@style/textview_common_left_three"
+                            android:text="@string/acc_financeic_trans_value" />
+
+                        <EditText
+                            android:id="@+id/et_financeic_transrel_num_value"
+                            style="@style/edittext_input_numberDecimal_fill"
+                            android:layout_weight="2"
+                            android:maxLength="14"
+                            android:singleLine="true" >
+                        </EditText>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_bottom_padding"
+                android:layout_marginTop="@dimen/dp_five"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btntransrelNext"
+                    style="@style/bottombtn"
+                    android:text="@string/next" />
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

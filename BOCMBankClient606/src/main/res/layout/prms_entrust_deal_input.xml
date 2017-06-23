@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/prms_trade_buy_limitprice_linerlayout"
+        style="@style/linnerlayout_common"
+        android:visibility="visible" >
+
+        <TextView
+            style="@style/textview_forex_prompt_message"
+            android:text="@string/prms_str_limitprice" />
+
+        <LinearLayout
+            style="@style/textview_prms_prompt_letetitle_info"
+            android:paddingLeft="0dp">
+
+            <EditText
+                android:id="@+id/prms_trade_buy_limitprice"
+                style="@style/edittext_forex_prompt_info"
+                android:maxLength="14" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/prms_trade_buy_limit_unit"
+                style="@style/textview_prms_prompt_end_info"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/prms_run_lose_ll"
+        style="@style/linnerlayout_common"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <LinearLayout
+            style="@style/linnerlayout_common"
+            android:visibility="visible" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:text="@string/prms_runlost_diancha" />
+
+            <LinearLayout
+                style="@style/textview_prms_prompt_letetitle_info"
+                android:paddingLeft="0dp" >
+
+                <EditText
+                    android:id="@+id/prms_runlost_diancha_edit"
+                    style="@style/edittext_forex_prompt_info"
+                    android:inputType="number"
+                    android:maxLength="14" >
+
+                    <requestFocus />
+                </EditText>
+
+                <TextView
+                    android:id="@+id/prms_runlost_diancha_tv"
+                    style="@style/textview_prms_prompt_end_info"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/prms_runlost_dianchaEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/fonts_one_five"
+            android:text="@string/prms_runlost_dianchaEdit" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/prms_trade_buy_winPrice_ll"
+        style="@style/linnerlayout_common"
+        android:visibility="visible" >
+
+        <TextView
+            style="@style/textview_forex_prompt_message"
+            android:text="@string/prms_win_price_colon" />
+
+        <LinearLayout
+            style="@style/textview_prms_prompt_letetitle_info"
+            android:paddingLeft="0dp">
+
+            <EditText
+                android:id="@+id/prms_win_price_edt"
+                style="@style/edittext_forex_prompt_info"
+                android:maxLength="14" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/prms_win_price_unit_tv"
+                style="@style/textview_prms_prompt_end_info" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/prms_lose_price_ll"
+        style="@style/linnerlayout_common"
+        android:visibility="visible" >
+
+        <TextView
+            style="@style/textview_forex_prompt_message"
+            android:text="@string/prms_lose_price_colon" />
+
+        <LinearLayout
+            style="@style/textview_prms_prompt_letetitle_info"
+            android:paddingLeft="0dp"  >
+
+            <EditText
+                android:id="@+id/prms_lose_price_edt"
+                style="@style/edittext_forex_prompt_info"
+                android:maxLength="14" >
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:id="@+id/prms_lose_price_unit_tv"
+                style="@style/textview_prms_prompt_end_info"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/prms_entrust_date_View"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <LinearLayout style="@style/linnerlayout_common" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"
+                android:text="@string/prms_entrust_time_colon" />
+
+            <TextView
+                android:id="@+id/prms_entrust_date_tv"
+                style="@style/spinner_forex_prompt_info"
+                android:paddingLeft="6dp"
+                 />
+        </LinearLayout>
+
+        <LinearLayout style="@style/linnerlayout_common" >
+
+            <TextView
+                style="@style/textview_forex_prompt_message"/>
+
+            <LinearLayout
+                style="@style/textview_prms_prompt_letetitle_info"
+                android:paddingLeft="0dp" >
+
+                <Spinner
+                    android:id="@+id/prms_entrust_time_sp"
+                    style="@style/spinner_forex_prompt_info" />
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/common_row_margin_half"
+                    android:layout_marginRight="@dimen/common_row_margin_half"
+                    android:gravity="center"
+                    android:text="@string/forex_rate_currency_hour" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/linnerlayout_common" >
+
+            <TextView
+                style="@style/confirm_info_textview_style"
+                android:text="@string/prms_entrust_time_info" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/linnerlayout_common" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_row_margin" >
+        </TextView>
+    </LinearLayout>
+
+</LinearLayout>

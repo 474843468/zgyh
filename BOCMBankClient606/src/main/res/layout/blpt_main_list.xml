@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账单缴费主页缴费项目列表页 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <RadioButton
+            android:id="@+id/blpt_topbtn1"
+            style="@style/radioButtonLeft"
+            android:text="@string/blpt_main_topbtn_sign" />
+
+        <RadioButton
+            android:id="@+id/blpt_topbtn2"
+            style="@style/radioButtonMiddle"
+            android:text="@string/blpt_main_topbtn_nosign"
+            android:visibility="gone" />
+
+        <RadioButton
+            android:id="@+id/blpt_topbtn3"
+            style="@style/radioButtonRight"
+            android:text="@string/blpt_main_topbtn_nomaul" />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/radioGroup"
+        android:layout_marginTop="@dimen/common_listview_item_paddingLR"
+        android:orientation="vertical" >
+
+        <com.chinamworld.bocmbci.widget.SwipeListView
+            xmlns:swipe="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/blpt_lv_sign"
+            style="@style/listviewcomm_fill_haveDivider"
+            android:scrollbars="none"
+            swipe:swipeActionLeft="dismiss"
+            swipe:swipeCloseAllItemsWhenMoveList="true"
+            swipe:swipeFrontView="@+id/front"
+            swipe:swipeMode="both" />
+
+        <com.chinamworld.bocmbci.widget.SwipeListView
+            xmlns:swipe="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/blpt_lv_nomaul"
+            style="@style/listviewcomm_fill_haveDivider"
+            android:scrollbars="none"
+            android:visibility="gone"
+            swipe:swipeActionLeft="dismiss"
+            swipe:swipeCloseAllItemsWhenMoveList="true"
+            swipe:swipeFrontView="@+id/front"
+            swipe:swipeMode="both" />
+    </RelativeLayout>
+
+</RelativeLayout>

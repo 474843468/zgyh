@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/style_match_match"
+    android:orientation="vertical" >
+
+    <!-- 份额转换声明页面 -->
+
+
+    <!--
+         <com.chinamworld.bocmbci.userwidget.TitleAndContentLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/bocinvt_transition_statement" >
+    -->
+    <!-- 内容区 -->
+
+    <FrameLayout style="@style/style_height_weight_1" >
+
+        <!-- layout_marginTop值为"协议信息"组件高度的一半 -->
+
+        <LinearLayout
+            style="@style/style_match_match"
+            android:layout_marginTop="@dimen/bovinvt_layout_content_margin_top"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/bovinvt_layout_margin_top" >
+
+            <View
+                style="@style/style_line_item"
+                android:layout_marginTop="@dimen/bovinvt_layout_margin_top1" />
+
+            <ScrollView style="@style/scrollview_comm_havemarginbutton" >
+
+                <LinearLayout
+                    style="@style/style_match_match"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/total_agree"
+                            style="@style/textview_default"
+                        	android:layout_width="match_parent"
+                        	android:layout_height="wrap_content"
+                        	android:textColor="@color/black"
+                            android:text="@string/bocinvt_transition_statement_agreement_readed" />
+
+                        <RadioGroup
+                            android:id="@+id/rg_agreement"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/btn_bottom_height"
+	                        android:layout_marginTop="@dimen/common_row_margin"
+	                        android:paddingLeft="@dimen/fill_margin_left"
+	                        android:paddingRight="@dimen/fill_margin_left" 
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/rb_agreement_positive"
+                                style="@style/textview_common"
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/btn_bottom_height"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:button="@drawable/radiobtn_selector"
+                                android:text="@string/boc_agree" />
+
+                            <RadioButton
+                                android:id="@+id/rb_agreement_negative"
+                               	style="@style/textview_common"
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/btn_bottom_height"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:button="@drawable/radiobtn_selector"
+                                android:text="@string/boc_dis_agree" />
+
+                            <!--
+                 <TextView
+                android:id="@+id/tv_agreement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bocinvt_transition_agreement"
+                android:textColor="@color/blue" />
+                            -->
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <View
+                        style="@style/style_line_item"
+                        android:layout_marginTop="@dimen/bovinvt_layout_margin_top1" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center"
+                        android:orientation="vertical" >
+
+                        <TextView
+                             style="@style/textview_default"
+                        	 android:layout_width="match_parent"
+                        	 android:layout_height="wrap_content"
+                        	 android:textColor="@color/black"
+                             android:text="@string/bocinvt_transition_statement_specification_readed" />
+
+                        <RadioGroup
+                            android:id="@+id/rg_specification"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/btn_bottom_height"
+                            android:layout_marginTop="@dimen/common_row_margin"
+	                        android:paddingLeft="@dimen/fill_margin_left"
+	                        android:paddingRight="@dimen/fill_margin_left" 
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/rb_specification_positive"
+                                style="@style/textview_common"
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/btn_bottom_height"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:button="@drawable/radiobtn_selector"
+                                android:text="@string/boc_agree" />
+
+                            <RadioButton
+                                android:id="@+id/rb_specification_negative"
+                                style="@style/textview_common"
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/btn_bottom_height"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:button="@drawable/radiobtn_selector"
+                                android:text="@string/boc_dis_agree" />
+
+                            <!--
+                 <TextView
+                android:id="@+id/tv_specification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bocinvt_transition_specification"
+                android:textColor="@color/blue" />
+                            -->
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+                    </TextView>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+        <!-- 标题 -->
+
+        <LinearLayout
+            style="@style/style_match_wrap"
+            android:layout_marginTop="0dp"
+            android:gravity="center_horizontal" >
+
+            <!-- 购买信息 -->
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/bovinvt_tv_title_height"
+                android:background="@drawable/shape_product_query_and_buy_tv_bg"
+                android:gravity="center"
+                android:paddingLeft="@dimen/layout_margin_left_right"
+                android:paddingRight="@dimen/layout_margin_left_right"
+                android:text="@string/bocinvt_transition_statement" />
+        </LinearLayout>
+    </FrameLayout>
+    <!-- 按钮区 -->
+
+    <LinearLayout style="@style/style_match_wrap" >
+
+        <Button
+            android:id="@+id/bt_pre"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/last"
+            android:onClick="onClick"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/bt_next"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/next"
+            android:onClick="onClick"
+            android:textColor="@color/white" />
+    </LinearLayout>
+    <!-- </com.chinamworld.bocmbci.userwidget.TitleAndContentLayout> -->
+
+
+    <!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/bt_pre"
+            style="@style/bottombtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/pro" />
+
+        <Button
+            android:id="@+id/bt_next"
+            style="@style/bottombtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="onClick"
+            android:text="@string/next" />
+    </LinearLayout>
+    -->
+
+</LinearLayout>

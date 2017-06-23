@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账户管理  账户详情弹出框界面  wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/message_dialog_bg" >
+
+        <ImageView
+            android:id="@+id/img_exit_accdetail_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@color/transparent_00" />
+
+        <LinearLayout
+            android:id="@+id/ll_acc_debibtIc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dialogbtn_marginTop"
+            android:layout_marginRight="@dimen/fill_margin_right_fordialog"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_for_payment"
+                style="@style/bottombtn"
+                android:background="@drawable/btn_gray"
+                android:text="@string/bocinvt_rel_new"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <ScrollView
+            style="@style/scrollview_comm"
+            android:layout_above="@+id/ll_acc_debibtIc"
+            android:layout_below="@+id/img_exit_accdetail_1"
+            android:layout_marginRight="@dimen/fill_margin_right_fordialog"
+            android:layout_marginTop="@dimen/common_row_margin" >
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/fill_margin_top"
+                android:paddingRight="@dimen/fill_margin_top" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_acc_account_number"
+                        style="@style/textview_common_left_three"
+                        android:text="@string/bocinvt_rel_confirm_actnum" />
+
+                    <TextView
+                        android:id="@+id/acc_account_number_value"
+                        style="@style/textview_common_right_two"
+                        android:layout_weight="2.5" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:paddingTop="@dimen/common_row_margin" >
+
+                    <TextView
+                        android:id="@+id/tv_acc_accountnickname"
+                        style="@style/textview_common_left_three"
+                        android:text="@string/acc_account_nickname" />
+
+                    <TextView
+                        android:id="@+id/acc_accountnickname_value"
+                        style="@style/textview_common_right_two"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2.5" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/common_row_margin" >
+
+                    <TextView
+                        android:id="@+id/tv_acc_accounttype"
+                        style="@style/textview_common_left_three"
+                        android:text="@string/acc_accounttype" />
+
+                    <TextView
+                        android:id="@+id/acc_accounttype_value"
+                        style="@style/textview_common_right_two"
+                        android:layout_weight="2.5" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bocinvt_currency"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+                </TextView>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+<ImageView
+            android:id="@+id/img_exit_accdetail"
+            android:layout_width="@dimen/close_clickarea_width"
+            android:layout_height="@dimen/close_clickarea_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@color/transparent_00" />
+</RelativeLayout>

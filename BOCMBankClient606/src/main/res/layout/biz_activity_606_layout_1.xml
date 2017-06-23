@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 首页主题 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/btn_pink" >
+
+        <Button
+            android:id="@+id/ib_back"
+            style="@style/titlebackbtn"
+            android:text="@string/back"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fonts_one_four"
+            android:background="@color/transparent_00"
+            android:drawableLeft="@drawable/img_arrow_gray_left"
+            android:drawablePadding="-8dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/titleText"
+            android:textSize="@dimen/fonts_one_seven" />
+
+        <Button
+            android:id="@+id/ib_top_right_btn"
+            style="@style/titlerightbtn"
+            android:textColor="@color/btn_white"
+            android:background="@color/transparent_00"
+            android:textSize="@dimen/fonts_one_four"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/popuBtntest"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_above="@+id/sliding_menu_view"
+        android:layout_below="@+id/main_layout"
+        android:background="@color/transparent_00" />
+    <Button
+        android:id="@+id/popuBtn"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_above="@+id/sliding_menu_view"
+        android:layout_below="@+id/main_layout"
+        android:background="@color/transparent_00" />
+
+    <RelativeLayout
+        android:id="@+id/sliding_menu_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/main_layout"
+        android:background="@drawable/bg_content" >
+
+        <LinearLayout
+            android:id="@+id/sliding_body"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="@dimen/common_bottom_padding_new"
+            android:paddingLeft="@dimen/fill_margin_left"
+            android:paddingRight="@dimen/fill_margin_left"
+            android:paddingTop="@dimen/fill_margin_top"
+            android:orientation="horizontal"
+            >
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/sliding_tab"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3"
+                    android:orientation="horizontal" >
+
+                    <ListView
+                        android:id="@+id/lv_main"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/leftall"
+                        android:cacheColorHint="@color/transparent_00"
+                        android:fadingEdge="none"
+                        android:scrollbars="none" >
+                    </ListView>
+
+                    <Button
+                        android:id="@+id/btn_hide"
+                        android:layout_width="@dimen/btn_hide_width"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="-2dp"
+                        android:background="@drawable/btn_in" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_fill_show"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@color/transparent_00" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

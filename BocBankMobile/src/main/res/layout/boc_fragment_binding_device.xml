@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/boc_common_cell_color"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingBottom="@dimen/boc_space_between_120px"
+                    android:paddingTop="@dimen/boc_space_between_172px"
+                    android:src="@drawable/boc_binding_device" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="为了您的使用安全"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_big"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="需要对您的本次登录进行加强验证"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_big"
+                    android:textStyle="bold"
+                    android:paddingBottom="@dimen/boc_space_between_40px"/>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/boc_divider_1px"
+                    android:background="@color/boc_divide_color"
+                    android:paddingLeft="@dimen/boc_space_between_32px"
+                    android:paddingRight="@dimen/boc_space_between_32px" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/boc_space_between_96px"
+                    android:background="@color/boc_common_cell_color"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/boc_space_between_28px">
+
+                    <TextView
+                        android:layout_width="@dimen/boc_space_between_180px"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/security_title"
+                        android:textColor="@color/boc_text_color_dark_gray"
+                        android:textSize="@dimen/boc_text_size_common" />
+
+                    <TextView
+                        android:id="@+id/txt_combin_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/boc_space_between_46px"
+                        android:layout_weight="1"
+                        android:textColor="@color/boc_text_color_common_gray"
+                        android:textSize="@dimen/boc_text_size_common" />
+
+                    <TextView
+                        android:id="@+id/txt_change"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginRight="@dimen/boc_space_between_28px"
+                        android:text="@string/security_change_verify"
+                        android:textColor="@color/boc_main_button_color"
+                        android:textSize="@dimen/boc_text_size_common" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_confirm"
+                style="@style/BocButton.BocPrimaryButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_88px"
+                android:layout_marginTop="@dimen/boc_space_between_80px"
+                android:text="@string/boc_common_next" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

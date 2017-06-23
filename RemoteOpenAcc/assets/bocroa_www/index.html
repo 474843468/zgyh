@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+    	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+		<meta name="format-detection" content="telephone=no"/>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    	<title>中国银行移动支付</title>
+    	<link href="css/style.css" rel="stylesheet"/>
+    	<link href="js/HTML5SIP/Keyboard/keyboard.css" rel="stylesheet"/>
+
+	</head>
+	<body class="ui-container">
+		
+		<div class="ui-title"><span>卡密码设置</span></div>
+		<div class="ui-form">
+			<ul>
+				<li class="ui-form-item"><label class="ui-form-item-l">设置密码</label><input id="password" name="password" type="text" style="text-align: right;"  placeholder="请输入密码"/></li>
+				<li class="ui-form-item"><label class="ui-form-item-l">确认密码</label><input id="affirmPass" name="affirmPass" class="" style="text-align: right;" type="text" name="comfirm" placeholder="请再次输入密码"/></li>
+			</ul>
+		</div>
+		<div class="ui-title"><span>设置电子卡开户行</span></div>
+		<div class="ui-form">
+			<ul>
+				<li class="ui-form-item">
+					<label class="ui-form-item-l">开户网点</label>
+					<div id="selectedBank" class="icn-selected" style="padding-left: 95px;text-align:right;" onclick="selectOpenBank()">
+							<div class="ui-select-link-text">请选择 <span class="ui-arrowlink"></span></div>
+							
+					</div>
+				</li>
+
+				<li class="ui-form-item">
+					<label class="ui-form-item-l">开卡类型</label>
+					<div id="selectedAccType" class="icn-selected" style="padding-left: 95px;text-align:right;" onclick="selectOpenAccType()">
+							<div class="ui-select-link-text">请选择 <span class="ui-arrowlink"></span></div>
+							
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="ui-message">
+			密码由6位数字组成，可用于登录网上银行、手机银行、中银易商服务，首次登录成功后可分别修改登录密码。
+		</div>
+		<button class="ui-action-bar" onclick="settingSubmit()">
+			提交
+		</button>
+		<DIV id="CompleteKeyboard"></DIV>
+		<DIV id="NumberKeyboard"></DIV>
+	</body>
+	
+</html>
+<script type="text/javascript" src="js/HTML5SIP/Constant.js"></script>
+<script type="text/javascript" src="js/HTML5SIP/Keyboard/viewport.js"></script>
+<script type="text/javascript" src="js/HTML5SIP/Keyboard/keyboard.js"></script>
+<script type="text/javascript" src="js/HTML5SIP/SIPKit/Crypto/prng4.js"></script>
+<script type="text/javascript" src="js/HTML5SIP/SIPKit/Crypto/rng.js"></script>
+<script type="text/javascript" src="js/HTML5SIP/SIPKit/Crypto/jsbn.js"></script>
+<script type="text/javascript" src="js/HTML5SIP/SIPKit/Crypto/jsbn2.js"></script>
+<script type="text/javascript" src="js/HTML5SIP/SIPKit/Crypto/rsa.js"></script>
+<script type="text/javascript" src="js/HTML5SIP/SIPKit/Crypto/base64.js"></script>
+<script type="text/javascript" src="js/HTML5SIP/SIPKit/Crypto/sha1.js"></script>
+<script type="text/javascript" src="js/HTML5SIP/SIPKit/Crypto/des.js"></script>
+<script type="text/javascript" src="js/HTML5SIP/SIPKit/Crypto/publicKey_product.js"></script>
+<script type="text/javascript" src="js/HTML5SIP/SIPKit/Crypto/asn1hex-1.1.js"></script>
+<script type="text/javascript" src="js/HTML5SIP/SIPKit/SIPHandle.js"></script>
+<script type="text/javascript" src="js/HTML5SIP/html5sip.js"></script>
+<script type="text/javascript">
+// 密码键盘
+var sipbox = null;
+
+var options = {
+		publicKeyIndex:PUBLIC_KEY_OPEN_PLATFORM,
+		outputType:OUTPUT_TYPE_ORIGINAL,
+		minLength:6,
+		maxLength:6,
+		matchRegex:'^[0-9]{6}$'
+//		serverRandom:'MTIzNDU2Nzg5MDk4NzY1NA=='
+	}
+window.onload = function(){
+	 if(isMobileIOS()){
+        setUpEvent(document,'BOCWebViewJavascriptBridgeReady',function(event){
+           var bridge = event.bridge;
+           bridge.init(function(data,responseCallback){
+                       });
+           bridge.registerHandler('bocRandom', function(data, responseCallback) {
+                //setup random and init sipbox
+                options.serverRandom = data;
+                initSipbox();
+            });
+        });
+        return;
+    }
+}
+
+function init(serverRandom){
+    /*iOS*/
+    
+    options.serverRandom = serverRandom;
+    initSipbox();
+    /*iOS end*/
+	//var search = window.location.search;
+	//search = search.replace("?serverRandom=", "")
+	
+	
+
+	//Password.initInput('affirmPass','CompleteKeyboard',options);
+}
+function initSipbox(){
+	sipbox = new CFCAKeyboard("CompleteKeyboard", KEYBOARD_TYPE_DIGITAL);
+	sipbox.hideKeyboard();
+	sipbox.bindInputBox("password");
+	sipbox.bindInputBox("affirmPass");
+	if(CFCA_OK != sipbox.setServerRandom(options.serverRandom)) alert("setServerRandom error");
+	
+	var passwordInputElement = document.getElementById('password');
+	var affirmPassInputElement = document.getElementById('affirmPass');
+	
+	setUpEvent(passwordInputElement, "focus",function(event) {
+    	passwordInputElement.blur();
+        sipbox.bindInputBox("password");
+        sipbox.showKeyboard();
+    });
+    
+    setUpEvent(affirmPassInputElement, "focus",function(event) {
+    	affirmPassInputElement.blur();
+        sipbox.bindInputBox("affirmPass");
+        sipbox.showKeyboard();
+    });
+    setProperty("password", sipbox, options);
+    setProperty("affirmPass", sipbox, options);
+}
+function setUpEvent(elem, eventType, handler) {
+	return (elem.attachEvent ? elem.attachEvent("on" + eventType, handler)
+        : ((elem.addEventListener) ? elem.addEventListener(eventType, handler, false) : null));
+}
+function setProperty(inputId, sipbox, options) {
+        var keyboard = sipbox;
+        var publicKeyIndex = options.publicKeyIndex;
+        var outputType = options.outputType;
+        var minLength = parseInt(options.minLength);
+        var maxLength = parseInt(options.maxLength);
+        var matchRegex = options.matchRegex;
+        var serverRandom = options.serverRandom;
+
+        if(CFCA_OK != keyboard.setMinLength(minLength, inputId)) bocNativeAlert(99999, "密码键盘初始化失败，请稍后再试");
+        if(CFCA_OK != keyboard.setMaxLength(maxLength, inputId)) bocNativeAlert(99999, "密码键盘初始化失败，请稍后再试");
+        if(CFCA_OK != keyboard.setOutputType(outputType, inputId)) bocNativeAlert(99999, "密码键盘初始化失败，请稍后再试");
+        if(CFCA_OK != keyboard.setPublicKeyToEncrypt(publicKeyIndex, inputId)) bocNativeAlert(99999, "密码键盘初始化失败，请稍后再试");
+        if(CFCA_OK != keyboard.setServerRandom(serverRandom, inputId)) bocNativeAlert(99999, "密码键盘初始化失败，请稍后再试");
+        if(CFCA_OK != keyboard.setMatchRegex(matchRegex, inputId)) bocNativeAlert(99999, "密码键盘初始化失败，请稍后再试");
+}
+
+function getEncrypt(sipboxId, message) {
+		// 加密后的结果
+		var result = {
+			passwordValue:'',
+			passwordRandom:'',
+			errorCode:'',
+			errorMessage:''
+		};
+        var keyboard = sipbox;
+        result.passwordValue = keyboard.getEncryptedInputValue(sipboxId);
+        result.errorCode = keyboard.getErrorCode(sipboxId).toString(16);
+        if(result.errorCode != CFCA_OK) {
+            //result.errorMessage += getErrorMessage(result.errorCode, message);
+            return result;
+        } 
+        
+        result.passwordRandom = keyboard.getEncryptedClientRandom(sipboxId);
+        result.errorCode = keyboard.getErrorCode(sipboxId).toString(16);
+        if(result.errorCode != CFCA_OK) {
+            //result.errorMessage += getErrorMessage(result.errorCode, message);
+            return result;
+        } 
+        return result;
+}
+
+/**
+ * 获取密码加密后结果
+ */
+function getPasswordEncrypt(){
+	return getEncrypt('password');
+}
+/**
+ * 获取确认密码加密后结果
+ */
+function getAffirmPassEncrypt(){
+	return getEncrypt('affirmPass');
+}
+
+/**
+ * 校验密码与确认密码是否一致
+ */
+function checkEqual() {
+	
+	if(!sipbox.checkInputValueMatch("password", "affirmPass")) {
+        return false;
+   } 
+   return true;
+}
+
+/**
+ * 设置密码提交操作
+ */
+function settingSubmit() {
+//	//alert('settingSubmit');
+	var passwordEncryptResult = getPasswordEncrypt();
+	if (passwordEncryptResult.errorCode != CFCA_OK){
+		passwordEncryptResult.errorMessage = getPasswordErrorMessage(passwordEncryptResult.errorCode);
+		bocNativeAlert(passwordEncryptResult.errorCode,
+			passwordEncryptResult.errorMessage);
+			return;
+	}
+	
+	var affirmPassEncryptResult = getAffirmPassEncrypt();
+	if (affirmPassEncryptResult.errorCode != CFCA_OK) {
+		
+		affirmPassEncryptResult.errorMessage = getAffirmPassErrorMessage(affirmPassEncryptResult.errorCode);
+		bocNativeAlert(affirmPassEncryptResult.errorCode,
+			affirmPassEncryptResult.errorMessage);
+			return;
+	}
+	
+	if (!checkEqual()) {
+		bocNativeAlert("", "您输入的密码与确认密码输入内容不一致，请检查");
+		return;
+	}
+
+    /*iOS*/
+    if(isMobileIOS()){
+        iosDoneSubmit(passwordEncryptResult,affirmPassEncryptResult);
+        return;
+    }
+    /*iOS end*/
+	window.settingPassword.settingSubmit(passwordEncryptResult.passwordValue,
+										passwordEncryptResult.passwordRandom,
+										affirmPassEncryptResult.passwordValue,
+										affirmPassEncryptResult.passwordRandom);
+	
+}
+/**
+ * 
+ */
+function selectOpenBank(){
+
+    /*iOS*/
+    if(isMobileIOS()){
+        iosSelOpenBank();
+        return;
+    }
+    /*iOS end*/
+	//alert('selectOpenBank');
+	//setSelectedOpenBank("中国银行海淀支行");
+
+	window.settingPassword.selectOpenBank();
+}
+
+function setSelectedOpenBank(openBank){
+	
+	document.getElementById("selectedBank").innerHTML = '<div style="margin:0;color:#8873ab;overflow:hidden;white-space: nowrap;text-overflow: ellipsis">' + openBank + "</div>";
+}
+
+
+/**
+ * 设置开户原因
+ * @param {Object} accReason
+ */
+function setSelectOpenAccType(type){
+	document.getElementById("selectedAccType").innerHTML = '<div style="margin:0;color:#8873ab;overflow:hidden;white-space: nowrap;text-overflow: ellipsis">' + type + "</div>";
+
+}
+
+function bocNativeAlert(code,message){
+    if(isMobileIOS()){
+        iosShowAlert(code,message);
+        return;
+    }
+    window.settingPassword.hastErrorHandler(code,message);
+}
+
+ /**
+  *	设置密码根据错误码生成错误信息 
+  */
+function getAffirmPassErrorMessage(code){
+	var result = "";
+    code = parseInt(code, 16);
+	switch(code){
+		case CFCA_ERROR_INVALID_PARAMETER:
+			result =  "确认密码参数错误";
+			break;
+		case CFCA_ERROR_INVALID_SIP_HANDLE_ID:
+			result = "确认密码的SIP ID无效，键盘创建失败";
+			break;
+		case CFCA_ERROR_INPUT_LENGTH_OUT_OF_RANGE:
+			result = "您填写的确认密码长度有误，请检查";
+			break;
+		case CFCA_ERROR_INPUT_VALUE_IS_NULL:
+			result = "确认密码栏位不可为空，请填写";
+			break;
+		case  CFCA_ERROR_SERVER_RANDOM_INVALID:
+			result = "确认密码的随机数错误";
+			break;
+		case CFCA_ERROR_SERVER_RANDOM_IS_NULL:
+			result = "确认密码的随机数不能为空";
+			break;
+		case CFCA_ERROR_INPUT_VALUE_NOT_MATCH_REGEX:
+			result = "您填写的确认密码格式不正确，请检查";
+			break;
+		case CFCA_ERROR_RSA_ENCRYPT_FAILED:
+			result = "确认密码加密失败";
+			break;
+		default:
+				
+	}		
+	return result;
+ }
+ /**
+  *	根据错误码生成错误信息 
+  */
+function getPasswordErrorMessage(code){
+	var result = "";
+    code = parseInt(code, 16);
+	switch(code){
+		case CFCA_ERROR_INVALID_PARAMETER:
+			result =  "设置密码参数错误";
+			break;
+		case CFCA_ERROR_INVALID_SIP_HANDLE_ID:
+			result = "设置密码的SIP ID无效，键盘创建失败";
+			break;
+		case CFCA_ERROR_INPUT_LENGTH_OUT_OF_RANGE:
+			result = "您设置的密码长度有误，请检查";
+			break;
+		case CFCA_ERROR_INPUT_VALUE_IS_NULL:
+			result = "设置密码栏位不可为空，请填写";
+			break;
+		case  CFCA_ERROR_SERVER_RANDOM_INVALID:
+			result = "设置密码的随机数错误";
+			break;
+		case CFCA_ERROR_SERVER_RANDOM_IS_NULL:
+			result = "设置密码的随机数不能为空";
+			break;
+		case CFCA_ERROR_INPUT_VALUE_NOT_MATCH_REGEX:
+			result = "您设置的密码格式不正确，请检查";
+			break;
+		case CFCA_ERROR_RSA_ENCRYPT_FAILED:
+			result = "设置密码加密失败";
+			break;
+		default:
+				
+	}		
+	return result;
+ }
+
+/**
+ * 选择账户用途
+ */
+function selectAccUse(){
+	
+	// TODO
+	window.settingPassword.selectAccUse();
+}
+
+/**
+ * 选择开户类型
+ */
+function selectOpenAccType() {
+	// TODO
+	window.settingPassword.selectOpenAccType();
+}
+
+/*iOS define*/
+function isMobileIOS(){
+    var ua = navigator.userAgent;
+    if(ua.indexOf('Mobile') > -1 && (ua.indexOf('iPhone') > -1 || ua.indexOf('iPod') > -1 || ua.indexOf('iPad') > -1)){
+        return true;
+    }
+    return false;
+}
+
+function iosShowAlert(code,message){
+    BOCWebViewJavascriptBridge.callHandler('bocRoaShowAlert',{'code':code,'msg':message}, function(response) {});
+}
+
+function iosSelOpenBank(){
+    BOCWebViewJavascriptBridge.callHandler('bocRoaSelBank','', function(response) {
+        //'response' is the selected information
+        setSelectedOpenBank(response);
+    });
+}
+
+function iosDoneSubmit(passwordEncryptResult,affirmPassEncryptResult){
+
+    BOCWebViewJavascriptBridge.callHandler('bocRoaDone',{'pv1':passwordEncryptResult.passwordValue,'pr1':passwordEncryptResult.passwordRandom,'pv2':affirmPassEncryptResult.passwordValue,'pr2':affirmPassEncryptResult.passwordRandom}, function(response) {});
+}
+/*iOS define end*/
+</script>

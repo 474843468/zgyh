@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:orientation="vertical">
+    <!--中银理财&#45;&#45;持仓详情&#45;&#45;业绩基准 （列表界面）-->
+
+    <!--数据列表显示listview-->
+    <ListView
+        android:id="@+id/outstand_fragment_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/outstand_bottonbtn"
+        android:layout_marginBottom="@dimen/boc_space_between_20px"
+        android:divider="@null"
+        android:dividerHeight="@dimen/boc_space_between_20px"
+        android:scrollbars="none" />
+
+    <!--赎回，份额转换，继续购买，按钮点击-->
+    <!--赎回，继续购买，按钮点击-->
+    <LinearLayout
+        android:id="@+id/outstand_bottonbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone"
+
+        >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/boc_divider_line_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/outstand_redeem"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_96px"
+                android:layout_weight="1"
+                android:background="@color/boc_common_cell_color"
+                android:gravity="center"
+                android:onClick="true"
+                android:text="@string/boc_position_redeem_main_title"
+                android:textColor="@color/bg_finance_selector_write_onclick"
+                android:textSize="@dimen/boc_text_size_common"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/boc_divider_line_color" />
+
+            <TextView
+                android:id="@+id/outstand_goonbuy"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_96px"
+                android:layout_weight="1"
+                android:background="@color/boc_text_color_red"
+                android:gravity="center"
+                android:onClick="true"
+                android:text="@string/boc_trans_financial_position_main_select_tab_sale"
+                android:textColor="@color/bg_finance_selector_red_onclick"
+                android:textSize="@dimen/boc_text_size_common"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

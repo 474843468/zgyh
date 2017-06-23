@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_for_listview_item_write"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp_one_zero"
+    android:paddingTop="@dimen/dp_one_zero" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_one_zero"
+        android:layout_marginRight="@dimen/dp_one_zero"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_trans_type"
+            style="@style/textview_for_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="转入资金"
+            android:textColor="@color/gray" />
+
+        <TextView
+            android:id="@+id/tv_trans_date"
+            style="@style/textview_for_list"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_weight="1.0"
+            android:singleLine="true"
+            android:text="-"
+            android:textColor="@color/gray" />
+
+        <ImageView
+            android:id="@+id/img_front_id"
+            android:layout_width="20dip"
+            android:layout_height="20dip"
+            android:src="@drawable/icon_mobile"
+            android:layout_marginLeft="@dimen/dp_five"
+            android:layout_marginRight="@dimen/dp_five" />
+        <TextView
+            android:id="@+id/tv_front_id"
+            style="@style/textview_for_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="手机银行"
+            android:textColor="@color/gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/account_id"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_five"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/fill_margin_top"
+        android:paddingRight="@dimen/fill_margin_top" >
+
+        <TextView
+            android:id="@+id/tv_trans_acc_label"
+            style="@style/textview_common_left"
+             android:layout_gravity="center"
+             android:layout_weight="2"
+             android:gravity="right"
+            android:text="付款账户：" />
+
+        <TextView
+            android:id="@+id/tv_trans_acc"
+            style="@style/textview_common_left"
+             android:layout_gravity="center"
+             android:layout_weight="1"
+             android:gravity="left"
+             android:text="-" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/transfer_funds"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_five"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/fill_margin_top"
+        android:paddingRight="@dimen/fill_margin_top" >
+
+        <TextView
+            android:id="@+id/tv_trans_amount_label"
+            style="@style/textview_common_left"
+            android:layout_gravity="center"
+            android:layout_weight="2"
+            android:gravity="right"
+            android:text="转入资金：" />
+
+        <TextView
+            android:id="@+id/tv_trans_amount"
+            style="@style/textview_common_left"
+             android:layout_gravity="center"
+             android:layout_weight="1"
+             android:gravity="left"
+            	android:text="-"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/transfer_status"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_five"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/fill_margin_top"
+        android:paddingRight="@dimen/fill_margin_top"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/cash_trading_status"
+            style="@style/textview_common_left"
+             android:layout_gravity="center"
+             android:layout_weight="2"
+             android:gravity="right"
+            android:text="@string/cash_trading_status" />
+
+        <TextView
+            android:id="@+id/cash_tradin_status"
+            style="@style/textview_common_left"
+             android:layout_gravity="center"
+             android:layout_weight="1"
+             android:gravity="left"
+            android:text="-"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/remark_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_five"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/fill_margin_top"
+        android:paddingRight="@dimen/fill_margin_top"
+         android:visibility="gone">
+
+        <TextView
+            android:id="@+id/remark_info"
+            style="@style/textview_common_left"
+             android:layout_gravity="center"
+             android:layout_weight="2"
+             android:gravity="right"
+            android:text="@string/cash_remark_info" />
+
+        <TextView
+            android:id="@+id/remark_text"
+            style="@style/textview_common_right"
+             android:layout_weight="1"
+             android:gravity="left"
+            android:text="-"/>
+    </LinearLayout>
+    
+
+</LinearLayout>

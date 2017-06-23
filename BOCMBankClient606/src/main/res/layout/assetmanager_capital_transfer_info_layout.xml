@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 资产管理-资金划转，明细 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/style_match_match"
+    android:orientation="vertical"
+    android:background="@color/transparent_00"
+     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- 查询框 -->
+    <include 
+        android:id="@+id/layout_query" 
+        layout="@layout/assetmanager_query_layout"
+        />
+    
+    
+    <!-- 查询结果区 -->
+    <LinearLayout 
+        android:id="@+id/layout_result_title"
+        style="@style/style_match_wrap"
+        android:paddingTop="5dp"
+        android:paddingBottom="15dp"
+        android:orientation="vertical"
+        android:background="@drawable/img_bg_query_j"
+        android:visibility="gone"
+        >
+    <com.chinamworld.bocmbci.userwidget.LabelTextView
+        style="@style/style_match_wrap"
+        app:labelText="查询时间："
+        app:weightShowRate="1:2"
+        android:id="@+id/lable_tv_1"
+        />
+    <LinearLayout 
+        android:id="@+id/layout_show"
+        style="@style/style_wrap_wrap"
+        android:layout_gravity="right"
+        android:gravity="center_vertical"
+        android:layout_margin="5dp"
+        >
+        <TextView 
+            style="@style/style_wrap_wrap"
+            android:textColor="@color/gray"
+            android:textSize="13sp"
+            android:text="@string/down"
+            />
+        <ImageView 
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/arrow_right_down"
+            android:contentDescription="@string/app_name"
+            />
+    </LinearLayout>
+    </LinearLayout>
+    <ListView 
+        android:id="@+id/listview"
+        style="@style/listviewcomm_wrap_haveDivider"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:visibility="gone"
+        />
+    
+
+</LinearLayout>

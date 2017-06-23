@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 查询结果页面 -->
+
+    <RelativeLayout
+        android:id="@+id/acc_query_result_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/fill_padding_bottom"
+         >
+
+        <RelativeLayout
+            android:id="@+id/acc_query_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+          >
+
+            <LinearLayout
+                android:id="@+id/acc_query_search_condition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+                <include layout="@layout/crcd_querytrans_condition_modify" />
+     
+            </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/acc_query_result_condition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/img_bg_query_no"
+            android:orientation="vertical" 
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/fill_padding_top"
+                android:paddingTop="@dimen/fill_margin_top" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_acc_info_currency"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="@string/acc_querycard_nmuber" />
+
+                    <TextView
+                        android:id="@+id/tv_acc_info_currency_value"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_beedtype"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/fill_margin_bottom"
+                        android:text="@string/mycrcd_bill_seed" />
+
+                    <TextView
+                        android:id="@+id/tv_beedtypevalue"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/img_crcd_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="@dimen/fill_padding_right"
+                    android:paddingRight="@dimen/fill_padding_right"
+                    android:src="@drawable/icon_chakan"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_shouandzhi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/fill_padding_top"
+                android:visibility="visible" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_acc_query_date"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mycrcd_total_shou" />
+
+                    <TextView
+                        android:id="@+id/tv_acc_query_date_value"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red" />
+
+                    <TextView
+                        android:id="@+id/crcd_shouru_currency"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fill_margin_left" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_foreignshouru"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mycrcd_total_shou"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tv_forei_shouru_money"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red" />
+
+                    <TextView
+                        android:id="@+id/tv_foreign_shuru_currency"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fill_margin_left" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_crcd_query_pay"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mycrcd_total_pay" />
+
+                    <TextView
+                        android:id="@+id/tv_crcd_query_pay_value"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red" />
+
+                    <TextView
+                        android:id="@+id/crcd_zhichu_currency"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fill_margin_left" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_foreignzhichu"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mycrcd_total_pay"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/tv_foreign_zhichu_money"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red" />
+
+                    <TextView
+                        android:id="@+id/tv_foreign_zhichu_currency"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fill_margin_left" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_currentandlowmoney"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/fill_padding_top"
+                android:paddingRight="@dimen/fill_margin_top"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mycrcd_ying_huan_money_m" />
+
+                    <TextView
+                        android:id="@+id/tv_crcd_ying_huan"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red" />
+
+                    <TextView
+                        android:id="@+id/crcd_ying_currencycode"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fill_margin_top" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_currentyingForeign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mycrcd_ying_huan_money"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/crcd_forei_ying_huan"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/crcd_forei_ying_currencycode"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fill_margin_top" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mycrcd_danqi_low_huankuan_money" />
+
+                    <TextView
+                        android:id="@+id/tv_crcd_dangqi_low_huan"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red" />
+
+                    <TextView
+                        android:id="@+id/crcd_min_currencycode"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fill_margin_top" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_currentlowmoneyForeign"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mycrcd_danqi_low_huankuan_money"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:id="@+id/crcd_forei_dangqi_low_huan"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red" />
+
+                    <TextView
+                        android:id="@+id/crcd_foreign_min_currencycode"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fill_margin_top" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/xiala_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/fill_padding_right" >
+
+                <TextView
+                    style="@style/textview_common_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textSize="@dimen/textsize_xiala" />
+
+                <ImageView
+                    android:id="@+id/img_acc_query_back"
+                    style="@style/query_image_up_style"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/img_arrow_gray_down" />
+            </LinearLayout>
+        </LinearLayout>
+          </RelativeLayout>
+		<!-- 603 去掉全部，支出，收入 -->
+        <LinearLayout
+            android:id="@+id/ll_sort"
+            android:layout_width="@dimen/finc_throw_layout_height"
+            android:layout_height="@dimen/btn_bottom_height"
+            android:layout_below="@+id/acc_query_layout"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_paixu"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/fill_margin_top"
+            android:paddingRight="@dimen/fill_margin_top"
+            android:visibility="gone" >
+
+            <Button
+                android:id="@+id/sort_text"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="2dp"
+                android:background="@null"
+                android:clickable="false"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_step2" />
+
+            <ImageView
+                android:id="@+id/img_sort_icon"
+                android:layout_width="@dimen/common_paixuWH"
+                android:layout_height="@dimen/common_paixuWH"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:visibility="gone" />
+        </LinearLayout>
+		<!-- 603 增加 已入，未入 -->
+        <RadioGroup
+            android:id="@+id/crcd_trans_radioGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_sort"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/fill_margin_top"
+            android:paddingRight="@dimen/fill_margin_top"
+            android:visibility="gone"  >
+
+            <RadioButton
+                android:id="@+id/btn_crcd_trans_yr"
+                style="@style/twoRadioButtonLeft"
+                android:checked="true"
+                 android:onClick="btnCardTransYrOnclick"
+                android:text="@string/crcd_trans_yr" 
+                android:textColor="@color/color_radiobtn_new"/>
+
+            <RadioButton
+                android:id="@+id/btn_crcd_trans_wr"
+                style="@style/twoRadioButtonRight"
+                android:onClick="btnCardTransWrOnclick"
+                android:text="@string/crcd_trans_wr" 
+                android:textColor="@color/color_radiobtn_new"/>
+        </RadioGroup>
+
+        <ListView
+            android:id="@+id/lv_acc_query_result"
+            style="@style/listviewcomm_wrap_haveDivider"
+            android:layout_below="@+id/crcd_trans_radioGroup"
+            android:layout_marginLeft="@dimen/fill_margin_right"
+            android:layout_marginRight="@dimen/fill_margin_right"
+            android:layout_marginTop="@dimen/fill_margin_top" >
+        </ListView>
+    </RelativeLayout>
+    <!-- 查询条件 -->
+
+</FrameLayout>

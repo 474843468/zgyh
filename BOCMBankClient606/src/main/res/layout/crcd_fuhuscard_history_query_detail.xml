@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/acc_query_result_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/fill_margin_bottom" >
+
+        <RelativeLayout
+            android:id="@+id/acc_query_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:id="@+id/acc_query_search_condition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" 
+                android:visibility="gone">
+
+                <include layout="@layout/crcd_fushucrcd_query_conditicon" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/acc_query_result_condition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/img_bg_query_no"
+                android:orientation="vertical" 
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_five"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_acc_info_currency"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mycrcd_zhuyao_card" />
+
+                        <TextView
+                            android:id="@+id/tv_acc_info_currency_value"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_five"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mycrcd_fushu_card" />
+
+                        <TextView
+                            android:id="@+id/tv_crcd_fushu"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_five"
+                    android:layout_marginLeft="@dimen/dp_five"
+                    android:layout_marginRight="@dimen/dp_five"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_acc_query_date"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mycrcd_divided_query_time" />
+
+                        <TextView
+                            android:id="@+id/tv_acc_query_date_value"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:paddingRight="@dimen/fill_padding_right" >
+
+                        <TextView
+                            style="@style/textview_common_down"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:textSize="@dimen/textsize_xiala" />
+
+                        <ImageView
+                            android:id="@+id/img_acc_query_back"
+                            style="@style/query_image_up_style"
+                            android:layout_gravity="center"
+                            android:src="@drawable/img_arrow_gray_down" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/acc_query_layout" >
+
+            <LinearLayout
+                android:id="@+id/ll_sort"
+                android:layout_width="@dimen/finc_throw_layout_height"
+                android:layout_height="@dimen/btn_bottom_height"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btn_paixu"
+                android:visibility="gone" >
+
+                <Button
+                    android:id="@+id/sort_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="2dp"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_step2" />
+
+                <ImageView
+                    android:id="@+id/img_sort_icon"
+                    android:layout_width="@dimen/common_paixuWH"
+                    android:layout_height="@dimen/common_paixuWH"
+                    android:layout_gravity="center_vertical|right"
+                    android:clickable="false"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lv_acc_query_result"
+                style="@style/listviewcomm_fill_haveDivider"
+                android:layout_below="@+id/ll_sort"
+                android:layout_marginLeft="@dimen/fill_margin_left"
+                android:layout_marginRight="@dimen/fill_margin_left"
+                android:layout_marginTop="@dimen/common_row_margin" >
+            </ListView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>

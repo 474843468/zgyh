@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color">
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullToRefreshLayout
+        android:id="@+id/validRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.showlistview.PinnedSectionListView
+            android:id="@+id/PinnedSectionlv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never" />
+
+        <include layout="@layout/boc_load_more" />
+    </com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullToRefreshLayout>
+
+    <TextView
+        android:id="@+id/validTv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/boc_text_mobile_color"
+        android:textSize="@dimen/boc_text_size_common"
+        android:visibility="gone"/>
+</LinearLayout>

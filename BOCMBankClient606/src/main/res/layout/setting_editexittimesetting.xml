@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 服务设定  退出时间设定 xyl -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/set_edit"
+            style="@style/bottombtn"
+            android:text="@string/confirm"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <ScrollView
+        style="@style/scrollview_comm"
+        android:layout_above="@id/btn_layout" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/common_row_margin" >
+
+            <TextView
+                android:id="@+id/setting_editexittime_info_tv"
+                style="@style/textview_common"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_row_margin"
+                android:gravity="center"
+                android:text="@string/set_now_exitTime" />
+
+            <LinearLayout
+                android:layout_width="@dimen/setting_exittime_w_height"
+                android:layout_height="@dimen/setting_exittime_w_width"
+                android:background="@drawable/img_time_bg"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tvone"
+                    android:layout_width="@dimen/setting_exittime_tv_width"
+                    android:layout_height="@dimen/setting_exittime_tv_height"
+                    android:layout_marginBottom="@dimen/setting_exittime_tv_margin_bottom"
+                    android:layout_marginRight="@dimen/setting_exittime_tv_margin_lr"
+                    android:layout_marginTop="@dimen/setting_exittime_tv_margin_top"
+                    android:background="@drawable/img_time_kuang"
+                    android:gravity="center"
+                    android:textSize="@dimen/textsize_setting_exittime_tv" />
+
+                <TextView
+                    android:id="@+id/tvtwo"
+                    android:layout_width="@dimen/setting_exittime_tv_width"
+                    android:layout_height="@dimen/setting_exittime_tv_height"
+                    android:layout_marginBottom="@dimen/setting_exittime_tv_margin_bottom"
+                    android:layout_marginLeft="@dimen/setting_exittime_tv_margin_lr"
+                    android:layout_marginTop="@dimen/setting_exittime_tv_margin_top"
+                    android:background="@drawable/img_time_kuang"
+                    android:gravity="center"
+                    android:textSize="@dimen/textsize_setting_exittime_tv" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="vertical"
+               >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" 
+                   android:paddingLeft="@dimen/dp_one_zero"
+                    android:paddingRight="@dimen/dp_one_zero">
+
+                    <TextView
+                        android:id="@+id/tracking"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="0分钟"
+                        android:textColor="@color/gray" />
+
+                    <TextView
+                        android:id="@+id/progress"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="15分钟"
+                        android:textColor="@color/gray" />
+                </RelativeLayout>
+
+                <SeekBar
+                    android:id="@+id/seekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="@dimen/dp_one_zero"
+                    android:paddingLeft="@dimen/dp_one_zero"
+                    android:paddingRight="@dimen/dp_one_zero"
+                    android:progressDrawable="@drawable/seekbar_img"
+                    android:thumb="@drawable/img_yuan_new" 
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/confirm_info_textview_style"
+                android:text="@string/set_exitTime_info" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

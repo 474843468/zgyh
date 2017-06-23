@@ -1,0 +1,28 @@
+<div class="wrap wrap-justhead">
+    <header class="page-head">
+        <img src="images/back-icon.png">
+        <h1>发行数量2</h1>
+    </header>
+    <section>
+        <div class="issueNumber">
+            <div class="issueNumber-top">
+                <p><%=section %>发行合计</p>
+                <img src="images/look-icon.png">
+                <p><%=onlineUnSum %></p>
+            </div>
+        </div>
+        <div class="selectCity">
+            <span class="selectCity-title">共<%=size%>个省份</span>
+            <ul>
+                <%
+                for(var i =0; i<pubInfoDetail.length; i++){
+                %>
+                <li def_event="{click:'showBranch'}">
+                    <span><%=pubInfoDetail[i].province %></span>
+                    <img class="right-icon" src="images/right-icon.png">
+                </li>
+                <%}%>
+            </ul>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,142 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color">
+
+    <LinearLayout
+        android:id="@+id/view_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+            android:id="@+id/btn_sign_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:layout_marginTop="@dimen/boc_space_between_20px"
+            app:editChoiceContent="@string/boc_common_select"
+            app:editChoiceName="@string/boc_eloan_payment_sign_account"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_104px"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            android:layout_marginTop="@dimen/boc_space_between_20px"
+            android:background="@color/boc_common_cell_color"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/boc_space_between_32px"
+            android:paddingRight="@dimen/boc_space_between_30px">
+
+            <TextView
+                style="@style/tv_common"
+                android:text="@string/boc_eloan_payment_preference"
+                android:textColor="@color/boc_text_color_dark_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical">
+
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.singlemoreselect.SelectGridView
+                    android:id="@+id/gv_pref"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/boc_space_between_40px"
+                    android:horizontalSpacing="@dimen/boc_space_between_20px"
+                    android:numColumns="2"
+                    android:verticalSpacing="@dimen/boc_card_account_status_margin"
+                    android:layout_gravity="right|center_vertical"
+                    app:radioTrue="true"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_description"
+            style="@style/tv_small"
+            android:paddingBottom="@dimen/boc_space_between_20px"
+            android:paddingLeft="@dimen/boc_space_between_52px"
+            android:paddingTop="@dimen/boc_space_between_20px"
+            tools:text="@string/boc_eloan_payment_loan_first_description"/>
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+            android:id="@+id/btn_loan_period"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_space_between_20px"
+            android:layout_marginRight="@dimen/boc_space_between_20px"
+            app:editChoiceContent="@string/boc_common_select"
+            app:editChoiceName="@string/boc_eloan_payment_loan_period"/>
+
+        <LinearLayout
+            android:id="@+id/lyt_pay_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/boc_space_between_52px"
+            android:paddingTop="@dimen/boc_space_between_20px"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/tv_small"
+                android:text="@string/boc_eloan_payment_pay_type_title1"/>
+
+            <TextView
+                android:id="@+id/tv_pay_type"
+                style="@style/tv_small"
+                tools:text="@string/boc_pledge_info_repay_type2"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/boc_space_between_80px"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/boc_space_between_20px"
+            android:paddingLeft="@dimen/boc_space_between_52px"
+            android:paddingTop="@dimen/boc_space_between_20px">
+
+            <TextView
+                style="@style/tv_small"
+                android:text="@string/boc_eloan_payment_amount_least"/>
+
+            <TextView
+                android:id="@+id/tv_amount_least"
+                style="@style/tv_small"
+                tools:text="人民币元1000.00"/>
+        </LinearLayout>
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.assignment.SelectAgreementView
+            android:id="@+id/view_agreement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/boc_space_between_40px"/>
+
+        <Button
+            android:id="@+id/btn_next"
+            style="@style/BocButton.BocPrimaryButton"
+            android:text="@string/boc_common_next"/>
+
+        <TextView
+            android:id="@+id/tv_quote_or_act_number"
+            style="@style/tv_small"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/boc_space_between_50px"
+            tools:text="贷款账号：622 *** 231"/>
+
+    </LinearLayout>
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.emptyview.CommonEmptyView
+        android:id="@+id/view_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+</RelativeLayout>

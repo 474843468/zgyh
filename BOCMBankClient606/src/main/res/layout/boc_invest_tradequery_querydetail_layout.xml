@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/tradquery_ll_one"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <com.chinamworld.bocmbci.userwidget.TitleAndContentLayout
+            android:id="@+id/titleAndContentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimen_two_zero"
+                android:paddingBottom="@dimen/dp_five"
+                android:paddingTop="@dimen/dp_five" >
+
+                <LinearLayout
+                    android:id="@+id/myContainerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </ScrollView>
+            </com.chinamworld.bocmbci.userwidget.TitleAndContentLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <!-- 常规历史交易查询页面1 查看按钮 -->
+            <Button
+                android:id="@+id/boci_xpadhisquery"
+                style="@style/style_boci_xpadquery_btn"
+                android:text="查看" />
+
+            <!-- 组合详情页按钮  被组合产品列表 -->
+
+            <Button
+                android:id="@+id/boci_xpadquery"
+                style="@style/style_boci_xpadquery_btn"
+                android:text="被组合产品列表" />
+            
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

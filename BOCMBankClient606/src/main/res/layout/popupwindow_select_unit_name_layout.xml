@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" >
+    
+    <TextView 
+        android:id="@+id/tv_cancel"
+        android:layout_alignParentLeft="true"
+        android:padding="@dimen/dp_one_zero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancle"
+        android:textColor="@color/red"/>
+    
+    <TextView 
+        android:id="@+id/tv_confirm"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_one_zero"
+        android:text="@string/confirm"
+        android:textColor="@color/red"/>
+    
+    <View 
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@id/tv_confirm"
+        android:background="@color/gray_line"/>
+    
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/view_line"
+        android:divider="@color/gray_line"
+        android:dividerHeight="1dp"
+        android:listSelector="@android:color/transparent"
+        android:background="#ffffff"/>
+
+</RelativeLayout>

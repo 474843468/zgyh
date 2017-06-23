@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/boc_common_bg_color"
+    android:orientation="vertical">
+    <!--登录后-->
+    <LinearLayout
+        android:id="@+id/ll_long_short_forex_login_after"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_300px"
+            android:background="@color/boc_text_color_light_blue">
+            <!--问号 帮助 图标-->
+            <ImageView
+                android:id="@+id/img_help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/boc_space_between_30px"
+                android:layout_marginTop="@dimen/boc_space_between_30px"
+                android:src="@drawable/icon_help" />
+
+            <LinearLayout
+                android:id="@+id/ll_parent_ocrm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--参考市值标题-->
+                    <TextView
+                        android:id="@+id/tv_market_value_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="参考市值（折算人民币元）"
+                        android:textColor="@color/boc_common_cell_color"
+                        android:textSize="@dimen/boc_text_size_small" />
+                    <!--图片眼睛-->
+                    <ImageView
+                        android:id="@+id/img_open_eye"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/boc_space_between_50px"
+                        android:layout_marginRight="10dp"
+                        android:layout_toRightOf="@+id/tv_market_value_title"
+                        android:src="@drawable/llbt_ima_openeye" />
+                </RelativeLayout>
+                <!--参考市值value-->
+                <TextView
+                    android:id="@+id/tv_market_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="00"
+                    android:textColor="@color/boc_common_cell_color"
+                    android:textSize="@dimen/boc_text_size_supper_big_max"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </RelativeLayout>
+        <!--交易记录，保证金交易，委托交易查询-->
+        <LinearLayout
+            android:id="@+id/ll_tab_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_80px"
+            android:layout_marginBottom="@dimen/boc_space_between_40px"
+            android:background="@color/boc_common_cell_color"
+            android:orientation="horizontal">
+            <!--交易查询-->
+            <TextView
+                android:id="@+id/tv_transaction_query"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/boc_long_short_forex_home_transaction_query"
+                android:textColor="@color/boc_main_button_color"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold" />
+            <!--账户管理-->
+            <TextView
+                android:id="@+id/tv_margin_transaction"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/boc_long_short_forex_cash_deposit_trade"
+                android:textColor="@color/boc_main_button_color"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold" />
+            <!--委托交易查询-->
+            <TextView
+                android:id="@+id/tv_entrust_query"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/boc_long_short_forex_entrust_transaction_query"
+                android:textColor="@color/boc_main_button_color"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--登录前-->
+    <RelativeLayout
+        android:id="@+id/ll_long_short_forex_login_before"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_404px"
+        android:background="@drawable/long_short_login_bg"
+        android:visibility="visible">
+        <!--登录-->
+        <TextView
+            android:id="@+id/tv_lsf_login"
+            android:layout_width="@dimen/boc_space_between_220px"
+            android:layout_height="@dimen/boc_space_between_70px"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/boc_space_between_30px"
+            android:background="@drawable/boc_bg_white_frame"
+            android:gravity="center"
+            android:text="@string/boc_common_login"
+            android:textColor="@color/boc_common_cell_color"
+            android:textSize="@dimen/boc_text_size_common"
+            android:textStyle="bold"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</LinearLayout>

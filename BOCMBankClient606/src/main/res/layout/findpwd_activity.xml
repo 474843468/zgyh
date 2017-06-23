@@ -1,0 +1,242 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_content" >
+
+    <!-- 重置密码step -->
+
+    <include
+        android:id="@+id/stepbar"
+        layout="@layout/step_title_layout" />
+    <!-- 找回密码信息部分 -->
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        style="@style/scrollview_comm_havemarginbutton"
+        android:layout_above="@+id/btn_layout"
+        android:layout_below="@+id/stepbar" >
+
+        <LinearLayout style="@style/tran_detail_activity_ll" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/fill_margin_right"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/comm_view_left_noweight"
+                    android:layout_weight="6"
+                    android:text="@string/tel_num" />
+
+                <EditText
+                    android:id="@+id/findpwd_et_phonenum"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="4"
+                    android:background="@drawable/bg_for_edittext"
+                    android:layout_height="@dimen/edittext_height"
+                    android:singleLine="true"
+                    android:textColor="@color/black" 
+                    android:maxLength="15"
+                    android:inputType="number">
+                </EditText>
+                <!--  android:hint="@string/hint_tel_number"-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginRight="@dimen/fill_margin_right"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/comm_view_left_noweight"
+                    android:layout_weight="6"
+                    android:text="@string/card_category" />
+
+                <Spinner
+                    android:id="@+id/findpwd_sp_bankcty"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="4"
+                    android:background="@drawable/bg_spinner" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/fill_margin_right"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/comm_view_left_noweight"
+                    android:layout_weight="6"
+                    android:text="@string/card_number" />
+
+                <EditText
+                    android:id="@+id/findpwd_et_banknum"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="4"
+                    android:background="@drawable/bg_for_edittext"
+                    android:layout_height="@dimen/edittext_height"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColor="@color/black" 
+                    android:maxLength="19">
+                </EditText>
+                <!--  android:hint="@string/hint_bank_card_number"-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/layout_height"
+                android:layout_marginRight="@dimen/fill_margin_right"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/comm_view_left_noweight"
+                    android:layout_weight="6"
+                    android:text="@string/id_category" />
+
+                <Spinner
+                    android:id="@+id/findpwd_sp_idcty"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="4"
+                    android:background="@drawable/bg_spinner" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/fill_margin_right"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/comm_view_left_noweight"
+                    android:layout_weight="6"
+                    android:text="@string/id_number" />
+
+                <EditText
+                    android:id="@+id/findpwd_et_idnum"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_weight="4"
+                    android:background="@drawable/bg_for_edittext"
+                    android:layout_height="@dimen/edittext_height"
+                    android:singleLine="true"
+                    android:textColor="@color/black" 
+                    android:maxLength="18">
+                </EditText>
+                <!--  android:hint="@string/hint_card"-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_atm_or_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/fill_margin_right"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    android:id="@+id/text_atm_or_phonebank"
+                    style="@style/comm_view_left_noweight"
+                    android:layout_weight="6"
+                    android:text="@string/phone_bank_password" />
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="4" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_sip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/fill_margin_right"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/comm_view_left_noweight"
+                    android:layout_weight="6"
+                    android:text="@string/image_code" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="4" >
+
+                    <EditText
+                            android:id="@+id/ed_image_code"
+                            style="@style/login_edittext"
+                            android:layout_gravity="center_vertical"
+                            android:paddingLeft="@dimen/edittext_paddinglr"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_for_edittext"
+                    		android:layout_height="@dimen/edittext_height"
+                            android:digits="0123456789abcdefjhigklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:maxLength="4"
+                            android:textSize="@dimen/textsize_default" />
+                    		<!--  android:hint="@string/imgcode_regex"-->
+
+                        <TextView
+                            android:id="@+id/ib_image_code_text"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" 
+                            android:textColor="@color/gray"
+                            android:text="@string/hint_image_code_tv"/>
+
+                        <ImageButton
+                            android:id="@+id/ib_image_code"
+                            style="@style/auth_image"
+                            android:layout_gravity="center_vertical" 
+                            android:visibility="gone"/>
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:layout_width="fill_parent"
+                android:layout_height="10dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/findpwd_btn_next"
+            style="@style/bottombtn"
+            android:gravity="center"
+            android:text="@string/next"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

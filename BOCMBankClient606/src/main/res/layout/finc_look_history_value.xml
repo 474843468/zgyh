@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/boc_common_bg_color">
+
+    <!--<include layout="@layout/finc_look_history_value_item"/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_light_gray"
+        android:padding="6dp"
+        android:paddingBottom="6dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/finc_history_value_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/finc_text_style13"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="日期"/>
+        <TextView
+            android:id="@+id/finc_history_value_unit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/finc_text_style13"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="单位净值(元)"/>
+        <TextView
+            android:id="@+id/finc_history_value_total"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/finc_text_style13"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="累计净值(元)"/>
+        <TextView
+            android:id="@+id/finc_history_value_currPercentDiff"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/finc_text_style13"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="日涨幅(%)"/>
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/line_light_gray" />
+    <ListView
+        android:id="@+id/finc_history_value_listvew"
+        android:layout_marginTop="1dp"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_white"/>
+</LinearLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.boc.bocsoft.mobile.bocmobile.base.widget.SlipMenu.SlipDrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout_transfer_query"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <com.boc.bocsoft.mobile.framework.widget.TitleBarView
+                android:id="@+id/select_title_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </com.boc.bocsoft.mobile.framework.widget.TitleBarView>
+        </FrameLayout>
+
+        <!-- 这是分割线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#CBCAD7"
+            />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.TabPageIndicator.TabPageIndicatorWidget
+            android:id="@+id/tab_indicator"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:id="@+id/ll_choose_select"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_88px"
+            android:background="@color/boc_main_btn_bg_color"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_choose_account"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/boc_main_btn_bg_color"
+                android:drawableRight="@drawable/boc_arrow_right"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/boc_space_between_30px"
+                android:paddingRight="@dimen/boc_space_between_30px"
+                android:text="6221 **** 9328"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold"
+                />
+
+            <View
+                android:id="@id/view_top_divider"
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#D8D8E0"/>
+
+            <TextView
+                android:id="@+id/tv_select"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawablePadding="5dp"
+                android:drawableRight="@drawable/boc_select_gray"
+                android:gravity="center"
+                android:paddingLeft="@dimen/boc_space_between_30px"
+                android:paddingRight="@dimen/boc_space_between_30px"
+                android:text="筛选"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.selectview.selecttimerangenew.SelectTimeRangeNew
+        android:id="@+id/right_drawer_transfer_query"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:clickable="true"/>
+
+</com.boc.bocsoft.mobile.bocmobile.base.widget.SlipMenu.SlipDrawerLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_item"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/acc_list_item_height" >
+
+    <RelativeLayout
+        android:id="@+id/front"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/acc_list_item_height" >
+
+        <FrameLayout
+            android:id="@+id/layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/acc_list_item_height"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:gravity="center" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/acc_list_item_height" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/common_listview_item_paddingLR"
+                        android:paddingRight="@dimen/common_listview_item_paddingLR" >
+
+                        <TextView
+                            style="@style/textview_for_list"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/order_name" />
+
+                        <TextView
+                            android:id="@+id/order_name"
+                            style="@style/textview_for_list"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/common_listview_item_paddingLR"
+                        android:paddingRight="@dimen/common_listview_item_paddingLR" >
+
+                        <TextView
+                            style="@style/textview_for_list"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/order_adress" />
+
+                        <TextView
+                            android:id="@+id/order_adress"
+                            style="@style/textview_for_list"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/common_listview_item_paddingLR"
+                        android:paddingRight="@dimen/common_listview_item_paddingLR" >
+
+                        <TextView
+                            style="@style/textview_for_list"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/order_mobile" />
+
+                        <TextView
+                            android:id="@+id/order_mobile"
+                            style="@style/textview_for_list"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/icon"
+                style="@style/sucess_right_iv"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/ll_root"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#F0EFF5">
+
+    <LinearLayout
+        android:id="@+id/ll_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#fff"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_amount_notice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="@dimen/boc_space_between_40px"
+                android:text="购买金额 （元）"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small"/>
+
+            <TextView
+                android:id="@+id/tv_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="@dimen/boc_space_between_20px"
+                android:text=""
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="28dp"
+                android:textStyle="bold"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/boc_space_between_40px"
+                android:background="#D3D2D7"/>
+
+            <LinearLayout
+                android:id="@+id/ll_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_space_between_80px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="@dimen/boc_space_between_160px"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/boc_space_between_30px"
+                    android:gravity="center_vertical"
+                    android:text="@string/boc_wealth_product_name"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_small" />
+                <TextView
+                    android:id="@+id/product_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/boc_space_between_50px"
+                    android:layout_marginRight="6dp"
+                    android:gravity="center_vertical"
+                    android:maxWidth="160dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:layout_weight="1"
+                    style="@style/tv_small"
+                    android:textStyle="bold"
+                    android:textColor="@color/boc_text_color_common_gray"/>
+                <TextView
+                    android:id="@+id/product_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/boc_main_button_color"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_80px"
+            android:layout_marginTop="10dp"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="交易日期"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small"/>
+
+            <TextView
+                android:id="@+id/tv_return_date"
+                style="@style/tv_small"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                android:text="2016/09/10"
+                android:textColor="@color/boc_text_color_common_gray"
+                android:textSize="@dimen/boc_text_size_small"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.5dp"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="被组合产品"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="@dimen/boc_text_size_small"/>
+
+            <ListView
+                android:id="@+id/lv_list"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:layout_weight="1"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btn_delegate_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_88px"
+            android:layout_marginTop="@dimen/boc_space_between_24px"
+            android:background="@drawable/boc_letter_bg_selector"
+            android:gravity="center"
+            android:text="撤单"
+            android:textColor="#FF6666"
+            android:textSize="@dimen/boc_text_size_small"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</FrameLayout>

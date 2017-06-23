@@ -1,0 +1,87 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_main_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/boc_space_between_20px"
+        android:layout_marginRight="@dimen/boc_space_between_20px"
+        android:layout_marginTop="@dimen/boc_space_between_20px"
+        android:background="@drawable/boc_card_background"
+        android:orientation="vertical">
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputWidget
+            android:id="@+id/et_current_use_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:editChoiceName="@string/boc_pledge_info_current_use_money"/>
+
+        <View style="@style/divider_horizontal"/>
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+            android:id="@+id/et_period"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:editChoiceContent="@string/boc_common_select"
+            app:editChoiceName="@string/boc_pledge_info_period"/>
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+            android:id="@+id/view_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:editChoiceName="@string/boc_pledge_info_rate"/>
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+            android:id="@+id/view_repay_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:editChoiceName="@string/boc_pledge_info_repay_type"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/boc_space_between_20px"
+        android:layout_marginRight="@dimen/boc_space_between_20px"
+        android:layout_marginTop="@dimen/boc_space_between_20px"
+        android:background="@drawable/boc_card_background"
+        android:orientation="vertical">
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+            android:id="@+id/et_payee_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:editChoiceContent="@string/boc_common_select"
+            app:editChoiceName="@string/boc_pledge_info_payee_account"/>
+
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+            android:id="@+id/et_payer_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:editChoiceContent="@string/boc_common_select"
+
+            app:editChoiceName="@string/boc_pledge_info_payer_account"/>
+    </LinearLayout>
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.assignment.SelectAgreementView
+        android:id="@+id/view_agreement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/boc_space_between_40px"
+        android:layout_marginTop="@dimen/boc_space_between_76px"/>
+
+
+    <Button
+        android:id="@+id/btn_next"
+        style="@style/BocButton.BocPrimaryButton"
+        android:text="@string/boc_common_next"/>
+</LinearLayout>
+

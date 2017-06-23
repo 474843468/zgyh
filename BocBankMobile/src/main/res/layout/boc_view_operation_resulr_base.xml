@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color">
+
+    <View
+        android:id="@+id/divider_top"
+        style="@style/divider_horizontal"
+        android:layout_alignParentTop="true"
+        android:visibility="visible" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@id/divider_top"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.operation.OperationResultHead
+                android:id="@+id/head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:id="@+id/layout_procedure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/boc_common_cell_color"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/title_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/boc_space_between_20px"
+                    android:layout_marginLeft="@dimen/boc_space_between_20px"
+                    android:layout_marginRight="@dimen/boc_space_between_20px"
+                    android:background="@color/boc_common_cell_color"
+                    android:gravity="left"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:visibility="gone" />
+
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.buyprocedure.BuyProcedureWidget
+                    android:id="@+id/view_buy_procedure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/boc_space_between_26px"
+                    android:layout_marginTop="@dimen/boc_space_between_20px"
+                    android:background="@color/boc_common_cell_color"
+                    android:visibility="gone" />
+                <!--2016年11月5日 16:56:15  闫勋 add   赎回结果界面 流程步骤图-->
+                <!--<com.boc.bocsoft.mobile.bocmobile.base.widget.flowchart.BuyRedeemWidget-->
+                <!--android:id="@+id/view_buy_redeem"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="150dp"-->
+                <!--android:layout_marginBottom="@dimen/boc_space_between_26px"-->
+                <!--android:layout_marginLeft="@dimen/boc_space_between_26px"-->
+                <!--android:layout_marginTop="@dimen/boc_space_between_20px"-->
+                <!--android:background="@color/boc_common_cell_color"-->
+                <!--android:visibility="gone" />-->
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.flowchart.BuyRedeemFlowView
+                    android:id="@+id/view_buy_redeem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/boc_space_between_26px"
+                    android:layout_marginLeft="@dimen/boc_space_between_26px"
+                    android:layout_marginTop="@dimen/boc_space_between_20px"
+                    android:background="@color/boc_common_cell_color"
+                    android:visibility="gone" />
+
+
+                <View
+                    android:id="@+id/view_buyredeem_bottom_divider_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/boc_divider_1px"
+                    android:background="@color/boc_divider_line_color"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.operation.OperationResultDetail
+                android:id="@+id/detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/boc_common_cell_color" />
+            <!--您可能需要所在布局-->
+            <LinearLayout
+                android:id="@+id/ll_bottom_parent_need_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <!--您可能需要-->
+                <TextView
+                    android:id="@+id/tv_need_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/boc_space_between_20px"
+                    android:layout_marginLeft="@dimen/boc_space_between_30px"
+                    android:layout_marginTop="@dimen/boc_space_between_30px"
+                    android:text="@string/boc_common_need_other"
+                    android:textColor="@color/boc_text_color_cinerous"
+                    android:textSize="@dimen/boc_space_between_26px" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_bottom_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/boc_space_between_20px"
+                    android:layout_marginLeft="@dimen/boc_space_between_30px"
+                    android:layout_marginTop="@dimen/boc_space_between_30px"
+                    android:text="@string/boc_common_need_other"
+                    android:textColor="@color/boc_text_color_cinerous"
+                    android:textSize="@dimen/boc_space_between_26px" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_like"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/boc_space_between_20px"
+                    android:layout_marginLeft="@dimen/boc_space_between_30px"
+                    android:layout_marginTop="@dimen/boc_space_between_30px"
+                    android:text="猜您喜欢"
+                    android:textColor="@color/boc_text_color_cinerous"
+                    android:textSize="@dimen/boc_space_between_26px" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/boc_space_between_40px">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <GridView
+                            android:id="@+id/grid_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/boc_main_btn_bg_color"
+                            android:cacheColorHint="@android:color/transparent"
+                            android:columnWidth="200dp"
+                            android:stretchMode="columnWidth" />
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.operation.OperationResultBottom
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom" />
+
+</RelativeLayout>

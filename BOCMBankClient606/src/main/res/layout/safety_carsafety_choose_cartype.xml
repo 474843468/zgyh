@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 车型选择列表 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <include
+        android:id="@+id/layout_step"
+        layout="@layout/safety_carsafety_step" />
+
+    <include
+        android:id="@+id/layout_type"
+        layout="@layout/safety_carsafety_typelayout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_type"
+        android:layout_marginBottom="@dimen/fill_margin_top"
+        android:layout_marginLeft="@dimen/fill_margin_top"
+        android:layout_marginRight="@dimen/fill_margin_top"
+        android:gravity="center" >
+
+        <LinearLayout
+            android:id="@+id/btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnSave"
+                style="@style/isforex_two_left_btn"
+                android:text="@string/safety_save" />
+
+            <Button
+                android:id="@+id/btnNext"
+                style="@style/isforex_two_right_btn"
+                android:text="@string/next" />
+
+            <Button
+                android:id="@+id/btnNext_big"
+                style="@style/isforex_two_right_btn"
+                android:text="@string/next"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/scrollview_comm"
+            android:layout_above="@+id/btn_layout"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_bill_tip"
+                    style="@style/confirm_info_textview_style"
+                    android:layout_gravity="center"
+                    android:text="@string/safety_carinfo_cartypeChoose" />
+            </FrameLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_service_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/safety_carinfo_chooseCarType"
+                    android:textColor="@color/fonts_dark_gray"
+                    android:textSize="@dimen/fonts_one_five" />
+            </RelativeLayout>
+
+            <LinearLayout
+                style="@style/scrollview_comm"
+                android:padding="@dimen/common_row_margin" >
+
+                <ListView
+                    android:id="@+id/lv_cartype"
+                    style="@style/listviewcomm_fill_haveDivider"
+                    android:scrollbars="none" >
+                </ListView>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

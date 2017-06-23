@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:scrollbars="none" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/boc_common_bg_color"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/availableCredit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/boc_space_between_40px"
+            android:layout_marginLeft="@dimen/boc_space_between_50px"
+            android:textColor="@color/boc_text_color_common_gray"/>
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditMoneyInputWidget
+                android:id="@+id/drawAmount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.edittext.EditChoiceWidget
+                android:id="@+id/receiptAccount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:editChoiceName="@string/boc_eloan_draw_receiptAccount" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/checkbox"
+                android:state_selected="false"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/boc_space_between_30px"
+                android:layout_width="@dimen/boc_space_between_50px"
+                android:layout_height="@dimen/boc_space_between_50px"
+                android:background="@drawable/boc_bg_check_image"/>
+
+            <TextView
+                android:id="@+id/agreement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/boc_space_between_30px"
+                android:textSize="@dimen/boc_text_size_very_small"
+                android:textColor="@color/boc_text_color_gray" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/boc_space_between_50px"
+            android:text="@string/boc_eloan_draw_next"
+            android:layout_gravity="center"
+            style="@style/BocButton.BocPrimaryButton" />
+
+    </LinearLayout>
+</ScrollView>

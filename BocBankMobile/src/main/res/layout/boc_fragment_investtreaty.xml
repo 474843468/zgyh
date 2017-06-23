@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_main_bg_color"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="@dimen/boc_space_between_6px"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/boc_space_between_66px"
+        android:layout_marginTop="@dimen/boc_space_between_40px"
+        android:background="@color/boc_common_view_line" />
+
+    <LinearLayout
+        android:id="@+id/ll_open_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFEDBF"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:padding="2dp"
+            android:src="@drawable/boc_mark" />
+
+        <TextView
+            android:id="@+id/label_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/boc_space_between_10px"
+            android:text="@string/boc_investtreaty_tip"
+            android:textColor="@color/boc_text_color_dark_gray" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_open_hint"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:padding="@dimen/boc_space_between_20px" />
+
+    <TextView
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_button_height_88px"
+        android:layout_below="@id/list_view"
+        android:layout_marginLeft="@dimen/boc_space_between_20px"
+        android:layout_marginRight="@dimen/boc_space_between_20px"
+        android:layout_marginTop="@dimen/boc_space_between_80px"
+        android:background="@drawable/boc_button_bg_blue"
+        android:gravity="center"
+        android:text="@string/boc_common_next"
+        android:textColor="@color/boc_common_cell_color"
+        android:textSize="@dimen/boc_text_size_common"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

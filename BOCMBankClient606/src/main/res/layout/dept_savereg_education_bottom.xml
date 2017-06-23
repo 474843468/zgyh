@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shap_for_dept_tranlist"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/layout_margin_top"
+        android:paddingLeft="@dimen/layout_padding_left_right"
+        android:paddingRight="@dimen/layout_padding_left_right" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/fill_padding_right" >
+
+            <TextView
+                style="@style/comm_view_left"
+                android:text="@string/dept_currency" />
+
+            <TextView
+                android:id="@+id/dept_checkout_currency_tv"
+                style="@style/comm_view_right"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" >
+            </TextView>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/ll_mon_save_amount"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/fill_padding_right" 
+            android:visibility="gone">
+
+            <TextView
+                style="@style/comm_view_left"
+                android:text="@string/month_save" />
+
+            <TextView
+                android:id="@+id/tv_mon_save_mount"
+                style="@style/comm_view_right"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/fill_padding_right" >
+
+            <TextView
+                style="@style/comm_view_left"
+                android:text="@string/continue_save_money" />
+
+            <EditText
+                android:id="@+id/dept_save_money_et"
+                style="@style/comm_view_right"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@drawable/bg_for_edittext"
+                android:inputType="numberDecimal"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" 
+                android:maxLength="14">
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/fill_padding_right" >
+
+            <TextView
+                style="@style/comm_view_left"
+                android:text="@string/attach_message" />
+
+            <EditText
+                android:id="@+id/dept_message_et"
+                style="@style/comm_view_right"
+                android:layout_height="@dimen/edittext_height"
+                        android:background="@drawable/bg_for_edittext"
+                android:hint="@string/hint_memo"
+                android:singleLine="true"
+                android:textColor="@color/black" 
+                android:textSize="@dimen/textsize_default" 
+                android:maxLength="50">
+            </EditText>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_margin_top"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/dept_nowExe_btn"
+            style="@style/tran_three_btn"
+            android:text="@string/nowExe" />
+
+        <Button
+            android:id="@+id/dept_preDateExe_btn"
+            style="@style/tran_three_btn"
+            android:text="@string/preDateExe" />
+
+        <Button
+            android:id="@+id/dept_prePeriodExe_btn"
+            style="@style/tran_three_btn"
+            android:text="@string/prePeriodExe" />
+    </LinearLayout>
+
+</LinearLayout>

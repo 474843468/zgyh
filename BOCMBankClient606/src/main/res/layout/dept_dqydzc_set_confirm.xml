@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/btn_sure"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top" >
+
+        <Button
+            android:id="@+id/sureButton"
+            style="@style/bottombtn"
+            android:text="@string/confirm" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_sure"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView
+            style="@style/scrollview_comm_havemarginbutton"
+            android:fillViewport="false"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/dept_dqydzc_confirm_title"
+                    android:textColor="@color/gray" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/currency_sellcode"
+                            style="@style/comm_view_left"
+                            android:layout_weight="5"
+                            android:text="@string/dept_dqydzc_input_acc"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <TextView
+                            android:id="@+id/dept_dqydzc_input_acc"
+                            style="@style/comm_view_right"
+                            android:layout_gravity="left"
+                            android:layout_weight="5"
+                            android:gravity="left"
+                            android:paddingLeft="0dp"
+                            android:textSize="@dimen/textsize_default" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_relevance_actnum"
+                            style="@style/comm_view_left"
+                            android:layout_weight="5"
+                            android:text="@string/dept_dqydzc_input_volumber"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <TextView
+                            android:id="@+id/dept_dqydzc_input_volumber"
+                            style="@style/comm_view_right"
+                            android:layout_gravity="center"
+                            android:layout_weight="5"
+                            android:gravity="left"
+                            android:paddingLeft="0dp"
+                            android:textSize="@dimen/textsize_default" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/limitRate_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/comm_view_left"
+                            android:layout_weight="5"
+                            android:text="@string/dept_dqydzc_input_cdnumber"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <TextView
+                            android:id="@+id/dept_dqydzc_input_cdnumber"
+                            style="@style/comm_view_right"
+                            android:layout_weight="5"
+                            android:gravity="left"
+                            android:paddingLeft="0dp"
+                            android:textSize="@dimen/textsize_default" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/weiTuoRate_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/comm_view_left"
+                            android:layout_weight="5"
+                            android:text="@string/dept_dqyzc_codeandcash"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <TextView
+                            android:id="@+id/dept_dqyzc_codeandcash"
+                            style="@style/comm_view_right"
+                            android:layout_weight="5"
+                            android:gravity="left"
+                            android:paddingLeft="0dp"
+                            android:textSize="@dimen/textsize_default" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/zhiSunRate_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/comm_view_left"
+                            android:layout_weight="5"
+                            android:text="@string/dept_dqydzc_input_money_new"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <TextView
+                            android:id="@+id/dept_dqydzc_input_money"
+                            style="@style/comm_view_right"
+                            android:layout_weight="5"
+                            android:gravity="left"
+                            android:paddingLeft="0dp"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/textsize_default" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/huoLiRate_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/comm_view_left"
+                            android:layout_weight="5"
+                            android:text="@string/dept_dqydzc_input_cdPeriod"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <TextView
+                            android:id="@+id/dept_dqydzc_input_cdPeriod"
+                            style="@style/comm_view_right"
+                            android:layout_weight="5"
+                            android:gravity="left"
+                            android:paddingLeft="0dp"
+                            android:textSize="@dimen/textsize_default" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/times_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/left_text"
+                            style="@style/comm_view_left"
+                            android:layout_weight="5"
+                            android:singleLine="true"
+                            android:text="@string/dept_dqydzc_input_appointTerm"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <TextView
+                            android:id="@+id/dept_dqydzc_input_appointTerm"
+                            style="@style/comm_view_right"
+                            android:layout_weight="5"
+                            android:gravity="left"
+                            android:paddingLeft="0dp"
+                            android:textSize="@dimen/textsize_default" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/appointType_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/comm_view_left"
+                            android:layout_weight="5"
+                            android:singleLine="true"
+                            android:text="@string/dept_dqydzc_input_appointType"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <TextView
+                            android:id="@+id/dept_dqydzc_input_appointType"
+                            style="@style/comm_view_right"
+                            android:layout_weight="5"
+                            android:gravity="left"
+                            android:paddingLeft="0dp"
+                            android:textSize="@dimen/textsize_default" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/termExecuteType_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/comm_view_left"
+                            android:layout_weight="5"
+                            android:singleLine="true"
+                            android:text="@string/dept_dqydzc_input_termExecuteType"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <TextView
+                            android:id="@+id/dept_dqydzc_input_termExecuteType"
+                            style="@style/comm_view_right"
+                            android:layout_weight="5"
+                            android:gravity="left"
+                            android:paddingLeft="0dp"
+                            android:textSize="@dimen/textsize_default" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/interestType_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" 
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/comm_view_left"
+                            android:layout_weight="5"
+                            android:singleLine="true"
+                            android:text="@string/dept_dqydzc_input_interestType"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <TextView
+                            android:id="@+id/dept_dqydzc_input_interestType"
+                            style="@style/comm_view_right"
+                            android:layout_weight="5"
+                            android:gravity="left"
+                            android:paddingLeft="0dp"
+                            android:textSize="@dimen/textsize_default" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/acc_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/comm_view_left"
+                            android:layout_weight="5"
+                            android:singleLine="true"
+                            android:text="@string/dept_dqydzc_input_acctoacc"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <TextView
+                            android:id="@+id/dept_dqydzc_input_acctoacc"
+                            style="@style/comm_view_right"
+                            android:layout_weight="5"
+                            android:gravity="left"
+                            android:paddingLeft="0dp"
+                            android:textSize="@dimen/textsize_default" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/money_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            android:id="@+id/money_text_left"
+                            style="@style/comm_view_left"
+                            android:layout_weight="5"
+                            android:singleLine="true"
+                            android:text="@string/dept_dqydzc_input_addMoney"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <TextView
+                            android:id="@+id/dept_dqydzc_input_addMoney"
+                            style="@style/comm_view_right"
+                            android:layout_weight="5"
+                            android:gravity="left"
+                            android:paddingLeft="0dp"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/textsize_default" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

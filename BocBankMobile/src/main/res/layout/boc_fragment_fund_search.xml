@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_parent_search"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_88px"
+        android:background="@color/boc_common_cell_color"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/boc_space_between_30px"
+        android:paddingRight="@dimen/boc_space_between_30px">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/boc_space_between_64px"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/boc_bg_search"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="@dimen/boc_space_between_20px"
+                android:paddingRight="@dimen/boc_space_between_20px"
+                android:src="@drawable/icon_search" />
+
+            <TextView
+                android:id="@+id/tvSearch"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/boc_space_between_20px"
+                android:layout_weight="1"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/boc_fund_search_hint"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textColorHint="@color/boc_text_color_light_gray"
+                android:textSize="@dimen/boc_text_size_small"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_select"
+            style="@style/BocTextViewSmall"
+            android:layout_marginLeft="@dimen/boc_space_between_30px"
+            android:drawableRight="@drawable/boc_select_gray"
+            android:text="@string/boc_account_transdetail_select" />
+    </LinearLayout>
+</LinearLayout>

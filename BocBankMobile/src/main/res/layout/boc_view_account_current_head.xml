@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/boc_common_cell_color"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/boc_common_view_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_sum_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingLeft="12dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/boc_overview_balance_bg"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="18dp">
+
+                <TextView
+                    android:id="@+id/tv_currency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="22dp"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_common" />
+
+                <TextView
+                    android:id="@+id/tv_money_icon"
+                    style="@style/tv_very_small"
+                    android:layout_width="@dimen/boc_card_account_amount_cash_remit"
+                    android:layout_height="@dimen/boc_card_account_amount_cash_remit"
+                    android:layout_alignBaseline="@+id/tv_currency"
+                    android:layout_marginLeft="2dp"
+                    android:layout_toRightOf="@+id/tv_currency"
+                    android:background="@drawable/boc_black_circle"
+                    android:gravity="center"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_btn_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_currency"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/boc_main_button_color"
+                    android:textSize="@dimen/boc_text_size_common"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_currency"
+                    android:layout_marginLeft="25dp"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_space_between_72px" />
+
+                <TextView
+                    android:id="@+id/tv_usable_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_sum"
+                    android:layout_marginLeft="25dp"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_common" />
+
+                <ImageView
+                    android:id="@+id/img_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_usable_money"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/tv_usable_money"
+                    android:src="@drawable/boc_account_detail_help" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/details_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_details"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="@dimen/boc_space_between_20px"
+                android:paddingTop="@dimen/boc_space_between_40px"
+                android:src="@drawable/boc_view_icon_current_open"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/boc_common_view_line" />
+
+        <LinearLayout
+            android:id="@+id/btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/boc_common_view_line" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_account_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_finance"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_button_height_96px"
+            android:layout_marginTop="@dimen/boc_space_between_20px"
+            android:background="@color/boc_common_cell_color"
+            android:gravity="center"
+            android:text="@string/boc_finance_account_recharge_account"
+            android:textColor="@color/boc_main_button_color"
+            android:textSize="@dimen/boc_text_size_common"
+            android:visibility="gone" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_divider_1px"
+            android:background="@color/boc_common_view_line" />
+
+        <TextView
+            android:id="@+id/tv_medical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_button_height_96px"
+            android:layout_marginTop="@dimen/boc_space_between_20px"
+            android:background="@color/boc_common_cell_color"
+            android:gravity="center"
+            android:text="@string/boc_overview_detail_medical"
+            android:textColor="@color/boc_main_button_color"
+            android:textSize="@dimen/boc_text_size_common"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_detail"
+        style="@style/tv_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/boc_space_between_20px"
+        android:layout_marginLeft="@dimen/boc_space_between_20px"
+        android:layout_marginRight="@dimen/boc_space_between_20px"
+        android:layout_marginTop="@dimen/boc_space_between_40px"
+        android:text="最近交易明细"
+        android:visibility="gone" />
+</LinearLayout>

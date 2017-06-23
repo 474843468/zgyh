@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 中银理财  答题评估结果页  wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp_five"
+        android:paddingBottom="@dimen/common_bottom_padding_new" >
+
+        <Button
+            android:id="@+id/new_evaluation"
+            style="@style/bottombtn"
+            android:background="@drawable/fund_btn_common_oneline_right_press_state"
+            android:text="@string/bocinvt_eva_new" />
+
+        <Button
+            android:id="@+id/sure"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/fund_btn_common_oneline_right_press_state"
+            android:text="@string/finish" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button"
+        android:layout_below="@+id/ll_step"
+        android:background="@drawable/bg_for_listview_item_write" >
+
+        <LinearLayout
+            android:id="@+id/my_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bocinvt_eva_res_top"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/fill_margin_top" >
+
+            <TextView
+                android:id="@+id/riskLevel"
+                style="@style/titleText_step2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/black" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/dp_five" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bocinvt_eva_date" />
+
+                    <TextView
+                        android:id="@+id/result_date"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_validate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bocinvt_eva_validdate" />
+
+                    <TextView
+                        android:id="@+id/valid_date"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_experience"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/dp_five" >
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hasInvestExperience" />
+
+                <TextView
+                    android:id="@+id/hasInvestExperience"
+                    style="@style/textview_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:gravity="left" />
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@+id/layout_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/fill_margin_top"
+                    android:paddingRight="@dimen/fill_margin_top" >
+
+                    <TextView
+                        android:id="@+id/detail"
+                        style="@style/textview_common"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_one_three"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/img_down"
+                        style="@style/query_image_up_style"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:focusable="true" />
+                </RelativeLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_add_title"
+            style="@style/textview_common"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/my_result"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_left"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:text="@string/bocinvt_add_result_title" />
+
+        <ListView
+            android:id="@+id/bocinvt_result"
+            style="@style/listviewcomm_fill_gray_divider"
+            android:layout_below="@+id/tv_add_title" >
+        </ListView>
+    </RelativeLayout>
+
+</RelativeLayout>

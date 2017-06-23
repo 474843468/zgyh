@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账户开户   签署协议 xyl -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/stepbar"
+        layout="@layout/step_title_layout" />
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/fill_margin_right"
+        android:layout_marginLeft="@dimen/fill_margin_right"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/finc_noaccept"
+            style="@style/btn_common_oneline_left"
+            android:text="@string/noaccept"
+             />
+
+        <Button
+            android:id="@+id/finc_accept"
+            style="@style/btn_common_oneline_right"
+            android:text="@string/accept"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/confirm_main_style"
+        android:layout_above="@id/btn_layout"
+        android:layout_below="@id/stepbar"
+        android:layout_marginLeft="@dimen/fill_margin_right"
+        android:layout_marginRight="@dimen/fill_margin_right"
+        android:layout_marginTop="@dimen/fill_padding_top"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <LinearLayout style="@style/linnerlayout_common" >
+
+            <TextView
+                style="@style/confirm_info_textview_style"
+                android:text="@string/finc_acc_regisitAcc_second_info" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/linnerlayout_common"
+            android:gravity="left" >
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/firstsize" />
+
+            <TextView
+                android:id="@+id/finc_accName"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/linnerlayout_common"
+            android:gravity="left" >
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/secondsize" />
+
+            <TextView
+                android:id="@+id/prms_acctype"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ccbbank" />
+        </LinearLayout>
+
+        <ScrollView style="@style/linnerlayout_common" >
+
+            <TextView
+                android:id="@+id/agree_info"
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:scrollHorizontally="false"
+               />
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

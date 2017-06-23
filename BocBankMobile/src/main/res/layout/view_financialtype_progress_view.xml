@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_material_light">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_content_view_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.emptyview.CommonEmptyView
+            android:id="@+id/view_no_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center" />
+    </RelativeLayout>
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.emptyview.CommonEmptyView
+        android:id="@+id/progress_emptyview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/scroll_no_emptyview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/title_productnameandcode"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/abc_action_bar_stacked_max_height"
+                android:gravity="center|left"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/progress_product"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/boc_space_between_16px"
+                    android:layout_marginRight="@dimen/boc_space_between_16px"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/material_blue_grey_950"
+                    android:textSize="@dimen/boc_text_size_small"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffffff"
+                android:layout_marginTop="@dimen/boc_space_between_30px"
+                android:orientation="vertical">
+
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.SpringPressageView.SpringRateDetailContent
+                    android:id="@+id/spring_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:visibility="visible"
+                    android:textSize="@dimen/boc_text_size_small" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/boc_space_between_160px"
+                    android:layout_marginLeft="@dimen/boc_space_between_16px"
+                    android:layout_marginRight="@dimen/boc_space_between_16px"
+                    android:layout_marginTop="@dimen/boc_space_between_16px"
+                    android:text="@string/boc_trans_financial_shouyimessage"
+                    android:textColor="@color/secondary_text_default_material_light"
+                    android:textSize="@dimen/boc_text_size_small" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

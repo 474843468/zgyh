@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 中银理财-预计年收益率页 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/style_match_match"
+    android:orientation="vertical" 
+    >
+    
+    <LinearLayout style="@style/style_match_wrap"
+        android:layout_marginTop="@dimen/common_row_margin"
+        >
+            <TextView 
+                style="@style/style_tv_bocinv_agreement_appley"
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:text="@string/prodCode"
+                />
+            <TextView 
+                android:id="@+id/tv_1"
+                style="@style/style_tv_bocinv_agreement_appley"
+                android:gravity="left"
+                android:layout_marginRight="5dp"
+                android:text=""
+                />
+    </LinearLayout>
+    <LinearLayout style="@style/style_match_wrap"
+        android:layout_marginTop="@dimen/common_row_margin"
+        >
+            <TextView 
+                style="@style/style_tv_bocinv_agreement_appley"
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:text="@string/prodName"
+                />
+            <TextView 
+                android:id="@+id/tv_2"
+                style="@style/style_tv_bocinv_agreement_appley"
+                android:gravity="left"
+                android:layout_marginRight="5dp"
+                android:text=""
+                />
+    </LinearLayout>
+    <LinearLayout style="@style/style_match_wrap"
+        android:layout_height="50dp"
+        android:gravity="center">
+        <ImageView 
+            android:id="@+id/img_minus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="5dp"
+            android:contentDescription="@string/progression_yearlyRR"
+            android:src="@drawable/btn_left"
+            />
+        <TextView 
+            android:id="@+id/tv_3"
+            style="@style/textview_common"
+            android:layout_width="180dp"
+            android:layout_height="@dimen/layout_height"
+            android:paddingLeft="@dimen/edittext_paddinglr"
+            android:paddingRight="@dimen/fill_margin_right"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_spinner"
+            android:text=""
+                />
+        <ImageView 
+            android:id="@+id/img_plus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="5dp"
+            android:contentDescription="@string/progression_yearlyRR"
+            android:src="@drawable/btn_right"
+            />
+    </LinearLayout>
+    
+    <ScrollView style="@style/style_height_weight_1"
+        android:padding="5dp"
+        >
+    <LinearLayout style="@style/style_match_wrap"
+        android:orientation="vertical"
+        android:background="@drawable/shape_round_dark"
+        ><!-- 标题 -->
+        <LinearLayout style="@style/style_match_wrap"
+            android:layout_margin="1dp"
+            >
+	           <TextView 
+	               style="@style/style_tv_bocinv_agreement_appley"
+	               android:layout_height="30dp"
+	               android:layout_marginRight="1dp"
+	               android:background="@drawable/shape_round_top_left"
+	               android:gravity="center"
+	               android:text="@string/bocinvt_tv_59"
+	               />
+	           <TextView 
+	               style="@style/style_tv_bocinv_agreement_appley"
+	               android:layout_height="30dp"
+	               android:layout_marginRight="1dp"
+	               android:background="@color/bg_table_row"
+	               android:gravity="center"
+	               android:text="@string/bocinvt_buyAmount_regex"
+	               /> 
+	           <TextView 
+	               style="@style/style_tv_bocinv_agreement_appley"
+	               android:layout_height="30dp"
+	               android:background="@drawable/shape_round_top_right"
+	               android:gravity="center"
+	               android:text="@string/yearlyRR_outlay"
+	               />
+        </LinearLayout>
+        
+        <LinearLayout style="@style/style_match_wrap"
+            android:id="@+id/layout_add_table_layout"
+            android:orientation="vertical"
+            android:visibility="visible"
+            >
+        <!-- 内容 ，在此处用代码添加列表-->
+        <!-- <include layout="@layout/product_query_and_buy_year_rate_table_layout"/>
+        <include layout="@layout/product_query_and_buy_year_rate_table_layout"/>
+        <include layout="@layout/product_query_and_buy_year_rate_table_layout"/> -->
+        </LinearLayout>
+        
+    </LinearLayout>
+    </ScrollView>
+    
+    <!-- 底部文字 -->
+    <TextView 
+        android:id="@+id/tv_4"
+        style="@style/textview_common"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="left|center_vertical"
+        android:textColor="@color/red"
+        android:visibility="gone"
+        android:text=""
+        />
+
+</LinearLayout>

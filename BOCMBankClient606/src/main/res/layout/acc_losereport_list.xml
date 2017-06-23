@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账户管理  临时挂失主页面 wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_acc_lose_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_step"
+        android:paddingLeft="@dimen/fill_padding_top"
+        android:paddingTop="@dimen/dp_five"
+        android:text="@string/acc_loss_maintitle"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/textsize_default" />
+
+    <Button
+        android:id="@+id/btn_confirm"
+        style="@style/bottombtn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/common_bottom_padding"
+        android:layout_marginTop="@dimen/dp_five"
+        android:text="@string/next" />
+
+<!--     <LinearLayout
+        android:id="@+id/ll_radio"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_confirm"
+        android:layout_marginTop="@dimen/dp_five"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:paddingLeft="@dimen/fill_padding_top"
+            android:text="@string/acc_loss_lossDays"
+            android:textSize="@dimen/textsize_default" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup_choose"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|bottom"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radio_lossDays_1"
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:button="@drawable/radiobtn_selector"
+                android:text="@string/acc_lossDays_1" />
+
+            <RadioButton
+                android:id="@+id/radio_lossDays_2"
+                style="@style/textview_common"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:button="@drawable/radiobtn_selector"
+                android:text="@string/acc_lossDays_2" />
+        </RadioGroup>
+    </LinearLayout> -->
+
+    <ListView
+        android:id="@+id/acc_accountlist"
+        style="@style/listviewcomm_fill_haveDivider"
+        android:layout_above="@+id/btn_confirm"
+        android:layout_below="@+id/tv_acc_lose_title"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_marginTop="@dimen/dp_five"
+        >
+    </ListView>
+
+</RelativeLayout>

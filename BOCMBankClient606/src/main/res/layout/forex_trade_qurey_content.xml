@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_query_condition"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/img_bg_query_j"
+    android:orientation="vertical" >
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_left"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:orientation="horizontal"
+            >
+            <RadioButton
+                android:id="@+id/forex_queryquery_deal_queryoneweek"
+                style="@style/new_radioButtonLeft"
+                android:text="@string/prms_str_oneweek"
+                />
+
+            <RadioButton
+                android:id="@+id/forex_queryquery_deal_queryonemouth"
+                style="@style/new_radioButtonMid"
+                android:text="@string/prms_str_onemonth"
+                />
+
+            <RadioButton
+                android:id="@+id/forex_queryquery_deal_querythreemouths"
+                style="@style/new_radioButtonRight"
+                android:text="@string/prms_str_threemonth"
+                />
+        </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_marginTop="@dimen/common_row_margin" >
+
+        <include layout="@layout/base_query_fengge" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/acc_query_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/forex_query_deal_startdate"
+            style="@style/bond_sp_15_1"
+            android:layout_marginRight="@dimen/fill_margin_right"
+            android:hint="@string/prms_query_startdate" />
+
+        <TextView
+            android:id="@+id/forex_query_deal_enddate"
+            style="@style/bond_sp_15_1"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:hint="@string/prms_query_enddate" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/acc_query_choosedate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/forex_query_deal_query"
+            style="@style/bond_query_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/fill_margin_top"
+            android:layout_marginRight="@dimen/fill_margin_top" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/search_shouqi_up"
+        style="@style/style_wrap_wrap"
+        android:gravity="right|center_vertical"
+        android:layout_gravity="right"
+        android:orientation="horizontal"
+        android:layout_marginRight="@dimen/fill_padding_right"
+        android:layout_marginBottom="@dimen/fill_padding_right"
+        >
+
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/style_bond_tv_up_down"
+            android:text="@string/up"
+            />
+
+        <ImageView
+            android:id="@+id/finc_up_imageView"
+            style="@style/query_image_up_style"
+            android:src="@drawable/img_arrow_gray_up" />
+    </LinearLayout>
+
+</LinearLayout>

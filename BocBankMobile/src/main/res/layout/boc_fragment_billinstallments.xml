@@ -1,0 +1,179 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:scrollbars="none">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color">
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.moneyruler.ExactBoundaryMoneyRulerWidget
+        android:id="@+id/ruler_amount"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_320px"
+        android:layout_marginBottom="0.5dp"
+        android:layout_marginTop="0.5dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ruler_amount"
+        android:orientation="vertical">
+        <include layout="@layout/boc_divide_line" />
+
+        <TextView
+            android:id="@+id/devided_divperiod_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/boc_common_cell_color"
+            android:gravity="bottom"
+            android:paddingLeft="@dimen/boc_space_between_30px"
+            android:paddingTop="@dimen/boc_space_between_20px"
+            android:text="@string/boc_crcd_installment_divperiod"
+            android:textColor="@color/boc_text_color_dark_gray"
+            android:textSize="@dimen/boc_text_size_common" />
+
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.gridbtn.GridButton
+            android:id="@+id/gb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/boc_common_cell_color"
+            app:GridButton_btnNames="@array/boc_creditcard_deidedpivot_num"
+            app:GridButton_numColumns="3" />
+
+        <LinearLayout
+            android:id="@+id/div_information_l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/boc_common_cell_color"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_gv_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/boc_space_between_20px"
+                android:layout_marginLeft="@dimen/boc_space_between_30px"
+                android:layout_marginRight="@dimen/boc_space_between_18px"
+                android:layout_marginTop="@dimen/boc_space_between_20px"
+                android:background="@drawable/boc_bg_gvbtn_cliked"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/boc_space_between_10px"
+                android:paddingRight="@dimen/boc_space_between_10px"
+                android:textColor="@color/boc_titlebar_text_white"
+                android:textSize="@dimen/boc_text_size_common" />
+
+            <TextView
+                android:id="@+id/div_information"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/boc_space_between_20px"
+                android:layout_marginTop="@dimen/boc_space_between_20px"
+                android:background="@color/boc_common_cell_color"
+                android:gravity="center_vertical"
+                android:textColor="@color/boc_text_color_red"
+                android:textSize="@dimen/boc_text_size_common" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/div_information3_l"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/boc_common_cell_color"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_gv_btn3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/boc_space_between_10px"
+                    android:layout_marginLeft="@dimen/boc_space_between_30px"
+                    android:layout_marginRight="@dimen/boc_space_between_18px"
+                    android:layout_marginTop="@dimen/boc_space_between_20px"
+                    android:background="@drawable/boc_bg_gvbtn_cliked"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/boc_space_between_10px"
+                    android:paddingRight="@dimen/boc_space_between_10px"
+                    android:textColor="@color/boc_titlebar_text_white"
+                    android:textSize="@dimen/boc_text_size_common" />
+
+                <TextView
+                    android:id="@+id/div_instmtCharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/boc_space_between_10px"
+                    android:layout_marginTop="@dimen/boc_space_between_20px"
+                    android:background="@color/boc_common_cell_color"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/boc_text_color_red"
+                    android:textSize="@dimen/boc_text_size_common" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_gv_btn_not"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/boc_space_between_20px"
+                    android:layout_marginLeft="@dimen/boc_space_between_30px"
+                    android:layout_marginRight="@dimen/boc_space_between_18px"
+                    android:background="@color/boc_common_cell_color"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/boc_space_between_10px"
+                    android:paddingRight="@dimen/boc_space_between_10px"
+                    android:textColor="@color/boc_common_cell_color"
+                    android:textSize="@dimen/boc_text_size_common" />
+
+                <TextView
+                    android:id="@+id/div_firstInAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/boc_space_between_20px"
+                    android:background="@color/boc_common_cell_color"
+                    android:gravity="center_vertical"
+                    android:paddingRight="@dimen/boc_space_between_10px"
+                    android:textColor="@color/boc_text_color_red"
+                    android:textSize="@dimen/boc_text_size_common" />
+
+                <TextView
+                    android:id="@+id/div_restPerTimeInAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/boc_space_between_20px"
+                    android:background="@color/boc_common_cell_color"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/boc_text_color_red"
+                    android:textSize="@dimen/boc_text_size_common" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <include layout="@layout/boc_divide_line" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/btn_next"
+            style="@style/BocButton.BocPrimaryButton1"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/boc_space_between_80px"
+            android:text="@string/boc_common_next" />
+    </LinearLayout>
+</RelativeLayout>
+</ScrollView>

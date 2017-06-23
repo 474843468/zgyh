@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.boc.bocsoft.mobile.bocmobile.base.widget.SlipMenu.SlipDrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/boc_titlebar_bg_white">
+
+            <include
+                layout="@layout/boc_view_titlebar_white"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/boc_titlebar_height" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <include
+                android:id="@+id/ll_sift"
+                layout="@layout/boc_fragment_overview_regular_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_no_data"
+                style="@style/tv_small"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/boc_overview_detail_regular_no_data1"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:visibility="gone"
+                />
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.refreshliseview.PullableListView
+                android:id="@+id/lv_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/boc_common_bg_color"
+                android:divider="@color/boc_common_view_line"
+                android:dividerHeight="@dimen/boc_divider_1px"
+                android:scrollbars="none" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_no_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/boc_main_bg_color"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/tv_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/boc_overview_detail_regular_no_data"
+                android:textColor="@color/boc_text_color_dark_gray" />
+
+            <Button
+                android:id="@+id/btn_regular"
+                style="@style/BocButton.BocPrimaryButton1"
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/boc_space_between_20px"
+                android:text="存定期"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <com.boc.bocsoft.mobile.bocmobile.base.widget.selectview.selecttype.SelectTypeView
+        android:id="@+id/stv_type"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:clickable="true" />
+
+</com.boc.bocsoft.mobile.bocmobile.base.widget.SlipMenu.SlipDrawerLayout>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/boc_divide_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_divider_1px"
+        android:layout_alignParentBottom="true"/>
+
+    <ScrollView
+        android:id="@+id/drawScrll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/boc_common_cell_color"
+                android:paddingTop="45dp"
+                android:paddingBottom="10dp">
+
+                <com.boc.bocsoft.mobile.bocmobile.base.widget.waterwaveballview.WaterWaveBallView
+                    android:id="@+id/waveBllView"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="226dp"
+                    android:layout_height="226dp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="58dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/explainTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/boc_common_cell_color"
+                        android:textSize="13dp"/>
+
+                    <TextView
+                        android:id="@+id/sumTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="13dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/boc_common_cell_color"
+                        android:textSize="28dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="30dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/reachdateTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="26dp"
+                        android:textColor="@color/boc_common_cell_color"
+                        android:textSize="13dp"/>
+
+                    <TextView
+                        android:id="@+id/drawEloanTv"
+                        android:layout_width="90dp"
+                        android:layout_height="28dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/boc_common_cell_color"
+                        android:textSize="15dp"
+                        />
+                </LinearLayout>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/eloanRateTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/boc_common_cell_color"
+                android:paddingRight="15dp"
+                android:paddingBottom="28dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:textColor="@color/boc_text_color_dark_gray"/>
+
+            <TextView
+                android:id="@+id/exceptionTv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/boc_common_cell_color"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/boc_text_color_light_gray"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/eloanSettled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/boc_common_cell_color"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/drawingredLl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/boc_common_bg_color"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/eloanDrawingTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginBottom="6dp"
+                        android:textStyle="bold"
+                        android:textSize="13dp"
+                        android:textColor="@color/boc_text_color_dark_gray" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/lineview"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/boc_common_view_line" />
+
+                <LinearLayout
+                    android:id="@+id/drawnotesll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/boc_common_cell_color"
+                    android:orientation="vertical">
+
+                    <com.boc.bocsoft.mobile.bocmobile.buss.loan.eloan.query.ui.view.EloanListView
+                        android:id="@+id/drawingRecordLv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:divider="@null"
+                        android:scrollbars="none"
+                        android:visibility="visible"/>
+                    <!--android:footerDividersEnabled="false"
+                    android:fadingEdge="none"-->
+
+                    <TextView
+                        android:id="@+id/skipTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:textSize="13dp"
+                        android:padding="13dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/boc_main_button_color"
+                        android:gravity="center" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.AccountListItemView.PartialLoadView
+                android:id="@+id/iv_loading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="90dp"
+                android:paddingBottom="@dimen/boc_space_between_14px"
+                android:paddingLeft="@dimen/boc_space_between_32px"
+                android:paddingRight="@dimen/boc_space_between_32px"
+                android:paddingTop="@dimen/boc_space_between_14px"
+                android:scaleType="centerInside"
+                tools:src="@drawable/boc_partial_refresh"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

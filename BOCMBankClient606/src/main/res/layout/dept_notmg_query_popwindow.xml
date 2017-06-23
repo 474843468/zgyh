@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_notmg_pop"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/prms_myacc_bg2"
+        android:padding="@dimen/dp_five" >
+
+        <FrameLayout
+            android:layout_width="@dimen/rightbtnW"
+            android:layout_height="@dimen/rightbtnH"
+            android:layout_gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/img_arrow_left"
+                android:layout_width="@dimen/rightbtnW"
+                android:layout_height="@dimen/rightbtnH"
+                android:background="@drawable/img_arrow_gray_left" />
+        </FrameLayout>
+        <!-- 水平显示卡list -->
+
+        <com.chinamworld.bocmbci.widget.CustomGallery
+            android:id="@+id/viewPager"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/acc_list_item_height"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:fadingEdgeLength="0dp"
+            android:spacing="10dp" />
+
+        <FrameLayout
+            android:layout_width="@dimen/rightbtnW"
+            android:layout_height="@dimen/rightbtnH"
+            android:layout_gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/img_arrow_right"
+                android:layout_width="@dimen/rightbtnW"
+                android:layout_height="@dimen/rightbtnH"
+                android:background="@drawable/img_arrow_gray_right" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- 查询前layout -->
+
+    <RelativeLayout
+        android:id="@+id/dept_before_query_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img_bg_query_j"
+        android:paddingLeft="@dimen/fill_padding_left"
+        android:paddingRight="@dimen/fill_padding_left"
+        android:paddingTop="@dimen/fill_padding_top" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingRight="@dimen/fill_padding_left" >
+
+                    <Spinner
+                        android:id="@+id/dept_volume_number_spinner"
+                        style="@style/Spiiner_fill"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:id="@+id/volume_number_tv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="36dp"
+                        android:background="@drawable/bg_spinner"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/fill_padding_left"
+                        android:text="@string/forex_custoner_fix_volunber"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/fill_padding_left" >
+
+                    <Spinner
+                        android:id="@+id/dept_cd_number_spinner"
+                        style="@style/Spiiner_fill"
+                        android:gravity="center_vertical" />
+
+                    <TextView
+                        android:id="@+id/cd_number_tv"
+                        android:layout_width="fill_parent"
+                        android:layout_height="36dp"
+                        android:background="@drawable/bg_spinner"
+                        android:gravity="center_vertical"
+                        android:text="@string/cd_number"
+                        android:paddingLeft="7dp" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fill_padding_top" >
+
+                <Button
+                    android:id="@+id/dept_btnQuery"
+                    android:layout_marginTop="@dimen/dp_five"
+                    android:layout_centerHorizontal="true"
+                    style="@style/query_button_style"
+                    android:text="@string/query"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_default" />
+
+                <LinearLayout
+                    android:id="@+id/img_arrow_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/dept_btnQuery"
+                    android:padding="@dimen/dp_five" >
+
+                    <TextView
+                        style="@style/textview_common_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/textsize_one_zero" />
+
+                    <ImageView
+                        style="@style/query_image_up_style"
+                        android:layout_width="@dimen/img_up_width"
+                        android:layout_height="@dimen/img_up_width"
+                        android:src="@drawable/img_arrow_gray_up"
+                         />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 车险—车辆补充信息输入页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <include
+        android:id="@+id/layout_step"
+        layout="@layout/safety_carsafety_step" />
+
+    <include
+        android:id="@+id/layout_type"
+        layout="@layout/safety_carsafety_typelayout" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_type"
+        android:layout_marginLeft="@dimen/fill_margin_top"
+        android:layout_marginRight="@dimen/fill_margin_top"
+        android:gravity="center" >
+
+        <LinearLayout
+            android:id="@+id/btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="@dimen/fill_margin_top"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnSave"
+                style="@style/isforex_two_left_btn"
+
+                android:text="@string/safety_save" />
+
+            <Button
+                android:id="@+id/btnCommitQuery"
+                style="@style/isforex_two_right_btn"
+
+                android:text="@string/safety_carinfo_commitcartypequery" />
+
+            <Button
+                android:id="@+id/btnCommitQuery_big"
+                style="@style/bottombtn"
+                android:background="@drawable/btn_red_big_long"
+                android:text="@string/safety_carinfo_commitcartypequery"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <ScrollView
+            style="@style/scrollview_comm"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_layout"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:paddingTop="@dimen/fill_margin_top"
+            android:layout_marginBottom="@dimen/fill_margin_top"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/tv_bill_tip"
+                        style="@style/confirm_info_textview_style"
+                        android:layout_gravity="center"
+                        android:text="@string/safety_carinfo_more"
+                        android:layout_height="wrap_content" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/safety_carsafety_carinfo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_five" >
+
+                    <!-- 品牌型号 -->
+
+                    <LinearLayout
+                        android:id="@+id/ll_brandName"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:baselineAligned="false"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_five" >
+
+                        <TextView
+                            style="@style/textview_forex_prompt_message"
+                            android:layout_weight="6.5"
+                            android:singleLine="true"
+                            android:text="@string/safety_carinfo_brandName" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_brandName_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+                            android:orientation="horizontal" >
+
+                            <EditText
+                                android:id="@+id/et_brandName"
+                                style="@style/edittext_forex_prompt_info"
+                                android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:id="@+id/example1"
+                                style="@style/comm_view_left"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:gravity="left"
+                                android:singleLine="true"
+                                android:text="@string/safety_carsafety_example"
+                                android:textColor="@color/blue"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_brandName"
+                            style="@style/textview_forex_prompt_info"
+                            android:layout_weight="3.3"
+                            android:singleLine="true"
+                            android:text="@string/safety_carinfo_brandName"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <!-- 发动机号码 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:baselineAligned="false"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_five" >
+
+                        <TextView
+                            style="@style/textview_forex_prompt_message"
+                            android:layout_weight="6.5"
+                            android:singleLine="true"
+                            android:text="@string/safety_carinfo_engineNo" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_engineNo_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+                            android:orientation="horizontal" >
+
+                            <EditText
+                                android:id="@+id/et_engineNo"
+                                style="@style/edittext_forex_prompt_info"
+                                android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:id="@+id/example2"
+                                style="@style/comm_view_left"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:gravity="left"
+                                android:singleLine="true"
+                                android:text="@string/safety_carsafety_example"
+                                android:textColor="@color/blue"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_engineNo"
+                            style="@style/textview_forex_prompt_info"
+                            android:layout_weight="3.3"
+                            android:singleLine="true"
+                            android:text="@string/safety_carinfo_engineNo"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <!-- 车辆识别代码 -->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:baselineAligned="false"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_five" >
+
+                        <TextView
+                            android:id="@+id/tv_frameNo_key"
+                            style="@style/textview_forex_prompt_message"
+                            android:layout_weight="6.5"
+                            android:singleLine="true"
+                            android:text="@string/safety_carinfo_frameNo" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_frameNo_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+                            android:orientation="horizontal" >
+
+                            <EditText
+                                android:id="@+id/et_frameNo"
+                                style="@style/edittext_forex_prompt_info"
+                                android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:id="@+id/example3"
+                                style="@style/comm_view_left"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:gravity="left"
+                                android:singleLine="true"
+                                android:text="@string/safety_carsafety_example"
+                                android:textColor="@color/blue"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_frameNo"
+                            style="@style/textview_forex_prompt_info"
+                            android:layout_weight="3.3"
+                            android:singleLine="true"
+                            android:text="@string/safety_carinfo_engineNo"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <!-- 注册日期，行驶城市为北京时隐藏 -->
+
+                    <LinearLayout
+                        android:id="@+id/ll_enrollDate"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:baselineAligned="false"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_five" >
+
+                        <TextView
+                            style="@style/textview_forex_prompt_message"
+                            android:layout_weight="6.5"
+                            android:singleLine="true"
+                            android:text="@string/safety_carinfo_enrollDate" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_enrollDate_input"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.5"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/tv_enrollDate"
+                                style="@style/spinner_forex_prompt_info"
+                                android:layout_height="@dimen/layout_height"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:id="@+id/example4"
+                                style="@style/comm_view_left"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:gravity="left"
+                                android:singleLine="true"
+                                android:text="@string/safety_carsafety_example"
+                                android:textColor="@color/blue"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_enrollDate_show"
+                            style="@style/textview_forex_prompt_info"
+                            android:layout_weight="3.3"
+                            android:singleLine="true"
+                            android:text="@string/safety_carinfo_engineNo"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <!-- 燃油类型 -->
+
+                    <LinearLayout
+                        android:id="@+id/ll_fuelType"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:baselineAligned="false"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_five" >
+
+                        <TextView
+                            style="@style/textview_forex_prompt_message"
+                            android:layout_weight="6.5"
+                            android:singleLine="true"
+                            android:text="@string/safety_carinfo_fuelType" />
+
+                        <Spinner
+                            android:id="@+id/sp_fuelType"
+                            style="@style/spinner_forex_prompt_info"
+                            android:layout_weight="3.3" />
+
+                        <TextView
+                            android:id="@+id/tv_fuelType"
+                            style="@style/comm_view_right"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3.3"
+                            android:singleLine="true"
+                            android:text="@string/safety_carinfo_engineNo"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fill_margin_top"
+                    android:layout_marginRight="@dimen/fill_margin_top"
+                    android:layout_marginTop="@dimen/fill_margin_top"
+                    android:text="如上述信息与实际不符，请致电95566选择中银保险进行咨询。"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textsize_default"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_00" >
+
+    <View
+        android:id="@+id/bg_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/imageviewRight"
+        android:layout_alignParentTop="true"
+        android:background="@color/transparent_dark" />
+
+    <View
+        android:id="@+id/bg_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/imageviewRight"
+        android:background="@color/transparent_dark" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bg_bottom"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/bg_top"
+        android:layout_toLeftOf="@+id/imageviewRight"
+        android:background="@color/transparent_dark" />
+
+    <TextView
+        android:id="@+id/tv_add_notice_title"
+        style="@style/titleText_stepacc"
+        android:layout_centerHorizontal="false"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:gravity="left"
+        android:text="@string/acc_add_notice_title"
+        android:textColor="@color/gray"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_add_notice_title"
+        android:layout_marginTop="@dimen/common_row_margin"
+        android:clickable="false"
+        android:background="@drawable/kapianyinidao" />
+
+    <ImageView
+        android:id="@+id/imageviewtwo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageview"
+        android:clickable="false"
+        android:background="@drawable/cardwelcomtwo" />
+
+    <ImageView
+        android:id="@+id/imageviewRight"
+        android:layout_width="@dimen/dp_seven_zero"
+        android:layout_height="@dimen/acc_list_item_height"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/imageview"
+        android:clickable="false"
+        android:scaleType="fitXY"
+        android:background="@drawable/kapianyinidao_jiantou" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_00" />
+
+</RelativeLayout>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 汽车商业险界面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <include
+        android:id="@+id/layout_step"
+        layout="@layout/safety_carsafety_step" />
+
+    <LinearLayout
+        android:id="@+id/btnlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/fill_margin_top"
+        android:layout_marginLeft="@dimen/fill_margin_top"
+        android:layout_marginRight="@dimen/fill_margin_top"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnSave"
+            style="@style/isforex_two_left_btn"
+            android:text="@string/safety_save" />
+
+        <Button
+            android:id="@+id/btnNext"
+            style="@style/isforex_two_right_btn"
+            android:text="@string/next" />
+
+        <Button
+            android:id="@+id/btnNext_big"
+            style="@style/isforex_two_right_btn"
+            android:text="@string/next"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/biz_List"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btnlayout"
+        android:layout_below="@id/layout_step"
+        android:layout_marginLeft="@dimen/fill_margin_top"
+        android:layout_marginRight="@dimen/fill_margin_top"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/common_row_margin"
+            android:paddingTop="@dimen/common_row_margin" >
+
+            <LinearLayout
+                android:id="@+id/datelayout"
+                style="@style/scrollview_comm"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/safety_carsafety_biztitle" />
+                <!-- 保险期限 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/text_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/safety_carsafety_Date"
+                        android:textColor="@color/fonts_dark_gray"
+                        android:textSize="@dimen/fonts_one_five" />
+                    <TextView
+                        android:id="@+id/tv_InsBeginDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/fonts_black"
+                        android:textSize="@dimen/fonts_one_five" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="@string/to"
+                        android:textColor="@color/fonts_black"
+                        android:textSize="@dimen/fonts_one_five" />
+
+                    <TextView
+                        android:id="@+id/tv_InsEndDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/fonts_black"
+                        android:textSize="@dimen/fonts_one_five" />
+                </LinearLayout>
+                <!-- 投保方案选择 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/fill_padding_top"
+                    android:paddingRight="@dimen/fill_padding_top" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/fill_padding_top"
+                        android:paddingRight="@dimen/fill_padding_top"
+                        android:singleLine="true"
+                        android:text="@string/safety_carsafety_chooseBizType"
+                        android:textColor="@color/fonts_dark_gray"
+                        android:textSize="@dimen/fonts_one_five" />
+
+                    <Spinner
+                        android:id="@+id/sp_bizType"
+                        style="@style/spinner_forex_prompt_info"
+                        android:layout_width="match_parent"
+                        android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                        android:inputType="numberDecimal"
+                        android:maxLength="14" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_bizList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_offer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btnOffer"
+                    style="@style/textview_forex_button_cell"
+                    android:text="@string/safety_carsafety_offer"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/biz_real"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/common_row_margin"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/fill_margin_top" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/safety_carsafety_bizTotal"
+                    android:textColor="@color/fonts_dark_gray"
+                    android:textSize="@dimen/fonts_one_five" />
+
+                <TextView
+                    android:id="@+id/tv_bizRealPremium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/tran_line"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/fonts_one_five" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/biz_BJ"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/fill_margin_top" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/safety_carsafety_BJtotal"
+                    android:textColor="@color/fonts_dark_gray"
+                    android:textSize="@dimen/fonts_one_five" />
+
+                <TextView
+                    android:id="@+id/tv_bizBJ"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/tran_line"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/fonts_one_five" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

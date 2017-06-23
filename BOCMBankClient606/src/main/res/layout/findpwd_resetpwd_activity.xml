@@ -1,0 +1,262 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_content" >
+
+    <!-- 重置密码step -->
+
+    <include
+        android:id="@+id/stepbar"
+        layout="@layout/step_title_layout" />
+    <!-- 找回密码信息部分 -->
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        style="@style/scrollview_comm_havemarginbutton"
+        android:layout_above="@+id/btn_layout"
+        android:layout_below="@+id/stepbar" >
+
+        <LinearLayout style="@style/tran_detail_activity_ll" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/fill_margin_right"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/comm_view_left_noweight"
+                    android:layout_weight="6"
+                    android:text="@string/tel_num" />
+
+                <EditText
+                    android:id="@+id/register_et_login_name"
+                    style="@style/comm_view_right_noweight"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_weight="4"
+                    android:background="@drawable/bg_for_edittext"
+                    android:maxLength="15"
+                    android:singleLine="true"
+                    android:textColor="@color/black" >
+
+                    <requestFocus />
+                </EditText>
+                <!-- android:hint="@string/hint_reg_tel_number" -->
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_sec_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingLeft="@dimen/fill_padding_left"
+                android:paddingRight="@dimen/fill_padding_left"
+                android:text="@string/reset_new_password"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_default" />
+
+            <LinearLayout
+                android:id="@+id/ll_old_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/fill_margin_right"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/comm_view_left_noweight"
+                    android:layout_weight="6"
+                    android:text="@string/old_old_password" />
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="4" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_sip3"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/fill_margin_right"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/comm_view_left_noweight"
+                    android:layout_weight="6"
+                    android:text="@string/password" />
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="4" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_sip1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/fill_margin_right"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/comm_view_left_noweight"
+                    android:layout_weight="6"
+                    android:text="@string/password_confirm" />
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="4" >
+
+                    <LinearLayout
+                        android:id="@+id/ll_sip2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:orientation="horizontal" >
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/code_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/mobile_code_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/fill_margin_right"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/comm_view_left_noweight"
+                        android:layout_weight="6"
+                        android:text="@string/smstlable_str" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:orientation="horizontal" >
+
+                        <cfca.mobile.sip.SipBox
+                            android:id="@+id/mobile_code_sip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/edittext_height"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="4"
+                            android:layout_marginRight="@dimen/titlebackbtn_marginleft"
+                            android:background="@drawable/bg_for_edittext"
+                            android:gravity="center_vertical"
+                            android:maxLength="20"
+                            android:paddingLeft="@dimen/edittext_paddinglr" >
+                        </cfca.mobile.sip.SipBox>
+
+                        <Button
+                            android:id="@+id/smsbtn"
+                            style="@style/button_smscode"
+                            android:layout_marginRight="@dimen/layout_margin_top" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/active_code_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/fill_margin_right"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/comm_view_left_noweight"
+                        android:layout_weight="6"
+                        android:text="@string/active_code" />
+
+                    <cfca.mobile.sip.SipBox
+                        android:id="@+id/active_code_sip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="4"
+                        android:background="@drawable/bg_for_edittext"
+                        android:gravity="center_vertical"
+                        android:maxLength="20"
+                        android:paddingLeft="@dimen/edittext_paddinglr" >
+                    </cfca.mobile.sip.SipBox>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/layout_margin_top"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:text="@string/mark_words_title"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/textsize_default" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <!--
+        <Button
+            android:id="@+id/findpwd_btn_last"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_blue_big"
+            android:text="@string/last"
+            android:textColor="@color/white" >
+            <requestFocus />
+        </Button>
+        -->
+
+        <Button
+            android:id="@+id/findpwd_btn_conf"
+            style="@style/bottombtn"
+            android:text="@string/confirm"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

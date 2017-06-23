@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 我的现金宝画面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0dp" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/fill_margin_left"
+                android:paddingRight="@dimen/fill_margin_right" >
+
+                <TextView
+                    android:paddingLeft="@dimen/dp_five"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fill_margin_top"
+                    android:text="@string/cashbank_balance_2"
+                    android:textColor="@color/gray_title"
+                    android:textSize="@dimen/textsize_one_for" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/fill_margin_bottom"
+                    android:layout_marginTop="@dimen/dp_five"
+                    android:gravity="center_horizontal" >
+
+                    <TextView
+                        android:id="@+id/tv_cashbank_balance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="-"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/textsize_three_zero" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_five"
+                        android:text="元"
+                        android:textColor="@color/gray_title"
+                        android:textSize="@dimen/textsize_one_for" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp_one_zero"
+                android:paddingLeft="@dimen/fill_margin_left"
+                android:paddingRight="@dimen/fill_margin_right"
+                android:paddingTop="@dimen/dp_one_zero" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cashbank_yesterday_yields"
+                        android:textColor="@color/gray_title"
+                        android:textSize="@dimen/textsize_one_for" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_cashbank_yesterday_yields"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="-"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/textsize_two_zero" />
+
+                        <TextView
+                            android:id="@+id/tv_cashbank_yesterday_yields_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="元"
+                            android:textColor="@color/gray_title"
+                            android:textSize="@dimen/textsize_one_for" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dip"
+                    android:layout_height="fill_parent"
+                    android:background="@color/gray_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cashbank_sum_yields"
+                        android:textColor="@color/gray_title"
+                        android:textSize="@dimen/textsize_one_for" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_cashbank_sum_yields"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="-"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/textsize_two_zero" />
+
+                        <TextView
+                            android:id="@+id/tv_cashbank_sum_yields_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="元"
+                            android:textColor="@color/gray_title"
+                            android:textSize="@dimen/textsize_one_for" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/fill_margin_left"
+                android:paddingRight="@dimen/fill_margin_right" 
+                android:paddingTop="@dimen/fill_padding_top" 
+                android:paddingBottom="@dimen/fill_margin_bottom">
+
+                <TextView
+                    android:id="@+id/tv_fee_date"
+                    style="@style/textview_common"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="昨日收益"
+                    android:paddingLeft="@dimen/dp_five"
+                    android:textColor="@color/gray_title"
+                    android:textSize="@dimen/textsize_one_for" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/dp_five"
+                        android:text="万份收益： "
+                        android:textColor="@color/gray_title"
+                        android:textSize="@dimen/textsize_one_for" />
+
+                    <TextView
+                        android:id="@+id/tv_fee_unitvalue"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" -"
+                        android:textSize="@dimen/textsize_two_zero" />
+                    
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="元"
+                        android:textColor="@color/gray_title" 
+                        android:textSize="@dimen/textsize_one_for"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/dp_five"
+                        android:text="七日年化收益率："
+                        android:textColor="@color/gray_title"
+                        android:textSize="@dimen/textsize_one_for" />
+
+                    <TextView
+                        android:id="@+id/tv_fee_rate"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" -"
+                        android:textSize="@dimen/textsize_two_zero" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/dp_five"
+                        android:text="@string/cash_rate_info"
+                        android:textColor="@color/gray_title"
+                        android:textSize="@dimen/textsize_one_for" />
+
+                    <TextView
+                        android:id="@+id/tv_rate_info"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" -"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/textsize_two_zero" />
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/dp_five"
+                        android:text="倍"
+                        android:textColor="@color/gray_title"
+                        android:textSize="@dimen/textsize_one_for" />
+                </LinearLayout>
+                
+                
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" 
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="是活期存款的"
+                        android:paddingLeft="@dimen/dp_five"
+                        android:textColor="@color/gray_title"
+                        android:textSize="@dimen/textsize_one_for" />
+
+                    <TextView
+                        android:id="@+id/tv_fee_rate_beishu"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/textsize_three_zero" />
+
+                    <TextView
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="倍"
+                        android:textColor="@color/gray_title"
+                        android:textSize="@dimen/textsize_one_for" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp_one_zero"
+                android:paddingLeft="@dimen/fill_margin_left"
+                android:paddingRight="@dimen/fill_margin_right"
+                android:paddingTop="@dimen/dp_one_zero" >
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="@string/cash_main_tips"
+                     android:textColor="@color/gray_title"
+                     android:textSize="@dimen/textsize_one_for" />   
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_one_zero"
+                android:paddingRight="@dimen/dp_one_zero" >
+
+                <Button
+                    android:id="@+id/btn_cashbank_in"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dp_five_zero"
+                    android:layout_marginRight="@dimen/dp_five"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_gray"
+                    android:gravity="center"
+                    android:text="@string/cashbank_in"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" />
+				<Button
+                    android:id="@+id/btn_cash_many"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dp_five_zero"
+                    android:layout_marginLeft="@dimen/dp_five"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_gray"
+                    android:gravity="center"
+                    android:text="@string/product_more"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_default" />
+                <!-- <Button
+                    android:id="@+id/btn_cashbank_out"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dp_five_zero"
+                    android:layout_marginLeft="@dimen/dp_five"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_red_big"
+                    android:gravity="center"
+                    android:text="@string/cashbank_out"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textsize_default" /> -->
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

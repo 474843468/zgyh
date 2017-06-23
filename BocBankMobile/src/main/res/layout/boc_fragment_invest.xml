@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+>
+  <android.support.v4.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@id/tv_title"
+      android:orientation="vertical"
+  >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+      <!-- header  -->
+      <FrameLayout
+          android:id="@+id/view_header"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+      >
+     <!--   <com.boc.bocsoft.mobile.bocmobile.base.widget.AccountListItemView.PartialLoadView
+            android:id="@+id/view_loading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:visibility="invisible"
+        />-->
+
+        <com.boc.bocsoft.mobile.bocmobile.buss.system.invest.ui.view.MineAssetsCardView
+            android:id="@+id/view_assetinfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/boc_invest_header_bg"
+            android:visibility="invisible"/>
+        <!-- 未登录广告 -->
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.banner.ConvenientBanner
+            android:id="@+id/view_banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:canLoop="true"
+        />
+
+      </FrameLayout>
+      <View android:layout_width="match_parent"
+          android:layout_height="@dimen/boc_divider_1px"
+          android:background="#eaedf0"
+      />
+      <com.boc.bocsoft.mobile.bocmobile.base.widget.gridview.DragGridView
+          android:id="@+id/view_menu"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="#ffffff"
+          android:listSelector="@null"
+          android:numColumns="4"
+          android:scrollbars="none"
+          android:stretchMode="columnWidth"
+          android:horizontalSpacing="1dp"
+          android:verticalSpacing="1dp"
+          app:horizontalSpacingColor="#eaedf0"
+          app:verticalSpacingColor="#eaedf0"
+      />
+
+      <!-- 优选投资 -->
+      <TextView
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/boc_space_between_60px"
+          android:layout_marginTop="@dimen/boc_space_between_20px"
+          android:background="#fefefe"
+          android:drawableLeft="@drawable/boc_main_group_left"
+          android:drawablePadding="@dimen/boc_space_between_14px"
+          android:gravity="center_vertical"
+          android:text="优选投资"
+          android:textStyle="bold"
+          android:textColor="@color/boc_text_color_dark_gray"
+          android:textSize="@dimen/boc_text_size_small"/>
+   <!--   <View
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/boc_divider_1px"
+          android:background="@color/boc_divider_line_color"
+      />-->
+      <com.boc.bocsoft.mobile.bocmobile.buss.system.invest.ui.view.OptimalListView
+          android:id="@+id/ll_optimal"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginBottom="@dimen/boc_space_between_20px"
+      />
+    </LinearLayout>
+  </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>

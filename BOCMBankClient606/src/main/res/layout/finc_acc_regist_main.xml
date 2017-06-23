@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 我的基金   基金账户设置 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/common_bottom_padding" >
+
+    <include
+        android:id="@+id/stepbar"
+        layout="@layout/step_title_layout" />
+
+    <TextView
+        android:id="@+id/tv_relevance_debit_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stepbar"
+        android:paddingBottom="@dimen/fill_padding_top"
+        android:paddingLeft="@dimen/fill_padding_top"
+        android:paddingTop="@dimen/fill_padding_top"
+        android:text="@string/finc_acc_regisitAcc_first_info"
+        android:textColor="@color/gray" />
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            android:id="@+id/finc_next"
+            style="@style/bottombtn_606"
+            android:text="@string/next"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/address_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_btn"
+        android:layout_margin="@dimen/common_row_margin"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_weight="4"
+            android:gravity="center_vertical"
+            android:text="地址类型:" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/finc_home_address"
+                style="@style/twoRadioButtonLeft"
+                android:text="@string/finc_acc_regisitAcc_homeAddress" />
+
+            <RadioButton
+                android:id="@+id/finc_company_address"
+                style="@style/twoRadioButtonRight"
+                android:text="@string/finc_acc_regisitAcc_companyAddress" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/finc_ListView"
+        style="@style/listviewcomm_wrap_haveDivider"
+        android:layout_above="@id/ll_btn"
+        android:layout_alignLeft="@+id/tv_relevance_debit_title"
+        android:layout_below="@id/tv_relevance_debit_title"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_right"
+        android:paddingLeft="@dimen/common_listview_item_paddingLR"
+        android:layout_marginBottom="@dimen/common_row_margin"
+        android:paddingRight="@dimen/common_listview_item_paddingLR" >
+    </ListView>
+
+</RelativeLayout>

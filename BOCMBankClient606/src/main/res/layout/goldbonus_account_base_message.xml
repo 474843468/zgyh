@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/header_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/textsize_two_for"
+                android:background="#e6e6e6"
+                android:gravity="center"
+                android:paddingLeft="@dimen/fill_margin_left"
+                android:paddingRight="@dimen/fill_margin_right"
+                android:visibility="visible" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="贵金属积利金行情"
+                    android:textSize="@dimen/textsize_default"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sbremit_quotations_lv_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/header_layout"
+                android:background="@color/white"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/lv_head"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:background="@drawable/bg_for_listview_item_write"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/listiterm_padding_left" >
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal" >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical" >
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="@string/prms_price_buyrate"
+                                        android:textSize="@dimen/textsize_default" />
+
+                                    <TextView
+                                        android:id="@+id/prms_price_listiterm1_buyprice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="0dp"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="@dimen/common_listview_item_paddingLR"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:textSize="@dimen/textsize_default"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal" >
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical" >
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:text="@string/prms_price_salerate"
+                                        android:textSize="@dimen/textsize_default" />
+
+                                    <TextView
+                                        android:id="@+id/prms_price_listiterm1_saleprice"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_marginRight="@dimen/prms_updownflag_margin_left"
+                                        android:layout_marginTop="@dimen/common_listview_item_paddingLR"
+                                        android:layout_weight="1"
+                                        android:gravity="center"
+                                        android:textSize="@dimen/textsize_default"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:orientation="horizontal" >
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/goldbounsgray" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/goldbonus_account_unit"
+                                    android:textColor="@color/gray"
+                                    android:textSize="@dimen/textsize_default" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/message_reminder_red"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:text="@string/goldbonus_account_reminder_message_outlay"
+                                android:textColor="@color/fonts_pink"
+                                android:singleLine="true"
+                                android:textSize="@dimen/textsize_default" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--
+             <ScrollView
+            style="@style/listviewcomm_fill_haveDivider"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:background="@drawable/bg_for_listview_item_write" >
+                -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="8"
+                    android:background="@drawable/bg_for_listview_item_write"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/textsize_two_for"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:background="#e6e6e6"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="客户贵金属积利排名"
+                                android:textSize="@dimen/textsize_default"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:text="您在我行的当前持仓数量排名："
+                                android:textColor="@color/fonts_dark_gray"
+                                android:textSize="@dimen/textsize_default" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="right"
+                                android:layout_weight="1" >
+
+                                <TextView
+                                    android:id="@+id/number_rank"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textSize="@dimen/textsize_default" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="名  (积利金) "
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize_default" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:text="您在我行本年交易量排名："
+                                android:textColor="@color/fonts_dark_gray"
+                                android:textSize="@dimen/textsize_default" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="right"
+                                android:layout_weight="1" >
+
+                                <TextView
+                                    android:id="@+id/educate_rank"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=""
+                                    android:textSize="@dimen/textsize_default" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="名  (积利金) "
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/textsize_default" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_for_listview_item_write"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/listiterm_padding_left" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_for_zero"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="0.8"
+                            android:background="#e6e6e6"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:gravity="center_horizontal"
+                                android:text="贵金属积利交易账户信息"
+                                android:textSize="@dimen/textsize_default"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1" >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="3dp"
+                                    android:text="累积红利："
+                                    android:textColor="@color/fonts_pink"
+                                    android:textSize="@dimen/textsize_default"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/rmb_available"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:text="人民币元"
+                                    android:textColor="@color/fonts_pink"
+                                    android:textSize="@dimen/textsize_default"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_weight="3"
+                                android:orientation="vertical" >
+
+                                <!-- 交易账户 -->
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="left"
+                                        android:text="@string/goldbonus_busitrade_accno"
+                                        android:textColor="@color/fonts_dark_gray"
+                                        android:textSize="@dimen/textsize_default" />
+
+                                    <TextView
+                                        android:id="@+id/goldbonus_account"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="left"
+                                        android:text=""
+                                        android:textSize="@dimen/textsize_default" />
+
+                                    <TextView
+                                        android:id="@+id/goldbonus_account_type"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="left"
+                                        android:ellipsize="end"
+                                        android:singleLine="true"
+                                        android:text=""
+                                        android:textSize="@dimen/textsize_default" />
+                                </LinearLayout>
+                                <!-- 可用余额 -->
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center_vertical"
+                                    android:orientation="horizontal" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="right"
+                                        android:text="@string/goldbonus_account_availbalance"
+                                        android:textColor="@color/fonts_dark_gray"
+                                        android:textSize="@dimen/textsize_default" />
+
+
+                                    <TextView
+                                        android:id="@+id/goldbonus_available_balance"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="left"
+                                        android:text=""
+                                        android:textSize="@dimen/textsize_default" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/sbremit_quotations_lv_layout"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="2dp"
+                            android:orientation="horizontal" >
+
+                        <Button
+                            android:id="@+id/finc_buy"
+                            style="@style/btn_common_oneline"
+                            android:background="@drawable/share_white_button_round"
+                            android:text="@string/goldbonus_account_buy_live"
+                            android:textColor="@color/boc_text_color_red"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/change_account"
+                            style="@style/btn_common_oneline"
+                            android:background="@drawable/selector_btn_red"
+                            android:text="@string/goldbonus_account_change_trade_account"
+                            android:textColor="@color/white"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                    </LinearLayout>
+
+                    
+                </LinearLayout>
+                <!-- </ScrollView> -->
+            </LinearLayout>
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                >
+                <TextView 
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="贵金属积利业务买卖提供报价时间为每周一至周五9:00-11:30、13:30-15:15，如遇国家法定节假日则不提供服务。"
+                    android:textSize="@dimen/textsize_default"
+                    android:textColor="@color/gray"
+                    />
+                
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dept_save_regular_bottom"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/dept_save_title_tv"
+        style="@style/save_title_tv"
+        android:text="@string/whole_save_checkout" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shap_for_dept_tranlist"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/layout_margin_top"
+        android:paddingLeft="@dimen/layout_padding_left_right"
+        android:paddingRight="@dimen/layout_padding_left_right" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/fill_padding_right" >
+
+            <TextView
+                android:id="@+id/dept_currency_cashremit_tv"
+                style="@style/comm_view_left"
+                android:text="@string/currency_cashremit" 
+                android:singleLine="true"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/edittext_paddinglr"
+                android:layout_weight="3" >
+
+                <TextView
+                    android:id="@+id/dept_currency_tv"
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/dept_cashremit_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:id="@+id/dept_cashremit_tv"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/fill_padding_right" >
+
+            <TextView
+                style="@style/comm_view_left_noweight"
+                android:text="@string/chaohui" 
+                android:layout_weight="3"/>
+
+            <TextView
+                android:id="@+id/dept_cashremit_tv"
+                style="@style/comm_view_right_noweight"
+                android:layout_weight="2"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" >
+            </TextView>
+        </LinearLayout> -->
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/fill_padding_right" >
+
+            <TextView
+                style="@style/comm_view_left"
+                android:text="@string/save_type" />
+
+            <TextView
+                android:id="@+id/dept_save_type_tv"
+                style="@style/comm_view_right"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" >
+            </TextView>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/dept_checkout_way_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/fill_padding_right"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/comm_view_left"
+                android:text="@string/checkout_way" />
+
+            <TextView
+                android:id="@+id/dept_checkout_way_tv"
+                style="@style/comm_view_right"
+                android:singleLine="true"
+                android:text="@string/checkout_whole_money"
+                android:textSize="@dimen/textsize_default" >
+            </TextView>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/ll_checkout_way"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/fill_padding_right" 
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/comm_view_left"
+                android:text="@string/checkout_way" />
+
+            <Spinner 
+                android:id="@+id/s_checkout_way"
+                android:layout_weight="3"
+                style="@style/Spiiner_fill_small"
+                />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/ll_dept_despite_amount"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/fill_padding_right"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/comm_view_left"
+                android:text="@string/save_sheet_money" />
+
+            <TextView
+                android:id="@+id/dept_despite_amount_tv"
+                style="@style/comm_view_right"
+                android:textColor="@color/red"
+                android:singleLine="true" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dept_checkout_money_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/fill_padding_right" >
+
+            <TextView
+                style="@style/comm_view_left"
+                android:text="@string/checkout_money" />
+
+            <TextView
+                android:id="@+id/dept_checkmoeny_tv"
+                style="@style/comm_view_right"
+                android:singleLine="true"
+                android:textColor="@color/red"
+                android:textSize="@dimen/textsize_default" >
+            </TextView>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/dept_amount_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/fill_padding_right" 
+            android:visibility="gone">
+
+            <TextView
+                style="@style/comm_view_left"
+                android:text="@string/checkout_money" />
+
+            <EditText
+                android:id="@+id/dept_amount_et"
+                style="@style/comm_view_right"
+                android:layout_height="@dimen/edittext_height"
+                        android:background="@drawable/bg_for_edittext"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" 
+                android:maxLength="14"
+                android:inputType="numberDecimal">
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin_top"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/fill_padding_right" >
+
+            <TextView
+                style="@style/comm_view_left"
+                android:text="@string/fuYan" />
+
+            <EditText
+                android:id="@+id/dept_message_et"
+                style="@style/comm_view_right"
+                android:layout_height="@dimen/edittext_height"
+                        android:background="@drawable/bg_for_edittext"
+                android:hint="@string/hint_memo"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default"
+                android:maxLength="50" >
+            </EditText>
+        </LinearLayout>
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:layout_height="@dimen/common_row_margin" 
+            android:background="@color/transparent_00" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_margin_top" >
+
+        <Button
+            android:id="@+id/dept_nowExe_btn"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/nowExe" />
+
+        <Button
+            android:id="@+id/dept_preDateExe_btn"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/preDateExe" />
+    </LinearLayout>
+
+</LinearLayout>

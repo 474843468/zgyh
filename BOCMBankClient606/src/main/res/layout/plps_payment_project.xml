@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray_line"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/all_payment_project"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/envelope_mid_height"
+            android:layout_weight="1.0"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/all_payment_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/plps_payment_color_1" />
+
+            <ImageView
+                android:id="@+id/all_payment_image_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/plps_payment_gray_1"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/all_payment_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plps_common_service" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/v1"
+            android:layout_width="0.5dip"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/common_row_margin_half"
+            android:layout_marginTop="@dimen/common_row_margin_half"
+            android:background="@color/red" />
+
+        <LinearLayout
+            android:id="@+id/common_service_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/common_service_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/plps_payment_color_2"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/common_service_image_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/plps_payment_gray_2" />
+
+            <TextView
+                android:id="@+id/common_service_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/plps_payment_query" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/cursor"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_weight="1.0"
+            android:background="@color/red" />
+
+        <TextView
+            android:id="@+id/cursort"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_weight="1.0"
+            android:background="@color/red"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <!-- <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:flipInterval="30"
+        android:persistentDrawingCache="animation" /> -->
+       
+        <FrameLayout 
+            android:id="@+id/comm_fragment"
+            android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:adjustViewBounds="true"
+	        />
+
+</LinearLayout>

@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/layout_step"
+        layout="@layout/safety_carsafety_step" />
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_right"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnSave"
+            style="@style/isforex_two_left_btn"
+            android:text="@string/safety_save" />
+
+        <Button
+            android:id="@+id/btnNext"
+            style="@style/isforex_two_right_btn"
+            android:text="@string/next" />
+
+        <Button
+            android:id="@+id/btnNext_big"
+            style="@style/bottombtn"
+            android:background="@drawable/btn_red_big_long"
+            android:text="@string/next"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <ScrollView
+        style="@style/listviewcomm_fill_haveDivider"
+        android:layout_above="@id/btn_layout"
+        android:layout_below="@id/layout_step"
+        android:layout_marginLeft="@dimen/fill_margin_top"
+        android:layout_marginRight="@dimen/fill_margin_top"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/fill_margin_top"
+                android:paddingTop="@dimen/fill_margin_top" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/whitefornet"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="6dip"
+                    android:paddingTop="6dip" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:text="@string/safety_productbuy_msgfill_secondtitle"
+                         />
+                </LinearLayout>
+                <!-- 项目  start -->
+
+
+                <!-- 姓名 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:layout_weight="5.5"
+                        android:singleLine="true"
+                        android:text="@string/safety_hold_pro_detail_applicant_name"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_firstname"
+                        style="@style/textview_forex_prompt_info"
+                        android:layout_weight="3.5"
+                        android:paddingLeft="0dip"
+                        android:singleLine="true"
+                        />
+                </LinearLayout>
+                <!-- 手机号码 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="5.5"
+                        android:singleLine="true"
+                        android:text="@string/trans_remit_phone"
+                        
+                         />
+
+                    <EditText
+                        android:id="@+id/et_firstphone"
+                        style="@style/edittext_forex_prompt_info" 
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dip"
+                        android:layout_weight="3.5"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:singleLine="true"
+                         />
+                </LinearLayout>
+                <!-- 证件类型 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="5.5"
+                        android:singleLine="true"
+                        android:text="@string/id_category"
+                        
+                         />
+
+                    <TextView
+                        android:id="@+id/tv_firstidtype"
+                        style="@style/comm_view_right"
+                        android:layout_weight="3.5"
+                        android:paddingLeft="0dip"
+                        android:singleLine="true"
+                        android:text="@string/tran_line"
+                        
+                         />
+                </LinearLayout>
+                <!-- 证件号码 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="5.5"
+                        android:singleLine="true"
+                        android:text="@string/bocinvt_eva_identityactnum"
+                        
+                         />
+
+                    <TextView
+                        android:id="@+id/tv_firstidnumber"
+                        style="@style/textview_forex_prompt_info"
+                        android:layout_weight="3.5"
+                        android:ellipsize="end"
+
+                        android:singleLine="true"
+                        
+                         />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="5.5"
+                        android:singleLine="true"
+                        android:text="@string/safety_buyeridlastdate"
+                        
+                         />
+
+                    <TextView
+                        android:id="@+id/tv_firstidlastdate"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/layout_height"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="3.5"
+                        android:background="@drawable/bg_spinner"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dip" />
+                </LinearLayout>
+
+                <!-- 电子邮箱 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="5.5"
+                        android:singleLine="true"
+                        android:text="@string/safety_email"
+                        
+                         />
+
+                    <EditText
+                        android:id="@+id/et_firstemail"
+                        style="@style/edittext_forex_prompt_info" 
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dip"
+                        android:layout_weight="3.5"
+                        android:gravity="center_vertical"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="40"
+                        android:singleLine="true"
+                         />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="7.0"
+                        android:singleLine="true"
+                        
+                        
+                        android:visibility="invisible" />
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="1.0"
+                        android:gravity="left"
+                        android:text="@string/safety_carsafety_email_alert_info"
+                        android:textColor="@color/red"
+                         />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:background="@color/whitefornet"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="6dip"
+                    android:paddingTop="6dip" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:text="@string/safety_carsafety_benInfo"
+                        
+                         />
+                </LinearLayout>
+
+                <!-- 姓名 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/common_row_margin"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="5.5"
+                        android:singleLine="true"
+                        android:text="@string/safety_hold_pro_detail_applicant_name"
+                        
+                         />
+
+                    <TextView
+                        android:id="@+id/tv_secondname"
+                        style="@style/textview_forex_prompt_info"
+                        android:layout_weight="3.5"
+
+                        android:singleLine="true"
+                        />
+                </LinearLayout>
+                <!-- 手机号码 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/common_row_margin"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="5.5"
+                        android:singleLine="true"
+                        android:text="@string/trans_remit_phone"
+                        
+                         />
+
+                    <EditText
+                        android:id="@+id/et_secondphone"
+                        style="@style/edittext_forex_prompt_info" 
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dip"
+                        android:layout_weight="3.5"
+                        android:gravity="center_vertical"
+                        android:inputType="phone"
+                        android:maxLength="11"
+                        android:singleLine="true"
+                         />
+                </LinearLayout>
+                <!-- 证件类型 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/common_row_margin"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="5.5"
+                        android:singleLine="true"
+                        android:text="@string/id_category"
+                        
+                         />
+
+                    <TextView
+                        android:id="@+id/tv_secondidtype"
+                        style="@style/textview_forex_prompt_info"
+                        android:layout_weight="3.5"
+
+                        android:singleLine="true"
+                        
+                         />
+                </LinearLayout>
+                <!-- 证件号码 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/common_row_margin"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="5.5"
+                        android:singleLine="true"
+                        android:text="@string/bocinvt_eva_identityactnum"
+                        
+                         />
+
+                    <TextView
+                        android:id="@+id/tv_secondidnumber"
+                        style="@style/comm_view_right"
+                        android:layout_weight="3.5"
+                        android:paddingLeft="0dip"
+                        android:singleLine="true"
+                        
+                         />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:background="@color/whitefornet"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="6dip"
+                    android:paddingTop="6dip" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:gravity="left"
+                        android:singleLine="true"
+                        android:text="@string/safety_carsafety_otherInfo"
+                        
+                         />
+                </LinearLayout>
+                <!-- 发票抬头 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/common_row_margin"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="5.0"
+                        android:singleLine="true"
+                        android:text="@string/safety_invoice_title"
+                        
+                         />
+
+                    <EditText
+                        android:id="@+id/et_third_invoicetitle"
+                        style="@style/edittext_forex_prompt_info" 
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dip"
+                        android:layout_weight="3.5"
+                        android:gravity="center_vertical"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:singleLine="true"
+                         />
+                </LinearLayout>
+                <!-- 收件人姓名 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/common_row_margin"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="5.0"
+                        android:singleLine="true"
+                        android:text="@string/safety_invoice_hadname"
+                        
+                         />
+
+                    <EditText
+                        android:id="@+id/et_third_invoicehadname"
+                        style="@style/edittext_forex_prompt_info" 
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dip"
+                        android:layout_weight="3.5"
+                        android:gravity="center_vertical"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:singleLine="true"
+                         />
+                </LinearLayout>
+                <!-- 收件人联系电话 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/common_row_margin"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="5.0"
+                        android:gravity="right"
+                        android:singleLine="true"
+                        android:text="@string/safety_carsafety_shoujianrenPhone"
+                        
+                         />
+
+                    <EditText
+                        android:id="@+id/et_third_invoicehadphone"
+                        style="@style/edittext_forex_prompt_info" 
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dip"
+                        android:layout_weight="3.5"
+                        android:digits=" -0123456789"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:maxLength="18"
+                        android:singleLine="true"
+                         />
+                </LinearLayout>
+                <!-- 发票邮寄地址 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/common_row_margin"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="5.0"
+                        android:singleLine="true"
+                        android:text="@string/safety_invoice_adress2"
+                        
+                         />
+
+                    <EditText
+                        android:id="@+id/et_third_invoiceadress"
+                        style="@style/edittext_forex_prompt_info" 
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dip"
+                        android:layout_weight="3.5"
+                        android:gravity="center_vertical"
+                        android:inputType="text"
+                        android:maxLength="80"
+                        android:singleLine="true"
+                         />
+                </LinearLayout>
+                <!-- 邮编 -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/common_row_margin"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                       style="@style/textview_forex_prompt_message" 
+                        android:layout_weight="5.0"
+                        android:singleLine="true"
+                        android:text="@string/bocinvt_eva_postcode"
+                        
+                         />
+
+                    <EditText
+                        android:id="@+id/et_third_post"
+                        style="@style/edittext_forex_prompt_info" 
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dip"
+                        android:layout_weight="3.5"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:singleLine="true"
+                         />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 项目  end -->
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

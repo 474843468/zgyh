@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/bocinvt_bg_rectangle_gray_sideline_round_corners" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bocinvt_redeem_succeed_reminder"
+                android:gravity="center"
+                android:textColor="@color/gray" />
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/ltv_transaction_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:labelText="@string/bocinvt_transaction_code" />
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/ltv_request_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:labelText="@string/bocinvt_redeem_request_date" />
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/ltv_product_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:labelText="@string/bocinvt_product_code" />
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/ltv_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:labelText="@string/bocinvt_product_name" />
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/ltv_product_currency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:labelText="@string/curCode" />
+            
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/ltv_cashRemit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:labelText="@string/bocinvt_tv_40" />
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/ltv_redeem_quantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:labelText="@string/bocinvt_redeem_quantity" />
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/ltv_redeem_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:labelText="@string/bocinvt_redeem_amount"
+                android:visibility="gone" />
+
+            <com.chinamworld.bocmbci.userwidget.LabelTextView
+                android:id="@+id/ltv_redeem_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                custom:labelText="@string/bocinvt_redeem_assign_date_1"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/tv_reminder"
+                android:textSize="@dimen/textsize_default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+            	android:layout_marginTop="5dp"
+            	android:layout_marginLeft="4dp"
+                android:textColor="@color/red" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/bt_finish"
+        style="@style/bottombtn"
+        android:text="@string/finish" />
+
+</LinearLayout>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/fill_padding_bottom"
+            android:paddingTop="@dimen/fill_padding_top" >
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/blpt_main_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/fill_padding_left"
+                        android:paddingRight="@dimen/fill_padding_right" >
+
+                        <!-- 项目  start -->
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:gravity="center"
+                            android:text="@string/collect_delete_tip"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/textsize_default" >
+                        </TextView>
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:shrinkColumns="1" >
+
+                            <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                                <TextView
+                                    style="@style/comm_view_left"
+                                    android:layout_weight="0"
+                                    android:singleLine="true"
+                                    android:text="@string/collect_rulenno" />
+
+                                <TextView
+                                    android:id="@+id/tv_rulenno"
+                                    style="@style/comm_view_right"
+                                    android:layout_weight="0"
+                                    android:paddingLeft="0dp"
+                                    android:singleLine="true" />
+                            </TableRow>
+
+                            <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                                <TextView
+                                    style="@style/comm_view_left"
+                                    android:layout_weight="0"
+                                    android:singleLine="true"
+                                    android:text="@string/collect_payee_account" />
+
+                                <TextView
+                                    android:id="@+id/tv_payee_account"
+                                    style="@style/comm_view_right"
+                                    android:layout_weight="0"
+                                    android:paddingLeft="0dp"
+                                    android:singleLine="true" />
+                            </TableRow>
+
+                            <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                                <TextView
+                                    style="@style/comm_view_left"
+                                    android:layout_weight="0"
+                                    android:singleLine="true"
+                                    android:text="@string/collect_payer_account" />
+
+                                <TextView
+                                    android:id="@+id/tv_payer_account"
+                                    style="@style/comm_view_right"
+                                    android:layout_weight="0"
+                                    android:paddingLeft="0dp"
+                                    android:singleLine="true" />
+                            </TableRow>
+
+                            <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                                <TextView
+                                    style="@style/comm_view_left"
+                                    android:layout_weight="0"
+                                    android:singleLine="true"
+                                    android:text="@string/collect_payer_account_name" />
+
+                                <TextView
+                                    android:id="@+id/tv_payer_name"
+                                    style="@style/comm_view_right"
+                                    android:layout_weight="0"
+                                    android:paddingLeft="0dp"
+                                    android:singleLine="true" />
+                            </TableRow>
+
+                            <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                                <TextView
+                                    style="@style/comm_view_left"
+                                    android:layout_weight="0"
+                                    android:singleLine="true"
+                                    android:text="@string/collect_payer_account_bank" />
+
+                                <TextView
+                                    android:id="@+id/tv_payer_bank"
+                                    style="@style/comm_view_right"
+                                    android:layout_weight="0"
+                                    android:paddingLeft="0dp"
+                                    android:singleLine="true" />
+                            </TableRow>
+
+                            <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                                <TextView
+                                    style="@style/comm_view_left"
+                                    android:layout_weight="0"
+                                    android:text="@string/collect_mode" />
+
+                                <TextView
+                                    android:id="@+id/tv_collect_mode"
+                                    style="@style/comm_view_right"
+                                    android:layout_weight="0"
+                                    android:paddingLeft="0dp"
+                                    android:singleLine="true" />
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/amount_layout"
+                                android:layout_marginTop="@dimen/common_row_margin" >
+
+                                <TextView
+                                    android:id="@+id/tv_amount_table"
+                                    style="@style/comm_view_left"
+                                    android:layout_weight="0"
+                                    android:text="@string/collect_retain_amount" />
+
+                                <TextView
+                                    android:id="@+id/tv_amount"
+                                    style="@style/comm_view_right"
+                                    android:layout_weight="0"
+                                    android:paddingLeft="0dp"
+                                    android:singleLine="true"
+                                    android:textColor="@color/red" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_marginTop="@dimen/common_row_margin"
+                                android:visibility="gone" >
+
+                                <TextView
+                                    style="@style/comm_view_left"
+                                    android:layout_weight="0"
+                                    android:text="@string/collect_currency" />
+
+                                <TextView
+                                    android:id="@+id/tv_currency"
+                                    style="@style/comm_view_right"
+                                    android:layout_weight="0"
+                                    android:paddingLeft="0dp"
+                                    android:singleLine="true" />
+                            </TableRow>
+
+                            <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                                <TextView
+                                    style="@style/comm_view_left"
+                                    android:layout_weight="0"
+                                    android:text="@string/collect_rule" />
+
+                                <TextView
+                                    android:id="@+id/tv_rule"
+                                    style="@style/comm_view_right"
+                                    android:layout_weight="0"
+                                    android:paddingLeft="0dp"
+                                    android:singleLine="true" />
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/rule_code_layout"
+                                android:layout_marginTop="@dimen/common_row_margin" >
+
+                                <TextView
+                                    style="@style/comm_view_left"
+                                    android:layout_weight="0"
+                                    android:text="@string/collect_rule_code" />
+
+                                <TextView
+                                    android:id="@+id/tv_rule_code"
+                                    style="@style/comm_view_right"
+                                    android:layout_weight="0"
+                                    android:paddingLeft="0dp"
+                                    android:singleLine="true" />
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/mobile_layout"
+                                android:layout_marginTop="@dimen/common_row_margin" >
+
+                                <TextView
+                                     android:id="@+id/collect_mobile"
+                                    style="@style/comm_view_left"
+                                    android:layout_weight="0"
+                                    android:text="@string/collect_payee_mobile"
+                                    android:visibility="gone" />
+
+                                <TextView
+                                    android:id="@+id/tv_payee_mobile"
+                                    style="@style/comm_view_right"
+                                    android:layout_weight="0"
+                                    android:paddingLeft="0dp"
+                                    android:singleLine="true"
+                                    android:visibility="gone" />
+                            </TableRow>
+                        </TableLayout>
+
+                        <!-- 项目  end -->
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/common_row_margin"
+                            android:text="@string/collect_delete_content"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/textsize_default" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/common_bottom_padding"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnconfirm"
+                style="@style/bottombtn"
+                android:text="@string/confirm" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

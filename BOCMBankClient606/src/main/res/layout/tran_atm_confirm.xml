@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:userProperty="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin" >
+
+        <Button
+            android:id="@+id/remit_confirm_next_btn"
+            style="@style/bottombtn"
+            android:text="@string/confirm" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/remit_title_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:text="@string/trans_atm_confirm_title"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/remit_title_second"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:text="@string/rememeber_get_remit_pwd"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_default"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="0px"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/remitout_account" />
+
+                    <TextView
+                        android:id="@+id/remitout_confirm_account"
+                        style="@style/textview_common_right_two" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/get_remit_name" />
+
+                    <TextView
+                        android:id="@+id/remit_confirm_name"
+                        style="@style/textview_common_right_two" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/get_remit_phone" />
+
+                    <TextView
+                        android:id="@+id/remit_confirm_phone"
+                        style="@style/textview_common_right_two" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/money_amount_for_drawing" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2" >
+
+                        <TextView
+                            android:id="@+id/remit_cashremit_tv"
+                            style="@style/textview_common"
+                            android:paddingRight="@dimen/dp_five"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tran_atm_currency" >
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/remit_confirm_amount"
+                            style="@style/textview_common_right_no_weight"
+                            android:textColor="@color/red">
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/fuYan" />
+
+                    <TextView
+                        android:id="@+id/remit_confirm_fuyan"
+                        style="@style/textview_common_right_two" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="0px"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" />
+
+                <LinearLayout
+                    android:id="@+id/view_pass1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/trans_atm_obligatePassword" />
+
+                    <cfca.mobile.sip.SipBox
+                        android:id="@+id/sipbox_one"
+                        style="@style/editext_fill"
+                        android:layout_marginRight="@dimen/dp_five"
+                        android:layout_weight="2"
+                        android:hint="@string/tran_atm_pass"
+                        android:maxLength="6"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_pass2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/trans_atm_obligatePassword_again" />
+
+                    <cfca.mobile.sip.SipBox
+                        android:id="@+id/sipbox_again"
+                        style="@style/editext_fill"
+                        android:layout_marginRight="@dimen/dp_five"
+                        android:layout_weight="2"
+                        android:hint="@string/tran_atm_pass"
+                        android:maxLength="6"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_smc"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/btn_bottom_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:layout_height="match_parent"
+                        android:gravity="center|right"
+                        android:text="@string/smc" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="2" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_smc_sip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center" >
+
+                            <cfca.mobile.sip.SipBox
+                                android:id="@+id/sipbox_smc"
+                                style="@style/editext_fill"
+                                android:maxLength="6"
+                                android:textSize="@dimen/textsize_default" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/smsbtn"
+                            style="@style/button_smscode"
+                            android:layout_marginLeft="@dimen/fill_margin_top"
+                            android:layout_marginRight="@dimen/dp_five"
+                            android:gravity="center" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_active_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <TextView
+                        style="@style/textview_common_left_three"
+                        android:text="@string/active_code" />
+
+                    <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2" >
+
+                        <LinearLayout
+                            android:id="@+id/ll_activecode_sip"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:paddingRight="@dimen/dp_five" >
+
+                            <cfca.mobile.sip.SipBox
+                                android:id="@+id/sipbox_active"
+                                style="@style/editext_fill"
+                                android:maxLength="6"
+                                android:textSize="@dimen/textsize_default" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+
+                <com.chinamworld.bocmbci.widget.UsbKeyText
+                    android:id="@+id/sip_usbkey"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    userProperty:MargRight="@dimen/dp_five"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    userProperty:ShowRate="3:2" />
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_one_zero"
+                    android:layout_marginRight="@dimen/dp_one_zero"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:text="@string/tran_atm_confirm_notice"
+                    android:textColor="@color/red" 
+                    android:visibility="gone"/>
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

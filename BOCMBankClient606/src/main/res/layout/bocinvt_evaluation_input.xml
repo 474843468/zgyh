@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账户管理  填写关联账户信息页面 wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_relevance_next"
+        style="@style/bottombtn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/common_bottom_padding_new"
+        android:layout_marginTop="@dimen/dp_five"
+        android:gravity="center"
+        android:text="@string/next" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_relevance_next"
+        android:layout_below="@+id/ll_step"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_five" >
+
+        <ScrollView style="@style/scrollview_comm" >
+
+           <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/textview_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/bocinvt_eva_inputtitle"
+                    android:textColor="@color/gray"
+                    android:layout_marginTop="@dimen/common_row_margin" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:text="@string/bocinvt_eva_name" 
+                        android:textSize="@dimen/textsize_default"/>
+
+                    <TextView
+                        android:id="@+id/bocinvt_eva_name"
+                        style="@style/comm_view_right"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:text="@string/bocinvt_eva_identitytype"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/bocinvt_eva_identitytype"
+                        style="@style/comm_view_right"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:text="@string/bocinvt_eva_identityactnum"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/bocinvt_eva_identityactnum"
+                        style="@style/comm_view_right"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:text="@string/bocinvt_eva_gender"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <RadioGroup
+                        android:id="@+id/bocinvt_eva_gender"
+                        style="@style/comm_view_right"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/radio_boy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/radiobtn_selector"
+                            android:text="@string/boy"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <RadioButton
+                            android:id="@+id/radio_girl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/radiobtn_selector"
+                            android:text="@string/girl"
+                            android:textSize="@dimen/textsize_default" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:text="@string/bocinvt_eva_birthday"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/bocinvt_eva_birthday"
+                        style="@style/comm_view_right"
+                        android:layout_height="@dimen/layout_height"
+                        android:background="@drawable/bg_spinner"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:text="@string/bocinvt_eva_address"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <EditText
+                        android:id="@+id/bocinvt_eva_address"
+                        style="@style/edittext_common_fill"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:maxLength="150"
+                        android:textSize="@dimen/textsize_default" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:text="@string/bocinvt_eva_postcode"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <EditText
+                        android:id="@+id/bocinvt_eva_postcode"
+                        style="@style/edittext_inputNumber_fill"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:maxLength="6"
+                        android:textSize="@dimen/textsize_default" >
+                    </EditText>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:text="@string/bocinvt_eva_phone"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <EditText
+                        android:id="@+id/bocinvt_eva_phone"
+                        style="@style/edittext_common_fill"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:maxLength="20"
+                        android:textSize="@dimen/textsize_default" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:text="@string/bocinvt_eva_mobile"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <EditText
+                        android:id="@+id/bocinvt_eva_mobile"
+                        style="@style/edittext_inputNumber_fill"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:maxLength="15"
+                        android:textSize="@dimen/textsize_default" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:text="@string/bocinvt_eva_email" 
+                        android:textSize="@dimen/textsize_default"/>
+
+                    <EditText
+                        android:id="@+id/bocinvt_eva_email"
+                        style="@style/edittext_common_fill"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="40"
+                        android:textSize="@dimen/textsize_default" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:text="@string/bocinvt_eva_revenue"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <Spinner
+                        android:id="@+id/bocinvt_eva_revenue"
+                        style="@style/Spinner_comm_view_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:text="@string/bocinvt_eva_edu"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <Spinner
+                        android:id="@+id/bocinvt_eva_edu"
+                        style="@style/Spinner_comm_view_right" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:text="@string/bocinvt_eva_occ" 
+                        android:textSize="@dimen/textsize_default"/>
+
+                    <Spinner
+                        android:id="@+id/bocinvt_eva_occ"
+                        style="@style/Spinner_comm_view_right" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

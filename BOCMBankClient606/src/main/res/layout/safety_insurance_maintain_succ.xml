@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin" >
+
+        <Button
+            android:id="@+id/confirm"
+            style="@style/textview_forex_button_cell"
+            android:text="@string/confirm" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/remit_title_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:text="@string/safety_confirm_insurance_continue_info"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_default" />
+
+               <LinearLayout style="@style/linnerlayout_common">
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:text="@string/safety_company" />
+
+                    <TextView
+                        android:id="@+id/safety_company"
+                        style="@style/textview_forex_prompt_info"/>
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common">
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:text="@string/prodName" />
+
+					<TextView
+                        android:id="@+id/product_name"
+                        style="@style/textview_forex_prompt_info"/>
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common">
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:text="@string/safety_applicant_name" />
+
+                    <TextView
+                        android:id="@+id/safety_applicant_name"
+                        style="@style/textview_forex_prompt_info"/>
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common">
+
+                    <TextView android:id="@+id/year_remain_limit_alert"
+                        style="@style/textview_forex_prompt_message"
+                        android:text="@string/currency" />
+
+                    <TextView 
+                        android:id="@+id/currency"
+                        style="@style/textview_forex_prompt_info"/>
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common">
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:text="@string/safety_insurance_maintain_riskPrem" />
+
+                    <TextView
+                        android:id="@+id/safety_riskPrem"
+                        style="@style/textview_forex_prompt_info"
+                        android:textColor="@color/red"/>
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common">
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:text="@string/safety_pay_start_date" />
+
+                    <TextView
+	                    android:id="@+id/safety_pay_start_date"
+	                    style="@style/textview_forex_prompt_info"/>
+                </LinearLayout>
+                
+                <LinearLayout style="@style/linnerlayout_common">
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:text="@string/safety_pay_end_date" />
+
+                    <TextView
+	                    android:id="@+id/safety_pay_end_date"
+	                    style="@style/textview_forex_prompt_info"/>
+                </LinearLayout>
+                
+                <LinearLayout style="@style/linnerlayout_common">
+
+                    <TextView
+                        style="@style/textview_forex_prompt_message"
+                        android:text="@string/safety_recv_num" />
+
+                    <TextView
+	                    android:id="@+id/safety_recv_num"
+	                    style="@style/textview_forex_prompt_info"/>
+                </LinearLayout>
+                
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

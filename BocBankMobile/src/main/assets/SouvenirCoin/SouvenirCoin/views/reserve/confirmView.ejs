@@ -1,0 +1,71 @@
+<div class="wrap wrap-justhead">
+    <header class="page-head" id="page-head">
+        <div class="back-img"  def_event="{click: 'back'}"><img src="images/back-icon.png"></div>
+        <h1>确认信息</h1>
+    </header>
+    <section  id="scroll">
+        <!--确认页开始-->
+        <div class="confirm">
+            <div class="confirm-top">
+                <ul>
+                    <li>
+                        <span>纪念币名称：</span>
+                        <span><%=productInfo.productName%></span>
+                    </li>
+                    <li>
+                        <span>说明：</span>
+                        <span><%=productInfo.description%></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="confirm-top">
+                <ul>
+                    <li>
+                        <span class="floleft">客户姓名：</span>
+                        <span><%=inputInfo.name%></span>
+                    </li>
+                    <li>
+                        <span>手机号：</span>
+                        <span><%=inputInfo.mobile%></span>
+                    </li>
+                    <li>
+                        <span>证件类型：</span>
+                        <span><%=inputInfo.identyTypeText%></span>
+                    </li>
+                    <li>
+                        <span>证件号码：</span>
+                        <span><%=inputInfo.identyNumber%></span>
+                    </li>
+                    <li>
+                        <span class="floleft">网点名称：</span>
+                        <span><%=inputInfo.bankName%></span>
+                    </li>
+                    <li>
+                        <span class="floleft">网点地址：</span>
+                        <span><%=inputInfo.address%></span>
+                    </li>
+                    <li>
+                        <span>网点电话：</span>
+                        <span><%=inputInfo.bankmobile||'-'%></span>
+                    </li>
+                    <li>
+                        <span>预约数量：</span>
+                        <span><%=inputInfo.count%></span>
+                    </li>
+                    <li class="validationchar-row">
+                        <span>验 证 码：</span>
+                        <span id="validationChar">
+                            <!-- https://cmcoins.boc.cn -->
+                            <!-- http://22.188.43.149 -->
+                            <input type="text" name="validationChar" class="validationChar"  maxlength="4" tips="请输入验证码,请正确输入验证码" validate="{required:true,reg603:true}"><img class="validationImg" src="<%='http://22.188.43.149/CoinSeller/ImageValidation/validation?' + Math.random()*0xfffff%>" def_event="{click: 'refreshVldCode'}">
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="body-btn">
+            <button def_event="{click: 'onSubmit'}">确认</button>
+        </div>
+        <!--确认页结束-->
+    </section>
+</div>

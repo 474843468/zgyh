@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_for_listview_item_write" >
+
+    <TextView
+        android:id="@+id/text_tip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:textColor="@color/gray"
+        android:paddingLeft="@dimen/fill_padding_top"
+        android:text="@string/plps_choose_tip"
+        android:textSize="@dimen/textsize_default" 
+        />
+	
+    <Button
+        android:id="@+id/btnconfirm"
+        style="@style/bottombtn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/fill_margin_top"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:background="@drawable/btn_red_big"
+        android:text="@string/plps_query_name"
+        android:textColor="@color/white"
+        android:onClick="btnNextOnclick" />
+	
+    <!-- <ListView
+        android:id="@+id/listview"
+        android:layout_below="@id/text_tip"
+        android:layout_above="@id/btnconfirm"
+        style="@style/listviewcomm_fill_haveDivider"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:scrollbars="none" > 
+    </ListView>-->
+	<LinearLayout android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="vertical"
+	    android:layout_below="@id/text_tip"
+	    android:layout_above="@id/btnconfirm"
+	    android:gravity="center">
+	    <LinearLayout 
+	        android:id="@+id/linear_text"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:orientation="horizontal"
+	        android:paddingRight="2dp"
+	        android:gravity="center">
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            style="@style/textview_common"
+	            android:paddingLeft="2dp"
+	            android:text="选择计划："/>
+	        <Spinner 
+	            android:id="@+id/spinner_plan"
+	            style="@style/Spiiner_fill"
+	            android:paddingLeft="1dp"
+	            />
+	    </LinearLayout>
+	    </LinearLayout>
+</RelativeLayout>

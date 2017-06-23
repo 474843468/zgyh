@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/common_row_margin" >
+
+        <Button
+            style="@style/bottombtn"
+            android:onClick="btnNextOnclick"
+            android:text="@string/plps_query" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/layout_bottom"
+        android:layout_weight="1"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView style="@style/scrollview_comm" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/remit_title_tv"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:text="@string/plps_query_city_info"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_default"
+                     /><LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="2.5"
+                        android:text="@string/plps_sign_province" />
+
+                    <!--
+                         <Spinner
+                        android:id="@+id/province"
+                        style="@style/Spiiner_fill"
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:paddingRight="30dip" />
+                    -->
+
+                    <TextView
+                        android:id="@+id/province"
+                       style="@style/textview_common"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"  
+                        android:paddingRight="30dip" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="2.5"
+                        android:text="@string/plps_city" />
+
+                    <Spinner
+                        android:id="@+id/city"
+                        style="@style/Spiiner_fill"
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:paddingRight="30dip" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="2.5"
+                        android:text="@string/plps_serviceName" />
+
+                    <Spinner
+                        android:id="@+id/servicename"
+                        style="@style/Spiiner_fill"
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:paddingRight="30dip" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:layout_weight="2.5"
+                        android:layout_marginLeft="@dimen/titlerightbtn_paddingtb"
+                        android:text="@string/plps_shanghu_name" />
+
+                    <Spinner
+                        android:id="@+id/agent"
+                        style="@style/Spiiner_fill"
+                        android:layout_width="fill_parent"
+                        android:layout_gravity="left"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:paddingRight="30dip"
+                         />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

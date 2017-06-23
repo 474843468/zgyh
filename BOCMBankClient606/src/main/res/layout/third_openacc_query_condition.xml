@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/acc_query_transfer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/acc_query_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_bottom_width"
+        android:background="@drawable/img_bg_card_chaxun"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/fill_margin_top" >
+
+        <ImageView
+            android:id="@+id/acc_frame_left"
+            style="@style/rightbtn_jiantou"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/img_arrow_gray_left" />
+
+        <ImageView
+            android:id="@+id/acc_btn_goitem"
+            style="@style/rightbtn_jiantou"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/img_arrow_gray_right" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/btn_bottom_width"
+            android:layout_toLeftOf="@+id/acc_btn_goitem"
+            android:layout_toRightOf="@+id/acc_frame_left" />
+    </RelativeLayout>
+
+</RelativeLayout>

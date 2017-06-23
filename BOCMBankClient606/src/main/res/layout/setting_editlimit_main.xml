@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 服务设定  交易限额设定 确认页面 xyl -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/set_consern"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_blue_big"
+            android:text="@string/consern"
+            android:textColor="@color/white" 
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/set_confirm"
+            style="@style/bottombtn"
+            android:text="@string/next"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/stepbar"
+        layout="@layout/step_title_layout" />
+
+    <ScrollView
+        style="@style/scrollview_comm_havemarginbutton"
+        android:layout_above="@id/btn_layout"
+        android:layout_below="@id/stepbar" >
+
+        <LinearLayout
+            style="@style/confirm_main_style_setting"
+            android:orientation="vertical" >
+
+           
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:text="@string/set_tradestyle" />
+
+                <TextView
+                    android:id="@+id/set_editlimitconfirm_servicename"
+                    style="@style/confirm_right_textview_style" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:text="@string/set_currency_colon" />
+
+                <TextView
+                    android:id="@+id/set_editlimitconfirm_currency"
+                    style="@style/confirm_right_textview_style" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:text="@string/set_daymaxlimit" />
+
+                <TextView
+                    android:id="@+id/set_editlimitconfirm_daymax"
+                    style="@style/confirm_right_textview_style"
+                    android:singleLine="false"
+                    android:textColor="@color/red" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    android:id="@+id/set_editlimitconfirm_predaymax_pre"
+                    style="@style/confirm_left_textview_style"
+                    android:text="@string/set_mydaymaxlimit" />
+
+                <TextView
+                    android:id="@+id/set_editlimitconfirm_predaymax"
+                    style="@style/confirm_right_textview_style" 
+                    android:singleLine="false"
+                    android:textColor="@color/red"
+                   />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style"
+                    android:text="@string/set_resetpredaymax" />
+
+                <EditText
+                    android:id="@+id/set_editlimitconfirm_resetpredaymax"
+                    style="@style/edittext_input_numberDecimal_fill"
+                    android:layout_marginRight="@dimen/common_listview_item_paddingLR"
+                    android:maxLength="14"
+                   />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:fadingEdge="none" android:scrollbars="none">
+
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:orientation="vertical">
+
+		<!-- 转出账户 -->
+
+		<LinearLayout android:id="@+id/layout_moneyacc"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:orientation="vertical">
+
+			<LinearLayout android:layout_width="fill_parent" android:orientation="horizontal"
+				android:layout_height="wrap_content" android:gravity="center_horizontal">
+
+				<ImageView android:layout_width="@dimen/dp_two_zero"
+					android:layout_height="@dimen/dp_two_zero" android:src="@drawable/tran_acc_out_person" />
+
+				<TextView
+					style="@style/third_title" android:text="@string/thrid_cecuritytrade_moneyacc"
+					 />
+			</LinearLayout>
+
+			<RelativeLayout android:layout_width="fill_parent"
+				android:layout_height="@dimen/card_new_height" android:id="@+id/rootlayout_content_bank"
+				android:layout_marginTop="@dimen/dp_five" android:background="@drawable/img_card_new"
+				android:paddingBottom="@dimen/dp_five" android:paddingLeft="@dimen/dp_one_zero"
+				android:paddingRight="@dimen/dp_one_zero" android:paddingTop="@dimen/dp_five">
+
+				<LinearLayout android:id="@+id/layout_content_bank" android:visibility="gone"
+					android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:gravity="center" android:orientation="vertical" >
+
+					<LinearLayout android:layout_width="fill_parent"
+						android:layout_height="wrap_content" android:gravity="center_vertical"
+						android:orientation="horizontal">
+
+						<TextView android:id="@+id/tv_bank_niname"
+							android:layout_width="fill_parent" android:layout_height="wrap_content"
+							android:gravity="center_horizontal" android:singleLine="true"
+							  android:textColor="@color/fonts_dark_gray"
+							android:textSize="@dimen/fonts_one_five" />
+					</LinearLayout>
+
+					<LinearLayout android:layout_width="fill_parent"
+						android:layout_height="wrap_content" android:layout_marginTop="@dimen/card_three_row_paddingTop"
+						android:gravity="center_vertical" android:orientation="horizontal">
+
+						<TextView android:id="@+id/tv_bank_type"
+							android:layout_width="wrap_content" android:layout_height="wrap_content"
+							android:singleLine="true"   android:textColor="@color/fonts_dark_gray"
+							android:textSize="@dimen/fonts_one_three" />
+
+						<TextView android:id="@+id/tv_bank_num"
+							android:layout_width="fill_parent" android:layout_height="wrap_content"
+							android:gravity="right" android:singleLine="true"  
+							android:textColor="@color/fonts_black" android:textSize="@dimen/fonts_one_three" />
+					</LinearLayout>
+
+					<LinearLayout android:layout_width="fill_parent"
+						android:layout_height="wrap_content" android:layout_marginTop="@dimen/card_three_row_paddingTop"
+						android:gravity="center_vertical" android:orientation="horizontal">
+
+						<TextView android:id="@+id/tv_bank_bizhong"
+							android:layout_width="wrap_content" android:layout_height="wrap_content"
+							android:gravity="left"   android:textColor="@color/fonts_dark_gray"
+							android:textSize="@dimen/fonts_one_three" />
+
+						<TextView android:id="@+id/tv_bank_amout"
+							android:layout_width="fill_parent" android:layout_height="wrap_content"
+							android:gravity="right"  android:textColor="@color/fonts_black"
+							android:textSize="@dimen/fonts_one_three" />
+					</LinearLayout>
+				</LinearLayout>
+
+				<TextView android:id="@+id/tv_bank_sele"
+					style="@style/third_bank_sele" android:text="@string/third_bankacc_clicktip"
+
+					 />
+			</RelativeLayout>
+			<!-- 转入账户 -->
+
+			<LinearLayout android:id="@+id/layout_cecacc"
+				android:layout_width="fill_parent" android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/fill_margin_top"
+				android:orientation="vertical">
+
+				<LinearLayout android:layout_width="fill_parent" android:orientation="horizontal"
+					android:layout_height="wrap_content" android:gravity="center_horizontal">
+
+					<ImageView android:layout_width="@dimen/dp_two_zero"
+						android:layout_height="@dimen/dp_two_zero" android:src="@drawable/tran_acc_in_person" />
+
+					<TextView style="@style/third_title" android:text="@string/thrid_cecuritytrade_cecuracc"
+						 />
+				</LinearLayout>
+
+				<RelativeLayout android:layout_width="fill_parent"
+					android:layout_height="@dimen/card_new_height" android:id="@+id/rootlayout_content_cec"
+					android:layout_marginTop="@dimen/dp_five" android:background="@drawable/img_card_new"
+					android:paddingBottom="@dimen/dp_five" android:paddingLeft="@dimen/dp_one_zero"
+					android:paddingRight="@dimen/dp_one_zero" android:paddingTop="@dimen/dp_five">
+
+					<LinearLayout android:id="@+id/layout_content_cec" android:visibility="gone"
+						android:layout_width="fill_parent" android:layout_height="fill_parent"
+						android:gravity="center" android:orientation="vertical">
+
+						<LinearLayout android:layout_width="fill_parent"
+							android:layout_height="wrap_content" android:gravity="center_vertical"
+							android:orientation="horizontal">
+
+							<LinearLayout android:layout_width="wrap_content"
+								android:layout_height="wrap_content" android:orientation="horizontal">
+
+								<TextView android:id="@+id/tv_bank_type_ac"
+									android:layout_width="wrap_content" android:layout_height="wrap_content"
+									android:singleLine="true" android:text="@string/account" android:textColor="@color/fonts_dark_gray"
+									android:textSize="@dimen/fonts_one_five" />
+
+								<TextView android:id="@+id/tv_bank_num_ac"
+									android:layout_width="wrap_content" android:layout_height="wrap_content"
+									android:singleLine="true"  
+									android:textColor="@color/fonts_black" android:textSize="@dimen/fonts_one_five" />
+							</LinearLayout>
+
+							<TextView android:id="@+id/tv_bank_bizhong_ac"
+								android:layout_width="fill_parent" android:layout_height="wrap_content"
+								android:gravity="right" android:singleLine="true"  
+								android:textSize="@dimen/fonts_one_five" android:textColor="@color/fonts_black"/>
+						</LinearLayout>
+
+						<LinearLayout android:layout_width="fill_parent"
+							android:layout_height="wrap_content" android:layout_marginTop="@dimen/card_two_row_paddingTop"
+							android:orientation="horizontal">
+
+							<TextView android:layout_width="wrap_content"
+								android:layout_height="wrap_content" android:singleLine="true"
+								android:text="@string/prms_tradeaccbalance" android:textColor="@color/fonts_dark_gray"
+								android:textSize="@dimen/fonts_one_five" />
+
+							<TextView android:id="@+id/tv_bank_amout_ac"
+								android:layout_width="wrap_content" android:layout_height="wrap_content"
+								android:singleLine="true" 
+								android:textColor="@color/fonts_pink" android:textSize="@dimen/fonts_one_five" />
+
+							<Button android:id="@+id/btn_query" android:layout_width="@dimen/titlebackbtn_width"
+								android:layout_height="@dimen/titlebackbtn_height"
+								android:layout_marginLeft="@dimen/dp_five" android:background="@drawable/btn_red_big"
+								android:text="@string/query" android:textColor="@color/white"
+								android:textSize="@dimen/textsize_one_for" />
+						</LinearLayout>
+					</LinearLayout>
+
+					<TextView android:id="@+id/tv_cec_sele"
+						style="@style/third_bank_sele" android:text="@string/third_cecacc_clicktip"
+						 />
+				</RelativeLayout>
+			</LinearLayout>
+			<!-- 选择卡片结束 -->
+			<!-- 下标题 -->
+
+			<TextView android:id="@+id/dept_save_title_tv" style="@style/save_title_tv"
+				android:layout_marginTop="@dimen/fill_margin_top" />
+
+			<LinearLayout android:id="@+id/dept_save_regular_bottom"
+				android:layout_width="fill_parent" android:layout_height="fill_parent"
+				android:background="#ffffff" android:orientation="vertical">
+
+				<LinearLayout android:id="@+id/ll_tip"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:layout_margin="@dimen/fill_margin_top" android:orientation="horizontal">
+
+					<ImageView android:layout_width="@dimen/setting_limit_edit_icon"
+						android:layout_height="@dimen/setting_limit_edit_icon"
+						android:layout_marginTop="@dimen/dp_five" android:src="@drawable/forex_no_acc" />
+
+					<TextView style="@style/third_info"
+						android:layout_height="@dimen/btn_height"
+						android:text="@string/third_cecuritytrade_tip" />
+				</LinearLayout>
+
+				<!-- 互换转账 -->
+
+				<LinearLayout android:id="@+id/layout_tradebtn"
+					android:layout_width="fill_parent" android:layout_height="fill_parent"
+					android:background="#ffffff" android:orientation="vertical"
+					android:paddingBottom="@dimen/list_bottom" android:paddingTop="@dimen/fill_margin_top"
+					android:visibility="gone">
+
+					<Button android:id="@+id/btn_banktocecurity" style="@style/textview_forex_button_cell"
+						android:layout_marginTop="@dimen/fill_margin_top"
+						android:text="@string/third_btn_banktocecurity"
+						/>
+
+					<Button android:id="@+id/btn_eceuritytobank" style="@style/textview_forex_button_cell"
+						android:layout_marginTop="@dimen/fill_margin_top"
+						android:text="@string/third_btn_cecuritytobank"
+						/>
+				</LinearLayout>
+				<!-- 转账信息输入 -->
+
+				<LinearLayout android:id="@+id/layout_content" android:visibility="gone"
+					android:layout_width="fill_parent" android:layout_height="wrap_content"
+					android:orientation="vertical" >
+
+					<LinearLayout android:layout_width="match_parent"
+						android:layout_height="wrap_content" android:layout_marginTop="@dimen/common_row_margin"
+						android:gravity="center" android:orientation="horizontal">
+
+						<TextView style="@style/textview_forex_prompt_message"
+							android:layout_weight="7.5" android:singleLine="true"
+							android:text="@string/currency" />
+
+						<TextView android:id="@+id/tv_bitype" style="@style/textview_forex_prompt_info"
+							android:layout_weight="3.5" android:paddingLeft="1dp"
+							android:singleLine="true" />
+					</LinearLayout>
+
+					<LinearLayout android:layout_width="match_parent"
+						android:layout_height="wrap_content" android:layout_marginTop="@dimen/common_row_margin"
+						android:gravity="center" android:orientation="horizontal">
+
+						<TextView style="@style/textview_forex_prompt_message"
+							android:layout_weight="7.5" android:singleLine="true"
+							android:text="@string/zhuanzhang_num" />
+
+						<EditText android:id="@+id/et_cecurity_money" style="@style/edittext_forex_prompt_info"
+							android:layout_gravity="center_vertical"
+							android:layout_marginRight="@dimen/fill_margin_bottom"
+							android:layout_weight="3.5" android:gravity="center_vertical"
+							android:inputType="numberDecimal" android:maxLength="14"
+							android:singleLine="true" />
+					</LinearLayout>
+
+					<LinearLayout android:id="@+id/layout_sip"
+						android:layout_width="match_parent" android:layout_height="wrap_content"
+						android:layout_marginTop="@dimen/common_row_margin"
+						android:gravity="center" android:orientation="horizontal"
+						android:visibility="gone">
+
+						<TextView style="@style/textview_forex_prompt_message"
+							android:layout_weight="7.5" android:singleLine="true"
+							android:text="@string/third_sipbox" />
+
+						<cfca.mobile.sip.SipBox android:id="@+id/et_cecurity_ps"
+							style="@style/sip_edit_fill" android:layout_gravity="center_vertical"
+							android:layout_marginRight="@dimen/fill_margin_bottom"
+							android:layout_weight="3.5" android:gravity="center_vertical"
+							android:maxLength="20" />
+					</LinearLayout>
+
+					<Button android:id="@+id/btn_next" style="@style/textview_forex_button_cell"
+						android:layout_marginTop="@dimen/common_row_margin"
+						android:text="@string/next"
+						/>
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+
+</ScrollView>

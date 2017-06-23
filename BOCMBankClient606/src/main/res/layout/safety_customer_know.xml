@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 保险用户协议页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/shap_for_content"
+            android:orientation="vertical"
+            android:paddingBottom="0dp" >
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dip"
+                android:fadingEdge="none"
+                android:scrollbars="none" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/layout1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/textview_forex_prompt_message"
+                            android:layout_gravity="center_vertical"
+                            android:text="@string/safety_company"
+                             />
+
+                        <TextView
+                            android:id="@+id/companyname"
+                            style="@style/textview_forex_prompt_info" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/layout1" >
+
+                        <TextView
+                            style="@style/textview_forex_prompt_message"
+                            android:text="@string/crcd_setUp_confirm_name"
+                            />
+
+                        <TextView
+                            android:id="@+id/productname"
+                            style="@style/textview_forex_prompt_info" />
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/agreement"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:textSize="@dimen/fonts_one_five"
+                        android:textColor="@color/fonts_dark_gray" />
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layout3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:background="@drawable/shap_for_content"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <LinearLayout
+                android:id="@+id/layout_type"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_forex_prompt_message"
+                    android:layout_gravity="center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/safety_insur_know_jiacai"
+                   />
+
+                <Spinner
+                    android:id="@+id/spinner_type"
+                    style="@style/spinner_forex_prompt_info"
+                    android:layout_gravity="left"
+                    android:layout_marginRight="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_profes"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/safety_insur_know_yiwai"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textsize_one_three" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-10dip"
+                    android:orientation="horizontal" >
+
+                    <RadioGroup
+                        android:id="@+id/loan_advance_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <RadioButton
+                            android:id="@+id/profes_btn1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/btn_bottom_height"
+                            android:button="@drawable/radiobtn_selector"
+                            android:text="是"
+                            android:textSize="@dimen/textsize_default" />
+
+                        <RadioButton
+                            android:id="@+id/profes_btn2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/btn_bottom_height"
+                            android:layout_marginLeft="@dimen/common_listview_item_paddingLR"
+                            android:button="@drawable/radiobtn_selector"
+                            android:checked="true"
+                            android:text="否"
+                            android:textSize="@dimen/textsize_default" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/btn_profes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="30dip"
+                        android:onClick="insurProfeOnclick"
+                        android:text="@string/bocinvt_history_detail"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/common_row_margin"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/btnunaccept"
+                style="@style/isforex_two_left_btn"
+                android:text="@string/not_agree" />
+
+            <Button
+                android:id="@+id/btnaccept"
+                style="@style/isforex_two_right_btn"
+                android:text="@string/agree" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

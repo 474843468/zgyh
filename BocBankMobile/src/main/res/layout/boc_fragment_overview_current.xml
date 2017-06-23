@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.AccountOverview.AccountCurrentHead
+            android:id="@+id/head_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.transactionlist.FullTransactionListView
+            android:id="@+id/tran_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" />
+
+        <TextView
+            android:id="@+id/tv_trans"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_200px"
+            android:gravity="center"
+            android:text="@string/boc_overview_detail_no_transaction"
+            android:textColor="@color/boc_text_color_common_gray"
+            android:textSize="@dimen/boc_text_size_small"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/btn_more"
+            style="@style/BocButton.BocWhiteBgButton"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/boc_space_between_20px"
+            android:text="@string/boc_finance_account_transfer_detail_more"
+            android:textColor="@color/boc_main_button_color"
+            android:textSize="@dimen/boc_text_size_big" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/boc_common_cell_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/boc_card_account_pic_margin_left"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/boc_card_account_info_padding_bottom"
+            android:paddingTop="@dimen/boc_card_account_info_padding_top">
+
+            <TextView
+                android:id="@+id/tv_number"
+                style="@style/tv_common"
+                android:layout_gravity="top"
+                android:textColor="@color/boc_text_color_dark_gray"
+                 />
+
+            <TextView
+                android:id="@+id/tv_date"
+                style="@style/tv_small"
+                android:layout_marginTop="@dimen/boc_card_account_info_padding_middle"
+                tools:text="test" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/boc_card_account_status_margin"
+            android:layout_marginRight="@dimen/boc_space_between_10px"
+            android:layout_marginTop="@dimen/boc_card_account_status_margin"
+            android:layout_weight="0.0"
+            android:scaleType="fitEnd"
+            tools:src="@drawable/boc_account_status_frozen" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/boc_space_between_10px"
+            android:layout_marginRight="@dimen/boc_card_account_amount_padding_left"
+            android:layout_weight="0.0"
+            android:scaleType="fitEnd"
+            android:src="@drawable/boc_arrow_right" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        style="@style/divider_horizontal" />
+
+</LinearLayout>
+

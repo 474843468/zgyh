@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html,charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <script type="text/javascript" src="scripts/jquery-1.10.1.min.js"></script>
+    <script type="text/javascript" src="BOCWebViewJavascriptBridge.js"></script>
+    <script>
+
+        function setUpEvent(elem, eventType, handler) {
+            return (elem.attachEvent ? elem.attachEvent("on" + eventType, handler)
+                    : ((elem.addEventListener) ? elem.addEventListener(eventType, handler, false) : null));
+        }
+
+        function isMobileIOS(){
+            var ua = navigator.userAgent;
+            if(ua.indexOf('Mobile') > -1 && (ua.indexOf('iPhone') > -1 || ua.indexOf('iPod') > -1 || ua.indexOf('iPad') > -1)){
+                return true;
+            }
+            return false;
+        }
+
+     $(document).ready(function(){
+
+         var contractContent;
+         if(isMobileIOS()){
+             setUpEvent(document,'BOCWebViewJavascriptBridgeReady',function(event){
+                 var bridge = event.bridge;
+                 bridge.init(function(data,responseCallback){
+                 });
+                 bridge.registerHandler('receiveReceiptData', function(data, responseCallback) {
+                     debugger;
+                     contractContent=JSON.parse(data.getJsonContract());
+                     // contractContent=JSON.data;
+                  //   App.init(receitptData);
+                 });
+             });
+             return;
+         }else{
+             contractContent =  JSON.parse(window.contract.getJsonContract());//contract
+         }
+
+       var a ='';
+       //$.get("1.txt").success(function(content){
+              a =contractContent.contract;
+                var start = a.toString().indexOf("<html>");
+               //alert("start"+start);
+             // debugger;<div style="text-align: center">
+              var end = a.toString().indexOf('<div style="text-align: center">');
+              // alert("end"+end);
+              var header = a.substring(start,end);
+                // alert(header);
+              var center = a.replace(header,"");
+            //  alert(center);
+       //  alert(contractContent.contract);
+
+        //   debugger;
+                    center = center.replace(/\\n/g,'');
+                    center = center.replace(/\\"/g,'"');
+           center = center.replace("</body>","");
+           center = center.replace("</html>","");
+           var cbiCustName=contractContent.cbiCustName;
+           var cbiCerNo=contractContent.cbiCerNo;
+           var cbiCustAccount=contractContent.cbiCustAccount;
+
+
+             if(cbiCustName!=""||cbiCustName!="undefined"||cbiCustName!=null){
+                 center = center.replace(/{cbiCustName}/g,cbiCustName);
+             }else{
+              center = center.replace(/{cbiCustName}/g,"");
+             }
+
+             if(cbiCerNo!=""||cbiCerNo!="undefined"||cbiCerNo!=null){
+                 center = center.replace(/{cbiCerNo}/g,cbiCerNo);
+             }else{
+              center = center.replace(/{cbiCerNo}/g,"");
+             }
+
+             if(cbiCustAccount!=""||cbiCustAccount!="undefined"||cbiCustAccount!=null){
+                 center = center.replace(/{cbiCustAccount}/g,cbiCustAccount);
+             }else{
+              center = center.replace(/{cbiCustAccount}/g,"");
+             }
+
+          // alert(center);
+           document.getElementById("tianchong").innerHTML=center;
+         //  document.getElementById("container").innerHTML=html;
+                   //  $("#tianchong").html(center.trim());
+      //});
+     });
+
+
+
+
+    </script>
+</head>
+
+
+<body>
+<!--用户：<input type="text" id="username">
+<div onclick="look();" >合同款项</div>-->
+<div id="tianchong"></div>
+</body>
+</html>

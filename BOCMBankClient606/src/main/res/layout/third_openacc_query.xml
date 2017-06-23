@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/acc_query_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_bottom_width"
+        android:background="@drawable/img_bg_card_chaxun"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/acc_frame_left"
+            style="@style/rightbtn_jiantou"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/img_arrow_gray_left"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/acc_frame_right"
+            style="@style/rightbtn_jiantou"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:background="@drawable/img_arrow_gray_right"
+            android:visibility="invisible" />
+
+        <com.chinamworld.bocmbci.widget.CustomGallery
+            android:id="@+id/galy_account"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/acc_list_item_height"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/acc_frame_right"
+            android:layout_toRightOf="@+id/acc_frame_left"
+            android:fadingEdgeLength="0dp"
+            android:spacing="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="@dimen/fill_margin_bottom"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_right"
+        android:background="@drawable/bg_for_listview_item_write" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/ll_list_header"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/btn_bottom_height"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/bond_tv_15_gray"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/third_date" />
+
+                <TextView
+                    style="@style/bond_tv_15_gray"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/invalid_date" />
+
+                <TextView
+                    style="@style/bond_tv_15_gray"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/third_state" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/tv_gray_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray" />
+
+            <com.chinamworld.bocmbci.widget.LoadMoreListView
+                android:id="@+id/lv_result_list"
+                style="@style/listviewcomm_wrap_gray_divider"
+                android:listSelector="@android:drawable/list_selector_background" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

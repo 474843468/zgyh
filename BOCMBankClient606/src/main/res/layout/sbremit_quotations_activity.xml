@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/common_row_margin"
+        android:paddingLeft="@dimen/fill_margin_left"
+        android:paddingRight="@dimen/fill_margin_right"
+        android:paddingTop="@dimen/common_row_margin"
+        android:visibility="visible" >
+
+        <include layout="@layout/biz_title_with_refresh_btn" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_bottom_padding_new"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <!-- 底部刷新时间，业务修改不需要 -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sbremit_quotations_lv_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer_layout"
+        android:layout_below="@+id/header_layout"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/lv_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/sbremit_outlay_label"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/common_row_margin"
+            android:paddingTop="@dimen/common_row_margin" >
+
+            <TextView
+                style="@style/textview_default"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/currency_name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_two" />
+			
+            <TextView
+                style="@style/textview_default"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/buying_rate"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_two" />
+            <TextView
+                style="@style/textview_default"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/selling_rate"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_two" />
+
+            
+
+            <TextView
+                style="@style/textview_default"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/cash_buying_rate"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_two" />
+            <TextView
+                style="@style/textview_default"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_one_two" />
+            
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="@color/gray_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <ListView
+                android:id="@+id/sbremit_quotations_lv"
+                style="@style/listviewcomm_fill_gray_divider"
+                android:background="@color/white"
+                android:choiceMode="none"
+                android:scrollbars="none" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

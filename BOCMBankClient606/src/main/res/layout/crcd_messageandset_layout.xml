@@ -1,0 +1,1065 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_five"
+        android:layout_marginLeft="@dimen/dp_five"
+        android:layout_marginRight="@dimen/dp_five"
+        android:layout_marginTop="@dimen/dp_five"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/card__btn1"
+            style="@style/radioButtonLeft"
+            android:layout_height="@dimen/step_title_height"
+            android:checked="true"
+            android:onClick="card__btn1Onclick"
+            android:text="@string/card_account_message"
+            android:textSize="@dimen/textsize_default" />
+
+        <RadioButton
+            android:id="@+id/card__btn2"
+            style="@style/radioButtonMiddle"
+            android:layout_height="@dimen/step_title_height"
+            android:onClick="card__btn2Onclick"
+            android:text="@string/card_acc_message"
+            android:textSize="@dimen/textsize_default" />
+
+        <RadioButton
+            android:id="@+id/card__btn3"
+            style="@style/radioButtonRight"
+            android:layout_height="@dimen/step_title_height"
+            android:onClick="card__btn3Onclick"
+            android:text="@string/card_account_set"
+            android:textSize="@dimen/textsize_default" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/radioGroup"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView style="@style/scrollview_with_no_padding" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingBottom="@dimen/fill_margin_bottom"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/card__lin1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                   
+                    android:paddingBottom="@dimen/fill_margin_bottom"
+                    android:orientation="vertical" 
+                    android:visibility="visible" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/mycrcd_creditcard_number" />
+
+                        <TextView
+                            android:id="@+id/card_acctnum"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/card_huming" />
+
+                        <TextView
+                            android:id="@+id/card_acctname"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/card_acc_bank" />
+
+                        <TextView
+                            android:id="@+id/card_acctbank"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/card_type" />
+
+                        <TextView
+                            android:id="@+id/card_type"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/card_cardlag" />
+
+                        <TextView
+                            android:id="@+id/card_carflag"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/card_level" />
+
+                        <TextView
+                            android:id="@+id/card_level"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/mycrcd_name" />
+
+                        <TextView
+                            android:id="@+id/productName"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/card_startdate" />
+
+                        <TextView
+                            android:id="@+id/card_startdate"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" 
+                        android:visibility="gone">
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/card_avaidate" />
+
+                        <TextView
+                            android:id="@+id/card_avaidate"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/card_billdate" />
+
+                        <TextView
+                            android:id="@+id/card_billdate"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/mycrcd_bill_score" />
+
+                        <TextView
+                            android:id="@+id/card_crcdscore"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_common_left_three"
+                                android:text="@string/card_approvallimit" />
+
+                            <LinearLayout 
+                                 style="@style/textview_common_right_two"
+                                  android:orientation="vertical" 
+                                >
+                                 <TextView
+                                android:id="@+id/card_approvallimit"
+                                style="@style/textview_common_right_two" />
+                                 <TextView
+                                android:id="@+id/card_approvallimit1"
+                                style="@style/textview_common_right_two" 
+                                android:visibility="gone"/>
+                            </LinearLayout>
+                           
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:id="@+id/TmpLimit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/dp_five" 
+                            android:visibility="gone">
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:onClick="card_TmpLimitOnclick"
+                                android:text="@string/card_tiaozhengedu"
+                                />
+                        </FrameLayout>
+                         <FrameLayout
+                             android:layout_below="@+id/TmpLimit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/dp_five" >
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:onClick="card_TmpLimitOnclick1"
+                                android:text="@string/card_tiaozhengedu"
+                                android:visibility="gone"
+                                />
+                        </FrameLayout>
+                    </RelativeLayout>
+
+                    
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_common_left_three"
+                                android:text="@string/card_cashLimit" />
+
+                            <LinearLayout 
+                                 style="@style/textview_common_right_two"
+                                  android:orientation="vertical" 
+                                >
+                                 <TextView
+                                android:id="@+id/card_cashLimit1"
+                                style="@style/textview_common_right_two" />
+                                 <TextView
+                                android:id="@+id/card_cashLimit2"
+                                style="@style/textview_common_right_two" 
+                                android:visibility="gone"/>
+                            </LinearLayout>
+                           
+                        </LinearLayout>
+                    </RelativeLayout>
+                    
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_common_left_three"
+                                android:text="@string/card_carstatus" />
+
+                            <TextView
+                                android:id="@+id/card_carstatus"
+                                style="@style/textview_common_right_two" />
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:id="@+id/ff_guashi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/dp_five" >
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:onClick="card__guashiOnclick"
+                                android:text="@string/card_guashi"
+                                android:textColor="@color/blue" />
+                        </FrameLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/card_annualfee" />
+
+                        <TextView
+                            android:id="@+id/card_annualfee"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/card__lin2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                   
+                     android:paddingBottom="@dimen/fill_margin_bottom"
+                    android:orientation="vertical"
+                   android:visibility="gone" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                         >
+
+                        <LinearLayout
+                            android:id="@+id/lin_renminbi"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical" >
+
+                            <Button
+                                android:id="@+id/btn_renminbi"
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/step_title_height"
+                                android:background="@color/white"
+                                android:onClick="btn_renminbiOnclick"
+                                android:text="@string/mycrcd_renmibi" />
+
+                            <ImageView
+                                android:id="@+id/img_renminbi"
+                                android:layout_width="fill_parent"
+                                android:layout_height="2dip"
+                                android:background="@color/red" />
+                        </LinearLayout>
+		
+                        <LinearLayout
+                            android:id="@+id/lin_waibi"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical" >
+
+                            <Button
+                                android:id="@+id/btn_waibi"
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/step_title_height"
+                                android:background="@color/white"
+                                android:onClick="btn_waibiOnclick"
+                                android:text="@string/mycrcd_renmibi"
+                                android:textColor="@color/black" />
+
+                            <ImageView
+                                android:id="@+id/img_waibi"
+                                android:layout_width="fill_parent"
+                                android:layout_height="2dip"
+                                android:visibility="gone"
+                                android:background="@color/red" />
+                        </LinearLayout>
+                     
+                    </LinearLayout>
+						<ImageView                              
+                                android:layout_width="fill_parent"
+                                android:layout_height="1dip"
+                                android:background="@color/black" 
+                                android:visibility="visible"/>
+                    
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/card_realtimebalance" />
+
+                        <TextView
+                            android:id="@+id/card_realtimebalance"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/card_toltalBalance" />
+
+                        <TextView
+                            android:id="@+id/card_toltalBalance"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/card_cashbalance" />
+
+                        <TextView
+                            android:id="@+id/card_cashbalance"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/card_dividedpayavaibalance" />
+
+                        <TextView
+                            android:id="@+id/card_dividedpayavaibalance"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/card_duedate" />
+
+                        <TextView
+                            android:id="@+id/card_duedate"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_common_left_three"
+                                android:text="@string/card_billamout" />
+
+                            <TextView
+                                android:id="@+id/card_billamout"
+                                style="@style/textview_common_right_two" />
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/dp_five" >
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical" >
+
+                                <Button
+                                    android:id="@+id/card_zhangdan"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/white"
+                                    android:onClick="card__searchaccountOnclick"
+                                    android:text="@string/card_search_account"
+                                    android:textColor="@color/blue" />
+
+                                <Button
+                                    android:id="@+id/card_fenqi"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/common_row_margin"
+                                    android:background="@color/white"
+                                    android:onClick="card_fenqiOnclick"
+                                    android:text="@string/card_shenqing_fenqi"
+                                    android:textColor="@color/blue" />
+                            </LinearLayout>
+                        </FrameLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/card_havenotrepayamout" />
+
+                        <TextView
+                            android:id="@+id/card_havenotrepayamout"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_common_left_three"
+                                android:text="@string/card_billLimitamout" />
+
+                            <TextView
+                                android:id="@+id/card_billLimitamout"
+                                style="@style/textview_common_right_two" />
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/dp_five" >
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:onClick="card_kuaisuOnclick"
+                                android:text="@string/card_kuaisu_huankuan"
+                                android:textColor="@color/blue" />
+                        </FrameLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:layout_marginBottom="@dimen/common_row_margin"
+                        android:orientation="horizontal"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/card_dividedpayLimit" />
+
+                        <TextView
+                            android:id="@+id/card_dividedpayLimit"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left_three"
+                            android:text="@string/card_cashLimit" />
+
+                        <TextView
+                            android:id="@+id/card_cashLimit"
+                            style="@style/textview_common_right_two" />
+                    </LinearLayout>
+
+                    
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/card__lin3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:paddingBottom="@dimen/fill_margin_bottom"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <LinearLayout
+                            android:id="@+id/lin_card_paymentstatus"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/common_row_margin"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    style="@style/textview_common_left"
+                                    android:text="@string/card_paymentstatus" />
+
+                                <TextView
+                                    android:id="@+id/card_paymentstatus"
+                                    style="@style/textview_common_right" />
+                            </LinearLayout>
+
+                            <ImageView
+                                style="@style/divider_imag_style"
+                                android:layout_marginTop="@dimen/common_row_margin" />
+                        </LinearLayout>
+
+                        <ImageView
+                            style="@style/rightbtn_jiantou"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/dp_five"
+                            android:background="@drawable/right_arrow" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rla_card_foreignpayoffstatus"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <LinearLayout
+                            android:id="@+id/lin_card_foreignpayoffstatus"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/common_row_margin"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/card_foreignpayoffstatus_txt"
+                                    style="@style/textview_common_left"
+                                    android:ellipsize="middle"
+                                    android:text="@string/card_foreignpayoffstatus" />
+
+                                <TextView
+                                    android:id="@+id/card_foreignpayoffstatus"
+                                    style="@style/textview_common_right" />
+                            </LinearLayout>
+
+                            <ImageView
+                                style="@style/divider_imag_style"
+                                android:layout_marginTop="@dimen/common_row_margin" />
+                        </LinearLayout>
+
+                        <ImageView
+                            style="@style/rightbtn_jiantou"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/dp_five"
+                            android:background="@drawable/right_arrow" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <LinearLayout
+                            android:id="@+id/lin_card_paperstatment"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/common_row_margin"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    style="@style/textview_common_left"
+                                    android:text="@string/card_paperstatment" />
+
+                                <TextView
+                                    android:id="@+id/card_paperstatment"
+                                    style="@style/textview_common_right" 
+                                    android:paddingRight="@dimen/dp_two_zero" 
+                                    android:ellipsize="middle"/>
+                            </LinearLayout>
+
+                            <ImageView
+                                style="@style/divider_imag_style"
+                                android:layout_marginTop="@dimen/common_row_margin" />
+                        </LinearLayout>
+
+                        <ImageView
+                            style="@style/rightbtn_jiantou"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/dp_five"
+                            android:background="@drawable/right_arrow" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <LinearLayout
+                            android:id="@+id/lin_card_emailstatment"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/common_row_margin"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    style="@style/textview_common_left"
+                                    android:text="@string/card_emailstatment" />
+
+                                <TextView
+                                    android:id="@+id/card_emailstatment"
+                                    style="@style/textview_common_right"
+                                    android:ellipsize="middle"
+                                    android:paddingRight="@dimen/dp_two_zero" />
+                            </LinearLayout>
+
+                            <ImageView
+                                style="@style/divider_imag_style"
+                                android:layout_marginTop="@dimen/common_row_margin" />
+                        </LinearLayout>
+
+                        <ImageView
+                            style="@style/rightbtn_jiantou"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/dp_five"
+                            android:background="@drawable/right_arrow" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <LinearLayout
+                            android:id="@+id/lin_card_phonestatment"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/common_row_margin"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    style="@style/textview_common_left"
+                                    android:text="@string/card_phonestatment" />
+
+                                <TextView
+                                    android:id="@+id/card_phonestatment"
+                                    style="@style/textview_common_right"
+                                     android:ellipsize="middle"
+                                    android:paddingRight="@dimen/dp_two_zero" />
+                            </LinearLayout>
+
+                            <ImageView
+                                style="@style/divider_imag_style"
+                                android:layout_marginTop="@dimen/common_row_margin" />
+                        </LinearLayout>
+
+                        <ImageView
+                            style="@style/rightbtn_jiantou"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/dp_five"
+                            android:background="@drawable/right_arrow" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/rla_card_fchargeflag">
+						
+                        <LinearLayout
+                            android:id="@+id/lin_card_fchargeflag"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/common_row_margin"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/card_fchargeflag_txt"
+                                    style="@style/textview_common_left"
+                                    android:ellipsize="middle"
+                                    android:text="@string/card_fchargeflag" />
+
+                                <TextView
+                                    android:id="@+id/card_fchargeflag"
+                                    style="@style/textview_common_right" />
+                            </LinearLayout>
+
+                            <ImageView
+                                style="@style/divider_imag_style"
+                                android:layout_marginTop="@dimen/common_row_margin" />
+                        </LinearLayout>
+
+                        <ImageView
+                            style="@style/rightbtn_jiantou"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/dp_five"
+                            android:background="@drawable/right_arrow" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <LinearLayout
+                            android:id="@+id/lin_card_searchpassword"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/common_row_margin"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    style="@style/textview_common_left"
+                                    android:ellipsize="middle"
+                                    android:text="@string/card_searchpassword" />
+
+                                <TextView
+                                    android:id="@+id/card_searchpassword"
+                                    style="@style/textview_common_right" 
+                                    android:text="点击设置"/>
+                            </LinearLayout>
+
+                            <ImageView
+                                style="@style/divider_imag_style"
+                                android:layout_marginTop="@dimen/common_row_margin" />
+                        </LinearLayout>
+
+                        <ImageView
+                            style="@style/rightbtn_jiantou"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/dp_five"
+                            android:background="@drawable/right_arrow" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rla_card_passwordstatuss"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <LinearLayout
+                            android:id="@+id/lin_card_passwordstatus"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/common_row_margin"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    style="@style/textview_common_left"
+                                    android:ellipsize="middle"
+                                    android:text="@string/card_passwordstatus" />
+
+                                <TextView
+                                    android:id="@+id/card_passwordstatus"
+                                    style="@style/textview_common_right" 
+                                     android:text="点击设置"/>
+                            </LinearLayout>
+
+                            <ImageView
+                                style="@style/divider_imag_style"
+                                android:layout_marginTop="@dimen/common_row_margin" />
+                        </LinearLayout>
+
+                        <ImageView
+                            style="@style/rightbtn_jiantou"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/dp_five"
+                            android:background="@drawable/right_arrow" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <LinearLayout
+                            android:id="@+id/lin_card_verifymode"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/common_row_margin"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    style="@style/textview_common_left"
+                                    android:text="@string/card_verifymode" />
+
+                                <TextView
+                                    android:id="@+id/card_verifymode"
+                                    style="@style/textview_common_right" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/rla_card_postriggeramount"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/common_row_margin"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    android:id="@+id/card_postriggeramount_txt"
+                                    style="@style/textview_common_left"
+                                    android:ellipsize="middle"
+                                    android:text="@string/card_postriggeramount" />
+
+                                <TextView
+                                    android:id="@+id/card_postriggeramount"
+                                    style="@style/textview_common_right" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/common_row_margin"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    style="@style/textview_common_left"
+                                    android:text="@string/card_smstriggeramount" />
+
+                                <TextView
+                                    android:id="@+id/card_smstriggeramount"
+                                    style="@style/textview_common_right" />
+                            </LinearLayout>
+
+                            <ImageView
+                                style="@style/divider_imag_style"
+                                android:layout_marginTop="@dimen/common_row_margin" />
+                        </LinearLayout>
+
+                        <ImageView
+                            style="@style/rightbtn_jiantou"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/dp_five"
+                            android:background="@drawable/right_arrow" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

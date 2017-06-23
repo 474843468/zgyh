@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账户管理  填写关联账户信息页面 wangmengmeng -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/common_bottom_padding" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_relevance_next"
+        style="@style/bottombtn"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp_five"
+        android:gravity="center"
+        android:text="@string/next" />
+
+    <ScrollView
+        style="@style/scrollview_comm"
+        android:layout_above="@+id/btn_relevance_next"
+        android:layout_below="@+id/ll_step"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:gravity="center"
+        android:padding="@dimen/shap_of_save_confirm_pdb" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/tv_acc_relevance_actnum"
+                    style="@style/textview_common_left"
+                    android:layout_weight="6.5"
+                    android:text="@string/acc_relevance_actnum" />
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.7" >
+
+                    <EditText
+                        android:id="@+id/et_acc_relevance_actnum"
+                        style="@style/edittext_inputNumber_fill"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:hint="@string/acc_relevance_actnum_input"
+                        android:maxLength="19"
+                        android:textSize="@dimen/textsize_default" >
+
+                        <requestFocus />
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/tv_relevance_actnum"
+                        style="@style/textview_common_right"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:visibility="gone" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="6.5"
+                    android:text="@string/acc_relevance_phonepwd" />
+
+                <cfca.mobile.sip.SipBox
+                    android:id="@+id/sipbox"
+                    style="@style/editext_fill"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="3.7"
+                    android:maxLength="6"
+                    android:textSize="@dimen/textsize_default" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_atm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="6.5"
+                    android:text="@string/acc_relevance_atmpwd" />
+
+                <cfca.mobile.sip.SipBox
+                    android:id="@+id/sipbox_atm"
+                    style="@style/editext_fill"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="3.7"
+                    android:maxLength="6"
+                    android:textSize="@dimen/textsize_default" />
+            </LinearLayout>
+			
+            <LinearLayout
+                android:id="@+id/ll_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/textview_common_left"
+                    android:layout_weight="6.5"
+                    android:text="@string/acc_relevance_imgcode" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3.7"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <EditText
+                        android:id="@+id/ed_image_code"
+                        style="@style/edittext_inputNumber_wrap"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:hint="@string/acc_relevance_imgcode_input"
+                        android:maxLength="4"
+                        android:singleLine="true"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:id="@+id/ib_image_code_text"
+                        style="@style/auth_image"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:text="@string/hint_image_code_tv"
+                        android:textColor="@color/gray" />
+
+                    <ImageButton
+                        android:id="@+id/ib_image_code"
+                        style="@style/auth_image"
+                        android:layout_gravity="center_vertical"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

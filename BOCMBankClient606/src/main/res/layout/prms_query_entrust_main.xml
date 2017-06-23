@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 账户贵金属  委托交易查询 xyl -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/common_bottom_padding_new" >
+
+    <LinearLayout
+        android:id="@+id/prms_query_deal_befor_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/prms_query_deal_befor_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_bg_query_j"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/common_row_margin_half"
+                android:paddingTop="@dimen/common_row_margin_half" >
+
+                <TextView
+                    android:id="@+id/prms_query_deal_startdate"
+                    style="@style/Spiiner_fill"
+                    android:layout_marginLeft="@dimen/fill_margin_top"
+                    android:layout_marginRight="@dimen/fill_margin_top"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_spinner"
+                    android:gravity="center_vertical"
+                    android:hint="@string/prms_query_startdate"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/prms_query_deal_enddate"
+                    style="@style/Spiiner_fill"
+                    android:layout_marginRight="@dimen/fill_margin_right"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_spinner"
+                    android:gravity="center_vertical"
+                    android:hint="@string/prms_query_enddate"
+                    android:paddingLeft="@dimen/fill_padding_left"
+                    android:paddingRight="@dimen/fill_padding_left"
+                    android:textSize="@dimen/textsize_default" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/prms_query_deal_btnlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fill_margin_top"
+                android:layout_marginRight="@dimen/fill_margin_top"
+                android:layout_marginTop="@dimen/common_row_margin_half"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/prms_queryquery_deal_queryoneweek"
+                    style="@style/finc_buttonLeft"
+                    android:text="@string/prms_str_oneweek"
+                    android:textSize="@dimen/textsize_one_three" />
+
+                <Button
+                    android:id="@+id/prms_queryquery_deal_queryonemouth"
+                    style="@style/finc_buttonMiddle"
+                    android:text="@string/prms_str_onemonth"
+                    android:textSize="@dimen/textsize_one_three" />
+
+                <Button
+                    android:id="@+id/prms_queryquery_deal_querythreemouths"
+                    style="@style/finc_buttonRight"
+                    android:text="@string/prms_str_threemonth"
+                    android:textSize="@dimen/textsize_one_three" />
+
+                <Button
+                    android:id="@+id/prms_query_deal_querymy"
+                     style="@style/query_button_style"
+                    android:layout_marginLeft="@dimen/fill_margin_top"
+                    android:layout_marginRight="@dimen/fill_margin_top"
+                   />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/prms_query_deal_main_uplayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/common_row_margin" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    style="@style/textview_common_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/prms_up_imageView"
+                     style="@style/query_image_up_style"
+                    android:src="@drawable/img_arrow_gray_up" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/query_reult_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:id="@+id/query_result_condition_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_bg_query_j"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/common_listview_item_paddingLR" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/prms_query_time_colon" />
+
+                <TextView
+                    android:id="@+id/prms_query_result_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/prms_down_LinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/common_row_margin" >
+
+                <TextView
+                    style="@style/textview_common_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textsize_xiala" />
+
+                <ImageView
+                    android:id="@+id/prms_down_imageView"
+                     style="@style/query_image_up_style"
+                    android:src="@drawable/img_arrow_gray_down" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/prms_querydeal_listview_layout"
+            android:layout_below="@id/query_result_condition_layout"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/fill_margin_left"
+            android:layout_marginRight="@dimen/fill_margin_left"
+            android:background="@drawable/shap_for_dept_tranlist"
+             >
+
+            <include
+                android:id="@+id/finc_listheader_layout"
+                layout="@layout/finc_listheader" />
+
+            <ListView
+                android:id="@+id/prms_querydeal_listview"
+                style="@style/finc_listview_fill"
+                android:layout_below="@id/finc_listheader_layout" 
+                >
+            </ListView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>

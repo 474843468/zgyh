@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/boc_common_bg_color"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/boc_space_between_20px"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/boc_common_cell_color"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_left"
+                android:layout_width="@dimen/boc_space_between_120px"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_left"
+                    style="@style/tv_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/boc_drawpingment"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@drawable/boc_drawrecord_text"
+                    android:textSize="13dp" />
+
+                <View
+                    android:id="@+id/view_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/boc_space_between_3px"
+                    android:layout_below="@id/tv_left"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/boc_text_color_red" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_right"
+                android:layout_width="@dimen/boc_space_between_120px"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_right"
+                    style="@style/tv_small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/boc_drawpingment"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@drawable/boc_drawrecord_text"
+                    android:textSize="13dp" />
+
+                <View
+                    android:id="@+id/view_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/boc_space_between_3px"
+                    android:layout_below="@id/tv_right"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/boc_text_color_red" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRow
+            android:id="@+id/dtr_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/boc_space_between_6px"
+            app:fullLine="true"
+            app:lineVisibility="true"
+            app:textName="@string/boc_virtual_account_detail_bill_date" />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRow
+            android:id="@+id/dtr_payment_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:fullLine="true"
+            app:lineVisibility="true"
+            app:textName="@string/boc_virtual_account_detail_bill_payment_date" />
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.details.DetailTableRow
+            android:id="@+id/dtr_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:fullLine="true"
+            app:lineVisibility="true"
+            app:textName="@string/boc_virtual_account_detail_bill_payment_amount" />
+
+
+        <com.boc.bocsoft.mobile.bocmobile.base.widget.transactionlist.FullTransactionListView
+            android:id="@+id/trans_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/boc_space_between_20px" />
+    </LinearLayout>
+
+</ScrollView>

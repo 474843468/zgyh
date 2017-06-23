@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 基金账户 开户  成功页面 xyl -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/common_bottom_padding" >
+
+    <include
+        android:id="@+id/stepbar"
+        layout="@layout/step_title_layout" />
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/finc_confirm_btn"
+            style="@style/bottombtn_606"
+            android:text="@string/confirm"
+             />
+    </LinearLayout>
+
+    <ScrollView
+        style="@style/scrollview_comm_havemarginbutton"
+        android:layout_above="@id/btn_layout"
+        android:layout_below="@id/stepbar" >
+
+        <LinearLayout
+            style="@style/confirm_main_style"
+            android:orientation="vertical" >
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_info_textview_style"
+                    android:text="@string/finc_acc_regisitAcc_three_info" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/finc_monyacc_colon" />
+
+                <TextView
+                    android:id="@+id/fund_accNum_tv"
+                    style="@style/confirm_right_textview_style606" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/prms_acctype" />
+
+                <TextView
+                    android:id="@+id/fund_accType_tv"
+                    style="@style/confirm_right_textview_style606" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/linnerlayout_common" 
+                android:visibility="gone"
+                >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/finc_addresstype_colon" />
+
+                <TextView
+                    android:id="@+id/fund_addresstype_tv"
+                    style="@style/confirm_right_textview_style606" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/finc_smc_edit_layout"
+                style="@style/linnerlayout_common"
+                android:visibility="gone" >
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/set_smc" />
+
+                <LinearLayout
+                    style="@style/confirm_left_textview_style606"
+                    android:orientation="horizontal" >
+
+                    <cfca.mobile.sip.SipBox
+                        android:id="@+id/finc_smc_edit"
+                        style="@style/editext_fill"
+                        android:layout_weight="4"
+                        android:maxLength="6" >
+                    </cfca.mobile.sip.SipBox>
+
+                    <Button
+                        android:id="@+id/set_get"
+                        style="@style/button_smscode606"
+                        android:layout_marginLeft="@dimen/common_listview_item_paddingLR" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/finc_otp_edit_layout"
+                style="@style/linnerlayout_common"
+                 android:visibility="gone">
+
+                <TextView
+                    style="@style/confirm_left_textview_style606"
+                    android:text="@string/set_otp" />
+
+                <cfca.mobile.sip.SipBox
+                    android:id="@+id/finc_otp_edit"
+                    style="@style/edittext_inputNumber_fill"
+                    android:maxLength="6" />
+            </LinearLayout>
+
+            <com.chinamworld.bocmbci.widget.UsbKeyText
+                android:id="@+id/sip_usbkey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/common_row_margin"
+                android:layout_marginRight="@dimen/common_row_margin_half"
+                android:gravity="center"
+                android:orientation="horizontal" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

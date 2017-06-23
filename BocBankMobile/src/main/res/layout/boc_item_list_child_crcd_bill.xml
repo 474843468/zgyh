@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/layout_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white">
+
+    <LinearLayout
+        android:id="@+id/ll_left"
+        android:layout_width="@dimen/boc_space_between_80px"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@color/boc_item_bg_color"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/boc_space_between_22px"
+        android:paddingTop="@dimen/boc_space_between_22px">
+
+        <TextView
+            android:id="@+id/txt_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/boc_space_between_5px"
+            android:text="00"
+            android:textColor="@color/boc_text_color_cinerous"
+            android:textSize="@dimen/boc_text_size_little_big"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txt_week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="默认"
+            android:textColor="@color/boc_text_color_cinerous"
+            android:textSize="@dimen/boc_text_size_super_small"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/ll_left"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/boc_space_between_22px"
+        android:paddingLeft="@dimen/boc_space_between_22px"
+        android:paddingRight="@dimen/boc_space_between_22px"
+        android:paddingTop="@dimen/boc_space_between_22px">
+
+        <RelativeLayout
+            android:id="@+id/rl_content_above"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_content_left_above"
+                style="@style/BocTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/boc_space_between_20px"
+                android:layout_toLeftOf="@+id/txt_content_right_above"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/txt_content_right_above"
+                style="@style/BocTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_content_center"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_40px"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/boc_space_between_5px">
+
+            <TextView
+                android:id="@+id/txt_content_left_below"
+                style="@style/BocTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/txt_content_right_below"
+                android:layout_marginRight="@dimen/boc_space_between_10px"
+                android:gravity="center_vertical"
+                android:textColor="@color/boc_text_color_green"/>
+
+            <TextView
+                android:id="@+id/txt_content_right_below"
+                style="@style/BocTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:ellipsize="end"
+                android:gravity="end|center_vertical"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_divide_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingLeft="@dimen/boc_space_between_80px">
+
+        <include layout="@layout/boc_divide_line"/>
+    </LinearLayout>
+</RelativeLayout>

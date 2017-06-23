@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <!-- 收益概述 -->
+
+        <TextView
+            android:id="@+id/tv_summarize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- 显示未到账已到账收益的饼状图 -->
+
+        <com.chinamworld.bocmbci.biz.bocinvt_p603.myinvetproduct.widget.CakeChartView
+            android:id="@+id/cake_chart"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:gravity="center" />
+        <!-- 未到账收益 -->
+
+        <TextView
+            android:id="@+id/tv_legend_unpay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp" />
+        <!-- 已到账收益 -->
+
+        <TextView
+            android:id="@+id/tv_legend_paid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="50dp" />
+
+        <TextView
+            android:id="@+id/tv_reminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/bocinvt_profit_reminder"
+            android:textColor="@color/gray" />
+    </LinearLayout>
+
+</ScrollView>

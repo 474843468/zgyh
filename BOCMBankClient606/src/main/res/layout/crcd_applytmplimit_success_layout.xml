@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        style="@style/scrollview_comm"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:paddingBottom="0dp"
+        android:paddingTop="0dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@id/ll_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/fill_margin_top"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/nextButton"
+                    style="@style/bottombtn"
+                    android:text="@string/finish"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_above="@id/ll_btn"
+                android:layout_weight="1"
+                android:background="@drawable/bg_for_listview_item_write"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/fill_margin_bottom"
+                android:paddingLeft="@dimen/fill_margin_left"
+                android:paddingRight="@dimen/fill_margin_right"
+                android:paddingTop="@dimen/fill_padding_top" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/tv_acc_loss_actnum"
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:text="@string/mycrcd_applytmplimit_confirm"
+                            android:textColor="@color/gray" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/cardnumId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="4"
+                            android:text="@string/mycrcd_creditcard_number" />
+
+                        <TextView
+                            android:id="@+id/card_accountNumber"
+                            style="@style/textview_common_right"
+                            android:layout_weight="6"
+                            android:singleLine="false"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="4"
+                            android:ellipsize="middle"
+                            android:text="@string/mycrcd_hope_cn" />
+
+                        <TextView
+                            android:id="@+id/crcd_text1"
+                            style="@style/textview_common_right"
+                            android:layout_weight="6"
+                            android:singleLine="false"
+                            android:text="" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lin2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="4"
+                            android:ellipsize="middle"
+                            android:text="@string/mycrcd_hope_wb" />
+
+                        <TextView
+                            android:id="@+id/crcd_text2"
+                            style="@style/textview_common_right"
+                            android:layout_weight="6"
+                            android:singleLine="false"
+                            android:text="" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

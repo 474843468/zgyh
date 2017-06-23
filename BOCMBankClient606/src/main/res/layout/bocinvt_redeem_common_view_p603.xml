@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <!-- 中银理财产品赎回，净值与非净值页面的相同部分 -->
+
+    <com.chinamworld.bocmbci.userwidget.LabelTextView
+        android:id="@+id/lvt_redeem_revoke"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        custom:labelText="@string/bocinvt_redeem_revoke" />
+
+    <com.chinamworld.bocmbci.userwidget.LabelTextView
+        android:id="@+id/ltv_hold_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:labelText="@string/bocinvt_redeem_hold_quantity" />
+
+    <com.chinamworld.bocmbci.userwidget.LabelTextView
+        android:id="@+id/ltv_usable_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        custom:labelText="@string/bocinvt_redeem_usable_quantity_new" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/textview_common_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="@string/bocinvt_redeem_quantity" />
+
+        <TextView
+            android:id="@+id/redeem_all"
+            style="@style/textview_common_right"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:textColor="@color/red"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/redeem_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/et_redeem_quantity"
+                style="@style/edittext_input_numberDecimal_fill"
+                android:layout_weight="1"
+                android:maxLength="14" />
+
+            <TextView
+                android:id="@+id/tv_redeem_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="@string/bocinvt_redeem_all"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/textsize_default" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_chinese_numeral"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_five"
+        android:gravity="right"
+        android:paddingRight="@dimen/fill_padding_right"
+        android:textColor="@color/red"
+        android:textSize="@dimen/textsize_one_three" />
+
+    <RadioGroup
+        android:id="@+id/rg_redeem_way"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_redeem_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radiobtn_selector"
+            android:text="@string/bocinvt_redeem_now"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="1dp" />
+
+        <RadioButton
+            android:id="@+id/rb_assign_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/radiobtn_selector"
+            android:text="@string/bocinvt_redeem_assign_date"
+            android:textSize="15sp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/choose_date_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            style="@style/textview_common_left"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="@string/bocinvt_redeem_date" />
+
+        <TextView
+            android:id="@+id/tv_choose_date"
+            style="@style/textview_common"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/layout_height"
+            android:layout_weight="1"
+            android:background="@drawable/bg_spinner"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginRight="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/remit_date_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_remitDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:textColor="@color/red"
+            android:textSize="@dimen/textsize_default" />
+    </LinearLayout>
+
+</merge>

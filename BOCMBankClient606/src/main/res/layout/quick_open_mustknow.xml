@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center" >
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnAgree"
+            style="@style/bottombtn"
+            android:background="@drawable/btn_red_big_long"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            android:visibility="visible" />
+
+        <!-- <Button
+            android:id="@+id/btnDisAgree"
+            style="@style/btn_common_oneline"
+            android:textColor="@color/black"
+            android:background="@drawable/btn_gray_big"
+            android:text="@string/noaccept" /> -->
+    </LinearLayout>
+
+    <RelativeLayout
+        style="@style/scrollview_comm"
+        android:layout_above="@id/btn_layout"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:paddingBottom="@dimen/common_row_margin"
+        android:paddingTop="@dimen/common_row_margin" >
+
+        <LinearLayout
+            android:id="@+id/tran_save_payee_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/fill_margin_top"
+            android:layout_marginRight="@dimen/fill_margin_top"
+            android:gravity="center"
+            android:visibility="visible" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <CheckBox
+                    android:id="@+id/cb_isCheck"
+                    android:layout_width="@dimen/checkboxWH"
+                    android:layout_height="@dimen/checkboxWH"
+                    android:background="@drawable/save_phone_checkbox_selector"
+                    android:button="@null" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_isCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/fill_margin_top"
+                android:gravity="center_vertical"
+                android:text="@string/quickOpen_mustKnow_bottomTip"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textsize_default" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_mustKnowTip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/quickOpen_mustKnow_title"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/textsize_default" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/tran_save_payee_layout"
+            android:layout_below="@id/tv_mustKnowTip"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_jiaF"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fill_margin_top"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:text="@string/firstsize"
+                    android:visibility="gone"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    android:id="@+id/tv_mustKnowText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/fill_margin_top"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:text="@string/quickOpen_mustKnow_text"
+                    android:textSize="@dimen/textsize_default" />
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

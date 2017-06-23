@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#F0EFF5"
+              android:orientation="vertical">
+    <include layout="@layout/boc_divide_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/boc_space_between_22px"
+        android:layout_marginRight="@dimen/boc_space_between_22px"
+        android:layout_marginTop="@dimen/boc_space_between_20px"
+        android:background="@drawable/boc_button_bg_gray_no_stroke"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_104px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/boc_space_between_32px">
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:text="@string/boc_loan_applied_name"
+                android:gravity="left"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/boc_text_size_common"
+                />
+
+            <EditText
+                android:id="@+id/edtName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/boc_common_input_hint"
+                android:maxLines="1"
+                android:paddingRight="16dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/boc_text_color_gray"
+                android:textSize="@dimen/boc_text_size_common"/>
+        </LinearLayout>
+
+        <include layout="@layout/boc_divide_line"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_104px"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/boc_space_between_32px">
+
+            <TextView
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:text="@string/boc_loan_applied_phone_email"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/boc_text_size_common"
+                />
+
+            <EditText
+                android:id="@+id/edtPhone"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/boc_common_input_hint"
+                android:maxLines="1"
+                android:paddingRight="16dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/boc_text_color_gray"
+                android:textSize="@dimen/boc_text_size_common"/>
+        </LinearLayout>
+
+        <include layout="@layout/boc_divide_line"/>
+
+        <View
+            android:id="@+id/view_open_account_bank_line"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/boc_divider_line_color"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/boc_space_between_88px"
+        android:layout_marginLeft="@dimen/boc_space_between_22px"
+        android:layout_marginRight="@dimen/boc_space_between_22px"
+        android:layout_marginTop="@dimen/boc_space_between_80px"
+        style="@style/BocButton.BocPrimaryButton"
+        android:text="@string/boc_eloan_summit"
+        android:textStyle="bold"/>
+
+</LinearLayout>

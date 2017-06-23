@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bocroa_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/boc_space_between_12px"
+        android:background="@color/bocroa_white"
+        android:orientation="vertical">
+        <!--结构汇类型-->
+        <TextView
+            android:id="@+id/tv_cash_remit_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/boc_space_between_12px"
+            android:text="结汇"
+            android:textColor="@color/boc_text_color_common_gray"
+            android:textSize="@dimen/boc_text_size_common" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--中国国旗币种-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <!--国旗-->
+                <ImageView
+                    android:layout_width="@dimen/boc_space_between_96px"
+                    android:layout_height="@dimen/boc_space_between_80px"
+                     />
+                <!--币种-->
+                <TextView
+                    android:id="@+id/tv_currency_rmb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/boc_space_between_8px"
+                    android:text="人民币元"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_small_14dp" />
+            </LinearLayout>
+            <!--切换结构汇-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_cash_remit_change"
+                    android:layout_width="@dimen/boc_space_between_80px"
+                    android:layout_height="@dimen/boc_space_between_80px"
+                    android:background="@drawable/boc_icon" />
+
+                <TextView
+                    android:layout_width="@dimen/boc_space_between_2px"
+                    android:layout_height="match_parent"
+                    android:background="@color/bocroa_background" />
+            </LinearLayout>
+            <!--外国币种国旗-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <!--外国国旗-->
+                <ImageView
+                    android:id="@+id/iv_national_flag_foreign"
+                    android:layout_width="@dimen/boc_space_between_96px"
+                    android:layout_height="@dimen/boc_space_between_80px" />
+                <!--币种外币-->
+                <TextView
+                    android:id="@+id/tv_currency_foreign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/boc_space_between_6px"
+                    android:drawableRight="@drawable/fund_type_arrow_down"
+                    android:padding="@dimen/boc_space_between_8px"
+                    android:text="美元"
+                    android:textColor="@color/boc_text_color_dark_gray"
+                    android:textSize="@dimen/boc_text_size_small_14dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <!--金额输入界面-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <!--人民币-->
+            <com.boc.bocsoft.mobile.bocmobile.base.widget.moneyinputview.MoneyInputTextView
+                android:id="@+id/cus_china_money"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:hint="请输入"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:textColorHint="@color/boc_text_color_light_gray"
+                app:editChoiceNameBold="true" />
+            <!--竖线-->
+            <TextView
+                android:layout_width="@dimen/boc_space_between_2px"
+                android:layout_height="match_parent"
+                android:background="@color/bocroa_background" />
+            <!--外币输入-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/boc_space_between_10px"
+                        android:text="汇"
+                        android:textColor="@color/boc_text_color_dark_gray" />
+
+                    <com.boc.bocsoft.mobile.bocmobile.base.widget.moneyinputview.MoneyInputTextView
+                        android:id="@+id/cus_remit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="请输入"
+                        android:textColor="@color/boc_text_color_dark_gray"
+                        android:textColorHint="@color/boc_text_color_light_gray"
+                        app:editChoiceNameBold="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/boc_space_between_10px"
+                        android:text="钞"
+                        android:textColor="@color/boc_text_color_dark_gray" />
+
+                    <com.boc.bocsoft.mobile.bocmobile.base.widget.moneyinputview.MoneyInputTextView
+                        android:id="@+id/cus_cash"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:hint="请输入"
+                        android:textColor="@color/boc_text_color_dark_gray"
+                        android:textColorHint="@color/boc_text_color_light_gray"
+                        app:editChoiceNameBold="true" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

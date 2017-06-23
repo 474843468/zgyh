@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/acc_query_result_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+       
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:gravity="center" >
+
+            <TextView
+                style="@style/textview_common"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/plps_payment_sign_listtip"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/phoneNum"
+                style="@style/textview_common"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/bottom_margin_top"
+                android:background="@drawable/btn_red_big_long"
+                android:text="@string/plps_payment_modify"
+                android:textColor="@color/white"
+                android:onClick="phoneNumberChangeOnclick" />
+        </LinearLayout>
+        <TextView
+                style="@style/textview_common"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/plps_payment_sign_info"
+                android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout"
+        android:layout_marginTop="@dimen/bottom_margin_top"
+        android:background="@drawable/bg_for_listview_item_write" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/common_row_margin" >
+
+                <TextView
+                    android:id="@+id/tvtitle_type"
+                    style="@style/textview_for_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/common_details_title_margintop"
+                    android:layout_weight="1.0"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="收费单位"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    style="@style/textview_for_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/common_details_title_margintop"
+                    android:layout_weight="1.0"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="缴费用户号"
+                    android:textSize="@dimen/textsize_default" />
+
+                <TextView
+                    style="@style/textview_for_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/common_details_title_margintop"
+                    android:layout_weight="1.0"
+                    android:gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:text="状态"
+                    android:textSize="@dimen/textsize_default" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/gray" />
+
+            <ListView
+                android:id="@+id/listview"
+                style="@style/listviewcomm_wrap_haveDivider"
+                android:divider="@color/gray"
+                android:dividerHeight="1dip" />
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/gray"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chinamworld.bocmbci.widget.MyRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_content"
+    android:gravity="center_vertical" >
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/navbar" >
+
+        <Button
+            android:id="@+id/ib_back"
+            style="@style/titlebackbtn"
+            android:text="@string/back"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_one_three" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/titleText"
+            android:text="@string/login" />
+
+        <Button
+            android:id="@+id/ib_top_right_btn_b"
+            style="@style/titlerightbtn_b"
+            android:layout_marginRight="@dimen/dp_five"
+            android:layout_toLeftOf="@+id/ib_top_right_btn"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_one_three"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/ib_top_right_btn"
+            style="@style/titlerightbtn"
+            android:gravity="center"
+            android:text="@string/go_main"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_one_three"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/idSL"
+        style="@style/scrollview_fill"
+        android:layout_above="@+id/foot_layout"
+        android:layout_below="@+id/main_layout"
+        android:layout_margin="@dimen/fill_padding" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RadioGroup
+                    android:id="@+id/radioGroup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/btn_mobilebank"
+                        style="@style/twoRadioButtonLeft"
+                        android:checked="true"
+                        android:onClick="btnMobileBankUserOnclick"
+                        android:text="@string/bocnetbtn1" />
+
+                    <RadioButton
+                        android:id="@+id/btn_cardbank"
+                        style="@style/twoRadioButtonRight"
+                        android:onClick="btnCardBankUserOnclick"
+                        android:text="@string/bocnetbtn2" />
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_one_zero"
+                    android:background="@drawable/bg_for_listview_item_write"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/common_row_margin_half"
+                    android:paddingTop="@dimen/common_row_margin_half" >
+
+                    <include
+                        android:id="@+id/layout_acclogin"
+                        layout="@layout/bocnet_login"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/layout_mobilebank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            style="@style/just_margin_left_and_right"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/login_layout_height"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_common"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="@string/tel_num" />
+
+                            <EditText
+                                android:id="@+id/ed_login_name"
+                                style="@style/login_edittext"
+                                android:layout_gravity="center_vertical"
+                                android:background="@null"
+                                android:gravity="center_vertical"
+                                android:inputType="number"
+                                android:maxLength="15"
+                                android:textSize="@dimen/textsize_default" >
+
+                                <requestFocus />
+                            </EditText>
+                        </LinearLayout>
+
+                        <TextView style="@style/dividerlinegray" />
+
+                        <LinearLayout
+                            style="@style/just_margin_left_and_right"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/login_layout_height"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_common"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="@string/login_pwd" />
+
+                            <cfca.mobile.sip.SipBox
+                                android:id="@+id/login_pwd_sip"
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/layout_height"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:gravity="center_vertical"
+                                android:maxLength="20"
+                                android:textSize="@dimen/textsize_default" >
+                            </cfca.mobile.sip.SipBox>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <!-- TODO 验证码 -->
+
+                    <LinearLayout
+                        android:id="@+id/image_code_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <TextView style="@style/dividerlinegray" />
+
+                        <LinearLayout
+                            style="@style/just_margin_left_and_right"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                style="@style/textview_common"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="@string/login_image_code" />
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" >
+
+                                <EditText
+                                    android:id="@+id/ed_image_code"
+                                    style="@style/login_edittext"
+                                    android:layout_width="0dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:background="@null"
+                                    android:hint="@string/hint_image"
+                                    android:inputType="number"
+                                    android:maxLength="4"
+                                    android:textSize="@dimen/textsize_default" />
+
+                                <Button
+                                    android:id="@+id/ib_image_code"
+                                    style="@style/auth_image"
+                                    android:layout_gravity="center_vertical"
+                                    android:background="@drawable/selector_for_image_code"
+                                    android:text="加载中..." />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/bocnet_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dip"
+                    android:text="@string/bocnet_logintip"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/textsize_default"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/login_middle_layout"
+                    style="@style/just_margin_left_and_right"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="@dimen/common_row_margin_half"
+                    android:paddingTop="@dimen/common_row_margin_half" >
+
+                    <CheckBox
+                        android:id="@+id/cbSavePhone"
+                        android:layout_width="@dimen/checkboxWH"
+                        android:layout_height="@dimen/checkboxWH"
+                        android:background="@drawable/save_phone_checkbox_selector"
+                        android:button="@null" />
+
+                    <TextView
+                        android:id="@+id/tvSavePhone"
+                        style="@style/textview_common"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/fill_margin_left"
+                        android:text="@string/remeber_phone" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnLogin"
+                    style="@style/btn_login"
+                    android:layout_marginBottom="@dimen/dp_five"
+                    android:layout_marginTop="@dimen/dp_five"
+                    android:background="@drawable/btn_red_big_long"
+                    android:gravity="center"
+                    android:text="@string/login" />
+
+                <!-- 找回密码   自助注册 -->
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/fill_margin_top"
+                    android:background="@drawable/bg_for_click_content"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:id="@+id/login_findpwd"
+                        style="@style/common_click_first_item_style"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/retrieve_pwd_title" />
+
+                        <ImageView
+                            style="@style/rightbtn_jiantou"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/right_arrow" />
+                    </RelativeLayout>
+
+                    <ImageView style="@style/divider_imag_style" />
+
+                    <RelativeLayout
+                        android:id="@+id/login_selfreg"
+                        style="@style/common_click_item_style" >
+
+                        <TextView
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/self_reg_title" />
+
+                        <ImageView
+                            style="@style/rightbtn_jiantou"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/right_arrow" />
+                    </RelativeLayout>
+
+                    <ImageView style="@style/divider_imag_style" />
+
+                    <RelativeLayout
+                        android:id="@+id/login_order"
+                        style="@style/common_click_last_item_style"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/order_main_title" />
+
+                        <ImageView
+                            style="@style/rightbtn_jiantou"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/right_arrow" />
+                    </RelativeLayout>
+
+                      <RelativeLayout
+                        android:id="@+id/Remote_Open"
+                        style="@style/common_click_last_item_style"
+                         >
+
+                        <TextView
+                            style="@style/textview_common"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/online_open_an_account" />
+
+                        <ImageView
+                            style="@style/rightbtn_jiantou"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/right_arrow" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/foot_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <include layout="@layout/foot" />
+    </LinearLayout>
+
+</com.chinamworld.bocmbci.widget.MyRelativeLayout>

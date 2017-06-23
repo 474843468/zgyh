@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="AppBaseTheme" parent="Base.Theme.AppCompat" />
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme"></style>
+
+
+    <!-- common颜色的不同大小的字体样式 -->
+    <style name="tv_common">
+        <item name="android:textSize">@dimen/boc_text_size_common</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/boc_text_color_common_gray</item>
+    </style>
+    <!--定制>>贵金属-->
+    <style name="tv_order_item" parent="@style/tv_common">
+        <item name="android:layout_height">@dimen/boc_space_between_44px</item>
+    </style>
+    <style name="tv_super_small" parent="@style/tv_common">
+        <item name="android:textSize">@dimen/boc_text_size_super_small</item>
+    </style>
+
+    <style name="tv_small" parent="@style/tv_common">
+        <item name="android:textSize">@dimen/boc_text_size_small</item>
+    </style>
+
+    <style name="tv_very_small" parent="@style/tv_common">
+        <item name="android:textSize">@dimen/boc_text_size_very_small</item>
+    </style>
+
+    <style name="tv_little_big" parent="@style/tv_common">
+        <item name="android:textSize">@dimen/boc_text_size_little_big</item>
+    </style>
+
+    <style name="tv_big" parent="@style/tv_common">
+        <item name="android:textSize">@dimen/boc_text_size_big</item>
+    </style>
+
+    <style name="tv_super_big" parent="@style/tv_common">
+        <item name="android:textSize">@dimen/boc_text_size_supper_big</item>
+    </style>
+
+    <!--分割线样式-->
+    <style name="divider_vertical">
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">@dimen/boc_divider_1px</item>
+        <item name="android:background">@color/boc_divider_line_color</item>
+    </style>
+
+    <style name="divider_horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/boc_divider_1px</item>
+        <item name="android:background">@color/boc_divider_line_color</item>
+    </style>
+
+    <style name="dialog_normal" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- activity变暗 -->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+    <!-- 按钮样式基类 -->
+    <style name="BocButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/boc_button_height_96px</item>
+        <item name="android:textColor">@color/boc_common_cell_color</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!-- 白底按钮样式 -->
+    <style name="BocButton.BocWhiteBgButton">
+        <item name="android:textSize">@dimen/boc_text_size_common</item>
+        <item name="android:background">@color/boc_common_cell_color</item>
+        <item name="android:layout_height">@dimen/boc_button_height_104px</item>
+    </style>
+
+    <!-- 阅读协议等提示按钮样式 -->
+    <style name="BocButton.BocPromptButton">
+        <item name="android:textSize">@dimen/boc_text_size_common</item>
+        <item name="android:background">@drawable/boc_button_bg_selector</item>
+    </style>
+    <!-- 操作结果页面按钮样式 -->
+    <style name="BocResultButton">
+        <item name="android:textColor">@color/boc_text_color_red</item>
+        <item name="android:background">@color/boc_main_btn_bg_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/boc_text_size_common</item>
+        <item name="android:layout_height">@dimen/boc_button_height_104px</item>
+    </style>
+
+    <!-- 跟接口相关的主提交按钮 -->
+    <style name="BocButton.BocPrimaryButton">
+        <item name="android:textSize">@dimen/boc_text_size_little_big</item>
+        <item name="android:radius">@dimen/boc_radius_11px</item>
+        <item name="android:layout_height">@dimen/boc_button_height_88px</item>
+        <item name="android:layout_marginLeft">@dimen/boc_space_between_30px</item>
+        <item name="android:layout_marginRight">@dimen/boc_space_between_30px</item>
+        <item name="android:background">@drawable/boc_button_bg_blue</item>
+    </style>
+
+    <!-- 跟接口相关的主提交按钮 -->
+    <style name="BocButton.BocPrimaryButton1">
+        <item name="android:textSize">@dimen/boc_text_size_little_big</item>
+        <item name="android:radius">@dimen/boc_radius_11px</item>
+        <item name="android:layout_height">@dimen/boc_button_height_104px</item>
+        <item name="android:background">@drawable/boc_button_bg_blue</item>
+        <item name="android:textColor">@color/boc_common_cell_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">@dimen/boc_space_between_30px</item>
+        <item name="android:layout_marginRight">@dimen/boc_space_between_30px</item>
+        <item name="android:layout_marginTop">@dimen/boc_space_between_80px</item>
+    </style>
+
+
+    <!-- 申请等按钮样式 -->
+    <style name="BocButton.BocHalfButton">
+        <item name="android:color">@color/boc_common_cell_color</item>
+        <item name="android:textSize">@dimen/boc_text_size_little_big</item>
+        <item name="android:background">@drawable/boc_button_bg_half</item>
+        <item name="android:layout_height">@dimen/boc_button_height_88px</item>
+    </style>
+
+    <!-- 申请等按钮样式 -->
+    <style name="BocButton.BocHalfButton1">
+        <item name="android:color">@color/boc_common_cell_color</item>
+        <item name="android:textSize">@dimen/boc_text_size_common</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/boc_button_bg_half</item>
+        <item name="android:layout_height">@dimen/boc_button_height_104px</item>
+    </style>
+
+    <!-- 操作结果页面中的按钮 -->
+    <style name="BocButton.BocOperationButton">
+        <item name="android:textSize">@dimen/boc_text_size_little_big</item>
+        <item name="android:radius">@dimen/boc_radius_11px</item>
+        <item name="android:layout_height">@dimen/boc_button_height_88px</item>
+        <item name="android:layout_marginLeft">@dimen/boc_space_between_30px</item>
+        <item name="android:layout_marginRight">@dimen/boc_space_between_30px</item>
+        <item name="android:background">@drawable/boc_button_bg_gray</item>
+    </style>
+
+    <!--信用卡首页按钮浅色背景-->
+    <style name="BocButton.BocCrcdButton">
+        <item name="android:textSize">@dimen/boc_text_size_little_big</item>
+        <item name="android:background">@drawable/boc_bg_button_crcd_gray</item>
+    </style>
+
+    <style name="dialog_window_anim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/boc_dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/boc_dialog_exit</item>
+    </style>
+
+    <style name="dialog_no_dim" parent="android:style/Theme.Dialog">
+        <!--边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity-->
+        <item name="android:windowIsFloating">true</item>
+        <!--半透明-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--无标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--自己想要的背景-->
+        <item name="android:windowBackground">@null</item>
+        <!--模糊-->
+        <item name="android:backgroundDimEnabled">false</item>
+
+        <item name="android:windowAnimationStyle">@style/dialog_window_anim</item>
+
+    </style>
+
+    <style name="Widget.GifMoviewView" parent="@android:style/Widget" />
+
+    <!-- 贷款三段查询样式 -->
+    <style name="radioButton1">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/tabbtn_bottom_height</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/textsize_one_seven</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/color_tabradiobtn</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/tabbtn_left_selector_new</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="radioButton2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/tabbtn_bottom_height</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/textsize_one_seven</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/color_tabradiobtn</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/tabbtn_middle_selector_new</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="radioButton3">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/tabbtn_bottom_height</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/textsize_one_seven</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/color_tabradiobtn</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/tabbtn_right_selector_new</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <!-- ca键盘字母style -->
+    <style name="ca_letter_key_style">
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:layout_marginLeft">1.7dp</item>
+        <item name="android:layout_marginRight">1.7dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/ca_letter_bg</item>
+        <item name="android:textColor">@drawable/ca_letter_text_color</item>
+        <item name="android:padding">0dp</item>
+    </style>
+    <!-- ca键盘数字style -->
+    <style name="ca_number_key_style">
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/ca_number_bg</item>
+        <item name="android:textColor">@drawable/ca_letter_text_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="autoScaleTextView">
+        <!-- some graphical improvements just for the demo. feel free to remove -->
+        <item name="@android:attr/background">@drawable/border</item>
+        <item name="@android:attr/padding">0dp</item>
+        <item name="@android:attr/gravity">center</item>
+        <!-- use the next line to alter the minimum text size (uncomment first)-->
+        <!-- <item name="@attr/minTextSize">10dp</item> -->
+    </style>
+    <!--首页投资模块显示样式1-->
+    <style name="home_module_text1">
+        <item name="android:layout_margin">@dimen/boc_space_between_8px</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/boc_text_color_dark_gray</item>
+        <item name="android:textSize">@dimen/boc_text_size_small</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!-- 中银理财-日积月累-立即购买-按钮 -->
+    <style name="BocButton.BocRJYLButton">
+        <item name="android:textSize">@dimen/boc_text_size_little_big</item>
+        <item name="android:layout_height">@dimen/boc_button_height_88px</item>
+        <item name="android:background">@drawable/boc_button_bg_red_rjyl</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/boc_common_cell_color</item>
+    </style>
+
+    <style name="account_mangager">
+        <item name="android:textSize">@dimen/boc_text_size_common</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/boc_text_color_dark_gray</item>
+    </style>
+
+    <style name="BocTextView">
+        <item name="android:textSize">@dimen/boc_text_size_common</item>
+        <item name="android:textColor">@color/boc_text_color_dark_gray</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="BocTextViewSmall">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/boc_text_size_small</item>
+        <item name="android:textColor">@color/boc_text_color_common_gray</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:drawablePadding">@dimen/boc_space_between_10px</item>
+    </style>
+
+    <style name="BocTextViewMoney">
+        <item name="android:textSize">@dimen/boc_text_size_little_big</item>
+        <item name="android:textColor">@color/boc_text_color_dark_gray</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="BocTextViewState">
+        <item name="android:textSize">@dimen/boc_text_size_super_small</item>
+        <item name="android:textColor">@color/boc_common_cell_color</item>
+    </style>
+
+    <style name="overseas_tv_style" parent="tv_little_big">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">@dimen/boc_space_between_46px</item>
+        <item name="android:textColor">@color/boc_text_color_green</item>
+    </style>
+
+
+
+    <style name="mradioButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/tabbtn_bottom_height</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/textsize_one_seven</item>
+        <item name="android:textColor">@color/color_overseas_radiobtn</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:background">@drawable/tab_overseas_midle</item>
+        <item name="android:button">@null</item>
+    </style>
+
+
+
+    <!-- 跟消费金融相关提交按钮 -->
+    <style name="BocButton.BocConsumeFinanceButton">
+        <item name="android:textSize">@dimen/boc_text_size_common</item>
+        <item name="android:radius">@dimen/boc_radius_11px</item>
+        <item name="android:layout_height">@dimen/boc_button_height_88px</item>
+        <item name="android:layout_marginLeft">@dimen/boc_space_between_40px</item>
+        <item name="android:layout_marginRight">@dimen/boc_space_between_40px</item>
+        <item name="android:background">@drawable/boc_button_bg_consumefinance</item>
+    </style>
+
+
+    <!--SimpleTabLayout默认属性值 -->
+    <style name="SimpleTabLayout">
+        <item name="tabGravity">fill</item>
+        <item name="tabMode">fixed</item>
+        <item name="tabMaxWidth">264dp</item>
+        <item name="tabIndicatorColor">@color/boc_navigation_bar_color</item>
+        <item name="tabIndicatorHeight">2dp</item>n
+        <item name="tabPaddingStart">12dp</item>
+        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabTextSize">16sp</item>
+        <item name="tabTextColor">?android:textColorPrimary</item>
+        <item name="tabSelectedTextColor">@color/boc_navigation_bar_color</item>
+    </style>
+    <!--持仓列表 使用-->
+    <style name="FinancialPositionUnit">
+        <item name="android:textSize">@dimen/boc_text_size_small</item>
+        <item name="android:textColor">@color/boc_black</item>
+    </style>
+    <!--持仓列表 使用-->
+    <style name="FinancialPositionMoney">
+        <item name="android:textSize">@dimen/boc_text_size_big</item>
+        <item name="android:textColor">@color/boc_text_color_red</item>
+    </style>
+
+    <!--跨境专区 textview-->
+    <style name="OverseaszoneTv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/boc_space_between_20px</item>
+        <item name="android:layout_marginTop">@dimen/boc_space_between_20px</item>
+        <item name="android:textSize">@dimen/boc_text_size_small</item>
+        <item name="android:textColor">@color/boc_text_color_dark_gray</item>
+        <item name="android:background">@drawable/bg_oversea_selector</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:paddingBottom">@dimen/boc_space_between_16px</item>
+        <item name="android:paddingTop">@dimen/boc_space_between_16px</item>
+        <item name="android:paddingLeft">@dimen/boc_space_between_14px</item>
+        <item name="android:paddingRight">@dimen/boc_space_between_14px</item>
+    </style>
+    <!--跨境专区 textview普通-->
+    <style name="OverseaszoneNormalTv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/boc_space_between_50px</item>
+        <item name="android:layout_marginRight">@dimen/boc_space_between_50px</item>
+        <item name="android:textSize">@dimen/boc_text_size_small</item>
+    </style>
+    <!--跨境专区 出国攻略-->
+    <style name="OverseaszoneStrategy">
+        <item name="android:layout_width">@dimen/boc_space_between_200px</item>
+        <item name="android:layout_height">@dimen/boc_space_between_200px</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginBottom">@dimen/boc_space_between_58px</item>
+        <item name="android:layout_marginRight">@dimen/boc_space_between_40px</item>
+        <item name="android:src">@drawable/overseazone_stategey</item>
+
+    </style>
+    <!--基金产品列表item 字段-->
+    <style name="FundProductListItemField">
+        <item name="android:layout_width">@dimen/boc_space_between_200px</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/boc_text_color_dark_gray</item>
+        <item name="android:textSize">@dimen/boc_text_size_common</item>
+    </style>
+
+    <!--基金详情内容字体 15号 黑色字体-->
+    <style name="textview_finc_detail">
+        <item name="android:textSize">@dimen/boc_text_size_common</item>
+        <item name="android:textColor">@color/boc_text_color_dark_gray</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="find_detail_zhexian_btn">
+        <item name="android:textSize">@dimen/boc_text_size_small</item>
+        <item name="android:textColor">@color/boc_text_color_dark_gray</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_fund_detail_radiobtn_selector</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:paddingTop">@dimen/boc_space_between_10px</item>
+        <item name="android:paddingBottom">@dimen/boc_space_between_10px</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <!--白色 按钮-->
+    <style name="fund_detail_white_btn">
+        <item name="android:textSize">@dimen/boc_text_size_common</item>
+        <item name="android:textColor">@color/boc_text_color_red</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/boc_space_between_104px</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <!--红色 按钮-->
+    <style name="fund_detail_red_btn">
+        <item name="android:textSize">@dimen/boc_text_size_common</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/boc_space_between_104px</item>
+        <item name="android:background">@color/boc_bg_color_red_gray</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="RiskCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/bg_radio_group_selector</item>
+    </style>
+    <!--带有边框、选择器，支持选中字体颜色、背景色的变化-->
+    <style name="fund_detail_select_btn" parent="@android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/boc_text_size_big</item>
+        <item name="android:textColor">@drawable/boc_button_text_select</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/boc_space_between_104px</item>
+        <item name="android:background">@drawable/boc_button_bg_frame_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_weight">1</item>
+
+    </style>
+
+
+    <!--带有边框、选择器，支持选中字体颜色、背景色的变化:左侧按钮-->
+    <style name="fund_detail_select_left_btn" parent="@style/fund_detail_select_btn">
+        <item name="android:background">@drawable/boc_button_left_bg_frame_selector</item>
+    </style>
+
+    <!--带有边框、选择器，支持选中字体颜色、背景色的变化:右侧按钮-->
+    <style name="fund_detail_select_right_btn" parent="@style/fund_detail_select_btn">
+        <item name="android:background">@drawable/boc_button_right_bg_frame_selector</item>
+    </style>
+
+    <!--信用卡 账单信息样式-->
+    <style name="crcd_bill_info" parent="@style/tv_common">
+        <item name="android:gravity">right</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/bocroa_text_color_white</item>
+        <item name="android:layout_marginTop">@dimen/boc_space_between_6px</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 自定义仿IOS的AlertDialog的样式 -->
+    <style name="AlertDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!-- 自定义仿IOS的ActionSheet底部Dialog的样式 ，有模糊效果 -->
+    <style name="ActionSheetDialogStyle" parent="@android:style/Theme.Dialog">
+
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的区域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
+    </style>
+
+    <!-- ActionSheet进出动画 -->
+    <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/actionsheet_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/actionsheet_dialog_out</item>
+    </style>
+
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/layout_main"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_btn"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/fill_margin_top"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/forex_make_text"
+                style="@style/textview_common"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/loan_chose_cdnumber_cd"
+                android:textColor="@color/gray" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fill_margin_top" >
+
+            <GridView
+                android:id="@+id/loan_rate_gridView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:columnWidth="@dimen/forex_make_code_columnWidth"
+                android:gravity="center"
+                android:horizontalSpacing="@dimen/forex_make_code_spacing"
+                android:listSelector="#00000000"
+                android:numColumns="1"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="@dimen/forex_make_code_spacing" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/make_sure"
+            style="@style/bottombtn"
+            android:layout_gravity="center"
+            android:text="@string/loan_chose_cdnumber_cd_button" />
+    </LinearLayout>
+
+</RelativeLayout>

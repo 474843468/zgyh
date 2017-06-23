@@ -1,0 +1,64 @@
+<div class="wrap wrap-justhead">
+    <header class="page-head page-head-information">
+        <div class="back-img"  def_event="{click: 'back'}"><img src="images/back-icon.png"></div>
+        <h1>选择兑换领取网点</h1>
+    </header>
+    <section class="information">
+        <!--网点信息开始-->
+        <div class="network spacing-sides-difference">
+            <ul>
+                <li class="provTab tabSelected" def_event="{click:'showProvPane'}"><span>请选择</span></li>
+                <li class="cityTab" style="display: none;" def_event="{click:'showCityPane'}"><span>请选择</span></li>
+                <li class="areaTab" style="display: none;" def_event="{click:'showAreaPane'}"><span>请选择</span></li>
+                <li class="bankTab" style="display: none;" def_event="{click:'showBankPane'}"><span>请选择</span></li>
+            </ul>
+        </div>
+        <div class="networkInfo">
+            <ul class="prov selected">
+                <%for(var i=0; i<provList.length; i++){%>
+                <li class="eobj" productId="<%=provList[i].productId%>" def_event="{click: 'selecProv'}">
+                    <%=provList[i].province%><span><img src="images/right-icon.png" style="width:6px;"> </span>
+                </li>
+                <%}%>
+            </ul>
+            <ul class="city" style="display: none;">
+
+            </ul>
+            <ul class="area" style="display: none;">
+
+            </ul>
+            <ul class="bank" style="display: none;">
+                <!--<li>-->
+                    <!--<span>-->
+                        <!--<a>中国银行厦门湖里支行</a><br>-->
+                        <!--<a>厦门市湖里华昌路88号</a>-->
+                    <!--</span>-->
+                    <!--<span class="networkInfo-amount">-->
+                        <!--<a>剩余额度</a><br>-->
+                        <!--<a>1000</a>-->
+                    <!--</span>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<span>-->
+                        <!--<a>中国银行厦门湖里支行</a><br>-->
+                        <!--<a>厦门市湖里华昌路88号</a>-->
+                    <!--</span>-->
+                    <!--<span class="networkInfo-amount">-->
+                        <!--<a>剩余额度</a><br>-->
+                        <!--<a>1000</a>-->
+                    <!--</span>-->
+                <!--</li>-->
+                <!--<li>-->
+                    <!--<span>-->
+                        <!--<a>中国银行厦门湖里支行</a><br>-->
+                        <!--<a>厦门市湖里华昌路88号</a>-->
+                    <!--</span>-->
+                    <!--<span class="networkInfo-amount">-->
+                        <!--<a>剩余额度</a><br>-->
+                        <!--<a>1000</a>-->
+                    <!--</span>-->
+                <!--</li>-->
+            </ul>
+        </div>
+    </section>
+</div>

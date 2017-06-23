@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <include android:id="@+id/step" 
+        layout="@layout/order_step"
+        android:layout_alignParentTop="true"/>
+
+    <LinearLayout
+        android:id="@+id/btn_sure"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/btnnext"
+            style="@style/bottombtn"
+            android:onClick="nextOnclick"
+            android:text="@string/next" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/btn_sure"
+        android:layout_below="@+id/step"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView style="@style/scrollview_little_margin" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                
+                <LinearLayout style="@style/linnerlayout_common" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/order_customer_name" />
+
+                    <TextView
+                        android:id="@+id/customerName"
+                        style="@style/textview_common_right"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout style="@style/linnerlayout_common">
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/trans_remit_phone"/>
+
+                    <TextView
+                        android:id="@+id/phoneNum"
+                        style="@style/textview_common_right"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout style="@style/linnerlayout_common">
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/order_name"/>
+
+                    <TextView
+                        android:id="@+id/orderName"
+                        style="@style/textview_common_right"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                <LinearLayout style="@style/linnerlayout_common">
+
+                    <TextView style="@style/textview_common_left"
+                        android:text="@string/order_adress"/>
+
+                    <TextView
+                        android:id="@+id/orderAdress"
+                        style="@style/textview_common_right"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+                <LinearLayout android:id="@+id/service_type_ll"
+                    style="@style/linnerlayout_common"
+                    android:visibility="gone">
+
+                    <TextView style="@style/textview_common_left"
+                        android:text="@string/order_service_type"/>
+
+                    <TextView
+                        android:id="@+id/serviceType"
+                        style="@style/textview_common_right"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+                
+                <LinearLayout style="@style/linnerlayout_common">
+
+                    <TextView style="@style/textview_common_left"
+                        android:text="@string/order_yewu_name"/>
+
+                    <Spinner
+                        android:id="@+id/serviceName"
+                        style="@style/Spiiner_fill"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/dp_one_zero"/>
+                </LinearLayout>
+                
+                <LinearLayout style="@style/linnerlayout_common">
+
+                    <TextView style="@style/textview_common_left"
+                        android:text="@string/order_time"/>
+
+                    <Spinner
+                        android:id="@+id/orderTime"
+                        style="@style/Spinner_comm_view_right"
+                        android:layout_weight="1"
+                        android:paddingLeft="@dimen/dp_one_zero"/>
+                    
+                    <TextView
+                        android:id="@+id/orderTimeTv"
+                        style="@style/textview_common_right"
+                        android:layout_weight="1"
+                        android:visibility="gone"/>
+                </LinearLayout>
+                
+                <LinearLayout android:id="@+id/order_period_ll"
+                    style="@style/linnerlayout_common"
+                    android:visibility="gone">
+
+                    <TextView style="@style/textview_common_left"
+                        android:text="@string/order_period"/>
+
+                    <Spinner
+                        android:id="@+id/orderPeriod"
+                        style="@style/Spinner_comm_view_right"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+                
+                <LinearLayout android:id="@+id/order_period_tv_ll"
+                    style="@style/linnerlayout_common"
+                    android:visibility="gone">
+
+                    <TextView style="@style/textview_common_left"
+                        android:text="@string/order_period"/>
+
+                    <TextView
+                        android:id="@+id/orderPeriodTv"
+                        style="@style/textview_common_right"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

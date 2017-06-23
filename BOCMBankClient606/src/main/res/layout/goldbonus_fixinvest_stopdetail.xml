@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 定投管理 提前终止确认页面 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-atuo"
+    xmlns:userProperty="http://schemas.android.com/apk/res-atuo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 终止页面 确认/完成按钮 -->
+
+    <LinearLayout
+        android:id="@+id/ll_cancel_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp_five"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/common_bottom_padding"
+        android:visibility="visible" >
+
+        <Button
+            android:id="@+id/btn_confirm"
+            style="@style/bottombtn_new"
+            android:text="确认"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_cancel_btn"
+        android:orientation="vertical" >
+
+        <com.chinamworld.bocmbci.userwidget.TitleAndContentLayout
+            android:id="@+id/titleAndContentLayout_detailinfo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <!-- 页面详情展示信息布局  动态添加元素 -->
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dimen_two_zero"
+                android:paddingBottom="@dimen/dp_five"
+                android:paddingTop="@dimen/dp_five" >
+
+                <LinearLayout
+                    android:id="@+id/myContainerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </ScrollView>
+            <!-- 安全工具控件 -->
+
+            <LinearLayout
+                android:id="@+id/combinId_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <com.chinamworld.bocmbci.widget.UsbKeyText
+                    android:id="@+id/sip_usbkey"
+                    style="@style/style_match_wrap"
+	                android:layout_marginTop="@dimen/common_row_margin"
+	                android:layout_marginRight="@dimen/common_row_margin_half"
+	                android:gravity="center"
+	                android:orientation="horizontal" 
+	                app:ShowRate="3:2" />
+            </LinearLayout>
+        </com.chinamworld.bocmbci.userwidget.TitleAndContentLayout>
+    </LinearLayout>
+
+</RelativeLayout>

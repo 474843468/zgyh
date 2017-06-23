@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/button_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/lastButton"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/mycrcd_masterandsupply_setup"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/nextButton"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/mycrcd_masterandsupply_jiaoyi"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/button_lay"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView
+            style="@style/scrollview_comm_havemarginbutton"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:paddingRight="0dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+  
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/common_row_margin"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    style="@style/textview_common_left"
+                                   android:text="@string/mycrcd_master_cardnum" />
+
+                                <TextView
+                                    android:id="@+id/mastercrcdNum"
+                                     style="@style/textview_common_right" />
+                            </LinearLayout>
+
+                            
+                            
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/common_row_margin"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    style="@style/textview_common_left"
+                                   android:text="@string/mycrcd_supply_cardnum" />
+
+                                <TextView
+                                    android:id="@+id/subcrcdNum"
+                                     style="@style/textview_common_right" />
+                            </LinearLayout>
+                              <LinearLayout
+                                  android:id="@+id/ll_supply"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/common_row_margin"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    style="@style/textview_common_left"
+                                   android:text="@string/mycrcd_supply_limit" />
+
+                                
+                                 <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:id="@+id/supply_limit1"
+                                     style="@style/textview_common_right" 
+                                     android:ellipsize="middle"/>
+
+                                <TextView
+                                    android:id="@+id/supply_limit2"
+                                    android:visibility="gone"
+                                     style="@style/textview_common_right" 
+                                     android:ellipsize="middle"/>
+                            </LinearLayout>
+                            
+                               
+                            </LinearLayout>
+                              <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/common_row_margin"
+                                android:orientation="horizontal" >
+
+                                <TextView
+                                    style="@style/textview_common_left"
+                                   android:text="@string/mycrcd_supply_sms" />
+
+                                <TextView
+                                    android:id="@+id/subcrcdsms"
+                                     style="@style/textview_common_right" />
+                            </LinearLayout>
+                    
+             
+
+                <TextView
+                    style="@style/textview_common"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center"
+                    android:text="@string/mycrcd_service_dingzhi_detail"
+                    android:textColor="@color/gray"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

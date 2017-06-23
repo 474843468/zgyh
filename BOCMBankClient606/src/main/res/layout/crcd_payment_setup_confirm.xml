@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:layout_width="match_parent"
+            layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/lastButton"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_blue_big"
+            android:text="@string/last"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/sureButton"
+            style="@style/bottombtn"
+            android:text="@string/confirm"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/button_layout"
+        android:layout_below="@+id/ll_step"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView
+            style="@style/scrollview_comm_havemarginbutton"
+            android:fillViewport="false"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp"
+            android:paddingTop="0dp" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/ll_btn"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    style="@style/textview_common"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/fill_margin_top"
+                    android:gravity="center_horizontal"
+                    android:text="@string/mycrcd_setup_creditcardinfo_title"
+                    android:textColor="@color/gray" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_title"
+                    android:shrinkColumns="1" >
+
+                    <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="0"
+                            android:text="@string/loan_transType" />
+
+                        <TextView
+                            android:id="@+id/mycrcd_accounted_type"
+                            style="@style/textview_common_right"
+                            android:layout_weight="0" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="0"
+                            android:text="@string/mycrcd_huanbizhong_setup" />
+
+                        <TextView
+                            android:id="@+id/mycrcd_selected_creditcard"
+                            style="@style/textview_common_right"
+                            android:layout_weight="0"
+                            android:text="ddddddddddddddddddddddddddddddddddddddddddddd" />
+                    </TableRow>
+
+                    <TableRow android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="0"
+                            android:text="@string/mycrcd_huanmoney_setup" />
+
+                        <TextView
+                            android:id="@+id/mycrcd_accounted_money"
+                            style="@style/textview_common_right"
+                            android:layout_weight="0" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/ll_bennumber"
+                        android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="0"
+                            android:text="@string/mycrcd_renminbi_huan_account" />
+
+                        <TextView
+                            android:id="@+id/mycrcd_renmi_account"
+                            style="@style/textview_common_right"
+                            android:layout_weight="0"
+                            android:singleLine="false" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/ll_wainumber"
+                        android:layout_marginTop="@dimen/common_row_margin" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_weight="0"
+                            android:text="@string/mycrcd_foreign_huan_account" />
+
+                        <TextView
+                            android:id="@+id/mycrcd_foreign_account"
+                            style="@style/textview_common_right"
+                            android:layout_weight="0"
+                            android:singleLine="false" />
+                    </TableRow>
+                </TableLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

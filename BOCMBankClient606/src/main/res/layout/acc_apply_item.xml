@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 申请定期活期账户	ListView中item的布局 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_item"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/acc_list_item_height" >
+    
+	<FrameLayout 
+	    android:id="@+id/apply_msg"
+	    android:layout_width="match_parent"
+	    android:layout_height="@dimen/acc_list_item_height"
+	    android:layout_alignParentTop="true"
+	    android:background="@drawable/bg_for_listview_item_write"
+	    android:gravity="center">
+	    
+	    <LinearLayout 
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:gravity="center"
+	        android:orientation="vertical">
+	        
+	        <LinearLayout 
+	            android:id="@+id/apply_first"
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:orientation="horizontal"
+	            android:paddingLeft="@dimen/common_listview_item_paddingLR"
+	            android:paddingRight="@dimen/common_listview_item_paddingLR">
+	            
+	            <TextView 
+	                android:id="@+id/acc_type_value"
+	                style="@style/textview_for_list"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:textSize="@dimen/textsize_one_six"/>
+	            
+	            <TextView 
+	                android:id="@+id/acc_account_num"
+	                style="@style/textview_for_list"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:gravity="right"
+	                android:textColor="@color/red"
+	                android:singleLine="true"/>
+	        </LinearLayout>
+	        
+	        <LinearLayout 
+	            android:layout_width="match_parent"
+	            android:layout_height="match_parent"
+	            android:layout_weight="1"
+	            android:gravity="center"
+	            android:orientation="horizontal"
+	            android:paddingLeft="@dimen/common_listview_item_paddingLR"
+	            android:paddingRight="@dimen/common_listview_item_paddingLR">
+	            
+	            <TextView 
+	                style="@style/textview_for_list"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"/>
+	            
+	            <TextView
+	                android:id="@+id/acc_nickname" 
+	                style="@style/textview_for_list"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_weight="1"
+	                android:gravity="right"
+	                android:singleLine="true"/>
+	        </LinearLayout>
+	    </LinearLayout>
+	    
+	    <ImageView 
+	        android:id="@+id/apply_checked"
+	        style="@style/sucess_right_iv"
+	        android:layout_gravity="center"
+	        android:visibility="gone"/>
+	</FrameLayout>
+</RelativeLayout>
+

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/boc_common_cell_color"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/llyBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/left_item_layout"
+            android:layout_width="@dimen/boc_space_between_280px"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|left"
+            android:paddingLeft="@dimen/boc_space_between_20px"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <!--基金名称-->
+            <TextView
+                android:id="@+id/tvFundName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/boc_text_size_common"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:text="--"/>
+            <!--基金代码-->
+            <TextView
+                android:id="@+id/tvFundCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/boc_text_size_very_small"
+                android:textColor="@color/boc_text_color_dark_gray"
+                android:text="-"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llyValues"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/boc_space_between_120px"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:visibility="visible">
+            <LinearLayout
+                android:layout_width="@dimen/boc_space_between_200px"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <!--单位净值-->
+                <TextView
+                    android:id="@+id/tvYieldOfTenThousand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textSize="@dimen/boc_text_size_common"
+                    android:textColor="@color/boc_text_color_dark_gray" />
+                <!--净值时间-->
+                <TextView
+                    android:id="@+id/tvJzTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="@dimen/boc_text_size_very_small"
+                    android:textColor="@color/boc_text_color_common_gray"
+                    android:text="-"/>
+            </LinearLayout>
+
+            <!--日涨跌幅-->
+            <TextView
+                android:id="@+id/tvYieldOfWeek"
+                style="@style/FundProductListItemField"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+    <include layout="@layout/boc_divide_line" />
+</LinearLayout>
+
+

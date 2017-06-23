@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 消息服务设置画面 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_for_click_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/llyt_agree"
+            style="@style/common_click_item_style"
+            android:background="@drawable/selector_for_click_single_item"
+            android:gravity="center" >
+
+            <CheckBox
+                android:id="@+id/checkbox_agree"
+                android:layout_width="@dimen/checkboxWH"
+                android:layout_height="@dimen/checkboxWH"
+                android:layout_marginRight="@dimen/dp_one_zero"
+                android:background="@drawable/save_phone_checkbox_selector"
+                android:button="@null" />
+
+            <TextView
+                style="@style/textview_common_right"
+                android:gravity="left"
+                android:text="@string/infoserve_agree"
+                android:textColor="@color/gray_title" />
+
+            <ImageView
+                style="@style/rightbtn_jiantou"
+                android:background="@drawable/right_arrow"
+                android:focusable="false" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_agree_notice"
+        style="@style/textview_common_right"
+        android:layout_marginTop="@dimen/dp_one_zero"
+        android:gravity="left"
+        android:singleLine="false"
+        android:text="@string/infoserve_agree_notice"
+        android:textColor="@color/tabgray"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0dp" />
+
+    <ScrollView 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fadingEdge="none"
+        android:fillViewport="true">
+    <LinearLayout
+        android:id="@+id/llyt_settingbuttons"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_for_click_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/llyt_new_message_alarm"
+                style="@style/common_click_item_style"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_one_zero"
+                android:paddingBottom="@dimen/dp_one_zero"
+                android:background="@drawable/selector_for_click_single_item" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/infoserve_message_alarm"
+                        android:textColor="@color/gray_title"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_five"
+                        android:layout_marginRight="@dimen/dp_five"
+                        android:gravity="left|center_vertical"
+                        android:singleLine="false"
+                        android:text="@string/infoserve_new_message_alarm_explain"
+                        android:textColor="@color/tabgray"
+                        android:textSize="@dimen/textsize_one_three" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_new_message_alarm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_five"
+                    android:textColor="@color/tabgray"
+                    android:textSize="@dimen/textsize_default"
+                    android:visibility="gone" />
+
+                <ImageView
+                    style="@style/rightbtn_jiantou"
+                    android:background="@drawable/right_arrow"
+                    android:focusable="false"
+                    android:visibility="gone" />
+
+                <ToggleButton
+                    android:id="@+id/toggle_btn_new_message_alarm"
+                    android:layout_width="@dimen/dp_five_zero"
+                    android:layout_height="@dimen/dp_two_zero"
+                    android:background="@drawable/selector_for_toggle_btn"
+                    android:textOff=""
+                    android:textOn="" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_one_zero"
+            android:background="@drawable/bg_for_click_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/llyt_daedaozhang_alarm"
+                style="@style/common_click_first_item_style"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_one_zero"
+                android:paddingBottom="@dimen/dp_one_zero" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/infoserve_daedaozhang_alarm"
+                        android:textColor="@color/gray_title"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_five"
+                        android:layout_marginRight="@dimen/dp_five"
+                        android:gravity="left|center_vertical"
+                        android:singleLine="false"
+                        android:text="@string/infoserve_daedaozhang_alarm_explain"
+                        android:textColor="@color/tabgray"
+                        android:textSize="@dimen/textsize_one_three" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_daedaozhang_alarm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_five"
+                    android:textColor="@color/tabgray"
+                    android:textSize="@dimen/textsize_default" 
+                    android:visibility="gone"/>
+
+                <ImageView
+                    style="@style/rightbtn_jiantou"
+                    android:background="@drawable/right_arrow"
+                    android:focusable="false" />
+            </LinearLayout>
+
+            <ImageView style="@style/divider_imag_style" />
+
+            <LinearLayout
+                android:id="@+id/llyt_licaidaoqi_alarm"
+                style="@style/common_click_last_item_style"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_one_zero"
+                android:paddingBottom="@dimen/dp_one_zero">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/infoserve_licaidaoqi_alarm"
+                        android:textColor="@color/gray_title"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_five"
+                        android:layout_marginRight="@dimen/dp_five"
+                        android:gravity="left|center_vertical"
+                        android:singleLine="false"
+                        android:text="@string/infoserve_licaidaoqi_alarm_explain"
+                        android:textColor="@color/tabgray"
+                        android:textSize="@dimen/textsize_one_three" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_licaidaoqi_alarm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_five"
+                    android:textColor="@color/tabgray"
+                    android:textSize="@dimen/textsize_default"
+                    android:visibility="gone" />
+
+                <ImageView
+                    style="@style/rightbtn_jiantou"
+                    android:background="@drawable/right_arrow"
+                    android:focusable="false"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <Button
+                        android:id="@+id/toggle_btn_licaidaoqi_alarm"
+                        android:layout_width="@dimen/dp_five_zero"
+                        android:layout_height="@dimen/dp_two_zero"
+                        android:visibility="gone"
+                        android:background="@null" />
+
+                    <!-- <Button
+                        android:id="@+id/toggle_btn_licaidaoqi_query"
+                        android:layout_width="@dimen/statuequery_btn_width"
+                        android:layout_height="@dimen/statuequery_btn_height"
+                        android:background="@drawable/btn_red_big"
+                        android:text="@string/statue_query"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_default" /> -->
+                        <Button
+                        android:id="@+id/toggle_btn_licaidaoqi_query"
+                        android:layout_width="@dimen/dp_six_zero"
+                        android:layout_height="@dimen/statuequery_btn_height"
+                        android:background="@drawable/btn_chaxun" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_one_zero"
+            android:background="@drawable/bg_for_click_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/llyt_assist_function"
+                style="@style/common_click_item_style"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_one_zero"
+                android:paddingBottom="@dimen/dp_one_zero"
+                android:background="@drawable/selector_for_click_single_item" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/infoserve_assist_function"
+                        android:textColor="@color/gray_title"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_five"
+                        android:layout_marginRight="@dimen/dp_five"
+                        android:gravity="left|center_vertical"
+                        android:singleLine="false"
+                        android:text="@string/infoserve_assist_function_explain"
+                        android:textColor="@color/tabgray"
+                        android:textSize="@dimen/textsize_one_three" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_five"
+                    android:textColor="@color/tabgray"
+                    android:textSize="@dimen/textsize_default"
+                    android:visibility="gone" />
+
+                <ImageView
+                    style="@style/rightbtn_jiantou"
+                    android:background="@drawable/right_arrow"
+                    android:focusable="false"
+                    android:visibility="gone" />
+
+                <ImageView
+                    style="@style/rightbtn_jiantou"
+                    android:background="@drawable/right_arrow"
+                    android:focusable="false" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+   </ScrollView>
+</LinearLayout>

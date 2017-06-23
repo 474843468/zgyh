@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_bottom_padding_new"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <!-- 底部刷新时间，业务修改不需要 -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sbremit_quotations_lv_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1.5"
+                    android:background="#e6e6e6"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="7"
+                        android:gravity="center"
+                        android:text="活期贵金属积利金持仓信息"
+                        android:textSize="@dimen/textsize_default"
+                        android:textStyle="bold" />
+                    <!--
+                         <Button 
+                        android:id="@+id/float_exchange"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="match_parent"
+                        android:text="浮动盈亏试算"
+                        android:textColor="@color/white"
+                        android:background="@drawable/btn_red_big_long"
+                        />
+
+
+                    -->
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="4"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/no_live_position"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/no_live_position"
+                        android:textSize="@dimen/textsize_default"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/data_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="visible" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1.5"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical|right"
+                                android:text="产品名称："
+                                android:textColor="@color/fonts_dark_gray"
+                                android:textSize="@dimen/textsize_default" />
+
+                            <TextView
+                                android:id="@+id/variety"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:gravity="center_vertical|left"
+                                android:text=""
+                                android:textSize="@dimen/textsize_default" />
+
+                            <Button
+                                android:id="@+id/rate_check"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.7"
+                                android:background="@color/red"
+                                android:text="利率查询"
+                                android:textColor="@color/white"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center_vertical|center"
+                            android:layout_weight="1.5"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="1"
+                                android:gravity="right|center_vertical"
+                                android:text="持有数量："
+                                android:textColor="@color/fonts_dark_gray"
+                                android:textSize="@dimen/textsize_default" />
+
+                            <TextView
+                                android:id="@+id/position_amount"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:text=""
+                                android:textSize="@dimen/textsize_default" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="2.5"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/buy_again"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_btn_red"
+                        android:gravity="center"
+                        android:text="再次买入"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+
+                    <TextView
+                        android:id="@+id/change_position"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_btn_red"
+                        android:gravity="center"
+                        android:text="转为定期"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_default" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+
+                    <TextView
+                        android:id="@+id/sell"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_btn_red"
+                        android:gravity="center"
+                        android:text="卖出"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textsize_default" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="@color/gray_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:background="#e6e6e6"
+            android:orientation="vertical" >
+
+            <include
+                android:id="@+id/finc_listheader_layout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                layout="@layout/goldbouns_listheader" />
+
+            <ListView
+                android:id="@+id/quotations_lv"
+                style="@style/listviewcomm_fill_gray_divider"
+                android:layout_height="0dp"
+                android:layout_weight="4"
+                android:background="@color/white"
+                android:choiceMode="none"
+                android:scrollbars="none"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/no_position"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:text="@string/no_position"
+                android:textSize="@dimen/textsize_default"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

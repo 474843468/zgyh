@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 本人关联信用卡还款 设定  MyTransferActivity   P503信用卡还款 wuhan -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- 信用卡无外币 -->
+
+    <LinearLayout
+        android:id="@+id/lyt_credit_noforinermoney"
+        style="@style/tran_little_card_ll"
+       
+         >
+
+        <TextView
+            android:id="@+id/tv_returnName"
+            style="@style/tran_little_title_tv" />
+
+        <LinearLayout style="@style/tran_little_card_content_ll" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shap_for_dept_tranlist"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/layout_padding_bottom"
+                android:paddingLeft="@dimen/layout_padding_left_right"
+                android:paddingRight="@dimen/layout_padding_left_right" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/fill_padding_right" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:text="@string/bizhong" />
+
+                    <Spinner
+                        android:id="@+id/sp_credit_noforger_bizhong"
+                        style="@style/Spiiner_fill"
+                        android:layout_weight="3" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sp_rel_trans_cashRemit_tranSeting_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/fill_padding_right" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:text="@string/chaohui" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/layout_height"
+                        android:layout_weight="3"
+                        android:gravity="left|center_vertical"
+                        android:paddingLeft="@dimen/edittext_paddinglr"
+                        android:paddingRight="@dimen/edittext_paddinglr"
+                        android:text="－" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ly_return_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/fill_padding_right" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/credit_return_style" />
+
+                    <RadioGroup
+                        android:id="@+id/rdg_noforner_returnstyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:orientation="vertical" >
+
+                        <RadioButton
+                            android:id="@+id/rad_allMoney"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="全额还款" />
+
+                        <RadioButton
+                            android:id="@+id/rad_minMoney"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="最小额还款" />
+
+                        <RadioButton
+                            android:id="@+id/rad_radomMoney"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="自定义金额" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/fill_padding_right" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:text="@string/repayAmountValue" />
+
+                    <EditText
+                        android:id="@+id/et_noforner_returnmoney"
+                        style="@style/edittext_input_numberDecimal_fill"
+                        android:layout_weight="3"
+                        android:maxLength="14"
+                        android:textColor="@color/black" >
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/fill_padding_right" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:text="附言：" />
+
+                    <EditText
+                        android:id="@+id/et_fuyan"
+                        style="@style/edittext_input_numberDecimal_fill"
+                        android:layout_weight="3"
+                        android:maxLength="14"
+                        android:textColor="@color/black" >
+                    </EditText>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_for_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_five"
+                    android:gravity="right"
+                    android:paddingRight="@dimen/fill_padding_right"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/textsize_one_three"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/credit_card_return_info"
+                android:textColor="@color/gray" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 信用卡有外币 -->
+
+    <LinearLayout
+        android:id="@+id/lyt_credit_haveforinermoney"
+        android:visibility="gone"
+        style="@style/tran_little_card_ll" >
+
+        <TextView
+            android:id="@+id/tv_haveforinermoney_returnName"
+            style="@style/tran_little_title_tv" />
+
+        <LinearLayout style="@style/tran_little_card_content_ll" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shap_for_dept_tranlist"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/layout_padding_bottom"
+                android:paddingLeft="@dimen/layout_padding_left_right"
+                android:paddingRight="@dimen/layout_padding_left_right" >
+
+                <LinearLayout
+                    android:id="@+id/ly_haveforine_return_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/layout_margin_top"
+                    android:orientation="horizontal"
+                    android:paddingRight="@dimen/fill_padding_right" >
+
+                    <TextView
+                        style="@style/comm_view_left"
+                        android:layout_marginTop="10dp"
+                        android:text="还款类型：" />
+
+                    <RadioGroup
+                        android:id="@+id/rdg_haveforner_returnstyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3"
+                        android:orientation="vertical" >
+
+                        <RadioButton
+                            android:id="@+id/rad_credit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="信用卡还款" />
+
+                        <RadioButton
+                            android:id="@+id/rad_gouhui"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="购汇还款" />
+                    </RadioGroup>
+                </LinearLayout>
+                <!-- 外币信用卡还款 -->
+
+                <LinearLayout
+                    android:id="@+id/lyt_haveforger_creditstyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                     android:visibility="gone"
+                    android:orientation="vertical"
+                     >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingRight="@dimen/fill_padding_right" >
+
+                        <TextView
+                            style="@style/comm_view_left"
+                            android:text="@string/bizhong" />
+
+                        <Spinner
+                            android:id="@+id/sp_haveforger_creditstyle_bizhong"
+                            style="@style/Spiiner_fill"
+                            android:layout_weight="3" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lyt_haveforger_creditstyle_huichaofalg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/layout_margin_top"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingRight="@dimen/fill_padding_right" >
+
+                        <TextView
+                            style="@style/comm_view_left"
+                            android:text="@string/chaohui" />
+
+                        <Spinner
+                            android:id="@+id/sp_haveforger_creditstyle_huichaofalg"
+                            style="@style/Spiiner_fill"
+                            android:layout_weight="3" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ly_haveforger_creditstyle_returnstyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/layout_margin_top"
+                        android:orientation="horizontal"
+                        android:paddingRight="@dimen/fill_padding_right" >
+
+                        <TextView
+                            style="@style/comm_view_left"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/credit_return_style" />
+
+                        <RadioGroup
+                            android:id="@+id/rdg_haveforner_credit_returnstyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:orientation="vertical" >
+
+                            <RadioButton
+                                android:id="@+id/rad_haveforner_allMoney"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="全额还款" />
+
+                            <RadioButton
+                                android:id="@+id/rad_haveforner_minMoney"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="最小额还款" />
+
+                            <RadioButton
+                                android:id="@+id/rad_haveforner_radomMoney"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="自定义金额" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/layout_margin_top"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingRight="@dimen/fill_padding_right" >
+
+                        <TextView
+                            style="@style/comm_view_left"
+                            android:text="@string/repayAmountValue" />
+
+                        <EditText
+                            android:id="@+id/et_haveforner_returnmoney_num"
+                            style="@style/edittext_input_numberDecimal_fill"
+                            android:layout_weight="3"
+                            android:maxLength="14"
+                            android:textColor="@color/black" >
+                        </EditText>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/layout_margin_top"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingRight="@dimen/fill_padding_right" >
+
+                        <TextView
+                            style="@style/comm_view_left"
+                            android:text="附言：" />
+
+                        <EditText
+                            android:id="@+id/et_haveforgner_fuyan"
+                            style="@style/edittext_input_numberDecimal_fill"
+                            android:layout_weight="3"
+                            android:maxLength="14"
+                            android:textColor="@color/black" >
+                        </EditText>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_haveforgner_for_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_five"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/fill_padding_right"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/textsize_one_three"
+                        android:visibility="gone" />
+                </LinearLayout>
+                <!-- 有外币购汇还款 -->
+
+                <LinearLayout
+                    android:id="@+id/lyt_haveforger_gouhuityle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:id="@+id/lyt_haveforger_gouhuityle_bizhong"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/layout_margin_top"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingRight="@dimen/fill_padding_right" >
+
+                        <TextView
+                            style="@style/comm_view_left"
+                            android:text="购汇币种" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/layout_height"
+                            android:layout_weight="3"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="@dimen/edittext_paddinglr"
+                            android:paddingRight="@dimen/edittext_paddinglr"
+                            android:text="美元" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ly_haveforger_gouhuityle_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/layout_margin_top"
+                        android:orientation="horizontal"
+                        android:paddingRight="@dimen/fill_padding_right" >
+
+                        <TextView
+                            style="@style/comm_view_left"
+                            android:layout_marginTop="10dp"
+                            android:text="购汇方式：" />
+
+                        <RadioGroup
+                            android:id="@+id/rdg_haveforger_gouhuityle_returnstyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:orientation="vertical" >
+
+                            <RadioButton
+                                android:id="@+id/rad_haveforger_gouhuityle_allMoney"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="全额还款" />
+
+                            <RadioButton
+                                android:id="@+id/rad_haveforger_gouhuityle_minMoney"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="部分还款" />
+
+                           
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/layout_margin_top"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingRight="@dimen/fill_padding_right" >
+
+                        <TextView
+                            style="@style/comm_view_left"
+                            android:text="@string/repayAmountValue" />
+
+                        <EditText
+                            android:id="@+id/et_haveforger_gouhuityle_returnmoney"
+                            style="@style/edittext_input_numberDecimal_fill"
+                            android:layout_weight="3"
+                            android:maxLength="14"
+                            android:textColor="@color/black" >
+                        </EditText>
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tv_haveforgner__gouhuityle_for_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_five"
+                        android:gravity="right"
+                        android:paddingRight="@dimen/fill_padding_right"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/textsize_one_three"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/credit_card_return_info"
+                android:textColor="@color/gray" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyt_credit_noforinermoney_next"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bottom_margin_top"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_credit_next"
+            style="@style/bottombtn"
+            android:text="@string/next" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lyt_no_qiankuan"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bottom_margin_top"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_instance_execute"
+            style="@style/tran_three_btn"
+            android:text="@string/nowExe" />
+
+        <Button
+            android:id="@+id/btn_preDateExe_execute"
+            style="@style/tran_three_btn"
+            android:text="@string/preDateExe" />
+
+        <Button
+            android:id="@+id/btn_prePeriodExe_execute"
+            style="@style/tran_three_btn"
+            android:text="@string/prePeriodExe" />
+    </LinearLayout>
+
+</LinearLayout>

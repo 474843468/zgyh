@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/message_dialog_bg" >
+
+        <ImageButton
+            android:id="@+id/dept_close_ib"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@color/transparent_00" />
+
+        <LinearLayout
+            android:id="@+id/dept_image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/dept_close_ib"
+            android:layout_toLeftOf="@+id/dept_close_ib"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/btn_close_height"
+                android:layout_marginLeft="@dimen/fill_margin_top"
+                android:src="@drawable/icon_pig"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/fill_margin_right_fordialog"
+            android:layout_marginTop="@dimen/dp_five"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/fill_padding_bottom" >
+            
+            <Button
+                android:id="@+id/dept_create_notice_btn"
+                style="@style/btn_common_oneline"
+                android:background="@drawable/btn_gray"
+                android:text="@string/create_notify"
+                android:textColor="@color/black"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/dept_checkout_btn"
+                style="@style/btn_common_oneline"
+                android:background="@drawable/btn_gray"
+                android:text="@string/checkout"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/scrollview"
+            style="@style/dialog_scrollview"
+            android:layout_above="@+id/ll_btn"
+            android:layout_below="@+id/dept_image_layout" >
+
+            <LinearLayout
+                style="@style/tran_body_ll"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/layout_height"
+                        android:gravity="center"
+                        android:paddingRight="@dimen/fill_padding_right" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="right"
+                            android:text="@string/acc_accounttype" />
+
+                        <TextView
+                            android:id="@+id/dept_accounttype_tv"
+                            style="@style/textview_common"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:paddingLeft="@dimen/fill_padding_left" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingRight="@dimen/fill_padding_right" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="right"
+                            android:text="@string/acc_account_nickname" />
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="@dimen/fill_padding_left" >
+
+                            <LinearLayout
+                                android:id="@+id/dept_nickname_layout"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical" >
+
+                                <TextView
+                                    android:id="@+id/dept_nickname_tv"
+                                    style="@style/textview_common"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1" />
+
+                                <ImageView
+                                    android:id="@+id/img_dept_update_nickname"
+                                    android:layout_width="@dimen/btn_connect_height"
+                                    android:layout_height="@dimen/btn_connect_height"
+                                    android:layout_marginLeft="@dimen/dp_three"
+                                    android:src="@drawable/icon_bianji" />
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:id="@+id/fl_nickname"
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/layout_height"
+                                android:visibility="gone" >
+
+                                <EditText
+                                    android:id="@+id/et_acc_nickname"
+                                    style="@style/edittext_common_fill"
+                                    android:layout_gravity="center_vertical"
+                                    android:focusable="true"
+                                    android:gravity="center_vertical"
+                                    android:imeOptions="actionDone"
+                                    android:maxLength="20"
+                                    android:paddingLeft="@dimen/fill_padding_left"
+                                    android:layout_marginRight="@dimen/btn_close_height"
+                                    android:singleLine="true"
+                                    android:textSize="@dimen/textsize_default" >
+
+                                    <requestFocus />
+                                </EditText>
+
+                                <Button
+                                    android:id="@+id/btn_update_nickname"
+                                    android:layout_width="@dimen/btn_close_height"
+                                    android:layout_height="@dimen/btn_close_height"
+                                    android:layout_gravity="center_vertical|right"
+                                    android:background="@drawable/img_shuru_gou" />
+                            </FrameLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/layout_height"
+                        android:gravity="center"
+                        android:paddingRight="@dimen/fill_padding_right" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="right"
+                            android:text="@string/acc_accountnumber" />
+
+                        <TextView
+                            android:id="@+id/dept_accountno_tv"
+                            style="@style/textview_common"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:paddingLeft="@dimen/fill_padding_left" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/dept_bankbook_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/layout_height"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingRight="@dimen/fill_padding_right" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="right"
+                            android:text="@string/save_volume_number" />
+
+                        <Spinner
+                            android:id="@+id/dept_bankbook_spinner"
+                            style="@style/textview_common"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_spinner"
+                            android:gravity="left"
+                            android:paddingLeft="@dimen/fill_padding_left" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/dept_banksheet_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/layout_height"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingRight="@dimen/fill_padding_right" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="right"
+                            android:text="@string/forex_rate_fix_number1" />
+
+                        <Spinner
+                            android:id="@+id/dept_banksheet_spinner"
+                            style="@style/textview_common"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_spinner"
+                            android:gravity="left"
+                            android:paddingLeft="@dimen/fill_padding_left" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/dept_opendate_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/layout_height"
+                        android:gravity="center"
+                        android:paddingRight="@dimen/fill_padding_right"
+                        android:visibility="gone" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="right"
+                            android:text="@string/open_date" />
+
+                        <TextView
+                            android:id="@+id/dept_opendate_tv"
+                            style="@style/textview_common"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:paddingLeft="@dimen/fill_padding_left" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/gray" />
+
+                    <RelativeLayout
+                        android:id="@+id/dept_my_detail_content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/layout_margin_top" >
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

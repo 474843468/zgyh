@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<link rel="stylesheet" href="../css/myStyle.css" />
+		<script src="../js/pub/pub.js"></script>
+		<script src="../js/pub/constants.js"></script>
+		<script src="../js/pub/jquery-1.9.0.min.js"></script>
+		<script src="../js/pub/jquery.mobile-1.3.0.min.js"></script>
+		<script src="../js/logic/wh.js"></script>
+		<title>外汇类计算器</title>
+	</head>
+	<body>
+		<div data-role="page">
+			<!--------------------------Content------------------------------------>
+			<div data-role="content" class="jqm-content">
+				<!------------------------------------菜单--------------------------------->
+				<!-- <ul data-role="listview" data-inset="true" data-theme="i"
+					data-icon="false" class="jqm-list">
+					<li data-section="Widgets">
+						<fieldset class="ui-grid-a">
+							<div class="ui-block-a">
+								<label for="select_menu" class="label-center">
+									当前菜单
+								</label>
+							</div>
+							<div class="ui-block-b">
+								<select id="select_menu" data-mini="true" data-theme="i" >
+								</select>
+							</div>
+						</fieldset>
+					</li>
+				</ul> -->
+				<div id="wbdh" fn="fn_wbdh_init">
+				<ul data-role="listview" data-inset="true" data-theme="i"
+					data-icon="false"	class="jqm-list">
+					<li data-section="Widgets">
+						<fieldset class="ui-grid-a">
+							<div class="ui-block-a">
+								<label for="wbdh_initMoneyCur" class="label-center">
+									现持有货币种类
+								</label>
+							</div>
+							<div class="ui-block-b">
+								<select data-mini="true" name="wbdh_initMoneyCur" id="wbdh_initMoneyCur" data-theme="i" >
+								</select>
+							</div>
+						</fieldset>
+					</li>
+					<li data-section="Widgets">
+						<fieldset class="ui-grid-a">
+							<div class="ui-block-a">
+								<label for="wbdh_convertedMoneyCur" class="label-center">
+									欲兑换货币种类
+								</label>
+							</div>
+							<div class="ui-block-b">
+								<select data-mini="true" name="wbdh_convertedMoneyCur" data-theme="i"
+									id="wbdh_convertedMoneyCur" >
+								</select>
+							</div>
+						</fieldset>
+					</li>
+
+					<li data-section="Widgets">
+						<fieldset class="ui-grid-a">
+							<div class="ui-block-a">
+								<label for="wbdh_exchangeRate" class="label-center">
+									欲兑换货币汇率
+								</label>
+							</div>
+							<div class="ui-block-b">
+								<input data-mini="true" type="number" name="wbdh_exchangeRate"
+									id="wbdh_exchangeRate" data-theme="i" />
+							</div>
+						</fieldset>
+					</li>
+					<li data-section="Widgets">
+						<fieldset class="ui-grid-a">
+							<div class="ui-block-a">
+								<label for="wbdh_initMoney" class="label-center">
+									现持有货币数量
+								</label>
+							</div>
+							<div class="ui-block-b">
+								<input data-mini="true" type="number" name="wbdh_initMoney"
+									id="wbdh_initMoney" data-theme="i" />
+							</div>
+						</fieldset>
+					</li>
+				</ul>
+				<div data-role="fieldcontain">
+					<button id="wbdh_btnCalc" data-mini="true" data-theme="j" >
+						计算
+					</button>
+				</div>
+				<ul data-role="listview" data-inset="true" data-theme="i"
+					data-icon="false"
+					class="jqm-list">
+					<li data-section="Widgets">
+						<fieldset class="ui-grid-a">
+							<div class="ui-block-a">
+								<label class="label-center">
+									可兑换货币数量
+								</label>
+							</div>
+							<div class="ui-block-b">
+								<span id="wbdh_convertedAmount" name="result" style="float: right"></span>
+							</div>
+						</fieldset>
+					</li>
+				</ul>
+				</div>
+				<ul data-role="listview" data-inset="true" data-theme="i"
+					data-icon="false"
+					class="jqm-list">
+            <li id="explain_content">
+            </li>
+        </ul>
+			</div>
+		</div>
+	</body>
+</html>

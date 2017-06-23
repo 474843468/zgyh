@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/button_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/sureButton"
+            style="@style/bottombtn"
+            android:text="@string/next"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/button_lay"
+        android:background="@drawable/bg_for_listview_item_write"
+        android:orientation="vertical" >
+
+        <ScrollView
+            style="@style/scrollview_comm_havemarginbutton"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:paddingRight="0dp"
+  			android:paddingLeft="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_master_cardnum" 
+                        android:layout_weight="3"/>
+
+                    <TextView
+                        android:id="@+id/mastercrcdNum"
+                        style="@style/textview_common_right"
+                         android:layout_weight="2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_supply_cardnum"
+                          android:layout_weight="3" />
+
+                    <TextView
+                        android:id="@+id/subcrcdNum"
+                        style="@style/textview_common_right"
+                          android:layout_weight="2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/textview_common_left"
+                        android:text="@string/mycrcd_set_leibie"
+                          android:layout_weight="3" />
+
+                    <RadioGroup
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical" >
+
+                        <RadioButton
+                            android:id="@+id/rbtn1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/radiobtn_selector"
+                            android:checked="true"
+                            android:onClick="cardset_rbtn1Onclick"
+                            android:text="@string/mycrcd_set_btn1" />
+
+                        <RadioButton
+                            android:id="@+id/rbtn2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:button="@drawable/radiobtn_selector"
+                            android:onClick="cardset_rbtn2Onclick"
+                            android:text="@string/mycrcd_set_btn2" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:text="@string/mycrcd_bill_seed" 
+                              android:layout_weight="3"/>
+
+                        <TextView
+                            android:id="@+id/tv_cardNumber"
+                            style="@style/textview_common_right"
+                            android:visibility="gone" />
+
+                        <Spinner
+                            android:id="@+id/sp_cardNumber"
+                            style="@style/Spiiner_fill"
+                            android:layout_weight="2" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/common_row_margin"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:text="@string/mycrcd_supplymentcard_jiaoyimoney" 
+                              android:layout_weight="3"/>
+
+                        <EditText
+                            android:id="@+id/finc_fincName"
+                            style="@style/edittext_input_numberDecimal_fill"
+                            android:layout_weight="2"
+                            android:maxLength="14" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            style="@style/textview_common_left"
+                            android:text="@string/mycrcd_supplymentcard_smsmessage" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/textview_common_right"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical" >
+
+                        <RadioGroup
+                            android:id="@+id/rg_select"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical" >
+
+                            <RadioButton
+                                android:id="@+id/rb_zhu"
+                                style="@style/textview_common_right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@drawable/radiobtn_selector"
+                                android:gravity="center_vertical"
+                                android:text="@string/mycrcd_send_zhucard" />
+
+                            <RadioButton
+                                android:id="@+id/rb_supply"
+                                style="@style/textview_common_right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_five"
+                                android:button="@drawable/radiobtn_selector"
+                                android:gravity="center_vertical"
+                                android:text="@string/mycrcd_send_supplymentcard" />
+
+                            <RadioButton
+                                android:id="@+id/rb_zhuandsupply"
+                                style="@style/textview_common_right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_five"
+                                android:button="@drawable/radiobtn_selector"
+                                android:gravity="center_vertical"
+                                android:singleLine="false"
+                                android:text="@string/mycrcd_send_zhuandsupplycard" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

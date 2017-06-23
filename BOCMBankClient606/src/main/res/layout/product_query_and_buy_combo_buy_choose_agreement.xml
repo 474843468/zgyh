@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 中银理财-组合购买，我的申明页 即 阅读并选择协议页 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/style_match_match"
+    android:orientation="vertical" 
+    >
+    
+    <!-- 内容区 -->
+    <FrameLayout 
+        style="@style/style_height_weight_1"
+        >
+        <!-- layout_marginTop值为"协议信息"组件高度的一半 -->
+            <!-- android:layout_marginTop="@dimen/bovinvt_layout_content_margin_top" -->
+        <LinearLayout 
+            style="@style/style_match_match"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:paddingTop="@dimen/bovinvt_layout_margin_top"
+            android:orientation="vertical"
+            >
+            <View style="@style/style_line_item"
+                android:layout_marginTop="@dimen/bovinvt_layout_margin_top1"/>
+            <ScrollView style="@style/scrollview_comm_havemarginbutton" >
+            <LinearLayout
+                style="@style/style_match_match"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/total_agree"
+                        style="@style/textview_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/boc_deal"
+                        android:textColor="@color/black" />
+
+                        <RadioGroup
+                            android:id="@+id/rg_deal_agreement"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/btn_bottom_height"
+	                        android:layout_marginTop="@dimen/common_row_margin"
+	                        android:paddingLeft="@dimen/fill_margin_left"
+	                        android:paddingRight="@dimen/fill_margin_left" 
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/rb_yes_deal_agreement"
+                                style="@style/textview_common"
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/btn_bottom_height"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:button="@drawable/radiobtn_selector"
+                                android:text="@string/boc_agree" />
+
+                            <RadioButton
+                                android:id="@+id/rb_no_bocdeal_agreement"
+                                style="@style/textview_common"
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/btn_bottom_height"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:button="@drawable/radiobtn_selector"
+                                android:checked="true"
+                                android:text="@string/boc_dis_agree" />
+                        </RadioGroup>
+                </LinearLayout>
+                
+                <!-- <View style="@style/style_line_item"
+                android:layout_marginTop="@dimen/bovinvt_layout_margin_top1"/> -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/des_agree"
+                        style="@style/textview_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/boc_description"
+                        android:textColor="@color/black" />
+
+                        <RadioGroup
+                            android:id="@+id/rg_description_agreement"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/btn_bottom_height"
+                            android:layout_marginTop="@dimen/common_row_margin"
+	                        android:paddingLeft="@dimen/fill_margin_left"
+	                        android:paddingRight="@dimen/fill_margin_left" 
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/rb_yes_descri_agreement"
+                                style="@style/textview_common"
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/btn_bottom_height"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:button="@drawable/radiobtn_selector"
+                                android:text="@string/boc_agree" />
+
+                            <RadioButton
+                                android:id="@+id/rb_no_descri_agreement"
+                                style="@style/textview_common"
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/btn_bottom_height"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:button="@drawable/radiobtn_selector"
+                                android:checked="true"
+                                android:text="@string/boc_dis_agree" />
+                        </RadioGroup>
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        style="@style/textview_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bocinvt_tv_49"
+                        android:textColor="@color/black" />
+
+                        <RadioGroup
+                            android:id="@+id/rg_agreement_to_next"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/btn_bottom_height"
+                            android:layout_marginTop="@dimen/common_row_margin"
+	                        android:paddingLeft="@dimen/fill_margin_left"
+	                        android:paddingRight="@dimen/fill_margin_left" 
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/rb_yes"
+                                style="@style/textview_common"
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/btn_bottom_height"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:button="@drawable/radiobtn_selector"
+                                android:text="@string/boc_agree" />
+
+                            <RadioButton
+                                android:id="@+id/rb_no"
+                                style="@style/textview_common"
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/btn_bottom_height"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:checked="true"
+                                android:button="@drawable/radiobtn_selector"
+                                android:text="@string/boc_dis_agree" />
+                        </RadioGroup>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/common_row_margin"
+                    android:orientation="horizontal" >
+                </TextView>
+            </LinearLayout>
+        </ScrollView>
+            
+        </LinearLayout>
+        
+        <!-- 标题 -->
+        <!-- <LinearLayout 
+            style="@style/style_match_wrap"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="0dp"
+            > -->
+            <!-- 购买信息 -->
+        <!-- <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/bovinvt_tv_title_height"
+            style="@style/textview_common"
+            android:paddingLeft="@dimen/layout_margin_left_right"
+            android:paddingRight="@dimen/layout_margin_left_right"
+            android:background="@drawable/shape_product_query_and_buy_tv_bg"
+            android:gravity="center"
+            android:text="@string/bocinvt_tv_48"
+            /> -->
+        <!-- </LinearLayout> -->
+    </FrameLayout>
+    
+    <!-- 按钮区 -->
+    <LinearLayout style="@style/style_match_wrap">
+        <!-- <Button 
+            android:id="@+id/btn_last"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/last"
+            android:textColor="@color/white"
+            /> -->
+        <Button 
+            android:id="@+id/btn_next"
+            style="@style/btn_common_oneline"
+            android:background="@drawable/btn_red_big"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            />
+   	</LinearLayout>
+   	
+</LinearLayout>

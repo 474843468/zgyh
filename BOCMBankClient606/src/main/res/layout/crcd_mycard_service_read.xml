@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/ll_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:layout_width="match_parent"
+            layout="@layout/step_title_layout" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_step"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/fill_margin_top"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/fill_margin_left"
+        android:layout_marginRight="@dimen/fill_margin_left" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_for_listview_item_write"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/fill_margin_left"
+            android:paddingRight="@dimen/fill_margin_left"
+            android:paddingTop="@dimen/fill_padding_top" >
+
+            <TextView
+                android:id="@+id/tv_xuzhi_title"
+                style="@style/crcd_tv_common_left"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:text="@string/mycrcd_xuni_fuwu_xieyi"
+                android:textColor="@color/gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_xuzhi_title"
+                android:layout_marginTop="@dimen/fill_padding_top"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_jianfang"
+                    style="@style/crcd_common_tv"
+                    android:paddingLeft="@dimen/fill_padding_top"
+                    android:text="@string/mycrcd_jiafang" />
+
+                <TextView
+                    style="@style/crcd_common_tv"
+                    android:paddingLeft="@dimen/fill_padding_top"
+                    android:text="@string/virtual_yifang" />
+
+                <ScrollView
+                    style="@style/scrollview_fill"
+                    android:layout_centerInParent="true"
+                    android:gravity="left"
+                    android:padding="@dimen/fill_margin_top" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            style="@style/crcd_common_tv"
+                            android:text="@string/virtual_xieyi_read" />
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/fill_margin_top"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/lastButton"
+                style="@style/btn_common_oneline"
+                android:background="@drawable/btn_blue_big"
+                android:text="@string/noaccept"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/sureButton"
+                style="@style/btn_common_oneline"
+                android:background="@drawable/btn_red_big"
+                android:text="@string/accept"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

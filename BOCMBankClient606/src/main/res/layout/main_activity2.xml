@@ -1,0 +1,139 @@
+<com.chinamworld.bocmbci.biz.main.DragLayer xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dragview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rltotal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_content" >
+
+        <RelativeLayout
+            android:id="@+id/main_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="62dp"
+            android:background="@drawable/navbar" >
+
+            <Button
+                android:id="@+id/ib_back"
+                style="@style/titlebackbtn"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/ib_login_info_btn"
+                android:layout_width="@dimen/titlelogbtn_width"
+                android:layout_height="@dimen/titlelogbtn_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/fill_margin_left"
+                android:background="@drawable/selector_for_titile_logout_new" />
+            <!-- selector_for_titile_login_info -->
+
+            <Button
+                android:id="@+id/ib_login_btn"
+                android:layout_width="@dimen/titlelogbtn_width"
+                android:layout_height="@dimen/titlelogbtn_height"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/fill_margin_left"
+                android:background="@drawable/selector_for_titile_login_new" />
+            <!-- selector_for_titile_login -->
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/titleText" />
+
+            <Button
+                android:id="@+id/ib_top_right_btn"
+                style="@style/titlerightbtn"
+                android:text="@string/login"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textsize_one_three"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/rl_info_more"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" >
+
+                <Button
+                    android:id="@+id/ib_top_right_more_btn"
+                    style="@style/titlerightmorebtn_more"
+                    android:layout_width="@dimen/titlelogbtn_width"
+                    android:layout_height="@dimen/titlelogbtn_height"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="6dp"
+                    android:textSize="@dimen/textsize_one_three" />
+                <!-- android:text="@string/login_more" -->
+
+                <TextView
+                    android:id="@+id/tv_prompt"
+                    android:layout_width="@dimen/rightbtnH"
+                    android:layout_height="@dimen/rightbtnH"
+                    android:layout_gravity="right|top"
+                    android:background="@drawable/more_info_white"
+                    android:layout_marginLeft="5dp"
+                    android:text="4"
+                    android:gravity="center"
+                    android:textSize="10dp"
+                    android:textColor="@color/red" />
+            
+                
+            </FrameLayout>
+        </RelativeLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/main_vp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/point_layout"
+            android:layout_below="@+id/main_layout"
+            android:layout_marginBottom="@dimen/dp_one_zero"
+            android:layout_marginTop="@dimen/dp_three_zero"
+            android:visibility="gone" />
+
+        <com.chinamworld.bocmbci.biz.main.view.DraggableGridView
+            android:id="@+id/dgv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/point_layout"
+            android:layout_below="@+id/main_layout"
+            android:layout_marginTop="@dimen/dp_three_zero" />
+
+        <LinearLayout
+            android:id="@+id/point_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/main_page_icon_height"
+            android:layout_above="@+id/llinclude"
+            android:gravity="center"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/fill_margin_left"
+            android:gravity="center"
+            android:text="@string/fidgetOperathint"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/textsize_one_nine"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/llinclude"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingTop="20dp" >
+
+            <include
+                android:id="@+id/menu_popwindow"
+                layout="@layout/foot" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</com.chinamworld.bocmbci.biz.main.DragLayer>
